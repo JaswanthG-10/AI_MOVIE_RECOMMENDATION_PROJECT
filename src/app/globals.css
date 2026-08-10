@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800;900&family=Space+Grotesk:wght@600;700&family=Syne:wght@700;800&display=swap');
+
+  :root {
+    --font-syne: 'Syne', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+    --font-space: 'Space Grotesk', sans-serif;
+  }
+
+  body {
+    background-color: #09090b;
+    color: #f4f4f5;
+    font-family: var(--font-inter);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-syne), var(--font-poppins);
+  }
+
+  .font-syne {
+    font-family: var(--font-syne);
+  }
+
+  .font-space {
+    font-family: var(--font-space);
+  }
+}
+
+/* Custom Utilities for Glassmorphism & Cinema Aesthetics */
+.glass-panel {
+  background: rgba(18, 18, 24, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(24, 24, 32, 0.5);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(124, 58, 237, 0.45);
+  box-shadow: 0 12px 40px 0 rgba(124, 58, 237, 0.2);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #c084fc 0%, #7c3aed 40%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-purple {
+  box-shadow: 0 0 35px rgba(124, 58, 237, 0.4);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
