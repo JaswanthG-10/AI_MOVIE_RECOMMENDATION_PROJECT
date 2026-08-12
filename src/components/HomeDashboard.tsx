@@ -8,7 +8,7 @@ import { Sparkles, Flame, Star, Trophy, Clapperboard } from "lucide-react";
 interface HomeDashboardProps {
   selectedLanguage: string;
   onSelectMovie: (movie: Movie) => void;
-  onPlayTrailer: (trailerId: string) => void;
+  onPlayTrailer: (movie: Movie) => void;
 }
 
 interface RowProps {
@@ -17,9 +17,10 @@ interface RowProps {
   badge?: string;
   movies: Movie[];
   onSelectMovie: (movie: Movie) => void;
+  onPlayTrailer?: (movie: Movie) => void;
 }
 
-const CarouselRow: React.FC<RowProps> = ({ title, icon, badge, movies, onSelectMovie }) => {
+const CarouselRow: React.FC<RowProps> = ({ title, icon, badge, movies, onSelectMovie, onPlayTrailer }) => {
   if (!movies.length) return null;
   return (
     <section className="space-y-4 animate-roll-on">
@@ -41,7 +42,7 @@ const CarouselRow: React.FC<RowProps> = ({ title, icon, badge, movies, onSelectM
       <div className="carousel-row gap-6">
         {movies.map((m) => (
           <div key={m.id} className="w-48 sm:w-52 shrink-0">
-            <MovieCard movie={m} score={m.matchScore} onSelectMovie={onSelectMovie} />
+            <MovieCard movie={m} score={m.matchScore} onSelectMovie={onSelectMovie} onPlayTrailer={onPlayTrailer} />
           </div>
         ))}
       </div>
@@ -143,7 +144,7 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
             {/* CTA buttons */}
             <div className="flex flex-wrap gap-4 pt-1">
               <button
-                onClick={() => onPlayTrailer(heroMovie.trailerId)}
+                onClick={() => onPlayTrailer(heroMovie)}
                 className="btn-primary"
               >
                 ▶ Play Trailer
@@ -194,6 +195,7 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
         badge={`${popularTamil.length} Films`}
         movies={popularTamil}
         onSelectMovie={onSelectMovie}
+        onPlayTrailer={onPlayTrailer}
       />
 
       <CarouselRow
@@ -202,6 +204,7 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
         badge="Vikram · Leo · Kaithi"
         movies={lcuCollection}
         onSelectMovie={onSelectMovie}
+        onPlayTrailer={onPlayTrailer}
       />
 
       {trending.length > 0 && (
@@ -211,6 +214,7 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
           badge="🔥 Hot"
           movies={trending}
           onSelectMovie={onSelectMovie}
+        onPlayTrailer={onPlayTrailer}
         />
       )}
 
@@ -220,6 +224,7 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
         badge="Score 8.0+"
         movies={topRated}
         onSelectMovie={onSelectMovie}
+        onPlayTrailer={onPlayTrailer}
       />
 
       {nolanFilms.length > 0 && (
@@ -228,6 +233,7 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
           icon={<Clapperboard className="w-5 h-5 text-[#C5C2B9]" />}
           movies={nolanFilms}
           onSelectMovie={onSelectMovie}
+        onPlayTrailer={onPlayTrailer}
         />
       )}
 
@@ -236,6 +242,7 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
         icon={<Trophy className="w-5 h-5 text-[#D4AF6A]" />}
         movies={oscarWinners}
         onSelectMovie={onSelectMovie}
+        onPlayTrailer={onPlayTrailer}
       />
     </div>
   );

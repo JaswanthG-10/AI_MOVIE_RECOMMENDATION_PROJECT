@@ -8,9 +8,10 @@ import { Filter, RefreshCw, Trophy, Star } from "lucide-react";
 
 interface DiscoverViewProps {
   onSelectMovie: (movie: Movie) => void;
+  onPlayTrailer?: (movie: Movie) => void;
 }
 
-export const DiscoverView: React.FC<DiscoverViewProps> = ({ onSelectMovie }) => {
+export const DiscoverView: React.FC<DiscoverViewProps> = ({ onSelectMovie, onPlayTrailer }) => {
   const [selectedGenre, setSelectedGenre] = useState("All");
   const [selectedLanguage, setSelectedLanguage] = useState("All");
   const [minImdb, setMinImdb] = useState(0);
@@ -134,7 +135,7 @@ export const DiscoverView: React.FC<DiscoverViewProps> = ({ onSelectMovie }) => 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {filteredMovies.map((m) => (
             <div key={m.id} className="animate-roll-on">
-              <MovieCard movie={m} score={m.matchScore} onSelectMovie={onSelectMovie} />
+              <MovieCard movie={m} score={m.matchScore} onSelectMovie={onSelectMovie} onPlayTrailer={onPlayTrailer} />
             </div>
           ))}
         </div>

@@ -9,12 +9,14 @@ interface TopRatedViewProps {
   onSelectMovie: (movie: Movie) => void;
   onToggleWatchlist?: (movie: Movie) => void;
   watchlist?: Movie[];
+  onPlayTrailer?: (movie: Movie) => void;
 }
 
 export const TopRatedView: React.FC<TopRatedViewProps> = ({
   onSelectMovie,
   onToggleWatchlist = () => {},
-  watchlist = []
+  watchlist = [],
+  onPlayTrailer
 }) => {
   const topRatedMovies = MOVIES_DATABASE.filter((m) => m.imdbRating >= 8.4).sort(
     (a, b) => b.imdbRating - a.imdbRating
@@ -39,6 +41,7 @@ export const TopRatedView: React.FC<TopRatedViewProps> = ({
             onSelectMovie={onSelectMovie}
             onToggleWatchlist={onToggleWatchlist}
             isWatchlisted={watchlist.some((w) => w.id === movie.id)}
+            onPlayTrailer={onPlayTrailer}
             showAiReasoning={false}
           />
         ))}

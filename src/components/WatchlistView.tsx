@@ -10,13 +10,15 @@ interface WatchlistViewProps {
   onSelectMovie: (movie: Movie) => void;
   onToggleWatchlist?: (movie: Movie) => void;
   setActiveTab?: (tab: string) => void;
+  onPlayTrailer?: (movie: Movie) => void;
 }
 
 export const WatchlistView: React.FC<WatchlistViewProps> = ({
   watchlist = [],
   onSelectMovie,
   onToggleWatchlist = () => {},
-  setActiveTab = () => {}
+  setActiveTab = () => {},
+  onPlayTrailer
 }) => {
   const [selectedGenre, setSelectedGenre] = useState<string>("All");
   const [sortBy, setSortBy] = useState<"rating" | "year" | "title">("rating");
@@ -99,6 +101,7 @@ export const WatchlistView: React.FC<WatchlistViewProps> = ({
               onSelectMovie={onSelectMovie}
               onToggleWatchlist={onToggleWatchlist}
               isWatchlisted={true}
+              onPlayTrailer={onPlayTrailer}
               showAiReasoning={false}
             />
           ))}

@@ -9,7 +9,7 @@ interface WatchHistoryViewProps {
   onSelectMovie: (movie: Movie) => void;
   onToggleWatchlist?: (movie: Movie) => void;
   watchlist?: Movie[];
-  onPlayTrailer?: (trailerId: string) => void;
+  onPlayTrailer?: (movie: Movie) => void;
 }
 
 export const WatchHistoryView: React.FC<WatchHistoryViewProps> = ({

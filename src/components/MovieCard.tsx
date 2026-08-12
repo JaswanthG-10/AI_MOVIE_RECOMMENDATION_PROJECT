@@ -7,6 +7,7 @@ import { Star, Play, Bookmark, Heart, Share2, Clock, CheckCheck, Sparkles } from
 interface MovieCardProps {
   movie: Movie;
   onSelectMovie: (movie: Movie) => void;
+  onPlayTrailer?: (movie: Movie) => void;
   onToggleWatchlist?: (movie: Movie) => void;
   isWatchlisted?: boolean;
   showAiReasoning?: boolean; // Default to false for premium poster-forward layout
@@ -17,6 +18,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({
   movie,
   onSelectMovie,
   onToggleWatchlist,
+  onPlayTrailer,
   isWatchlisted = false,
   showAiReasoning = false,
   score,
@@ -35,10 +37,18 @@ export const MovieCard: React.FC<MovieCardProps> = ({
   return (
     <div
       onClick={() => onSelectMovie(movie)}
-      className="glass-card rounded-xl overflow-hidden group cursor-pointer flex flex-col relative w-full h-full"
+      className="glass-card rounded-xl overflow-hidden group cursor-pointer flex flex-col relative w-full h-full transition-transform duration-300 hover:scale-[1.08] hover:-translate-y-1"
     >
       {/* === HERO POSTER IMAGE === */}
-      <div className="relative aspect-[2/3] w-full overflow-hidden bg-[#060813] shrink-0">
+      <div 
+        className="relative aspect-[2/3] w-full overflow-hidden bg-[#060813] shrink-0"
+        onClick={(e) => {
+          if (onPlayTrailer) {
+            e.stopPropagation();
+            onPlayTrailer(movie);
+          }
+        }}
+      >
         <img
           src={movie.posterUrl}
           alt={movie.title}
@@ -81,16 +91,17 @@ export const MovieCard: React.FC<MovieCardProps> = ({
         </div>
 
         {/* Play hover state */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 z-10 bg-black/10 backdrop-blur-[1px]">
+        <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 z-10 bg-black/10 backdrop-blur-[1px]">
           <div
-            className="w-11 h-11 rounded-full flex items-center justify-center shadow-xl scale-90 group-hover:scale-100 transition-transform duration-300"
+            className="w-14 h-14 rounded-full flex items-center justify-center shadow-xl scale-90 group-hover:scale-100 transition-transform duration-300 relative"
             style={{
               background: "linear-gradient(135deg, #2563EB, #EC4899)",
-              boxShadow: "0 0 24px rgba(236, 72, 153, 0.5)",
             }}
           >
-            <Play className="w-4 h-4 ml-0.5 fill-[#F1F3FA] text-[#F1F3FA]" />
+            <div className="absolute inset-0 rounded-full animate-pulse" style={{ boxShadow: "0 0 24px rgba(236, 72, 153, 0.5)" }} />
+            <Play className="w-6 h-6 ml-1 fill-[#F1F3FA] text-[#F1F3FA] z-10" />
           </div>
+          <span className="text-[10px] font-heading text-[#F1F3FA] mt-1.5 tracking-wider uppercase">Play Trailer</span>
         </div>
 
         {/* Left Bottom Language Tag */}

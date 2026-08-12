@@ -22,7 +22,7 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState<string>("home");
   const [selectedLanguage, setSelectedLanguage] = useState<string>("All");
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
-  const [trailerId, setTrailerId] = useState<string | null>(null);
+  const [trailerMovie, setTrailerMovie] = useState<Movie | null>(null);
   const [isSpinWheelOpen, setIsSpinWheelOpen] = useState<boolean>(false);
   const [isComparisonOpen, setIsComparisonOpen] = useState<boolean>(false);
   const [watchlistIds, setWatchlistIds] = useState<string[]>([
@@ -63,7 +63,7 @@ export default function Home() {
             <HomeDashboard
               selectedLanguage={selectedLanguage}
               onSelectMovie={setSelectedMovie}
-              onPlayTrailer={setTrailerId}
+              onPlayTrailer={setTrailerMovie}
             />
           )}
 
@@ -79,7 +79,7 @@ export default function Home() {
             <HomeDashboard
               selectedLanguage={selectedLanguage}
               onSelectMovie={setSelectedMovie}
-              onPlayTrailer={setTrailerId}
+              onPlayTrailer={setTrailerMovie}
             />
           )}
 
@@ -94,14 +94,14 @@ export default function Home() {
           {activeTab === "motd" && (
             <MovieOfTheDayView
               onSelectMovie={setSelectedMovie}
-              onPlayTrailer={setTrailerId}
+              onPlayTrailer={setTrailerMovie}
             />
           )}
 
           {activeTab === "history" && (
             <WatchHistoryView
               onSelectMovie={setSelectedMovie}
-              onPlayTrailer={setTrailerId}
+              onPlayTrailer={setTrailerMovie}
             />
           )}
 
@@ -131,10 +131,14 @@ export default function Home() {
         />
       )}
 
-      {trailerId && (
+      {trailerMovie && (
         <TrailerPlayerModal
-          trailerId={trailerId}
-          onClose={() => setTrailerId(null)}
+          movie={trailerMovie}
+          onClose={() => setTrailerMovie(null)}
+          onViewDetails={(movie) => {
+            setTrailerMovie(null);
+            setSelectedMovie(movie);
+          }}
         />
       )}
 

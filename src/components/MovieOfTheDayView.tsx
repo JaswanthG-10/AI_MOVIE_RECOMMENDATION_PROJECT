@@ -8,7 +8,7 @@ interface MovieOfTheDayViewProps {
   onSelectMovie: (movie: Movie) => void;
   onToggleWatchlist?: (movie: Movie) => void;
   isWatchlisted?: boolean;
-  onPlayTrailer?: (trailerId: string) => void;
+  onPlayTrailer?: (movie: Movie) => void;
 }
 
 export const MovieOfTheDayView: React.FC<MovieOfTheDayViewProps> = ({
@@ -72,7 +72,7 @@ export const MovieOfTheDayView: React.FC<MovieOfTheDayViewProps> = ({
 
             <div className="flex flex-wrap gap-4 pt-2">
               <button
-                onClick={() => onSelectMovie(movie)}
+                onClick={() => onPlayTrailer(movie)}
                 className="px-6 py-3.5 rounded-xl bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white font-bold text-xs flex items-center gap-2 shadow-xl shadow-purple-950 hover:scale-105 transition-transform"
               >
                 <Play className="w-4 h-4 fill-white" /> Watch Trailer

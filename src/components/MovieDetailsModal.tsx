@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { Movie } from "@/data/movies";
 import { filterAndRankMovies } from "@/lib/recommendEngine";
+import { fetchTrailerForMovie, TrailerResult } from "@/lib/trailerService";
 import { 
   X, 
   Star, 
@@ -38,6 +39,8 @@ export const MovieDetailsModal: React.FC<MovieDetailsModalProps> = ({
   const [userComment, setUserComment] = useState("");
   const [localReviews, setLocalReviews] = useState(movie?.reviews || []);
   const [similarMovies, setSimilarMovies] = useState<Movie[]>([]);
+  const [trailerResult, setTrailerResult] = useState<TrailerResult | null>(null);
+  const [isLoadingTrailer, setIsLoadingTrailer] = useState(false);
 
   useEffect(() => {
     if (movie) {
@@ -49,7 +52,28 @@ export const MovieDetailsModal: React.FC<MovieDetailsModalProps> = ({
     }
   }, [movie]);
 
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, [onClose]);
+
   if (!movie) return null;
+
+  const handlePlayTrailerClick = async () => {
+    setIsLoadingTrailer(true);
+    try {
+      const result = await fetchTrailerForMovie(movie.title, movie.year, movie.language, movie.trailerId);
+      setTrailerResult(result);
+      if (result.youtubeKey) {
+        setIsPlayingTrailer(true);
+      }
+    } catch (err) {
+      setTrailerResult({ youtubeKey: null, videoTitle: "", type: "", source: "fallback" });
+    } finally {
+      setIsLoadingTrailer(false);
+    }
+  };
 
   const handleAddReview = (e: React.FormEvent) => {
     e.preventDefault();
@@ -71,9 +95,10 @@ export const MovieDetailsModal: React.FC<MovieDetailsModalProps> = ({
   const matchPct = movie.matchScore;
 
   return (
-    <div className="fixed inset-0 z-50 bg-[#060813]/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto animate-in fade-in duration-300">
+    <div className="fixed inset-0 z-50 bg-[#060813]/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto animate-in fade-in duration-300" onClick={onClose}>
       {/* Modal Card with Neon glow borders */}
       <div 
+        onClick={(e) => e.stopPropagation()}
         className="glass-panel w-full max-w-4xl rounded-3xl overflow-hidden shadow-2xl relative max-h-[92vh] flex flex-col my-auto transition-all"
         style={{
           borderColor: "rgba(37, 99, 235, 0.3)",
@@ -90,9 +115,9 @@ export const MovieDetailsModal: React.FC<MovieDetailsModalProps> = ({
 
         {/* Hero Banner / Video Player */}
         <div className="relative aspect-video max-h-[380px] w-full bg-black overflow-hidden shrink-0">
-          {isPlayingTrailer ? (
+          {isPlayingTrailer && trailerResult?.youtubeKey ? (
             <iframe
-              src={`https://www.youtube-nocookie.com/embed/${movie.trailerId}?autoplay=1&rel=0`}
+              src={`https://www.youtube-nocookie.com/embed/${trailerResult.youtubeKey}?autoplay=1&rel=0`}
               title={`${movie.title} Official Trailer`}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
@@ -108,17 +133,27 @@ export const MovieDetailsModal: React.FC<MovieDetailsModalProps> = ({
               <div className="absolute inset-0 bg-gradient-to-t from-[#060813] via-[#060813]/40 to-transparent"></div>
 
               {/* Play Trailer CTA */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <button
-                  onClick={() => setIsPlayingTrailer(true)}
-                  className="px-6 py-3.5 rounded-xl font-heading text-xs font-bold text-[#F1F3FA] flex items-center gap-2 cursor-pointer shadow-2xl transition-transform hover:scale-105"
-                  style={{
-                    background: "linear-gradient(135deg, #2563EB 0%, #EC4899 100%)",
-                    boxShadow: "0 4px 24px rgba(236, 72, 153, 0.4)"
-                  }}
-                >
-                  <Play className="w-4.5 h-4.5 fill-[#F1F3FA] text-[#F1F3FA]" /> Watch Official Trailer
-                </button>
+              <div className="absolute inset-0 flex items-center justify-center flex-col gap-3">
+                {isLoadingTrailer ? (
+                  <div className="w-16 h-16 rounded-full bg-[#2563EB]/50 animate-pulse flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-full bg-[#EC4899]/50 animate-pulse" />
+                  </div>
+                ) : trailerResult?.youtubeKey === null ? (
+                  <div className="px-4 py-2 rounded bg-black/60 backdrop-blur-md text-[#F1F3FA] text-sm border border-[#EC4899]/50">
+                    No official trailer available
+                  </div>
+                ) : (
+                  <button
+                    onClick={handlePlayTrailerClick}
+                    className="px-6 py-3.5 rounded-xl font-heading text-xs font-bold text-[#F1F3FA] flex items-center gap-2 cursor-pointer shadow-2xl transition-transform hover:scale-105"
+                    style={{
+                      background: "linear-gradient(135deg, #2563EB 0%, #EC4899 100%)",
+                      boxShadow: "0 4px 24px rgba(236, 72, 153, 0.4)"
+                    }}
+                  >
+                    <Play className="w-4.5 h-4.5 fill-[#F1F3FA] text-[#F1F3FA]" /> Watch Official Trailer
+                  </button>
+                )}
               </div>
             </>
           )}
