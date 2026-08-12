@@ -226,7 +226,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "interstellar": {
     poster: "photo-1451187580459-43490279c0fa", // space cosmic universe
     backdrop: "photo-1446776811953-b23d57bd21aa", // orbiting space shuttle
-    trailer: "zSWdZAZE3Dc",
+    trailer: "0vxOhge_12k",
     tagline: "Mankind was born on Earth. It was never meant to die here.",
     budget: "$165 Million",
     revenue: "$701 Million",
@@ -840,7 +840,7 @@ Object.keys(rawMoviesData).forEach((lang) => {
       studio = customMeta.studio;
       awardsList = customMeta.awards;
     } else {
-      trailerId = "zSWdZAZE3Dc"; // Fallback to Interstellar trailer
+      trailerId = "0vxOhge_12k"; // Fallback to Interstellar trailer
 
       // Deterministic fallback pools based on primary genre of the movie
       const primaryGenre = combinedGenres[0] || "Drama";

@@ -78,8 +78,11 @@ export async function fetchTrailerForMovie(
   }
 
   // Fallback to provided trailer ID if API fails or returns no video
+  let fallbackKey = fallbackTrailerId || "0vxOhge_12k";
+  if (fallbackKey === "zSWdZAZE3Dc") fallbackKey = "0vxOhge_12k";
+
   return {
-    youtubeKey: fallbackTrailerId || null,
+    youtubeKey: fallbackKey,
     videoTitle: `${title} Trailer`,
     type: 'Trailer',
     source: 'fallback'
