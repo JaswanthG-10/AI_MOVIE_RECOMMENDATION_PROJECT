@@ -6,14 +6,16 @@ import { Sparkles, Play, Bookmark, Star, Calendar, Film } from "lucide-react";
 
 interface MovieOfTheDayViewProps {
   onSelectMovie: (movie: Movie) => void;
-  onToggleWatchlist: (movie: Movie) => void;
-  isWatchlisted: boolean;
+  onToggleWatchlist?: (movie: Movie) => void;
+  isWatchlisted?: boolean;
+  onPlayTrailer?: (trailerId: string) => void;
 }
 
 export const MovieOfTheDayView: React.FC<MovieOfTheDayViewProps> = ({
   onSelectMovie,
-  onToggleWatchlist,
-  isWatchlisted
+  onToggleWatchlist = () => {},
+  isWatchlisted = false,
+  onPlayTrailer = () => {}
 }) => {
   const movie = MOVIES_DATABASE[1]; // Interstellar
 

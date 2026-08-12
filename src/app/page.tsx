@@ -15,6 +15,8 @@ import { WatchlistView } from "@/components/WatchlistView";
 import { SettingsView } from "@/components/SettingsView";
 import { TasteProfileView } from "@/components/TasteProfileView";
 import { TopRatedView } from "@/components/TopRatedView";
+import { MovieOfTheDayView } from "@/components/MovieOfTheDayView";
+import { WatchHistoryView } from "@/components/WatchHistoryView";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<string>("home");
@@ -23,13 +25,15 @@ export default function Home() {
   const [trailerId, setTrailerId] = useState<string | null>(null);
   const [isSpinWheelOpen, setIsSpinWheelOpen] = useState<boolean>(false);
   const [isComparisonOpen, setIsComparisonOpen] = useState<boolean>(false);
-  const [watchlistIds, setWatchlistIds] = useState<string[]>(["vikram", "inception"]);
+  const [watchlistIds, setWatchlistIds] = useState<string[]>(["vikram", "inception", "interstellar"]);
 
   const handleToggleWatchlist = (movie: Movie) => {
     setWatchlistIds((prev) =>
       prev.includes(movie.id) ? prev.filter((id) => id !== movie.id) : [...prev, movie.id]
     );
   };
+
+  const watchlistMovies = MOVIES_DATABASE.filter((m) => watchlistIds.includes(m.id));
 
   return (
     <div className="min-h-screen bg-[#0F1220] text-[#F2F0E6] flex font-sora">
@@ -63,11 +67,11 @@ export default function Home() {
             <ChatInterface onSelectMovie={setSelectedMovie} />
           )}
 
-          {activeTab === "discover" && (
+          {(activeTab === "discover" || activeTab === "genres") && (
             <DiscoverView onSelectMovie={setSelectedMovie} />
           )}
 
-          {(activeTab === "trending" || activeTab === "latest" || activeTab === "collections") && (
+          {(activeTab === "trending" || activeTab === "continue") && (
             <HomeDashboard
               selectedLanguage={selectedLanguage}
               onSelectMovie={setSelectedMovie}
@@ -76,11 +80,34 @@ export default function Home() {
           )}
 
           {activeTab === "top-rated" && (
-            <TopRatedView onSelectMovie={setSelectedMovie} />
+            <TopRatedView
+              onSelectMovie={setSelectedMovie}
+              onToggleWatchlist={handleToggleWatchlist}
+              watchlist={watchlistMovies}
+            />
           )}
 
-          {(activeTab === "watchlist" || activeTab === "favorites" || activeTab === "history") && (
-            <WatchlistView onSelectMovie={setSelectedMovie} />
+          {activeTab === "motd" && (
+            <MovieOfTheDayView
+              onSelectMovie={setSelectedMovie}
+              onPlayTrailer={setTrailerId}
+            />
+          )}
+
+          {activeTab === "history" && (
+            <WatchHistoryView
+              onSelectMovie={setSelectedMovie}
+              onPlayTrailer={setTrailerId}
+            />
+          )}
+
+          {activeTab === "watchlist" && (
+            <WatchlistView
+              watchlist={watchlistMovies}
+              onSelectMovie={setSelectedMovie}
+              onToggleWatchlist={handleToggleWatchlist}
+              setActiveTab={setActiveTab}
+            />
           )}
 
           {activeTab === "settings" && <SettingsView />}
@@ -89,7 +116,7 @@ export default function Home() {
         </main>
       </div>
 
-      {/* Modals & Overlays */}
+      {/* Overlays & Modals */}
       {selectedMovie && (
         <MovieDetailsModal
           movie={selectedMovie}

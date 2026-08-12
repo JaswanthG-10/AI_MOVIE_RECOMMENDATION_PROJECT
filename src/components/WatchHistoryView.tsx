@@ -7,14 +7,16 @@ import { Clock, Trash2 } from "lucide-react";
 
 interface WatchHistoryViewProps {
   onSelectMovie: (movie: Movie) => void;
-  onToggleWatchlist: (movie: Movie) => void;
-  watchlist: Movie[];
+  onToggleWatchlist?: (movie: Movie) => void;
+  watchlist?: Movie[];
+  onPlayTrailer?: (trailerId: string) => void;
 }
 
 export const WatchHistoryView: React.FC<WatchHistoryViewProps> = ({
   onSelectMovie,
-  onToggleWatchlist,
-  watchlist
+  onToggleWatchlist = () => {},
+  watchlist = [],
+  onPlayTrailer = () => {}
 }) => {
   const watchHistoryList = MOVIES_DATABASE.filter((m) => m.watchHistoryTimestamp || m.continueWatching);
 
