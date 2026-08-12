@@ -2,15 +2,15 @@
 
 import React, { useState } from "react";
 import { Movie } from "@/data/movies";
-import { 
-  Star, 
-  Sparkles, 
-  Play, 
-  Bookmark, 
-  Heart, 
-  Share2, 
-  Clock, 
-  Info 
+import {
+  Star,
+  Sparkles,
+  Play,
+  Bookmark,
+  Heart,
+  Share2,
+  Clock,
+  CheckCheck
 } from "lucide-react";
 
 interface MovieCardProps {
@@ -39,151 +39,142 @@ export const MovieCard: React.FC<MovieCardProps> = ({
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const matchPct = score ?? movie.matchScore;
+
   return (
-    <div 
+    <div
       onClick={() => onSelectMovie(movie)}
-      className="glass-card rounded-2xl overflow-hidden group cursor-pointer flex flex-col justify-between relative transition-all duration-300 hover:scale-[1.01]"
+      className="glass-card rounded-xl overflow-hidden group cursor-pointer flex flex-col relative"
     >
-      {/* Poster Image Container */}
-      <div className="relative aspect-[2/3] w-full overflow-hidden bg-zinc-950">
+      {/* === POSTER === */}
+      <div className="relative aspect-[2/3] w-full overflow-hidden bg-[#0F1220]">
         <img
           src={movie.posterUrl}
           alt={movie.title}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          loading="lazy"
         />
 
-        {/* Dark Overlay Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#09090b] via-zinc-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0F1220] via-[#0F1220]/30 to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-300" />
 
-        {/* Top Badges: AI Match Score & IMDb Rating */}
-        <div className="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
-          <div className="px-2.5 py-1 rounded-full bg-zinc-950/80 backdrop-blur-md border border-purple-500/40 text-xs font-bold text-white flex items-center gap-1 shadow-lg shadow-purple-950/50">
-            <Sparkles className="w-3 h-3 text-purple-400 fill-purple-400" />
-            <span className="text-gradient font-space">{movie.matchScore}% Match</span>
+        {/* Top row: Match dial + IMDb */}
+        <div className="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between pointer-events-none">
+          {/* Match dial */}
+          <div
+            className="match-dial"
+            style={{ "--pct": matchPct } as React.CSSProperties}
+            title={`${matchPct}% AI Match`}
+          >
+            <span className="match-dial-label">{matchPct}</span>
           </div>
 
-          <div className="px-2.5 py-1 rounded-full bg-zinc-950/80 backdrop-blur-md border border-amber-500/40 text-xs font-bold text-amber-400 flex items-center gap-1">
-            <Star className="w-3 h-3 fill-amber-400" />
-            <span className="font-space">{movie.imdbRating}</span>
+          {/* IMDb chip */}
+          <div className="flex items-center gap-1 px-2 py-1 rounded-md bg-[#0F1220]/80 backdrop-blur-sm border border-[#E8A33D]/30">
+            <Star className="w-2.5 h-2.5 text-[#E8A33D] fill-[#E8A33D]" />
+            <span className="font-mono-num text-[10px] font-600 text-[#E8A33D]">{movie.imdbRating}</span>
           </div>
         </div>
 
-        {/* Hover Quick Action Play Button */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-zinc-950/40 backdrop-blur-[2px]">
-          <div className="w-12 h-12 rounded-full bg-purple-600/90 text-white flex items-center justify-center shadow-xl shadow-purple-900/50 transform group-hover:scale-110 transition-transform">
-            <Play className="w-5 h-5 ml-0.5 fill-white" />
+        {/* Play button on hover */}
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+          <div className="w-11 h-11 rounded-full bg-[#E8A33D] text-[#0F1220] flex items-center justify-center shadow-xl shadow-[#E8A33D]/40 scale-90 group-hover:scale-100 transition-transform duration-300">
+            <Play className="w-4 h-4 ml-0.5 fill-[#0F1220]" />
           </div>
+        </div>
+
+        {/* Language tag bottom-left */}
+        <div className="absolute bottom-2 left-2 pointer-events-none">
+          <span className="font-mono-num text-[9px] text-[#A9AABF] bg-[#0F1220]/70 backdrop-blur-sm px-1.5 py-0.5 rounded border border-[#33395a]/60">
+            {movie.language}
+          </span>
         </div>
       </div>
 
-      {/* Card Content Body */}
-      <div className="p-4 flex-1 flex flex-col justify-between bg-zinc-900/40">
-        <div>
-          {/* Metadata Row */}
-          <div className="flex items-center justify-between text-xs text-zinc-400 mb-1 font-medium">
-            <span>{movie.year}</span>
-            <div className="flex items-center gap-1">
-              <Clock className="w-3 h-3" />
-              <span>{movie.runtime}</span>
-            </div>
-          </div>
-
-          {/* Title */}
-          <h3 className="font-bold text-base text-white tracking-tight group-hover:text-purple-300 transition-colors line-clamp-1">
-            {movie.title}
-          </h3>
-
-          {/* Genres Chips */}
-          <div className="flex flex-wrap gap-1.5 mt-2">
-            {movie.genres.slice(0, 3).map((genre) => (
-              <span
-                key={genre}
-                className="text-[10px] font-medium px-2 py-0.5 rounded-md bg-zinc-800/80 text-zinc-300 border border-zinc-700/50"
-              >
-                {genre}
-              </span>
-            ))}
-          </div>
-
-          {/* AI Explanation Banner */}
-          {showAiReasoning && (
-            <div className="mt-3 p-2.5 rounded-xl bg-purple-950/30 border border-purple-500/20 text-xs text-purple-200/90 leading-relaxed relative">
-              <div className="flex items-center gap-1 text-[10px] font-bold text-purple-400 uppercase tracking-wider mb-1">
-                <Info className="w-3 h-3 text-purple-400" /> AI Insight
-              </div>
-              <p className="line-clamp-2 italic text-[11px]">
-                "{movie.aiReasoning}"
-              </p>
-            </div>
-          )}
-
-          {/* Similar Tags */}
-          <div className="flex flex-wrap gap-1 mt-2.5">
-            {movie.similarTags.slice(0, 2).map((tag) => (
-              <span key={tag} className="text-[10px] text-zinc-400">
-                #{tag}
-              </span>
-            ))}
+      {/* === CARD BODY === */}
+      <div className="p-3 flex flex-col gap-2 bg-[#171B2E]/80 flex-1">
+        {/* Year + runtime */}
+        <div className="flex items-center justify-between text-[10px] font-mono-num text-[#6B6E8A]">
+          <span>{movie.year}</span>
+          <div className="flex items-center gap-1">
+            <Clock className="w-2.5 h-2.5" />
+            <span>{movie.runtime}</span>
           </div>
         </div>
 
-        {/* Bottom Actions Bar */}
-        <div className="mt-4 pt-3 border-t border-zinc-800/60 flex items-center justify-between">
+        {/* Title */}
+        <h3 className="font-heading text-sm text-[#F2F0E6] group-hover:text-[#E8A33D] transition-colors leading-tight line-clamp-1">
+          {movie.title}
+        </h3>
+
+        {/* Genre chips */}
+        <div className="flex flex-wrap gap-1">
+          {movie.genres.slice(0, 2).map((genre) => (
+            <span
+              key={genre}
+              className="text-[9px] font-body px-1.5 py-0.5 rounded bg-[#262C48] text-[#A9AABF] border border-[#33395a]/60"
+            >
+              {genre}
+            </span>
+          ))}
+        </div>
+
+        {/* AI Insight box */}
+        {showAiReasoning && movie.aiReasoning && (
+          <div className="p-2 rounded-lg bg-[#3FA796]/08 border border-[#3FA796]/25 flex gap-1.5">
+            <Sparkles className="w-3 h-3 text-[#3FA796] shrink-0 mt-0.5" />
+            <p className="text-[10px] text-[#A9AABF] leading-relaxed line-clamp-2 italic">
+              {movie.aiReasoning}
+            </p>
+          </div>
+        )}
+
+        {/* Action bar */}
+        <div className="flex items-center justify-between pt-1 border-t border-[#33395a]/50 mt-auto">
           <button
-            onClick={(e) => {
-              e.stopPropagation();
-              onSelectMovie(movie);
-            }}
-            className="text-xs font-semibold text-purple-400 hover:text-purple-300 flex items-center gap-1"
+            onClick={(e) => { e.stopPropagation(); onSelectMovie(movie); }}
+            className="text-[10px] font-heading text-[#E8A33D] hover:text-[#FFD580] flex items-center gap-1 transition-colors"
           >
-            <Play className="w-3 h-3 fill-current" /> Watch Trailer
+            <Play className="w-2.5 h-2.5 fill-current" /> Details
           </button>
 
-          <div className="flex items-center gap-1.5">
-            {/* Watchlist toggle */}
+          <div className="flex items-center gap-1">
+            {/* Watchlist */}
             <button
-              onClick={(e) => {
-                e.stopPropagation();
-                if (onToggleWatchlist) onToggleWatchlist(movie);
-              }}
-              title={isWatchlisted ? "Remove from Watchlist" : "Save to Watchlist"}
-              className={`p-1.5 rounded-lg border transition-all ${
+              onClick={(e) => { e.stopPropagation(); if (onToggleWatchlist) onToggleWatchlist(movie); }}
+              title={isWatchlisted ? "Remove from Watchlist" : "Add to Watchlist"}
+              className={`p-1.5 rounded-md border transition-all ${
                 isWatchlisted
-                  ? "bg-purple-600/30 border-purple-500 text-purple-300"
-                  : "bg-zinc-800/60 border-zinc-700/50 text-zinc-400 hover:text-white"
+                  ? "bg-[#E8A33D]/20 border-[#E8A33D]/50 text-[#E8A33D]"
+                  : "bg-[#1E2338] border-[#33395a] text-[#6B6E8A] hover:text-[#F2F0E6]"
               }`}
             >
-              <Bookmark className={`w-3.5 h-3.5 ${isWatchlisted ? "fill-purple-400" : ""}`} />
+              <Bookmark className={`w-3 h-3 ${isWatchlisted ? "fill-[#E8A33D]" : ""}`} />
             </button>
 
-            {/* Like Toggle */}
+            {/* Like */}
             <button
-              onClick={(e) => {
-                e.stopPropagation();
-                setLiked(!liked);
-              }}
+              onClick={(e) => { e.stopPropagation(); setLiked(!liked); }}
               title="Like"
-              className={`p-1.5 rounded-lg border transition-all ${
+              className={`p-1.5 rounded-md border transition-all ${
                 liked
-                  ? "bg-rose-600/30 border-rose-500 text-rose-400"
-                  : "bg-zinc-800/60 border-zinc-700/50 text-zinc-400 hover:text-white"
+                  ? "bg-[#C75146]/20 border-[#C75146]/50 text-[#C75146]"
+                  : "bg-[#1E2338] border-[#33395a] text-[#6B6E8A] hover:text-[#F2F0E6]"
               }`}
             >
-              <Heart className={`w-3.5 h-3.5 ${liked ? "fill-rose-400" : ""}`} />
+              <Heart className={`w-3 h-3 ${liked ? "fill-[#C75146]" : ""}`} />
             </button>
 
-            {/* Share Button */}
+            {/* Share */}
             <button
               onClick={handleShare}
               title="Share"
-              className="p-1.5 rounded-lg bg-zinc-800/60 border border-zinc-700/50 text-zinc-400 hover:text-white transition-all relative"
+              className="p-1.5 rounded-md bg-[#1E2338] border border-[#33395a] text-[#6B6E8A] hover:text-[#F2F0E6] transition-all relative"
             >
-              <Share2 className="w-3.5 h-3.5" />
-              {copied && (
-                <span className="absolute -top-7 left-1/2 -translate-x-1/2 px-1.5 py-0.5 rounded bg-purple-600 text-[9px] text-white whitespace-nowrap shadow">
-                  Copied!
-                </span>
-              )}
+              {copied
+                ? <CheckCheck className="w-3 h-3 text-[#3FA796]" />
+                : <Share2 className="w-3 h-3" />
+              }
             </button>
           </div>
         </div>

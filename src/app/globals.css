@@ -1,82 +1,450 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ============================================================
+   LUMINA AI — PREMIUM DESIGN SYSTEM
+   Futuristic Cinematic UI Framework
+   ============================================================ */
 
 @layer base {
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800;900&family=Space+Grotesk:wght@600;700&family=Syne:wght@700;800&display=swap');
 
+  /* --- Design Tokens (CSS Variables) --- */
   :root {
-    --font-syne: 'Syne', sans-serif;
-    --font-poppins: 'Poppins', sans-serif;
-    --font-inter: 'Inter', sans-serif;
-    --font-space: 'Space Grotesk', sans-serif;
+    /* Core Palette */
+    --bg:         #0F1220;
+    --surface:    #171B2E;
+    --surface-2:  #1E2338;
+    --surface-3:  #262C48;
+    --hairline:   #33395a;
+
+    /* Text */
+    --text:       #F2F0E6;
+    --text-dim:   #A9AABF;
+    --text-faint: #6B6E8A;
+
+    /* Accents */
+    --amber:      #E8A33D;
+    --teal:       #3FA796;
+    --clay:       #C75146;
+    --purple:     #7C3AED;
+
+    /* Motion Tokens */
+    --dur-fast:   140ms;
+    --dur-base:   280ms;
+    --dur-slow:   600ms;
+    --ease-std:   cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-em:    cubic-bezier(0.2, 0, 0, 1);
+
+    /* Radius Scale */
+    --r-sm:  6px;
+    --r-md:  12px;
+    --r-lg:  20px;
+
+    /* Fonts */
+    --font-heading: 'Oswald', sans-serif;
+    --font-body:    'Sora', sans-serif;
+    --font-mono:    'IBM Plex Mono', monospace;
+  }
+
+  /* --- Global Base --- */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
-    background-color: #09090b;
-    color: #f4f4f5;
-    font-family: var(--font-inter);
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-syne), var(--font-poppins);
-  }
-
-  .font-syne {
-    font-family: var(--font-syne);
-  }
-
-  .font-space {
-    font-family: var(--font-space);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
   }
 }
 
-/* Custom Utilities for Glassmorphism & Cinema Aesthetics */
+/* ============================================================
+   TYPOGRAPHY UTILITIES
+   ============================================================ */
+.font-heading  { font-family: var(--font-heading); }
+.font-body     { font-family: var(--font-body); }
+.font-mono-num { font-family: var(--font-mono); }
+.font-sora     { font-family: var(--font-body); }
+
+/* ============================================================
+   GLASSMORPHISM SYSTEM
+   ============================================================ */
+
+/* Base glass panel — for sidebars, modals */
 .glass-panel {
-  background: rgba(18, 18, 24, 0.75);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(15, 18, 32, 0.85);
+  backdrop-filter: blur(24px) saturate(1.4);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  border: 1px solid rgba(51, 57, 90, 0.8);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.03) inset,
+    0 24px 64px rgba(0,0,0,0.5);
 }
 
+/* Movie card glass */
 .glass-card {
-  background: rgba(24, 24, 32, 0.5);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(23, 27, 46, 0.7);
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+  border: 1px solid rgba(51, 57, 90, 0.6);
+  box-shadow:
+    0 4px 16px rgba(0,0,0,0.4),
+    0 0 0 1px rgba(255,255,255,0.02) inset;
+  transition:
+    transform var(--dur-base) var(--ease-em),
+    border-color var(--dur-base) var(--ease-std),
+    box-shadow var(--dur-base) var(--ease-std);
 }
 
 .glass-card:hover {
-  border-color: rgba(124, 58, 237, 0.45);
-  box-shadow: 0 12px 40px 0 rgba(124, 58, 237, 0.2);
+  border-color: rgba(232, 163, 61, 0.35);
+  box-shadow:
+    0 12px 48px rgba(0,0,0,0.6),
+    0 0 32px rgba(232, 163, 61, 0.08),
+    0 0 0 1px rgba(232, 163, 61, 0.12) inset;
+  transform: translateY(-2px);
+}
+
+/* Input / search glass */
+.glass-input {
+  background: rgba(23, 27, 46, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--hairline);
+  transition: border-color var(--dur-fast) var(--ease-std),
+              box-shadow var(--dur-fast) var(--ease-std);
+}
+
+.glass-input:focus {
+  border-color: var(--amber);
+  box-shadow: 0 0 0 3px rgba(232, 163, 61, 0.15), 0 0 20px rgba(232, 163, 61, 0.08);
+  outline: none;
+}
+
+/* ============================================================
+   GLOW & GRADIENT UTILITIES
+   ============================================================ */
+
+.text-gradient-amber {
+  background: linear-gradient(135deg, #E8A33D 0%, #FFD580 60%, #E8A33D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-teal {
+  background: linear-gradient(135deg, #3FA796 0%, #7EECD8 60%, #3FA796 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .text-gradient {
   background: linear-gradient(135deg, #c084fc 0%, #7c3aed 40%, #3b82f6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.glow-purple {
-  box-shadow: 0 0 35px rgba(124, 58, 237, 0.4);
+.glow-amber  { box-shadow: 0 0 32px rgba(232, 163, 61, 0.35); }
+.glow-teal   { box-shadow: 0 0 32px rgba(63, 167, 150, 0.3); }
+.glow-purple { box-shadow: 0 0 32px rgba(124, 58, 237, 0.4); }
+
+/* ============================================================
+   ANIMATED GRADIENT BORDER (AI Focus Ring)
+   ============================================================ */
+.ai-border {
+  position: relative;
+}
+.ai-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--amber), var(--teal), var(--purple), var(--amber));
+  background-size: 300% 100%;
+  animation: border-scroll 4s linear infinite;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity var(--dur-base) var(--ease-std);
+}
+.ai-border:focus-within::before {
+  opacity: 1;
+}
+@keyframes border-scroll {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+/* ============================================================
+   ROLL-ON ENTRANCE ANIMATION SYSTEM
+   Combine Y-translate + opacity + subtle scale
+   ============================================================ */
+@keyframes roll-on {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
-::-webkit-scrollbar-track {
-  background: #09090b;
+@keyframes roll-on-left {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-::-webkit-scrollbar-thumb {
-  background: #27272a;
-  border-radius: 9999px;
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+@keyframes shimmer {
+  from { background-position: -200% center; }
+  to   { background-position: 200% center; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 12px rgba(232,163,61,0.4); }
+  50%       { box-shadow: 0 0 28px rgba(232,163,61,0.7); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+.animate-roll-on    { animation: roll-on var(--dur-slow) var(--ease-em) both; }
+.animate-fade-up    { animation: fade-up var(--dur-base) var(--ease-em) both; }
+.animate-roll-left  { animation: roll-on-left var(--dur-base) var(--ease-em) both; }
+.animate-pulse-glow { animation: pulse-glow 2.5s ease-in-out infinite; }
+.animate-spin-slow  { animation: spin-slow 8s linear infinite; }
+.animate-float      { animation: float 4s ease-in-out infinite; }
+
+/* Stagger helpers — add to child elements */
+.stagger-1  { animation-delay: 60ms; }
+.stagger-2  { animation-delay: 120ms; }
+.stagger-3  { animation-delay: 180ms; }
+.stagger-4  { animation-delay: 240ms; }
+.stagger-5  { animation-delay: 300ms; }
+
+/* ============================================================
+   MATCH DIAL — Circular conic-gradient progress ring
+   ============================================================ */
+.match-dial {
+  --pct: 85;
+  --dial-size: 44px;
+  --dial-color: var(--amber);
+  width: var(--dial-size);
+  height: var(--dial-size);
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--dial-color) calc(var(--pct) * 1%),
+    rgba(51,57,90,0.5) 0%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+}
+.match-dial::before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border-radius: 50%;
+  background: var(--surface);
+}
+.match-dial-label {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--amber);
+  line-height: 1;
+}
+
+/* ============================================================
+   SHIMMER LOADING SKELETON
+   ============================================================ */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(38, 44, 72, 0.6) 0%,
+    rgba(51, 57, 90, 0.8) 50%,
+    rgba(38, 44, 72, 0.6) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+}
+
+/* ============================================================
+   CUSTOM SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar        { width: 5px; height: 5px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: var(--surface-3); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--hairline); }
+
+.scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-none::-webkit-scrollbar { display: none; }
+
+/* ============================================================
+   SPROCKET STRIP — Repeating dot perforation motif
+   ============================================================ */
+.sprocket-strip {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.12) 2px, transparent 2px);
+  background-size: 16px 16px;
+  background-repeat: repeat-x;
+  height: 20px;
+  width: 100%;
+  opacity: 0.5;
+}
+
+/* ============================================================
+   BUTTON SYSTEM
+   ============================================================ */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 22px;
+  background: var(--amber);
+  color: var(--bg);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--r-sm);
+  border: none;
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease-std);
+  box-shadow: 0 4px 20px rgba(232,163,61,0.25);
+}
+.btn-primary:hover {
+  background: #FFD580;
+  box-shadow: 0 6px 28px rgba(232,163,61,0.4);
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 22px;
+  background: transparent;
+  color: var(--text);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--hairline);
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease-std);
+}
+.btn-ghost:hover {
+  border-color: var(--amber);
+  color: var(--amber);
+  background: rgba(232,163,61,0.07);
+}
+
+/* ============================================================
+   BADGE SYSTEM
+   ============================================================ */
+.badge-amber {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  background: rgba(232,163,61,0.15);
+  color: var(--amber);
+  border: 1px solid rgba(232,163,61,0.35);
+  border-radius: 99px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.badge-teal {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  background: rgba(63,167,150,0.15);
+  color: var(--teal);
+  border: 1px solid rgba(63,167,150,0.35);
+  border-radius: 99px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ============================================================
+   SECTION ROW — Horizontal Carousel Container
+   ============================================================ */
+.carousel-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.carousel-row::-webkit-scrollbar { display: none; }
+.carousel-row > * { scroll-snap-align: start; }
+
+/* ============================================================
+   ACTIVE INDICATOR — Sidebar sliding pill
+   ============================================================ */
+.nav-item-active {
+  background: linear-gradient(90deg, rgba(232,163,61,0.2), rgba(232,163,61,0.05));
+  color: var(--amber);
+  border-left: 2px solid var(--amber);
+}
+
+/* ============================================================
+   FOCUS RING — Keyboard navigation
+   ============================================================ */
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
 }

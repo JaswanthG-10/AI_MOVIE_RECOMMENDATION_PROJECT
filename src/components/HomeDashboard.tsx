@@ -3,7 +3,7 @@
 import React from "react";
 import { Movie, MOVIES_DATABASE } from "@/data/movies";
 import { MovieCard } from "@/components/MovieCard";
-import { Sparkles, Flame, Star, Trophy, Film, Compass, Clapperboard, Heart, Award } from "lucide-react";
+import { Sparkles, Flame, Star, Trophy, Clapperboard } from "lucide-react";
 
 interface HomeDashboardProps {
   selectedLanguage: string;
@@ -11,148 +11,216 @@ interface HomeDashboardProps {
   onPlayTrailer: (trailerId: string) => void;
 }
 
+interface RowProps {
+  title: string;
+  icon: React.ReactNode;
+  badge?: string;
+  movies: Movie[];
+  onSelectMovie: (movie: Movie) => void;
+}
+
+const CarouselRow: React.FC<RowProps> = ({ title, icon, badge, movies, onSelectMovie }) => {
+  if (!movies.length) return null;
+  return (
+    <section className="space-y-3 animate-roll-on">
+      {/* Row header */}
+      <div className="flex items-center justify-between px-1">
+        <h3 className="font-heading text-base text-[#F2F0E6] flex items-center gap-2">
+          {icon}
+          {title}
+        </h3>
+        {badge && (
+          <span className="badge-teal">{badge}</span>
+        )}
+      </div>
+
+      {/* Sprocket decorative strip */}
+      <div className="sprocket-strip" />
+
+      {/* Horizontal scroll */}
+      <div className="carousel-row">
+        {movies.map((m) => (
+          <div key={m.id} className="w-44 sm:w-48 shrink-0">
+            <MovieCard movie={m} score={m.matchScore} onSelectMovie={onSelectMovie} />
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
 export const HomeDashboard: React.FC<HomeDashboardProps> = ({
   selectedLanguage,
   onSelectMovie,
-  onPlayTrailer
+  onPlayTrailer,
 }) => {
   let movies = [...MOVIES_DATABASE];
-
   if (selectedLanguage !== "All") {
     movies = movies.filter((m) =>
       m.language.toLowerCase().includes(selectedLanguage.toLowerCase())
     );
   }
 
-  const heroMovie = movies[0] || MOVIES_DATABASE[0];
-  const popularTamil = MOVIES_DATABASE.filter((m) => m.language === "Tamil");
-  const topRated = [...movies].sort((a, b) => b.imdbRating - a.imdbRating);
-  const trendingToday = [...movies].filter((m) => m.matchScore >= 95);
-  const nolanCollection = MOVIES_DATABASE.filter((m) => m.collection === "Christopher Nolan Collection");
+  const heroMovie     = movies[0] || MOVIES_DATABASE[0];
+  const popularTamil  = MOVIES_DATABASE.filter((m) => m.language === "Tamil");
+  const topRated      = [...movies].sort((a, b) => b.imdbRating - a.imdbRating).slice(0, 12);
   const lcuCollection = MOVIES_DATABASE.filter((m) => m.collection === "Lokesh Cinematic Universe");
-  const oscarWinners = MOVIES_DATABASE.filter((m) => m.isOscarWinner);
+  const oscarWinners  = MOVIES_DATABASE.filter((m) => m.isOscarWinner);
+  const trending      = [...movies].filter((m) => m.matchScore >= 95).slice(0, 10);
+  const nolanFilms    = MOVIES_DATABASE.filter((m) => m.collection === "Christopher Nolan Collection");
 
   return (
-    <div className="space-y-10 p-4 sm:p-8 max-w-7xl mx-auto font-sora">
-      {/* Hero Banner Module */}
-      <section className="relative rounded-2xl overflow-hidden bg-[#171B2E] border border-[#33395a] shadow-2xl p-6 sm:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+    <div className="space-y-12 p-4 sm:p-8 max-w-[1600px] mx-auto">
+
+      {/* ══ HERO BANNER ══ */}
+      <section className="relative rounded-2xl overflow-hidden border border-[#33395a] shadow-2xl animate-roll-on">
+        {/* Backdrop */}
         <div className="absolute inset-0 z-0">
           <img
             src={heroMovie.backdropUrl}
             alt={heroMovie.title}
-            className="w-full h-full object-cover opacity-30 scale-105"
+            className="w-full h-full object-cover opacity-25 scale-110 blur-sm"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#171B2E] via-[#171B2E]/90 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0F1220] via-[#0F1220]/85 to-[#0F1220]/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0F1220] via-transparent to-transparent" />
         </div>
 
-        <div className="relative z-10 space-y-4 max-w-2xl">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E8A33D]/20 text-[#E8A33D] border border-[#E8A33D]/40 text-xs font-mono-num font-bold">
-            <Sparkles className="w-3.5 h-3.5 fill-current animate-pulse" /> LUMINA FEATURED SPOTLIGHT
+        {/* Sprocket top */}
+        <div className="sprocket-strip absolute top-0 left-0 right-0 z-10" />
+
+        {/* Content */}
+        <div className="relative z-10 p-6 sm:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 min-h-[300px]">
+          {/* Left: Text */}
+          <div className="space-y-4 max-w-2xl stagger-1 animate-fade-up">
+            <div className="badge-amber">
+              <Sparkles className="w-3 h-3 animate-pulse" />
+              Lumina AI — Featured Spotlight
+            </div>
+
+            <h2 className="font-heading text-4xl sm:text-6xl text-[#F2F0E6] leading-none tracking-wide">
+              {heroMovie.title}
+            </h2>
+
+            <p className="font-body text-sm text-[#A9AABF] line-clamp-2 leading-relaxed max-w-lg">
+              {heroMovie.synopsis}
+            </p>
+
+            {/* AI reasoning box */}
+            <div className="flex items-start gap-2.5 p-3.5 rounded-xl bg-[#3FA796]/08 border border-[#3FA796]/30 max-w-lg">
+              <Sparkles className="w-4 h-4 text-[#3FA796] shrink-0 mt-0.5 animate-pulse" />
+              <p className="font-body text-xs text-[#F2F0E6]/80 italic leading-relaxed">
+                "{heroMovie.aiReasoning}"
+              </p>
+            </div>
+
+            {/* Metadata row */}
+            <div className="flex items-center gap-3 font-mono-num text-xs text-[#6B6E8A]">
+              <span className="flex items-center gap-1">
+                <Star className="w-3 h-3 text-[#E8A33D] fill-[#E8A33D]" />
+                {heroMovie.imdbRating} IMDb
+              </span>
+              <span className="w-1 h-1 rounded-full bg-[#33395a]" />
+              <span>{heroMovie.year}</span>
+              <span className="w-1 h-1 rounded-full bg-[#33395a]" />
+              <span>{heroMovie.runtime}</span>
+              <span className="w-1 h-1 rounded-full bg-[#33395a]" />
+              <span>{heroMovie.language}</span>
+            </div>
+
+            {/* CTA buttons */}
+            <div className="flex flex-wrap gap-3 pt-1">
+              <button
+                onClick={() => onPlayTrailer(heroMovie.trailerId)}
+                className="btn-primary"
+              >
+                ▶ Watch Trailer
+              </button>
+              <button
+                onClick={() => onSelectMovie(heroMovie)}
+                className="btn-ghost"
+              >
+                View Details
+              </button>
+            </div>
           </div>
 
-          <h2 className="font-heading text-3xl sm:text-5xl text-[#F2F0E6] tracking-wide">
-            {heroMovie.title}
-          </h2>
-
-          <p className="text-xs sm:text-sm text-[#A9AABF] line-clamp-2 leading-relaxed">
-            {heroMovie.synopsis}
-          </p>
-
-          <div className="p-4 rounded-xl bg-[#1E2338]/90 border border-[#3FA796]/40 text-xs text-[#F2F0E6] italic">
-            "{heroMovie.aiReasoning}"
-          </div>
-
-          <div className="flex flex-wrap gap-3 pt-2">
-            <button
-              onClick={() => onPlayTrailer(heroMovie.trailerId)}
-              className="px-6 py-2.5 rounded-lg bg-[#E8A33D] text-[#0F1220] font-heading font-bold text-xs hover:bg-[#E8A33D]/90 transition-all shadow-lg shadow-[#E8A33D]/20"
-            >
-              Watch Trailer
-            </button>
-            <button
-              onClick={() => onSelectMovie(heroMovie)}
-              className="px-6 py-2.5 rounded-lg bg-[#1E2338] border border-[#33395a] text-[#F2F0E6] font-heading font-bold text-xs hover:border-[#E8A33D] transition-all"
-            >
-              View Full Details
-            </button>
+          {/* Right: Poster */}
+          <div
+            className="shrink-0 cursor-pointer group animate-float"
+            onClick={() => onSelectMovie(heroMovie)}
+          >
+            <div className="relative w-40 sm:w-52">
+              <img
+                src={heroMovie.posterUrl}
+                alt={heroMovie.title}
+                className="w-full aspect-[2/3] object-cover rounded-xl shadow-2xl border border-[#33395a] group-hover:border-[#E8A33D]/50 group-hover:scale-[1.02] transition-all duration-300"
+              />
+              {/* Match score overlay on poster */}
+              <div
+                className="absolute -top-4 -right-4 match-dial"
+                style={{ "--pct": heroMovie.matchScore, "--dial-size": "52px" } as React.CSSProperties}
+              >
+                <span className="match-dial-label">{heroMovie.matchScore}</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div className="relative z-10 shrink-0 cursor-pointer" onClick={() => onSelectMovie(heroMovie)}>
-          <img
-            src={heroMovie.posterUrl}
-            alt={heroMovie.title}
-            className="w-40 sm:w-48 aspect-[2/3] object-cover rounded-xl shadow-2xl border border-[#33395a] hover:scale-105 transition-transform"
-          />
-        </div>
+        {/* Sprocket bottom */}
+        <div className="sprocket-strip absolute bottom-0 left-0 right-0 z-10" />
       </section>
 
-      {/* Row 1: Popular Tamil Cinema */}
-      <section className="space-y-4">
-        <div className="flex items-center justify-between">
-          <h3 className="font-heading text-xl text-[#F2F0E6] flex items-center gap-2">
-            <Flame className="w-5 h-5 text-[#E8A33D]" /> Popular Tamil Cinema (Kollywood)
-          </h3>
-          <span className="text-xs font-mono-num text-[#3FA796]">{popularTamil.length} Films</span>
-        </div>
-        <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-none snap-x">
-          {popularTamil.map((m) => (
-            <div key={m.id} className="w-44 sm:w-52 shrink-0 snap-start">
-              <MovieCard movie={m} score={m.matchScore} onSelectMovie={onSelectMovie} />
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* ══ CONTENT ROWS ══ */}
 
-      {/* Row 2: Lokesh Cinematic Universe (LCU) */}
-      <section className="space-y-4">
-        <div className="flex items-center justify-between">
-          <h3 className="font-heading text-xl text-[#F2F0E6] flex items-center gap-2">
-            <Clapperboard className="w-5 h-5 text-[#3FA796]" /> Lokesh Cinematic Universe (LCU)
-          </h3>
-          <span className="text-xs font-mono-num text-[#A9AABF]">Vikram • Leo • Kaithi</span>
-        </div>
-        <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-none snap-x">
-          {lcuCollection.map((m) => (
-            <div key={m.id} className="w-44 sm:w-52 shrink-0 snap-start">
-              <MovieCard movie={m} score={m.matchScore} onSelectMovie={onSelectMovie} />
-            </div>
-          ))}
-        </div>
-      </section>
+      <CarouselRow
+        title="Popular Tamil Cinema (Kollywood)"
+        icon={<Flame className="w-5 h-5 text-[#E8A33D]" />}
+        badge={`${popularTamil.length} Films`}
+        movies={popularTamil}
+        onSelectMovie={onSelectMovie}
+      />
 
-      {/* Row 3: IMDb Top Rated Masterpieces */}
-      <section className="space-y-4">
-        <div className="flex items-center justify-between">
-          <h3 className="font-heading text-xl text-[#F2F0E6] flex items-center gap-2">
-            <Star className="w-5 h-5 text-[#E8A33D]" /> IMDb Top Rated Masterpieces
-          </h3>
-          <span className="text-xs font-mono-num text-[#A9AABF]">Score 8.0+</span>
-        </div>
-        <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-none snap-x">
-          {topRated.map((m) => (
-            <div key={m.id} className="w-44 sm:w-52 shrink-0 snap-start">
-              <MovieCard movie={m} score={m.matchScore} onSelectMovie={onSelectMovie} />
-            </div>
-          ))}
-        </div>
-      </section>
+      <CarouselRow
+        title="Lokesh Cinematic Universe"
+        icon={<Clapperboard className="w-5 h-5 text-[#3FA796]" />}
+        badge="Vikram · Leo · Kaithi"
+        movies={lcuCollection}
+        onSelectMovie={onSelectMovie}
+      />
 
-      {/* Row 4: Oscar Winners & Award Winners */}
-      <section className="space-y-4">
-        <div className="flex items-center justify-between">
-          <h3 className="font-heading text-xl text-[#F2F0E6] flex items-center gap-2">
-            <Trophy className="w-5 h-5 text-[#E8A33D]" /> Oscar & National Award Winners
-          </h3>
-        </div>
-        <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-none snap-x">
-          {oscarWinners.map((m) => (
-            <div key={m.id} className="w-44 sm:w-52 shrink-0 snap-start">
-              <MovieCard movie={m} score={m.matchScore} onSelectMovie={onSelectMovie} />
-            </div>
-          ))}
-        </div>
-      </section>
+      {trending.length > 0 && (
+        <CarouselRow
+          title="Trending Today"
+          icon={<Flame className="w-5 h-5 text-[#C75146]" />}
+          badge="🔥 Hot"
+          movies={trending}
+          onSelectMovie={onSelectMovie}
+        />
+      )}
+
+      <CarouselRow
+        title="IMDb Top Rated Masterpieces"
+        icon={<Star className="w-5 h-5 text-[#E8A33D]" />}
+        badge="Score 8.0+"
+        movies={topRated}
+        onSelectMovie={onSelectMovie}
+      />
+
+      {nolanFilms.length > 0 && (
+        <CarouselRow
+          title="Christopher Nolan Collection"
+          icon={<Clapperboard className="w-5 h-5 text-[#A9AABF]" />}
+          movies={nolanFilms}
+          onSelectMovie={onSelectMovie}
+        />
+      )}
+
+      <CarouselRow
+        title="Oscar & National Award Winners"
+        icon={<Trophy className="w-5 h-5 text-[#E8A33D]" />}
+        movies={oscarWinners}
+        onSelectMovie={onSelectMovie}
+      />
     </div>
   );
 };
