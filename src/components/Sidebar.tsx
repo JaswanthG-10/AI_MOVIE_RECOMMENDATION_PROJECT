@@ -5,6 +5,7 @@ import {
   Home, Compass, Sparkles, Flame, Film, PlayCircle,
   History, Bookmark, Calendar, Settings,
   ChevronLeft, ChevronRight, Dices, Scale, Clapperboard,
+  ShieldCheck, User, Sparkle
 } from "lucide-react";
 
 interface SidebarProps {
@@ -14,17 +15,19 @@ interface SidebarProps {
   onOpenComparison: () => void;
 }
 
-const navItems = [
+const mainNavItems = [
   { id: "home",      label: "Home",              icon: Home },
   { id: "discover",  label: "Discover",           icon: Compass },
   { id: "search",    label: "Lumina AI Search",   icon: Sparkles },
   { id: "trending",  label: "Trending",           icon: Flame },
   { id: "genres",    label: "Genres",             icon: Film },
+];
+
+const libraryNavItems = [
   { id: "continue",  label: "Continue Watching",  icon: PlayCircle },
   { id: "history",   label: "Watch History",      icon: History },
   { id: "watchlist", label: "Watchlist",          icon: Bookmark },
   { id: "motd",      label: "Movie of the Day",   icon: Calendar },
-  { id: "settings",  label: "Settings",           icon: Settings },
 ];
 
 export const Sidebar: React.FC<SidebarProps> = ({
@@ -55,72 +58,76 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
   if (!isMounted) {
     return (
-      <aside className="w-64 h-screen sticky top-0 bg-[#0B0E20] border-r border-[#181E40]" />
+      <aside className="w-64 h-screen sticky top-0 bg-[#060813] border-r border-[#1C2242]" />
     );
   }
 
   return (
     <aside
-      className={`relative z-30 h-screen sticky top-0 glass-panel border-r flex flex-col justify-between transition-all duration-300 ease-in-out select-none ${
+      className={`relative z-30 h-screen sticky top-0 flex flex-col justify-between transition-all duration-300 ease-in-out select-none bg-[#060813]/95 backdrop-blur-2xl border-r ${
         isCollapsed ? "w-20" : "w-64"
       }`}
-      style={{ borderColor: "rgba(37, 99, 235, 0.22)" }}
+      style={{
+        borderColor: "rgba(37, 99, 235, 0.22)",
+        boxShadow: "10px 0 30px rgba(0, 0, 0, 0.5), inset -1px 0 0 rgba(236, 72, 153, 0.1)"
+      }}
     >
-      {/* ── BRAND LOGO ── */}
+      {/* ── BRAND LOGO HEADER ── */}
       <div
-        className="p-4 flex items-center justify-between transition-all duration-300"
-        style={{ borderBottom: "1px solid rgba(37, 99, 235, 0.2)" }}
+        className="p-4 flex items-center justify-between transition-all duration-300 relative"
+        style={{ borderBottom: "1px solid rgba(37, 99, 235, 0.18)" }}
       >
         <button
           onClick={() => setActiveTab("home")}
-          className="flex items-center gap-3 group text-left outline-none overflow-hidden"
+          className="flex items-center gap-3 group text-left outline-none overflow-hidden cursor-pointer"
         >
-          {/* Logo mark - Pink/Blue gradient */}
+          {/* Glowing Brand Icon */}
           <div
-            className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 shadow-lg transition-transform duration-300 group-hover:scale-105"
+            className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 shadow-xl transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_0_20px_rgba(236,72,153,0.5)]"
             style={{
               background: "linear-gradient(135deg, #2563EB 0%, #EC4899 100%)",
-              boxShadow: "0 4px 16px rgba(236, 72, 153, 0.3)",
             }}
           >
-            <Clapperboard className="w-4.5 h-4.5 text-[#F1F3FA]" />
+            <Clapperboard className="w-5 h-5 text-[#F1F3FA]" />
           </div>
 
-          {/* Logo text */}
+          {/* Title */}
           <div
             className={`transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap ${
               isCollapsed ? "w-0 opacity-0" : "w-36 opacity-100"
             }`}
           >
-            <h1 className="font-heading text-lg tracking-wider text-[#F1F3FA] leading-none">
-              Lumina <span style={{ color: "#EC4899" }}>AI</span>
+            <h1 className="font-heading text-lg font-extrabold tracking-wider text-[#F1F3FA] leading-none flex items-center gap-1">
+              Lumina <span className="text-[#EC4899]">AI</span>
             </h1>
-            <span className="font-mono-num text-[9px] text-[#6A7194] tracking-widest block mt-0.5">
-              PREMIERE v3.0
+            <span className="font-mono-num text-[9px] text-[#60A5FA] tracking-widest block mt-1 font-semibold uppercase">
+              Cinema Hub v3.0
             </span>
           </div>
         </button>
 
-        {/* Toggle button */}
+        {/* Toggle Collapse Button */}
         <button
           onClick={handleToggleCollapse}
-          className="p-1.5 rounded-lg bg-[#111530] border border-[#181E40] text-[#B0B6D0] hover:text-[#EC4899] hover:border-[#EC4899]/50 transition-all cursor-pointer shrink-0"
+          className="p-1.5 rounded-lg bg-[#111530] border border-[#2563EB]/25 text-[#B0B6D0] hover:text-[#EC4899] hover:border-[#EC4899]/50 transition-all cursor-pointer shrink-0"
           title={isCollapsed ? "Expand Sidebar" : "Collapse Sidebar"}
         >
           {isCollapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronLeft className="w-4 h-4" />}
         </button>
       </div>
 
-      {/* ── NAVIGATION LIST ── */}
-      <div className="flex-1 overflow-y-auto p-3.5 space-y-1.5 scrollbar-none overflow-x-visible">
-        {!isCollapsed && (
-          <p className="font-mono-num text-[9px] text-[#6A7194] uppercase tracking-[0.2em] px-3 pb-2.5">
-            Discover Vault
-          </p>
-        )}
-
+      {/* ── NAVIGATION SECTIONS ── */}
+      <div className="flex-1 overflow-y-auto p-3.5 space-y-6 scrollbar-none">
+        
+        {/* === MAIN NAVIGATION === */}
         <div className="space-y-1">
-          {navItems.map((item, i) => {
+          {!isCollapsed && (
+            <p className="font-mono-num text-[9px] text-[#60A5FA]/80 uppercase tracking-[0.22em] px-3 pb-2 font-bold flex items-center gap-1">
+              <Sparkle className="w-2.5 h-2.5 text-[#EC4899]" /> Main Navigation
+            </p>
+          )}
+
+          {mainNavItems.map((item) => {
             const Icon = item.icon;
             const isActive = activeTab === item.id;
 
@@ -135,17 +142,39 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   }
                 }}
                 onMouseLeave={() => setHoveredItem(null)}
-                className={`w-full flex items-center gap-3 px-3 py-3 rounded-lg text-xs font-body font-semibold transition-all duration-200 outline-none relative group cursor-pointer ${
-                  isActive ? "nav-item-active" : "text-[#B0B6D0] hover:bg-[#111530] hover:text-[#F1F3FA]"
+                className={`w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-body font-semibold transition-all duration-200 outline-none relative group cursor-pointer ${
+                  isActive
+                    ? "text-[#F1F3FA] font-bold shadow-lg"
+                    : "text-[#B0B6D0] hover:bg-[#111530]/80 hover:text-[#F1F3FA]"
                 } ${isCollapsed ? "justify-center" : ""}`}
+                style={
+                  isActive
+                    ? {
+                        background: "linear-gradient(90deg, rgba(37, 99, 235, 0.25) 0%, rgba(236, 72, 153, 0.12) 100%)",
+                        border: "1px solid rgba(236, 72, 153, 0.35)",
+                        boxShadow: "0 4px 20px rgba(37, 99, 235, 0.15)",
+                      }
+                    : { border: "1px solid transparent" }
+                }
               >
-                <Icon className={`w-4 h-4 shrink-0 transition-transform duration-200 group-hover:scale-105 ${isActive ? "text-[#EC4899]" : "text-[#6A7194]"}`} />
+                {/* Active Indicator Strip */}
+                {isActive && (
+                  <div
+                    className="absolute left-0 top-2 bottom-2 w-1 rounded-r-full"
+                    style={{ background: "linear-gradient(180deg, #2563EB 0%, #EC4899 100%)" }}
+                  />
+                )}
+
+                <Icon
+                  className={`w-4 h-4 shrink-0 transition-transform duration-200 group-hover:scale-110 ${
+                    isActive ? "text-[#EC4899] filter drop-shadow-[0_0_8px_rgba(236,72,153,0.6)]" : "text-[#6A7194]"
+                  }`}
+                />
 
                 <span
                   className={`transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap text-left ${
                     isCollapsed ? "w-0 opacity-0 pointer-events-none" : "w-40 opacity-100"
                   }`}
-                  style={{ transitionDelay: isCollapsed ? "0ms" : "50ms" }}
                 >
                   {item.label}
                 </span>
@@ -154,11 +183,74 @@ export const Sidebar: React.FC<SidebarProps> = ({
           })}
         </div>
 
-        {/* ── SMART FEATURES ── */}
-        <div className="pt-5 mt-2 space-y-1" style={{ borderTop: "1px solid rgba(37, 99, 235, 0.15)" }}>
+        {/* === YOUR LIBRARY === */}
+        <div className="space-y-1 pt-2">
           {!isCollapsed && (
-            <p className="font-mono-num text-[9px] text-[#6A7194] uppercase tracking-[0.2em] px-3 pb-2">
-              Smart Actions
+            <p className="font-mono-num text-[9px] text-[#60A5FA]/80 uppercase tracking-[0.22em] px-3 pb-2 font-bold">
+              Your Library
+            </p>
+          )}
+
+          {libraryNavItems.map((item) => {
+            const Icon = item.icon;
+            const isActive = activeTab === item.id;
+
+            return (
+              <button
+                key={item.id}
+                onClick={() => setActiveTab(item.id)}
+                onMouseEnter={(e) => {
+                  if (isCollapsed) {
+                    const rect = e.currentTarget.getBoundingClientRect();
+                    setHoveredItem({ label: item.label, y: rect.top });
+                  }
+                }}
+                onMouseLeave={() => setHoveredItem(null)}
+                className={`w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-body font-semibold transition-all duration-200 outline-none relative group cursor-pointer ${
+                  isActive
+                    ? "text-[#F1F3FA] font-bold shadow-lg"
+                    : "text-[#B0B6D0] hover:bg-[#111530]/80 hover:text-[#F1F3FA]"
+                } ${isCollapsed ? "justify-center" : ""}`}
+                style={
+                  isActive
+                    ? {
+                        background: "linear-gradient(90deg, rgba(37, 99, 235, 0.25) 0%, rgba(236, 72, 153, 0.12) 100%)",
+                        border: "1px solid rgba(236, 72, 153, 0.35)",
+                        boxShadow: "0 4px 20px rgba(37, 99, 235, 0.15)",
+                      }
+                    : { border: "1px solid transparent" }
+                }
+              >
+                {isActive && (
+                  <div
+                    className="absolute left-0 top-2 bottom-2 w-1 rounded-r-full"
+                    style={{ background: "linear-gradient(180deg, #2563EB 0%, #EC4899 100%)" }}
+                  />
+                )}
+
+                <Icon
+                  className={`w-4 h-4 shrink-0 transition-transform duration-200 group-hover:scale-110 ${
+                    isActive ? "text-[#EC4899] filter drop-shadow-[0_0_8px_rgba(236,72,153,0.6)]" : "text-[#6A7194]"
+                  }`}
+                />
+
+                <span
+                  className={`transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap text-left ${
+                    isCollapsed ? "w-0 opacity-0 pointer-events-none" : "w-40 opacity-100"
+                  }`}
+                >
+                  {item.label}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* === SMART TOOLS === */}
+        <div className="space-y-1.5 pt-3" style={{ borderTop: "1px solid rgba(37, 99, 235, 0.15)" }}>
+          {!isCollapsed && (
+            <p className="font-mono-num text-[9px] text-[#EC4899] uppercase tracking-[0.22em] px-3 pb-1 font-bold">
+              AI Tools
             </p>
           )}
 
@@ -169,20 +261,13 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 const rect = e.currentTarget.getBoundingClientRect();
                 setHoveredItem({ label: "Surprise Me Wheel", y: rect.top });
               }
-              e.currentTarget.style.background = "rgba(236, 72, 153, 0.08)";
-              e.currentTarget.style.borderColor = "rgba(236, 72, 153, 0.25)";
             }}
-            onMouseLeave={() => {
-              setHoveredItem(null);
-            }}
-            className="w-full flex items-center gap-3 px-3 py-3 rounded-lg text-xs font-body font-semibold transition-all duration-200 outline-none border border-transparent cursor-pointer"
-            style={{ color: "#EC4899" }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = "transparent";
-              e.currentTarget.style.borderColor = "transparent";
-            }}
+            onMouseLeave={() => setHoveredItem(null)}
+            className={`w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-body font-bold transition-all duration-200 outline-none border border-[#EC4899]/30 bg-[#EC4899]/10 text-[#F472B6] hover:bg-[#EC4899]/20 hover:border-[#EC4899]/60 cursor-pointer shadow-md ${
+              isCollapsed ? "justify-center" : ""
+            }`}
           >
-            <Dices className="w-4 h-4 shrink-0 text-[#EC4899]" />
+            <Dices className="w-4 h-4 shrink-0 text-[#EC4899] animate-bounce" />
             <span
               className={`transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap text-left ${
                 isCollapsed ? "w-0 opacity-0 pointer-events-none" : "w-40 opacity-100"
@@ -199,18 +284,11 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 const rect = e.currentTarget.getBoundingClientRect();
                 setHoveredItem({ label: "Compare Movies", y: rect.top });
               }
-              e.currentTarget.style.background = "rgba(37, 99, 235, 0.08)";
-              e.currentTarget.style.borderColor = "rgba(37, 99, 235, 0.25)";
             }}
-            onMouseLeave={() => {
-              setHoveredItem(null);
-            }}
-            className="w-full flex items-center gap-3 px-3 py-3 rounded-lg text-xs font-body font-semibold transition-all duration-200 outline-none border border-transparent cursor-pointer"
-            style={{ color: "#60A5FA" }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = "transparent";
-              e.currentTarget.style.borderColor = "transparent";
-            }}
+            onMouseLeave={() => setHoveredItem(null)}
+            className={`w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-body font-bold transition-all duration-200 outline-none border border-[#2563EB]/30 bg-[#2563EB]/10 text-[#60A5FA] hover:bg-[#2563EB]/20 hover:border-[#2563EB]/60 cursor-pointer shadow-md ${
+              isCollapsed ? "justify-center" : ""
+            }`}
           >
             <Scale className="w-4 h-4 shrink-0 text-[#60A5FA]" />
             <span
@@ -224,67 +302,57 @@ export const Sidebar: React.FC<SidebarProps> = ({
         </div>
       </div>
 
-      {/* ── USER PROFILE SECTION ── */}
-      <div
-        className="p-3.5 cursor-pointer group transition-colors"
-        style={{ borderTop: "1px solid rgba(37, 99, 235, 0.15)" }}
-        onClick={() => setActiveTab("settings")}
-        onMouseEnter={(e) => {
-          (e.currentTarget as HTMLDivElement).style.background = "rgba(37, 99, 235, 0.05)";
-          if (isCollapsed) {
-            const rect = e.currentTarget.getBoundingClientRect();
-            setHoveredItem({ label: "Lumina User (Settings)", y: rect.top });
-          }
-        }}
-        onMouseLeave={(e) => {
-          (e.currentTarget as HTMLDivElement).style.background = "";
-          setHoveredItem(null);
-        }}
-      >
-        <div className="flex items-center gap-3">
-          {/* Avatar initial badge - Pink to Blue */}
+      {/* ── USER PROFILE FOOTER ── */}
+      <div className="p-3">
+        <button
+          onClick={() => setActiveTab("settings")}
+          className={`w-full flex items-center gap-3 p-2.5 rounded-xl bg-[#111530]/60 border border-[#2563EB]/20 hover:border-[#EC4899]/50 transition-all cursor-pointer group ${
+            activeTab === "settings" ? "border-[#EC4899] bg-[#EC4899]/10" : ""
+          } ${isCollapsed ? "justify-center" : ""}`}
+        >
+          {/* Glowing Avatar Initials */}
           <div
-            className="w-8 h-8 rounded-full font-body font-bold text-xs flex items-center justify-center border transition-all shrink-0"
+            className="w-8 h-8 rounded-full font-body font-bold text-xs flex items-center justify-center shrink-0 border"
             style={{
               background: "linear-gradient(135deg, #2563EB 0%, #EC4899 100%)",
               borderColor: "rgba(236, 72, 153, 0.4)",
               color: "#F1F3FA",
-              boxShadow: "0 0 12px rgba(236, 72, 153, 0.3)",
+              boxShadow: "0 0 12px rgba(236, 72, 153, 0.4)",
             }}
           >
             LA
           </div>
 
           <div
-            className={`transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap ${
-              isCollapsed ? "w-0 opacity-0" : "w-32 opacity-100"
+            className={`transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap text-left ${
+              isCollapsed ? "w-0 opacity-0 pointer-events-none" : "w-32 opacity-100"
             }`}
           >
-            <span className="font-body text-xs font-bold text-[#F1F3FA] block truncate">
+            <span className="font-body text-xs font-bold text-[#F1F3FA] block truncate group-hover:text-[#EC4899] transition-colors">
               Lumina User
             </span>
-            <span className="font-mono-num text-[9px] text-[#EC4899] block tracking-wide">
-              PRO MEMBER ✦
+            <span className="font-mono-num text-[9px] text-[#60A5FA] flex items-center gap-1 font-semibold">
+              <ShieldCheck className="w-2.5 h-2.5 text-[#EC4899]" /> PRO MEMBER
             </span>
           </div>
 
           {!isCollapsed && (
-            <Settings className="w-3.5 h-3.5 text-[#6A7194] ml-auto group-hover:text-[#EC4899] transition-colors" />
+            <Settings className="w-4 h-4 text-[#6A7194] ml-auto group-hover:text-[#EC4899] transition-colors" />
           )}
-        </div>
+        </button>
       </div>
 
-      {/* ── PORTAL FLOATING TOOLTIP FOR COLLAPSED HOVER ── */}
+      {/* ── PORTAL FLOATING TOOLTIP FOR COLLAPSED STATE ── */}
       {isCollapsed && hoveredItem && (
         <div
-          className="fixed px-3 py-2 rounded-lg text-[10px] font-mono-num font-semibold shadow-2xl border pointer-events-none z-50 animate-fade-up"
+          className="fixed px-3 py-2 rounded-xl text-[10px] font-mono-num font-bold shadow-2xl border pointer-events-none z-50 animate-fade-up"
           style={{
-            top: hoveredItem.y + 6,
-            left: "88px",
+            top: hoveredItem.y + 4,
+            left: "92px",
             background: "#0B0E20",
-            borderColor: "rgba(236, 72, 153, 0.35)",
+            borderColor: "rgba(236, 72, 153, 0.4)",
             color: "#F1F3FA",
-            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(236, 72, 153, 0.08)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.9), 0 0 20px rgba(236, 72, 153, 0.2)",
           }}
         >
           {hoveredItem.label.toUpperCase()}

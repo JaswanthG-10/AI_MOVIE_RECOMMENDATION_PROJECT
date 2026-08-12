@@ -26,6 +26,12 @@ export const MovieCard: React.FC<MovieCardProps> = ({
   const [liked, setLiked] = useState(false);
   const [copied, setCopied] = useState(false);
 
+  const [imgSrc, setImgSrc] = useState(movie.posterUrl);
+
+  useEffect(() => {
+    setImgSrc(movie.posterUrl);
+  }, [movie.posterUrl]);
+
   const handleShare = (e: React.MouseEvent) => {
     e.stopPropagation();
     setCopied(true);
@@ -55,10 +61,13 @@ export const MovieCard: React.FC<MovieCardProps> = ({
         }}
       >
         <img
-          src={movie.posterUrl}
+          src={imgSrc}
           alt={movie.title}
           className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
           loading="lazy"
+          onError={() => {
+            setImgSrc("https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=600&auto=format&fit=crop&q=80");
+          }}
         />
 
         {/* Cinematic Gradient overlay */}
