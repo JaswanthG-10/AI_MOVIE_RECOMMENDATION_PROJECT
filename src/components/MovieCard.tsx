@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Movie } from "@/data/movies";
 import { Star, Play, Bookmark, Heart, Share2, Clock, CheckCheck, Sparkles } from "lucide-react";
 
