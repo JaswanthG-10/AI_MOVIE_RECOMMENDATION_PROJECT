@@ -26,10 +26,10 @@ export const TrailerPlayerModal: React.FC<TrailerPlayerModalProps> = ({
 
         <div className="relative aspect-video w-full bg-black">
           <iframe
-            src={`https://www.youtube.com/embed/${trailerId}?autoplay=1`}
+            src={`https://www.youtube-nocookie.com/embed/${trailerId}?autoplay=1&rel=0`}
             title="Movie Trailer"
             className="w-full h-full border-0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           />
         </div>

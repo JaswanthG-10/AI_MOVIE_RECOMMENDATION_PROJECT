@@ -154,7 +154,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "master": {
     poster: "photo-1497633762265-9d179a990aa6", // classroom library books
     backdrop: "photo-1516321318423-f06f85e504b3", // empty school corridor
-    trailer: "1_iUJKsh4Qc",
+    trailer: "uU5NNv_PVzY",
     tagline: "The master of his own destiny.",
     budget: "₹135 Crore",
     revenue: "₹300 Crore",
@@ -184,7 +184,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "ratsasan": {
     poster: "photo-1509248961158-e54f6934749c", // creepy dark mask shadow
     backdrop: "photo-1505635552518-3448ff116af3", // misty dark forest trees
-    trailer: "1_qR1JmB7U8",
+    trailer: "n5b5tWv1m88",
     tagline: "The hunter becomes the hunted.",
     budget: "₹15 Crore",
     revenue: "₹75 Crore",
@@ -204,7 +204,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "amaran": {
     poster: "photo-1507608869274-d3177c8bb4c7", // soldier helmet in sunset
     backdrop: "photo-1531266752426-aad472b7bbf4", // military twilight horizon
-    trailer: "1_B9X9B5r8w",
+    trailer: "gY8VpM56s8w",
     tagline: "A hero's sacrifice.",
     budget: "₹100 Crore",
     revenue: "₹250 Crore",
@@ -216,7 +216,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "inception": {
     poster: "photo-1518531933037-91b2f5f229cc", // surreal twisting architecture
     backdrop: "photo-1506318137071-a8e063b4bec0", // starry dream steps
-    trailer: "8hP9D6kZseM",
+    trailer: "YoEMS-X7-rE",
     tagline: "Your mind is the scene of the crime.",
     budget: "$160 Million",
     revenue: "$836 Million",
@@ -246,7 +246,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "pulp-fiction": {
     poster: "photo-1543536448-d209d2d13a1c", // retro vinyl record album
     backdrop: "photo-1542204172-e7052809d852", // retro neon diner table
-    trailer: "s7EdQ4FqbhY",
+    trailer: "t7CkcmPgnXU",
     tagline: "Just because you are a character doesn't mean that you have character.",
     budget: "$8 Million",
     revenue: "$213 Million",
@@ -256,7 +256,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "shawshank": {
     poster: "photo-1589829545856-d10d557cf95f", // silhouette in heavy rain
     backdrop: "photo-1478760329108-5c3ed9d495a0", // misty jail outer wall
-    trailer: "PLl99DfYbY4",
+    trailer: "NmzuHjWmXOc",
     tagline: "Fear can hold you prisoner. Hope can set you free.",
     budget: "$25 Million",
     revenue: "$73 Million",
@@ -266,7 +266,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "fight-club": {
     poster: "photo-1486406146926-c627a92ad1ab", // concrete grungy pillars
     backdrop: "photo-1508700115892-45ecd05ae2ad", // wet neon city street alley
-    trailer: "O1tGxRRgly8",
+    trailer: "SUXWAEX2ajc",
     tagline: "Mischief. Mayhem. Soap.",
     budget: "$63 Million",
     revenue: "$101 Million",
@@ -276,7 +276,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "forrest-gump": {
     poster: "photo-1470071459604-3b5ec3a7fe05", // solitary park bench
     backdrop: "photo-1500530855697-b586d89ba3ee", // grassy landscape open road
-    trailer: "bLvqoHBptjg",
+    trailer: "bLvqoHBptmg",
     tagline: "Life is like a box of chocolates... You never know what you're gonna get.",
     budget: "$55 Million",
     revenue: "$678 Million",
@@ -296,7 +296,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "gladiator": {
     poster: "photo-1552832230-c0197dd311b5", // colosseum monument rome
     backdrop: "photo-1533105079780-92b9be482077", // ancient column ground
-    trailer: "ol67qo3P4w8",
+    trailer: "owK1qxDselE",
     tagline: "What we do in life echoes in eternity.",
     budget: "$103 Million",
     revenue: "$503 Million",
@@ -306,7 +306,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "titanic": {
     poster: "photo-1500530855697-b586d89ba3ee", // ocean ship wake
     backdrop: "photo-1516589178581-6cd7833ae3b2", // deep blue twilight sea
-    trailer: "CHekzSiZhsY",
+    trailer: "kVrqfYjkT7c",
     tagline: "Nothing on Earth could come between them.",
     budget: "$200 Million",
     revenue: "$2.264 Billion",
@@ -318,7 +318,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "parasite": {
     poster: "photo-1513694203232-719a280e022f", // luxury house staircase
     backdrop: "photo-1486406146926-c627a92ad1ab", // rainy basement window view
-    trailer: "SEUXvca1i-g",
+    trailer: "5x52P2Z22oo",
     tagline: "Act like you own the place.",
     budget: "$11 Million",
     revenue: "$263 Million",
@@ -328,7 +328,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "oldboy": {
     poster: "photo-1509114397022-ed747cca3f65", // hammer outline shadow
     backdrop: "photo-1508700115892-45ecd05ae2ad", // green lit corridor alley
-    trailer: "2HkjrJ6IK5E",
+    trailer: "2Ed91Bf36-k",
     tagline: "Laugh, and the world laughs with you. Weep, and you weep alone.",
     budget: "$3 Million",
     revenue: "$15 Million",
@@ -338,7 +338,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "memories-murder": {
     poster: "photo-1505635552518-3448ff116af3", // misty spooky forest path
     backdrop: "photo-1509114397022-ed747cca3f65", // shadow figure in dark alley
-    trailer: "0n_H-Jt9xP8",
+    trailer: "6C45QhK8n6Y",
     tagline: "In the summer of 1986, a small province of South Korea changed forever.",
     budget: "$2.8 Million",
     revenue: "$17 Million",
@@ -348,7 +348,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "handmaiden": {
     poster: "photo-1518199266791-5375a83190b7", // elegant hands close-up
     backdrop: "photo-1516589178581-6cd7833ae3b2", // beautiful twilight sky
-    trailer: "Ie6Y_Q5-E0Y",
+    trailer: "Q4Z5jfjxdvQ",
     tagline: "A story of deception and desire.",
     budget: "$8 Million",
     revenue: "$38 Million",
@@ -358,7 +358,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "train-busan": {
     poster: "photo-1536768139911-e290a59002e4", // night highway train track
     backdrop: "photo-1509114397022-ed747cca3f65", // creepy misty train station
-    trailer: "pyWuOrFRKQE",
+    trailer: "pyWuPct77o0",
     tagline: "Life or death, the final destination is Busan.",
     budget: "$8.5 Million",
     revenue: "$98 Million",
@@ -380,7 +380,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "totoro": {
     poster: "photo-1502082553048-f009c37129b9", // mystical forest tree trunk
     backdrop: "photo-1470071459604-3b5ec3a7fe05", // sunny country path field
-    trailer: "92a7Hj0ijLs",
+    trailer: "92aP9gn3MW8",
     tagline: "Meet the friendly spirits of the forest.",
     budget: "$3.5 Million",
     revenue: "$30 Million",
@@ -390,7 +390,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "mononoke": {
     poster: "photo-1518063319789-7217e6706b04", // mystical deer/wolf forest
     backdrop: "photo-1505635552518-3448ff116af3", // ancient misty forest trees
-    trailer: "4OiMTOKdKTE",
+    trailer: "4UKdR2urfZk",
     tagline: "The clash between civilization and forest gods.",
     budget: "$20 Million",
     revenue: "$169 Million",
@@ -400,7 +400,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "your-name-jp": {
     poster: "photo-1506318137071-a8e063b4bec0", // starlit meteor night sky
     backdrop: "photo-1446776811953-b23d57bd21aa", // anime clouds twilight
-    trailer: "xU47nhruN-k",
+    trailer: "hDDw8iC10uQ",
     tagline: "Searching for someone I've never met.",
     budget: "$3.7 Million",
     revenue: "$382 Million",
@@ -410,7 +410,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "silent-voice-jp": {
     poster: "photo-1518199266791-5375a83190b7", // school bridge cherry blossom
     backdrop: "photo-1516589178581-6cd7833ae3b2", // sunset lake ripples
-    trailer: "nfK6UgLra7w",
+    trailer: "X5beT497n50",
     tagline: "Hear the voice that was left unheard.",
     budget: "$3.5 Million",
     revenue: "$33 Million",

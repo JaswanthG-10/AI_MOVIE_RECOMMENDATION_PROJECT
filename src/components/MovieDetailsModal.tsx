@@ -92,9 +92,9 @@ export const MovieDetailsModal: React.FC<MovieDetailsModalProps> = ({
         <div className="relative aspect-video max-h-[380px] w-full bg-black overflow-hidden shrink-0">
           {isPlayingTrailer ? (
             <iframe
-              src={`https://www.youtube.com/embed/${movie.trailerId}?autoplay=1&rel=0`}
+              src={`https://www.youtube-nocookie.com/embed/${movie.trailerId}?autoplay=1&rel=0`}
               title={`${movie.title} Official Trailer`}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
               className="w-full h-full border-0"
             ></iframe>
