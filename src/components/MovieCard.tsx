@@ -43,9 +43,14 @@ export const MovieCard: React.FC<MovieCardProps> = ({
       <div 
         className="relative aspect-[2/3] w-full overflow-hidden bg-[#060813] shrink-0"
         onClick={(e) => {
+          e.stopPropagation();
           if (onPlayTrailer) {
-            e.stopPropagation();
             onPlayTrailer(movie);
+          } else {
+            const ytUrl = movie.trailerId 
+              ? `https://www.youtube.com/watch?v=${movie.trailerId}` 
+              : `https://www.youtube.com/results?search_query=${encodeURIComponent(movie.title + " " + movie.year + " official trailer")}`;
+            window.open(ytUrl, "_blank");
           }
         }}
       >

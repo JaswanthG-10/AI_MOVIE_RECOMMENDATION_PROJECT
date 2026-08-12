@@ -37,6 +37,13 @@ export default function Home() {
     );
   };
 
+  const handlePlayTrailer = (movie: Movie) => {
+    const ytUrl = movie.trailerId 
+      ? `https://www.youtube.com/watch?v=${movie.trailerId}` 
+      : `https://www.youtube.com/results?search_query=${encodeURIComponent(movie.title + " " + movie.year + " official trailer")}`;
+    window.open(ytUrl, "_blank");
+  };
+
   const watchlistMovies = MOVIES_DATABASE.filter((m) => watchlistIds.includes(m.id));
 
   return (
@@ -63,7 +70,7 @@ export default function Home() {
             <HomeDashboard
               selectedLanguage={selectedLanguage}
               onSelectMovie={setSelectedMovie}
-              onPlayTrailer={setTrailerMovie}
+              onPlayTrailer={handlePlayTrailer}
             />
           )}
 
@@ -72,14 +79,14 @@ export default function Home() {
           )}
 
           {(activeTab === "discover" || activeTab === "genres") && (
-            <DiscoverView onSelectMovie={setSelectedMovie} />
+            <DiscoverView onSelectMovie={setSelectedMovie} onPlayTrailer={handlePlayTrailer} />
           )}
 
           {(activeTab === "trending" || activeTab === "continue") && (
             <HomeDashboard
               selectedLanguage={selectedLanguage}
               onSelectMovie={setSelectedMovie}
-              onPlayTrailer={setTrailerMovie}
+              onPlayTrailer={handlePlayTrailer}
             />
           )}
 
@@ -88,20 +95,21 @@ export default function Home() {
               onSelectMovie={setSelectedMovie}
               onToggleWatchlist={handleToggleWatchlist}
               watchlist={watchlistMovies}
+              onPlayTrailer={handlePlayTrailer}
             />
           )}
 
           {activeTab === "motd" && (
             <MovieOfTheDayView
               onSelectMovie={setSelectedMovie}
-              onPlayTrailer={setTrailerMovie}
+              onPlayTrailer={handlePlayTrailer}
             />
           )}
 
           {activeTab === "history" && (
             <WatchHistoryView
               onSelectMovie={setSelectedMovie}
-              onPlayTrailer={setTrailerMovie}
+              onPlayTrailer={handlePlayTrailer}
             />
           )}
 
@@ -111,6 +119,7 @@ export default function Home() {
               onSelectMovie={setSelectedMovie}
               onToggleWatchlist={handleToggleWatchlist}
               setActiveTab={setActiveTab}
+              onPlayTrailer={handlePlayTrailer}
             />
           )}
 

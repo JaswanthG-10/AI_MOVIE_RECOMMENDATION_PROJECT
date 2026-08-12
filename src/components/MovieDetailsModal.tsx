@@ -60,19 +60,11 @@ export const MovieDetailsModal: React.FC<MovieDetailsModalProps> = ({
 
   if (!movie) return null;
 
-  const handlePlayTrailerClick = async () => {
-    setIsLoadingTrailer(true);
-    try {
-      const result = await fetchTrailerForMovie(movie.title, movie.year, movie.language, movie.trailerId);
-      setTrailerResult(result);
-      if (result.youtubeKey) {
-        setIsPlayingTrailer(true);
-      }
-    } catch (err) {
-      setTrailerResult({ youtubeKey: null, videoTitle: "", type: "", source: "fallback" });
-    } finally {
-      setIsLoadingTrailer(false);
-    }
+  const handlePlayTrailerClick = () => {
+    const ytUrl = movie.trailerId 
+      ? `https://www.youtube.com/watch?v=${movie.trailerId}` 
+      : `https://www.youtube.com/results?search_query=${encodeURIComponent(movie.title + " " + movie.year + " official trailer")}`;
+    window.open(ytUrl, "_blank");
   };
 
   const handleAddReview = (e: React.FormEvent) => {
