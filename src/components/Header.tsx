@@ -1,9 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { LANGUAGES_LIST } from "@/data/movies";
 import { Search, Globe, Dices, Sparkles } from "lucide-react";
-import { useState } from "react";
 
 interface HeaderProps {
   selectedLanguage: string;
@@ -13,30 +12,32 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({
-  selectedLanguage,
-  setSelectedLanguage,
-  onSearchSubmit,
-  onOpenSpinWheel,
+  selectedLanguage, setSelectedLanguage, onSearchSubmit, onOpenSpinWheel,
 }) => {
-  const [query, setQuery] = useState("");
+  const [query, setQuery]     = useState("");
   const [focused, setFocused] = useState(false);
 
   return (
-    <header className="sticky top-0 z-20 w-full glass-panel border-b border-[#33395a] px-4 sm:px-8 py-3 flex items-center justify-between gap-4">
-
-      {/* ── AI Search Bar ── */}
+    <header
+      className="sticky top-0 z-20 w-full px-4 sm:px-8 py-3 flex items-center justify-between gap-4"
+      style={{
+        background: "rgba(7,5,15,0.92)",
+        backdropFilter: "blur(28px) saturate(1.5)",
+        borderBottom: "1px solid rgba(147,51,234,0.2)",
+        boxShadow: "0 4px 32px rgba(0,0,0,0.5), 0 0 60px rgba(147,51,234,0.04)",
+      }}
+    >
+      {/* ── Royal AI Search Bar ── */}
       <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          if (query.trim()) onSearchSubmit(query);
-        }}
-        className={`relative flex-1 max-w-xl ai-border rounded-lg transition-all duration-300 ${focused ? "shadow-[0_0_24px_rgba(232,163,61,0.15)]" : ""}`}
+        onSubmit={(e) => { e.preventDefault(); if (query.trim()) onSearchSubmit(query); }}
+        className={`relative flex-1 max-w-xl ai-border rounded-xl transition-all duration-300 ${
+          focused ? "shadow-[0_0_32px_rgba(212,175,55,0.12)]" : ""
+        }`}
       >
-        {/* Animated icon */}
-        <div className="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">
+        <div className="absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none">
           {focused
-            ? <Sparkles className="w-4 h-4 text-[#E8A33D] animate-pulse" />
-            : <Search className="w-4 h-4 text-[#6B6E8A]" />
+            ? <Sparkles className="w-4 h-4 animate-pulse" style={{ color: "#D4AF37" }} />
+            : <Search className="w-4 h-4" style={{ color: "#7A6FA8" }} />
           }
         </div>
 
@@ -47,14 +48,18 @@ export const Header: React.FC<HeaderProps> = ({
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
           placeholder='Ask Lumina AI — "emotional dramas", "mind-bending thrillers", "Tamil action"...'
-          className="glass-input w-full text-xs font-body text-[#F2F0E6] placeholder-[#6B6E8A] rounded-lg pl-9 pr-16 py-2.5"
+          className="glass-input w-full font-body text-xs sm:text-sm rounded-xl pl-10 pr-20 py-2.5"
+          style={{ color: "#F0ECFF" }}
         />
 
-        {/* Submit chip */}
         {query && (
           <button
             type="submit"
-            className="absolute right-2 top-1/2 -translate-y-1/2 px-2.5 py-1 rounded-md bg-[#E8A33D] text-[#0F1220] font-heading text-[10px] font-bold tracking-wide hover:bg-[#FFD580] transition-all"
+            className="absolute right-2 top-1/2 -translate-y-1/2 px-2.5 py-1 rounded-md font-heading text-[10px] font-bold tracking-wide transition-all"
+            style={{
+              background: "linear-gradient(135deg, #D4AF37, #F0D060)",
+              color: "#07050F",
+            }}
           >
             ASK
           </button>
@@ -64,16 +69,23 @@ export const Header: React.FC<HeaderProps> = ({
       {/* ── Right Controls ── */}
       <div className="flex items-center gap-2">
 
-        {/* Language Selector */}
-        <div className="flex items-center gap-1.5 bg-[#171B2E] px-3 py-2 rounded-lg border border-[#33395a] hover:border-[#3FA796]/60 transition-colors">
-          <Globe className="w-3.5 h-3.5 text-[#3FA796] shrink-0" />
+        {/* Language selector */}
+        <div
+          className="flex items-center gap-1.5 px-3 py-2 rounded-lg transition-colors"
+          style={{
+            background: "rgba(13,10,30,0.9)",
+            border: "1px solid rgba(46,36,86,0.9)",
+          }}
+        >
+          <Globe className="w-3.5 h-3.5 shrink-0" style={{ color: "#C084FC" }} />
           <select
             value={selectedLanguage}
             onChange={(e) => setSelectedLanguage(e.target.value)}
-            className="bg-transparent font-body text-xs font-semibold text-[#F2F0E6] outline-none cursor-pointer"
+            className="bg-transparent font-body text-xs font-semibold outline-none cursor-pointer"
+            style={{ color: "#F0ECFF" }}
           >
             {LANGUAGES_LIST.map((lang) => (
-              <option key={lang.id} value={lang.id} className="bg-[#171B2E] text-[#F2F0E6]">
+              <option key={lang.id} value={lang.id} style={{ background: "#0D0A1E", color: "#F0ECFF" }}>
                 {lang.flag} {lang.name}
               </option>
             ))}

@@ -3,7 +3,7 @@
 import React from "react";
 import { Movie, MOVIES_DATABASE } from "@/data/movies";
 import { MovieCard } from "@/components/MovieCard";
-import { Sparkles, Flame, Star, Trophy, Clapperboard } from "lucide-react";
+import { Sparkles, Flame, Star, Trophy, Clapperboard, Crown } from "lucide-react";
 
 interface HomeDashboardProps {
   selectedLanguage: string;
@@ -25,7 +25,7 @@ const CarouselRow: React.FC<RowProps> = ({ title, icon, badge, movies, onSelectM
     <section className="space-y-3 animate-roll-on">
       {/* Row header */}
       <div className="flex items-center justify-between px-1">
-        <h3 className="font-heading text-base text-[#F2F0E6] flex items-center gap-2">
+        <h3 className="font-heading text-base flex items-center gap-2" style={{ color: '#F0ECFF' }}>
           {icon}
           {title}
         </h3>
@@ -70,19 +70,20 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
   const nolanFilms    = MOVIES_DATABASE.filter((m) => m.collection === "Christopher Nolan Collection");
 
   return (
-    <div className="space-y-12 p-4 sm:p-8 max-w-[1600px] mx-auto">
+    <div className="space-y-12 p-4 sm:p-8 max-w-[1600px] mx-auto" style={{ background: 'transparent' }}>
 
       {/* ══ HERO BANNER ══ */}
-      <section className="relative rounded-2xl overflow-hidden border border-[#33395a] shadow-2xl animate-roll-on">
+      <section className="relative rounded-2xl overflow-hidden shadow-2xl animate-roll-on" style={{ border: '1px solid rgba(147,51,234,0.3)', boxShadow: '0 0 80px rgba(147,51,234,0.08), 0 32px 80px rgba(0,0,0,0.7)' }}>
         {/* Backdrop */}
         <div className="absolute inset-0 z-0">
           <img
             src={heroMovie.backdropUrl}
             alt={heroMovie.title}
-            className="w-full h-full object-cover opacity-25 scale-110 blur-sm"
+            className="w-full h-full object-cover opacity-20 scale-110 blur-sm"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0F1220] via-[#0F1220]/85 to-[#0F1220]/40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0F1220] via-transparent to-transparent" />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(90deg, #07050F 0%, rgba(7,5,15,0.88) 55%, rgba(13,10,30,0.4) 100%)' }} />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, #07050F 0%, transparent 50%)' }} />
+          <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 60% 80% at 10% 50%, rgba(147,51,234,0.06) 0%, transparent 70%)' }} />
         </div>
 
         {/* Sprocket top */}
@@ -92,7 +93,7 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
         <div className="relative z-10 p-6 sm:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 min-h-[300px]">
           {/* Left: Text */}
           <div className="space-y-4 max-w-2xl stagger-1 animate-fade-up">
-            <div className="badge-amber">
+            <div className="badge-amber" style={{ boxShadow: '0 0 20px rgba(212,175,55,0.2)' }}>
               <Sparkles className="w-3 h-3 animate-pulse" />
               Lumina AI — Featured Spotlight
             </div>
@@ -106,9 +107,9 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
             </p>
 
             {/* AI reasoning box */}
-            <div className="flex items-start gap-2.5 p-3.5 rounded-xl bg-[#3FA796]/08 border border-[#3FA796]/30 max-w-lg">
-              <Sparkles className="w-4 h-4 text-[#3FA796] shrink-0 mt-0.5 animate-pulse" />
-              <p className="font-body text-xs text-[#F2F0E6]/80 italic leading-relaxed">
+            <div className="flex items-start gap-2.5 p-3.5 rounded-xl max-w-lg" style={{ background: 'rgba(147,51,234,0.08)', border: '1px solid rgba(147,51,234,0.28)' }}>
+              <Sparkles className="w-4 h-4 shrink-0 mt-0.5 animate-pulse" style={{ color: '#C084FC' }} />
+              <p className="font-body text-xs italic leading-relaxed" style={{ color: 'rgba(240,236,255,0.85)' }}>
                 "{heroMovie.aiReasoning}"
               </p>
             </div>
