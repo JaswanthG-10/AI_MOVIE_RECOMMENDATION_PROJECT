@@ -6,17 +6,17 @@ import { MovieCard } from "@/components/MovieCard";
 import { Bookmark, Film, Sparkles, ArrowRight } from "lucide-react";
 
 interface WatchlistViewProps {
-  watchlist: Movie[];
+  watchlist?: Movie[];
   onSelectMovie: (movie: Movie) => void;
-  onToggleWatchlist: (movie: Movie) => void;
-  setActiveTab: (tab: string) => void;
+  onToggleWatchlist?: (movie: Movie) => void;
+  setActiveTab?: (tab: string) => void;
 }
 
 export const WatchlistView: React.FC<WatchlistViewProps> = ({
-  watchlist,
+  watchlist = [],
   onSelectMovie,
-  onToggleWatchlist,
-  setActiveTab
+  onToggleWatchlist = () => {},
+  setActiveTab = () => {}
 }) => {
   const [selectedGenre, setSelectedGenre] = useState<string>("All");
   const [sortBy, setSortBy] = useState<"rating" | "year" | "title">("rating");

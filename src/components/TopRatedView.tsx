@@ -7,14 +7,14 @@ import { Star, Award } from "lucide-react";
 
 interface TopRatedViewProps {
   onSelectMovie: (movie: Movie) => void;
-  onToggleWatchlist: (movie: Movie) => void;
-  watchlist: Movie[];
+  onToggleWatchlist?: (movie: Movie) => void;
+  watchlist?: Movie[];
 }
 
 export const TopRatedView: React.FC<TopRatedViewProps> = ({
   onSelectMovie,
-  onToggleWatchlist,
-  watchlist
+  onToggleWatchlist = () => {},
+  watchlist = []
 }) => {
   const topRatedMovies = MOVIES_DATABASE.filter((m) => m.imdbRating >= 8.4).sort(
     (a, b) => b.imdbRating - a.imdbRating

@@ -1,93 +1,124 @@
 "use client";
 
 import React, { useState } from "react";
-import { Movie, MOVIES_DATABASE } from "@/data/movies";
+import { Movie, ALL_GENRES_LIST, LANGUAGES_LIST } from "@/data/movies";
+import { filterAndRankMovies } from "@/lib/recommendEngine";
 import { MovieCard } from "@/components/MovieCard";
-import { Compass, Search } from "lucide-react";
+import { Filter, Sliders, RefreshCw, Trophy, Star } from "lucide-react";
 
 interface DiscoverViewProps {
   onSelectMovie: (movie: Movie) => void;
-  onToggleWatchlist: (movie: Movie) => void;
-  watchlist: Movie[];
 }
 
-export const DiscoverView: React.FC<DiscoverViewProps> = ({
-  onSelectMovie,
-  onToggleWatchlist,
-  watchlist
-}) => {
-  const [searchTerm, setSearchTerm] = useState("");
+export const DiscoverView: React.FC<DiscoverViewProps> = ({ onSelectMovie }) => {
   const [selectedGenre, setSelectedGenre] = useState("All");
+  const [selectedLanguage, setSelectedLanguage] = useState("All");
+  const [minImdb, setMinImdb] = useState(0);
+  const [isOscarOnly, setIsOscarOnly] = useState(false);
 
-  const allGenres = ["All", ...Array.from(new Set(MOVIES_DATABASE.flatMap((m) => m.genres)))];
-
-  const filteredMovies = MOVIES_DATABASE.filter((movie) => {
-    const matchesSearch =
-      movie.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      movie.director.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      movie.cast.some((c) => c.toLowerCase().includes(searchTerm.toLowerCase()));
-
-    const matchesGenre = selectedGenre === "All" || movie.genres.includes(selectedGenre);
-
-    return matchesSearch && matchesGenre;
+  const filteredMovies = filterAndRankMovies({
+    genre: selectedGenre,
+    language: selectedLanguage,
+    minImdb: minImdb > 0 ? minImdb : undefined,
+    isOscarWinner: isOscarOnly || undefined
   });
 
   return (
-    <div className="max-w-6xl mx-auto p-2 sm:p-8 space-y-6 pb-24 md:pb-16">
-      {/* Header & Controls */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-zinc-800">
+    <div className="max-w-7xl mx-auto space-y-6 p-4 sm:p-8 font-sora">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-[#33395a] pb-4">
         <div>
-          <h2 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2 font-poppins">
-            <Compass className="w-5 sm:w-6 h-5 sm:h-6 text-purple-400" /> Discover Films
+          <h2 className="font-heading text-3xl text-[#F2F0E6] flex items-center gap-2">
+            <Filter className="w-6 h-6 text-[#E8A33D]" /> Advanced Discover Vault
           </h2>
-          <p className="text-xs text-zinc-400 mt-1">
-            Browse our full neural movie database ({filteredMovies.length} titles)
+          <p className="text-xs text-[#A9AABF] mt-1">
+            Filter movies instantly by genre, language, minimum IMDb rating, and awards.
           </p>
         </div>
 
-        {/* Filter Bar */}
-        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-          <div className="relative">
-            <Search className="w-3.5 h-3.5 text-zinc-500 absolute left-3 top-1/2 -translate-y-1/2" />
-            <input
-              type="text"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder="Search title, actor, director..."
-              className="bg-zinc-900 text-xs text-white placeholder-zinc-500 rounded-xl pl-9 pr-3 py-2 border border-zinc-800 focus:border-purple-500 outline-none w-full sm:w-56"
-            />
-          </div>
+        <button
+          onClick={() => {
+            setSelectedGenre("All");
+            setSelectedLanguage("All");
+            setMinImdb(0);
+            setIsOscarOnly(false);
+          }}
+          className="px-3 py-1.5 rounded-lg bg-[#1E2338] border border-[#33395a] text-xs font-semibold text-[#A9AABF] hover:text-[#F2F0E6] flex items-center gap-1.5"
+        >
+          <RefreshCw className="w-3.5 h-3.5" /> Reset Filters
+        </button>
+      </div>
 
-          <div className="flex items-center gap-1.5 overflow-x-auto py-1 scrollbar-none">
-            {allGenres.map((g) => (
-              <button
-                key={g}
-                onClick={() => setSelectedGenre(g)}
-                className={`text-xs px-3 py-1.5 rounded-xl font-medium shrink-0 transition-all ${
-                  selectedGenre === g
-                    ? "bg-purple-600 text-white shadow-md shadow-purple-950"
-                    : "bg-zinc-900 text-zinc-400 border border-zinc-800 hover:text-white"
-                }`}
-              >
-                {g}
-              </button>
+      {/* Filter Control Bar */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4 rounded-xl bg-[#171B2E] border border-[#33395a]">
+        {/* Genre Selector */}
+        <div>
+          <label className="text-xs font-mono-num text-[#A9AABF] block mb-1">Genre</label>
+          <select
+            value={selectedGenre}
+            onChange={(e) => setSelectedGenre(e.target.value)}
+            className="w-full bg-[#1E2338] text-xs text-[#F2F0E6] p-2.5 rounded-lg border border-[#33395a] outline-none"
+          >
+            <option value="All">All Genres</option>
+            {ALL_GENRES_LIST.map((g) => (
+              <option key={g} value={g}>{g}</option>
             ))}
-          </div>
+          </select>
+        </div>
+
+        {/* Language Selector */}
+        <div>
+          <label className="text-xs font-mono-num text-[#A9AABF] block mb-1">Language</label>
+          <select
+            value={selectedLanguage}
+            onChange={(e) => setSelectedLanguage(e.target.value)}
+            className="w-full bg-[#1E2338] text-xs text-[#F2F0E6] p-2.5 rounded-lg border border-[#33395a] outline-none"
+          >
+            {LANGUAGES_LIST.map((lang) => (
+              <option key={lang.id} value={lang.id}>{lang.flag} {lang.name}</option>
+            ))}
+          </select>
+        </div>
+
+        {/* Minimum IMDb Rating */}
+        <div>
+          <label className="text-xs font-mono-num text-[#A9AABF] block mb-1">Min IMDb Rating: {minImdb > 0 ? minImdb : "Any"}</label>
+          <select
+            value={minImdb}
+            onChange={(e) => setMinImdb(Number(e.target.value))}
+            className="w-full bg-[#1E2338] text-xs text-[#F2F0E6] p-2.5 rounded-lg border border-[#33395a] outline-none"
+          >
+            <option value={0}>Any Rating</option>
+            <option value={7.0}>★ 7.0+ IMDb</option>
+            <option value={8.0}>★ 8.0+ IMDb</option>
+            <option value={8.5}>★ 8.5+ IMDb</option>
+          </select>
+        </div>
+
+        {/* Oscar Winners Toggle */}
+        <div className="flex items-end">
+          <button
+            onClick={() => setIsOscarOnly(!isOscarOnly)}
+            className={`w-full py-2.5 rounded-lg text-xs font-bold flex items-center justify-center gap-2 border transition-all ${
+              isOscarOnly
+                ? "bg-[#E8A33D] text-[#0F1220] border-[#E8A33D]"
+                : "bg-[#1E2338] text-[#A9AABF] border-[#33395a] hover:text-[#F2F0E6]"
+            }`}
+          >
+            <Trophy className="w-4 h-4" /> Oscar Winners Only
+          </button>
         </div>
       </div>
 
-      {/* Responsive Movies Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-6">
-        {filteredMovies.map((movie) => (
-          <MovieCard
-            key={movie.id}
-            movie={movie}
-            onSelectMovie={onSelectMovie}
-            onToggleWatchlist={onToggleWatchlist}
-            isWatchlisted={watchlist.some((w) => w.id === movie.id)}
-            showAiReasoning={false}
-          />
-        ))}
+      {/* Results Grid */}
+      <div className="space-y-3">
+        <span className="text-xs font-mono-num text-[#3FA796] block">
+          Found {filteredMovies.length} matching films
+        </span>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          {filteredMovies.map((m) => (
+            <MovieCard key={m.id} movie={m} score={m.matchScore} onSelectMovie={onSelectMovie} />
+          ))}
+        </div>
       </div>
     </div>
   );

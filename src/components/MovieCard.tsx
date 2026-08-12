@@ -16,17 +16,19 @@ import {
 interface MovieCardProps {
   movie: Movie;
   onSelectMovie: (movie: Movie) => void;
-  onToggleWatchlist: (movie: Movie) => void;
-  isWatchlisted: boolean;
+  onToggleWatchlist?: (movie: Movie) => void;
+  isWatchlisted?: boolean;
   showAiReasoning?: boolean;
+  score?: number;
 }
 
 export const MovieCard: React.FC<MovieCardProps> = ({
   movie,
   onSelectMovie,
   onToggleWatchlist,
-  isWatchlisted,
-  showAiReasoning = true
+  isWatchlisted = false,
+  showAiReasoning = true,
+  score
 }) => {
   const [liked, setLiked] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -142,7 +144,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({
             <button
               onClick={(e) => {
                 e.stopPropagation();
-                onToggleWatchlist(movie);
+                if (onToggleWatchlist) onToggleWatchlist(movie);
               }}
               title={isWatchlisted ? "Remove from Watchlist" : "Save to Watchlist"}
               className={`p-1.5 rounded-lg border transition-all ${
