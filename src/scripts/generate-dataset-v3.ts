@@ -114,7 +114,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "vikram": {
     poster: "photo-1508700115892-45ecd05ae2ad", // neon action city
     backdrop: "photo-1509198397868-475647b2a1e5", // abstract smoky steps
-    trailer: "AoAMf1whqyU",
+    trailer: "_-QD4_00Q3k",
     tagline: "Once a lion, always a lion.",
     budget: "₹120 Crore",
     revenue: "₹450 Crore",
@@ -124,7 +124,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "leo": {
     poster: "photo-1546182990-dffeafbe841d", // majestic lion profile
     backdrop: "photo-1602491453977-63a204d5537d", // snow tiger forest
-    trailer: "Po3jIhW50m0",
+    trailer: "3P-t4WRoW5c",
     tagline: "Keep calm and avoid the bad guys.",
     budget: "₹300 Crore",
     revenue: "₹620 Crore",
@@ -134,7 +134,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "kaithi": {
     poster: "photo-1536768139911-e290a59002e4", // night highway truck headlights
     backdrop: "photo-1509114397022-ed747cca3f65", // misty dark highway shadow
-    trailer: "gkoO9UrwX7I",
+    trailer: "RB14s-z-xVw",
     tagline: "One night. Four police officers. A truck. 50 criminals.",
     budget: "₹25 Crore",
     revenue: "₹105 Crore",
@@ -144,7 +144,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "jailer": {
     poster: "photo-1589829545856-d10d557cf95f", // prison bars silhouette
     backdrop: "photo-1478760329108-5c3ed9d495a0", // misty dark alley
-    trailer: "xenOCRDpEPk",
+    trailer: "Vz-01L391c4",
     tagline: "A father's quiet rage.",
     budget: "₹200 Crore",
     revenue: "₹650 Crore",
@@ -164,7 +164,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "ninety-six": {
     poster: "photo-1518199266791-5375a83190b7", // romantic walking hands
     backdrop: "photo-1516589178581-6cd7833ae3b2", // beach sunset silhouettes
-    trailer: "r0s_8-L9y9I",
+    trailer: "7K1-1V5gV8w",
     tagline: "The memories stay forever.",
     budget: "₹18 Crore",
     revenue: "₹55 Crore",
@@ -174,7 +174,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "soorarai-pottru": {
     poster: "photo-1436491865332-7a61a109cc05", // commercial flight sky
     backdrop: "photo-1501785888041-af3ef285b470", // mountain peaks horizon
-    trailer: "dyrA-tV4h-U",
+    trailer: "b73v654K_vM",
     tagline: "An ordinary man with an extraordinary flight.",
     budget: "₹20 Crore",
     revenue: "₹170 Crore",
@@ -194,7 +194,7 @@ const metadataMap: Record<string, RealMetadata> = {
   "asuran": {
     poster: "photo-1500937386664-56d1dfef3854", // rural dry soil field
     backdrop: "photo-1502082553048-f009c37129b9", // forest rugged ground
-    trailer: "k1B9X9B5r8w",
+    trailer: "S_T2i1o6L_s",
     tagline: "They can steal our land, but they can't steal our education.",
     budget: "₹32 Crore",
     revenue: "₹150 Crore",

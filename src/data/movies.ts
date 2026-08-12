@@ -128,7 +128,7 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "posterUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=500&auto=format&fit=crop&q=80",
     "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "AoAMf1whqyU",
+    "trailerId": "_-QD4_00Q3k",
     "streamingOn": [
       "Netflix",
       "Prime Video"
@@ -182,7 +182,7 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "posterUrl": "https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=500&auto=format&fit=crop&q=80",
     "backdropUrl": "https://images.unsplash.com/photo-1602491453977-63a204d5537d?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "Po3jIhW50m0",
+    "trailerId": "3P-t4WRoW5c",
     "streamingOn": [
       "Prime Video"
     ],
@@ -234,7 +234,7 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "posterUrl": "https://images.unsplash.com/photo-1536768139911-e290a59002e4?w=500&auto=format&fit=crop&q=80",
     "backdropUrl": "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "gkoO9UrwX7I",
+    "trailerId": "RB14s-z-xVw",
     "streamingOn": [
       "Max"
     ],
@@ -287,7 +287,7 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "posterUrl": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=500&auto=format&fit=crop&q=80",
     "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "xenOCRDpEPk",
+    "trailerId": "Vz-01L391c4",
     "streamingOn": [
       "Disney+"
     ],
@@ -392,7 +392,7 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
     "backdropUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "r0s_8-L9y9I",
+    "trailerId": "7K1-1V5gV8w",
     "streamingOn": [
       "Prime Video"
     ],
@@ -443,7 +443,7 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "posterUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=500&auto=format&fit=crop&q=80",
     "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "dyrA-tV4h-U",
+    "trailerId": "b73v654K_vM",
     "streamingOn": [
       "Max"
     ],
@@ -544,7 +544,7 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "posterUrl": "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=500&auto=format&fit=crop&q=80",
     "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "k1B9X9B5r8w",
+    "trailerId": "S_T2i1o6L_s",
     "streamingOn": [
       "Netflix",
       "Prime Video"
