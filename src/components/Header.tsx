@@ -54,7 +54,7 @@ export const Header: React.FC<HeaderProps> = ({
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
-          placeholder='Ask Aether AI — "emotional dramas", "mind-bending thrillers", "Tamil action"...'
+          placeholder='Ask Lumina AI — "emotional dramas", "mind-bending thrillers", "Tamil action"...'
           className="glass-input w-full font-body text-xs sm:text-sm rounded-xl pl-10 pr-20 py-2.5 text-[#F7F5F0]"
         />
 

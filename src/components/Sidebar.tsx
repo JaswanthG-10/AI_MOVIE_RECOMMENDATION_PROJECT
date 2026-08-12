@@ -17,7 +17,7 @@ interface SidebarProps {
 const navItems = [
   { id: "home",      label: "Home",              icon: Home },
   { id: "discover",  label: "Discover",           icon: Compass },
-  { id: "search",    label: "AI Recommendations", icon: Sparkles },
+  { id: "search",    label: "Lumina AI Search",   icon: Sparkles },
   { id: "trending",  label: "Trending",           icon: Flame },
   { id: "genres",    label: "Genres",             icon: Film },
   { id: "continue",  label: "Continue Watching",  icon: PlayCircle },
@@ -33,7 +33,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
   onOpenSpinWheel,
   onOpenComparison,
 }) => {
-  // State persistence: load initial collapse state from localStorage to prevent re-render resets
   const [isCollapsed, setIsCollapsed] = useState<boolean>(false);
   const [isMounted, setIsMounted] = useState<boolean>(false);
   const [hoveredItem, setHoveredItem] = useState<{ label: string; y: number } | null>(null);
@@ -54,10 +53,9 @@ export const Sidebar: React.FC<SidebarProps> = ({
     });
   };
 
-  // Prevent flash of unstyled content during hydration
   if (!isMounted) {
     return (
-      <aside className="w-64 h-screen sticky top-0 bg-[#121115] border-r border-[#33303A]" />
+      <aside className="w-64 h-screen sticky top-0 bg-[#0B0E20] border-r border-[#181E40]" />
     );
   }
 
@@ -66,37 +64,38 @@ export const Sidebar: React.FC<SidebarProps> = ({
       className={`relative z-30 h-screen sticky top-0 glass-panel border-r flex flex-col justify-between transition-all duration-300 ease-in-out select-none ${
         isCollapsed ? "w-20" : "w-64"
       }`}
+      style={{ borderColor: "rgba(37, 99, 235, 0.22)" }}
     >
       {/* ── BRAND LOGO ── */}
       <div
         className="p-4 flex items-center justify-between transition-all duration-300"
-        style={{ borderBottom: "1px solid rgba(212, 175, 106, 0.15)" }}
+        style={{ borderBottom: "1px solid rgba(37, 99, 235, 0.2)" }}
       >
         <button
           onClick={() => setActiveTab("home")}
           className="flex items-center gap-3 group text-left outline-none overflow-hidden"
         >
-          {/* Logo mark */}
+          {/* Logo mark - Pink/Blue gradient */}
           <div
             className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0 shadow-lg transition-transform duration-300 group-hover:scale-105"
             style={{
-              background: "linear-gradient(135deg, #D4AF6A 0%, #E8C27D 100%)",
-              boxShadow: "0 4px 16px rgba(212, 175, 106, 0.3)",
+              background: "linear-gradient(135deg, #2563EB 0%, #EC4899 100%)",
+              boxShadow: "0 4px 16px rgba(236, 72, 153, 0.3)",
             }}
           >
-            <Clapperboard className="w-4.5 h-4.5 text-[#0B0A0C]" />
+            <Clapperboard className="w-4.5 h-4.5 text-[#F1F3FA]" />
           </div>
 
-          {/* Logo text - smooth opacity & width transition */}
+          {/* Logo text */}
           <div
             className={`transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap ${
               isCollapsed ? "w-0 opacity-0" : "w-36 opacity-100"
             }`}
           >
-            <h1 className="font-heading text-lg tracking-wider text-[#F7F5F0] leading-none">
-              Aether <span style={{ color: "#D4AF6A" }}>Cinema</span>
+            <h1 className="font-heading text-lg tracking-wider text-[#F1F3FA] leading-none">
+              Lumina <span style={{ color: "#EC4899" }}>AI</span>
             </h1>
-            <span className="font-mono-num text-[9px] text-[#87847B] tracking-widest block mt-0.5">
+            <span className="font-mono-num text-[9px] text-[#6A7194] tracking-widest block mt-0.5">
               PREMIERE v3.0
             </span>
           </div>
@@ -105,7 +104,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
         {/* Toggle button */}
         <button
           onClick={handleToggleCollapse}
-          className="p-1.5 rounded-lg bg-[#1A191E] border border-[#33303A] text-[#C5C2B9] hover:text-[#F7F5F0] hover:border-[#D4AF6A]/50 transition-all cursor-pointer shrink-0"
+          className="p-1.5 rounded-lg bg-[#111530] border border-[#181E40] text-[#B0B6D0] hover:text-[#EC4899] hover:border-[#EC4899]/50 transition-all cursor-pointer shrink-0"
           title={isCollapsed ? "Expand Sidebar" : "Collapse Sidebar"}
         >
           {isCollapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronLeft className="w-4 h-4" />}
@@ -115,8 +114,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
       {/* ── NAVIGATION LIST ── */}
       <div className="flex-1 overflow-y-auto p-3.5 space-y-1.5 scrollbar-none overflow-x-visible">
         {!isCollapsed && (
-          <p className="font-mono-num text-[9px] text-[#87847B] uppercase tracking-[0.2em] px-3 pb-2.5">
-            Discover Vault
+          <p className="font-mono-num text-[9px] text-[#6A7194] uppercase tracking-[0.2em] px-3 pb-2.5">
+            Lumina Engine
           </p>
         )}
 
@@ -136,13 +135,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   }
                 }}
                 onMouseLeave={() => setHoveredItem(null)}
-                className={`w-full flex items-center gap-3 px-3 py-3 rounded-lg text-xs font-body font-semibold transition-all duration-200 outline-none relative group ${
-                  isActive ? "nav-item-active" : "text-[#C5C2B9] hover:bg-[#1A191E] hover:text-[#F7F5F0]"
+                className={`w-full flex items-center gap-3 px-3 py-3 rounded-lg text-xs font-body font-semibold transition-all duration-200 outline-none relative group cursor-pointer ${
+                  isActive ? "nav-item-active" : "text-[#B0B6D0] hover:bg-[#111530] hover:text-[#F1F3FA]"
                 } ${isCollapsed ? "justify-center" : ""}`}
               >
-                <Icon className={`w-4 h-4 shrink-0 transition-transform duration-200 group-hover:scale-105 ${isActive ? "text-[#D4AF6A]" : "text-[#87847B]"}`} />
+                <Icon className={`w-4 h-4 shrink-0 transition-transform duration-200 group-hover:scale-105 ${isActive ? "text-[#EC4899]" : "text-[#6A7194]"}`} />
 
-                {/* Smooth transition label */}
                 <span
                   className={`transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap text-left ${
                     isCollapsed ? "w-0 opacity-0 pointer-events-none" : "w-40 opacity-100"
@@ -157,9 +155,9 @@ export const Sidebar: React.FC<SidebarProps> = ({
         </div>
 
         {/* ── SMART FEATURES ── */}
-        <div className="pt-5 mt-2 space-y-1" style={{ borderTop: "1px solid rgba(212, 175, 106, 0.1)" }}>
+        <div className="pt-5 mt-2 space-y-1" style={{ borderTop: "1px solid rgba(37, 99, 235, 0.15)" }}>
           {!isCollapsed && (
-            <p className="font-mono-num text-[9px] text-[#87847B] uppercase tracking-[0.2em] px-3 pb-2">
+            <p className="font-mono-num text-[9px] text-[#6A7194] uppercase tracking-[0.2em] px-3 pb-2">
               Smart Actions
             </p>
           )}
@@ -171,25 +169,20 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 const rect = e.currentTarget.getBoundingClientRect();
                 setHoveredItem({ label: "Surprise Me Wheel", y: rect.top });
               }
+              e.currentTarget.style.background = "rgba(236, 72, 153, 0.08)";
+              e.currentTarget.style.borderColor = "rgba(236, 72, 153, 0.25)";
             }}
-            onMouseLeave={() => setHoveredItem(null)}
-            className="w-full flex items-center gap-3 px-3 py-3 rounded-lg text-xs font-body font-semibold transition-all duration-200 outline-none border border-transparent"
-            style={{ color: "#D4AF6A" }}
-            onMouseEnter={(e) => {
-              if (isCollapsed) {
-                const rect = e.currentTarget.getBoundingClientRect();
-                setHoveredItem({ label: "Surprise Me Wheel", y: rect.top });
-              }
-              e.currentTarget.style.background = "rgba(212, 175, 106, 0.08)";
-              e.currentTarget.style.borderColor = "rgba(212, 175, 106, 0.25)";
-            }}
-            onMouseLeave={(e) => {
+            onMouseLeave={() => {
               setHoveredItem(null);
+            }}
+            className="w-full flex items-center gap-3 px-3 py-3 rounded-lg text-xs font-body font-semibold transition-all duration-200 outline-none border border-transparent cursor-pointer"
+            style={{ color: "#EC4899" }}
+            onMouseLeave={(e) => {
               e.currentTarget.style.background = "transparent";
               e.currentTarget.style.borderColor = "transparent";
             }}
           >
-            <Dices className="w-4 h-4 shrink-0 text-[#D4AF6A]" />
+            <Dices className="w-4 h-4 shrink-0 text-[#EC4899]" />
             <span
               className={`transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap text-left ${
                 isCollapsed ? "w-0 opacity-0 pointer-events-none" : "w-40 opacity-100"
@@ -206,25 +199,20 @@ export const Sidebar: React.FC<SidebarProps> = ({
                 const rect = e.currentTarget.getBoundingClientRect();
                 setHoveredItem({ label: "Compare Movies", y: rect.top });
               }
+              e.currentTarget.style.background = "rgba(37, 99, 235, 0.08)";
+              e.currentTarget.style.borderColor = "rgba(37, 99, 235, 0.25)";
             }}
-            onMouseLeave={() => setHoveredItem(null)}
-            className="w-full flex items-center gap-3 px-3 py-3 rounded-lg text-xs font-body font-semibold transition-all duration-200 outline-none border border-transparent"
-            style={{ color: "#E8C27D" }}
-            onMouseEnter={(e) => {
-              if (isCollapsed) {
-                const rect = e.currentTarget.getBoundingClientRect();
-                setHoveredItem({ label: "Compare Movies", y: rect.top });
-              }
-              e.currentTarget.style.background = "rgba(232, 194, 125, 0.08)";
-              e.currentTarget.style.borderColor = "rgba(232, 194, 125, 0.25)";
-            }}
-            onMouseLeave={(e) => {
+            onMouseLeave={() => {
               setHoveredItem(null);
+            }}
+            className="w-full flex items-center gap-3 px-3 py-3 rounded-lg text-xs font-body font-semibold transition-all duration-200 outline-none border border-transparent cursor-pointer"
+            style={{ color: "#60A5FA" }}
+            onMouseLeave={(e) => {
               e.currentTarget.style.background = "transparent";
               e.currentTarget.style.borderColor = "transparent";
             }}
           >
-            <Scale className="w-4 h-4 shrink-0 text-[#E8C27D]" />
+            <Scale className="w-4 h-4 shrink-0 text-[#60A5FA]" />
             <span
               className={`transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap text-left ${
                 isCollapsed ? "w-0 opacity-0 pointer-events-none" : "w-40 opacity-100"
@@ -239,13 +227,13 @@ export const Sidebar: React.FC<SidebarProps> = ({
       {/* ── USER PROFILE SECTION ── */}
       <div
         className="p-3.5 cursor-pointer group transition-colors"
-        style={{ borderTop: "1px solid rgba(212, 175, 106, 0.1)" }}
+        style={{ borderTop: "1px solid rgba(37, 99, 235, 0.15)" }}
         onClick={() => setActiveTab("settings")}
         onMouseEnter={(e) => {
-          (e.currentTarget as HTMLDivElement).style.background = "rgba(212, 175, 106, 0.05)";
+          (e.currentTarget as HTMLDivElement).style.background = "rgba(37, 99, 235, 0.05)";
           if (isCollapsed) {
             const rect = e.currentTarget.getBoundingClientRect();
-            setHoveredItem({ label: "UserX (Settings)", y: rect.top });
+            setHoveredItem({ label: "Lumina User (Settings)", y: rect.top });
           }
         }}
         onMouseLeave={(e) => {
@@ -254,17 +242,17 @@ export const Sidebar: React.FC<SidebarProps> = ({
         }}
       >
         <div className="flex items-center gap-3">
-          {/* Avatar initial badge */}
+          {/* Avatar initial badge - Pink to Blue */}
           <div
             className="w-8 h-8 rounded-full font-body font-bold text-xs flex items-center justify-center border transition-all shrink-0"
             style={{
-              background: "linear-gradient(135deg, #7A2E3A 0%, #9B3B4A 100%)",
-              borderColor: "rgba(212, 175, 106, 0.3)",
-              color: "#F7F5F0",
-              boxShadow: "0 0 12px rgba(122, 46, 58, 0.4)",
+              background: "linear-gradient(135deg, #2563EB 0%, #EC4899 100%)",
+              borderColor: "rgba(236, 72, 153, 0.4)",
+              color: "#F1F3FA",
+              boxShadow: "0 0 12px rgba(236, 72, 153, 0.3)",
             }}
           >
-            UX
+            LA
           </div>
 
           <div
@@ -272,16 +260,16 @@ export const Sidebar: React.FC<SidebarProps> = ({
               isCollapsed ? "w-0 opacity-0" : "w-32 opacity-100"
             }`}
           >
-            <span className="font-body text-xs font-bold text-[#F7F5F0] block truncate">
-              UserX
+            <span className="font-body text-xs font-bold text-[#F1F3FA] block truncate">
+              Lumina User
             </span>
-            <span className="font-mono-num text-[9px] text-[#D4AF6A] block tracking-wide">
-              PREMIERE MEMBER ✦
+            <span className="font-mono-num text-[9px] text-[#EC4899] block tracking-wide">
+              PRO MEMBER ✦
             </span>
           </div>
 
           {!isCollapsed && (
-            <Settings className="w-3.5 h-3.5 text-[#87847B] ml-auto group-hover:text-[#D4AF6A] transition-colors" />
+            <Settings className="w-3.5 h-3.5 text-[#6A7194] ml-auto group-hover:text-[#EC4899] transition-colors" />
           )}
         </div>
       </div>
@@ -293,10 +281,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
           style={{
             top: hoveredItem.y + 6,
             left: "88px",
-            background: "#121115",
-            borderColor: "rgba(212, 175, 106, 0.25)",
-            color: "#F7F5F0",
-            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(212, 175, 106, 0.05)",
+            background: "#0B0E20",
+            borderColor: "rgba(236, 72, 153, 0.35)",
+            color: "#F1F3FA",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(236, 72, 153, 0.08)",
           }}
         >
           {hoveredItem.label.toUpperCase()}

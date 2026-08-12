@@ -29,14 +29,14 @@ const ThinkingDots = () => (
     {[0, 1, 2].map((i) => (
       <span
         key={i}
-        className="w-2 h-2 rounded-full bg-[#D4AF6A] opacity-70"
+        className="w-2 h-2 rounded-full bg-[#EC4899] opacity-70"
         style={{
           animation: `pulse 1.2s ease-in-out ${i * 0.2}s infinite`,
         }}
       />
     ))}
-    <span className="font-mono-num text-[10px] text-[#D4AF6A] ml-1 tracking-wider">
-      AETHER AI IS ANALYZING FILM ARCHIVES...
+    <span className="font-mono-num text-[10px] text-[#EC4899] ml-1 tracking-wider">
+      LUMINA AI IS ANALYZING FILM ARCHIVES...
     </span>
   </div>
 );
@@ -114,15 +114,15 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({ onSelectMovie }) =
       {/* ── Hero header ── */}
       <div className="text-center space-y-3 max-w-2xl mx-auto animate-roll-on">
         <div className="inline-flex items-center gap-2 badge-teal mb-2">
-          <Sparkles className="w-3 h-3 animate-pulse" />
-          Aether Deep Recommendation Engine
+          <Sparkles className="w-3 h-3 animate-pulse text-[#F472B6]" />
+          Lumina Deep Recommendation Engine
         </div>
-        <h2 className="font-heading text-3xl sm:text-5xl text-[#F7F5F0] leading-none tracking-tight">
-          AETHER <span className="text-gradient-amber">CONVERSATIONAL AI</span>
+        <h2 className="font-heading text-3xl sm:text-5xl text-[#F1F3FA] leading-none tracking-tight">
+          LUMINA <span className="text-gradient-amber">CONVERSATIONAL AI</span>
         </h2>
-        <p className="font-body text-sm text-[#C5C2B9] leading-relaxed">
+        <p className="font-body text-sm text-[#B0B6D0] leading-relaxed">
           Describe your mood, craving, or vibe in plain language.
-          Aether AI analyzes intent and surfaces the perfect films — never the same list twice.
+          Lumina AI analyzes intent and surfaces the perfect films — never the same list twice.
         </p>
       </div>
 
@@ -134,11 +134,11 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({ onSelectMovie }) =
             <button
               key={chip.label}
               onClick={() => { setPrompt(chip.label); handleSearch(chip.label); }}
-              className="px-3.5 py-2 rounded-full bg-[#121115] border text-xs font-body text-[#C5C2B9]
-                         hover:border-[#D4AF6A]/60 hover:text-[#F7F5F0] hover:bg-[#1A191E]
+              className="px-3.5 py-2 rounded-full bg-[#111530] border text-xs font-body text-[#B0B6D0]
+                         hover:border-[#EC4899]/60 hover:text-[#F1F3FA] hover:bg-[#181E40]
                          transition-all duration-200 flex items-center gap-1.5 animate-fade-up cursor-pointer"
               style={{
-                borderColor: "rgba(212, 175, 106, 0.15)",
+                borderColor: "rgba(37, 99, 235, 0.25)",
                 animationDelay: `${i * 55}ms`,
                 opacity: chipsVisible ? 1 : 0,
               }}
@@ -156,13 +156,13 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({ onSelectMovie }) =
         className="relative max-w-2xl mx-auto ai-border rounded-xl animate-roll-on stagger-3"
       >
         <div className="relative flex items-center">
-          <Bot className="w-4 h-4 text-[#D4AF6A] absolute left-4 shrink-0 animate-pulse" />
+          <Bot className="w-4 h-4 text-[#EC4899] absolute left-4 shrink-0 animate-pulse" />
           <input
             type="text"
             value={prompt}
             onChange={(e) => setPrompt(e.target.value)}
             placeholder='"I want emotional Tamil dramas" · "Mind-bending sci-fi" · "90s comedies"...'
-            className="glass-input w-full font-body text-xs sm:text-sm text-[#F7F5F0] placeholder-[#87847B]
+            className="glass-input w-full font-body text-xs sm:text-sm text-[#F1F3FA] placeholder-[#6A7194]
                        rounded-xl pl-10 pr-28 py-4"
           />
           <button
@@ -203,8 +203,8 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({ onSelectMovie }) =
               </div>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between gap-2 flex-wrap">
-                  <h4 className="font-heading text-sm text-[#D4AF6A] tracking-wide">
-                    AETHER AI — RECOMMENDATION SYNTHESIS
+                  <h4 className="font-heading text-sm text-[#EC4899] tracking-wide">
+                    LUMINA AI — RECOMMENDATION SYNTHESIS
                   </h4>
                   <div className="flex items-center gap-1.5">
                     <span className="font-mono-num text-[10px] text-[#87847B]">{results.length} results</span>
@@ -275,9 +275,9 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({ onSelectMovie }) =
                   onClick={() => setFeedback("up")}
                   className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs font-body transition-all cursor-pointer"
                   style={{
-                    background: feedback === "up" ? "rgba(212, 175, 106, 0.15)" : "rgba(18, 17, 21, 0.6)",
-                    borderColor: feedback === "up" ? "#D4AF6A" : "rgba(212, 175, 106, 0.15)",
-                    color: feedback === "up" ? "#D4AF6A" : "#87847B"
+                    background: feedback === "up" ? "rgba(236, 72, 153, 0.15)" : "rgba(18, 17, 21, 0.6)",
+                    borderColor: feedback === "up" ? "#EC4899" : "rgba(37, 99, 235, 0.2)",
+                    color: feedback === "up" ? "#EC4899" : "#B0B6D0"
                   }}
                 >
                   <ThumbsUp className={`w-3.5 h-3.5 ${feedback === "up" ? "fill-current" : ""}`} />
@@ -287,9 +287,9 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({ onSelectMovie }) =
                   onClick={() => setFeedback("down")}
                   className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs font-body transition-all cursor-pointer"
                   style={{
-                    background: feedback === "down" ? "rgba(122, 46, 58, 0.15)" : "rgba(18, 17, 21, 0.6)",
-                    borderColor: feedback === "down" ? "#7A2E3A" : "rgba(212, 175, 106, 0.15)",
-                    color: feedback === "down" ? "#E8C27D" : "#87847B"
+                    background: feedback === "down" ? "rgba(37, 99, 235, 0.15)" : "rgba(18, 17, 21, 0.6)",
+                    borderColor: feedback === "down" ? "#2563EB" : "rgba(37, 99, 235, 0.2)",
+                    color: feedback === "down" ? "#60A5FA" : "#B0B6D0"
                   }}
                 >
                   <ThumbsDown className={`w-3.5 h-3.5 ${feedback === "down" ? "fill-current" : ""}`} />
@@ -297,16 +297,16 @@ export const ChatInterface: React.FC<ChatInterfaceProps> = ({ onSelectMovie }) =
                 </button>
                 <button
                   onClick={handleRegenerate}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border bg-[#1A191E] text-[#87847B] hover:text-[#D4AF6A] text-xs font-body transition-all cursor-pointer"
-                  style={{ borderColor: "rgba(212, 175, 106, 0.15)" }}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border bg-[#111530] text-[#B0B6D0] hover:text-[#EC4899] text-xs font-body transition-all cursor-pointer"
+                  style={{ borderColor: "rgba(37, 99, 235, 0.25)" }}
                 >
                   <RotateCcw className="w-3.5 h-3.5" />
                   Regenerate
                 </button>
               </div>
               {feedback && (
-                <span className="font-mono-num text-[10px] text-[#D4AF6A] animate-fade-up">
-                  {feedback === "up" ? "✓ Thanks! Aether AI will refine its search." : "↻ Got it — we'll improve."}
+                <span className="font-mono-num text-[10px] text-[#EC4899] animate-fade-up">
+                  {feedback === "up" ? "✓ Thanks! Lumina AI will refine its search." : "↻ Got it — we'll improve."}
                 </span>
               )}
             </div>

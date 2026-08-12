@@ -2,8 +2,9 @@
 @import "tailwindcss";
 
 /* ============================================================
-   AETHER/LUMINA — CINEMA PREMIERE DESIGN SYSTEM
-   Warm Charcoal · Golden Amber · Velvet Burgundy
+   LUMINA AI — FUTURISTIC VISUAL IDENTITY
+   Primary: Deep Blue (#2563EB) · Secondary: Neon Pink (#EC4899)
+   Background: Cosmic Navy-Black (#080B16)
    ============================================================ */
 
 @layer base {
@@ -11,31 +12,30 @@
   /* --- Design Tokens (CSS Variables) --- */
   :root {
     /* === BASE SURFACES === */
-    --bg:         #0B0A0C;   /* Deep charcoal-black */
-    --surface:    #121115;   /* Warm dark charcoal */
-    --surface-2:  #1A191E;   /* Warm grey-charcoal */
-    --surface-3:  #242229;   /* Lighter warm grey */
-    --hairline:   #33303A;   /* Soft warm border */
+    --bg:         #060813;   /* Deep cosmic navy-black */
+    --surface:    #0B0E20;   /* Cosmic dark surface */
+    --surface-2:  #111530;   /* Layered surface */
+    --surface-3:  #181E40;   /* Lighter blue-navy */
+    --hairline:   rgba(37, 99, 235, 0.22); /* Subtle neon-blue line */
 
     /* === TEXT === */
-    --text:       #F7F5F0;   /* Warm off-white */
-    --text-dim:   #C5C2B9;   /* Muted warm grey */
-    --text-faint: #87847B;   /* Faint warm grey */
+    --text:       #F1F3FA;   /* Crisp off-white */
+    --text-dim:   #B0B6D0;   /* Muted grey-blue */
+    --text-faint: #6A7194;   /* Faint grey-blue */
 
     /* === ACCENTS === */
-    --gold:       #D4AF6A;   /* Warm gold */
-    --gold-light: #E8C27D;   /* Amber gold */
-    --burgundy:   #7A2E3A;   /* Deep wine burgundy */
-    --burgundy-light: #9B3B4A; /* Bright burgundy */
-    --ruby:       #C2185B;
-    --sapphire:   #1A2F4C;
-    --emerald:    #1D4A3E;
+    --blue:       #2563EB;   /* Deep blue */
+    --blue-glow:  rgba(37, 99, 235, 0.35);
+    --pink:       #EC4899;   /* Neon pink */
+    --pink-glow:  rgba(236, 72, 153, 0.35);
+    --gold:       #FBBF24;   /* Warm rating yellow */
+    --ruby:       #EF4444;   /* Clear red error fallback */
 
-    /* Aliases for compatibility */
-    --amber:      var(--gold);
-    --teal:       var(--burgundy);
-    --clay:       var(--burgundy-light);
-    --purple:     var(--burgundy);
+    /* Compatibility aliases */
+    --amber:      var(--blue);
+    --teal:       var(--pink);
+    --clay:       var(--ruby);
+    --purple:     var(--pink);
 
     /* === MOTION TOKENS === */
     --dur-fast:   140ms;
@@ -45,9 +45,9 @@
     --ease-em:    cubic-bezier(0.2, 0, 0, 1);
 
     /* === RADIUS SCALE === */
-    --r-sm:  6px;
-    --r-md:  12px;
-    --r-lg:  20px;
+    --r-sm:  8px;
+    --r-md:  14px;
+    --r-lg:  24px;
 
     /* === FONTS === */
     --font-heading: 'Fraunces', serif;
@@ -61,11 +61,11 @@
 
   body {
     background-color: var(--bg);
-    /* Warm radial ambient spotlight glow */
+    /* Animated neon gradient background aura */
     background-image:
-      radial-gradient(ellipse 70% 40% at 30% 10%, rgba(212, 175, 106, 0.05) 0%, transparent 60%),
-      radial-gradient(ellipse 60% 40% at 80% 90%, rgba(122, 46, 58, 0.08) 0%, transparent 60%),
-      radial-gradient(ellipse 100% 80% at 50% 50%, var(--bg) 50%, transparent 100%);
+      radial-gradient(circle 600px at 10% 20%, rgba(37, 99, 235, 0.12), transparent 80%),
+      radial-gradient(circle 600px at 90% 80%, rgba(236, 72, 153, 0.12), transparent 80%),
+      radial-gradient(ellipse 100% 80% at 50% 50%, var(--bg) 60%, transparent 100%);
     color: var(--text);
     font-family: var(--font-body);
     overflow-x: hidden;
@@ -76,7 +76,7 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-weight: 700;
-    text-transform: none; /* Serif looks best in title case */
+    text-transform: none;
     letter-spacing: -0.01em;
   }
 }
@@ -90,29 +90,29 @@
 .font-sora     { font-family: var(--font-body); }
 
 /* ============================================================
-   GLASSMORPHISM — CINEMA PREMIERE
+   GLASSMORPHISM — LUMINA AI
    ============================================================ */
 
-/* Base glass panel (warm tint) */
+/* Base glass panel with blue/pink tint */
 .glass-panel {
-  background: rgba(18, 17, 21, 0.90);
-  backdrop-filter: blur(28px) saturate(1.2);
-  -webkit-backdrop-filter: blur(28px) saturate(1.2);
-  border: 1px solid rgba(212, 175, 106, 0.12);
+  background: rgba(11, 14, 32, 0.88);
+  backdrop-filter: blur(28px) saturate(1.4);
+  -webkit-backdrop-filter: blur(28px) saturate(1.4);
+  border: 1px solid rgba(37, 99, 235, 0.2);
   box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.01) inset,
-    0 24px 64px rgba(0, 0, 0, 0.8),
-    0 0 80px rgba(212, 175, 106, 0.02);
+    0 0 0 1px rgba(255, 255, 255, 0.02) inset,
+    0 24px 64px rgba(0, 0, 0, 0.75),
+    0 0 80px rgba(37, 99, 235, 0.05);
 }
 
-/* Movie card glass */
+/* Movie card glass with neon border */
 .glass-card {
-  background: linear-gradient(180deg, rgba(26, 25, 30, 0.75), rgba(18, 17, 21, 0.85));
+  background: linear-gradient(180deg, rgba(17, 21, 48, 0.75), rgba(11, 14, 32, 0.9));
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(212, 175, 106, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.15);
   box-shadow:
-    0 4px 20px rgba(0, 0, 0, 0.6),
+    0 4px 24px rgba(0, 0, 0, 0.65),
     0 0 0 1px rgba(255, 255, 255, 0.01) inset;
   transition:
     transform var(--dur-base) var(--ease-em),
@@ -121,65 +121,65 @@
 }
 
 .glass-card:hover {
-  border-color: rgba(212, 175, 106, 0.35);
+  border-color: rgba(236, 72, 153, 0.5); /* Swaps to neon pink hover */
   box-shadow:
     0 16px 48px rgba(0, 0, 0, 0.8),
-    0 0 32px rgba(212, 175, 106, 0.06),
-    0 0 0 1px rgba(212, 175, 106, 0.12) inset;
-  transform: translateY(-3px);
+    0 0 32px rgba(236, 72, 153, 0.12),
+    0 0 0 1px rgba(236, 72, 153, 0.2) inset;
+  transform: translateY(-4px);
 }
 
 /* Search input glass */
 .glass-input {
-  background: rgba(18, 17, 21, 0.95);
+  background: rgba(11, 14, 32, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(212, 175, 106, 0.12);
+  border: 1px solid rgba(37, 99, 235, 0.25);
   transition: border-color var(--dur-fast) var(--ease-std),
               box-shadow var(--dur-fast) var(--ease-std);
 }
 
 .glass-input:focus {
-  border-color: var(--gold);
+  border-color: #EC4899; /* Neon pink active input border */
   box-shadow:
-    0 0 0 3px rgba(212, 175, 106, 0.12),
-    0 0 24px rgba(212, 175, 106, 0.08);
+    0 0 0 3px rgba(236, 72, 153, 0.15),
+    0 0 24px rgba(236, 72, 153, 0.1);
   outline: none;
 }
 
 /* ============================================================
-   ACCENTS & GRADIENTS
+   ACCENTS & GRADIENTS — Blue (#2563EB) to Pink (#EC4899)
    ============================================================ */
 
-/* Primary: Warm Gold gradient */
+/* Heading Gradient: Blue → Pink */
 .text-gradient-amber {
-  background: linear-gradient(135deg, #D4AF6A 0%, #E8C27D 50%, #D4AF6A 100%);
+  background: linear-gradient(135deg, #2563EB 0%, #EC4899 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Secondary: Burgundy/Wine */
+/* Secondary Gradient: Light Blue → Lavender */
 .text-gradient-teal {
-  background: linear-gradient(135deg, #7A2E3A 0%, #9B3B4A 50%, #7A2E3A 100%);
+  background: linear-gradient(135deg, #60A5FA 0%, #C084FC 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Gold to Burgundy */
+/* Core Brand Gradient */
 .text-gradient {
-  background: linear-gradient(135deg, #D4AF6A 0%, #7A2E3A 60%, #1A191E 100%);
+  background: linear-gradient(135deg, #2563EB 0%, #EC4899 50%, #60A5FA 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.glow-gold      { box-shadow: 0 0 36px rgba(212, 175, 106, 0.35); }
-.glow-burgundy  { box-shadow: 0 0 36px rgba(122, 46, 58, 0.35); }
+.glow-blue     { box-shadow: 0 0 36px rgba(37, 99, 235, 0.4); }
+.glow-pink     { box-shadow: 0 0 36px rgba(236, 72, 153, 0.4); }
 
 /* ============================================================
-   ANIMATED GRADIENT BORDER (AI Focus Ring) — Gold/Burgundy
+   ANIMATED NEON BORDER (AI Focus Ring) — Blue/Pink
    ============================================================ */
 .ai-border { position: relative; }
 .ai-border::before {
@@ -188,17 +188,17 @@
   inset: -1px;
   border-radius: inherit;
   background: linear-gradient(90deg,
-    #D4AF6A, #7A2E3A, #E8C27D, #9B3B4A, #D4AF6A
+    #2563EB, #EC4899, #60A5FA, #EC4899, #2563EB
   );
   background-size: 400% 100%;
-  animation: cinema-border 6s linear infinite;
+  animation: neon-border 6s linear infinite;
   z-index: -1;
   opacity: 0;
   transition: opacity var(--dur-base) var(--ease-std);
 }
 .ai-border:focus-within::before { opacity: 1; }
 
-@keyframes cinema-border {
+@keyframes neon-border {
   0%   { background-position: 0% 50%; }
   100% { background-position: 400% 50%; }
 }
@@ -223,8 +223,8 @@
   to   { background-position:  200% center; }
 }
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 12px rgba(212, 175, 106, 0.3); }
-  50%       { box-shadow: 0 0 24px rgba(212, 175, 106, 0.6); }
+  0%, 100% { box-shadow: 0 0 12px rgba(37, 99, 235, 0.3); }
+  50%       { box-shadow: 0 0 24px rgba(236, 72, 153, 0.5); }
 }
 @keyframes spin-slow {
   from { transform: rotate(0deg); }
@@ -249,25 +249,24 @@
 .stagger-5 { animation-delay: 250ms; }
 
 /* ============================================================
-   MATCH DIAL — Gold Conic progress ring
+   MATCH DIAL — Blue/Pink Gradient progress ring
    ============================================================ */
 .match-dial {
   --pct: 85;
   --dial-size: 38px;
-  --dial-color: var(--gold);
   width: var(--dial-size);
   height: var(--dial-size);
   border-radius: 50%;
   background: conic-gradient(
-    var(--dial-color) calc(var(--pct) * 1%),
-    rgba(51, 48, 58, 0.6) 0%
+    #EC4899 calc(var(--pct) * 1%),
+    #2563EB 0%
   );
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   flex-shrink: 0;
-  box-shadow: 0 0 10px rgba(212, 175, 106, 0.15);
+  box-shadow: 0 0 10px rgba(236, 72, 153, 0.25);
 }
 .match-dial::before {
   content: '';
@@ -282,7 +281,7 @@
   font-family: var(--font-mono);
   font-size: 10px;
   font-weight: 600;
-  color: var(--gold);
+  color: #EC4899;
   line-height: 1;
 }
 
@@ -292,30 +291,30 @@
 .shimmer {
   background: linear-gradient(
     90deg,
-    rgba(36, 34, 41, 0.7) 0%,
-    rgba(51, 48, 58, 0.9) 50%,
-    rgba(36, 34, 41, 0.7) 100%
+    rgba(24, 30, 64, 0.7) 0%,
+    rgba(37, 99, 235, 0.2) 50%,
+    rgba(24, 30, 64, 0.7) 100%
   );
   background-size: 200% 100%;
   animation: shimmer 1.8s ease-in-out infinite;
 }
 
 /* ============================================================
-   SCROLLBAR — Warm Gold/Charcoal
+   SCROLLBAR — Blue/Pink
    ============================================================ */
 ::-webkit-scrollbar        { width: 5px; height: 5px; }
 ::-webkit-scrollbar-track  { background: transparent; }
-::-webkit-scrollbar-thumb  { background: rgba(212, 175, 106, 0.2); border-radius: 99px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(212, 175, 106, 0.5); }
+::-webkit-scrollbar-thumb  { background: rgba(37, 99, 235, 0.25); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(236, 72, 153, 0.5); }
 
 .scrollbar-none { scrollbar-width: none; -ms-overflow-style: none; }
 .scrollbar-none::-webkit-scrollbar { display: none; }
 
 /* ============================================================
-   SPROCKET STRIP — Gold dots
+   SPROCKET STRIP — Neon Perforations
    ============================================================ */
 .sprocket-strip {
-  background-image: radial-gradient(circle, rgba(212, 175, 106, 0.18) 2px, transparent 2px);
+  background-image: radial-gradient(circle, rgba(37, 99, 235, 0.3) 2px, transparent 2px);
   background-size: 16px 16px;
   background-repeat: repeat-x;
   height: 16px;
@@ -331,8 +330,8 @@
   align-items: center;
   gap: 6px;
   padding: 10px 22px;
-  background: linear-gradient(135deg, #D4AF6A 0%, #E8C27D 100%);
-  color: #0B0A0C;
+  background: linear-gradient(135deg, #2563EB 0%, #EC4899 100%);
+  color: #F1F3FA;
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 11px;
@@ -342,11 +341,11 @@
   border: none;
   cursor: pointer;
   transition: all var(--dur-fast) var(--ease-std);
-  box-shadow: 0 4px 16px rgba(212, 175, 106, 0.2), 0 0 0 1px rgba(255,255,255,0.1) inset;
+  box-shadow: 0 4px 16px rgba(236, 72, 153, 0.3), 0 0 0 1px rgba(255,255,255,0.1) inset;
 }
 .btn-primary:hover {
-  background: linear-gradient(135deg, #E8C27D 0%, #D4AF6A 100%);
-  box-shadow: 0 6px 20px rgba(212, 175, 106, 0.35);
+  background: linear-gradient(135deg, #EC4899 0%, #2563EB 100%);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
   transform: translateY(-1.5px);
 }
 
@@ -363,15 +362,15 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   border-radius: var(--r-sm);
-  border: 1px solid rgba(212, 175, 106, 0.3);
+  border: 1px solid rgba(37, 99, 235, 0.35);
   cursor: pointer;
   transition: all var(--dur-fast) var(--ease-std);
 }
 .btn-ghost:hover {
-  border-color: var(--gold);
-  color: var(--gold);
-  background: rgba(212, 175, 106, 0.05);
-  box-shadow: 0 0 16px rgba(212, 175, 106, 0.08);
+  border-color: #EC4899;
+  color: #EC4899;
+  background: rgba(236, 72, 153, 0.05);
+  box-shadow: 0 0 16px rgba(236, 72, 153, 0.08);
 }
 
 /* ============================================================
@@ -382,9 +381,9 @@
   align-items: center;
   gap: 4px;
   padding: 3px 10px;
-  background: rgba(212, 175, 106, 0.1);
-  color: var(--gold);
-  border: 1px solid rgba(212, 175, 106, 0.25);
+  background: rgba(37, 99, 235, 0.12);
+  color: #60A5FA;
+  border: 1px solid rgba(37, 99, 235, 0.3);
   border-radius: 99px;
   font-family: var(--font-mono);
   font-size: 9px;
@@ -398,9 +397,9 @@
   align-items: center;
   gap: 4px;
   padding: 3px 10px;
-  background: rgba(122, 46, 58, 0.15);
-  color: #E8C27D;
-  border: 1px solid rgba(122, 46, 58, 0.35);
+  background: rgba(236, 72, 153, 0.15);
+  color: #F472B6;
+  border: 1px solid rgba(236, 72, 153, 0.3);
   border-radius: 99px;
   font-family: var(--font-mono);
   font-size: 9px;
@@ -410,22 +409,23 @@
 }
 
 /* ============================================================
-   ACTIVE INDICATOR — Golden Left Border
+   ACTIVE INDICATOR — Neon Blue/Pink Left Border
    ============================================================ */
 .nav-item-active {
   background: linear-gradient(90deg,
-    rgba(212, 175, 106, 0.12),
-    rgba(122, 46, 58, 0.04),
+    rgba(37, 99, 235, 0.15),
+    rgba(236, 72, 153, 0.04),
     transparent
   );
-  color: var(--gold);
-  border-left: 2.5px solid var(--gold);
+  color: #EC4899;
+  border-left: 3px solid #EC4899;
+  box-shadow: inset 3px 0 12px rgba(236, 72, 153, 0.1);
 }
 
 /* ============================================================
    FOCUS RING
    ============================================================ */
 :focus-visible {
-  outline: 2px solid var(--gold);
+  outline: 2px solid #EC4899;
   outline-offset: 2px;
 }

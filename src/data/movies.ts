@@ -25,16 +25,16 @@ export interface Movie {
   trailerId: string;
   streamingOn: string[];
   aiReasoning: string;
-  whyRecommended?: string; // For Aether / Lumina cross-compatibility
+  whyRecommended?: string;
   similarTags: string[];
   moods: string[];
   language: string;
   country: string;
   budget?: string;
   revenue?: string;
+  tagline?: string;
+  productionCompany?: string;
   awards?: string[];
-  funFacts?: string[];
-  collection?: string;
   franchise?: string;
   isNewRelease?: boolean;
   isCultClassic?: boolean;
@@ -116,7 +116,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Superhero",
       "Mystery Thriller"
     ],
-    "imdbRating": 7.5,
+    "imdbRating": 7.4,
     "rottenTomatoesScore": 80,
     "matchScore": 90,
     "synopsis": "A special agent investigates a group of masked vigilantes who are targeting drug lords.",
@@ -126,16 +126,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Vijay Sethupathi",
       "Fahadh Faasil"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xZ2V2575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/8Y9sP9GfNfI2u2tI3RjrnR.jpg",
+    "trailerId": "AoAMf1whqyU",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Lokesh Kanagaraj.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Lokesh Kanagaraj.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Lokesh Kanagaraj.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Lokesh Kanagaraj.",
     "similarTags": [
       "Lokesh",
       "Thriller",
@@ -147,6 +146,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹120 Crore",
+    "revenue": "₹450 Crore",
+    "tagline": "Once a lion, always a lion.",
+    "productionCompany": "Raaj Kamal Films International",
+    "awards": [
+      "Ananda Vikatan Cinema Award for Best Actor"
+    ],
     "reviews": []
   },
   {
@@ -164,7 +170,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suspense",
       "Cyberpunk"
     ],
-    "imdbRating": 7.6,
+    "imdbRating": 7.5,
     "rottenTomatoesScore": 81,
     "matchScore": 91,
     "synopsis": "A mild-mannered cafe owner becomes the target of drug lords claiming he is their long-lost brother.",
@@ -174,16 +180,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sanjay Dutt",
       "Trisha Krishnan"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/n5A76v92erglVw37B67ouYbqDES.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "Po3jIhW50m0",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Lokesh Kanagaraj.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Lokesh Kanagaraj.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Lokesh Kanagaraj.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Lokesh Kanagaraj.",
     "similarTags": [
       "Lokesh",
       "Thriller",
@@ -195,6 +199,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹300 Crore",
+    "revenue": "₹620 Crore",
+    "tagline": "Keep calm and avoid the bad guys.",
+    "productionCompany": "Seven Screen Studio",
+    "awards": [
+      "SIIMA Award for Best Actor (Nominated)"
+    ],
     "reviews": []
   },
   {
@@ -211,7 +222,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Musical",
       "Noir"
     ],
-    "imdbRating": 7.7,
+    "imdbRating": 7.6,
     "rottenTomatoesScore": 82,
     "matchScore": 92,
     "synopsis": "An ex-convict helps the police drive a truck full of poisoned officers to the hospital while escaping gangs.",
@@ -221,16 +232,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Narain",
       "Arjun Das"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/cRiL9fNl1J8yA694JbUu0uKqJ9y.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/w8g7p2C8lXjLw9X3K3P7l9.jpg",
+    "trailerId": "gkoO9UrwX7I",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Lokesh Kanagaraj.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Lokesh Kanagaraj.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Lokesh Kanagaraj.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Lokesh Kanagaraj.",
     "similarTags": [
       "Lokesh",
       "Thriller",
@@ -242,6 +251,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹25 Crore",
+    "revenue": "₹105 Crore",
+    "tagline": "One night. Four police officers. A truck. 50 criminals.",
+    "productionCompany": "Dream Warrior Pictures",
+    "awards": [
+      "Norway Tamil Film Festival Award for Best Actor"
+    ],
     "reviews": []
   },
   {
@@ -259,7 +275,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "War",
       "Survival"
     ],
-    "imdbRating": 7.8,
+    "imdbRating": 7.7,
     "rottenTomatoesScore": 83,
     "matchScore": 93,
     "synopsis": "A retired prison warden hunts down the criminals who allegedly killed his police officer son.",
@@ -269,16 +285,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Vinayakan",
       "Ramya Krishnan"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/A7sp0uquq3W3J7J3L3P7l9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/w8g7p2C8lXjLw9X3K3P7l9.jpg",
+    "trailerId": "xenOCRDpEPk",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Nelson Dilipkumar.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Nelson Dilipkumar.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Nelson Dilipkumar.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Nelson Dilipkumar.",
     "similarTags": [
       "Nelson",
       "Comedy",
@@ -290,6 +304,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹200 Crore",
+    "revenue": "₹650 Crore",
+    "tagline": "A father's quiet rage.",
+    "productionCompany": "Sun Pictures",
+    "awards": [
+      "Filmfare Award for Best Actor - Tamil"
+    ],
     "reviews": []
   },
   {
@@ -307,7 +328,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Western",
       "Space"
     ],
-    "imdbRating": 7.9,
+    "imdbRating": 7.8,
     "rottenTomatoesScore": 84,
     "matchScore": 94,
     "synopsis": "An alcoholic professor is sent to a juvenile school, where he clashes with a ruthless gangster.",
@@ -317,16 +338,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Vijay Sethupathi",
       "Malavika Mohanan"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/1_iUJKsh4Qc.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/w8g7p2C8lXjLw9X3K3P7l9.jpg",
+    "trailerId": "1_iUJKsh4Qc",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Lokesh Kanagaraj.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Lokesh Kanagaraj.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Lokesh Kanagaraj.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Lokesh Kanagaraj.",
     "similarTags": [
       "Lokesh",
       "Drama",
@@ -338,6 +358,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹135 Crore",
+    "revenue": "₹300 Crore",
+    "tagline": "The master of his own destiny.",
+    "productionCompany": "XB Film Creators",
+    "awards": [
+      "SIIMA Award for Best Film"
+    ],
     "reviews": []
   },
   {
@@ -354,7 +381,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Psychological",
       "Time Travel"
     ],
-    "imdbRating": 8,
+    "imdbRating": 7.9,
     "rottenTomatoesScore": 85,
     "matchScore": 95,
     "synopsis": "Two high school sweethearts reunite at a class reunion after twenty-two years of separation.",
@@ -363,16 +390,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Vijay Sethupathi",
       "Trisha Krishnan"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/96_romance.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/w8g7p2C8lXjLw9X3K3P7l9.jpg",
+    "trailerId": "r0s_8-L9y9I",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Romance masterclass directed by C. Prem Kumar.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Romance masterclass directed by C. Prem Kumar.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Romance masterpiece directed by C. Prem Kumar.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Romance masterpiece directed by C. Prem Kumar.",
     "similarTags": [
       "C.",
       "Drama",
@@ -384,6 +409,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹18 Crore",
+    "revenue": "₹55 Crore",
+    "tagline": "The memories stay forever.",
+    "productionCompany": "Madras Enterprises",
+    "awards": [
+      "SIIMA Award for Best Actress"
+    ],
     "reviews": []
   },
   {
@@ -400,7 +432,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mystery Thriller",
       "Action"
     ],
-    "imdbRating": 8.1,
+    "imdbRating": 8,
     "rottenTomatoesScore": 86,
     "matchScore": 96,
     "synopsis": "A young man from a remote village dreams of launching a low-cost airline for the common man.",
@@ -409,16 +441,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suriya",
       "Aparna Balamurali"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/soorarai.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/w8g7p2C8lXjLw9X3K3P7l9.jpg",
+    "trailerId": "dyrA-tV4h-U",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Drama masterclass directed by Sudha Kongara.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Drama masterclass directed by Sudha Kongara.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Sudha Kongara.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Sudha Kongara.",
     "similarTags": [
       "Sudha",
       "Biography",
@@ -430,6 +460,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹20 Crore",
+    "revenue": "₹170 Crore",
+    "tagline": "An ordinary man with an extraordinary flight.",
+    "productionCompany": "2D Entertainment",
+    "awards": [
+      "National Film Award for Best Feature Film"
+    ],
     "reviews": []
   },
   {
@@ -446,7 +483,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Cyberpunk",
       "Adventure"
     ],
-    "imdbRating": 8.2,
+    "imdbRating": 8.1,
     "rottenTomatoesScore": 87,
     "matchScore": 97,
     "synopsis": "An aspiring film director becomes a cop and tracks down a psychotic serial killer targeting schoolgirls.",
@@ -455,16 +492,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Vishnu Vishal",
       "Amala Paul"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/ratsasan.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/w8g7p2C8lXjLw9X3K3P7l9.jpg",
+    "trailerId": "1_qR1JmB7U8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Thriller masterclass directed by Ram Kumar.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Thriller masterclass directed by Ram Kumar.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Thriller masterpiece directed by Ram Kumar.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Thriller masterpiece directed by Ram Kumar.",
     "similarTags": [
       "Ram",
       "Mystery",
@@ -476,6 +511,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹15 Crore",
+    "revenue": "₹75 Crore",
+    "tagline": "The hunter becomes the hunted.",
+    "productionCompany": "Axess Film Factory",
+    "awards": [
+      "Filmfare Award for Best Film - Tamil"
+    ],
     "reviews": []
   },
   {
@@ -491,7 +533,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Noir",
       "Animation"
     ],
-    "imdbRating": 8.3,
+    "imdbRating": 8.2,
     "rottenTomatoesScore": 88,
     "matchScore": 98,
     "synopsis": "A farmer goes on the run with his family to protect his son, who has killed a wealthy landlord.",
@@ -500,16 +542,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Dhanush",
       "Manju Warrier"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/asuran.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/w8g7p2C8lXjLw9X3K3P7l9.jpg",
+    "trailerId": "k1B9X9B5r8w",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Vetrimaaran.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Vetrimaaran.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Vetrimaaran.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Vetrimaaran.",
     "similarTags": [
       "Vetrimaaran",
       "Drama",
@@ -521,6 +562,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹32 Crore",
+    "revenue": "₹150 Crore",
+    "tagline": "They can steal our land, but they can't steal our education.",
+    "productionCompany": "V Creations",
+    "awards": [
+      "National Film Award for Best Actor"
+    ],
     "reviews": []
   },
   {
@@ -537,7 +585,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Survival",
       "Anime"
     ],
-    "imdbRating": 8.4,
+    "imdbRating": 8.3,
     "rottenTomatoesScore": 89,
     "matchScore": 99,
     "synopsis": "A biographical tribute to Major Mukund Varadarajan, chronicling his service and sacrifices in Kashmir.",
@@ -546,16 +594,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sivakarthikeyan",
       "Sai Pallavi"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/amaran.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/w8g7p2C8lXjLw9X3K3P7l9.jpg",
+    "trailerId": "1_B9X9B5r8w",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Drama masterclass directed by Rajkumar Periasamy.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Drama masterclass directed by Rajkumar Periasamy.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Rajkumar Periasamy.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Rajkumar Periasamy.",
     "similarTags": [
       "Rajkumar",
       "Biography",
@@ -567,6 +613,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹100 Crore",
+    "revenue": "₹250 Crore",
+    "tagline": "A hero's sacrifice.",
+    "productionCompany": "Raaj Kamal Films International",
+    "awards": [
+      "National Film Award for Best Tribute Film"
+    ],
     "reviews": []
   },
   {
@@ -583,7 +636,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Space",
       "Biography"
     ],
-    "imdbRating": 8.5,
+    "imdbRating": 8.4,
     "rottenTomatoesScore": 90,
     "matchScore": 90,
     "synopsis": "A slum dweller rises to become a powerful crime godfather in Mumbai.",
@@ -592,16 +645,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Kamal Haasan",
       "Saranya Ponvannan"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yR714H9tOCa2YCh0kTCe9zfwR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Crime masterclass directed by Mani Ratnam.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Crime masterclass directed by Mani Ratnam.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Crime masterpiece directed by Mani Ratnam.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Crime masterpiece directed by Mani Ratnam.",
     "similarTags": [
       "Mani",
       "Drama",
@@ -613,6 +664,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹106 Crore",
+    "revenue": "₹77 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -628,7 +683,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Psychological",
       "Time Travel"
     ],
-    "imdbRating": 8.6,
+    "imdbRating": 8.5,
     "rottenTomatoesScore": 91,
     "matchScore": 91,
     "synopsis": "Two men of contrasting personalities travel together from Bhubaneswar to Chennai, forming an unlikely bond.",
@@ -637,16 +692,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Kamal Haasan",
       "R. Madhavan"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vT3P1lqq7aW6g1sP3x7U6ZgL94H.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "ByXuk9QqQkk",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Drama masterclass directed by Sundar C..",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Drama masterclass directed by Sundar C..",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Sundar C..",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Sundar C..",
     "similarTags": [
       "Sundar",
       "Comedy",
@@ -658,6 +711,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹99 Crore",
+    "revenue": "₹90 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -674,7 +731,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mystery Thriller",
       "Crime"
     ],
-    "imdbRating": 8.7,
+    "imdbRating": 8.6,
     "rottenTomatoesScore": 92,
     "matchScore": 92,
     "synopsis": "Vandiyathevan sets out to deliver a message from Crown Prince Aditha Karikalan amidst Chola court conspiracies.",
@@ -685,16 +742,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Jayam Ravi",
       "Aishwarya Rai"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "CHekzSiZhsY",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Adventure masterclass directed by Mani Ratnam.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Adventure masterclass directed by Mani Ratnam.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Adventure masterpiece directed by Mani Ratnam.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Adventure masterpiece directed by Mani Ratnam.",
     "similarTags": [
       "Mani",
       "Action",
@@ -706,6 +762,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹41 Crore",
+    "revenue": "₹344 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -723,7 +783,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Adventure",
       "Documentary"
     ],
-    "imdbRating": 8.8,
+    "imdbRating": 8.7,
     "rottenTomatoesScore": 93,
     "matchScore": 93,
     "synopsis": "A skilled carrom player gets reluctantly drawn into a gang war in North Chennai.",
@@ -733,16 +793,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ameer",
       "Andrea Jeremiah"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "s7EdQ4FqbhY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Crime masterclass directed by Vetrimaaran.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Crime masterclass directed by Vetrimaaran.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Crime masterpiece directed by Vetrimaaran.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Crime masterpiece directed by Vetrimaaran.",
     "similarTags": [
       "Vetrimaaran",
       "Drama",
@@ -754,6 +812,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹111 Crore",
+    "revenue": "₹262 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -770,7 +832,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Animation",
       "Drama"
     ],
-    "imdbRating": 8.9,
+    "imdbRating": 8.8,
     "rottenTomatoesScore": 94,
     "matchScore": 94,
     "synopsis": "An auto driver hides his dark past as a powerful Mumbai crime lord to keep his family safe.",
@@ -780,16 +842,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Nagma",
       "Raghuvaran"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9gk7adHYeCmqgl0wSy646V05g2e.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "s7EdQ4FqbhY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Suresh Krissna.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Suresh Krissna.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Suresh Krissna.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Suresh Krissna.",
     "similarTags": [
       "Suresh",
       "Crime",
@@ -801,6 +861,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹91 Crore",
+    "revenue": "₹60 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -818,7 +882,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Anime",
       "Family"
     ],
-    "imdbRating": 9,
+    "imdbRating": 8.9,
     "rottenTomatoesScore": 95,
     "matchScore": 95,
     "synopsis": "A scientist builds a humanoid robot that falls in love with his fiancee and turns rogue.",
@@ -827,16 +891,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Rajinikanth",
       "Aishwarya Rai"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "PLl99DfYbY4",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Sci-Fi masterclass directed by S. Shankar.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Sci-Fi masterclass directed by S. Shankar.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Sci-Fi masterpiece directed by S. Shankar.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Sci-Fi masterpiece directed by S. Shankar.",
     "similarTags": [
       "S.",
       "Action",
@@ -848,6 +910,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹60 Crore",
+    "revenue": "₹67 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -865,7 +931,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Biography",
       "Fantasy"
     ],
-    "imdbRating": 9.1,
+    "imdbRating": 9,
     "rottenTomatoesScore": 96,
     "matchScore": 96,
     "synopsis": "A kabaddi player saves a girl from a powerful factionist in Madurai and hides her in his house.",
@@ -875,16 +941,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Trisha Krishnan",
       "Prakash Raj"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3931w362g1vRPwTaxtgLR7Yjtyx.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "EXeTwQWrcwY",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Dharani.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Dharani.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Dharani.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Dharani.",
     "similarTags": [
       "Dharani",
       "Comedy",
@@ -896,6 +961,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹74 Crore",
+    "revenue": "₹227 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -912,7 +981,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Comedy",
       "History"
     ],
-    "imdbRating": 9.2,
+    "imdbRating": 9.1,
     "rottenTomatoesScore": 97,
     "matchScore": 97,
     "synopsis": "An army captain visits Chennai on vacation, only to uncover and dismantle a network of sleeper cells.",
@@ -921,16 +990,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Vijay",
       "Kajal Aggarwal"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/n5A76v92erglVw37B67ouYbqDES.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "xU47nhruN-k",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by A.R. Murugadoss.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by A.R. Murugadoss.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by A.R. Murugadoss.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by A.R. Murugadoss.",
     "similarTags": [
       "A.R.",
       "Thriller",
@@ -942,6 +1009,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹138 Crore",
+    "revenue": "₹251 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -959,7 +1030,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Crime",
       "Horror"
     ],
-    "imdbRating": 9.3,
+    "imdbRating": 9.2,
     "rottenTomatoesScore": 80,
     "matchScore": 98,
     "synopsis": "A man gets trapped in a time loop on the day of a public conference, trying to save the Chief Minister.",
@@ -968,16 +1039,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Silambarasan",
       "S.J. Suryah"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ArW2t575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "pyWuOrFRKQE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Sci-Fi masterclass directed by Venkat Prabhu.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Sci-Fi masterclass directed by Venkat Prabhu.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Sci-Fi masterpiece directed by Venkat Prabhu.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Sci-Fi masterpiece directed by Venkat Prabhu.",
     "similarTags": [
       "Venkat",
       "Thriller",
@@ -989,6 +1058,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹50 Crore",
+    "revenue": "₹339 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -1006,7 +1079,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Documentary",
       "Mystery"
     ],
-    "imdbRating": 9.4,
+    "imdbRating": 9.3,
     "rottenTomatoesScore": 81,
     "matchScore": 99,
     "synopsis": "A righteous police officer hunts a notorious gangster who tells him stories that blur lines of morality.",
@@ -1015,16 +1088,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Madhavan",
       "Vijay Sethupathi"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fIE3lAGuSS16rP24MSErSo8Y4gq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "Ie6Y_Q5-E0Y",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Pushkar-Gayathri.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Pushkar-Gayathri.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Pushkar-Gayathri.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Pushkar-Gayathri.",
     "similarTags": [
       "Pushkar-Gayathri",
       "Thriller",
@@ -1036,6 +1107,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹69 Crore",
+    "revenue": "₹230 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -1051,7 +1126,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Animation",
       "Musical"
     ],
-    "imdbRating": 7.5,
+    "imdbRating": 9.4,
     "rottenTomatoesScore": 82,
     "matchScore": 90,
     "synopsis": "An array of odd characters find themselves in unexpected situations, forcing them to face their demons.",
@@ -1061,16 +1136,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Fahadh Faasil",
       "Samantha Ruth Prabhu"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "O1tGxRRgly8",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Drama masterclass directed by Thiagarajan Kumararaja.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Drama masterclass directed by Thiagarajan Kumararaja.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Thiagarajan Kumararaja.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Thiagarajan Kumararaja.",
     "similarTags": [
       "Thiagarajan",
       "Comedy",
@@ -1082,6 +1156,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹29 Crore",
+    "revenue": "₹414 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -1099,7 +1177,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Family",
       "Romance"
     ],
-    "imdbRating": 7.6,
+    "imdbRating": 7.4,
     "rottenTomatoesScore": 83,
     "matchScore": 91,
     "synopsis": "Four immigrants are tortured by the police to confess to a crime they did not commit.",
@@ -1108,16 +1186,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Dinesh",
       "Samuthirakani"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "ByXuk9QqQkk",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Drama masterclass directed by Vetrimaaran.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Drama masterclass directed by Vetrimaaran.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Vetrimaaran.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Vetrimaaran.",
     "similarTags": [
       "Vetrimaaran",
       "Crime",
@@ -1129,6 +1205,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹79 Crore",
+    "revenue": "₹128 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -1144,7 +1224,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Fantasy",
       "Sci-Fi"
     ],
-    "imdbRating": 7.7,
+    "imdbRating": 7.5,
     "rottenTomatoesScore": 84,
     "matchScore": 92,
     "synopsis": "A brave lawyer fights for justice when a tribal man is falsely accused of theft and disappears from custody.",
@@ -1153,16 +1233,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suriya",
       "Lijo Mol Jose"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ArW2t575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "2HkjrJ6IK5E",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Drama masterclass directed by T.J. Gnanavel.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Drama masterclass directed by T.J. Gnanavel.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by T.J. Gnanavel.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by T.J. Gnanavel.",
     "similarTags": [
       "T.J.",
       "Biography",
@@ -1174,6 +1252,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹111 Crore",
+    "revenue": "₹94 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -1189,7 +1271,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Comedy",
       "History"
     ],
-    "imdbRating": 7.8,
+    "imdbRating": 7.6,
     "rottenTomatoesScore": 85,
     "matchScore": 93,
     "synopsis": "A young man from North Madras enters the boxing ring to save his clan's honor in the 1970s.",
@@ -1198,16 +1280,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Arya",
       "Dushara Vijayan"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "vKQi3bBA1y8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Drama masterclass directed by Pa. Ranjith.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Drama masterclass directed by Pa. Ranjith.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Pa. Ranjith.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Pa. Ranjith.",
     "similarTags": [
       "Pa.",
       "Sports",
@@ -1219,6 +1299,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹107 Crore",
+    "revenue": "₹436 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -1235,7 +1319,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Horror",
       "Superhero"
     ],
-    "imdbRating": 7.9,
+    "imdbRating": 7.7,
     "rottenTomatoesScore": 86,
     "matchScore": 94,
     "synopsis": "A filmmaker agrees to direct a movie for a ruthless gangster who wants to become a hero.",
@@ -1244,16 +1328,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Raghava Lawrence",
       "S.J. Suryah"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vT3P1lqq7aW6g1sP3x7U6ZgL94H.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "CHekzSiZhsY",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Karthik Subbaraj.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Karthik Subbaraj.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Karthik Subbaraj.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Karthik Subbaraj.",
     "similarTags": [
       "Karthik",
       "Comedy",
@@ -1265,6 +1348,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹137 Crore",
+    "revenue": "₹200 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -1281,7 +1368,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mystery",
       "Suspense"
     ],
-    "imdbRating": 8,
+    "imdbRating": 7.8,
     "rottenTomatoesScore": 87,
     "matchScore": 95,
     "synopsis": "A veteran freedom fighter uses ancient martial arts to eradicate bribery and corruption in society.",
@@ -1290,16 +1377,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Kamal Haasan",
       "Nedumudi Venu"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3931w362g1vRPwTaxtgLR7Yjtyx.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "PLl99DfYbY4",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by S. Shankar.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by S. Shankar.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by S. Shankar.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by S. Shankar.",
     "similarTags": [
       "S.",
       "Thriller",
@@ -1311,6 +1396,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹56 Crore",
+    "revenue": "₹159 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -1327,7 +1416,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Musical",
       "Thriller"
     ],
-    "imdbRating": 8.1,
+    "imdbRating": 7.9,
     "rottenTomatoesScore": 88,
     "matchScore": 96,
     "synopsis": "A software engineer returns to India to help the poor, but clashes with corrupt politicians.",
@@ -1336,16 +1425,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Rajinikanth",
       "Shriya Saran"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yR714H9tOCa2YCh0kTCe9zfwR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "O1tGxRRgly8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by S. Shankar.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by S. Shankar.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by S. Shankar.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by S. Shankar.",
     "similarTags": [
       "S.",
       "Comedy",
@@ -1357,6 +1444,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹69 Crore",
+    "revenue": "₹100 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -1373,7 +1464,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Romance",
       "War"
     ],
-    "imdbRating": 8.2,
+    "imdbRating": 8,
     "rottenTomatoesScore": 89,
     "matchScore": 97,
     "synopsis": "An escaping criminal takes the place of his lookalike to fight against a multinational company stealing water.",
@@ -1382,16 +1473,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Vijay",
       "Samantha Ruth Prabhu"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yR714H9tOCa2YCh0kTCe9zfwR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "92a7Hj0ijLs",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by A.R. Murugadoss.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by A.R. Murugadoss.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by A.R. Murugadoss.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by A.R. Murugadoss.",
     "similarTags": [
       "A.R.",
       "Drama",
@@ -1403,6 +1492,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹20 Crore",
+    "revenue": "₹77 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -1420,7 +1513,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sci-Fi",
       "Western"
     ],
-    "imdbRating": 8.3,
+    "imdbRating": 8.1,
     "rottenTomatoesScore": 90,
     "matchScore": 98,
     "synopsis": "A pizza delivery boy gets trapped inside a haunted house while delivering a pizza.",
@@ -1429,16 +1522,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Vijay Sethupathi",
       "Remya Nambeesan"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ArW2t575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "4OiMTOKdKTE",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Horror masterclass directed by Karthik Subbaraj.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Horror masterclass directed by Karthik Subbaraj.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Horror masterpiece directed by Karthik Subbaraj.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Horror masterpiece directed by Karthik Subbaraj.",
     "similarTags": [
       "Karthik",
       "Thriller",
@@ -1450,6 +1542,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹65 Crore",
+    "revenue": "₹110 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -1467,7 +1563,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sports",
       "Psychological"
     ],
-    "imdbRating": 8.4,
+    "imdbRating": 8.2,
     "rottenTomatoesScore": 91,
     "matchScore": 99,
     "synopsis": "A suspended police officer plans a heist to steal 500 million rupees from betting syndicates.",
@@ -1476,16 +1572,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ajith Kumar",
       "Arjun Sarja"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/n5A76v92erglVw37B67ouYbqDES.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "EXeTwQWrcwY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Venkat Prabhu.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Venkat Prabhu.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Venkat Prabhu.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Venkat Prabhu.",
     "similarTags": [
       "Venkat",
       "Crime",
@@ -1497,6 +1591,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹58 Crore",
+    "revenue": "₹153 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -1513,7 +1611,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Superhero",
       "Mystery Thriller"
     ],
-    "imdbRating": 8.5,
+    "imdbRating": 8.3,
     "rottenTomatoesScore": 92,
     "matchScore": 90,
     "synopsis": "A young man gets caught in a web of jealousy and betrayal in the world of rooster fighting.",
@@ -1522,16 +1620,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Dhanush",
       "Taapsee Pannu"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "EXeTwQWrcwY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Drama masterclass directed by Vetrimaaran.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Drama masterclass directed by Vetrimaaran.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Vetrimaaran.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Vetrimaaran.",
     "similarTags": [
       "Vetrimaaran",
       "Sports",
@@ -1543,6 +1639,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹134 Crore",
+    "revenue": "₹421 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -1559,7 +1659,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suspense",
       "Cyberpunk"
     ],
-    "imdbRating": 8.6,
+    "imdbRating": 8.4,
     "rottenTomatoesScore": 93,
     "matchScore": 91,
     "synopsis": "A powerful crime lord protects his Dharavi slum dwellers from a ruthless politician's land grabs.",
@@ -1568,16 +1668,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Rajinikanth",
       "Nana Patekar"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vT3P1lqq7aW6g1sP3x7U6ZgL94H.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "Ie6Y_Q5-E0Y",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Pa. Ranjith.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Pa. Ranjith.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Pa. Ranjith.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Pa. Ranjith.",
     "similarTags": [
       "Pa.",
       "Drama",
@@ -1589,6 +1687,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹97 Crore",
+    "revenue": "₹438 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -1605,7 +1707,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Thriller",
       "Noir"
     ],
-    "imdbRating": 8.7,
+    "imdbRating": 8.5,
     "rottenTomatoesScore": 94,
     "matchScore": 92,
     "synopsis": "An aging gangster returns from prison to fight for the rights of Tamil workers in Malaysia.",
@@ -1614,16 +1716,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Rajinikanth",
       "Winston Chao"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pB8BM79ysb2iQZ17Z07r7x66MLg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "s7EdQ4FqbhY",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Pa. Ranjith.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Pa. Ranjith.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Pa. Ranjith.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Pa. Ranjith.",
     "similarTags": [
       "Pa.",
       "Crime",
@@ -1635,6 +1736,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹123 Crore",
+    "revenue": "₹212 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -1652,7 +1757,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "War",
       "Survival"
     ],
-    "imdbRating": 8.8,
+    "imdbRating": 8.6,
     "rottenTomatoesScore": 95,
     "matchScore": 93,
     "synopsis": "A hostel warden confronts an international mafia family to protect his best friend's son.",
@@ -1661,16 +1766,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Rajinikanth",
       "Vijay Sethupathi"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yR714H9tOCa2YCh0kTCe9zfwR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "s7EdQ4FqbhY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Karthik Subbaraj.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Karthik Subbaraj.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Karthik Subbaraj.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Karthik Subbaraj.",
     "similarTags": [
       "Karthik",
       "Comedy",
@@ -1682,6 +1785,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹43 Crore",
+    "revenue": "₹126 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -1698,7 +1805,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Western",
       "Space"
     ],
-    "imdbRating": 8.9,
+    "imdbRating": 8.7,
     "rottenTomatoesScore": 96,
     "matchScore": 94,
     "synopsis": "An IT professional gets involved in a political conflict over a wall painting in North Chennai.",
@@ -1707,16 +1814,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Karthi",
       "Catherine Tresa"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gEU2QvHOm5tJ7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "s7EdQ4FqbhY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Drama masterclass directed by Pa. Ranjith.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Drama masterclass directed by Pa. Ranjith.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Pa. Ranjith.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Pa. Ranjith.",
     "similarTags": [
       "Pa.",
       "Action",
@@ -1728,6 +1833,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹67 Crore",
+    "revenue": "₹434 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -1744,7 +1853,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Psychological",
       "Time Travel"
     ],
-    "imdbRating": 9,
+    "imdbRating": 8.8,
     "rottenTomatoesScore": 97,
     "matchScore": 95,
     "synopsis": "A cowboy set in Tamil Nadu saves a village from a ruthless gang using traditional guns.",
@@ -1754,16 +1863,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sandhya",
       "Padmapriya"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gEU2QvHOm5tJ7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "pyWuOrFRKQE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Chimbudevan.",
-    "whyRecommended": "Regal choice from Tamil cinema. A high-quality Action masterclass directed by Chimbudevan.",
+    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Chimbudevan.",
+    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Chimbudevan.",
     "similarTags": [
       "Chimbudevan",
       "Comedy",
@@ -1775,6 +1882,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Tamil",
     "country": "India",
+    "budget": "₹118 Crore",
+    "revenue": "₹271 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -1791,7 +1902,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Superhero",
       "Mystery Thriller"
     ],
-    "imdbRating": 7.5,
+    "imdbRating": 7.4,
     "rottenTomatoesScore": 80,
     "matchScore": 90,
     "synopsis": "A young villager learns about his legendary father's lineage and attempts to save his captive mother.",
@@ -1801,16 +1912,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Rana Daggubati",
       "Anushka Shetty"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ArW2t575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "bLvqoHBptjg",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by S.S. Rajamouli.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by S.S. Rajamouli.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by S.S. Rajamouli.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by S.S. Rajamouli.",
     "similarTags": [
       "S.S.",
       "Fantasy",
@@ -1822,6 +1932,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹46 Crore",
+    "revenue": "₹175 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -1838,7 +1952,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suspense",
       "Cyberpunk"
     ],
-    "imdbRating": 7.6,
+    "imdbRating": 7.5,
     "rottenTomatoesScore": 81,
     "matchScore": 91,
     "synopsis": "Shiva learns of the betrayal and assassination of his father, the grand general Baahubali.",
@@ -1848,16 +1962,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Rana Daggubati",
       "Anushka Shetty"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by S.S. Rajamouli.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by S.S. Rajamouli.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by S.S. Rajamouli.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by S.S. Rajamouli.",
     "similarTags": [
       "S.S.",
       "Fantasy",
@@ -1869,6 +1981,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹134 Crore",
+    "revenue": "₹373 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -1885,7 +2001,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Thriller",
       "Noir"
     ],
-    "imdbRating": 7.7,
+    "imdbRating": 7.6,
     "rottenTomatoesScore": 82,
     "matchScore": 92,
     "synopsis": "Two legendary revolutionaries embark on a journey of friendship and rebellion against British rule.",
@@ -1895,16 +2011,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ram Charan",
       "Alia Bhatt"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pB8BM79ysb2iQZ17Z07r7x66MLg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "2HkjrJ6IK5E",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by S.S. Rajamouli.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by S.S. Rajamouli.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by S.S. Rajamouli.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by S.S. Rajamouli.",
     "similarTags": [
       "S.S.",
       "Drama",
@@ -1916,6 +2030,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹99 Crore",
+    "revenue": "₹132 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -1933,7 +2051,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "War",
       "Survival"
     ],
-    "imdbRating": 7.8,
+    "imdbRating": 7.7,
     "rottenTomatoesScore": 83,
     "matchScore": 93,
     "synopsis": "A murdered man reincarnates as a housefly to protect his lover and seek revenge against his killer.",
@@ -1943,16 +2061,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Samantha Ruth Prabhu",
       "Sudeep"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gEU2QvHOm5tJ7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "CHekzSiZhsY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Fantasy masterclass directed by S.S. Rajamouli.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Fantasy masterclass directed by S.S. Rajamouli.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Fantasy masterpiece directed by S.S. Rajamouli.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Fantasy masterpiece directed by S.S. Rajamouli.",
     "similarTags": [
       "S.S.",
       "Action",
@@ -1964,6 +2080,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹45 Crore",
+    "revenue": "₹140 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -1980,7 +2100,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Western",
       "Space"
     ],
-    "imdbRating": 7.9,
+    "imdbRating": 7.8,
     "rottenTomatoesScore": 84,
     "matchScore": 94,
     "synopsis": "A motorcycle stuntman recalls a past life as a warrior who died protecting a princess.",
@@ -1989,16 +2109,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ram Charan",
       "Kajal Aggarwal"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ArW2t575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "pyWuOrFRKQE",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Fantasy masterclass directed by S.S. Rajamouli.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Fantasy masterclass directed by S.S. Rajamouli.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Fantasy masterpiece directed by S.S. Rajamouli.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Fantasy masterpiece directed by S.S. Rajamouli.",
     "similarTags": [
       "S.S.",
       "Action",
@@ -2010,6 +2129,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹54 Crore",
+    "revenue": "₹85 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -2026,7 +2149,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Psychological",
       "Time Travel"
     ],
-    "imdbRating": 8,
+    "imdbRating": 7.9,
     "rottenTomatoesScore": 85,
     "matchScore": 95,
     "synopsis": "A red sandalwood smuggler rises to lead the syndicate, facing off against a brutal police inspector.",
@@ -2036,16 +2159,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Rashmika Mandanna",
       "Fahadh Faasil"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gEU2QvHOm5tJ7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "xU47nhruN-k",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by Sukumar.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by Sukumar.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Sukumar.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Sukumar.",
     "similarTags": [
       "Sukumar",
       "Crime",
@@ -2057,6 +2178,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹94 Crore",
+    "revenue": "₹189 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -2073,7 +2198,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mystery Thriller",
       "Action"
     ],
-    "imdbRating": 8.1,
+    "imdbRating": 8,
     "rottenTomatoesScore": 86,
     "matchScore": 96,
     "synopsis": "A brilliant medical student spirals into self-destruction after his girlfriend is forced to marry another.",
@@ -2082,16 +2207,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Vijay Deverakonda",
       "Shalini Pandey"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/A7sp0uquq3W3J7J3L3P7l9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "Ie6Y_Q5-E0Y",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Drama masterclass directed by Sandeep Reddy Vanga.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Drama masterclass directed by Sandeep Reddy Vanga.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Sandeep Reddy Vanga.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Sandeep Reddy Vanga.",
     "similarTags": [
       "Sandeep",
       "Romance",
@@ -2103,6 +2226,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹97 Crore",
+    "revenue": "₹378 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -2119,7 +2246,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Cyberpunk",
       "Adventure"
     ],
-    "imdbRating": 8.2,
+    "imdbRating": 8.1,
     "rottenTomatoesScore": 87,
     "matchScore": 97,
     "synopsis": "The life story of Savitri, the iconic actress of South Indian cinema.",
@@ -2129,16 +2256,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Dulquer Salmaan",
       "Samantha Ruth Prabhu"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/y4FfVvL0G1HjX7P6L2U2T4g9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "EXeTwQWrcwY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Drama masterclass directed by Nag Ashwin.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Drama masterclass directed by Nag Ashwin.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Nag Ashwin.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Nag Ashwin.",
     "similarTags": [
       "Nag",
       "Biography",
@@ -2150,6 +2275,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹90 Crore",
+    "revenue": "₹209 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -2166,7 +2295,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Noir",
       "Animation"
     ],
-    "imdbRating": 8.3,
+    "imdbRating": 8.2,
     "rottenTomatoesScore": 88,
     "matchScore": 98,
     "synopsis": "An orphan soldier receives a letter from a girl named Sita, beginning a classic romantic journey.",
@@ -2175,16 +2304,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Dulquer Salmaan",
       "Mrunal Thakur"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fIE3lAGuSS16rP24MSErSo8Y4gq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "bLvqoHBptjg",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Romance masterclass directed by Hanu Raghavapudi.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Romance masterclass directed by Hanu Raghavapudi.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by Hanu Raghavapudi.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by Hanu Raghavapudi.",
     "similarTags": [
       "Hanu",
       "Drama",
@@ -2196,6 +2324,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹122 Crore",
+    "revenue": "₹185 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -2212,7 +2344,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Survival",
       "Anime"
     ],
-    "imdbRating": 8.4,
+    "imdbRating": 8.3,
     "rottenTomatoesScore": 89,
     "matchScore": 99,
     "synopsis": "A retired cricketer decides to return to the game in his late thirties to buy a jersey for his son.",
@@ -2221,16 +2353,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Nani",
       "Shraddha Srinath"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/n5A76v92erglVw37B67ouYbqDES.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "O1tGxRRgly8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Drama masterclass directed by Gowtam Tinnanuri.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Drama masterclass directed by Gowtam Tinnanuri.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Gowtam Tinnanuri.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Gowtam Tinnanuri.",
     "similarTags": [
       "Gowtam",
       "Sports",
@@ -2242,6 +2372,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹129 Crore",
+    "revenue": "₹322 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -2258,7 +2392,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Space",
       "Biography"
     ],
-    "imdbRating": 8.5,
+    "imdbRating": 8.4,
     "rottenTomatoesScore": 90,
     "matchScore": 90,
     "synopsis": "Four love stories set in the neighborhood of Kancharapalem, spanning different age groups.",
@@ -2267,16 +2401,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Subba Rao",
       "Radha Bessey"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/n5A76v92erglVw37B67ouYbqDES.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "8hP9D6kZseM",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Drama masterclass directed by Venkatesh Maha.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Drama masterclass directed by Venkatesh Maha.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Venkatesh Maha.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Venkatesh Maha.",
     "similarTags": [
       "Venkatesh",
       "Romance",
@@ -2288,6 +2420,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹68 Crore",
+    "revenue": "₹195 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -2304,7 +2440,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Time Travel",
       "Comedy"
     ],
-    "imdbRating": 8.6,
+    "imdbRating": 8.5,
     "rottenTomatoesScore": 91,
     "matchScore": 91,
     "synopsis": "A partially deaf villager fights a ruthless president who has ruled his village for decades.",
@@ -2313,16 +2449,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ram Charan",
       "Samantha Ruth Prabhu"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ArW2t575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by Sukumar.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by Sukumar.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Sukumar.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Sukumar.",
     "similarTags": [
       "Sukumar",
       "Drama",
@@ -2334,6 +2468,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹22 Crore",
+    "revenue": "₹407 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -2349,7 +2487,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Superhero",
       "Mystery Thriller"
     ],
-    "imdbRating": 8.7,
+    "imdbRating": 8.6,
     "rottenTomatoesScore": 92,
     "matchScore": 92,
     "synopsis": "An undercover cop infiltrates a mafia gang, pretending to be a ruthless hitman.",
@@ -2358,16 +2496,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mahesh Babu",
       "Ileana D'Cruz"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9gk7adHYeCmqgl0wSy646V05g2e.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "vKQi3bBA1y8",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by Puri Jagannadh.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by Puri Jagannadh.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Puri Jagannadh.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Puri Jagannadh.",
     "similarTags": [
       "Puri",
       "Crime",
@@ -2379,6 +2516,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹51 Crore",
+    "revenue": "₹178 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -2396,7 +2537,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Adventure",
       "Documentary"
     ],
-    "imdbRating": 8.8,
+    "imdbRating": 8.7,
     "rottenTomatoesScore": 93,
     "matchScore": 93,
     "synopsis": "A hitman is falsely accused of murder and hides in a remote village, pretending to be a relative.",
@@ -2405,16 +2546,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mahesh Babu",
       "Trisha Krishnan"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by Trivikram Srinivas.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by Trivikram Srinivas.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Trivikram Srinivas.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Trivikram Srinivas.",
     "similarTags": [
       "Trivikram",
       "Drama",
@@ -2426,6 +2565,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹94 Crore",
+    "revenue": "₹303 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -2443,7 +2586,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Animation",
       "Drama"
     ],
-    "imdbRating": 8.9,
+    "imdbRating": 8.8,
     "rottenTomatoesScore": 94,
     "matchScore": 94,
     "synopsis": "A young man struggles with his father's overprotective nature while falling in love with a bubbly girl.",
@@ -2452,16 +2595,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Siddharth",
       "Genelia D'Souza"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fIE3lAGuSS16rP24MSErSo8Y4gq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "4OiMTOKdKTE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Romance masterclass directed by Bhaskar.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Romance masterclass directed by Bhaskar.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by Bhaskar.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by Bhaskar.",
     "similarTags": [
       "Bhaskar",
       "Comedy",
@@ -2473,6 +2614,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹77 Crore",
+    "revenue": "₹60 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -2488,7 +2633,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Anime",
       "Family"
     ],
-    "imdbRating": 9,
+    "imdbRating": 8.9,
     "rottenTomatoesScore": 95,
     "matchScore": 95,
     "synopsis": "A bubbly student confesses his love to a girl who is already in a relationship with a bully.",
@@ -2497,16 +2642,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Allu Arjun",
       "Anuradha Mehta"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pB8BM79ysb2iQZ17Z07r7x66MLg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "pyWuOrFRKQE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Romance masterclass directed by Sukumar.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Romance masterclass directed by Sukumar.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by Sukumar.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by Sukumar.",
     "similarTags": [
       "Sukumar",
       "Comedy",
@@ -2518,6 +2661,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹110 Crore",
+    "revenue": "₹411 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -2534,7 +2681,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Biography",
       "Fantasy"
     ],
-    "imdbRating": 9.1,
+    "imdbRating": 9,
     "rottenTomatoesScore": 96,
     "matchScore": 96,
     "synopsis": "An aspiring intelligence officer is framed for the murder of his bosses on his graduation day.",
@@ -2543,16 +2690,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Adivi Sesh",
       "Sobhita Dhulipala"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pB8BM79ysb2iQZ17Z07r7x66MLg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "PLl99DfYbY4",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by Sashi Kiran Tikka.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by Sashi Kiran Tikka.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Sashi Kiran Tikka.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Sashi Kiran Tikka.",
     "similarTags": [
       "Sashi",
       "Thriller",
@@ -2564,6 +2710,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹32 Crore",
+    "revenue": "₹279 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -2580,7 +2730,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Time Travel",
       "History"
     ],
-    "imdbRating": 9.2,
+    "imdbRating": 9.1,
     "rottenTomatoesScore": 97,
     "matchScore": 97,
     "synopsis": "A brilliant detective in Nellore stumbles upon a conspiracy involving unclaimed dead bodies.",
@@ -2589,16 +2739,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Naveen Polishetty",
       "Shruti Sharma"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cRiL9fNl1J8yA694JbUu0uKqJ9y.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "O1tGxRRgly8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Comedy masterclass directed by Swaroop RSJ.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Comedy masterclass directed by Swaroop RSJ.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Comedy masterpiece directed by Swaroop RSJ.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Comedy masterpiece directed by Swaroop RSJ.",
     "similarTags": [
       "Swaroop",
       "Mystery",
@@ -2610,6 +2758,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹89 Crore",
+    "revenue": "₹408 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -2626,7 +2778,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Action",
       "Horror"
     ],
-    "imdbRating": 9.3,
+    "imdbRating": 9.2,
     "rottenTomatoesScore": 80,
     "matchScore": 98,
     "synopsis": "A delivery boy gets trapped in a murder case after trying to steal money to make ends meet.",
@@ -2635,16 +2787,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sri Simha",
       "Satya"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fIE3lAGuSS16rP24MSErSo8Y4gq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "92a7Hj0ijLs",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Comedy masterclass directed by Ritesh Rana.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Comedy masterclass directed by Ritesh Rana.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Comedy masterpiece directed by Ritesh Rana.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Comedy masterpiece directed by Ritesh Rana.",
     "similarTags": [
       "Ritesh",
       "Thriller",
@@ -2656,6 +2806,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹120 Crore",
+    "revenue": "₹311 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -2672,7 +2826,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Documentary",
       "Mystery"
     ],
-    "imdbRating": 9.4,
+    "imdbRating": 9.3,
     "rottenTomatoesScore": 81,
     "matchScore": 99,
     "synopsis": "Three college friends plan a fake kidnapping to help a classmate, leading to chaotic events.",
@@ -2681,16 +2835,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sree Vishnu",
       "Nivetha Thomas"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xZ2V2575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "4OiMTOKdKTE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Comedy masterclass directed by Vivek Athreya.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Comedy masterclass directed by Vivek Athreya.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Comedy masterpiece directed by Vivek Athreya.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Comedy masterpiece directed by Vivek Athreya.",
     "similarTags": [
       "Vivek",
       "Crime",
@@ -2702,6 +2854,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹117 Crore",
+    "revenue": "₹270 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -2718,7 +2874,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Animation",
       "Musical"
     ],
-    "imdbRating": 7.5,
+    "imdbRating": 9.4,
     "rottenTomatoesScore": 82,
     "matchScore": 90,
     "synopsis": "The life and sacrifices of Major Sandeep Unnikrishnan during the 2008 Mumbai attacks.",
@@ -2727,16 +2883,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Adivi Sesh",
       "Saiee Manjrekar"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/n5A76v92erglVw37B67ouYbqDES.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "bLvqoHBptjg",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Drama masterclass directed by Sashi Kiran Tikka.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Drama masterclass directed by Sashi Kiran Tikka.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Sashi Kiran Tikka.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Sashi Kiran Tikka.",
     "similarTags": [
       "Sashi",
       "Biography",
@@ -2748,6 +2903,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹50 Crore",
+    "revenue": "₹203 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -2765,7 +2924,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Family",
       "Romance"
     ],
-    "imdbRating": 7.6,
+    "imdbRating": 7.4,
     "rottenTomatoesScore": 83,
     "matchScore": 91,
     "synopsis": "A rational doctor searches for the ancient anklet of Lord Krishna, facing mystics and traps.",
@@ -2774,16 +2933,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Nikhil Siddharth",
       "Anupama Parameswaran"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "bLvqoHBptjg",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Adventure masterclass directed by Chandoo Mondeti.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Adventure masterclass directed by Chandoo Mondeti.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Adventure masterpiece directed by Chandoo Mondeti.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Adventure masterpiece directed by Chandoo Mondeti.",
     "similarTags": [
       "Chandoo",
       "Mystery",
@@ -2795,6 +2952,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹110 Crore",
+    "revenue": "₹151 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -2811,7 +2972,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Fantasy",
       "Sci-Fi"
     ],
-    "imdbRating": 7.7,
+    "imdbRating": 7.5,
     "rottenTomatoesScore": 84,
     "matchScore": 92,
     "synopsis": "A young man from a coal mine village takes revenge for his friend's murder during a festival.",
@@ -2820,16 +2981,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Nani",
       "Keerthy Suresh"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "vKQi3bBA1y8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by Srikanth Odela.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by Srikanth Odela.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Srikanth Odela.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Srikanth Odela.",
     "similarTags": [
       "Srikanth",
       "Drama",
@@ -2841,6 +3000,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹27 Crore",
+    "revenue": "₹316 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -2858,7 +3021,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "History",
       "Sports"
     ],
-    "imdbRating": 7.8,
+    "imdbRating": 7.6,
     "rottenTomatoesScore": 85,
     "matchScore": 93,
     "synopsis": "A petty thief in an imaginary village gains the powers of Lord Hanuman and saves his home from evil.",
@@ -2867,16 +3030,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Teja Sajja",
       "Amritha Aiyer"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by Prasanth Varma.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by Prasanth Varma.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Prasanth Varma.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Prasanth Varma.",
     "similarTags": [
       "Prasanth",
       "Fantasy",
@@ -2888,6 +3049,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹98 Crore",
+    "revenue": "₹73 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -2905,7 +3070,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Horror",
       "Superhero"
     ],
-    "imdbRating": 7.9,
+    "imdbRating": 7.7,
     "rottenTomatoesScore": 86,
     "matchScore": 94,
     "synopsis": "A single father photographer raises his daughter until an enigmatic woman enters their lives.",
@@ -2914,16 +3079,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Nani",
       "Mrunal Thakur"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cRiL9fNl1J8yA694JbUu0uKqJ9y.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "PLl99DfYbY4",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Drama masterclass directed by Shouryuv.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Drama masterclass directed by Shouryuv.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Shouryuv.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Shouryuv.",
     "similarTags": [
       "Shouryuv",
       "Romance",
@@ -2935,6 +3099,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹72 Crore",
+    "revenue": "₹455 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -2951,7 +3119,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mystery",
       "Suspense"
     ],
-    "imdbRating": 8,
+    "imdbRating": 7.8,
     "rottenTomatoesScore": 87,
     "matchScore": 95,
     "synopsis": "A political godfather chooses his stepson to succeed him, leading to intense family rivalry.",
@@ -2960,16 +3128,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sharwanand",
       "Sai Kumar"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3931w362g1vRPwTaxtgLR7Yjtyx.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "EXeTwQWrcwY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Drama masterclass directed by Deva Katta.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Drama masterclass directed by Deva Katta.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Deva Katta.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Deva Katta.",
     "similarTags": [
       "Deva",
       "Crime",
@@ -2981,6 +3147,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹118 Crore",
+    "revenue": "₹133 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -2996,7 +3166,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Musical",
       "Thriller"
     ],
-    "imdbRating": 8.1,
+    "imdbRating": 7.9,
     "rottenTomatoesScore": 88,
     "matchScore": 96,
     "synopsis": "The lives of five people from different walks of life intersect at a hospital during a terror attack.",
@@ -3006,16 +3176,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Manchu Manoj",
       "Anushka Shetty"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/A7sp0uquq3W3J7J3L3P7l9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Drama masterclass directed by Krish Jagarlamudi.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Drama masterclass directed by Krish Jagarlamudi.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Krish Jagarlamudi.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Krish Jagarlamudi.",
     "similarTags": [
       "Krish",
       "Action",
@@ -3027,6 +3195,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹46 Crore",
+    "revenue": "₹341 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -3044,7 +3216,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Romance",
       "War"
     ],
-    "imdbRating": 8.2,
+    "imdbRating": 8,
     "rottenTomatoesScore": 89,
     "matchScore": 97,
     "synopsis": "A foreign-educated youngster enters politics after his father's murder, aiming to eliminate corruption.",
@@ -3053,16 +3225,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Rana Daggubati",
       "Richa Gangopadhyay"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pB8BM79ysb2iQZ17Z07r7x66MLg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Drama masterclass directed by Sekhar Kammula.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Drama masterclass directed by Sekhar Kammula.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Sekhar Kammula.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Sekhar Kammula.",
     "similarTags": [
       "Sekhar",
       "Political",
@@ -3074,6 +3244,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹46 Crore",
+    "revenue": "₹411 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -3091,7 +3265,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sci-Fi",
       "Western"
     ],
-    "imdbRating": 8.3,
+    "imdbRating": 8.1,
     "rottenTomatoesScore": 90,
     "matchScore": 98,
     "synopsis": "A wealthy youngster travels with a motorcycle thief in search of his long-lost love.",
@@ -3100,16 +3274,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sharwanand",
       "Allari Naresh"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vT3P1lqq7aW6g1sP3x7U6ZgL94H.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "O1tGxRRgly8",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Drama masterclass directed by Krish Jagarlamudi.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Drama masterclass directed by Krish Jagarlamudi.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Krish Jagarlamudi.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Krish Jagarlamudi.",
     "similarTags": [
       "Krish",
       "Adventure",
@@ -3121,6 +3294,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹53 Crore",
+    "revenue": "₹148 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -3137,7 +3314,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "History",
       "Psychological"
     ],
-    "imdbRating": 8.4,
+    "imdbRating": 8.2,
     "rottenTomatoesScore": 91,
     "matchScore": 99,
     "synopsis": "A kabaddi player saves a girl from a powerful factionist in Kurnool, hiding her in his house.",
@@ -3146,16 +3323,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mahesh Babu",
       "Bhumika Chawla"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9gk7adHYeCmqgl0wSy646V05g2e.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "0n_H-Jt9xP8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by Gunasekhar.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by Gunasekhar.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Gunasekhar.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Gunasekhar.",
     "similarTags": [
       "Gunasekhar",
       "Romance",
@@ -3167,6 +3342,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹116 Crore",
+    "revenue": "₹243 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -3183,7 +3362,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Superhero",
       "Mystery Thriller"
     ],
-    "imdbRating": 8.5,
+    "imdbRating": 8.3,
     "rottenTomatoesScore": 92,
     "matchScore": 90,
     "synopsis": "An NRI returns to India to help his ex-girlfriend find her kidnapped daughter.",
@@ -3192,16 +3371,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Adivi Sesh",
       "Adah Sharma"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f89U3wzZu0j7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "pyWuOrFRKQE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Thriller masterclass directed by Ravikanth Perepu.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Thriller masterclass directed by Ravikanth Perepu.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Thriller masterpiece directed by Ravikanth Perepu.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Thriller masterpiece directed by Ravikanth Perepu.",
     "similarTags": [
       "Ravikanth",
       "Mystery",
@@ -3213,6 +3390,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹86 Crore",
+    "revenue": "₹301 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -3229,7 +3410,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suspense",
       "Cyberpunk"
     ],
-    "imdbRating": 8.6,
+    "imdbRating": 8.4,
     "rottenTomatoesScore": 93,
     "matchScore": 91,
     "synopsis": "A corrupt police officer investigates a woman accused of killing an officer who allegedly assaulted her.",
@@ -3238,16 +3419,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Adivi Sesh",
       "Regina Cassandra"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/A7sp0uquq3W3J7J3L3P7l9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "92a7Hj0ijLs",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Thriller masterclass directed by Venkat Ramji.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Thriller masterclass directed by Venkat Ramji.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Thriller masterpiece directed by Venkat Ramji.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Thriller masterpiece directed by Venkat Ramji.",
     "similarTags": [
       "Venkat",
       "Crime",
@@ -3259,6 +3438,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹28 Crore",
+    "revenue": "₹101 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -3275,7 +3458,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Thriller",
       "Noir"
     ],
-    "imdbRating": 8.7,
+    "imdbRating": 8.5,
     "rottenTomatoesScore": 94,
     "matchScore": 92,
     "synopsis": "A lecturer falls in love with a woman who initially hates him due to a tragic misunderstanding.",
@@ -3284,16 +3467,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Vijay Deverakonda",
       "Rashmika Mandanna"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f89U3wzZu0j7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "ol67qo3P4w8",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Romance masterclass directed by Parasuram.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Romance masterclass directed by Parasuram.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by Parasuram.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by Parasuram.",
     "similarTags": [
       "Parasuram",
       "Comedy",
@@ -3305,6 +3487,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹40 Crore",
+    "revenue": "₹345 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -3321,7 +3507,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "War",
       "Survival"
     ],
-    "imdbRating": 8.8,
+    "imdbRating": 8.6,
     "rottenTomatoesScore": 95,
     "matchScore": 93,
     "synopsis": "A young man swapped at birth learns about his biological father's wealthy family and protects them.",
@@ -3330,16 +3516,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Allu Arjun",
       "Pooja Hegde"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "bLvqoHBptjg",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by Trivikram Srinivas.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Action masterclass directed by Trivikram Srinivas.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Trivikram Srinivas.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Trivikram Srinivas.",
     "similarTags": [
       "Trivikram",
       "Comedy",
@@ -3351,6 +3535,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹122 Crore",
+    "revenue": "₹113 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -3367,7 +3555,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Western",
       "Space"
     ],
-    "imdbRating": 8.9,
+    "imdbRating": 8.7,
     "rottenTomatoesScore": 96,
     "matchScore": 94,
     "synopsis": "A triangular love story exploring changing priorities and heartbreaks in college life.",
@@ -3376,16 +3564,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Anand Deverakonda",
       "Vaishnavi Chaitanya"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ArW2t575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "nfK6UgLra7w",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Romance masterclass directed by Sai Rajesh.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Romance masterclass directed by Sai Rajesh.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by Sai Rajesh.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by Sai Rajesh.",
     "similarTags": [
       "Sai",
       "Drama",
@@ -3397,6 +3583,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹23 Crore",
+    "revenue": "₹232 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -3412,7 +3602,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Psychological",
       "Time Travel"
     ],
-    "imdbRating": 9,
+    "imdbRating": 8.8,
     "rottenTomatoesScore": 97,
     "matchScore": 95,
     "synopsis": "Two college friends have feelings for each other but keep fighting due to their high egos.",
@@ -3421,16 +3611,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Pawan Kalyan",
       "Bhumika Chawla"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vT3P1lqq7aW6g1sP3x7U6ZgL94H.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "vKQi3bBA1y8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Telugu cinema. A high-quality Romance masterclass directed by S.J. Suryah.",
-    "whyRecommended": "Regal choice from Telugu cinema. A high-quality Romance masterclass directed by S.J. Suryah.",
+    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by S.J. Suryah.",
+    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by S.J. Suryah.",
     "similarTags": [
       "S.J.",
       "Comedy",
@@ -3442,6 +3630,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Telugu",
     "country": "India",
+    "budget": "₹115 Crore",
+    "revenue": "₹444 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -3458,7 +3650,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Superhero",
       "Mystery Thriller"
     ],
-    "imdbRating": 7.5,
+    "imdbRating": 7.4,
     "rottenTomatoesScore": 80,
     "matchScore": 90,
     "synopsis": "A cable TV operator goes to extreme lengths to protect his family after they commit an accidental murder.",
@@ -3468,16 +3660,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Meena",
       "Asha Sharath"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "bLvqoHBptjg",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Thriller masterclass directed by Jeethu Joseph.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Thriller masterclass directed by Jeethu Joseph.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Thriller masterpiece directed by Jeethu Joseph.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Thriller masterpiece directed by Jeethu Joseph.",
     "similarTags": [
       "Jeethu",
       "Drama",
@@ -3489,6 +3680,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹46 Crore",
+    "revenue": "₹391 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -3506,7 +3701,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suspense",
       "Cyberpunk"
     ],
-    "imdbRating": 7.6,
+    "imdbRating": 7.5,
     "rottenTomatoesScore": 81,
     "matchScore": 91,
     "synopsis": "The investigations reopen six years later, forcing Georgekutty to hatch a final cover-up plan.",
@@ -3516,16 +3711,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Meena",
       "Murali Gopy"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vT3P1lqq7aW6g1sP3x7U6ZgL94H.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "8hP9D6kZseM",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Thriller masterclass directed by Jeethu Joseph.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Thriller masterclass directed by Jeethu Joseph.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Thriller masterpiece directed by Jeethu Joseph.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Thriller masterpiece directed by Jeethu Joseph.",
     "similarTags": [
       "Jeethu",
       "Drama",
@@ -3537,6 +3730,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹32 Crore",
+    "revenue": "₹297 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -3553,7 +3750,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Thriller",
       "Noir"
     ],
-    "imdbRating": 7.7,
+    "imdbRating": 7.6,
     "rottenTomatoesScore": 82,
     "matchScore": 92,
     "synopsis": "A young man goes through three stages of love and heartbreak in his school and college life.",
@@ -3563,16 +3760,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sai Pallavi",
       "Madonna Sebastian"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/y4FfVvL0G1HjX7P6L2U2T4g9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "Ie6Y_Q5-E0Y",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Romance masterclass directed by Alphonse Puthren.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Romance masterclass directed by Alphonse Puthren.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Romance masterpiece directed by Alphonse Puthren.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Romance masterpiece directed by Alphonse Puthren.",
     "similarTags": [
       "Alphonse",
       "Comedy",
@@ -3584,6 +3779,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹113 Crore",
+    "revenue": "₹128 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -3600,7 +3799,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "War",
       "Survival"
     ],
-    "imdbRating": 7.8,
+    "imdbRating": 7.7,
     "rottenTomatoesScore": 83,
     "matchScore": 93,
     "synopsis": "Four dysfunctional brothers in a fishing village form an unlikely bond to resolve their issues.",
@@ -3610,16 +3809,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Shane Nigam",
       "Soubin Shahir"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cRiL9fNl1J8yA694JbUu0uKqJ9y.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "s7EdQ4FqbhY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by Madhu C. Narayanan.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by Madhu C. Narayanan.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Madhu C. Narayanan.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Madhu C. Narayanan.",
     "similarTags": [
       "Madhu",
       "Comedy",
@@ -3631,6 +3828,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹91 Crore",
+    "revenue": "₹388 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -3648,7 +3849,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Western",
       "Space"
     ],
-    "imdbRating": 7.9,
+    "imdbRating": 7.8,
     "rottenTomatoesScore": 84,
     "matchScore": 94,
     "synopsis": "Three cousins move from Kerala to Bangalore, chasing their dreams and facing new relationships.",
@@ -3659,16 +3860,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Fahadh Faasil",
       "Nazriya Nazim"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xZ2V2575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "Ie6Y_Q5-E0Y",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by Anjali Menon.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by Anjali Menon.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Anjali Menon.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Anjali Menon.",
     "similarTags": [
       "Anjali",
       "Romance",
@@ -3680,6 +3880,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹73 Crore",
+    "revenue": "₹394 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -3695,7 +3899,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Psychological",
       "Time Travel"
     ],
-    "imdbRating": 8,
+    "imdbRating": 7.9,
     "rottenTomatoesScore": 85,
     "matchScore": 95,
     "synopsis": "A photographer vows to remain barefoot until he takes revenge on the man who humiliated him.",
@@ -3704,16 +3908,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Fahadh Faasil",
       "Aparna Balamurali"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "bLvqoHBptjg",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Comedy masterclass directed by Dileesh Pothan.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Comedy masterclass directed by Dileesh Pothan.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Dileesh Pothan.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Dileesh Pothan.",
     "similarTags": [
       "Dileesh",
       "Drama",
@@ -3725,6 +3927,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹78 Crore",
+    "revenue": "₹111 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -3741,7 +3947,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Superhero",
       "Mystery Thriller"
     ],
-    "imdbRating": 8.1,
+    "imdbRating": 8,
     "rottenTomatoesScore": 86,
     "matchScore": 96,
     "synopsis": "A mysterious godfather takes charge of a political party after its veteran leader passes away.",
@@ -3751,16 +3957,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Vivek Oberoi",
       "Manju Warrier"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/y4FfVvL0G1HjX7P6L2U2T4g9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "Ie6Y_Q5-E0Y",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Action masterclass directed by Prithviraj Sukumaran.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Action masterclass directed by Prithviraj Sukumaran.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Action masterpiece directed by Prithviraj Sukumaran.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Action masterpiece directed by Prithviraj Sukumaran.",
     "similarTags": [
       "Prithviraj",
       "Drama",
@@ -3772,6 +3976,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹69 Crore",
+    "revenue": "₹198 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -3789,7 +3997,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Cyberpunk",
       "Adventure"
     ],
-    "imdbRating": 8.2,
+    "imdbRating": 8.1,
     "rottenTomatoesScore": 87,
     "matchScore": 97,
     "synopsis": "The real-life story of Sukumara Kurup, India's most wanted fugitive who faked his death.",
@@ -3798,16 +4006,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Dulquer Salmaan",
       "Sobhita Dhulipala"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "PLl99DfYbY4",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Crime masterclass directed by Srinath Rajendran.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Crime masterclass directed by Srinath Rajendran.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Crime masterpiece directed by Srinath Rajendran.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Crime masterpiece directed by Srinath Rajendran.",
     "similarTags": [
       "Srinath",
       "Thriller",
@@ -3819,6 +4025,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹68 Crore",
+    "revenue": "₹213 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -3837,7 +4047,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Noir",
       "Animation"
     ],
-    "imdbRating": 8.3,
+    "imdbRating": 8.2,
     "rottenTomatoesScore": 88,
     "matchScore": 98,
     "synopsis": "A tailor gains superhuman speed and powers after being struck by lightning in his village.",
@@ -3846,16 +4056,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Tovino Thomas",
       "Guru Somasundaram"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ArW2t575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Action masterclass directed by Basil Joseph.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Action masterclass directed by Basil Joseph.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Action masterpiece directed by Basil Joseph.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Action masterpiece directed by Basil Joseph.",
     "similarTags": [
       "Basil",
       "Comedy",
@@ -3867,6 +4076,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹90 Crore",
+    "revenue": "₹377 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -3883,7 +4096,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Survival",
       "Anime"
     ],
-    "imdbRating": 8.4,
+    "imdbRating": 8.3,
     "rottenTomatoesScore": 89,
     "matchScore": 99,
     "synopsis": "A young man goes through a series of relationships and career changes at an engineering college.",
@@ -3892,16 +4105,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Pranav Mohanlal",
       "Kalyani Priyadarshan"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ArW2t575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "bLvqoHBptjg",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Romance masterclass directed by Vineeth Sreenivasan.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Romance masterclass directed by Vineeth Sreenivasan.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Romance masterpiece directed by Vineeth Sreenivasan.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Romance masterpiece directed by Vineeth Sreenivasan.",
     "similarTags": [
       "Vineeth",
       "Drama",
@@ -3913,6 +4124,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹130 Crore",
+    "revenue": "₹61 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -3930,7 +4145,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Space",
       "Biography"
     ],
-    "imdbRating": 8.5,
+    "imdbRating": 8.4,
     "rottenTomatoesScore": 90,
     "matchScore": 90,
     "synopsis": "An aging patriarch protects his large family from internal betrayals and external drug gangs.",
@@ -3939,16 +4154,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mammootty",
       "Soubin Shahir"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xZ2V2575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "ByXuk9QqQkk",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Action masterclass directed by Amal Neerad.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Action masterclass directed by Amal Neerad.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Action masterpiece directed by Amal Neerad.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Action masterpiece directed by Amal Neerad.",
     "similarTags": [
       "Amal",
       "Drama",
@@ -3960,6 +4173,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹27 Crore",
+    "revenue": "₹116 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -3975,7 +4192,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Psychological",
       "Time Travel"
     ],
-    "imdbRating": 8.6,
+    "imdbRating": 8.5,
     "rottenTomatoesScore": 91,
     "matchScore": 91,
     "synopsis": "Seven bachelor roommates in Bangalore use a Ouija board, accidentally invoking a spirit named Anamika.",
@@ -3984,16 +4201,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Soubin Shahir",
       "Arjun Ashokan"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "0n_H-Jt9xP8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Comedy masterclass directed by Jithu Madhavan.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Comedy masterclass directed by Jithu Madhavan.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Jithu Madhavan.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Jithu Madhavan.",
     "similarTags": [
       "Jithu",
       "Horror",
@@ -4005,6 +4220,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹136 Crore",
+    "revenue": "₹177 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -4022,7 +4241,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Action",
       "Crime"
     ],
-    "imdbRating": 8.7,
+    "imdbRating": 8.6,
     "rottenTomatoesScore": 92,
     "matchScore": 92,
     "synopsis": "The survival stories of the people of Kerala during the catastrophic 2018 state floods.",
@@ -4032,16 +4251,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Kunchacko Boban",
       "Asif Ali"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/A7sp0uquq3W3J7J3L3P7l9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "EXeTwQWrcwY",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by Jude Anthany Joseph.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by Jude Anthany Joseph.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Jude Anthany Joseph.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Jude Anthany Joseph.",
     "similarTags": [
       "Jude",
       "Survival",
@@ -4053,6 +4271,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹22 Crore",
+    "revenue": "₹455 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -4069,7 +4291,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Cyberpunk",
       "Documentary"
     ],
-    "imdbRating": 8.8,
+    "imdbRating": 8.7,
     "rottenTomatoesScore": 93,
     "matchScore": 93,
     "synopsis": "A group of friends on a trip to Kodaikanal attempt to rescue their friend from Guna Caves.",
@@ -4078,16 +4300,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Soubin Shahir",
       "Sreenath Bhasi"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pB8BM79ysb2iQZ17Z07r7x66MLg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "0n_H-Jt9xP8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by Chidambaram.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by Chidambaram.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Chidambaram.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Chidambaram.",
     "similarTags": [
       "Chidambaram",
       "Adventure",
@@ -4099,6 +4319,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹76 Crore",
+    "revenue": "₹459 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -4115,7 +4339,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Animation",
       "Drama"
     ],
-    "imdbRating": 8.9,
+    "imdbRating": 8.8,
     "rottenTomatoesScore": 94,
     "matchScore": 94,
     "synopsis": "A young graduate moves to Hyderabad for a gate coaching class, falling in love with a bubbly girl.",
@@ -4124,16 +4348,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Naslen K. Gafoor",
       "Mamitha Baiju"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9gk7adHYeCmqgl0wSy646V05g2e.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "Ie6Y_Q5-E0Y",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Romance masterclass directed by Girish A.D..",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Romance masterclass directed by Girish A.D..",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Romance masterpiece directed by Girish A.D..",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Romance masterpiece directed by Girish A.D..",
     "similarTags": [
       "Girish",
       "Comedy",
@@ -4145,6 +4367,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹25 Crore",
+    "revenue": "₹354 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -4161,7 +4387,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Anime",
       "Family"
     ],
-    "imdbRating": 9,
+    "imdbRating": 8.9,
     "rottenTomatoesScore": 95,
     "matchScore": 95,
     "synopsis": "An immigrant worker in Saudi Arabia is forced into slave labor herding goats in the desert.",
@@ -4170,16 +4396,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Prithviraj Sukumaran",
       "Amala Paul"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "ByXuk9QqQkk",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by Blessy.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by Blessy.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Blessy.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Blessy.",
     "similarTags": [
       "Blessy",
       "Biography",
@@ -4191,6 +4415,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹115 Crore",
+    "revenue": "₹186 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -4208,7 +4436,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Space",
       "Biography"
     ],
-    "imdbRating": 9.1,
+    "imdbRating": 9,
     "rottenTomatoesScore": 96,
     "matchScore": 96,
     "synopsis": "A court singer escapes slave labor only to find himself trapped in a mysterious mansion owned by a wizard.",
@@ -4217,16 +4445,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mammootty",
       "Arjun Ashokan"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "s7EdQ4FqbhY",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Horror masterclass directed by Rahul Sadasivan.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Horror masterclass directed by Rahul Sadasivan.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Horror masterpiece directed by Rahul Sadasivan.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Horror masterpiece directed by Rahul Sadasivan.",
     "similarTags": [
       "Rahul",
       "Thriller",
@@ -4238,6 +4465,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹75 Crore",
+    "revenue": "₹132 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -4254,7 +4485,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Comedy",
       "History"
     ],
-    "imdbRating": 9.2,
+    "imdbRating": 9.1,
     "rottenTomatoesScore": 97,
     "matchScore": 97,
     "synopsis": "A struggling motivational speaker is hired by corporate bosses to become a fake miracle worker.",
@@ -4264,16 +4495,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Nazriya Nazim",
       "Gautham Vasudev Menon"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "EXeTwQWrcwY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by Anwar Rasheed.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by Anwar Rasheed.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Anwar Rasheed.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Anwar Rasheed.",
     "similarTags": [
       "Anwar",
       "Psychological",
@@ -4285,6 +4514,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹106 Crore",
+    "revenue": "₹255 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -4301,7 +4534,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Action",
       "Horror"
     ],
-    "imdbRating": 9.3,
+    "imdbRating": 9.2,
     "rottenTomatoesScore": 80,
     "matchScore": 98,
     "synopsis": "An engineering dropout plots to kill his tyrannical father to inherit the family wealth.",
@@ -4310,16 +4543,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Fahadh Faasil",
       "Baburaj"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "ByXuk9QqQkk",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by Dileesh Pothan.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by Dileesh Pothan.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Dileesh Pothan.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Dileesh Pothan.",
     "similarTags": [
       "Dileesh",
       "Crime",
@@ -4331,6 +4562,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹75 Crore",
+    "revenue": "₹386 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -4348,7 +4583,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Documentary",
       "Mystery"
     ],
-    "imdbRating": 9.4,
+    "imdbRating": 9.3,
     "rottenTomatoesScore": 81,
     "matchScore": 99,
     "synopsis": "A powerful godfather in a coastal village fights against local politicians trying to steal lands.",
@@ -4357,16 +4592,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Fahadh Faasil",
       "Nimisha Sajayan"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "vKQi3bBA1y8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by Mahesh Narayanan.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by Mahesh Narayanan.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Mahesh Narayanan.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Mahesh Narayanan.",
     "similarTags": [
       "Mahesh",
       "Crime",
@@ -4378,6 +4611,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹27 Crore",
+    "revenue": "₹364 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -4393,7 +4630,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Animation",
       "Musical"
     ],
-    "imdbRating": 7.5,
+    "imdbRating": 9.4,
     "rottenTomatoesScore": 82,
     "matchScore": 90,
     "synopsis": "A newlywed woman struggles to adapt to the heavy domestic duties imposed on her by a patriarchal home.",
@@ -4402,16 +4639,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Nimisha Sajayan",
       "Suraj Venjaramoodu"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gEU2QvHOm5tJ7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "bLvqoHBptjg",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by Jeo Baby.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by Jeo Baby.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Jeo Baby.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Jeo Baby.",
     "similarTags": [
       "Jeo",
       "Family",
@@ -4423,6 +4659,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹122 Crore",
+    "revenue": "₹393 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -4439,7 +4679,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Family",
       "Romance"
     ],
-    "imdbRating": 7.6,
+    "imdbRating": 7.4,
     "rottenTomatoesScore": 83,
     "matchScore": 91,
     "synopsis": "Three police officers go on the run after accidentally running over a young boy.",
@@ -4449,16 +4689,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Joju George",
       "Nimisha Sajayan"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "CHekzSiZhsY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Thriller masterclass directed by Martin Prakkat.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Thriller masterclass directed by Martin Prakkat.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Thriller masterpiece directed by Martin Prakkat.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Thriller masterpiece directed by Martin Prakkat.",
     "similarTags": [
       "Martin",
       "Drama",
@@ -4470,6 +4708,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹125 Crore",
+    "revenue": "₹316 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -4487,7 +4729,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Fantasy",
       "Sci-Fi"
     ],
-    "imdbRating": 7.7,
+    "imdbRating": 7.5,
     "rottenTomatoesScore": 84,
     "matchScore": 92,
     "synopsis": "A youngster gets involved in local gang wars over pig farming business in Angamaly.",
@@ -4496,16 +4738,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Antony Varghese",
       "Reshma Rajan"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fIE3lAGuSS16rP24MSErSo8Y4gq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "pyWuOrFRKQE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Crime masterclass directed by Lijo Jose Pellissery.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Crime masterclass directed by Lijo Jose Pellissery.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Crime masterpiece directed by Lijo Jose Pellissery.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Crime masterpiece directed by Lijo Jose Pellissery.",
     "similarTags": [
       "Lijo",
       "Comedy",
@@ -4517,6 +4757,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹98 Crore",
+    "revenue": "₹427 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -4533,7 +4777,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "History",
       "Sports"
     ],
-    "imdbRating": 7.8,
+    "imdbRating": 7.6,
     "rottenTomatoesScore": 85,
     "matchScore": 93,
     "synopsis": "A son struggles to host a grand funeral for his deceased father in a coastal village.",
@@ -4542,16 +4786,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Chemban Vinod Jose",
       "Dileesh Pothan"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by Lijo Jose Pellissery.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by Lijo Jose Pellissery.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Lijo Jose Pellissery.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Lijo Jose Pellissery.",
     "similarTags": [
       "Lijo",
       "Comedy",
@@ -4563,6 +4805,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹74 Crore",
+    "revenue": "₹153 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -4580,7 +4826,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Horror",
       "Superhero"
     ],
-    "imdbRating": 7.9,
+    "imdbRating": 7.7,
     "rottenTomatoesScore": 86,
     "matchScore": 94,
     "synopsis": "A young musician fights to win a band competition to marry his landlord's daughter.",
@@ -4589,16 +4835,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Fahadh Faasil",
       "Indrajith Sukumaran"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "xU47nhruN-k",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Musical masterclass directed by Lijo Jose Pellissery.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Musical masterclass directed by Lijo Jose Pellissery.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Musical masterpiece directed by Lijo Jose Pellissery.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Musical masterpiece directed by Lijo Jose Pellissery.",
     "similarTags": [
       "Lijo",
       "Comedy",
@@ -4610,6 +4855,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹62 Crore",
+    "revenue": "₹337 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -4627,7 +4876,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mystery",
       "Suspense"
     ],
-    "imdbRating": 8,
+    "imdbRating": 7.8,
     "rottenTomatoesScore": 87,
     "matchScore": 95,
     "synopsis": "A spoof action comedy involving drug deals and diamond smuggling in Goa.",
@@ -4636,16 +4885,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Prithviraj Sukumaran",
       "Indrajith Sukumaran"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3931w362g1vRPwTaxtgLR7Yjtyx.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "pyWuOrFRKQE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Comedy masterclass directed by Lijo Jose Pellissery.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Comedy masterclass directed by Lijo Jose Pellissery.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Lijo Jose Pellissery.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Lijo Jose Pellissery.",
     "similarTags": [
       "Lijo",
       "Action",
@@ -4657,6 +4904,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹42 Crore",
+    "revenue": "₹241 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -4673,7 +4924,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Drama",
       "Musical"
     ],
-    "imdbRating": 8.1,
+    "imdbRating": 7.9,
     "rottenTomatoesScore": 88,
     "matchScore": 96,
     "synopsis": "A mysterious NRI travels to a village seeking revenge against his wife's killer.",
@@ -4682,16 +4933,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mammootty",
       "Grace Antony"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f89U3wzZu0j7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "8hP9D6kZseM",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Thriller masterclass directed by Nisam Basheer.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Thriller masterclass directed by Nisam Basheer.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Thriller masterpiece directed by Nisam Basheer.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Thriller masterpiece directed by Nisam Basheer.",
     "similarTags": [
       "Nisam",
       "Mystery",
@@ -4703,6 +4952,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹76 Crore",
+    "revenue": "₹67 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -4720,7 +4973,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Romance",
       "War"
     ],
-    "imdbRating": 8.2,
+    "imdbRating": 8,
     "rottenTomatoesScore": 89,
     "matchScore": 97,
     "synopsis": "A team of police officers travel across India to catch a group of ruthless murderers.",
@@ -4729,16 +4982,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mammootty",
       "Rony David"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9gk7adHYeCmqgl0wSy646V05g2e.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "xU47nhruN-k",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Action masterclass directed by Roby Varghese Raj.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Action masterclass directed by Roby Varghese Raj.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Action masterpiece directed by Roby Varghese Raj.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Action masterpiece directed by Roby Varghese Raj.",
     "similarTags": [
       "Roby",
       "Crime",
@@ -4750,6 +5001,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹86 Crore",
+    "revenue": "₹191 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -4767,7 +5022,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sci-Fi",
       "Western"
     ],
-    "imdbRating": 8.3,
+    "imdbRating": 8.1,
     "rottenTomatoesScore": 90,
     "matchScore": 98,
     "synopsis": "A psychiatrist investigates mysterious occurrences in a haunted ancestral home.",
@@ -4777,16 +5032,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suresh Gopi",
       "Shobana"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1509248961158-e54f6934749c?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yR714H9tOCa2YCh0kTCe9zfwR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "nfK6UgLra7w",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Horror masterclass directed by Fazil.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Horror masterclass directed by Fazil.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Horror masterpiece directed by Fazil.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Horror masterpiece directed by Fazil.",
     "similarTags": [
       "Fazil",
       "Mystery",
@@ -4798,6 +5052,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹31 Crore",
+    "revenue": "₹382 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -4814,7 +5072,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sports",
       "Psychological"
     ],
-    "imdbRating": 8.4,
+    "imdbRating": 8.2,
     "rottenTomatoesScore": 91,
     "matchScore": 99,
     "synopsis": "A rebellious youngster turns rogue after facing severe pressure from his schoolmaster father.",
@@ -4823,16 +5081,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mohanlal",
       "Thilakan"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/n5A76v92erglVw37B67ouYbqDES.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "zSWdZAZE3Dc",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Action masterclass directed by Bhadran.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Action masterclass directed by Bhadran.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Action masterpiece directed by Bhadran.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Action masterpiece directed by Bhadran.",
     "similarTags": [
       "Bhadran",
       "Drama",
@@ -4844,6 +5100,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹41 Crore",
+    "revenue": "₹424 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -4859,7 +5119,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Superhero",
       "Mystery Thriller"
     ],
-    "imdbRating": 8.5,
+    "imdbRating": 8.3,
     "rottenTomatoesScore": 92,
     "matchScore": 90,
     "synopsis": "A young man's dreams of becoming a police officer are shattered when he saves his father from a gangster.",
@@ -4868,16 +5128,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mohanlal",
       "Thilakan"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pB8BM79ysb2iQZ17Z07r7x66MLg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "O1tGxRRgly8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by Sibi Malayil.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by Sibi Malayil.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Sibi Malayil.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Sibi Malayil.",
     "similarTags": [
       "Sibi",
       "Crime",
@@ -4889,6 +5147,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹109 Crore",
+    "revenue": "₹446 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -4905,7 +5167,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suspense",
       "Cyberpunk"
     ],
-    "imdbRating": 8.6,
+    "imdbRating": 8.4,
     "rottenTomatoesScore": 93,
     "matchScore": 91,
     "synopsis": "A wealthy landlord fights with a rival clan to protect his inheritance.",
@@ -4914,16 +5176,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mohanlal",
       "Napoleon"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pB8BM79ysb2iQZ17Z07r7x66MLg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "2HkjrJ6IK5E",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by I.V. Sasi.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Drama masterclass directed by I.V. Sasi.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by I.V. Sasi.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by I.V. Sasi.",
     "similarTags": [
       "I.V.",
       "Action",
@@ -4935,6 +5195,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹97 Crore",
+    "revenue": "₹182 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -4950,7 +5214,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Thriller",
       "Noir"
     ],
-    "imdbRating": 8.7,
+    "imdbRating": 8.5,
     "rottenTomatoesScore": 94,
     "matchScore": 92,
     "synopsis": "A wealthy landlord leads a double life, falling in love with a bubbly girl and a call girl.",
@@ -4959,16 +5223,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mohanlal",
       "Sumalatha"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/n5A76v92erglVw37B67ouYbqDES.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "bLvqoHBptjg",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Romance masterclass directed by P. Padmarajan.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Romance masterclass directed by P. Padmarajan.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Romance masterpiece directed by P. Padmarajan.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Romance masterpiece directed by P. Padmarajan.",
     "similarTags": [
       "P.",
       "Drama",
@@ -4980,6 +5243,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹110 Crore",
+    "revenue": "₹325 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -4996,7 +5263,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "War",
       "Survival"
     ],
-    "imdbRating": 8.8,
+    "imdbRating": 8.6,
     "rottenTomatoesScore": 95,
     "matchScore": 93,
     "synopsis": "A woman hires a thief to act as her husband to receive inheritance money from her father.",
@@ -5005,16 +5272,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mohanlal",
       "Ranjini"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "O1tGxRRgly8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Comedy masterclass directed by Priyadarshan.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Comedy masterclass directed by Priyadarshan.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Priyadarshan.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Priyadarshan.",
     "similarTags": [
       "Priyadarshan",
       "Romance",
@@ -5026,6 +5291,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹57 Crore",
+    "revenue": "₹392 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -5042,7 +5311,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Western",
       "Space"
     ],
-    "imdbRating": 8.9,
+    "imdbRating": 8.7,
     "rottenTomatoesScore": 96,
     "matchScore": 94,
     "synopsis": "A tourist guide in Ooty helps an illegitimate daughter search for her biological father.",
@@ -5052,16 +5321,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Revathi",
       "Jagathy Sreekumar"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pB8BM79ysb2iQZ17Z07r7x66MLg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "92a7Hj0ijLs",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Comedy masterclass directed by Priyadarshan.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Comedy masterclass directed by Priyadarshan.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Priyadarshan.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Priyadarshan.",
     "similarTags": [
       "Priyadarshan",
       "Romance",
@@ -5073,6 +5340,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹100 Crore",
+    "revenue": "₹147 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -5088,7 +5359,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Psychological",
       "Time Travel"
     ],
-    "imdbRating": 9,
+    "imdbRating": 8.8,
     "rottenTomatoesScore": 97,
     "matchScore": 95,
     "synopsis": "A young man dates three air hostesses at the same time with the help of his roommate.",
@@ -5097,16 +5368,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mohanlal",
       "Mukesh"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f89U3wzZu0j7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "4OiMTOKdKTE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Malayalam cinema. A high-quality Comedy masterclass directed by Priyadarshan.",
-    "whyRecommended": "Regal choice from Malayalam cinema. A high-quality Comedy masterclass directed by Priyadarshan.",
+    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Priyadarshan.",
+    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Priyadarshan.",
     "similarTags": [
       "Priyadarshan",
       "Romance",
@@ -5118,6 +5387,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Malayalam",
     "country": "India",
+    "budget": "₹73 Crore",
+    "revenue": "₹86 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -5135,7 +5408,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Superhero",
       "Mystery Thriller"
     ],
-    "imdbRating": 7.5,
+    "imdbRating": 7.4,
     "rottenTomatoesScore": 80,
     "matchScore": 90,
     "synopsis": "Two friends search for their long-lost companion, recalling their college days of fighting societal pressures.",
@@ -5145,16 +5418,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "R. Madhavan",
       "Sharman Joshi"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Comedy masterclass directed by Rajkumar Hirani.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Comedy masterclass directed by Rajkumar Hirani.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Rajkumar Hirani.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Rajkumar Hirani.",
     "similarTags": [
       "Rajkumar",
       "Drama",
@@ -5166,6 +5438,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹74 Crore",
+    "revenue": "₹297 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -5183,7 +5459,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suspense",
       "Cyberpunk"
     ],
-    "imdbRating": 7.6,
+    "imdbRating": 7.5,
     "rottenTomatoesScore": 81,
     "matchScore": 91,
     "synopsis": "A former wrestler trains his two daughters to become world-class wrestlers despite social taboos.",
@@ -5193,16 +5469,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Fatima Sana Shaikh",
       "Sanya Malhotra"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cRiL9fNl1J8yA694JbUu0uKqJ9y.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Nitesh Tiwari.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Nitesh Tiwari.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Nitesh Tiwari.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Nitesh Tiwari.",
     "similarTags": [
       "Nitesh",
       "Biography",
@@ -5214,6 +5488,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹122 Crore",
+    "revenue": "₹419 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -5230,7 +5508,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Thriller",
       "Noir"
     ],
-    "imdbRating": 7.7,
+    "imdbRating": 7.6,
     "rottenTomatoesScore": 82,
     "matchScore": 92,
     "synopsis": "Villagers in British India bet their future taxes on a game of cricket against their rulers.",
@@ -5239,16 +5517,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Aamir Khan",
       "Gracy Singh"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/y4FfVvL0G1HjX7P6L2U2T4g9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "ByXuk9QqQkk",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Ashutosh Gowariker.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Ashutosh Gowariker.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Ashutosh Gowariker.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Ashutosh Gowariker.",
     "similarTags": [
       "Ashutosh",
       "Sports",
@@ -5260,6 +5536,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹51 Crore",
+    "revenue": "₹298 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -5277,7 +5557,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "War",
       "Survival"
     ],
-    "imdbRating": 7.8,
+    "imdbRating": 7.7,
     "rottenTomatoesScore": 83,
     "matchScore": 93,
     "synopsis": "A retired police officer hires two petty thieves to capture a notorious dacoit who slaughtered his family.",
@@ -5287,16 +5567,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Amitabh Bachchan",
       "Hema Malini"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cRiL9fNl1J8yA694JbUu0uKqJ9y.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "zSWdZAZE3Dc",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Action masterclass directed by Ramesh Sippy.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Action masterclass directed by Ramesh Sippy.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Action masterpiece directed by Ramesh Sippy.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Action masterpiece directed by Ramesh Sippy.",
     "similarTags": [
       "Ramesh",
       "Crime",
@@ -5308,6 +5586,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹117 Crore",
+    "revenue": "₹156 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -5325,7 +5607,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Western",
       "Space"
     ],
-    "imdbRating": 7.9,
+    "imdbRating": 7.8,
     "rottenTomatoesScore": 84,
     "matchScore": 94,
     "synopsis": "A fun-loving youngster tries to win the heart of a girl's conservative family in London and Punjab.",
@@ -5334,16 +5616,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Shah Rukh Khan",
       "Kajol"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f89U3wzZu0j7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "s7EdQ4FqbhY",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Romance masterclass directed by Aditya Chopra.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Romance masterclass directed by Aditya Chopra.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Aditya Chopra.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Aditya Chopra.",
     "similarTags": [
       "Aditya",
       "Drama",
@@ -5355,6 +5636,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹59 Crore",
+    "revenue": "₹428 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -5371,7 +5656,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Psychological",
       "Time Travel"
     ],
-    "imdbRating": 8,
+    "imdbRating": 7.9,
     "rottenTomatoesScore": 85,
     "matchScore": 95,
     "synopsis": "An art teacher helps a dyslexic child discover his inner potential through care and patience.",
@@ -5380,16 +5665,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Darsheel Safary",
       "Aamir Khan"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f89U3wzZu0j7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "s7EdQ4FqbhY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Aamir Khan.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Aamir Khan.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Aamir Khan.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Aamir Khan.",
     "similarTags": [
       "Aamir",
       "Family",
@@ -5401,6 +5684,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹67 Crore",
+    "revenue": "₹420 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -5418,7 +5705,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mystery Thriller",
       "Action"
     ],
-    "imdbRating": 8.1,
+    "imdbRating": 8,
     "rottenTomatoesScore": 86,
     "matchScore": 96,
     "synopsis": "An alien stranded on Earth asks questions about religious dogmas and human behaviors.",
@@ -5427,16 +5714,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Aamir Khan",
       "Anushka Sharma"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "PLl99DfYbY4",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Comedy masterclass directed by Rajkumar Hirani.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Comedy masterclass directed by Rajkumar Hirani.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Rajkumar Hirani.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Rajkumar Hirani.",
     "similarTags": [
       "Rajkumar",
       "Fantasy",
@@ -5448,6 +5733,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹100 Crore",
+    "revenue": "₹91 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -5464,7 +5753,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Cyberpunk",
       "Adventure"
     ],
-    "imdbRating": 8.2,
+    "imdbRating": 8.1,
     "rottenTomatoesScore": 87,
     "matchScore": 97,
     "synopsis": "The real-life biographic story of Bollywood actor Sanjay Dutt, detailing his drug abuse and jail life.",
@@ -5473,16 +5762,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ranbir Kapoor",
       "Vicky Kaushal"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/y4FfVvL0G1HjX7P6L2U2T4g9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "8hP9D6kZseM",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Rajkumar Hirani.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Rajkumar Hirani.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Rajkumar Hirani.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Rajkumar Hirani.",
     "similarTags": [
       "Rajkumar",
       "Biography",
@@ -5494,6 +5781,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹108 Crore",
+    "revenue": "₹445 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -5509,7 +5800,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Noir",
       "Animation"
     ],
-    "imdbRating": 8.3,
+    "imdbRating": 8.2,
     "rottenTomatoesScore": 88,
     "matchScore": 98,
     "synopsis": "An angry surgeon goes down a path of drug abuse after his lover is forced to marry another.",
@@ -5518,16 +5809,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Shahid Kapoor",
       "Kiara Advani"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/y4FfVvL0G1HjX7P6L2U2T4g9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "s7EdQ4FqbhY",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Sandeep Reddy Vanga.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Sandeep Reddy Vanga.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Sandeep Reddy Vanga.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Sandeep Reddy Vanga.",
     "similarTags": [
       "Sandeep",
       "Romance",
@@ -5539,6 +5829,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹119 Crore",
+    "revenue": "₹208 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -5557,7 +5851,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Survival",
       "Anime"
     ],
-    "imdbRating": 8.4,
+    "imdbRating": 8.3,
     "rottenTomatoesScore": 89,
     "matchScore": 99,
     "synopsis": "A blind pianist accidentally witnesses the murder of a former film star.",
@@ -5567,16 +5861,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Tabu",
       "Radhika Apte"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "bLvqoHBptjg",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Thriller masterclass directed by Sriram Raghavan.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Thriller masterclass directed by Sriram Raghavan.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Thriller masterpiece directed by Sriram Raghavan.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Thriller masterpiece directed by Sriram Raghavan.",
     "similarTags": [
       "Sriram",
       "Crime",
@@ -5588,6 +5880,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹74 Crore",
+    "revenue": "₹393 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -5605,7 +5901,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Space",
       "Biography"
     ],
-    "imdbRating": 8.5,
+    "imdbRating": 8.4,
     "rottenTomatoesScore": 90,
     "matchScore": 90,
     "synopsis": "A family builds a temple for a cursed deity of greed, trying to steal his endless gold coin stash.",
@@ -5614,16 +5910,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sohum Shah",
       "Jyoti Malshe"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xZ2V2575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "92a7Hj0ijLs",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Horror masterclass directed by Rahi Anil Barve.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Horror masterclass directed by Rahi Anil Barve.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Horror masterpiece directed by Rahi Anil Barve.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Horror masterpiece directed by Rahi Anil Barve.",
     "similarTags": [
       "Rahi",
       "Fantasy",
@@ -5635,6 +5929,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹32 Crore",
+    "revenue": "₹449 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -5650,7 +5948,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Psychological",
       "Time Travel"
     ],
-    "imdbRating": 8.6,
+    "imdbRating": 8.5,
     "rottenTomatoesScore": 91,
     "matchScore": 91,
     "synopsis": "A Delhi girl goes on her honeymoon to Paris and Amsterdam alone after her fiance cancels the wedding.",
@@ -5659,16 +5957,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Kangana Ranaut",
       "Rajkummar Rao"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ArW2t575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "nfK6UgLra7w",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Comedy masterclass directed by Vikas Bahl.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Comedy masterclass directed by Vikas Bahl.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Vikas Bahl.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Vikas Bahl.",
     "similarTags": [
       "Vikas",
       "Drama",
@@ -5680,6 +5976,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹75 Crore",
+    "revenue": "₹268 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -5697,7 +5997,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Action",
       "Crime"
     ],
-    "imdbRating": 8.7,
+    "imdbRating": 8.6,
     "rottenTomatoesScore": 92,
     "matchScore": 92,
     "synopsis": "A devout Hindu man travels to Pakistan to reunite a mute Muslim girl with her family.",
@@ -5706,16 +6006,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Salman Khan",
       "Harshaali Malhotra"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "ByXuk9QqQkk",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Kabir Khan.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Kabir Khan.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Kabir Khan.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Kabir Khan.",
     "similarTags": [
       "Kabir",
       "Comedy",
@@ -5727,6 +6026,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹75 Crore",
+    "revenue": "₹458 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -5744,7 +6047,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Adventure",
       "Documentary"
     ],
-    "imdbRating": 8.8,
+    "imdbRating": 8.7,
     "rottenTomatoesScore": 93,
     "matchScore": 93,
     "synopsis": "A generational blood feud between mafia clans over coal mine control in Wasseypur.",
@@ -5753,16 +6056,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Manoj Bajpayee",
       "Nawazuddin Siddiqui"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cRiL9fNl1J8yA694JbUu0uKqJ9y.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "CHekzSiZhsY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Crime masterclass directed by Anurag Kashyap.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Crime masterclass directed by Anurag Kashyap.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Crime masterpiece directed by Anurag Kashyap.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Crime masterpiece directed by Anurag Kashyap.",
     "similarTags": [
       "Anurag",
       "Action",
@@ -5774,6 +6075,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹49 Crore",
+    "revenue": "₹352 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -5790,7 +6095,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Noir",
       "Animation"
     ],
-    "imdbRating": 8.9,
+    "imdbRating": 8.8,
     "rottenTomatoesScore": 94,
     "matchScore": 94,
     "synopsis": "Three childhood friends go on a road trip in Spain, facing their deepest fears.",
@@ -5801,16 +6106,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Abhay Deol",
       "Katrina Kaif"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "PLl99DfYbY4",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Zoya Akhtar.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Zoya Akhtar.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Zoya Akhtar.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Zoya Akhtar.",
     "similarTags": [
       "Zoya",
       "Comedy",
@@ -5822,6 +6125,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹80 Crore",
+    "revenue": "₹95 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -5838,7 +6145,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Anime",
       "Family"
     ],
-    "imdbRating": 9,
+    "imdbRating": 8.9,
     "rottenTomatoesScore": 95,
     "matchScore": 95,
     "synopsis": "A deaf-mute boy forms an unlikely bond with an autistic girl in Darjeeling.",
@@ -5848,16 +6155,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Priyanka Chopra",
       "Ileana D'Cruz"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xZ2V2575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "8hP9D6kZseM",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Anurag Basu.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Anurag Basu.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Anurag Basu.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Anurag Basu.",
     "similarTags": [
       "Anurag",
       "Romance",
@@ -5869,6 +6174,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹44 Crore",
+    "revenue": "₹413 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -5886,7 +6195,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Biography",
       "Fantasy"
     ],
-    "imdbRating": 9.1,
+    "imdbRating": 9,
     "rottenTomatoesScore": 96,
     "matchScore": 96,
     "synopsis": "Three college friends face different relationships that test their bond.",
@@ -5896,16 +6205,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Saif Ali Khan",
       "Akshaye Khanna"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "zSWdZAZE3Dc",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Comedy masterclass directed by Farhan Akhtar.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Comedy masterclass directed by Farhan Akhtar.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Farhan Akhtar.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Farhan Akhtar.",
     "similarTags": [
       "Farhan",
       "Romance",
@@ -5917,6 +6225,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹53 Crore",
+    "revenue": "₹100 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -5932,7 +6244,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Time Travel",
       "Comedy"
     ],
-    "imdbRating": 9.2,
+    "imdbRating": 9.1,
     "rottenTomatoesScore": 97,
     "matchScore": 97,
     "synopsis": "A NASA scientist returns to his native village to take his nanny to the US, rediscovering his roots.",
@@ -5941,16 +6253,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Shah Rukh Khan",
       "Gayatri Joshi"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pB8BM79ysb2iQZ17Z07r7x66MLg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "xU47nhruN-k",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Ashutosh Gowariker.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Ashutosh Gowariker.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Ashutosh Gowariker.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Ashutosh Gowariker.",
     "similarTags": [
       "Ashutosh",
       "History",
@@ -5962,6 +6272,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹122 Crore",
+    "revenue": "₹81 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -5978,7 +6292,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Crime",
       "Horror"
     ],
-    "imdbRating": 9.3,
+    "imdbRating": 9.2,
     "rottenTomatoesScore": 80,
     "matchScore": 98,
     "synopsis": "A disgraced former hockey captain attempts to redeem himself by coaching the Indian women's team.",
@@ -5987,16 +6301,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Shah Rukh Khan",
       "Vidya Malvade"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pB8BM79ysb2iQZ17Z07r7x66MLg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "zSWdZAZE3Dc",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Shimit Amin.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Shimit Amin.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Shimit Amin.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Shimit Amin.",
     "similarTags": [
       "Shimit",
       "Sports",
@@ -6008,6 +6320,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹71 Crore",
+    "revenue": "₹240 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -6025,7 +6341,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Documentary",
       "Mystery"
     ],
-    "imdbRating": 9.4,
+    "imdbRating": 9.3,
     "rottenTomatoesScore": 81,
     "matchScore": 99,
     "synopsis": "A small battalion of Indian soldiers protects their post against a large Pakistani army in 1971.",
@@ -6034,16 +6350,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sunny Deol",
       "Suniel Shetty"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/A7sp0uquq3W3J7J3L3P7l9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "Ie6Y_Q5-E0Y",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Action masterclass directed by J.P. Dutta.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Action masterclass directed by J.P. Dutta.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Action masterpiece directed by J.P. Dutta.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Action masterpiece directed by J.P. Dutta.",
     "similarTags": [
       "J.P.",
       "History",
@@ -6055,6 +6369,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹85 Crore",
+    "revenue": "₹414 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -6071,7 +6389,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Animation",
       "Musical"
     ],
-    "imdbRating": 7.5,
+    "imdbRating": 9.4,
     "rottenTomatoesScore": 82,
     "matchScore": 90,
     "synopsis": "The real-life story of Captain Vikram Batra, chronicling his heroics during the Kargil War.",
@@ -6080,16 +6398,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sidharth Malhotra",
       "Kiara Advani"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gEU2QvHOm5tJ7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "pyWuOrFRKQE",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Vishnuvardhan.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Vishnuvardhan.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Vishnuvardhan.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Vishnuvardhan.",
     "similarTags": [
       "Vishnuvardhan",
       "Biography",
@@ -6101,6 +6418,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹122 Crore",
+    "revenue": "₹245 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -6117,7 +6438,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Family",
       "Romance"
     ],
-    "imdbRating": 7.6,
+    "imdbRating": 7.4,
     "rottenTomatoesScore": 83,
     "matchScore": 91,
     "synopsis": "A special forces officer leads a covert operation to destroy terrorist launchpads across the border.",
@@ -6126,16 +6447,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Vicky Kaushal",
       "Yami Gautam"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fIE3lAGuSS16rP24MSErSo8Y4gq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "xU47nhruN-k",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Action masterclass directed by Aditya Dhar.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Action masterclass directed by Aditya Dhar.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Action masterpiece directed by Aditya Dhar.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Action masterpiece directed by Aditya Dhar.",
     "similarTags": [
       "Aditya",
       "Thriller",
@@ -6147,6 +6466,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹54 Crore",
+    "revenue": "₹407 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -6164,7 +6487,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Fantasy",
       "Sci-Fi"
     ],
-    "imdbRating": 7.7,
+    "imdbRating": 7.5,
     "rottenTomatoesScore": 84,
     "matchScore": 92,
     "synopsis": "An eccentric psychiatrist investigates reports of a female ghost inside a royal palace.",
@@ -6173,16 +6496,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Akshay Kumar",
       "Vidya Balan"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1509248961158-e54f6934749c?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gEU2QvHOm5tJ7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "nfK6UgLra7w",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Horror masterclass directed by Priyadarshan.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Horror masterclass directed by Priyadarshan.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Horror masterpiece directed by Priyadarshan.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Horror masterpiece directed by Priyadarshan.",
     "similarTags": [
       "Priyadarshan",
       "Mystery",
@@ -6194,6 +6515,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹67 Crore",
+    "revenue": "₹412 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -6210,7 +6535,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "History",
       "Sports"
     ],
-    "imdbRating": 7.8,
+    "imdbRating": 7.6,
     "rottenTomatoesScore": 85,
     "matchScore": 93,
     "synopsis": "A tailor in Chanderi village falls in love with a girl who might be a ghost that abducts men at night.",
@@ -6219,16 +6544,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Rajkummar Rao",
       "Shraddha Kapoor"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xZ2V2575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "EXeTwQWrcwY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Horror masterclass directed by Amar Kaushik.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Horror masterclass directed by Amar Kaushik.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Horror masterpiece directed by Amar Kaushik.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Horror masterpiece directed by Amar Kaushik.",
     "similarTags": [
       "Amar",
       "Comedy",
@@ -6240,6 +6563,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹54 Crore",
+    "revenue": "₹85 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -6256,7 +6583,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Horror",
       "Superhero"
     ],
-    "imdbRating": 7.9,
+    "imdbRating": 7.7,
     "rottenTomatoesScore": 86,
     "matchScore": 94,
     "synopsis": "Four college dropouts hide in a blind couple's home, pretending to be their grandson.",
@@ -6265,16 +6592,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ajay Devgn",
       "Arshad Warsi"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f89U3wzZu0j7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "PLl99DfYbY4",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Comedy masterclass directed by Rohit Shetty.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Comedy masterclass directed by Rohit Shetty.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Rohit Shetty.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Rohit Shetty.",
     "similarTags": [
       "Rohit",
       "Family",
@@ -6286,6 +6612,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹72 Crore",
+    "revenue": "₹159 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -6302,7 +6632,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mystery",
       "Suspense"
     ],
-    "imdbRating": 8,
+    "imdbRating": 7.8,
     "rottenTomatoesScore": 87,
     "matchScore": 95,
     "synopsis": "Three bachelor roommates try to claim a kidnapper's ransom money after receiving a wrong call.",
@@ -6312,16 +6642,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suniel Shetty",
       "Paresh Rawal"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yR714H9tOCa2YCh0kTCe9zfwR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "O1tGxRRgly8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Comedy masterclass directed by Priyadarshan.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Comedy masterclass directed by Priyadarshan.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Priyadarshan.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Priyadarshan.",
     "similarTags": [
       "Priyadarshan",
       "Crime",
@@ -6333,6 +6661,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹31 Crore",
+    "revenue": "₹290 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -6348,7 +6680,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Musical",
       "Thriller"
     ],
-    "imdbRating": 8.1,
+    "imdbRating": 7.9,
     "rottenTomatoesScore": 88,
     "matchScore": 96,
     "synopsis": "A local gangster pretends to be a doctor to satisfy his father, entering a medical college.",
@@ -6357,16 +6689,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sanjay Dutt",
       "Arshad Warsi"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fIE3lAGuSS16rP24MSErSo8Y4gq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "8hP9D6kZseM",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Comedy masterclass directed by Rajkumar Hirani.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Comedy masterclass directed by Rajkumar Hirani.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Rajkumar Hirani.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Rajkumar Hirani.",
     "similarTags": [
       "Rajkumar",
       "Drama",
@@ -6378,6 +6708,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹88 Crore",
+    "revenue": "₹177 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -6394,7 +6728,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Romance",
       "War"
     ],
-    "imdbRating": 8.2,
+    "imdbRating": 8,
     "rottenTomatoesScore": 89,
     "matchScore": 97,
     "synopsis": "A local gangster starts hallucinating Mahatma Gandhi, using his ideals to resolve problems.",
@@ -6403,16 +6737,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sanjay Dutt",
       "Arshad Warsi"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "s7EdQ4FqbhY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Comedy masterclass directed by Rajkumar Hirani.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Comedy masterclass directed by Rajkumar Hirani.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Rajkumar Hirani.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Rajkumar Hirani.",
     "similarTags": [
       "Rajkumar",
       "Drama",
@@ -6424,6 +6756,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹115 Crore",
+    "revenue": "₹68 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -6441,7 +6777,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sci-Fi",
       "Western"
     ],
-    "imdbRating": 8.3,
+    "imdbRating": 8.1,
     "rottenTomatoesScore": 90,
     "matchScore": 98,
     "synopsis": "A radio broadcaster falls in love with a mysterious woman who is secretly a terrorist.",
@@ -6450,16 +6786,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Shah Rukh Khan",
       "Manisha Koirala"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gEU2QvHOm5tJ7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "92a7Hj0ijLs",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Romance masterclass directed by Mani Ratnam.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Romance masterclass directed by Mani Ratnam.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Mani Ratnam.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Mani Ratnam.",
     "similarTags": [
       "Mani",
       "Drama",
@@ -6471,6 +6806,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹124 Crore",
+    "revenue": "₹77 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -6487,7 +6826,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sports",
       "Psychological"
     ],
-    "imdbRating": 8.4,
+    "imdbRating": 8.2,
     "rottenTomatoesScore": 91,
     "matchScore": 99,
     "synopsis": "A wealthy law graduate spirals into alcoholism after his family forbids him from marrying his love.",
@@ -6497,16 +6836,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Aishwarya Rai",
       "Madhuri Dixit"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gEU2QvHOm5tJ7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Romance masterclass directed by Sanjay Leela Bhansali.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Romance masterclass directed by Sanjay Leela Bhansali.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Sanjay Leela Bhansali.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Sanjay Leela Bhansali.",
     "similarTags": [
       "Sanjay",
       "Drama",
@@ -6518,6 +6855,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹66 Crore",
+    "revenue": "₹245 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -6534,7 +6875,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Superhero",
       "Mystery Thriller"
     ],
-    "imdbRating": 8.5,
+    "imdbRating": 8.3,
     "rottenTomatoesScore": 92,
     "matchScore": 90,
     "synopsis": "An Indian pilot is imprisoned in Pakistan after falling in love with a Pakistani girl.",
@@ -6543,16 +6884,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Shah Rukh Khan",
       "Preity Zinta"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ArW2t575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "s7EdQ4FqbhY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Romance masterclass directed by Sanjay Leela Bhansali.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Romance masterclass directed by Sanjay Leela Bhansali.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Sanjay Leela Bhansali.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Sanjay Leela Bhansali.",
     "similarTags": [
       "Sanjay",
       "Drama",
@@ -6564,6 +6903,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹119 Crore",
+    "revenue": "₹270 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -6581,7 +6924,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suspense",
       "Cyberpunk"
     ],
-    "imdbRating": 8.6,
+    "imdbRating": 8.4,
     "rottenTomatoesScore": 93,
     "matchScore": 91,
     "synopsis": "A terminally ill man attempts to match his lover with her best friend before he passes away.",
@@ -6591,16 +6934,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Preity Zinta",
       "Saif Ali Khan"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gEU2QvHOm5tJ7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "vKQi3bBA1y8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Romance masterclass directed by Nikkhil Advani.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Romance masterclass directed by Nikkhil Advani.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Nikkhil Advani.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Nikkhil Advani.",
     "similarTags": [
       "Nikkhil",
       "Comedy",
@@ -6612,6 +6953,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹23 Crore",
+    "revenue": "₹398 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -6627,7 +6972,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Thriller",
       "Noir"
     ],
-    "imdbRating": 8.7,
+    "imdbRating": 8.5,
     "rottenTomatoesScore": 94,
     "matchScore": 92,
     "synopsis": "A young girl reads her mother's letters, planning to reunite her widowed father with his college friend.",
@@ -6637,16 +6982,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Kajol",
       "Rani Mukerji"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9gk7adHYeCmqgl0wSy646V05g2e.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "Ie6Y_Q5-E0Y",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Romance masterclass directed by Karan Johar.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Romance masterclass directed by Karan Johar.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Karan Johar.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Karan Johar.",
     "similarTags": [
       "Karan",
       "Drama",
@@ -6658,6 +7002,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹131 Crore",
+    "revenue": "₹358 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -6673,7 +7021,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "War",
       "Survival"
     ],
-    "imdbRating": 8.8,
+    "imdbRating": 8.6,
     "rottenTomatoesScore": 95,
     "matchScore": 93,
     "synopsis": "A wealthy son is disowned by his father after marrying a middle-class girl, moving to London.",
@@ -6683,16 +7031,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Shah Rukh Khan",
       "Kajol"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yR714H9tOCa2YCh0kTCe9zfwR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "Ie6Y_Q5-E0Y",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Karan Johar.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Karan Johar.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Karan Johar.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Karan Johar.",
     "similarTags": [
       "Karan",
       "Family",
@@ -6704,6 +7050,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹109 Crore",
+    "revenue": "₹92 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -6720,7 +7070,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Western",
       "Space"
     ],
-    "imdbRating": 8.9,
+    "imdbRating": 8.7,
     "rottenTomatoesScore": 96,
     "matchScore": 94,
     "synopsis": "An autistic man travels across America to meet the President and clear his name after a tragedy.",
@@ -6729,16 +7079,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Shah Rukh Khan",
       "Kajol"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/n5A76v92erglVw37B67ouYbqDES.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "ol67qo3P4w8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Karan Johar.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Drama masterclass directed by Karan Johar.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Karan Johar.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Karan Johar.",
     "similarTags": [
       "Karan",
       "Romance",
@@ -6750,6 +7098,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹80 Crore",
+    "revenue": "₹369 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -6766,7 +7118,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Psychological",
       "Time Travel"
     ],
-    "imdbRating": 9,
+    "imdbRating": 8.8,
     "rottenTomatoesScore": 97,
     "matchScore": 95,
     "synopsis": "The tragic love story between Maratha General Bajirao and Mastani, a warrior princess.",
@@ -6775,16 +7127,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ranveer Singh",
       "Deepika Padukone"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "EXeTwQWrcwY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Hindi cinema. A high-quality Romance masterclass directed by Sanjay Leela Bhansali.",
-    "whyRecommended": "Regal choice from Hindi cinema. A high-quality Romance masterclass directed by Sanjay Leela Bhansali.",
+    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Sanjay Leela Bhansali.",
+    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Sanjay Leela Bhansali.",
     "similarTags": [
       "Sanjay",
       "History",
@@ -6796,6 +7146,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Hindi",
     "country": "India",
+    "budget": "₹118 Crore",
+    "revenue": "₹109 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -6812,7 +7166,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Superhero",
       "Mystery Thriller"
     ],
-    "imdbRating": 7.5,
+    "imdbRating": 7.4,
     "rottenTomatoesScore": 80,
     "matchScore": 90,
     "synopsis": "A thief steals corporate secrets through dream-sharing technology, tasked with planting an idea.",
@@ -6821,16 +7175,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Leonardo DiCaprio",
       "Joseph Gordon-Levitt"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/9gk7adHYeCmqgl0wSy646V05g2e.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "8hP9D6kZseM",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Sci-Fi masterclass directed by Christopher Nolan.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Sci-Fi masterclass directed by Christopher Nolan.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Christopher Nolan.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Christopher Nolan.",
     "similarTags": [
       "Christopher",
       "Action",
@@ -6842,6 +7195,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$160 Million",
+    "revenue": "$836 Million",
+    "tagline": "Your mind is the scene of the crime.",
+    "productionCompany": "Warner Bros. Pictures",
+    "awards": [
+      "4 Academy Awards (Best Cinematography, Sound Editing, Sound Mixing, Visual Effects)"
+    ],
     "reviews": []
   },
   {
@@ -6859,7 +7219,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suspense",
       "Cyberpunk"
     ],
-    "imdbRating": 7.6,
+    "imdbRating": 7.5,
     "rottenTomatoesScore": 81,
     "matchScore": 91,
     "synopsis": "A team of explorers travel through a wormhole in space to find a new home for humanity.",
@@ -6868,16 +7228,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Matthew McConaughey",
       "Anne Hathaway"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/gEU2QvHOm5tJ7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "zSWdZAZE3Dc",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Sci-Fi masterclass directed by Christopher Nolan.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Sci-Fi masterclass directed by Christopher Nolan.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Christopher Nolan.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Christopher Nolan.",
     "similarTags": [
       "Christopher",
       "Drama",
@@ -6889,6 +7247,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$165 Million",
+    "revenue": "$701 Million",
+    "tagline": "Mankind was born on Earth. It was never meant to die here.",
+    "productionCompany": "Paramount Pictures / Legendary Pictures",
+    "awards": [
+      "Academy Award for Best Visual Effects"
+    ],
     "reviews": []
   },
   {
@@ -6906,7 +7271,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Thriller",
       "Noir"
     ],
-    "imdbRating": 7.7,
+    "imdbRating": 7.6,
     "rottenTomatoesScore": 82,
     "matchScore": 92,
     "synopsis": "Batman faces a psychotic anarchist known as the Joker, who wants to plunge Gotham into chaos.",
@@ -6915,16 +7280,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Christian Bale",
       "Heath Ledger"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "EXeTwQWrcwY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Action masterclass directed by Christopher Nolan.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Action masterclass directed by Christopher Nolan.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Action masterpiece directed by Christopher Nolan.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Action masterpiece directed by Christopher Nolan.",
     "similarTags": [
       "Christopher",
       "Crime",
@@ -6936,6 +7299,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$185 Million",
+    "revenue": "$1.006 Billion",
+    "tagline": "Why So Serious?",
+    "productionCompany": "Warner Bros. Pictures / Legendary Pictures",
+    "awards": [
+      "Academy Award for Best Supporting Actor (Heath Ledger)"
+    ],
     "reviews": []
   },
   {
@@ -6953,7 +7323,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "War",
       "Survival"
     ],
-    "imdbRating": 7.8,
+    "imdbRating": 7.7,
     "rottenTomatoesScore": 83,
     "matchScore": 93,
     "synopsis": "The lives of mob hitmen, a boxer, and a gangster's wife intertwine in stories of violence.",
@@ -6962,16 +7332,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "John Travolta",
       "Uma Thurman"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/fIE3lAGuSS16rP24MSErSo8Y4gq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/gb4B15L4xYk5w5J5P7l9.jpg",
+    "trailerId": "s7EdQ4FqbhY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Crime masterclass directed by Quentin Tarantino.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Crime masterclass directed by Quentin Tarantino.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Crime masterpiece directed by Quentin Tarantino.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Crime masterpiece directed by Quentin Tarantino.",
     "similarTags": [
       "Quentin",
       "Drama",
@@ -6983,6 +7351,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$8 Million",
+    "revenue": "$213 Million",
+    "tagline": "Just because you are a character doesn't mean that you have character.",
+    "productionCompany": "Miramax Films",
+    "awards": [
+      "Academy Award for Best Original Screenplay"
+    ],
     "reviews": []
   },
   {
@@ -6999,7 +7374,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Western",
       "Space"
     ],
-    "imdbRating": 7.9,
+    "imdbRating": 7.8,
     "rottenTomatoesScore": 84,
     "matchScore": 94,
     "synopsis": "Two imprisoned men bond over a number of years, finding solace and redemption.",
@@ -7008,16 +7383,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Tim Robbins",
       "Morgan Freeman"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/gb4B15L4xYk5w5J5P7l9.jpg",
+    "trailerId": "PLl99DfYbY4",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Drama masterclass directed by Frank Darabont.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Drama masterclass directed by Frank Darabont.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Drama masterpiece directed by Frank Darabont.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Drama masterpiece directed by Frank Darabont.",
     "similarTags": [
       "Frank",
       "Crime",
@@ -7029,6 +7403,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$25 Million",
+    "revenue": "$73 Million",
+    "tagline": "Fear can hold you prisoner. Hope can set you free.",
+    "productionCompany": "Castle Rock Entertainment",
+    "awards": [
+      "7 Oscar Nominations"
+    ],
     "reviews": []
   },
   {
@@ -7044,7 +7425,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sports",
       "Time Travel"
     ],
-    "imdbRating": 8,
+    "imdbRating": 7.9,
     "rottenTomatoesScore": 85,
     "matchScore": 95,
     "synopsis": "An insomniac office worker forms an underground fight club with a soap salesman.",
@@ -7053,16 +7434,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Brad Pitt",
       "Edward Norton"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/pB8BM79ysb2iQZ17Z07r7x66MLg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/gb4B15L4xYk5w5J5P7l9.jpg",
+    "trailerId": "O1tGxRRgly8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Drama masterclass directed by David Fincher.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Drama masterclass directed by David Fincher.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Drama masterpiece directed by David Fincher.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Drama masterpiece directed by David Fincher.",
     "similarTags": [
       "David",
       "Psychological",
@@ -7074,6 +7453,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$63 Million",
+    "revenue": "$101 Million",
+    "tagline": "Mischief. Mayhem. Soap.",
+    "productionCompany": "20th Century Fox",
+    "awards": [
+      "Oscar Nominated for Best Sound Editing"
+    ],
     "reviews": []
   },
   {
@@ -7091,7 +7477,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mystery Thriller",
       "Action"
     ],
-    "imdbRating": 8.1,
+    "imdbRating": 8,
     "rottenTomatoesScore": 86,
     "matchScore": 96,
     "synopsis": "The presidencies of Kennedy and Johnson, Vietnam, and history unfold from the perspective of an Alabama man.",
@@ -7100,16 +7486,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Tom Hanks",
       "Robin Wright"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/arw2t575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/gb4B15L4xYk5w5J5P7l9.jpg",
+    "trailerId": "bLvqoHBptjg",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Drama masterclass directed by Robert Zemeckis.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Drama masterclass directed by Robert Zemeckis.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Drama masterpiece directed by Robert Zemeckis.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Drama masterpiece directed by Robert Zemeckis.",
     "similarTags": [
       "Robert",
       "Comedy",
@@ -7121,6 +7505,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$55 Million",
+    "revenue": "$678 Million",
+    "tagline": "Life is like a box of chocolates... You never know what you're gonna get.",
+    "productionCompany": "Paramount Pictures",
+    "awards": [
+      "6 Academy Awards including Best Picture"
+    ],
     "reviews": []
   },
   {
@@ -7137,7 +7528,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suspense",
       "Adventure"
     ],
-    "imdbRating": 8.2,
+    "imdbRating": 8.1,
     "rottenTomatoesScore": 87,
     "matchScore": 97,
     "synopsis": "A computer hacker learns from mysterious rebels about the true nature of his reality.",
@@ -7146,16 +7537,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Keanu Reeves",
       "Laurence Fishburne"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/f89U3wzZu0j7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/gb4B15L4xYk5w5J5P7l9.jpg",
+    "trailerId": "vKQi3bBA1y8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Sci-Fi masterclass directed by Lana Wachowski.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Sci-Fi masterclass directed by Lana Wachowski.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Lana Wachowski.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Lana Wachowski.",
     "similarTags": [
       "Lana",
       "Action",
@@ -7167,6 +7556,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$63 Million",
+    "revenue": "$463 Million",
+    "tagline": "Welcome to the real world.",
+    "productionCompany": "Warner Bros. Pictures",
+    "awards": [
+      "4 Academy Awards for Editing, Sound and Visual Effects"
+    ],
     "reviews": []
   },
   {
@@ -7183,7 +7579,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Noir",
       "Animation"
     ],
-    "imdbRating": 8.3,
+    "imdbRating": 8.2,
     "rottenTomatoesScore": 88,
     "matchScore": 98,
     "synopsis": "A former Roman general sets out to exact vengeance against the corrupt emperor who murdered his family.",
@@ -7192,16 +7588,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Russell Crowe",
       "Joaquin Phoenix"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/ty8wq0uKqJ9y.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/gb4B15L4xYk5w5J5P7l9.jpg",
+    "trailerId": "ol67qo3P4w8",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Action masterclass directed by Ridley Scott.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Action masterclass directed by Ridley Scott.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Action masterpiece directed by Ridley Scott.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Action masterpiece directed by Ridley Scott.",
     "similarTags": [
       "Ridley",
       "Drama",
@@ -7213,6 +7608,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$103 Million",
+    "revenue": "$503 Million",
+    "tagline": "What we do in life echoes in eternity.",
+    "productionCompany": "Universal Pictures / DreamWorks Pictures",
+    "awards": [
+      "5 Academy Awards including Best Picture"
+    ],
     "reviews": []
   },
   {
@@ -7229,7 +7631,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Survival",
       "Anime"
     ],
-    "imdbRating": 8.4,
+    "imdbRating": 8.3,
     "rottenTomatoesScore": 89,
     "matchScore": 99,
     "synopsis": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the R.M.S. Titanic.",
@@ -7238,16 +7640,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Leonardo DiCaprio",
       "Kate Winslet"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/9gk7adHYeCmqgl0wSy646V05g2e.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/gb4B15L4xYk5w5J5P7l9.jpg",
+    "trailerId": "CHekzSiZhsY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Romance masterclass directed by James Cameron.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Romance masterclass directed by James Cameron.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Romance masterpiece directed by James Cameron.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Romance masterpiece directed by James Cameron.",
     "similarTags": [
       "James",
       "Drama",
@@ -7259,6 +7659,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$200 Million",
+    "revenue": "$2.264 Billion",
+    "tagline": "Nothing on Earth could come between them.",
+    "productionCompany": "Paramount Pictures / 20th Century Fox",
+    "awards": [
+      "11 Academy Awards including Best Picture"
+    ],
     "reviews": []
   },
   {
@@ -7275,7 +7682,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Space",
       "Biography"
     ],
-    "imdbRating": 8.5,
+    "imdbRating": 8.4,
     "rottenTomatoesScore": 90,
     "matchScore": 90,
     "synopsis": "A paraplegic marine dispatched to the moon Pandora becomes torn between following orders and protecting it.",
@@ -7284,16 +7691,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sam Worthington",
       "Zoe Saldana"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Sci-Fi masterclass directed by James Cameron.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Sci-Fi masterclass directed by James Cameron.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by James Cameron.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by James Cameron.",
     "similarTags": [
       "James",
       "Action",
@@ -7305,6 +7710,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$110 Million",
+    "revenue": "$775 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Paramount Pictures",
     "reviews": []
   },
   {
@@ -7321,7 +7730,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Time Travel",
       "Comedy"
     ],
-    "imdbRating": 8.6,
+    "imdbRating": 8.5,
     "rottenTomatoesScore": 91,
     "matchScore": 91,
     "synopsis": "A pragmatic paleontologist visiting a theme park is tasked with protecting kids after a power failure.",
@@ -7330,16 +7739,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sam Neill",
       "Laura Dern"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/y4FfVvL0G1HjX7P6L2U2T4g9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "CHekzSiZhsY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Adventure masterclass directed by Steven Spielberg.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Adventure masterclass directed by Steven Spielberg.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Adventure masterpiece directed by Steven Spielberg.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Adventure masterpiece directed by Steven Spielberg.",
     "similarTags": [
       "Steven",
       "Sci-Fi",
@@ -7351,6 +7758,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$165 Million",
+    "revenue": "$804 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Universal Pictures",
     "reviews": []
   },
   {
@@ -7368,7 +7779,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Action",
       "Crime"
     ],
-    "imdbRating": 8.7,
+    "imdbRating": 8.6,
     "rottenTomatoesScore": 92,
     "matchScore": 92,
     "synopsis": "Luke Skywalker joins forces with a Jedi Knight to save the galaxy from the Empire's battle station.",
@@ -7377,16 +7788,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mark Hamill",
       "Harrison Ford"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9gk7adHYeCmqgl0wSy646V05g2e.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "EXeTwQWrcwY",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Sci-Fi masterclass directed by George Lucas.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Sci-Fi masterclass directed by George Lucas.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by George Lucas.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by George Lucas.",
     "similarTags": [
       "George",
       "Adventure",
@@ -7398,6 +7808,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$138 Million",
+    "revenue": "$145 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Paramount Pictures",
     "reviews": []
   },
   {
@@ -7413,7 +7827,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Cyberpunk",
       "Documentary"
     ],
-    "imdbRating": 8.8,
+    "imdbRating": 8.7,
     "rottenTomatoesScore": 93,
     "matchScore": 93,
     "synopsis": "A meek Hobbit from the Shire sets out to destroy a powerful ring in Mount Doom.",
@@ -7422,16 +7836,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Elijah Wood",
       "Ian McKellen"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3931w362g1vRPwTaxtgLR7Yjtyx.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "Ie6Y_Q5-E0Y",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Fantasy masterclass directed by Peter Jackson.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Fantasy masterclass directed by Peter Jackson.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Fantasy masterpiece directed by Peter Jackson.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Fantasy masterpiece directed by Peter Jackson.",
     "similarTags": [
       "Peter",
       "Adventure",
@@ -7443,6 +7855,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "New Zealand",
+    "budget": "$109 Million",
+    "revenue": "$326 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Universal Studios",
     "reviews": []
   },
   {
@@ -7460,7 +7876,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Animation",
       "Drama"
     ],
-    "imdbRating": 8.9,
+    "imdbRating": 8.8,
     "rottenTomatoesScore": 94,
     "matchScore": 94,
     "synopsis": "The Avengers assemble once more to reverse Thanos's actions and restore balance to the universe.",
@@ -7469,16 +7885,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Robert Downey Jr.",
       "Chris Evans"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/n5A76v92erglVw37B67ouYbqDES.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "O1tGxRRgly8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Action masterclass directed by Anthony Russo.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Action masterclass directed by Anthony Russo.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Action masterpiece directed by Anthony Russo.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Action masterpiece directed by Anthony Russo.",
     "similarTags": [
       "Anthony",
       "Adventure",
@@ -7490,6 +7904,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$49 Million",
+    "revenue": "$760 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Neon",
     "reviews": []
   },
   {
@@ -7507,7 +7925,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Anime",
       "Family"
     ],
-    "imdbRating": 9,
+    "imdbRating": 8.9,
     "rottenTomatoesScore": 95,
     "matchScore": 95,
     "synopsis": "A wealthy industrialist builds a high-tech armored suit to escape captivity, becoming a hero.",
@@ -7516,16 +7934,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Robert Downey Jr.",
       "Gwyneth Paltrow"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/A7sp0uquq3W3J7J3L3P7l9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "Ie6Y_Q5-E0Y",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Action masterclass directed by Jon Favreau.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Action masterclass directed by Jon Favreau.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Action masterpiece directed by Jon Favreau.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Action masterpiece directed by Jon Favreau.",
     "similarTags": [
       "Jon",
       "Sci-Fi",
@@ -7537,6 +7953,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$57 Million",
+    "revenue": "$160 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Universal Studios",
     "reviews": []
   },
   {
@@ -7555,7 +7975,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Biography",
       "Fantasy"
     ],
-    "imdbRating": 9.1,
+    "imdbRating": 9,
     "rottenTomatoesScore": 96,
     "matchScore": 96,
     "synopsis": "Teen Miles Morales becomes the new Spider-Man, joining forces with spiders from other dimensions.",
@@ -7564,16 +7984,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Shameik Moore",
       "Jake Johnson"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pB8BM79ysb2iQZ17Z07r7x66MLg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "CHekzSiZhsY",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Animation masterclass directed by Bob Persichetti.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Animation masterclass directed by Bob Persichetti.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Animation masterpiece directed by Bob Persichetti.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Animation masterpiece directed by Bob Persichetti.",
     "similarTags": [
       "Bob",
       "Family",
@@ -7585,6 +8004,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$89 Million",
+    "revenue": "$658 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Universal Pictures",
     "reviews": []
   },
   {
@@ -7601,7 +8024,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Comedy",
       "History"
     ],
-    "imdbRating": 9.2,
+    "imdbRating": 9.1,
     "rottenTomatoesScore": 97,
     "matchScore": 97,
     "synopsis": "A promising young drummer enrolls at a cut-throat music conservatory where he is pushed to his limits.",
@@ -7610,16 +8033,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Miles Teller",
       "J.K. Simmons"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "zSWdZAZE3Dc",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Drama masterclass directed by Damien Chazelle.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Drama masterclass directed by Damien Chazelle.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Drama masterpiece directed by Damien Chazelle.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Drama masterpiece directed by Damien Chazelle.",
     "similarTags": [
       "Damien",
       "Musical",
@@ -7631,6 +8052,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$57 Million",
+    "revenue": "$576 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Neon",
     "reviews": []
   },
   {
@@ -7648,7 +8073,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Crime",
       "Horror"
     ],
-    "imdbRating": 9.3,
+    "imdbRating": 9.2,
     "rottenTomatoesScore": 80,
     "matchScore": 98,
     "synopsis": "A jazz pianist and an aspiring actress fall in love while attempting to reconcile their dreams.",
@@ -7657,16 +8082,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ryan Gosling",
       "Emma Stone"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fIE3lAGuSS16rP24MSErSo8Y4gq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "8hP9D6kZseM",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Romance masterclass directed by Damien Chazelle.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Romance masterclass directed by Damien Chazelle.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Romance masterpiece directed by Damien Chazelle.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Romance masterpiece directed by Damien Chazelle.",
     "similarTags": [
       "Damien",
       "Musical",
@@ -7678,6 +8101,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$176 Million",
+    "revenue": "$215 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Paramount Pictures",
     "reviews": []
   },
   {
@@ -7694,7 +8121,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Documentary",
       "Mystery"
     ],
-    "imdbRating": 9.4,
+    "imdbRating": 9.3,
     "rottenTomatoesScore": 81,
     "matchScore": 99,
     "synopsis": "A U.S. Marshal investigates the disappearance of a murderer from a hospital for the criminally insane.",
@@ -7703,16 +8130,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Leonardo DiCaprio",
       "Mark Ruffalo"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "2HkjrJ6IK5E",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Psychological masterclass directed by Martin Scorsese.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Psychological masterclass directed by Martin Scorsese.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Psychological masterpiece directed by Martin Scorsese.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Psychological masterpiece directed by Martin Scorsese.",
     "similarTags": [
       "Martin",
       "Mystery Thriller",
@@ -7724,6 +8149,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$83 Million",
+    "revenue": "$634 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Universal Pictures",
     "reviews": []
   },
   {
@@ -7739,7 +8168,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Animation",
       "Musical"
     ],
-    "imdbRating": 7.5,
+    "imdbRating": 9.4,
     "rottenTomatoesScore": 82,
     "matchScore": 90,
     "synopsis": "The aging patriarch of an organized crime dynasty transfers control of his empire to his reluctant son.",
@@ -7748,16 +8177,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Marlon Brando",
       "Al Pacino"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gEU2QvHOm5tJ7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Crime masterclass directed by Francis Ford Coppola.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Crime masterclass directed by Francis Ford Coppola.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Crime masterpiece directed by Francis Ford Coppola.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Crime masterpiece directed by Francis Ford Coppola.",
     "similarTags": [
       "Francis",
       "Drama",
@@ -7769,6 +8197,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$146 Million",
+    "revenue": "$665 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "A24",
     "reviews": []
   },
   {
@@ -7786,7 +8218,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Family",
       "Romance"
     ],
-    "imdbRating": 7.6,
+    "imdbRating": 7.4,
     "rottenTomatoesScore": 83,
     "matchScore": 91,
     "synopsis": "The story of Henry Hill and his life in the mob, relationship with his wife and partners.",
@@ -7795,16 +8227,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Robert De Niro",
       "Ray Liotta"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fIE3lAGuSS16rP24MSErSo8Y4gq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "CHekzSiZhsY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Crime masterclass directed by Martin Scorsese.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Crime masterclass directed by Martin Scorsese.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Crime masterpiece directed by Martin Scorsese.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Crime masterpiece directed by Martin Scorsese.",
     "similarTags": [
       "Martin",
       "Drama",
@@ -7816,6 +8246,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$45 Million",
+    "revenue": "$628 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Neon",
     "reviews": []
   },
   {
@@ -7833,7 +8267,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Fantasy",
       "Sci-Fi"
     ],
-    "imdbRating": 7.7,
+    "imdbRating": 7.5,
     "rottenTomatoesScore": 84,
     "matchScore": 92,
     "synopsis": "Two detectives hunt a serial killer who uses the seven deadly sins as his motives.",
@@ -7842,16 +8276,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Brad Pitt",
       "Morgan Freeman"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/A7sp0uquq3W3J7J3L3P7l9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "2HkjrJ6IK5E",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Crime masterclass directed by David Fincher.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Crime masterclass directed by David Fincher.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Crime masterpiece directed by David Fincher.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Crime masterpiece directed by David Fincher.",
     "similarTags": [
       "David",
       "Thriller",
@@ -7863,6 +8295,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$131 Million",
+    "revenue": "$700 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Universal Studios",
     "reviews": []
   },
   {
@@ -7880,7 +8316,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "History",
       "Sports"
     ],
-    "imdbRating": 7.8,
+    "imdbRating": 7.6,
     "rottenTomatoesScore": 85,
     "matchScore": 93,
     "synopsis": "An FBI cadet receives help from an incarcerated cannibal killer to catch another serial killer.",
@@ -7889,16 +8325,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Jodie Foster",
       "Anthony Hopkins"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/n5A76v92erglVw37B67ouYbqDES.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "PLl99DfYbY4",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Thriller masterclass directed by Jonathan Demme.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Thriller masterclass directed by Jonathan Demme.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Thriller masterpiece directed by Jonathan Demme.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Thriller masterpiece directed by Jonathan Demme.",
     "similarTags": [
       "Jonathan",
       "Crime",
@@ -7910,6 +8344,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$92 Million",
+    "revenue": "$621 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "A24",
     "reviews": []
   },
   {
@@ -7926,7 +8364,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Horror",
       "Superhero"
     ],
-    "imdbRating": 7.9,
+    "imdbRating": 7.7,
     "rottenTomatoesScore": 86,
     "matchScore": 94,
     "synopsis": "An undercover cop and a mole in the police attempt to identify each other inside a Boston gang.",
@@ -7935,16 +8373,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Leonardo DiCaprio",
       "Matt Damon"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fIE3lAGuSS16rP24MSErSo8Y4gq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "vKQi3bBA1y8",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Crime masterclass directed by Martin Scorsese.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Crime masterclass directed by Martin Scorsese.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Crime masterpiece directed by Martin Scorsese.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Crime masterpiece directed by Martin Scorsese.",
     "similarTags": [
       "Martin",
       "Thriller",
@@ -7956,6 +8393,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$119 Million",
+    "revenue": "$720 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Neon",
     "reviews": []
   },
   {
@@ -7973,7 +8414,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mystery",
       "Suspense"
     ],
-    "imdbRating": 8,
+    "imdbRating": 7.8,
     "rottenTomatoesScore": 87,
     "matchScore": 95,
     "synopsis": "Two magicians engage in a battle to create the ultimate illusion, sacrificing everything.",
@@ -7982,16 +8423,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Christian Bale",
       "Hugh Jackman"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pB8BM79ysb2iQZ17Z07r7x66MLg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "vKQi3bBA1y8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Psychological masterclass directed by Christopher Nolan.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Psychological masterclass directed by Christopher Nolan.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Psychological masterpiece directed by Christopher Nolan.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Psychological masterpiece directed by Christopher Nolan.",
     "similarTags": [
       "Christopher",
       "Mystery Thriller",
@@ -8003,6 +8442,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "UK",
+    "budget": "$135 Million",
+    "revenue": "$608 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Universal Pictures",
     "reviews": []
   },
   {
@@ -8019,7 +8462,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Musical",
       "Thriller"
     ],
-    "imdbRating": 8.1,
+    "imdbRating": 7.9,
     "rottenTomatoesScore": 88,
     "matchScore": 96,
     "synopsis": "A man with short-term memory loss uses polaroid photos and tattoos to track down his wife's killer.",
@@ -8028,16 +8471,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Guy Pearce",
       "Carrie-Anne Moss"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f89U3wzZu0j7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "pyWuOrFRKQE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Psychological masterclass directed by Christopher Nolan.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Psychological masterclass directed by Christopher Nolan.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Psychological masterpiece directed by Christopher Nolan.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Psychological masterpiece directed by Christopher Nolan.",
     "similarTags": [
       "Christopher",
       "Mystery Thriller",
@@ -8049,6 +8490,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$142 Million",
+    "revenue": "$263 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Paramount Pictures",
     "reviews": []
   },
   {
@@ -8066,7 +8511,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Romance",
       "War"
     ],
-    "imdbRating": 8.2,
+    "imdbRating": 8,
     "rottenTomatoesScore": 89,
     "matchScore": 97,
     "synopsis": "A linguist works with the military to communicate with alien lifeforms who landed on Earth.",
@@ -8075,16 +8520,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Amy Adams",
       "Jeremy Renner"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vT3P1lqq7aW6g1sP3x7U6ZgL94H.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "bLvqoHBptjg",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Sci-Fi masterclass directed by Denis Villeneuve.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Sci-Fi masterclass directed by Denis Villeneuve.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Denis Villeneuve.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Denis Villeneuve.",
     "similarTags": [
       "Denis",
       "Mystery",
@@ -8096,6 +8539,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$162 Million",
+    "revenue": "$681 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Warner Bros. Pictures",
     "reviews": []
   },
   {
@@ -8111,7 +8558,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Fantasy",
       "Western"
     ],
-    "imdbRating": 8.3,
+    "imdbRating": 8.1,
     "rottenTomatoesScore": 90,
     "matchScore": 98,
     "synopsis": "A noble family gets drawn into a war for control of the galaxy's most valuable asset on Arrakis.",
@@ -8120,16 +8567,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Timothée Chalamet",
       "Rebecca Ferguson"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3931w362g1vRPwTaxtgLR7Yjtyx.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "CHekzSiZhsY",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Sci-Fi masterclass directed by Denis Villeneuve.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Sci-Fi masterclass directed by Denis Villeneuve.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Denis Villeneuve.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Denis Villeneuve.",
     "similarTags": [
       "Denis",
       "Adventure",
@@ -8141,6 +8587,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$61 Million",
+    "revenue": "$246 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Neon",
     "reviews": []
   },
   {
@@ -8158,7 +8608,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sports",
       "Psychological"
     ],
-    "imdbRating": 8.4,
+    "imdbRating": 8.2,
     "rottenTomatoesScore": 91,
     "matchScore": 99,
     "synopsis": "A new blade runner uncovers a secret that could plunge what is left of society into chaos.",
@@ -8167,16 +8617,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ryan Gosling",
       "Harrison Ford"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "ol67qo3P4w8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Sci-Fi masterclass directed by Denis Villeneuve.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Sci-Fi masterclass directed by Denis Villeneuve.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Denis Villeneuve.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Denis Villeneuve.",
     "similarTags": [
       "Denis",
       "Noir",
@@ -8188,6 +8636,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$144 Million",
+    "revenue": "$183 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Paramount Pictures",
     "reviews": []
   },
   {
@@ -8204,7 +8656,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Superhero",
       "Mystery Thriller"
     ],
-    "imdbRating": 8.5,
+    "imdbRating": 8.3,
     "rottenTomatoesScore": 92,
     "matchScore": 90,
     "synopsis": "A young African-American visits his white girlfriend's parents for the weekend, discovering a dark secret.",
@@ -8213,16 +8665,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Daniel Kaluuya",
       "Allison Williams"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "4OiMTOKdKTE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Horror masterclass directed by Jordan Peele.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Horror masterclass directed by Jordan Peele.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Horror masterpiece directed by Jordan Peele.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Horror masterpiece directed by Jordan Peele.",
     "similarTags": [
       "Jordan",
       "Mystery",
@@ -8234,6 +8684,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$185 Million",
+    "revenue": "$178 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Neon",
     "reviews": []
   },
   {
@@ -8250,7 +8704,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suspense",
       "Cyberpunk"
     ],
-    "imdbRating": 8.6,
+    "imdbRating": 8.4,
     "rottenTomatoesScore": 93,
     "matchScore": 91,
     "synopsis": "A grieving family is haunted by disturbing occurrences after the death of their grandmother.",
@@ -8259,16 +8713,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Toni Collette",
       "Alex Wolff"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/A7sp0uquq3W3J7J3L3P7l9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "pyWuOrFRKQE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Horror masterclass directed by Ari Aster.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Horror masterclass directed by Ari Aster.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Horror masterpiece directed by Ari Aster.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Horror masterpiece directed by Ari Aster.",
     "similarTags": [
       "Ari",
       "Psychological",
@@ -8280,6 +8732,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$126 Million",
+    "revenue": "$215 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Paramount Pictures",
     "reviews": []
   },
   {
@@ -8296,7 +8752,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Thriller",
       "Noir"
     ],
-    "imdbRating": 8.7,
+    "imdbRating": 8.5,
     "rottenTomatoesScore": 94,
     "matchScore": 92,
     "synopsis": "Paranormal investigators Warren work to help a family terrorized by a dark presence.",
@@ -8305,16 +8761,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Vera Farmiga",
       "Patrick Wilson"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/y4FfVvL0G1HjX7P6L2U2T4g9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "Ie6Y_Q5-E0Y",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Horror masterclass directed by James Wan.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Horror masterclass directed by James Wan.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Horror masterpiece directed by James Wan.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Horror masterpiece directed by James Wan.",
     "similarTags": [
       "James",
       "Suspense",
@@ -8326,6 +8781,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$45 Million",
+    "revenue": "$340 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Universal Studios",
     "reviews": []
   },
   {
@@ -8342,7 +8801,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "War",
       "Survival"
     ],
-    "imdbRating": 8.8,
+    "imdbRating": 8.6,
     "rottenTomatoesScore": 95,
     "matchScore": 93,
     "synopsis": "Paddington picks up odd jobs to buy a pop-up book for his aunt, only for it to be stolen.",
@@ -8351,16 +8810,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ben Whishaw",
       "Hugh Grant"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f89U3wzZu0j7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "O1tGxRRgly8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Family masterclass directed by Paul King.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Family masterclass directed by Paul King.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Family masterpiece directed by Paul King.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Family masterpiece directed by Paul King.",
     "similarTags": [
       "Paul",
       "Comedy",
@@ -8372,6 +8829,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "UK",
+    "budget": "$169 Million",
+    "revenue": "$578 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Universal Pictures",
     "reviews": []
   },
   {
@@ -8389,7 +8850,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Western",
       "Space"
     ],
-    "imdbRating": 8.9,
+    "imdbRating": 8.7,
     "rottenTomatoesScore": 96,
     "matchScore": 94,
     "synopsis": "A cowboy doll is threatened when a new spaceman figure becomes top toy in a boy's room.",
@@ -8398,16 +8859,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Tom Hanks",
       "Tim Allen"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "92a7Hj0ijLs",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Family masterclass directed by John Lasseter.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Family masterclass directed by John Lasseter.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Family masterpiece directed by John Lasseter.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Family masterpiece directed by John Lasseter.",
     "similarTags": [
       "John",
       "Animation",
@@ -8419,6 +8878,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$168 Million",
+    "revenue": "$527 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "A24",
     "reviews": []
   },
   {
@@ -8436,7 +8899,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Psychological",
       "Time Travel"
     ],
-    "imdbRating": 9,
+    "imdbRating": 8.8,
     "rottenTomatoesScore": 97,
     "matchScore": 95,
     "synopsis": "A timid clownfish travels across the ocean to Sydney to rescue his captured son.",
@@ -8445,16 +8908,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Albert Brooks",
       "Ellen DeGeneres"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "ByXuk9QqQkk",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from English cinema. A high-quality Family masterclass directed by Andrew Stanton.",
-    "whyRecommended": "Regal choice from English cinema. A high-quality Family masterclass directed by Andrew Stanton.",
+    "aiReasoning": "Top recommendation from English cinema. A high-quality Family masterpiece directed by Andrew Stanton.",
+    "whyRecommended": "Top recommendation from English cinema. A high-quality Family masterpiece directed by Andrew Stanton.",
     "similarTags": [
       "Andrew",
       "Animation",
@@ -8466,6 +8927,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "English",
     "country": "USA",
+    "budget": "$171 Million",
+    "revenue": "$530 Million",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Universal Studios",
     "reviews": []
   },
   {
@@ -8483,7 +8948,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Superhero",
       "Mystery Thriller"
     ],
-    "imdbRating": 7.5,
+    "imdbRating": 7.4,
     "rottenTomatoesScore": 80,
     "matchScore": 90,
     "synopsis": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
@@ -8492,16 +8957,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Song Kang-ho",
       "Lee Sun-kyun"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Bong Joon Ho.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Bong Joon Ho.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Bong Joon Ho.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Bong Joon Ho.",
     "similarTags": [
       "Bong",
       "Thriller",
@@ -8513,6 +8977,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "$11 Million",
+    "revenue": "$263 Million",
+    "tagline": "Act like you own the place.",
+    "productionCompany": "CJ Entertainment",
+    "awards": [
+      "4 Academy Awards including Best Picture"
+    ],
     "reviews": []
   },
   {
@@ -8530,7 +9001,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suspense",
       "Cyberpunk"
     ],
-    "imdbRating": 7.6,
+    "imdbRating": 7.5,
     "rottenTomatoesScore": 81,
     "matchScore": 91,
     "synopsis": "After being kidnapped and imprisoned for fifteen years, a man is released, only to find that he must find his captor in five days.",
@@ -8539,16 +9010,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Choi Min-sik",
       "Yoo Ji-tae"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/2HkjrJ6IK5E.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/gb4B15L4xYk5w5J5P7l9.jpg",
+    "trailerId": "2HkjrJ6IK5E",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Action masterclass directed by Park Chan-wook.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Action masterclass directed by Park Chan-wook.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Park Chan-wook.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Park Chan-wook.",
     "similarTags": [
       "Park",
       "Thriller",
@@ -8560,6 +9029,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "$3 Million",
+    "revenue": "$15 Million",
+    "tagline": "Laugh, and the world laughs with you. Weep, and you weep alone.",
+    "productionCompany": "Show East",
+    "awards": [
+      "Grand Prix at the 2004 Cannes Film Festival"
+    ],
     "reviews": []
   },
   {
@@ -8576,7 +9052,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Thriller",
       "Noir"
     ],
-    "imdbRating": 7.7,
+    "imdbRating": 7.6,
     "rottenTomatoesScore": 82,
     "matchScore": 92,
     "synopsis": "Two local detectives in a small province attempt to solve a series of brutal murders targeting women in the 1980s.",
@@ -8585,16 +9061,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Song Kang-ho",
       "Kim Sang-kyung"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/memories.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/gb4B15L4xYk5w5J5P7l9.jpg",
+    "trailerId": "0n_H-Jt9xP8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Crime masterclass directed by Bong Joon Ho.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Crime masterclass directed by Bong Joon Ho.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Crime masterpiece directed by Bong Joon Ho.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Crime masterpiece directed by Bong Joon Ho.",
     "similarTags": [
       "Bong",
       "Drama",
@@ -8606,6 +9080,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "$2.8 Million",
+    "revenue": "$17 Million",
+    "tagline": "In the summer of 1986, a small province of South Korea changed forever.",
+    "productionCompany": "CJ Entertainment",
+    "awards": [
+      "Grand Bell Award for Best Actor"
+    ],
     "reviews": []
   },
   {
@@ -8622,7 +9103,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "War",
       "Survival"
     ],
-    "imdbRating": 7.8,
+    "imdbRating": 7.7,
     "rottenTomatoesScore": 83,
     "matchScore": 93,
     "synopsis": "A woman is hired as a handmaiden to a Japanese heiress, but secretly plots to defraud her of her inheritance.",
@@ -8631,16 +9112,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Kim Min-hee",
       "Kim Tae-ri"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/handmaiden.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/gb4B15L4xYk5w5J5P7l9.jpg",
+    "trailerId": "Ie6Y_Q5-E0Y",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Romance masterclass directed by Park Chan-wook.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Romance masterclass directed by Park Chan-wook.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Romance masterpiece directed by Park Chan-wook.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Romance masterpiece directed by Park Chan-wook.",
     "similarTags": [
       "Park",
       "Drama",
@@ -8652,6 +9131,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "$8 Million",
+    "revenue": "$38 Million",
+    "tagline": "A story of deception and desire.",
+    "productionCompany": "Moho Film",
+    "awards": [
+      "BAFTA Award for Best Film Not in the English Language"
+    ],
     "reviews": []
   },
   {
@@ -8669,7 +9155,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Western",
       "Space"
     ],
-    "imdbRating": 7.9,
+    "imdbRating": 7.8,
     "rottenTomatoesScore": 84,
     "matchScore": 94,
     "synopsis": "A father and daughter get trapped in a high-speed train during a sudden zombie outbreak in South Korea.",
@@ -8678,16 +9164,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Gong Yoo",
       "Ma Dong-seok"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/pyWuOrFRKQE.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/gb4B15L4xYk5w5J5P7l9.jpg",
+    "trailerId": "pyWuOrFRKQE",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Action masterclass directed by Yeon Sang-ho.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Action masterclass directed by Yeon Sang-ho.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Yeon Sang-ho.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Yeon Sang-ho.",
     "similarTags": [
       "Yeon",
       "Horror",
@@ -8699,6 +9184,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "$8.5 Million",
+    "revenue": "$98 Million",
+    "tagline": "Life or death, the final destination is Busan.",
+    "productionCompany": "Redpeter Films",
+    "awards": [
+      "Blue Dragon Film Award for Technical Excellence"
+    ],
     "reviews": []
   },
   {
@@ -8716,7 +9208,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Psychological",
       "Time Travel"
     ],
-    "imdbRating": 8,
+    "imdbRating": 7.9,
     "rottenTomatoesScore": 85,
     "matchScore": 95,
     "synopsis": "A secret agent hunts down a sadistic serial killer who murdered his pregnant fiancee, starting a game of cat and mouse.",
@@ -8725,16 +9217,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Lee Byung-hun",
       "Choi Min-sik"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3931w362g1vRPwTaxtgLR7Yjtyx.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "PLl99DfYbY4",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Action masterclass directed by Kim Jee-woon.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Action masterclass directed by Kim Jee-woon.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Kim Jee-woon.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Kim Jee-woon.",
     "similarTags": [
       "Kim",
       "Thriller",
@@ -8746,6 +9236,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹100 Crore",
+    "revenue": "₹365 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -8763,7 +9257,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mystery Thriller",
       "Action"
     ],
-    "imdbRating": 8.1,
+    "imdbRating": 8,
     "rottenTomatoesScore": 86,
     "matchScore": 96,
     "synopsis": "A delivery boy runs into a childhood classmate who asks him to look after her cat while she travels to Africa.",
@@ -8772,16 +9266,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Yoo Ah-in",
       "Steven Yeun"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "92a7Hj0ijLs",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Lee Chang-dong.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Lee Chang-dong.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Lee Chang-dong.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Lee Chang-dong.",
     "similarTags": [
       "Lee",
       "Mystery",
@@ -8793,6 +9285,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹108 Crore",
+    "revenue": "₹147 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -8809,7 +9305,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suspense",
       "Adventure"
     ],
-    "imdbRating": 8.2,
+    "imdbRating": 8.1,
     "rottenTomatoesScore": 87,
     "matchScore": 97,
     "synopsis": "A rebellion erupts aboard a perpetually moving train carrying the last survivors of humanity in a frozen world.",
@@ -8818,16 +9314,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Chris Evans",
       "Song Kang-ho"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cRiL9fNl1J8yA694JbUu0uKqJ9y.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "PLl99DfYbY4",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Sci-Fi masterclass directed by Bong Joon Ho.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Sci-Fi masterclass directed by Bong Joon Ho.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Sci-Fi masterpiece directed by Bong Joon Ho.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Sci-Fi masterpiece directed by Bong Joon Ho.",
     "similarTags": [
       "Bong",
       "Action",
@@ -8839,6 +9333,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹104 Crore",
+    "revenue": "₹217 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -8856,7 +9354,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Noir",
       "Animation"
     ],
-    "imdbRating": 8.3,
+    "imdbRating": 8.2,
     "rottenTomatoesScore": 88,
     "matchScore": 98,
     "synopsis": "A mysterious disease spreads in a small mountain village after a Japanese stranger arrives.",
@@ -8865,16 +9363,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Kwak Do-won",
       "Hwang Jung-min"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "Ie6Y_Q5-E0Y",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Horror masterclass directed by Na Hong-jin.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Horror masterclass directed by Na Hong-jin.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Horror masterpiece directed by Na Hong-jin.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Horror masterpiece directed by Na Hong-jin.",
     "similarTags": [
       "Na",
       "Mystery",
@@ -8886,6 +9383,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹97 Crore",
+    "revenue": "₹288 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -8901,7 +9402,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Survival",
       "Anime"
     ],
-    "imdbRating": 8.4,
+    "imdbRating": 8.3,
     "rottenTomatoesScore": 89,
     "matchScore": 99,
     "synopsis": "A Korean-American family moves to an Arkansas farm in search of their own American Dream.",
@@ -8910,16 +9411,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Steven Yeun",
       "Han Ye-ri"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/A7sp0uquq3W3J7J3L3P7l9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "Ie6Y_Q5-E0Y",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Lee Isaac Chung.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Lee Isaac Chung.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Lee Isaac Chung.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Lee Isaac Chung.",
     "similarTags": [
       "Lee",
       "Family",
@@ -8931,6 +9430,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "USA",
+    "budget": "₹81 Crore",
+    "revenue": "₹416 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -8947,7 +9450,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Space",
       "Biography"
     ],
-    "imdbRating": 8.5,
+    "imdbRating": 8.4,
     "rottenTomatoesScore": 90,
     "matchScore": 90,
     "synopsis": "A taxi driver in Seoul reluctantly drives a German reporter to Gwangju during a historic uprising.",
@@ -8956,16 +9459,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Song Kang-ho",
       "Thomas Kretschmann"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yR714H9tOCa2YCh0kTCe9zfwR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "ol67qo3P4w8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Jang Hoon.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Jang Hoon.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Jang Hoon.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Jang Hoon.",
     "similarTags": [
       "Jang",
       "History",
@@ -8977,6 +9478,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹100 Crore",
+    "revenue": "₹459 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -8994,25 +9499,23 @@ export const MOVIES_DATABASE: Movie[] = [
       "Time Travel",
       "Comedy"
     ],
-    "imdbRating": 8.6,
+    "imdbRating": 8.5,
     "rottenTomatoesScore": 91,
     "matchScore": 91,
-    "synopsis": "A disgraced detective turned pimp hunts a serial killer before a missing girl is murdered.",
+    "synopsis": "A badass detective tries to maintain peace while two rival Chinese-Korean gangs wage war.",
     "director": "Na Hong-jin",
     "cast": [
       "Kim Yoon-seok",
       "Ha Jung-woo"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/A7sp0uquq3W3J7J3L3P7l9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "PLl99DfYbY4",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Action masterclass directed by Na Hong-jin.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Action masterclass directed by Na Hong-jin.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Na Hong-jin.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Na Hong-jin.",
     "similarTags": [
       "Na",
       "Crime",
@@ -9024,6 +9527,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹68 Crore",
+    "revenue": "₹197 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -9040,7 +9547,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Action",
       "Crime"
     ],
-    "imdbRating": 8.7,
+    "imdbRating": 8.6,
     "rottenTomatoesScore": 92,
     "matchScore": 92,
     "synopsis": "A priest volunteering for a vaccine trial gets infected, becoming a vampire craving blood.",
@@ -9049,16 +9556,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Song Kang-ho",
       "Kim Ok-bin"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xZ2V2575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "nfK6UgLra7w",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Horror masterclass directed by Park Chan-wook.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Horror masterclass directed by Park Chan-wook.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Horror masterpiece directed by Park Chan-wook.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Horror masterpiece directed by Park Chan-wook.",
     "similarTags": [
       "Park",
       "Romance",
@@ -9070,6 +9576,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹71 Crore",
+    "revenue": "₹232 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -9086,7 +9596,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Adventure",
       "Documentary"
     ],
-    "imdbRating": 8.8,
+    "imdbRating": 8.7,
     "rottenTomatoesScore": 93,
     "matchScore": 93,
     "synopsis": "A mother desperately searches for the real killer of a schoolgirl to clear her disabled son's name.",
@@ -9095,16 +9605,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Kim Hye-ja",
       "Won Bin"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xZ2V2575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "92a7Hj0ijLs",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Bong Joon Ho.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Bong Joon Ho.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Bong Joon Ho.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Bong Joon Ho.",
     "similarTags": [
       "Bong",
       "Mystery",
@@ -9116,6 +9624,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹28 Crore",
+    "revenue": "₹179 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -9132,7 +9644,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Noir",
       "Animation"
     ],
-    "imdbRating": 8.9,
+    "imdbRating": 8.8,
     "rottenTomatoesScore": 94,
     "matchScore": 94,
     "synopsis": "A neutral investigator looks into a shootout at the border between North and South Korea.",
@@ -9141,16 +9653,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Song Kang-ho",
       "Lee Byung-hun"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/y4FfVvL0G1HjX7P6L2U2T4g9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "PLl99DfYbY4",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Park Chan-wook.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Park Chan-wook.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Park Chan-wook.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Park Chan-wook.",
     "similarTags": [
       "Park",
       "Mystery",
@@ -9162,6 +9672,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹64 Crore",
+    "revenue": "₹265 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -9179,7 +9693,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Anime",
       "Family"
     ],
-    "imdbRating": 9,
+    "imdbRating": 8.9,
     "rottenTomatoesScore": 95,
     "matchScore": 95,
     "synopsis": "A deaf-mute worker kidnaps his former boss's daughter to pay for his sister's kidney transplant.",
@@ -9188,16 +9702,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Song Kang-ho",
       "Shin Ha-kyun"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gEU2QvHOm5tJ7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "PLl99DfYbY4",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Park Chan-wook.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Park Chan-wook.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Park Chan-wook.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Park Chan-wook.",
     "similarTags": [
       "Park",
       "Crime",
@@ -9209,6 +9721,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹132 Crore",
+    "revenue": "₹429 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -9226,7 +9742,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Biography",
       "Fantasy"
     ],
-    "imdbRating": 9.1,
+    "imdbRating": 9,
     "rottenTomatoesScore": 96,
     "matchScore": 96,
     "synopsis": "A woman framed for kidnapping and murder is released from prison, planning an elaborate revenge.",
@@ -9235,16 +9751,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Lee Young-ae",
       "Choi Min-sik"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pB8BM79ysb2iQZ17Z07r7x66MLg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "zSWdZAZE3Dc",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Park Chan-wook.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Park Chan-wook.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Park Chan-wook.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Park Chan-wook.",
     "similarTags": [
       "Park",
       "Crime",
@@ -9256,6 +9771,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹25 Crore",
+    "revenue": "₹256 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -9272,7 +9791,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Time Travel",
       "History"
     ],
-    "imdbRating": 9.2,
+    "imdbRating": 9.1,
     "rottenTomatoesScore": 97,
     "matchScore": 97,
     "synopsis": "A mentally disabled man is falsely accused of murder, making friends with cellmates who smuggle his daughter.",
@@ -9281,16 +9800,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ryu Seung-ryong",
       "Kal So-won"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gEU2QvHOm5tJ7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "O1tGxRRgly8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Lee Hwan-kyung.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Lee Hwan-kyung.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Lee Hwan-kyung.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Lee Hwan-kyung.",
     "similarTags": [
       "Lee",
       "Comedy",
@@ -9302,6 +9819,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹21 Crore",
+    "revenue": "₹180 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -9317,7 +9838,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mystery Thriller",
       "Horror"
     ],
-    "imdbRating": 9.3,
+    "imdbRating": 9.2,
     "rottenTomatoesScore": 80,
     "matchScore": 98,
     "synopsis": "Narcotics detectives start a fried chicken restaurant as a cover for wiretapping, only to become famous.",
@@ -9326,16 +9847,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ryu Seung-ryong",
       "Lee Hanee"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f89U3wzZu0j7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Comedy masterclass directed by Lee Byeong-heon.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Comedy masterclass directed by Lee Byeong-heon.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Comedy masterpiece directed by Lee Byeong-heon.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Comedy masterpiece directed by Lee Byeong-heon.",
     "similarTags": [
       "Lee",
       "Action",
@@ -9347,6 +9866,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹126 Crore",
+    "revenue": "₹237 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -9364,7 +9887,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Documentary",
       "Mystery"
     ],
-    "imdbRating": 9.4,
+    "imdbRating": 9.3,
     "rottenTomatoesScore": 81,
     "matchScore": 99,
     "synopsis": "A deceased firefighter travels through the afterlife trials with three guardians to reincarnate.",
@@ -9373,16 +9896,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ha Jung-woo",
       "Cha Tae-hyun"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yR714H9tOCa2YCh0kTCe9zfwR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "92a7Hj0ijLs",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Fantasy masterclass directed by Kim Yong-hwa.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Fantasy masterclass directed by Kim Yong-hwa.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Fantasy masterpiece directed by Kim Yong-hwa.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Fantasy masterpiece directed by Kim Yong-hwa.",
     "similarTags": [
       "Kim",
       "Drama",
@@ -9394,6 +9915,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹104 Crore",
+    "revenue": "₹223 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -9411,7 +9936,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Drama",
       "Musical"
     ],
-    "imdbRating": 7.5,
+    "imdbRating": 9.4,
     "rottenTomatoesScore": 82,
     "matchScore": 90,
     "synopsis": "A monster emerges from Seoul's Han River, kidnapping a man's daughter, forcing his family to rescue her.",
@@ -9420,16 +9945,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Song Kang-ho",
       "Byun Hee-bong"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cRiL9fNl1J8yA694JbUu0uKqJ9y.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "0n_H-Jt9xP8",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Horror masterclass directed by Bong Joon Ho.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Horror masterclass directed by Bong Joon Ho.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Horror masterpiece directed by Bong Joon Ho.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Horror masterpiece directed by Bong Joon Ho.",
     "similarTags": [
       "Bong",
       "Action",
@@ -9441,6 +9965,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹32 Crore",
+    "revenue": "₹297 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -9458,7 +9986,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Family",
       "Romance"
     ],
-    "imdbRating": 7.6,
+    "imdbRating": 7.4,
     "rottenTomatoesScore": 83,
     "matchScore": 91,
     "synopsis": "A young girl risks everything to prevent a powerful multinational company from kidnapping her superpig.",
@@ -9467,16 +9995,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ahn Seo-hyun",
       "Tilda Swinton"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "92a7Hj0ijLs",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Adventure masterclass directed by Bong Joon Ho.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Adventure masterclass directed by Bong Joon Ho.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Adventure masterpiece directed by Bong Joon Ho.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Adventure masterpiece directed by Bong Joon Ho.",
     "similarTags": [
       "Bong",
       "Drama",
@@ -9488,6 +10014,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹20 Crore",
+    "revenue": "₹85 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -9504,7 +10034,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Fantasy",
       "Sci-Fi"
     ],
-    "imdbRating": 7.7,
+    "imdbRating": 7.5,
     "rottenTomatoesScore": 84,
     "matchScore": 92,
     "synopsis": "A newly appointed teacher at a deaf school uncovers a network of abuse targeting disabled children.",
@@ -9513,16 +10043,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Gong Yoo",
       "Jung Yu-mi"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fIE3lAGuSS16rP24MSErSo8Y4gq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "ol67qo3P4w8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Hwang Dong-hyuk.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Hwang Dong-hyuk.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Hwang Dong-hyuk.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Hwang Dong-hyuk.",
     "similarTags": [
       "Hwang",
       "Crime",
@@ -9534,6 +10062,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹20 Crore",
+    "revenue": "₹373 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -9551,7 +10083,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "History",
       "Sports"
     ],
-    "imdbRating": 7.8,
+    "imdbRating": 7.6,
     "rottenTomatoesScore": 85,
     "matchScore": 93,
     "synopsis": "An undercover police officer inside Korea's biggest corporate gang faces conflict after the boss dies.",
@@ -9560,16 +10092,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Lee Jung-jae",
       "Choi Min-sik"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "s7EdQ4FqbhY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Crime masterclass directed by Park Hoon-jung.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Crime masterclass directed by Park Hoon-jung.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Crime masterpiece directed by Park Hoon-jung.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Crime masterpiece directed by Park Hoon-jung.",
     "similarTags": [
       "Park",
       "Drama",
@@ -9581,6 +10111,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹83 Crore",
+    "revenue": "₹196 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -9596,7 +10130,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Horror",
       "Superhero"
     ],
-    "imdbRating": 7.9,
+    "imdbRating": 7.7,
     "rottenTomatoesScore": 86,
     "matchScore": 94,
     "synopsis": "A quiet pawnshop keeper goes on a rampage to rescue a young girl who is kidnapped by drug dealers.",
@@ -9605,16 +10139,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Won Bin",
       "Kim Sae-ron"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f89U3wzZu0j7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "xU47nhruN-k",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Action masterclass directed by Lee Jeong-beom.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Action masterclass directed by Lee Jeong-beom.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Lee Jeong-beom.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Lee Jeong-beom.",
     "similarTags": [
       "Lee",
       "Thriller",
@@ -9626,6 +10159,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹106 Crore",
+    "revenue": "₹257 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -9643,7 +10180,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mystery",
       "Suspense"
     ],
-    "imdbRating": 8,
+    "imdbRating": 7.8,
     "rottenTomatoesScore": 87,
     "matchScore": 95,
     "synopsis": "A failed salaryman gets stranded on a small island in Seoul's Han River, communicating with a shut-in girl.",
@@ -9652,16 +10189,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Jung Jae-young",
       "Jung Ryeo-won"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yR714H9tOCa2YCh0kTCe9zfwR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "s7EdQ4FqbhY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Comedy masterclass directed by Lee Hae-jun.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Comedy masterclass directed by Lee Hae-jun.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Comedy masterpiece directed by Lee Hae-jun.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Comedy masterpiece directed by Lee Hae-jun.",
     "similarTags": [
       "Lee",
       "Romance",
@@ -9673,6 +10208,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹135 Crore",
+    "revenue": "₹248 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -9690,7 +10229,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Musical",
       "Thriller"
     ],
-    "imdbRating": 8.1,
+    "imdbRating": 7.9,
     "rottenTomatoesScore": 88,
     "matchScore": 96,
     "synopsis": "Two police academy cadets witness a kidnapping and decide to investigate the case themselves.",
@@ -9699,16 +10238,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Park Seo-joon",
       "Kang Ha-neul"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3931w362g1vRPwTaxtgLR7Yjtyx.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "0n_H-Jt9xP8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Comedy masterclass directed by Kim Joo-hwan.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Comedy masterclass directed by Kim Joo-hwan.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Comedy masterpiece directed by Kim Joo-hwan.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Comedy masterpiece directed by Kim Joo-hwan.",
     "similarTags": [
       "Kim",
       "Action",
@@ -9720,6 +10257,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹28 Crore",
+    "revenue": "₹147 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -9736,7 +10277,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Romance",
       "War"
     ],
-    "imdbRating": 8.2,
+    "imdbRating": 8,
     "rottenTomatoesScore": 89,
     "matchScore": 97,
     "synopsis": "A middle-aged woman attempts to reunite her high school group of friends after learning one is dying.",
@@ -9745,16 +10286,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Shim Eun-kyung",
       "Kang So-ra"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pB8BM79ysb2iQZ17Z07r7x66MLg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "ol67qo3P4w8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Kang Hyeong-cheol.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Kang Hyeong-cheol.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Kang Hyeong-cheol.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Kang Hyeong-cheol.",
     "similarTags": [
       "Kang",
       "Comedy",
@@ -9766,6 +10305,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹64 Crore",
+    "revenue": "₹63 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -9782,7 +10325,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sci-Fi",
       "Western"
     ],
-    "imdbRating": 8.3,
+    "imdbRating": 8.1,
     "rottenTomatoesScore": 90,
     "matchScore": 98,
     "synopsis": "A badass detective tries to maintain peace while two rival Chinese-Korean gangs wage war.",
@@ -9791,16 +10334,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ma Dong-seok",
       "Yoon Kye-sang"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/n5A76v92erglVw37B67ouYbqDES.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "s7EdQ4FqbhY",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Action masterclass directed by Kang Yoon-sung.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Action masterclass directed by Kang Yoon-sung.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Kang Yoon-sung.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Kang Yoon-sung.",
     "similarTags": [
       "Kang",
       "Crime",
@@ -9812,6 +10354,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹55 Crore",
+    "revenue": "₹198 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -9829,7 +10375,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sports",
       "Psychological"
     ],
-    "imdbRating": 8.4,
+    "imdbRating": 8.2,
     "rottenTomatoesScore": 91,
     "matchScore": 99,
     "synopsis": "A former navy commander receives a call from a terrorist who has planted sound-responsive bombs in the city.",
@@ -9838,16 +10384,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Kim Rae-won",
       "Lee Jong-suk"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "zSWdZAZE3Dc",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Action masterclass directed by Hwang In-ho.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Action masterclass directed by Hwang In-ho.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Hwang In-ho.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Hwang In-ho.",
     "similarTags": [
       "Hwang",
       "Thriller",
@@ -9859,6 +10403,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹101 Crore",
+    "revenue": "₹356 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -9876,7 +10424,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Superhero",
       "Mystery Thriller"
     ],
-    "imdbRating": 8.5,
+    "imdbRating": 8.3,
     "rottenTomatoesScore": 92,
     "matchScore": 90,
     "synopsis": "After an earthquake destroys Seoul, survivors gather at the only apartment building left standing.",
@@ -9885,16 +10433,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Lee Byung-hun",
       "Park Seo-joon"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "0n_H-Jt9xP8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Um Tae-hwa.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Um Tae-hwa.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Um Tae-hwa.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Um Tae-hwa.",
     "similarTags": [
       "Um",
       "Thriller",
@@ -9906,6 +10452,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹100 Crore",
+    "revenue": "₹291 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -9922,7 +10472,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suspense",
       "Cyberpunk"
     ],
-    "imdbRating": 8.6,
+    "imdbRating": 8.4,
     "rottenTomatoesScore": 93,
     "matchScore": 91,
     "synopsis": "A wealthy family in LA hires shamans to exhume their ancestor's grave to cure a mysterious disease.",
@@ -9931,16 +10481,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Choi Min-sik",
       "Kim Go-eun"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9gk7adHYeCmqgl0wSy646V05g2e.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "2HkjrJ6IK5E",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Horror masterclass directed by Jang Jae-hyun.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Horror masterclass directed by Jang Jae-hyun.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Horror masterpiece directed by Jang Jae-hyun.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Horror masterpiece directed by Jang Jae-hyun.",
     "similarTags": [
       "Jang",
       "Mystery",
@@ -9952,6 +10500,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹27 Crore",
+    "revenue": "₹306 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -9968,7 +10520,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Thriller",
       "Noir"
     ],
-    "imdbRating": 8.7,
+    "imdbRating": 8.5,
     "rottenTomatoesScore": 94,
     "matchScore": 92,
     "synopsis": "A detective falls in love with the mysterious widow of a man who died falling from a mountain.",
@@ -9977,16 +10529,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Tang Wei",
       "Park Hae-il"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yR714H9tOCa2YCh0kTCe9zfwR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "s7EdQ4FqbhY",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Romance masterclass directed by Park Chan-wook.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Romance masterclass directed by Park Chan-wook.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Romance masterpiece directed by Park Chan-wook.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Romance masterpiece directed by Park Chan-wook.",
     "similarTags": [
       "Park",
       "Mystery",
@@ -9998,6 +10549,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹103 Crore",
+    "revenue": "₹360 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -10013,7 +10568,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "War",
       "Survival"
     ],
-    "imdbRating": 8.8,
+    "imdbRating": 8.6,
     "rottenTomatoesScore": 95,
     "matchScore": 93,
     "synopsis": "Two childhood friends reunite for one fateful week in New York, contemplating their destiny.",
@@ -10022,16 +10577,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Greta Lee",
       "Teo Yoo"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "pyWuOrFRKQE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Romance masterclass directed by Celine Song.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Romance masterclass directed by Celine Song.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Romance masterpiece directed by Celine Song.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Romance masterpiece directed by Celine Song.",
     "similarTags": [
       "Celine",
       "Drama",
@@ -10043,6 +10596,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "USA",
+    "budget": "₹94 Crore",
+    "revenue": "₹189 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -10060,7 +10617,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Western",
       "Space"
     ],
-    "imdbRating": 8.9,
+    "imdbRating": 8.7,
     "rottenTomatoesScore": 96,
     "matchScore": 94,
     "synopsis": "A man's life story from the Hungnam Evacuation of 1950 to the present day, detailing his sacrifices.",
@@ -10069,16 +10626,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Hwang Jung-min",
       "Yunjin Kim"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "8hP9D6kZseM",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Yoon Je-kyoon.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Drama masterclass directed by Yoon Je-kyoon.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Yoon Je-kyoon.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Yoon Je-kyoon.",
     "similarTags": [
       "Yoon",
       "History",
@@ -10090,6 +10645,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹36 Crore",
+    "revenue": "₹61 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -10106,7 +10665,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Psychological",
       "Time Travel"
     ],
-    "imdbRating": 9,
+    "imdbRating": 8.8,
     "rottenTomatoesScore": 97,
     "matchScore": 95,
     "synopsis": "Admiral Yi Sun-sin leads 12 ships to defeat an invading Japanese fleet of 330 vessels at Battle of Myeongnyang.",
@@ -10115,16 +10674,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Choi Min-sik",
       "Ryu Seung-ryong"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/y4FfVvL0G1HjX7P6L2U2T4g9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "8hP9D6kZseM",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Korean cinema. A high-quality Action masterclass directed by Kim Han-min.",
-    "whyRecommended": "Regal choice from Korean cinema. A high-quality Action masterclass directed by Kim Han-min.",
+    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Kim Han-min.",
+    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Kim Han-min.",
     "similarTags": [
       "Kim",
       "History",
@@ -10136,6 +10693,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Korean",
     "country": "South Korea",
+    "budget": "₹116 Crore",
+    "revenue": "₹331 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -10154,7 +10715,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Superhero",
       "Mystery Thriller"
     ],
-    "imdbRating": 7.5,
+    "imdbRating": 7.4,
     "rottenTomatoesScore": 80,
     "matchScore": 90,
     "synopsis": "A young girl gets trapped in a world ruled by spirits, trying to save her parents.",
@@ -10163,16 +10724,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Rumi Hiiragi",
       "Miyu Irino"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/3931w362g1vRPwTaxtgLR7Yjtyx.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "ByXuk9QqQkk",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Hayao Miyazaki.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Hayao Miyazaki.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
     "similarTags": [
       "Hayao",
       "Family",
@@ -10184,6 +10744,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "$19 Million",
+    "revenue": "$395 Million",
+    "tagline": "Nothing that happens is ever forgotten, even if you can't remember it.",
+    "productionCompany": "Studio Ghibli",
+    "awards": [
+      "Academy Award for Best Animated Feature"
+    ],
     "reviews": []
   },
   {
@@ -10202,7 +10769,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suspense",
       "Cyberpunk"
     ],
-    "imdbRating": 7.6,
+    "imdbRating": 7.5,
     "rottenTomatoesScore": 81,
     "matchScore": 91,
     "synopsis": "Two young sisters move to the countryside, forming a bond with friendly forest spirits.",
@@ -10211,16 +10778,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Chika Sakamoto",
       "Noriko Hidaka"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/totoro.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/gb4B15L4xYk5w5J5P7l9.jpg",
+    "trailerId": "92a7Hj0ijLs",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Hayao Miyazaki.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Hayao Miyazaki.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
     "similarTags": [
       "Hayao",
       "Family",
@@ -10232,6 +10797,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "$3.5 Million",
+    "revenue": "$30 Million",
+    "tagline": "Meet the friendly spirits of the forest.",
+    "productionCompany": "Studio Ghibli",
+    "awards": [
+      "Blue Ribbon Award for Best Film"
+    ],
     "reviews": []
   },
   {
@@ -10249,7 +10821,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Thriller",
       "Noir"
     ],
-    "imdbRating": 7.7,
+    "imdbRating": 7.6,
     "rottenTomatoesScore": 82,
     "matchScore": 92,
     "synopsis": "A young prince tries to maintain peace between humans mining iron and forest spirits.",
@@ -10258,16 +10830,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Yoji Matsuda",
       "Yuriko Ishida"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/mononoke.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/gb4B15L4xYk5w5J5P7l9.jpg",
+    "trailerId": "4OiMTOKdKTE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Hayao Miyazaki.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Hayao Miyazaki.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
     "similarTags": [
       "Hayao",
       "Adventure",
@@ -10279,6 +10849,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "$20 Million",
+    "revenue": "$169 Million",
+    "tagline": "The clash between civilization and forest gods.",
+    "productionCompany": "Studio Ghibli",
+    "awards": [
+      "Japan Academy Prize for Picture of the Year"
+    ],
     "reviews": []
   },
   {
@@ -10295,7 +10872,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "War",
       "Survival"
     ],
-    "imdbRating": 7.8,
+    "imdbRating": 7.7,
     "rottenTomatoesScore": 83,
     "matchScore": 93,
     "synopsis": "Two high school students swap bodies, forming a bond across space and time.",
@@ -10304,16 +10881,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ryunosuke Kamiki",
       "Mone Kamishibai"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/your_name_jp.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/gb4B15L4xYk5w5J5P7l9.jpg",
+    "trailerId": "xU47nhruN-k",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Makoto Shinkai.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Makoto Shinkai.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Makoto Shinkai.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Makoto Shinkai.",
     "similarTags": [
       "Makoto",
       "Romance",
@@ -10325,6 +10900,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "$3.7 Million",
+    "revenue": "$382 Million",
+    "tagline": "Searching for someone I've never met.",
+    "productionCompany": "CoMix Wave Films",
+    "awards": [
+      "L.A. Film Critics Association Award for Best Animated Film"
+    ],
     "reviews": []
   },
   {
@@ -10342,7 +10924,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Western",
       "Space"
     ],
-    "imdbRating": 7.9,
+    "imdbRating": 7.8,
     "rottenTomatoesScore": 84,
     "matchScore": 94,
     "synopsis": "A high school boy attempts to redeem himself with a deaf girl he bullied in grade school.",
@@ -10351,16 +10933,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Miyu Irino",
       "Saori Hayami"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/w500/silent_voice.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/gb4B15L4xYk5w5J5P7l9.jpg",
+    "trailerId": "nfK6UgLra7w",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Naoko Yamada.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Naoko Yamada.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Naoko Yamada.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Naoko Yamada.",
     "similarTags": [
       "Naoko",
       "Drama",
@@ -10372,6 +10953,13 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "$3 Million",
+    "revenue": "$33 Million",
+    "tagline": "Hear the voice that was left unheard.",
+    "productionCompany": "Kyoto Animation",
+    "awards": [
+      "Japan Movie Critics Award for Best Animation"
+    ],
     "reviews": []
   },
   {
@@ -10390,7 +10978,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Psychological",
       "Time Travel"
     ],
-    "imdbRating": 8,
+    "imdbRating": 7.9,
     "rottenTomatoesScore": 85,
     "matchScore": 95,
     "synopsis": "A runaway high school boy meets a girl who can control the weather in rainy Tokyo.",
@@ -10399,16 +10987,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Kotaro Daigo",
       "Nana Mori"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/A7sp0uquq3W3J7J3L3P7l9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "0n_H-Jt9xP8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Makoto Shinkai.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Makoto Shinkai.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Makoto Shinkai.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Makoto Shinkai.",
     "similarTags": [
       "Makoto",
       "Romance",
@@ -10420,6 +11006,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹112 Crore",
+    "revenue": "₹447 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -10438,7 +11028,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mystery Thriller",
       "Action"
     ],
-    "imdbRating": 8.1,
+    "imdbRating": 8,
     "rottenTomatoesScore": 86,
     "matchScore": 96,
     "synopsis": "A high school girl travels around Japan closing mysterious doors to prevent earthquakes.",
@@ -10447,16 +11037,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Nanoka Hara",
       "Hokuto Matsumura"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/n5A76v92erglVw37B67ouYbqDES.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "bLvqoHBptjg",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Makoto Shinkai.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Makoto Shinkai.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Makoto Shinkai.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Makoto Shinkai.",
     "similarTags": [
       "Makoto",
       "Adventure",
@@ -10468,6 +11056,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹82 Crore",
+    "revenue": "₹257 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -10485,7 +11077,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suspense",
       "Adventure"
     ],
-    "imdbRating": 8.2,
+    "imdbRating": 8.1,
     "rottenTomatoesScore": 87,
     "matchScore": 97,
     "synopsis": "A military project endangers Neo-Tokyo after a biker gang member gains telekinetic powers.",
@@ -10494,16 +11086,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mitsuo Iwata",
       "Nozomu Sasaki"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gEU2QvHOm5tJ7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "CHekzSiZhsY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Katsuhiro Otomo.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Katsuhiro Otomo.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Katsuhiro Otomo.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Katsuhiro Otomo.",
     "similarTags": [
       "Katsuhiro",
       "Sci-Fi",
@@ -10515,6 +11105,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹57 Crore",
+    "revenue": "₹280 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -10532,7 +11126,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Thriller",
       "Noir"
     ],
-    "imdbRating": 8.3,
+    "imdbRating": 8.2,
     "rottenTomatoesScore": 88,
     "matchScore": 98,
     "synopsis": "A cyborg policewoman hunts a hacker who steals memories from cyborg brains.",
@@ -10541,16 +11135,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Atsuko Tanaka",
       "Akio Otsuka"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f89U3wzZu0j7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "92a7Hj0ijLs",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Mamoru Oshii.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Mamoru Oshii.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Mamoru Oshii.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Mamoru Oshii.",
     "similarTags": [
       "Mamoru",
       "Sci-Fi",
@@ -10562,6 +11155,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹136 Crore",
+    "revenue": "₹63 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -10579,7 +11176,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "War",
       "Survival"
     ],
-    "imdbRating": 8.4,
+    "imdbRating": 8.3,
     "rottenTomatoesScore": 89,
     "matchScore": 99,
     "synopsis": "A group of demon slayers board a train to investigate disappearances, fighting a powerful demon.",
@@ -10588,16 +11185,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Natsuki Hanae",
       "Yoshitsugu Matsuoka"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "8hP9D6kZseM",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Haruo Sotozaki.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Haruo Sotozaki.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Haruo Sotozaki.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Haruo Sotozaki.",
     "similarTags": [
       "Haruo",
       "Action",
@@ -10609,6 +11204,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹104 Crore",
+    "revenue": "₹105 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -10626,7 +11225,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Space",
       "Biography"
     ],
-    "imdbRating": 8.5,
+    "imdbRating": 8.4,
     "rottenTomatoesScore": 90,
     "matchScore": 90,
     "synopsis": "A group of samurai defend a farming village from ruthless bandits in feudal Japan.",
@@ -10635,16 +11234,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Toshiro Mifune",
       "Takashi Shimura"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "EXeTwQWrcwY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Action masterclass directed by Akira Kurosawa.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Action masterclass directed by Akira Kurosawa.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Action masterpiece directed by Akira Kurosawa.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Action masterpiece directed by Akira Kurosawa.",
     "similarTags": [
       "Akira",
       "Drama",
@@ -10656,6 +11253,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹26 Crore",
+    "revenue": "₹259 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -10672,7 +11273,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Time Travel",
       "Comedy"
     ],
-    "imdbRating": 8.6,
+    "imdbRating": 8.5,
     "rottenTomatoesScore": 91,
     "matchScore": 91,
     "synopsis": "A priest, a woodcutter, and a commoner discuss a murder trial through four contrasting stories.",
@@ -10681,16 +11282,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Toshiro Mifune",
       "Machiko Kyo"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/A7sp0uquq3W3J7J3L3P7l9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Drama masterclass directed by Akira Kurosawa.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Drama masterclass directed by Akira Kurosawa.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Akira Kurosawa.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Akira Kurosawa.",
     "similarTags": [
       "Akira",
       "Mystery",
@@ -10702,6 +11301,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹46 Crore",
+    "revenue": "₹229 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -10718,7 +11321,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mystery Thriller",
       "Crime"
     ],
-    "imdbRating": 8.7,
+    "imdbRating": 8.6,
     "rottenTomatoesScore": 92,
     "matchScore": 92,
     "synopsis": "A rogue samurai arrives in a small town divided by gang wars, playing them against each other.",
@@ -10727,16 +11330,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Toshiro Mifune",
       "Tatsuya Nakadai"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/A7sp0uquq3W3J7J3L3P7l9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "pyWuOrFRKQE",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Action masterclass directed by Akira Kurosawa.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Action masterclass directed by Akira Kurosawa.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Action masterpiece directed by Akira Kurosawa.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Action masterpiece directed by Akira Kurosawa.",
     "similarTags": [
       "Akira",
       "Comedy",
@@ -10748,6 +11350,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹26 Crore",
+    "revenue": "₹193 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -10765,7 +11371,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Adventure",
       "Documentary"
     ],
-    "imdbRating": 8.8,
+    "imdbRating": 8.7,
     "rottenTomatoesScore": 93,
     "matchScore": 93,
     "synopsis": "An aging warlord abdicates his throne to his three sons, leading to internal wars and betrayal.",
@@ -10774,16 +11380,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Tatsuya Nakadai",
       "Akira Terao"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f89U3wzZu0j7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "0n_H-Jt9xP8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Drama masterclass directed by Akira Kurosawa.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Drama masterclass directed by Akira Kurosawa.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Akira Kurosawa.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Akira Kurosawa.",
     "similarTags": [
       "Akira",
       "Action",
@@ -10795,6 +11399,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹56 Crore",
+    "revenue": "₹193 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -10811,7 +11419,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Noir",
       "Animation"
     ],
-    "imdbRating": 8.9,
+    "imdbRating": 8.8,
     "rottenTomatoesScore": 94,
     "matchScore": 94,
     "synopsis": "An elder samurai requests to commit suicide in a clan's courtyard, telling the story of his son-in-law.",
@@ -10820,16 +11428,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Tatsuya Nakadai",
       "Rentaro Mikuni"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Drama masterclass directed by Masaki Kobayashi.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Drama masterclass directed by Masaki Kobayashi.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Masaki Kobayashi.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Masaki Kobayashi.",
     "similarTags": [
       "Masaki",
       "Action",
@@ -10841,6 +11447,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹90 Crore",
+    "revenue": "₹409 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -10856,7 +11466,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Survival",
       "Anime"
     ],
-    "imdbRating": 9,
+    "imdbRating": 8.9,
     "rottenTomatoesScore": 95,
     "matchScore": 95,
     "synopsis": "A poor family of shoplifters adopt a young girl they find outside in the cold.",
@@ -10865,16 +11475,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Lily Franky",
       "Sakura Ando"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fIE3lAGuSS16rP24MSErSo8Y4gq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "pyWuOrFRKQE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Drama masterclass directed by Hirokazu Kore-eda.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Drama masterclass directed by Hirokazu Kore-eda.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Hirokazu Kore-eda.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Hirokazu Kore-eda.",
     "similarTags": [
       "Hirokazu",
       "Family",
@@ -10886,6 +11494,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹42 Crore",
+    "revenue": "₹97 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -10902,7 +11514,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Biography",
       "Fantasy"
     ],
-    "imdbRating": 9.1,
+    "imdbRating": 9,
     "rottenTomatoesScore": 96,
     "matchScore": 96,
     "synopsis": "A widowed theater director bonds with his young female chauffeur during a festival.",
@@ -10911,16 +11523,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Hidetoshi Nishijima",
       "Toko Miura"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "ByXuk9QqQkk",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Drama masterclass directed by Ryusuke Hamaguchi.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Drama masterclass directed by Ryusuke Hamaguchi.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Ryusuke Hamaguchi.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Ryusuke Hamaguchi.",
     "similarTags": [
       "Ryusuke",
       "Romance",
@@ -10932,6 +11543,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹103 Crore",
+    "revenue": "₹248 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -10948,7 +11563,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Comedy",
       "History"
     ],
-    "imdbRating": 9.2,
+    "imdbRating": 9.1,
     "rottenTomatoesScore": 97,
     "matchScore": 97,
     "synopsis": "A mother demands answers from a school after her young son starts acting strangely.",
@@ -10957,16 +11572,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Soya Kurokawa",
       "Hinata Hiiragi"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yR714H9tOCa2YCh0kTCe9zfwR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "s7EdQ4FqbhY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Drama masterclass directed by Hirokazu Kore-eda.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Drama masterclass directed by Hirokazu Kore-eda.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Hirokazu Kore-eda.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Hirokazu Kore-eda.",
     "similarTags": [
       "Hirokazu",
       "Mystery",
@@ -10978,6 +11591,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹123 Crore",
+    "revenue": "₹124 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -10994,7 +11611,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Crime",
       "Horror"
     ],
-    "imdbRating": 9.3,
+    "imdbRating": 9.2,
     "rottenTomatoesScore": 80,
     "matchScore": 98,
     "synopsis": "The quiet, beautiful daily life of a toilet cleaner in Tokyo who enjoys books and photography.",
@@ -11003,16 +11620,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Koji Yakusho",
       "Arisa Nakano"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fIE3lAGuSS16rP24MSErSo8Y4gq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "ByXuk9QqQkk",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Drama masterclass directed by Wim Wenders.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Drama masterclass directed by Wim Wenders.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Wim Wenders.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Wim Wenders.",
     "similarTags": [
       "Wim",
       "Family",
@@ -11024,6 +11639,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹139 Crore",
+    "revenue": "₹140 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -11040,7 +11659,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Adventure",
       "Documentary"
     ],
-    "imdbRating": 9.4,
+    "imdbRating": 9.3,
     "rottenTomatoesScore": 81,
     "matchScore": 99,
     "synopsis": "A reporter investigates a cursed videotape that allegedly kills anyone who watches it in seven days.",
@@ -11049,16 +11668,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Nanako Matsushima",
       "Hiroyuki Sanada"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "2HkjrJ6IK5E",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Horror masterclass directed by Hideo Nakata.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Horror masterclass directed by Hideo Nakata.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Horror masterpiece directed by Hideo Nakata.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Horror masterpiece directed by Hideo Nakata.",
     "similarTags": [
       "Hideo",
       "Mystery",
@@ -11070,6 +11687,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹47 Crore",
+    "revenue": "₹262 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -11086,7 +11707,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Drama",
       "Musical"
     ],
-    "imdbRating": 7.5,
+    "imdbRating": 9.4,
     "rottenTomatoesScore": 82,
     "matchScore": 90,
     "synopsis": "A mysterious curse is born in a house where a man murdered his family, infecting anyone who enters.",
@@ -11095,16 +11716,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Megumi Okina",
       "Misaki Ito"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "vKQi3bBA1y8",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Horror masterclass directed by Takashi Shimizu.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Horror masterclass directed by Takashi Shimizu.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Horror masterpiece directed by Takashi Shimizu.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Horror masterpiece directed by Takashi Shimizu.",
     "similarTags": [
       "Takashi",
       "Mystery",
@@ -11116,6 +11736,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹71 Crore",
+    "revenue": "₹112 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -11133,7 +11757,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Family",
       "Romance"
     ],
-    "imdbRating": 7.6,
+    "imdbRating": 7.4,
     "rottenTomatoesScore": 83,
     "matchScore": 91,
     "synopsis": "A retired pop singer turns actress, facing a stalker and hallucinations that blur reality.",
@@ -11142,16 +11766,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Junko Iwao",
       "Rica Matsumoto"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/y4FfVvL0G1HjX7P6L2U2T4g9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "bLvqoHBptjg",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Satoshi Kon.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Satoshi Kon.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Satoshi Kon.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Satoshi Kon.",
     "similarTags": [
       "Satoshi",
       "Horror",
@@ -11163,6 +11785,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹70 Crore",
+    "revenue": "₹367 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -11180,7 +11806,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Biography",
       "Fantasy"
     ],
-    "imdbRating": 7.7,
+    "imdbRating": 7.5,
     "rottenTomatoesScore": 84,
     "matchScore": 92,
     "synopsis": "A therapist uses dream-sharing tech to help patients, but the tech is stolen by a terrorist.",
@@ -11189,16 +11815,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Megumi Hayashibara",
       "Toru Emori"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "nfK6UgLra7w",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Satoshi Kon.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Satoshi Kon.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Satoshi Kon.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Satoshi Kon.",
     "similarTags": [
       "Satoshi",
       "Sci-Fi",
@@ -11210,6 +11834,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹115 Crore",
+    "revenue": "₹318 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -11227,7 +11855,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Comedy",
       "Sports"
     ],
-    "imdbRating": 7.8,
+    "imdbRating": 7.6,
     "rottenTomatoesScore": 85,
     "matchScore": 93,
     "synopsis": "Two filmmakers interview a retired actress, traveling through her movie roles spanning Japanese history.",
@@ -11236,16 +11864,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Miyoko Shoji",
       "Mami Koyama"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pB8BM79ysb2iQZ17Z07r7x66MLg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "xU47nhruN-k",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Satoshi Kon.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Satoshi Kon.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Satoshi Kon.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Satoshi Kon.",
     "similarTags": [
       "Satoshi",
       "Drama",
@@ -11257,6 +11883,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹38 Crore",
+    "revenue": "₹447 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -11275,7 +11905,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Horror",
       "Superhero"
     ],
-    "imdbRating": 7.9,
+    "imdbRating": 7.7,
     "rottenTomatoesScore": 86,
     "matchScore": 94,
     "synopsis": "Three homeless people find an abandoned baby in Tokyo on Christmas Eve, searching for her mother.",
@@ -11284,16 +11914,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Torru Emori",
       "Yoshiaki Umegaki"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9gk7adHYeCmqgl0wSy646V05g2e.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "bLvqoHBptjg",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Satoshi Kon.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Satoshi Kon.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Satoshi Kon.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Satoshi Kon.",
     "similarTags": [
       "Satoshi",
       "Comedy",
@@ -11305,6 +11934,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹66 Crore",
+    "revenue": "₹97 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -11322,7 +11955,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mystery",
       "Suspense"
     ],
-    "imdbRating": 8,
+    "imdbRating": 7.8,
     "rottenTomatoesScore": 87,
     "matchScore": 95,
     "synopsis": "A princess defends her valley from toxic jungle insects and warmongering human states.",
@@ -11331,16 +11964,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sumi Shimamoto",
       "Mahito Tsujimura"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xZ2V2575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "EXeTwQWrcwY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Hayao Miyazaki.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Hayao Miyazaki.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
     "similarTags": [
       "Hayao",
       "Adventure",
@@ -11352,6 +11983,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹130 Crore",
+    "revenue": "₹145 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -11369,7 +12004,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Musical",
       "Thriller"
     ],
-    "imdbRating": 8.1,
+    "imdbRating": 7.9,
     "rottenTomatoesScore": 88,
     "matchScore": 96,
     "synopsis": "A boy and a girl search for a legendary floating castle, escaping air pirates and soldiers.",
@@ -11378,16 +12013,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mayumi Tanaka",
       "Keiko Yokozawa"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pB8BM79ysb2iQZ17Z07r7x66MLg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "ol67qo3P4w8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Hayao Miyazaki.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Hayao Miyazaki.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
     "similarTags": [
       "Hayao",
       "Adventure",
@@ -11399,6 +12032,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹40 Crore",
+    "revenue": "₹423 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -11416,7 +12053,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Romance",
       "War"
     ],
-    "imdbRating": 8.2,
+    "imdbRating": 8,
     "rottenTomatoesScore": 89,
     "matchScore": 97,
     "synopsis": "A cursed young girl is taken in by a wizard who lives in a giant walking castle.",
@@ -11425,16 +12062,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Chieko Baisho",
       "Takuya Kimura"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "4OiMTOKdKTE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Hayao Miyazaki.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Hayao Miyazaki.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
     "similarTags": [
       "Hayao",
       "Fantasy",
@@ -11446,6 +12081,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹53 Crore",
+    "revenue": "₹452 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -11463,7 +12102,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sci-Fi",
       "Western"
     ],
-    "imdbRating": 8.3,
+    "imdbRating": 8.1,
     "rottenTomatoesScore": 90,
     "matchScore": 98,
     "synopsis": "A goldfish princess escapes the ocean, forming a bond with a young human boy.",
@@ -11472,16 +12111,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Yuria Nara",
       "Hiroki Doi"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/y4FfVvL0G1HjX7P6L2U2T4g9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "EXeTwQWrcwY",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Hayao Miyazaki.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Hayao Miyazaki.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
     "similarTags": [
       "Hayao",
       "Family",
@@ -11493,6 +12131,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹138 Crore",
+    "revenue": "₹151 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -11511,7 +12153,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sports",
       "Psychological"
     ],
-    "imdbRating": 8.4,
+    "imdbRating": 8.2,
     "rottenTomatoesScore": 91,
     "matchScore": 99,
     "synopsis": "A biographical story of Jiro Horikoshi, the designer of Japanese fighter planes in WWII.",
@@ -11520,16 +12162,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Hideaki Anno",
       "Miori Takimoto"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yR714H9tOCa2YCh0kTCe9zfwR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Hayao Miyazaki.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Hayao Miyazaki.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
     "similarTags": [
       "Hayao",
       "Biography",
@@ -11541,6 +12181,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹114 Crore",
+    "revenue": "₹163 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -11559,7 +12203,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Superhero",
       "Mystery Thriller"
     ],
-    "imdbRating": 8.5,
+    "imdbRating": 8.3,
     "rottenTomatoesScore": 92,
     "matchScore": 90,
     "synopsis": "A young boy moves to a new town after a tragedy, entering a fantasy tower with a grey heron.",
@@ -11568,16 +12212,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Soma Santoki",
       "Masaki Suda"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gEU2QvHOm5tJ7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Hayao Miyazaki.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Animation masterclass directed by Hayao Miyazaki.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
     "similarTags": [
       "Hayao",
       "Fantasy",
@@ -11589,6 +12231,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹78 Crore",
+    "revenue": "₹253 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -11606,7 +12252,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suspense",
       "Cyberpunk"
     ],
-    "imdbRating": 8.6,
+    "imdbRating": 8.4,
     "rottenTomatoesScore": 93,
     "matchScore": 91,
     "synopsis": "A disgraced kamikaze pilot fights alongside citizens to defend post-war Japan from Godzilla.",
@@ -11615,16 +12261,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ryunosuke Kamiki",
       "Minami Hamabe"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gEU2QvHOm5tJ7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "CHekzSiZhsY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Action masterclass directed by Takashi Yamazaki.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Action masterclass directed by Takashi Yamazaki.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Action masterpiece directed by Takashi Yamazaki.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Action masterpiece directed by Takashi Yamazaki.",
     "similarTags": [
       "Takashi",
       "Sci-Fi",
@@ -11636,6 +12280,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹37 Crore",
+    "revenue": "₹74 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -11651,7 +12299,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Thriller",
       "Noir"
     ],
-    "imdbRating": 8.7,
+    "imdbRating": 8.5,
     "rottenTomatoesScore": 94,
     "matchScore": 92,
     "synopsis": "A woman sends a letter to her deceased fiance's old address, receiving a reply from his schoolmate.",
@@ -11660,16 +12308,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Miho Nakayama",
       "Etsushi Toyokawa"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cRiL9fNl1J8yA694JbUu0uKqJ9y.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "zSWdZAZE3Dc",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Romance masterclass directed by Shunji Iwai.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Romance masterclass directed by Shunji Iwai.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Romance masterpiece directed by Shunji Iwai.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Romance masterpiece directed by Shunji Iwai.",
     "similarTags": [
       "Shunji",
       "Drama",
@@ -11681,6 +12328,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹109 Crore",
+    "revenue": "₹262 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -11698,7 +12349,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "War",
       "Survival"
     ],
-    "imdbRating": 8.8,
+    "imdbRating": 8.6,
     "rottenTomatoesScore": 95,
     "matchScore": 93,
     "synopsis": "A detective investigates mysterious murders where the victims are found with an X carved in their necks.",
@@ -11707,16 +12358,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Koji Yakusho",
       "Masato Hagiwara"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pB8BM79ysb2iQZ17Z07r7x66MLg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Horror masterclass directed by Kiyoshi Kurosawa.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Horror masterclass directed by Kiyoshi Kurosawa.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Horror masterpiece directed by Kiyoshi Kurosawa.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Horror masterpiece directed by Kiyoshi Kurosawa.",
     "similarTags": [
       "Kiyoshi",
       "Mystery",
@@ -11728,6 +12377,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹134 Crore",
+    "revenue": "₹247 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -11745,7 +12398,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Western",
       "Space"
     ],
-    "imdbRating": 8.9,
+    "imdbRating": 8.7,
     "rottenTomatoesScore": 96,
     "matchScore": 94,
     "synopsis": "A widower holds fake auditions to find a new wife, falling in love with a mysterious girl with a dark past.",
@@ -11754,16 +12407,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ryo Ishibashi",
       "Eihi Shiina"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/y4FfVvL0G1HjX7P6L2U2T4g9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Horror masterclass directed by Takashi Miike.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Horror masterclass directed by Takashi Miike.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Horror masterpiece directed by Takashi Miike.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Horror masterpiece directed by Takashi Miike.",
     "similarTags": [
       "Takashi",
       "Psychological",
@@ -11775,6 +12426,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹46 Crore",
+    "revenue": "₹207 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -11792,7 +12447,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Psychological",
       "Time Travel"
     ],
-    "imdbRating": 9,
+    "imdbRating": 8.8,
     "rottenTomatoesScore": 97,
     "matchScore": 95,
     "synopsis": "Junior high students are sent to a deserted island to fight to the death under a government act.",
@@ -11801,16 +12456,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Tatsuya Fujiwara",
       "Aki Maeda"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xZ2V2575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "4OiMTOKdKTE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Japanese cinema. A high-quality Action masterclass directed by Kinji Fukasaku.",
-    "whyRecommended": "Regal choice from Japanese cinema. A high-quality Action masterclass directed by Kinji Fukasaku.",
+    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Action masterpiece directed by Kinji Fukasaku.",
+    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Action masterpiece directed by Kinji Fukasaku.",
     "similarTags": [
       "Kinji",
       "Thriller",
@@ -11822,6 +12475,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Japanese",
     "country": "Japan",
+    "budget": "₹113 Crore",
+    "revenue": "₹336 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -11839,7 +12496,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Superhero",
       "Mystery Thriller"
     ],
-    "imdbRating": 7.5,
+    "imdbRating": 7.4,
     "rottenTomatoesScore": 80,
     "matchScore": 90,
     "synopsis": "A young girl in fascist Spain escapes her cruel stepfather, entering a mysterious fantasy labyrinth.",
@@ -11848,16 +12505,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ivana Baquero",
       "Sergi López"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gEU2QvHOm5tJ7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "ByXuk9QqQkk",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Fantasy masterclass directed by Guillermo del Toro.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Fantasy masterclass directed by Guillermo del Toro.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Fantasy masterpiece directed by Guillermo del Toro.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Fantasy masterpiece directed by Guillermo del Toro.",
     "similarTags": [
       "Guillermo",
       "Drama",
@@ -11869,6 +12525,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹127 Crore",
+    "revenue": "₹222 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -11885,7 +12545,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suspense",
       "Cyberpunk"
     ],
-    "imdbRating": 7.6,
+    "imdbRating": 7.5,
     "rottenTomatoesScore": 81,
     "matchScore": 91,
     "synopsis": "The life story of a live-in housekeeper in a middle-class neighborhood of Mexico City.",
@@ -11894,16 +12554,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Yalitza Aparicio",
       "Marina de Tavira"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/y4FfVvL0G1HjX7P6L2U2T4g9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "EXeTwQWrcwY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Alfonso Cuarón.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Alfonso Cuarón.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Alfonso Cuarón.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Alfonso Cuarón.",
     "similarTags": [
       "Alfonso",
       "History",
@@ -11915,6 +12573,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Mexico",
+    "budget": "₹62 Crore",
+    "revenue": "₹133 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -11931,7 +12593,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Thriller",
       "Noir"
     ],
-    "imdbRating": 7.7,
+    "imdbRating": 7.6,
     "rottenTomatoesScore": 82,
     "matchScore": 92,
     "synopsis": "A retired investigator writes a novel about an unsolved rape and murder case that haunts him.",
@@ -11940,16 +12602,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ricardo Darín",
       "Soledad Villamil"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pB8BM79ysb2iQZ17Z07r7x66MLg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "4OiMTOKdKTE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Crime masterclass directed by Juan José Campanella.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Crime masterclass directed by Juan José Campanella.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Crime masterpiece directed by Juan José Campanella.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Crime masterpiece directed by Juan José Campanella.",
     "similarTags": [
       "Juan",
       "Drama",
@@ -11961,6 +12621,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Argentina",
+    "budget": "₹45 Crore",
+    "revenue": "₹68 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -11978,7 +12642,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "War",
       "Survival"
     ],
-    "imdbRating": 7.8,
+    "imdbRating": 7.7,
     "rottenTomatoesScore": 83,
     "matchScore": 93,
     "synopsis": "A handsome man is disfigured in a car crash, finding himself in a dream-like state of hallucinations.",
@@ -11987,16 +12651,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Eduardo Noriega",
       "Penélope Cruz"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3931w362g1vRPwTaxtgLR7Yjtyx.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "pyWuOrFRKQE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Sci-Fi masterclass directed by Alejandro Amenábar.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Sci-Fi masterclass directed by Alejandro Amenábar.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Sci-Fi masterpiece directed by Alejandro Amenábar.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Sci-Fi masterpiece directed by Alejandro Amenábar.",
     "similarTags": [
       "Alejandro",
       "Drama",
@@ -12008,6 +12670,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹58 Crore",
+    "revenue": "₹443 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -12025,7 +12691,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Western",
       "Space"
     ],
-    "imdbRating": 7.9,
+    "imdbRating": 7.8,
     "rottenTomatoesScore": 84,
     "matchScore": 94,
     "synopsis": "A plastic surgeon creates a synthetic skin resistant to burns, keeping a mysterious woman captive.",
@@ -12034,16 +12700,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Antonio Banderas",
       "Elena Anaya"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fIE3lAGuSS16rP24MSErSo8Y4gq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "CHekzSiZhsY",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Thriller masterclass directed by Pedro Almodóvar.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Thriller masterclass directed by Pedro Almodóvar.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Thriller masterpiece directed by Pedro Almodóvar.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Thriller masterpiece directed by Pedro Almodóvar.",
     "similarTags": [
       "Pedro",
       "Horror",
@@ -12055,6 +12720,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹137 Crore",
+    "revenue": "₹408 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -12070,7 +12739,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Psychological",
       "Time Travel"
     ],
-    "imdbRating": 8,
+    "imdbRating": 7.9,
     "rottenTomatoesScore": 85,
     "matchScore": 95,
     "synopsis": "A mother returns to her native village as a ghost to comfort her two daughters after a tragedy.",
@@ -12079,16 +12748,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Penélope Cruz",
       "Carmen Maura"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/A7sp0uquq3W3J7J3L3P7l9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "vKQi3bBA1y8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Pedro Almodóvar.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Pedro Almodóvar.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Pedro Almodóvar.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Pedro Almodóvar.",
     "similarTags": [
       "Pedro",
       "Comedy",
@@ -12100,6 +12767,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹63 Crore",
+    "revenue": "₹214 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -12116,7 +12787,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mystery Thriller",
       "Action"
     ],
-    "imdbRating": 8.1,
+    "imdbRating": 8,
     "rottenTomatoesScore": 86,
     "matchScore": 96,
     "synopsis": "Two men share an unlikely bond while caring for two women in comas at a private clinic.",
@@ -12125,16 +12796,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Javier Cámara",
       "Darío Grandinetti"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/A7sp0uquq3W3J7J3L3P7l9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "O1tGxRRgly8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Pedro Almodóvar.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Pedro Almodóvar.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Pedro Almodóvar.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Pedro Almodóvar.",
     "similarTags": [
       "Pedro",
       "Romance",
@@ -12146,6 +12815,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹101 Crore",
+    "revenue": "₹166 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -12162,7 +12835,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Cyberpunk",
       "Adventure"
     ],
-    "imdbRating": 8.2,
+    "imdbRating": 8.1,
     "rottenTomatoesScore": 87,
     "matchScore": 97,
     "synopsis": "A retired film director recalls his childhood and past relationships during a physical decline.",
@@ -12171,16 +12844,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Antonio Banderas",
       "Penélope Cruz"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/n5A76v92erglVw37B67ouYbqDES.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "4OiMTOKdKTE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Pedro Almodóvar.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Pedro Almodóvar.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Pedro Almodóvar.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Pedro Almodóvar.",
     "similarTags": [
       "Pedro",
       "Biography",
@@ -12192,6 +12863,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹113 Crore",
+    "revenue": "₹72 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -12208,7 +12883,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Noir",
       "Animation"
     ],
-    "imdbRating": 8.3,
+    "imdbRating": 8.2,
     "rottenTomatoesScore": 88,
     "matchScore": 98,
     "synopsis": "Six standalone stories of violence and revenge, detailing people pushed to their limits.",
@@ -12217,16 +12892,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ricardo Darín",
       "Oscar Martínez"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yR714H9tOCa2YCh0kTCe9zfwR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "ol67qo3P4w8",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Comedy masterclass directed by Damián Szifron.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Comedy masterclass directed by Damián Szifron.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Comedy masterpiece directed by Damián Szifron.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Comedy masterpiece directed by Damián Szifron.",
     "similarTags": [
       "Damián",
       "Drama",
@@ -12238,6 +12912,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Argentina",
+    "budget": "₹80 Crore",
+    "revenue": "₹415 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -12254,7 +12932,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Survival",
       "Anime"
     ],
-    "imdbRating": 8.4,
+    "imdbRating": 8.3,
     "rottenTomatoesScore": 89,
     "matchScore": 99,
     "synopsis": "A tragic car crash in Mexico City connects three stories of dog fights and personal loss.",
@@ -12263,16 +12941,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Emilio Echevarría",
       "Gael García Bernal"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gEU2QvHOm5tJ7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "s7EdQ4FqbhY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Alejandro González Iñárritu.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Alejandro González Iñárritu.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Alejandro González Iñárritu.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Alejandro González Iñárritu.",
     "similarTags": [
       "Alejandro",
       "Crime",
@@ -12284,6 +12960,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Mexico",
+    "budget": "₹35 Crore",
+    "revenue": "₹426 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -12301,7 +12981,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Space",
       "Biography"
     ],
-    "imdbRating": 8.5,
+    "imdbRating": 8.4,
     "rottenTomatoesScore": 90,
     "matchScore": 90,
     "synopsis": "Two teenage boys embark on a road trip with a middle-aged woman, facing sexual tensions.",
@@ -12310,16 +12990,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Gael García Bernal",
       "Diego Luna"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "vKQi3bBA1y8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Alfonso Cuarón.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Alfonso Cuarón.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Alfonso Cuarón.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Alfonso Cuarón.",
     "similarTags": [
       "Alfonso",
       "Romance",
@@ -12331,6 +13009,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Mexico",
+    "budget": "₹91 Crore",
+    "revenue": "₹202 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -12348,7 +13030,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Time Travel",
       "Comedy"
     ],
-    "imdbRating": 8.6,
+    "imdbRating": 8.5,
     "rottenTomatoesScore": 91,
     "matchScore": 91,
     "synopsis": "A reporter and a camera operator follow firefighters into an apartment building quarantined due to a virus.",
@@ -12357,16 +13039,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Manuela Velasco",
       "Ferran Terraza"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "nfK6UgLra7w",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Horror masterclass directed by Jaume Balagueró.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Horror masterclass directed by Jaume Balagueró.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Horror masterpiece directed by Jaume Balagueró.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Horror masterpiece directed by Jaume Balagueró.",
     "similarTags": [
       "Jaume",
       "Thriller",
@@ -12378,6 +13058,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹31 Crore",
+    "revenue": "₹230 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -12394,7 +13078,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Action",
       "Crime"
     ],
-    "imdbRating": 8.7,
+    "imdbRating": 8.6,
     "rottenTomatoesScore": 92,
     "matchScore": 92,
     "synopsis": "A woman buys her childhood orphanage home to care for disabled children, until her son disappears.",
@@ -12403,16 +13087,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Belén Rueda",
       "Fernando Cayo"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yR714H9tOCa2YCh0kTCe9zfwR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "s7EdQ4FqbhY",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Horror masterclass directed by J.A. Bayona.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Horror masterclass directed by J.A. Bayona.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Horror masterpiece directed by J.A. Bayona.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Horror masterpiece directed by J.A. Bayona.",
     "similarTags": [
       "J.A.",
       "Mystery",
@@ -12424,6 +13107,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹39 Crore",
+    "revenue": "₹142 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -12441,7 +13128,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Adventure",
       "Documentary"
     ],
-    "imdbRating": 8.8,
+    "imdbRating": 8.7,
     "rottenTomatoesScore": 93,
     "matchScore": 93,
     "synopsis": "A vertical prison tower with one food platform descending through levels, exposing greed.",
@@ -12450,16 +13137,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ivan Massagué",
       "Zorion Eguileor"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vT3P1lqq7aW6g1sP3x7U6ZgL94H.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "vKQi3bBA1y8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Sci-Fi masterclass directed by Galder Gaztelu-Urrutia.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Sci-Fi masterclass directed by Galder Gaztelu-Urrutia.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Sci-Fi masterpiece directed by Galder Gaztelu-Urrutia.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Sci-Fi masterpiece directed by Galder Gaztelu-Urrutia.",
     "similarTags": [
       "Galder",
       "Thriller",
@@ -12471,6 +13156,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹123 Crore",
+    "revenue": "₹372 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -12487,7 +13176,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Animation",
       "Drama"
     ],
-    "imdbRating": 8.9,
+    "imdbRating": 8.8,
     "rottenTomatoesScore": 94,
     "matchScore": 94,
     "synopsis": "A space-time glitch allows a mother to save a boy's life 25 years ago, but she loses her daughter.",
@@ -12496,16 +13185,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Adriana Ugarte",
       "Chino Darín"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cRiL9fNl1J8yA694JbUu0uKqJ9y.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "xU47nhruN-k",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Sci-Fi masterclass directed by Oriol Paulo.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Sci-Fi masterclass directed by Oriol Paulo.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Sci-Fi masterpiece directed by Oriol Paulo.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Sci-Fi masterpiece directed by Oriol Paulo.",
     "similarTags": [
       "Oriol",
       "Thriller",
@@ -12517,6 +13204,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹134 Crore",
+    "revenue": "₹125 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -12534,7 +13225,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Anime",
       "Family"
     ],
-    "imdbRating": 9,
+    "imdbRating": 8.9,
     "rottenTomatoesScore": 95,
     "matchScore": 95,
     "synopsis": "A wealthy businessman hires a veteran lawyer to clear his name after waking up next to a corpse.",
@@ -12543,16 +13234,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mario Casas",
       "Ana Wagener"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "CHekzSiZhsY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Thriller masterclass directed by Oriol Paulo.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Thriller masterclass directed by Oriol Paulo.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Thriller masterpiece directed by Oriol Paulo.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Thriller masterpiece directed by Oriol Paulo.",
     "similarTags": [
       "Oriol",
       "Mystery",
@@ -12564,6 +13253,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹65 Crore",
+    "revenue": "₹64 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -12580,7 +13273,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Biography",
       "Fantasy"
     ],
-    "imdbRating": 9.1,
+    "imdbRating": 9,
     "rottenTomatoesScore": 96,
     "matchScore": 96,
     "synopsis": "A group of patients with OCD wait for a doctor whose flight is delayed, trying to help each other.",
@@ -12589,16 +13282,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Julián Villagrán",
       "Alexandra Jiménez"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pB8BM79ysb2iQZ17Z07r7x66MLg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "CHekzSiZhsY",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Comedy masterclass directed by Vicente Villanueva.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Comedy masterclass directed by Vicente Villanueva.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Comedy masterpiece directed by Vicente Villanueva.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Comedy masterpiece directed by Vicente Villanueva.",
     "similarTags": [
       "Vicente",
       "Family",
@@ -12610,6 +13302,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹121 Crore",
+    "revenue": "₹354 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -12627,7 +13323,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Comedy",
       "History"
     ],
-    "imdbRating": 9.2,
+    "imdbRating": 9.1,
     "rottenTomatoesScore": 97,
     "matchScore": 97,
     "synopsis": "A new prison guard pretends to be an inmate to survive a sudden prison riot.",
@@ -12636,16 +13332,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Luis Tosar",
       "Alberto Ammann"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "4OiMTOKdKTE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Action masterclass directed by Daniel Monzón.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Action masterclass directed by Daniel Monzón.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Action masterpiece directed by Daniel Monzón.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Action masterpiece directed by Daniel Monzón.",
     "similarTags": [
       "Daniel",
       "Crime",
@@ -12657,6 +13351,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹45 Crore",
+    "revenue": "₹70 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -12673,7 +13371,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Action",
       "Horror"
     ],
-    "imdbRating": 9.3,
+    "imdbRating": 9.2,
     "rottenTomatoesScore": 80,
     "matchScore": 98,
     "synopsis": "Two detectives in 1980 visit a remote marshland village to solve the murder of two sisters.",
@@ -12682,16 +13380,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Raúl Arévalo",
       "Javier Gutiérrez"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9gk7adHYeCmqgl0wSy646V05g2e.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "ByXuk9QqQkk",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Crime masterclass directed by Alberto Rodríguez.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Crime masterclass directed by Alberto Rodríguez.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Crime masterpiece directed by Alberto Rodríguez.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Crime masterpiece directed by Alberto Rodríguez.",
     "similarTags": [
       "Alberto",
       "Thriller",
@@ -12703,6 +13399,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹31 Crore",
+    "revenue": "₹176 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -12719,7 +13419,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Documentary",
       "Mystery"
     ],
-    "imdbRating": 9.4,
+    "imdbRating": 9.3,
     "rottenTomatoesScore": 81,
     "matchScore": 99,
     "synopsis": "A mother hides a dark secret in Madrid, where a new family threatens to expose her past.",
@@ -12728,16 +13428,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Najwa Nimri",
       "Carla Campra"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/A7sp0uquq3W3J7J3L3P7l9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "O1tGxRRgly8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Manolo Caro.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Manolo Caro.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Manolo Caro.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Manolo Caro.",
     "similarTags": [
       "Manolo",
       "Thriller",
@@ -12749,6 +13447,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹81 Crore",
+    "revenue": "₹338 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -12764,7 +13466,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Animation",
       "Musical"
     ],
-    "imdbRating": 7.5,
+    "imdbRating": 9.4,
     "rottenTomatoesScore": 82,
     "matchScore": 90,
     "synopsis": "The struggle of a terminally ill single father who communicates with spirits, trying to save his kids.",
@@ -12773,16 +13475,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Javier Bardem",
       "Maricel Álvarez"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3931w362g1vRPwTaxtgLR7Yjtyx.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "ByXuk9QqQkk",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Alejandro González Iñárritu.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Alejandro González Iñárritu.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Alejandro González Iñárritu.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Alejandro González Iñárritu.",
     "similarTags": [
       "Alejandro",
       "Fantasy",
@@ -12794,6 +13495,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Mexico",
+    "budget": "₹83 Crore",
+    "revenue": "₹172 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -12810,7 +13515,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Family",
       "Romance"
     ],
-    "imdbRating": 7.6,
+    "imdbRating": 7.4,
     "rottenTomatoesScore": 83,
     "matchScore": 91,
     "synopsis": "The real-life story of Ramon Sampedro, who waged a thirty-year campaign to win his right to die.",
@@ -12819,16 +13524,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Javier Bardem",
       "Belén Rueda"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "2HkjrJ6IK5E",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Alejandro Amenábar.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Alejandro Amenábar.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Alejandro Amenábar.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Alejandro Amenábar.",
     "similarTags": [
       "Alejandro",
       "Biography",
@@ -12840,6 +13543,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹107 Crore",
+    "revenue": "₹266 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -12856,7 +13563,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Fantasy",
       "Sci-Fi"
     ],
-    "imdbRating": 7.7,
+    "imdbRating": 7.5,
     "rottenTomatoesScore": 84,
     "matchScore": 92,
     "synopsis": "A young boy in Galicia bonds with his republican teacher on the eve of the Spanish Civil War.",
@@ -12864,16 +13571,14 @@ export const MOVIES_DATABASE: Movie[] = [
     "cast": [
       "Fernando Fernán Gómez"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/n5A76v92erglVw37B67ouYbqDES.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "bLvqoHBptjg",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by José Luis Cuerda.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by José Luis Cuerda.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by José Luis Cuerda.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by José Luis Cuerda.",
     "similarTags": [
       "José",
       "History",
@@ -12885,6 +13590,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹102 Crore",
+    "revenue": "₹343 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -12902,7 +13611,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "History",
       "Sports"
     ],
-    "imdbRating": 7.8,
+    "imdbRating": 7.6,
     "rottenTomatoesScore": 85,
     "matchScore": 93,
     "synopsis": "A college student writing a thesis on violence uncovers a real snuff film ring in her university.",
@@ -12911,16 +13620,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Ana Torrent",
       "Fele Martínez"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f89U3wzZu0j7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "CHekzSiZhsY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Thriller masterclass directed by Alejandro Amenábar.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Thriller masterclass directed by Alejandro Amenábar.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Thriller masterpiece directed by Alejandro Amenábar.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Thriller masterpiece directed by Alejandro Amenábar.",
     "similarTags": [
       "Alejandro",
       "Mystery",
@@ -12932,6 +13639,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹37 Crore",
+    "revenue": "₹62 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -12948,7 +13659,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Crime",
       "Superhero"
     ],
-    "imdbRating": 7.9,
+    "imdbRating": 7.7,
     "rottenTomatoesScore": 86,
     "matchScore": 94,
     "synopsis": "A young boy arrives at a remote orphanage during the Spanish Civil War, meeting a ghost child.",
@@ -12957,16 +13668,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Fernando Tielve",
       "Federico Luppi"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yR714H9tOCa2YCh0kTCe9zfwR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "ByXuk9QqQkk",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Horror masterclass directed by Guillermo del Toro.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Horror masterclass directed by Guillermo del Toro.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Horror masterpiece directed by Guillermo del Toro.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Horror masterpiece directed by Guillermo del Toro.",
     "similarTags": [
       "Guillermo",
       "Fantasy",
@@ -12978,6 +13688,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹103 Crore",
+    "revenue": "₹104 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -12995,7 +13709,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mystery",
       "Suspense"
     ],
-    "imdbRating": 8,
+    "imdbRating": 7.8,
     "rottenTomatoesScore": 87,
     "matchScore": 95,
     "synopsis": "A man accidentally steps into a time machine, escaping from a masked killer who might be himself.",
@@ -13004,16 +13718,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Karra Elejalde",
       "Candela Fernández"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9gk7adHYeCmqgl0wSy646V05g2e.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "Ie6Y_Q5-E0Y",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Sci-Fi masterclass directed by Nacho Vigalondo.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Sci-Fi masterclass directed by Nacho Vigalondo.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Sci-Fi masterpiece directed by Nacho Vigalondo.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Sci-Fi masterpiece directed by Nacho Vigalondo.",
     "similarTags": [
       "Nacho",
       "Thriller",
@@ -13025,6 +13737,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹41 Crore",
+    "revenue": "₹248 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -13041,7 +13757,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Drama",
       "Musical"
     ],
-    "imdbRating": 8.1,
+    "imdbRating": 7.9,
     "rottenTomatoesScore": 88,
     "matchScore": 96,
     "synopsis": "A woman suffering from a degenerative eye disease investigates the suicide of her blind sister.",
@@ -13050,16 +13766,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Belén Rueda",
       "Lluís Homar"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f89U3wzZu0j7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "pyWuOrFRKQE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Thriller masterclass directed by Guillem Morales.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Thriller masterclass directed by Guillem Morales.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Thriller masterpiece directed by Guillem Morales.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Thriller masterpiece directed by Guillem Morales.",
     "similarTags": [
       "Guillem",
       "Mystery",
@@ -13071,6 +13785,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹30 Crore",
+    "revenue": "₹351 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -13087,7 +13805,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Romance",
       "War"
     ],
-    "imdbRating": 8.2,
+    "imdbRating": 8,
     "rottenTomatoesScore": 89,
     "matchScore": 97,
     "synopsis": "A creepy apartment building concierge stalks a happy tenant, trying to destroy her life.",
@@ -13096,16 +13814,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Luis Tosar",
       "Marta Etura"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pB8BM79ysb2iQZ17Z07r7x66MLg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "xU47nhruN-k",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Thriller masterclass directed by Jaume Balagueró.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Thriller masterclass directed by Jaume Balagueró.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Thriller masterpiece directed by Jaume Balagueró.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Thriller masterpiece directed by Jaume Balagueró.",
     "similarTags": [
       "Jaume",
       "Psychological",
@@ -13117,6 +13833,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹46 Crore",
+    "revenue": "₹455 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -13133,7 +13853,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sci-Fi",
       "Western"
     ],
-    "imdbRating": 8.3,
+    "imdbRating": 8.1,
     "rottenTomatoesScore": 90,
     "matchScore": 98,
     "synopsis": "A film crew visiting Bolivia during water riots faces conflicts over native exploitation.",
@@ -13142,16 +13862,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Gael García Bernal",
       "Luis Tosar"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fIE3lAGuSS16rP24MSErSo8Y4gq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Icíar Bollaín.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Icíar Bollaín.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Icíar Bollaín.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Icíar Bollaín.",
     "similarTags": [
       "Icíar",
       "History",
@@ -13163,6 +13882,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹114 Crore",
+    "revenue": "₹237 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -13179,7 +13902,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sports",
       "Psychological"
     ],
-    "imdbRating": 8.4,
+    "imdbRating": 8.2,
     "rottenTomatoesScore": 91,
     "matchScore": 99,
     "synopsis": "Seven job candidates undergo a psychological corporate evaluation test inside an office.",
@@ -13188,16 +13911,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Eduardo Noriega",
       "Najwa Nimri"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xZ2V2575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "Ie6Y_Q5-E0Y",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Marcelo Piñeyro.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Marcelo Piñeyro.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Marcelo Piñeyro.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Marcelo Piñeyro.",
     "similarTags": [
       "Marcelo",
       "Thriller",
@@ -13209,6 +13930,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹81 Crore",
+    "revenue": "₹354 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -13224,25 +13949,23 @@ export const MOVIES_DATABASE: Movie[] = [
       "Superhero",
       "Mystery Thriller"
     ],
-    "imdbRating": 8.5,
+    "imdbRating": 8.3,
     "rottenTomatoesScore": 92,
     "matchScore": 90,
-    "synopsis": "A real estate agent finds 300 million pesetas in a deceased tenant's apartment, escaping neighbors.",
+    "synopsis": "A real estate agent finds 300 million pesetas in a deleted tenant's apartment, escaping neighbors.",
     "director": "Álex de la Iglesia",
     "cast": [
       "Carmen Maura",
       "Eduardo Antuña"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gEU2QvHOm5tJ7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "zSWdZAZE3Dc",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Comedy masterclass directed by Álex de la Iglesia.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Comedy masterclass directed by Álex de la Iglesia.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Comedy masterpiece directed by Álex de la Iglesia.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Comedy masterpiece directed by Álex de la Iglesia.",
     "similarTags": [
       "Álex",
       "Crime",
@@ -13254,6 +13977,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹29 Crore",
+    "revenue": "₹420 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -13270,7 +13997,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suspense",
       "Cyberpunk"
     ],
-    "imdbRating": 8.6,
+    "imdbRating": 8.4,
     "rottenTomatoesScore": 93,
     "matchScore": 91,
     "synopsis": "A teenage girl in Madrid is haunted by a dark presence after using a Ouija board with friends.",
@@ -13279,16 +14006,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sandra Escacena",
       "Bruna González"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gEU2QvHOm5tJ7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "pyWuOrFRKQE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Horror masterclass directed by Paco Plaza.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Horror masterclass directed by Paco Plaza.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Horror masterpiece directed by Paco Plaza.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Horror masterpiece directed by Paco Plaza.",
     "similarTags": [
       "Paco",
       "Thriller",
@@ -13300,6 +14025,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹82 Crore",
+    "revenue": "₹251 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -13316,7 +14045,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Thriller",
       "Noir"
     ],
-    "imdbRating": 8.7,
+    "imdbRating": 8.5,
     "rottenTomatoesScore": 94,
     "matchScore": 92,
     "synopsis": "The survival story of a Uruguayan rugby team whose plane crashed in the Andes in 1972.",
@@ -13325,16 +14054,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Enzo Vogrincic",
       "Agustín Pardella"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3931w362g1vRPwTaxtgLR7Yjtyx.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "ol67qo3P4w8",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by J.A. Bayona.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by J.A. Bayona.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by J.A. Bayona.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by J.A. Bayona.",
     "similarTags": [
       "J.A.",
       "Biography",
@@ -13346,6 +14074,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹68 Crore",
+    "revenue": "₹277 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -13363,7 +14095,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "War",
       "Survival"
     ],
-    "imdbRating": 8.8,
+    "imdbRating": 8.6,
     "rottenTomatoesScore": 95,
     "matchScore": 93,
     "synopsis": "A French couple settles in a Galician village, facing severe hostility from their neighbors.",
@@ -13372,16 +14104,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Denis Ménochet",
       "Marina Foïs"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/y4FfVvL0G1HjX7P6L2U2T4g9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "PLl99DfYbY4",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Rodrigo Sorogoyen.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Drama masterclass directed by Rodrigo Sorogoyen.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Rodrigo Sorogoyen.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Rodrigo Sorogoyen.",
     "similarTags": [
       "Rodrigo",
       "Thriller",
@@ -13393,6 +14123,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹68 Crore",
+    "revenue": "₹307 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -13409,7 +14143,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Western",
       "Space"
     ],
-    "imdbRating": 8.9,
+    "imdbRating": 8.7,
     "rottenTomatoesScore": 96,
     "matchScore": 94,
     "synopsis": "A father fights to survive on the deserted streets of Barcelona after a mysterious force wipes out humanity.",
@@ -13418,16 +14152,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mario Casas",
       "Georgina Campbell"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vT3P1lqq7aW6g1sP3x7U6ZgL94H.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "8hP9D6kZseM",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Sci-Fi masterclass directed by David Pastor.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Sci-Fi masterclass directed by David Pastor.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Sci-Fi masterpiece directed by David Pastor.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Sci-Fi masterpiece directed by David Pastor.",
     "similarTags": [
       "David",
       "Thriller",
@@ -13439,6 +14171,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Spain",
+    "budget": "₹24 Crore",
+    "revenue": "₹193 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -13455,7 +14191,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Psychological",
       "Time Travel"
     ],
-    "imdbRating": 9,
+    "imdbRating": 8.8,
     "rottenTomatoesScore": 97,
     "matchScore": 95,
     "synopsis": "A man crosses into Mexico with a bag of cash, facing a shootout in a remote town.",
@@ -13464,16 +14200,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Scott Adkins",
       "Christian Slater"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9gk7adHYeCmqgl0wSy646V05g2e.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "pyWuOrFRKQE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from Spanish cinema. A high-quality Action masterclass directed by Eduardo Rodriguez.",
-    "whyRecommended": "Regal choice from Spanish cinema. A high-quality Action masterclass directed by Eduardo Rodriguez.",
+    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Action masterpiece directed by Eduardo Rodriguez.",
+    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Action masterpiece directed by Eduardo Rodriguez.",
     "similarTags": [
       "Eduardo",
       "Western",
@@ -13485,6 +14219,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "Spanish",
     "country": "Mexico",
+    "budget": "₹138 Crore",
+    "revenue": "₹115 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -13502,7 +14240,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Superhero",
       "Mystery Thriller"
     ],
-    "imdbRating": 7.5,
+    "imdbRating": 7.4,
     "rottenTomatoesScore": 80,
     "matchScore": 90,
     "synopsis": "A bubbly waitress in Paris decides to orchestrate the lives of people around her, falling in love.",
@@ -13511,16 +14249,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Audrey Tautou",
       "Mathieu Kassovitz"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/y4FfVvL0G1HjX7P6L2U2T4g9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "PLl99DfYbY4",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Comedy masterclass directed by Jean-Pierre Jeunet.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Comedy masterclass directed by Jean-Pierre Jeunet.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Comedy masterpiece directed by Jean-Pierre Jeunet.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Comedy masterpiece directed by Jean-Pierre Jeunet.",
     "similarTags": [
       "Jean-Pierre",
       "Romance",
@@ -13532,6 +14269,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹116 Crore",
+    "revenue": "₹365 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -13549,7 +14290,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suspense",
       "Cyberpunk"
     ],
-    "imdbRating": 7.6,
+    "imdbRating": 7.5,
     "rottenTomatoesScore": 81,
     "matchScore": 91,
     "synopsis": "An unlikely friendship forms between a wealthy quadriplegic aristocrat and his streetwise caregiver.",
@@ -13558,16 +14299,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "François Cluzet",
       "Omar Sy"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3931w362g1vRPwTaxtgLR7Yjtyx.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "s7EdQ4FqbhY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Comedy masterclass directed by Olivier Nakache.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Comedy masterclass directed by Olivier Nakache.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Comedy masterpiece directed by Olivier Nakache.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Comedy masterpiece directed by Olivier Nakache.",
     "similarTags": [
       "Olivier",
       "Drama",
@@ -13579,6 +14318,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹23 Crore",
+    "revenue": "₹192 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -13594,7 +14337,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Musical",
       "Thriller"
     ],
-    "imdbRating": 7.7,
+    "imdbRating": 7.6,
     "rottenTomatoesScore": 82,
     "matchScore": 92,
     "synopsis": "Three young friends from immigrant suburbs wander around Paris on the day after a riot.",
@@ -13603,16 +14346,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Vincent Cassel",
       "Hubert Koundé"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xZ2V2575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "O1tGxRRgly8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Drama masterclass directed by Mathieu Kassovitz.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Drama masterclass directed by Mathieu Kassovitz.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Mathieu Kassovitz.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Mathieu Kassovitz.",
     "similarTags": [
       "Mathieu",
       "Crime",
@@ -13624,6 +14365,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹29 Crore",
+    "revenue": "₹254 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -13640,7 +14385,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "War",
       "Survival"
     ],
-    "imdbRating": 7.8,
+    "imdbRating": 7.7,
     "rottenTomatoesScore": 83,
     "matchScore": 93,
     "synopsis": "A painter is hired to paint a wedding portrait of a young countess, forming an intimate bond.",
@@ -13649,16 +14394,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Noémie Merlant",
       "Adèle Haenel"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3931w362g1vRPwTaxtgLR7Yjtyx.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "O1tGxRRgly8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Romance masterclass directed by Céline Sciamma.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Romance masterclass directed by Céline Sciamma.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Romance masterpiece directed by Céline Sciamma.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Romance masterpiece directed by Céline Sciamma.",
     "similarTags": [
       "Céline",
       "Drama",
@@ -13670,6 +14413,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹29 Crore",
+    "revenue": "₹422 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -13686,7 +14433,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Western",
       "Space"
     ],
-    "imdbRating": 7.9,
+    "imdbRating": 7.8,
     "rottenTomatoesScore": 84,
     "matchScore": 94,
     "synopsis": "The life and relationship of a French girl who falls in love with a blue-haired art student.",
@@ -13695,16 +14442,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Léa Seydoux",
       "Adèle Exarchopoulos"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tWGB286uzSTHzFv2lFA4wz7v.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "CHekzSiZhsY",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Romance masterclass directed by Abdellatif Kechiche.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Romance masterclass directed by Abdellatif Kechiche.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Romance masterpiece directed by Abdellatif Kechiche.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Romance masterpiece directed by Abdellatif Kechiche.",
     "similarTags": [
       "Abdellatif",
       "Drama",
@@ -13716,6 +14462,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹85 Crore",
+    "revenue": "₹348 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -13731,7 +14481,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Psychological",
       "Time Travel"
     ],
-    "imdbRating": 8,
+    "imdbRating": 7.9,
     "rottenTomatoesScore": 85,
     "matchScore": 95,
     "synopsis": "A silent film star faces the transition to talking pictures in Hollywood, falling in love with a dancer.",
@@ -13740,16 +14490,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Jean Dujardin",
       "Bérénice Bejo"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "ByXuk9QqQkk",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Romance masterclass directed by Michel Hazanavicius.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Romance masterclass directed by Michel Hazanavicius.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Romance masterpiece directed by Michel Hazanavicius.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Romance masterpiece directed by Michel Hazanavicius.",
     "similarTags": [
       "Michel",
       "Comedy",
@@ -13761,6 +14509,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹95 Crore",
+    "revenue": "₹248 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -13777,7 +14529,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mystery Thriller",
       "Action"
     ],
-    "imdbRating": 8.1,
+    "imdbRating": 8,
     "rottenTomatoesScore": 86,
     "matchScore": 96,
     "synopsis": "A petty criminal steals a car, shoots an officer, and hides with an American journalism student.",
@@ -13786,16 +14538,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Jean-Paul Belmondo",
       "Jean Seberg"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9gk7adHYeCmqgl0wSy646V05g2e.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "bLvqoHBptjg",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Drama masterclass directed by Jean-Luc Godard.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Drama masterclass directed by Jean-Luc Godard.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Jean-Luc Godard.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Jean-Luc Godard.",
     "similarTags": [
       "Jean-Luc",
       "Crime",
@@ -13807,6 +14557,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹58 Crore",
+    "revenue": "₹107 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -13823,7 +14577,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Cyberpunk",
       "Adventure"
     ],
-    "imdbRating": 8.2,
+    "imdbRating": 8.1,
     "rottenTomatoesScore": 87,
     "matchScore": 97,
     "synopsis": "A young boy in Paris turns to petty crime and delinquency to escape his neglectful parents.",
@@ -13832,16 +14586,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Jean-Pierre Léaud",
       "Claire Maurier"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fIE3lAGuSS16rP24MSErSo8Y4gq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "4OiMTOKdKTE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Drama masterclass directed by François Truffaut.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Drama masterclass directed by François Truffaut.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by François Truffaut.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by François Truffaut.",
     "similarTags": [
       "François",
       "Crime",
@@ -13853,6 +14605,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹63 Crore",
+    "revenue": "₹64 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -13869,7 +14625,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Noir",
       "Animation"
     ],
-    "imdbRating": 8.3,
+    "imdbRating": 8.2,
     "rottenTomatoesScore": 88,
     "matchScore": 98,
     "synopsis": "A woman is accused of murder after her husband falls to his death in a remote chalet.",
@@ -13878,16 +14634,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sandra Hüller",
       "Swann Arlaud"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3931w362g1vRPwTaxtgLR7Yjtyx.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "zSWdZAZE3Dc",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Drama masterclass directed by Justine Triet.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Drama masterclass directed by Justine Triet.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Justine Triet.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Justine Triet.",
     "similarTags": [
       "Justine",
       "Crime",
@@ -13899,6 +14654,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹129 Crore",
+    "revenue": "₹232 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -13914,7 +14673,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Survival",
       "Anime"
     ],
-    "imdbRating": 8.4,
+    "imdbRating": 8.3,
     "rottenTomatoesScore": 89,
     "matchScore": 99,
     "synopsis": "A single father forms a bond with a killer whale trainer who lost her legs in an accident.",
@@ -13923,16 +14682,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Marion Cotillard",
       "Matthias Schoenaerts"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/A7sp0uquq3W3J7J3L3P7l9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Drama masterclass directed by Jacques Audiard.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Drama masterclass directed by Jacques Audiard.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Jacques Audiard.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Jacques Audiard.",
     "similarTags": [
       "Jacques",
       "Romance",
@@ -13944,6 +14701,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹50 Crore",
+    "revenue": "₹107 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -13961,7 +14722,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Space",
       "Biography"
     ],
-    "imdbRating": 8.5,
+    "imdbRating": 8.4,
     "rottenTomatoesScore": 90,
     "matchScore": 90,
     "synopsis": "An Algerian immigrant enters a French prison, rising to lead a powerful Corsican gang.",
@@ -13970,16 +14731,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Tahar Rahim",
       "Niels Arestrup"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fIE3lAGuSS16rP24MSErSo8Y4gq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "EXeTwQWrcwY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Crime masterclass directed by Jacques Audiard.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Crime masterclass directed by Jacques Audiard.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Crime masterpiece directed by Jacques Audiard.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Crime masterpiece directed by Jacques Audiard.",
     "similarTags": [
       "Jacques",
       "Drama",
@@ -13991,6 +14750,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹114 Crore",
+    "revenue": "₹289 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -14007,7 +14770,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Time Travel",
       "Comedy"
     ],
-    "imdbRating": 8.6,
+    "imdbRating": 8.5,
     "rottenTomatoesScore": 91,
     "matchScore": 91,
     "synopsis": "A dance troop's rehearsal turns into a hallucinatory nightmare after their sangria is spiked.",
@@ -14016,16 +14779,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sofia Boutella",
       "Romain Guillermic"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fIE3lAGuSS16rP24MSErSo8Y4gq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "ByXuk9QqQkk",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Horror masterclass directed by Gaspar Noé.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Horror masterclass directed by Gaspar Noé.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Horror masterpiece directed by Gaspar Noé.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Horror masterpiece directed by Gaspar Noé.",
     "similarTags": [
       "Gaspar",
       "Musical",
@@ -14037,6 +14798,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹77 Crore",
+    "revenue": "₹326 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -14054,7 +14819,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Action",
       "Crime"
     ],
-    "imdbRating": 8.7,
+    "imdbRating": 8.6,
     "rottenTomatoesScore": 92,
     "matchScore": 92,
     "synopsis": "A drug dealer is shot by the police in Tokyo, traveling through the city as a spirit.",
@@ -14063,16 +14828,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Nathaniel Brown",
       "Paz de la Huerta"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "ol67qo3P4w8",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Sci-Fi masterclass directed by Gaspar Noé.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Sci-Fi masterclass directed by Gaspar Noé.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Sci-Fi masterpiece directed by Gaspar Noé.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Sci-Fi masterpiece directed by Gaspar Noé.",
     "similarTags": [
       "Gaspar",
       "Drama",
@@ -14084,6 +14848,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹20 Crore",
+    "revenue": "₹155 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -14101,7 +14869,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Adventure",
       "Documentary"
     ],
-    "imdbRating": 8.8,
+    "imdbRating": 8.7,
     "rottenTomatoesScore": 93,
     "matchScore": 93,
     "synopsis": "A young vegetarian veterinary student develops a craving for raw meat after a hazing ritual.",
@@ -14110,16 +14878,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Garance Marillier",
       "Ella Rumpf"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fIE3lAGuSS16rP24MSErSo8Y4gq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "zSWdZAZE3Dc",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Horror masterclass directed by Julia Ducournau.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Horror masterclass directed by Julia Ducournau.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Horror masterpiece directed by Julia Ducournau.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Horror masterpiece directed by Julia Ducournau.",
     "similarTags": [
       "Julia",
       "Drama",
@@ -14131,6 +14897,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹33 Crore",
+    "revenue": "₹410 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -14147,7 +14917,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Animation",
       "Drama"
     ],
-    "imdbRating": 8.9,
+    "imdbRating": 8.8,
     "rottenTomatoesScore": 94,
     "matchScore": 94,
     "synopsis": "A serial killer who has a titanium plate in her skull takes the place of a firefighter's missing son.",
@@ -14156,16 +14926,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Vincent Lindon",
       "Agathe Rousselle"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xZ2V2575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "SEUXvca1i-g",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Horror masterclass directed by Julia Ducournau.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Horror masterclass directed by Julia Ducournau.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Horror masterpiece directed by Julia Ducournau.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Horror masterpiece directed by Julia Ducournau.",
     "similarTags": [
       "Julia",
       "Thriller",
@@ -14177,6 +14945,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹30 Crore",
+    "revenue": "₹397 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -14194,7 +14966,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Anime",
       "Family"
     ],
-    "imdbRating": 9,
+    "imdbRating": 8.9,
     "rottenTomatoesScore": 95,
     "matchScore": 95,
     "synopsis": "A boyfriend set out to exact revenge for a brutal assault on his lover in Paris.",
@@ -14203,16 +14975,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Monica Bellucci",
       "Vincent Cassel"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "4OiMTOKdKTE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Thriller masterclass directed by Gaspar Noé.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Thriller masterclass directed by Gaspar Noé.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Thriller masterpiece directed by Gaspar Noé.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Thriller masterpiece directed by Gaspar Noé.",
     "similarTags": [
       "Gaspar",
       "Drama",
@@ -14224,6 +14994,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹81 Crore",
+    "revenue": "₹344 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -14241,7 +15015,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Biography",
       "Fantasy"
     ],
-    "imdbRating": 9.1,
+    "imdbRating": 9,
     "rottenTomatoesScore": 96,
     "matchScore": 96,
     "synopsis": "A professional hitman is witnessed at a crime scene, escaping both the police and his employers.",
@@ -14250,16 +15024,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Alain Delon",
       "François Périer"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/y4FfVvL0G1HjX7P6L2U2T4g9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "vKQi3bBA1y8",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Crime masterclass directed by Jean-Pierre Melville.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Crime masterclass directed by Jean-Pierre Melville.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Crime masterpiece directed by Jean-Pierre Melville.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Crime masterpiece directed by Jean-Pierre Melville.",
     "similarTags": [
       "Jean-Pierre",
       "Thriller",
@@ -14271,6 +15044,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹53 Crore",
+    "revenue": "₹132 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -14287,7 +15064,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Comedy",
       "History"
     ],
-    "imdbRating": 9.2,
+    "imdbRating": 9.1,
     "rottenTomatoesScore": 97,
     "matchScore": 97,
     "synopsis": "Two friends fall in love with the same bohemian woman before and after the Great War.",
@@ -14296,16 +15073,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Jeanne Moreau",
       "Oskar Werner"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3931w362g1vRPwTaxtgLR7Yjtyx.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "ByXuk9QqQkk",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Romance masterclass directed by François Truffaut.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Romance masterclass directed by François Truffaut.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Romance masterpiece directed by François Truffaut.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Romance masterpiece directed by François Truffaut.",
     "similarTags": [
       "François",
       "Drama",
@@ -14317,6 +15092,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹61 Crore",
+    "revenue": "₹290 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -14334,7 +15113,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Crime",
       "Horror"
     ],
-    "imdbRating": 9.3,
+    "imdbRating": 9.2,
     "rottenTomatoesScore": 80,
     "matchScore": 98,
     "synopsis": "A young clown takes a job in an apartment building owned by a butcher who feeds tenants to others.",
@@ -14343,16 +15122,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Dominique Pinon",
       "Marie-Laure Dougnac"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/y4FfVvL0G1HjX7P6L2U2T4g9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "CHekzSiZhsY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Comedy masterclass directed by Marc Caro.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Comedy masterclass directed by Marc Caro.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Comedy masterpiece directed by Marc Caro.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Comedy masterpiece directed by Marc Caro.",
     "similarTags": [
       "Marc",
       "Sci-Fi",
@@ -14364,6 +15141,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹113 Crore",
+    "revenue": "₹176 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -14381,7 +15162,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Documentary",
       "Mystery"
     ],
-    "imdbRating": 9.4,
+    "imdbRating": 9.3,
     "rottenTomatoesScore": 81,
     "matchScore": 99,
     "synopsis": "A boarding school music teacher helps troubled students form a choir, changing their lives.",
@@ -14390,16 +15171,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Gérard Jugnot",
       "François Berléand"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f89U3wzZu0j7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "pyWuOrFRKQE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Drama masterclass directed by Christophe Barratier.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Drama masterclass directed by Christophe Barratier.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Christophe Barratier.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Christophe Barratier.",
     "similarTags": [
       "Christophe",
       "Musical",
@@ -14411,6 +15190,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹82 Crore",
+    "revenue": "₹433 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -14426,7 +15209,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Animation",
       "Musical"
     ],
-    "imdbRating": 7.5,
+    "imdbRating": 9.4,
     "rottenTomatoesScore": 82,
     "matchScore": 90,
     "synopsis": "An elderly couple faces a test of love when the wife suffers a series of strokes.",
@@ -14435,16 +15218,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Jean-Louis Trintignant",
       "Emmanuelle Riva"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/n5A76v92erglVw37B67ouYbqDES.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "ByXuk9QqQkk",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Drama masterclass directed by Michael Haneke.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Drama masterclass directed by Michael Haneke.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Michael Haneke.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Michael Haneke.",
     "similarTags": [
       "Michael",
       "Romance",
@@ -14456,6 +15238,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹23 Crore",
+    "revenue": "₹230 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -14473,7 +15259,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Family",
       "Romance"
     ],
-    "imdbRating": 7.6,
+    "imdbRating": 7.4,
     "rottenTomatoesScore": 83,
     "matchScore": 91,
     "synopsis": "A family receives mysterious videotapes showing their daily lives, suggesting a stalker.",
@@ -14482,16 +15268,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Daniel Auteuil",
       "Juliette Binoche"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/A7sp0uquq3W3J7J3L3P7l9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "zSWdZAZE3Dc",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Thriller masterclass directed by Michael Haneke.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Thriller masterclass directed by Michael Haneke.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Thriller masterpiece directed by Michael Haneke.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Thriller masterpiece directed by Michael Haneke.",
     "similarTags": [
       "Michael",
       "Mystery",
@@ -14503,6 +15287,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹105 Crore",
+    "revenue": "₹176 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -14519,7 +15307,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Fantasy",
       "Sci-Fi"
     ],
-    "imdbRating": 7.7,
+    "imdbRating": 7.5,
     "rottenTomatoesScore": 84,
     "matchScore": 92,
     "synopsis": "Two greedy farmers block a spring to force an immigrant tax collector off his land.",
@@ -14528,16 +15316,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Yves Montand",
       "Gérard Depardieu"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/y4FfVvL0G1HjX7P6L2U2T4g9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "vKQi3bBA1y8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Drama masterclass directed by Claude Berri.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Drama masterclass directed by Claude Berri.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Claude Berri.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Claude Berri.",
     "similarTags": [
       "Claude",
       "History",
@@ -14549,6 +15335,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹23 Crore",
+    "revenue": "₹406 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -14564,7 +15354,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Comedy",
       "Sports"
     ],
-    "imdbRating": 7.8,
+    "imdbRating": 7.6,
     "rottenTomatoesScore": 85,
     "matchScore": 93,
     "synopsis": "The daughter of Jean de Florette returns to exact revenge on the farmers who killed her father.",
@@ -14573,16 +15363,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Emmanuelle Béart",
       "Yves Montand"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f89U3wzZu0j7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "8hP9D6kZseM",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Drama masterclass directed by Claude Berri.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Drama masterclass directed by Claude Berri.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Claude Berri.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Claude Berri.",
     "similarTags": [
       "Claude",
       "History",
@@ -14594,6 +15382,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹84 Crore",
+    "revenue": "₹357 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -14611,7 +15403,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Horror",
       "Superhero"
     ],
-    "imdbRating": 7.9,
+    "imdbRating": 7.7,
     "rottenTomatoesScore": 86,
     "matchScore": 94,
     "synopsis": "The tragic biographical story of Edith Piaf, chronicling her rise from slums to iconic singer.",
@@ -14620,16 +15412,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Marion Cotillard",
       "Sylvie Testud"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/A7sp0uquq3W3J7J3L3P7l9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/iiX47ggig6nQYk1id8Yn1649t2T.jpg",
+    "trailerId": "EXeTwQWrcwY",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Drama masterclass directed by Olivier Dahan.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Drama masterclass directed by Olivier Dahan.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Olivier Dahan.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Olivier Dahan.",
     "similarTags": [
       "Olivier",
       "Biography",
@@ -14641,6 +15432,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹62 Crore",
+    "revenue": "₹79 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -14657,7 +15452,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mystery",
       "Suspense"
     ],
-    "imdbRating": 8,
+    "imdbRating": 7.8,
     "rottenTomatoesScore": 87,
     "matchScore": 95,
     "synopsis": "A wealthy young housewife decides to spend her weekday afternoons working in a brothel.",
@@ -14666,16 +15461,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Catherine Deneuve",
       "Jean Sorel"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "92a7Hj0ijLs",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Drama masterclass directed by Luis Buñuel.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Drama masterclass directed by Luis Buñuel.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Luis Buñuel.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Luis Buñuel.",
     "similarTags": [
       "Luis",
       "Romance",
@@ -14687,6 +15480,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹60 Crore",
+    "revenue": "₹115 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   },
   {
@@ -14703,7 +15500,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Drama",
       "Musical"
     ],
-    "imdbRating": 8.1,
+    "imdbRating": 7.9,
     "rottenTomatoesScore": 88,
     "matchScore": 96,
     "synopsis": "A successful video game executive hunts the masked intruder who assaulted her in her home.",
@@ -14712,16 +15509,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Isabelle Huppert",
       "Laurent Lafitte"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ArW2t575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "nfK6UgLra7w",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Thriller masterclass directed by Paul Verhoeven.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Thriller masterclass directed by Paul Verhoeven.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Thriller masterpiece directed by Paul Verhoeven.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Thriller masterpiece directed by Paul Verhoeven.",
     "similarTags": [
       "Paul",
       "Crime",
@@ -14733,6 +15528,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹71 Crore",
+    "revenue": "₹150 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -14750,7 +15549,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Romance",
       "War"
     ],
-    "imdbRating": 8.2,
+    "imdbRating": 8,
     "rottenTomatoesScore": 89,
     "matchScore": 97,
     "synopsis": "Twins travel to the Middle East to deliver letters to a father and brother they did not know existed.",
@@ -14759,16 +15558,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Lubna Azabal",
       "Mélissa Désormeaux-Poulin"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ArW2t575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "ByXuk9QqQkk",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Drama masterclass directed by Denis Villeneuve.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Drama masterclass directed by Denis Villeneuve.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Denis Villeneuve.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Denis Villeneuve.",
     "similarTags": [
       "Denis",
       "Mystery",
@@ -14780,6 +15577,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "Canada",
+    "budget": "₹99 Crore",
+    "revenue": "₹172 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -14796,7 +15597,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sci-Fi",
       "Western"
     ],
-    "imdbRating": 8.3,
+    "imdbRating": 8.1,
     "rottenTomatoesScore": 90,
     "matchScore": 98,
     "synopsis": "Monks in an Algerian monastery decide to stay despite threats from fundamentalist rebels.",
@@ -14805,16 +15606,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Lambert Wilson",
       "Michael Lonsdale"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gEU2QvHOm5tJ7jOI2u2tI3RjrnR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/xJHkw2BRii1w76v9y8z067W44w2.jpg",
+    "trailerId": "xU47nhruN-k",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Drama masterclass directed by Xavier Beauvois.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Drama masterclass directed by Xavier Beauvois.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Xavier Beauvois.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Xavier Beauvois.",
     "similarTags": [
       "Xavier",
       "History",
@@ -14826,6 +15626,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹106 Crore",
+    "revenue": "₹137 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -14843,7 +15647,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Sports",
       "Psychological"
     ],
-    "imdbRating": 8.4,
+    "imdbRating": 8.2,
     "rottenTomatoesScore": 91,
     "matchScore": 99,
     "synopsis": "An elderly woman searches for her grandson who was kidnapped by mafia during the Tour de France.",
@@ -14852,16 +15656,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Michel Robin",
       "Jean-Claude Donda"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTjBrw7oztv05n2jV1w6ALo8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "pyWuOrFRKQE",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Animation masterclass directed by Sylvain Chomet.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Animation masterclass directed by Sylvain Chomet.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Animation masterpiece directed by Sylvain Chomet.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Animation masterpiece directed by Sylvain Chomet.",
     "similarTags": [
       "Sylvain",
       "Comedy",
@@ -14873,6 +15675,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹94 Crore",
+    "revenue": "₹119 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "V Creations",
     "reviews": []
   },
   {
@@ -14890,7 +15696,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Superhero",
       "Mystery Thriller"
     ],
-    "imdbRating": 8.5,
+    "imdbRating": 8.3,
     "rottenTomatoesScore": 92,
     "matchScore": 90,
     "synopsis": "A young woman searches for her fiance who disappeared at the Somme during WWI.",
@@ -14899,16 +15705,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Audrey Tautou",
       "Gaspard Ulliel"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vT3P1lqq7aW6g1sP3x7U6ZgL94H.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/s3TBrRGB1K7GMC2P7SM1wVjwlNA.jpg",
+    "trailerId": "O1tGxRRgly8",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Romance masterclass directed by Jean-Pierre Jeunet.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Romance masterclass directed by Jean-Pierre Jeunet.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Romance masterpiece directed by Jean-Pierre Jeunet.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Romance masterpiece directed by Jean-Pierre Jeunet.",
     "similarTags": [
       "Jean-Pierre",
       "Drama",
@@ -14920,6 +15724,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹41 Crore",
+    "revenue": "₹186 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -14936,7 +15744,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Suspense",
       "Cyberpunk"
     ],
-    "imdbRating": 8.6,
+    "imdbRating": 8.4,
     "rottenTomatoesScore": 93,
     "matchScore": 91,
     "synopsis": "The real-life story of Jean-Dominique Bauby, who wrote his memoirs using only his left eyelid.",
@@ -14945,16 +15753,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Mathieu Amalric",
       "Emmanuelle Seigner"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3931w362g1vRPwTaxtgLR7Yjtyx.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/nMK42p1yW78K16Kx447775Hw5H.jpg",
+    "trailerId": "CHekzSiZhsY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Drama masterclass directed by Julian Schnabel.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Drama masterclass directed by Julian Schnabel.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Julian Schnabel.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Julian Schnabel.",
     "similarTags": [
       "Julian",
       "Biography",
@@ -14966,6 +15772,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹121 Crore",
+    "revenue": "₹264 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Filmax",
     "reviews": []
   },
   {
@@ -14981,7 +15791,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Thriller",
       "Noir"
     ],
-    "imdbRating": 8.7,
+    "imdbRating": 8.5,
     "rottenTomatoesScore": 94,
     "matchScore": 92,
     "synopsis": "A man travels around Paris in a limousine, adopting different roles and personas.",
@@ -14990,16 +15800,15 @@ export const MOVIES_DATABASE: Movie[] = [
       "Denis Lavant",
       "Edith Scob"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/y4FfVvL0G1HjX7P6L2U2T4g9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "ByXuk9QqQkk",
     "streamingOn": [
       "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Drama masterclass directed by Leos Carax.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Drama masterclass directed by Leos Carax.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Leos Carax.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Leos Carax.",
     "similarTags": [
       "Leos",
       "Fantasy",
@@ -15011,6 +15820,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹35 Crore",
+    "revenue": "₹188 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Moho Film",
     "reviews": []
   },
   {
@@ -15026,7 +15839,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "War",
       "Survival"
     ],
-    "imdbRating": 8.8,
+    "imdbRating": 8.6,
     "rottenTomatoesScore": 95,
     "matchScore": 93,
     "synopsis": "A teacher faces challenges while managing a diverse high school classroom in Paris.",
@@ -15035,16 +15848,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "François Bégaudeau",
       "Nassim Amrabt"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/n5A76v92erglVw37B67ouYbqDES.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "xU47nhruN-k",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Prime Video"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Drama masterclass directed by Laurent Cantet.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Drama masterclass directed by Laurent Cantet.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Laurent Cantet.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Laurent Cantet.",
     "similarTags": [
       "Laurent",
       "Family",
@@ -15056,6 +15867,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹38 Crore",
+    "revenue": "₹333 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Sun Pictures",
     "reviews": []
   },
   {
@@ -15072,7 +15887,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Western",
       "Space"
     ],
-    "imdbRating": 8.9,
+    "imdbRating": 8.7,
     "rottenTomatoesScore": 96,
     "matchScore": 94,
     "synopsis": "A marriage disintegrates during the production of a film adaptation of the Odyssey.",
@@ -15081,16 +15896,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Brigitte Bardot",
       "Michel Piccoli"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y015tIOCz4YCh0kTCe9zfwR65.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/Ab8Zbqc4tEC6e2w7Vu6Ur9bgVZZ.jpg",
+    "trailerId": "s7EdQ4FqbhY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
       "Max"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Drama masterclass directed by Jean-Luc Godard.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Drama masterclass directed by Jean-Luc Godard.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Jean-Luc Godard.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Jean-Luc Godard.",
     "similarTags": [
       "Jean-Luc",
       "Romance",
@@ -15102,6 +15915,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "France",
+    "budget": "₹39 Crore",
+    "revenue": "₹240 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "KRG Studios",
     "reviews": []
   },
   {
@@ -15118,7 +15935,7 @@ export const MOVIES_DATABASE: Movie[] = [
       "Psychological",
       "Time Travel"
     ],
-    "imdbRating": 9,
+    "imdbRating": 8.8,
     "rottenTomatoesScore": 97,
     "matchScore": 95,
     "synopsis": "A Western-inspired drama set in Belgium featuring traditional cowboy culture.",
@@ -15127,16 +15944,14 @@ export const MOVIES_DATABASE: Movie[] = [
       "Michael Pas",
       "Babette van Veen"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "trailerId": "Ki4haFrqSrw",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ArW2t575yYc2G9MY5346292.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/original/hiK5Wv594OI3Hq14704o8h2a3PM.jpg",
+    "trailerId": "EXeTwQWrcwY",
     "streamingOn": [
-      "Netflix",
-      "Prime Video",
-      "Max"
+      "Disney+"
     ],
-    "aiReasoning": "Regal choice from French cinema. A high-quality Drama masterclass directed by Robbe De Hert.",
-    "whyRecommended": "Regal choice from French cinema. A high-quality Drama masterclass directed by Robbe De Hert.",
+    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Robbe De Hert.",
+    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Robbe De Hert.",
     "similarTags": [
       "Robbe",
       "Western",
@@ -15148,6 +15963,10 @@ export const MOVIES_DATABASE: Movie[] = [
     ],
     "language": "French",
     "country": "Belgium",
+    "budget": "₹78 Crore",
+    "revenue": "₹231 Crore",
+    "tagline": "An unforgettable cinematic journey.",
+    "productionCompany": "Studio Ghibli",
     "reviews": []
   }
 ];

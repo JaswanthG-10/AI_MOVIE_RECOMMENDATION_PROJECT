@@ -38,7 +38,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({
       className="glass-card rounded-xl overflow-hidden group cursor-pointer flex flex-col relative w-full h-full"
     >
       {/* === HERO POSTER IMAGE === */}
-      <div className="relative aspect-[2/3] w-full overflow-hidden bg-[#0B0A0C] shrink-0">
+      <div className="relative aspect-[2/3] w-full overflow-hidden bg-[#060813] shrink-0">
         <img
           src={movie.posterUrl}
           alt={movie.title}
@@ -50,7 +50,7 @@ export const MovieCard: React.FC<MovieCardProps> = ({
         <div
           className="absolute inset-0 opacity-80 group-hover:opacity-60 transition-opacity duration-300"
           style={{
-            background: "linear-gradient(to top, #0B0A0C 0%, rgba(18, 17, 21, 0.3) 60%, transparent 100%)",
+            background: "linear-gradient(to top, #060813 0%, rgba(6, 8, 19, 0.3) 60%, transparent 100%)",
           }}
         />
 
@@ -69,12 +69,12 @@ export const MovieCard: React.FC<MovieCardProps> = ({
           <div
             className="flex items-center gap-1 px-2 py-0.5 rounded-md"
             style={{
-              background: "rgba(11, 10, 12, 0.85)",
-              border: "1px solid rgba(212, 175, 106, 0.35)",
+              background: "rgba(6, 8, 19, 0.85)",
+              border: "1px solid rgba(236, 72, 153, 0.35)",
             }}
           >
-            <Star className="w-2.5 h-2.5 fill-[#D4AF6A] text-[#D4AF6A]" />
-            <span className="font-mono-num text-[10px] font-bold text-[#D4AF6A]">
+            <Star className="w-2.5 h-2.5 fill-[#EC4899] text-[#EC4899]" />
+            <span className="font-mono-num text-[10px] font-bold text-[#F1F3FA]">
               {movie.imdbRating}
             </span>
           </div>
@@ -85,11 +85,11 @@ export const MovieCard: React.FC<MovieCardProps> = ({
           <div
             className="w-11 h-11 rounded-full flex items-center justify-center shadow-xl scale-90 group-hover:scale-100 transition-transform duration-300"
             style={{
-              background: "linear-gradient(135deg, #D4AF6A, #E8C27D)",
-              boxShadow: "0 0 24px rgba(212, 175, 106, 0.5)",
+              background: "linear-gradient(135deg, #2563EB, #EC4899)",
+              boxShadow: "0 0 24px rgba(236, 72, 153, 0.5)",
             }}
           >
-            <Play className="w-4 h-4 ml-0.5 fill-[#0B0A0C] text-[#0B0A0C]" />
+            <Play className="w-4 h-4 ml-0.5 fill-[#F1F3FA] text-[#F1F3FA]" />
           </div>
         </div>
 
@@ -98,9 +98,9 @@ export const MovieCard: React.FC<MovieCardProps> = ({
           <span
             className="font-mono-num text-[8px] font-semibold px-1.5 py-0.5 rounded"
             style={{
-              background: "rgba(18, 17, 21, 0.8)",
-              color: "#C5C2B9",
-              border: "1px solid rgba(212, 175, 106, 0.15)",
+              background: "rgba(17, 21, 48, 0.8)",
+              color: "#B0B6D0",
+              border: "1px solid rgba(37, 99, 235, 0.25)",
             }}
           >
             {movie.language.toUpperCase()}
@@ -109,21 +109,21 @@ export const MovieCard: React.FC<MovieCardProps> = ({
       </div>
 
       {/* === CARD BODY (Poster-Forward Title & Info) === */}
-      <div className="p-3.5 flex flex-col gap-2 flex-1 justify-between bg-[#121115]/90">
+      <div className="p-3.5 flex flex-col gap-2 flex-1 justify-between bg-[#111530]/90">
         <div className="space-y-1">
           {/* Year and runtime */}
-          <div className="flex items-center justify-between text-[10px] font-mono-num text-[#87847B]">
+          <div className="flex items-center justify-between text-[10px] font-mono-num text-[#B0B6D0]">
             <span>{movie.year}</span>
             <div className="flex items-center gap-1">
-              <Clock className="w-2.5 h-2.5" />
+              <Clock className="w-2.5 h-2.5 text-[#2563EB]" />
               <span>{movie.runtime}</span>
             </div>
           </div>
 
           {/* Title */}
           <h3
-            className="font-heading text-base leading-snug line-clamp-1 group-hover:text-[#D4AF6A] transition-colors"
-            style={{ color: "#F7F5F0" }}
+            className="font-heading text-base leading-snug line-clamp-1 group-hover:text-[#EC4899] transition-colors"
+            style={{ color: "#F1F3FA" }}
           >
             {movie.title}
           </h3>
@@ -135,9 +135,9 @@ export const MovieCard: React.FC<MovieCardProps> = ({
                 key={genre}
                 className="text-[9px] font-body px-1.5 py-0.5 rounded"
                 style={{
-                  background: "rgba(36, 34, 41, 0.6)",
-                  color: "#C5C2B9",
-                  border: "1px solid #33303A",
+                  background: "rgba(17, 21, 48, 0.6)",
+                  color: "#B0B6D0",
+                  border: "1px solid rgba(37, 99, 235, 0.15)",
                 }}
               >
                 {genre}
@@ -151,12 +151,12 @@ export const MovieCard: React.FC<MovieCardProps> = ({
           <div
             className="p-2 rounded-lg flex gap-1.5 text-[10px] italic leading-relaxed"
             style={{
-              background: "rgba(122, 46, 58, 0.08)",
-              border: "1px solid rgba(122, 46, 58, 0.25)",
-              color: "#C5C2B9",
+              background: "rgba(236, 72, 153, 0.08)",
+              border: "1px solid rgba(236, 72, 153, 0.25)",
+              color: "#B0B6D0",
             }}
           >
-            <Sparkles className="w-3 h-3 text-[#E8C27D] shrink-0 mt-0.5" />
+            <Sparkles className="w-3 h-3 text-[#EC4899] shrink-0 mt-0.5" />
             <p className="line-clamp-2">
               "{movie.aiReasoning}"
             </p>
@@ -164,13 +164,13 @@ export const MovieCard: React.FC<MovieCardProps> = ({
         )}
 
         {/* Action bar */}
-        <div className="flex items-center justify-between pt-2 mt-1 border-t border-[#33303A]/60">
+        <div className="flex items-center justify-between pt-2 mt-1 border-t border-[#2563EB]/15">
           <button
             onClick={(e) => {
               e.stopPropagation();
               onSelectMovie(movie);
             }}
-            className="text-[10px] font-heading text-[#D4AF6A] hover:text-[#E8C27D] flex items-center gap-1 transition-colors"
+            className="text-[10px] font-heading text-[#60A5FA] hover:text-[#EC4899] flex items-center gap-1 transition-colors"
           >
             <Play className="w-2.5 h-2.5 fill-current" /> Watch Details
           </button>
@@ -183,11 +183,11 @@ export const MovieCard: React.FC<MovieCardProps> = ({
                 if (onToggleWatchlist) onToggleWatchlist(movie);
               }}
               title={isWatchlisted ? "Remove from Watchlist" : "Save to Watchlist"}
-              className="p-1.5 rounded-md transition-all cursor-pointer"
+              className="p-1.5 rounded-md transition-all cursor-pointer animate-in zoom-in-95 duration-100"
               style={{
-                background: isWatchlisted ? "rgba(212, 175, 106, 0.15)" : "rgba(36, 34, 41, 0.6)",
-                border: `1px solid ${isWatchlisted ? "rgba(212, 175, 106, 0.4)" : "#33303A"}`,
-                color: isWatchlisted ? "#D4AF6A" : "#87847B",
+                background: isWatchlisted ? "rgba(236, 72, 153, 0.15)" : "rgba(17, 21, 48, 0.6)",
+                border: `1px solid ${isWatchlisted ? "rgba(236, 72, 153, 0.4)" : "rgba(37, 99, 235, 0.15)"}`,
+                color: isWatchlisted ? "#EC4899" : "#6A7194",
               }}
             >
               <Bookmark className={`w-3 h-3 ${isWatchlisted ? "fill-current" : ""}`} />
@@ -202,9 +202,9 @@ export const MovieCard: React.FC<MovieCardProps> = ({
               title="Like"
               className="p-1.5 rounded-md transition-all cursor-pointer"
               style={{
-                background: liked ? "rgba(122, 46, 58, 0.15)" : "rgba(36, 34, 41, 0.6)",
-                border: `1px solid ${liked ? "rgba(122, 46, 58, 0.4)" : "#33303A"}`,
-                color: liked ? "#E8C27D" : "#87847B",
+                background: liked ? "rgba(236, 72, 153, 0.15)" : "rgba(17, 21, 48, 0.6)",
+                border: `1px solid ${liked ? "rgba(236, 72, 153, 0.4)" : "rgba(37, 99, 235, 0.15)"}`,
+                color: liked ? "#EC4899" : "#6A7194",
               }}
             >
               <Heart className={`w-3 h-3 ${liked ? "fill-current" : ""}`} />
@@ -216,12 +216,12 @@ export const MovieCard: React.FC<MovieCardProps> = ({
               title="Share"
               className="p-1.5 rounded-md transition-all relative cursor-pointer"
               style={{
-                background: "rgba(36, 34, 41, 0.6)",
-                border: "1px solid #33303A",
-                color: copied ? "#D4AF6A" : "#87847B",
+                background: "rgba(17, 21, 48, 0.6)",
+                border: "1px solid rgba(37, 99, 235, 0.15)",
+                color: copied ? "#EC4899" : "#6A7194",
               }}
             >
-              {copied ? <CheckCheck className="w-3 h-3 text-[#D4AF6A]" /> : <Share2 className="w-3 h-3" />}
+              {copied ? <CheckCheck className="w-3 h-3 text-[#EC4899]" /> : <Share2 className="w-3 h-3" />}
             </button>
           </div>
         </div>

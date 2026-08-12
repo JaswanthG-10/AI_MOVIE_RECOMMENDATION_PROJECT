@@ -64,10 +64,10 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
   const heroMovie     = movies[0] || MOVIES_DATABASE[0];
   const popularTamil  = MOVIES_DATABASE.filter((m) => m.language === "Tamil");
   const topRated      = [...movies].sort((a, b) => b.imdbRating - a.imdbRating).slice(0, 12);
-  const lcuCollection = MOVIES_DATABASE.filter((m) => m.collection === "Lokesh Cinematic Universe");
+  const lcuCollection = MOVIES_DATABASE.filter((m) => m.director === "Lokesh Kanagaraj");
   const oscarWinners  = MOVIES_DATABASE.filter((m) => m.isOscarWinner);
   const trending      = [...movies].filter((m) => m.matchScore >= 95).slice(0, 10);
-  const nolanFilms    = MOVIES_DATABASE.filter((m) => m.collection === "Christopher Nolan Collection");
+  const nolanFilms    = MOVIES_DATABASE.filter((m) => m.director === "Christopher Nolan");
 
   return (
     <div className="space-y-16 p-6 sm:p-10 max-w-[1600px] mx-auto" style={{ background: 'transparent' }}>
@@ -99,9 +99,9 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
         <div className="relative z-10 p-8 sm:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-10 min-h-[350px]">
           {/* Left: Text */}
           <div className="space-y-5 max-w-2xl stagger-1 animate-fade-up">
-            <div className="badge-amber" style={{ boxShadow: '0 0 20px rgba(212,175,55,0.1)' }}>
+            <div className="badge-amber" style={{ boxShadow: '0 0 20px rgba(37,99,235,0.15)' }}>
               <Sparkles className="w-3 h-3 animate-pulse" />
-              Aether Spotlight Feature
+              Lumina AI Spotlight Feature
             </div>
 
             <h2 className="font-heading text-4xl sm:text-6xl text-[#F7F5F0] leading-none tracking-tight">

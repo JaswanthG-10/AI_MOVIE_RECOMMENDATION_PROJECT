@@ -40,7 +40,7 @@ export default function Home() {
   const watchlistMovies = MOVIES_DATABASE.filter((m) => watchlistIds.includes(m.id));
 
   return (
-    <div className="min-h-screen flex font-body" style={{ background: "#0B0A0C", color: "#F7F5F0" }}>
+    <div className="min-h-screen flex font-body" style={{ background: "#060813", color: "#F1F3FA" }}>
       {/* Collapsible Left Sidebar */}
       <Sidebar
         activeTab={activeTab}
@@ -127,6 +127,7 @@ export default function Home() {
           onClose={() => setSelectedMovie(null)}
           onToggleWatchlist={handleToggleWatchlist}
           isWatchlisted={watchlistIds.includes(selectedMovie.id)}
+          onSelectMovie={setSelectedMovie}
         />
       )}
 
