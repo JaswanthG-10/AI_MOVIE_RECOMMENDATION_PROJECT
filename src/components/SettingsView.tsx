@@ -59,9 +59,7 @@ export const SettingsView: React.FC = () => {
           {[
             { id: "general", label: "General", icon: Globe },
             { id: "recommendations", label: "Recommendations", icon: Sliders },
-            { id: "notifications", label: "Notifications", icon: Bell },
             { id: "playback", label: "Playback", icon: Tv },
-            { id: "privacy", label: "Privacy & Data", icon: Shield },
             { id: "account", label: "Account Profile", icon: User }
           ].map((item) => {
             const Icon = item.icon;

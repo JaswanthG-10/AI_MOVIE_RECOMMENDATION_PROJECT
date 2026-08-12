@@ -115,7 +115,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
       <div className="flex-1 overflow-y-auto p-3.5 space-y-1.5 scrollbar-none overflow-x-visible">
         {!isCollapsed && (
           <p className="font-mono-num text-[9px] text-[#6A7194] uppercase tracking-[0.2em] px-3 pb-2.5">
-            Lumina Engine
+            Discover Vault
           </p>
         )}
 
