@@ -25,7 +25,11 @@ export default function Home() {
   const [trailerId, setTrailerId] = useState<string | null>(null);
   const [isSpinWheelOpen, setIsSpinWheelOpen] = useState<boolean>(false);
   const [isComparisonOpen, setIsComparisonOpen] = useState<boolean>(false);
-  const [watchlistIds, setWatchlistIds] = useState<string[]>(["vikram", "inception", "interstellar"]);
+  const [watchlistIds, setWatchlistIds] = useState<string[]>([
+    "tamil-vikram",
+    "english-inception",
+    "english-interstellar"
+  ]);
 
   const handleToggleWatchlist = (movie: Movie) => {
     setWatchlistIds((prev) =>
@@ -36,7 +40,7 @@ export default function Home() {
   const watchlistMovies = MOVIES_DATABASE.filter((m) => watchlistIds.includes(m.id));
 
   return (
-    <div className="min-h-screen bg-[#0F1220] text-[#F2F0E6] flex font-sora">
+    <div className="min-h-screen flex font-body" style={{ background: "#0B0A0C", color: "#F7F5F0" }}>
       {/* Collapsible Left Sidebar */}
       <Sidebar
         activeTab={activeTab}

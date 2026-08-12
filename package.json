@@ -6,7 +6,8 @@
     "dev": "next dev --webpack",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "validate": "npx tsx src/scripts/validate-movies.ts"
   },
   "dependencies": {
     "clsx": "^2.1.1",

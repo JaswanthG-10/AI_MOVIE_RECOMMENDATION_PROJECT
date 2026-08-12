@@ -1,41 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Sora:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Manrope:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
 /* ============================================================
-   LUMINA AI — ROYAL DESIGN SYSTEM
-   Imperial Purple · Royal Gold · Deep Velvet
+   AETHER/LUMINA — CINEMA PREMIERE DESIGN SYSTEM
+   Warm Charcoal · Golden Amber · Velvet Burgundy
    ============================================================ */
 
 @layer base {
 
-  /* --- Royal Color Tokens --- */
+  /* --- Design Tokens (CSS Variables) --- */
   :root {
     /* === BASE SURFACES === */
-    --bg:         #07050F;   /* Deep cosmic black-purple */
-    --surface:    #0D0A1E;   /* Royal velvet base */
-    --surface-2:  #130F2A;   /* Deep imperial purple */
-    --surface-3:  #1A1438;   /* Rich violet */
-    --hairline:   #2E2456;   /* Subtle royal border */
+    --bg:         #0B0A0C;   /* Deep charcoal-black */
+    --surface:    #121115;   /* Warm dark charcoal */
+    --surface-2:  #1A191E;   /* Warm grey-charcoal */
+    --surface-3:  #242229;   /* Lighter warm grey */
+    --hairline:   #33303A;   /* Soft warm border */
 
     /* === TEXT === */
-    --text:       #F0ECFF;   /* Cool lavender white */
-    --text-dim:   #B8AEDD;   /* Muted violet-grey */
-    --text-faint: #7A6FA8;   /* Faint purple-grey */
+    --text:       #F7F5F0;   /* Warm off-white */
+    --text-dim:   #C5C2B9;   /* Muted warm grey */
+    --text-faint: #87847B;   /* Faint warm grey */
 
-    /* === ROYAL ACCENTS === */
-    --gold:       #D4AF37;   /* True royal gold */
-    --gold-light: #F0D060;   /* Bright gold highlight */
-    --violet:     #9333EA;   /* Imperial violet */
-    --violet-dim: #6D28D9;   /* Deep violet */
-    --ruby:       #C2185B;   /* Royal ruby / crimson */
-    --sapphire:   #1565C0;   /* Deep royal blue */
-    --emerald:    #00897B;   /* Rich jewel emerald */
+    /* === ACCENTS === */
+    --gold:       #D4AF6A;   /* Warm gold */
+    --gold-light: #E8C27D;   /* Amber gold */
+    --burgundy:   #7A2E3A;   /* Deep wine burgundy */
+    --burgundy-light: #9B3B4A; /* Bright burgundy */
+    --ruby:       #C2185B;
+    --sapphire:   #1A2F4C;
+    --emerald:    #1D4A3E;
 
-    /* Legacy aliases so components still compile */
+    /* Aliases for compatibility */
     --amber:      var(--gold);
-    --teal:       var(--emerald);
-    --clay:       var(--ruby);
-    --purple:     var(--violet);
+    --teal:       var(--burgundy);
+    --clay:       var(--burgundy-light);
+    --purple:     var(--burgundy);
 
     /* === MOTION TOKENS === */
     --dur-fast:   140ms;
@@ -50,8 +50,8 @@
     --r-lg:  20px;
 
     /* === FONTS === */
-    --font-heading: 'Oswald', sans-serif;
-    --font-body:    'Sora', sans-serif;
+    --font-heading: 'Fraunces', serif;
+    --font-body:    'Manrope', sans-serif;
     --font-mono:    'IBM Plex Mono', monospace;
   }
 
@@ -61,11 +61,11 @@
 
   body {
     background-color: var(--bg);
-    /* Royal radial ambient glow */
+    /* Warm radial ambient spotlight glow */
     background-image:
-      radial-gradient(ellipse 80% 50% at 20% 10%,  rgba(147, 51, 234, 0.08) 0%, transparent 60%),
-      radial-gradient(ellipse 60% 40% at 80% 90%,  rgba(212, 175, 55, 0.06) 0%, transparent 60%),
-      radial-gradient(ellipse 100% 80% at 50% 50%, rgba(7, 5, 15, 1) 40%, transparent 100%);
+      radial-gradient(ellipse 70% 40% at 30% 10%, rgba(212, 175, 106, 0.05) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 80% 90%, rgba(122, 46, 58, 0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 100% 80% at 50% 50%, var(--bg) 50%, transparent 100%);
     color: var(--text);
     font-family: var(--font-body);
     overflow-x: hidden;
@@ -75,9 +75,9 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
+    font-weight: 700;
+    text-transform: none; /* Serif looks best in title case */
+    letter-spacing: -0.01em;
   }
 }
 
@@ -90,30 +90,30 @@
 .font-sora     { font-family: var(--font-body); }
 
 /* ============================================================
-   GLASSMORPHISM — ROYAL EDITION
+   GLASSMORPHISM — CINEMA PREMIERE
    ============================================================ */
 
-/* Sidebar / modal panels */
+/* Base glass panel (warm tint) */
 .glass-panel {
-  background: rgba(13, 10, 30, 0.92);
-  backdrop-filter: blur(28px) saturate(1.6);
-  -webkit-backdrop-filter: blur(28px) saturate(1.6);
-  border: 1px solid rgba(147, 51, 234, 0.18);
+  background: rgba(18, 17, 21, 0.90);
+  backdrop-filter: blur(28px) saturate(1.2);
+  -webkit-backdrop-filter: blur(28px) saturate(1.2);
+  border: 1px solid rgba(212, 175, 106, 0.12);
   box-shadow:
-    0 0 0 1px rgba(212, 175, 55, 0.04) inset,
-    0 24px 64px rgba(0, 0, 0, 0.7),
-    0 0 80px rgba(147, 51, 234, 0.06);
+    0 0 0 1px rgba(255, 255, 255, 0.01) inset,
+    0 24px 64px rgba(0, 0, 0, 0.8),
+    0 0 80px rgba(212, 175, 106, 0.02);
 }
 
-/* Movie cards */
+/* Movie card glass */
 .glass-card {
-  background: linear-gradient(145deg, rgba(19, 15, 42, 0.85), rgba(26, 20, 56, 0.6));
-  backdrop-filter: blur(18px) saturate(1.3);
-  -webkit-backdrop-filter: blur(18px) saturate(1.3);
-  border: 1px solid rgba(46, 36, 86, 0.8);
+  background: linear-gradient(180deg, rgba(26, 25, 30, 0.75), rgba(18, 17, 21, 0.85));
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 106, 0.08);
   box-shadow:
-    0 4px 20px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(147, 51, 234, 0.04) inset;
+    0 4px 20px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.01) inset;
   transition:
     transform var(--dur-base) var(--ease-em),
     border-color var(--dur-base) var(--ease-std),
@@ -121,20 +121,20 @@
 }
 
 .glass-card:hover {
-  border-color: rgba(212, 175, 55, 0.4);
+  border-color: rgba(212, 175, 106, 0.35);
   box-shadow:
-    0 16px 56px rgba(0, 0, 0, 0.7),
-    0 0 40px rgba(212, 175, 55, 0.10),
-    0 0 0 1px rgba(212, 175, 55, 0.15) inset;
+    0 16px 48px rgba(0, 0, 0, 0.8),
+    0 0 32px rgba(212, 175, 106, 0.06),
+    0 0 0 1px rgba(212, 175, 106, 0.12) inset;
   transform: translateY(-3px);
 }
 
-/* Search input */
+/* Search input glass */
 .glass-input {
-  background: rgba(13, 10, 30, 0.95);
+  background: rgba(18, 17, 21, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(46, 36, 86, 0.9);
+  border: 1px solid rgba(212, 175, 106, 0.12);
   transition: border-color var(--dur-fast) var(--ease-std),
               box-shadow var(--dur-fast) var(--ease-std);
 }
@@ -142,45 +142,44 @@
 .glass-input:focus {
   border-color: var(--gold);
   box-shadow:
-    0 0 0 3px rgba(212, 175, 55, 0.12),
-    0 0 24px rgba(212, 175, 55, 0.08);
+    0 0 0 3px rgba(212, 175, 106, 0.12),
+    0 0 24px rgba(212, 175, 106, 0.08);
   outline: none;
 }
 
 /* ============================================================
-   ROYAL GRADIENTS & GLOW
+   ACCENTS & GRADIENTS
    ============================================================ */
 
-/* Primary heading gradient: Gold → Violet */
+/* Primary: Warm Gold gradient */
 .text-gradient-amber {
-  background: linear-gradient(135deg, #D4AF37 0%, #F0D060 45%, #D4AF37 100%);
+  background: linear-gradient(135deg, #D4AF6A 0%, #E8C27D 50%, #D4AF6A 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Secondary: Violet → Sapphire */
+/* Secondary: Burgundy/Wine */
 .text-gradient-teal {
-  background: linear-gradient(135deg, #9333EA 0%, #C084FC 50%, #6D28D9 100%);
+  background: linear-gradient(135deg, #7A2E3A 0%, #9B3B4A 50%, #7A2E3A 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Hero: Gold → Violet → Sapphire */
+/* Gold to Burgundy */
 .text-gradient {
-  background: linear-gradient(135deg, #D4AF37 0%, #9333EA 50%, #1565C0 100%);
+  background: linear-gradient(135deg, #D4AF6A 0%, #7A2E3A 60%, #1A191E 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.glow-gold    { box-shadow: 0 0 36px rgba(212, 175, 55,  0.45); }
-.glow-violet  { box-shadow: 0 0 36px rgba(147, 51,  234, 0.45); }
-.glow-ruby    { box-shadow: 0 0 36px rgba(194, 24,  91,  0.40); }
+.glow-gold      { box-shadow: 0 0 36px rgba(212, 175, 106, 0.35); }
+.glow-burgundy  { box-shadow: 0 0 36px rgba(122, 46, 58, 0.35); }
 
 /* ============================================================
-   ANIMATED GRADIENT BORDER (AI Focus Ring) — Royal Edition
+   ANIMATED GRADIENT BORDER (AI Focus Ring) — Gold/Burgundy
    ============================================================ */
 .ai-border { position: relative; }
 .ai-border::before {
@@ -189,34 +188,34 @@
   inset: -1px;
   border-radius: inherit;
   background: linear-gradient(90deg,
-    #D4AF37, #9333EA, #C2185B, #1565C0, #D4AF37
+    #D4AF6A, #7A2E3A, #E8C27D, #9B3B4A, #D4AF6A
   );
   background-size: 400% 100%;
-  animation: royal-border 5s linear infinite;
+  animation: cinema-border 6s linear infinite;
   z-index: -1;
   opacity: 0;
   transition: opacity var(--dur-base) var(--ease-std);
 }
 .ai-border:focus-within::before { opacity: 1; }
 
-@keyframes royal-border {
+@keyframes cinema-border {
   0%   { background-position: 0% 50%; }
   100% { background-position: 400% 50%; }
 }
 
 /* ============================================================
-   ROLL-ON ENTRANCE ANIMATIONS
+   ROLL-ON ANIMATIONS
    ============================================================ */
 @keyframes roll-on {
-  from { opacity: 0; transform: translateY(22px) scale(0.97); }
+  from { opacity: 0; transform: translateY(18px) scale(0.98); }
   to   { opacity: 1; transform: translateY(0)    scale(1); }
 }
 @keyframes roll-on-left {
-  from { opacity: 0; transform: translateX(-28px); }
+  from { opacity: 0; transform: translateX(-20px); }
   to   { opacity: 1; transform: translateX(0); }
 }
 @keyframes fade-up {
-  from { opacity: 0; transform: translateY(14px); }
+  from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 @keyframes shimmer {
@@ -224,12 +223,8 @@
   to   { background-position:  200% center; }
 }
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 14px rgba(212,175,55,0.5); }
-  50%       { box-shadow: 0 0 32px rgba(212,175,55,0.9); }
-}
-@keyframes royal-pulse {
-  0%, 100% { box-shadow: 0 0 20px rgba(147,51,234,0.4); }
-  50%       { box-shadow: 0 0 48px rgba(147,51,234,0.8); }
+  0%, 100% { box-shadow: 0 0 12px rgba(212, 175, 106, 0.3); }
+  50%       { box-shadow: 0 0 24px rgba(212, 175, 106, 0.6); }
 }
 @keyframes spin-slow {
   from { transform: rotate(0deg); }
@@ -237,48 +232,47 @@
 }
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-10px); }
+  50%       { transform: translateY(-8px); }
 }
 
 .animate-roll-on    { animation: roll-on var(--dur-slow) var(--ease-em) both; }
 .animate-fade-up    { animation: fade-up var(--dur-base) var(--ease-em) both; }
 .animate-roll-left  { animation: roll-on-left var(--dur-base) var(--ease-em) both; }
 .animate-pulse-glow { animation: pulse-glow 2.5s ease-in-out infinite; }
-.animate-royal-pulse{ animation: royal-pulse 2.5s ease-in-out infinite; }
 .animate-spin-slow  { animation: spin-slow 8s linear infinite; }
 .animate-float      { animation: float 4s ease-in-out infinite; }
 
-.stagger-1 { animation-delay:  60ms; }
-.stagger-2 { animation-delay: 120ms; }
-.stagger-3 { animation-delay: 180ms; }
-.stagger-4 { animation-delay: 240ms; }
-.stagger-5 { animation-delay: 300ms; }
+.stagger-1 { animation-delay:  50ms; }
+.stagger-2 { animation-delay: 100ms; }
+.stagger-3 { animation-delay: 150ms; }
+.stagger-4 { animation-delay: 200ms; }
+.stagger-5 { animation-delay: 250ms; }
 
 /* ============================================================
-   MATCH DIAL — Royal Gold conic ring
+   MATCH DIAL — Gold Conic progress ring
    ============================================================ */
 .match-dial {
   --pct: 85;
-  --dial-size: 44px;
+  --dial-size: 38px;
   --dial-color: var(--gold);
   width: var(--dial-size);
   height: var(--dial-size);
   border-radius: 50%;
   background: conic-gradient(
     var(--dial-color) calc(var(--pct) * 1%),
-    rgba(46, 36, 86, 0.6) 0%
+    rgba(51, 48, 58, 0.6) 0%
   );
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   flex-shrink: 0;
-  box-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 0 10px rgba(212, 175, 106, 0.15);
 }
 .match-dial::before {
   content: '';
   position: absolute;
-  inset: 5px;
+  inset: 4px;
   border-radius: 50%;
   background: var(--surface);
 }
@@ -293,26 +287,26 @@
 }
 
 /* ============================================================
-   SHIMMER SKELETON — Royal tones
+   SHIMMER SKELETON
    ============================================================ */
 .shimmer {
   background: linear-gradient(
     90deg,
-    rgba(26, 20, 56, 0.7) 0%,
-    rgba(46, 36, 86, 0.9) 50%,
-    rgba(26, 20, 56, 0.7) 100%
+    rgba(36, 34, 41, 0.7) 0%,
+    rgba(51, 48, 58, 0.9) 50%,
+    rgba(36, 34, 41, 0.7) 100%
   );
   background-size: 200% 100%;
   animation: shimmer 1.8s ease-in-out infinite;
 }
 
 /* ============================================================
-   SCROLLBAR — Royal
+   SCROLLBAR — Warm Gold/Charcoal
    ============================================================ */
 ::-webkit-scrollbar        { width: 5px; height: 5px; }
 ::-webkit-scrollbar-track  { background: transparent; }
-::-webkit-scrollbar-thumb  { background: rgba(147, 51, 234, 0.4); border-radius: 99px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(212, 175, 55, 0.6); }
+::-webkit-scrollbar-thumb  { background: rgba(212, 175, 106, 0.2); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(212, 175, 106, 0.5); }
 
 .scrollbar-none { scrollbar-width: none; -ms-overflow-style: none; }
 .scrollbar-none::-webkit-scrollbar { display: none; }
@@ -321,39 +315,39 @@
    SPROCKET STRIP — Gold dots
    ============================================================ */
 .sprocket-strip {
-  background-image: radial-gradient(circle, rgba(212,175,55,0.25) 2px, transparent 2px);
+  background-image: radial-gradient(circle, rgba(212, 175, 106, 0.18) 2px, transparent 2px);
   background-size: 16px 16px;
   background-repeat: repeat-x;
-  height: 20px;
+  height: 16px;
   width: 100%;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 /* ============================================================
-   BUTTON SYSTEM — Royal
+   BUTTON SYSTEM
    ============================================================ */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   padding: 10px 22px;
-  background: linear-gradient(135deg, #D4AF37 0%, #F0D060 100%);
-  color: #07050F;
-  font-family: var(--font-heading);
+  background: linear-gradient(135deg, #D4AF6A 0%, #E8C27D 100%);
+  color: #0B0A0C;
+  font-family: var(--font-body);
   font-weight: 700;
-  font-size: 12px;
-  letter-spacing: 0.10em;
+  font-size: 11px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   border-radius: var(--r-sm);
   border: none;
   cursor: pointer;
   transition: all var(--dur-fast) var(--ease-std);
-  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.35), 0 0 0 1px rgba(240,208,96,0.3) inset;
+  box-shadow: 0 4px 16px rgba(212, 175, 106, 0.2), 0 0 0 1px rgba(255,255,255,0.1) inset;
 }
 .btn-primary:hover {
-  background: linear-gradient(135deg, #F0D060 0%, #D4AF37 100%);
-  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.55), 0 0 0 1px rgba(255,235,120,0.4) inset;
-  transform: translateY(-2px);
+  background: linear-gradient(135deg, #E8C27D 0%, #D4AF6A 100%);
+  box-shadow: 0 6px 20px rgba(212, 175, 106, 0.35);
+  transform: translateY(-1.5px);
 }
 
 .btn-ghost {
@@ -363,41 +357,40 @@
   padding: 10px 22px;
   background: transparent;
   color: var(--text);
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-weight: 600;
-  font-size: 12px;
-  letter-spacing: 0.08em;
+  font-size: 11px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   border-radius: var(--r-sm);
-  border: 1px solid rgba(147, 51, 234, 0.4);
+  border: 1px solid rgba(212, 175, 106, 0.3);
   cursor: pointer;
   transition: all var(--dur-fast) var(--ease-std);
 }
 .btn-ghost:hover {
   border-color: var(--gold);
   color: var(--gold);
-  background: rgba(212, 175, 55, 0.07);
-  box-shadow: 0 0 20px rgba(212, 175, 55, 0.12);
+  background: rgba(212, 175, 106, 0.05);
+  box-shadow: 0 0 16px rgba(212, 175, 106, 0.08);
 }
 
 /* ============================================================
-   BADGE SYSTEM — Royal
+   BADGE SYSTEM
    ============================================================ */
 .badge-amber {
   display: inline-flex;
   align-items: center;
   gap: 4px;
   padding: 3px 10px;
-  background: rgba(212, 175, 55, 0.12);
+  background: rgba(212, 175, 106, 0.1);
   color: var(--gold);
-  border: 1px solid rgba(212, 175, 55, 0.35);
+  border: 1px solid rgba(212, 175, 106, 0.25);
   border-radius: 99px;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  box-shadow: 0 0 12px rgba(212, 175, 55, 0.1);
 }
 
 .badge-teal {
@@ -405,45 +398,28 @@
   align-items: center;
   gap: 4px;
   padding: 3px 10px;
-  background: rgba(147, 51, 234, 0.12);
-  color: #C084FC;
-  border: 1px solid rgba(147, 51, 234, 0.35);
+  background: rgba(122, 46, 58, 0.15);
+  color: #E8C27D;
+  border: 1px solid rgba(122, 46, 58, 0.35);
   border-radius: 99px;
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  box-shadow: 0 0 12px rgba(147, 51, 234, 0.12);
 }
 
 /* ============================================================
-   CAROUSEL ROW
-   ============================================================ */
-.carousel-row {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  padding-bottom: 16px;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-.carousel-row::-webkit-scrollbar { display: none; }
-.carousel-row > * { scroll-snap-align: start; }
-
-/* ============================================================
-   SIDEBAR ACTIVE INDICATOR — Royal gold left border
+   ACTIVE INDICATOR — Golden Left Border
    ============================================================ */
 .nav-item-active {
   background: linear-gradient(90deg,
-    rgba(212, 175, 55, 0.18),
-    rgba(147, 51, 234, 0.08),
+    rgba(212, 175, 106, 0.12),
+    rgba(122, 46, 58, 0.04),
     transparent
   );
   color: var(--gold);
-  border-left: 2px solid var(--gold);
-  box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.04);
+  border-left: 2.5px solid var(--gold);
 }
 
 /* ============================================================

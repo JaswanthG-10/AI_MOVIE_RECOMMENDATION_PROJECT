@@ -12,33 +12,40 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({
-  selectedLanguage, setSelectedLanguage, onSearchSubmit, onOpenSpinWheel,
+  selectedLanguage,
+  setSelectedLanguage,
+  onSearchSubmit,
+  onOpenSpinWheel,
 }) => {
-  const [query, setQuery]     = useState("");
+  const [query, setQuery] = useState("");
   const [focused, setFocused] = useState(false);
 
   return (
     <header
-      className="sticky top-0 z-20 w-full px-4 sm:px-8 py-3 flex items-center justify-between gap-4"
+      className="sticky top-0 z-20 w-full px-4 sm:px-8 py-4 flex items-center justify-between gap-4 transition-all duration-300"
       style={{
-        background: "rgba(7,5,15,0.92)",
-        backdropFilter: "blur(28px) saturate(1.5)",
-        borderBottom: "1px solid rgba(147,51,234,0.2)",
-        boxShadow: "0 4px 32px rgba(0,0,0,0.5), 0 0 60px rgba(147,51,234,0.04)",
+        background: "rgba(11, 10, 12, 0.92)",
+        backdropFilter: "blur(28px) saturate(1.2)",
+        borderBottom: "1px solid rgba(212, 175, 106, 0.12)",
+        boxShadow: "0 4px 32px rgba(0,0,0,0.6), 0 0 60px rgba(212, 175, 106, 0.02)",
       }}
     >
-      {/* ── Royal AI Search Bar ── */}
+      {/* ── AI SEARCH BAR ── */}
       <form
-        onSubmit={(e) => { e.preventDefault(); if (query.trim()) onSearchSubmit(query); }}
+        onSubmit={(e) => {
+          e.preventDefault();
+          if (query.trim()) onSearchSubmit(query);
+        }}
         className={`relative flex-1 max-w-xl ai-border rounded-xl transition-all duration-300 ${
-          focused ? "shadow-[0_0_32px_rgba(212,175,55,0.12)]" : ""
+          focused ? "shadow-[0_0_32px_rgba(212,175,106,0.15)]" : ""
         }`}
       >
-        <div className="absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none">
-          {focused
-            ? <Sparkles className="w-4 h-4 animate-pulse" style={{ color: "#D4AF37" }} />
-            : <Search className="w-4 h-4" style={{ color: "#7A6FA8" }} />
-          }
+        <div className="absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none z-10">
+          {focused ? (
+            <Sparkles className="w-4 h-4 animate-pulse text-[#E8C27D]" />
+          ) : (
+            <Search className="w-4 h-4 text-[#87847B]" />
+          )}
         </div>
 
         <input
@@ -47,18 +54,17 @@ export const Header: React.FC<HeaderProps> = ({
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
-          placeholder='Ask Lumina AI — "emotional dramas", "mind-bending thrillers", "Tamil action"...'
-          className="glass-input w-full font-body text-xs sm:text-sm rounded-xl pl-10 pr-20 py-2.5"
-          style={{ color: "#F0ECFF" }}
+          placeholder='Ask Aether AI — "emotional dramas", "mind-bending thrillers", "Tamil action"...'
+          className="glass-input w-full font-body text-xs sm:text-sm rounded-xl pl-10 pr-20 py-2.5 text-[#F7F5F0]"
         />
 
         {query && (
           <button
             type="submit"
-            className="absolute right-2 top-1/2 -translate-y-1/2 px-2.5 py-1 rounded-md font-heading text-[10px] font-bold tracking-wide transition-all"
+            className="absolute right-2 top-1/2 -translate-y-1/2 px-3 py-1 rounded-md font-heading text-[10px] font-bold tracking-wide transition-all duration-200 cursor-pointer"
             style={{
-              background: "linear-gradient(135deg, #D4AF37, #F0D060)",
-              color: "#07050F",
+              background: "linear-gradient(135deg, #D4AF6A, #E8C27D)",
+              color: "#0B0A0C",
             }}
           >
             ASK
@@ -66,26 +72,24 @@ export const Header: React.FC<HeaderProps> = ({
         )}
       </form>
 
-      {/* ── Right Controls ── */}
-      <div className="flex items-center gap-2">
-
+      {/* ── CONTROLS ── */}
+      <div className="flex items-center gap-3">
         {/* Language selector */}
         <div
-          className="flex items-center gap-1.5 px-3 py-2 rounded-lg transition-colors"
+          className="flex items-center gap-1.5 px-3 py-2 rounded-lg transition-colors border"
           style={{
-            background: "rgba(13,10,30,0.9)",
-            border: "1px solid rgba(46,36,86,0.9)",
+            background: "rgba(18, 17, 21, 0.9)",
+            borderColor: "rgba(212, 175, 106, 0.15)",
           }}
         >
-          <Globe className="w-3.5 h-3.5 shrink-0" style={{ color: "#C084FC" }} />
+          <Globe className="w-3.5 h-3.5 shrink-0 text-[#D4AF6A]" />
           <select
             value={selectedLanguage}
             onChange={(e) => setSelectedLanguage(e.target.value)}
-            className="bg-transparent font-body text-xs font-semibold outline-none cursor-pointer"
-            style={{ color: "#F0ECFF" }}
+            className="bg-transparent font-body text-xs font-semibold outline-none cursor-pointer text-[#F7F5F0]"
           >
             {LANGUAGES_LIST.map((lang) => (
-              <option key={lang.id} value={lang.id} style={{ background: "#0D0A1E", color: "#F0ECFF" }}>
+              <option key={lang.id} value={lang.id} style={{ background: "#121115", color: "#F7F5F0" }}>
                 {lang.flag} {lang.name}
               </option>
             ))}
@@ -98,8 +102,8 @@ export const Header: React.FC<HeaderProps> = ({
           className="btn-ghost flex items-center gap-1.5 !py-2 !px-3"
           title="Surprise Me — Spin the Wheel"
         >
-          <Dices className="w-3.5 h-3.5" />
-          <span className="hidden sm:inline text-[11px]">Surprise</span>
+          <Dices className="w-3.5 h-3.5 text-[#D4AF6A]" />
+          <span className="hidden sm:inline text-[11px] text-[#F7F5F0]">Surprise</span>
         </button>
       </div>
     </header>
