@@ -16,6 +16,14 @@ export const SpinWheelModal: React.FC<SpinWheelModalProps> = ({
   const [isSpinning, setIsSpinning] = useState(false);
   const [chosenMovie, setChosenMovie] = useState<Movie | null>(null);
 
+  React.useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, [onClose]);
+
   const handleSpin = () => {
     setIsSpinning(true);
     setChosenMovie(null);

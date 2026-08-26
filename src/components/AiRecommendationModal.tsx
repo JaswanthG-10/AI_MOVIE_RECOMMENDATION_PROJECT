@@ -38,6 +38,14 @@ export const AiRecommendationModal: React.FC<AiRecommendationModalProps> = ({
     return filterAndRankMovies({}).slice(0, 8);
   });
 
+  React.useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, [onClose]);
+
   const handleRunAnalysis = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
     setIsAnalyzing(true);

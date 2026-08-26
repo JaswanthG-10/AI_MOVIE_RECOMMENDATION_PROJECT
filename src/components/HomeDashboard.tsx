@@ -151,7 +151,13 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
 
             {/* Natural Language Input & Prompt Chips */}
             <div className="space-y-3 pt-2">
-              <div className="relative flex items-center">
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  if (onOpenAiModal) onOpenAiModal();
+                }}
+                className="relative flex items-center"
+              >
                 <input
                   type="text"
                   value={heroPrompt}
@@ -161,12 +167,12 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
                 />
                 <Search className="w-4 h-4 text-purple-400 absolute left-4 pointer-events-none" />
                 <button
-                  onClick={() => onOpenAiModal && onOpenAiModal()}
+                  type="submit"
                   className="absolute right-2.5 px-4 py-2 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-xs flex items-center gap-1.5 shadow-lg hover:opacity-90 transition-all cursor-pointer"
                 >
                   <Sparkles className="w-3.5 h-3.5" /> AI Search
                 </button>
-              </div>
+              </form>
 
               {/* AI Prompt Chips */}
               <div className="flex flex-wrap gap-2 pt-1">

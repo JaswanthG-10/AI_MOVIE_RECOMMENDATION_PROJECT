@@ -12,6 +12,14 @@ export const MovieComparisonModal: React.FC<MovieComparisonModalProps> = ({ onCl
   const [movieA, setMovieA] = useState<Movie>(MOVIES_DATABASE[0]); // Vikram
   const [movieB, setMovieB] = useState<Movie>(MOVIES_DATABASE[10]); // Inception
 
+  React.useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, [onClose]);
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in">
       <div className="w-full max-w-4xl reel-container bg-[#171B2E] border border-[#33395a] shadow-2xl p-6 sm:p-8 space-y-6 relative rounded-2xl max-h-[90vh] overflow-y-auto">
