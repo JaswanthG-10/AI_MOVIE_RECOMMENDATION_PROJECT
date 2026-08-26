@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎬  LUMINA AI /Movie Recommendation Project
 
-## Getting Started
+An AI-powered, content-based movie recommendation system. Give it a movie you love, and it finds similar ones you'll actually want to watch — using machine learning instead of just "trending this week."
 
-First, run the development server:
+**🔗 Live Demo:** [ai-movie-recommendation-project.vercel.app](https://ai-movie-recommendation-project.vercel.app/)
+
+---
+
+## ✨ Features
+
+- **Content-based recommendations** — suggests movies based on similarity in content, not just shared genre tags
+- **Machine learning powered** — uses cosine similarity to match movies by their characteristics
+- **Movie posters & details** via TMDB (The Movie Database) integration
+- **Fast, interactive web interface** — search a movie and get instant recommendations
+- **Responsive design** — works smoothly across desktop and mobile
+
+## 🛠️ Tech Stack
+
+- **Framework:** [Next.js](https://nextjs.org/) (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS / PostCSS
+- **Data:** TMDB API for movie metadata and posters
+- **Deployment:** [Vercel](https://vercel.com/)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm / yarn / pnpm / bun
+- A [TMDB API key](https://www.themoviedb.org/settings/api) (free to generate)
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/JaswanthG-10/AI_MOVIE_RECOMMENDATION_PROJECT.git
+cd AI_MOVIE_RECOMMENDATION_PROJECT
+
+# Install dependencies
+npm install
+```
+
+### Environment Variables
+
+Create a `.env.local` file in the root directory and add your TMDB API key:
+
+```env
+NEXT_PUBLIC_TMDB_API_KEY=your_tmdb_api_key_here
+```
+
+> ⚠️ Update the variable name above if your project uses a different key — check `src/` for how the TMDB API is called.
+
+### Run Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the app running.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+AI_MOVIE_RECOMMENDATION_PROJECT/
+├── public/          # Static assets (images, icons, etc.)
+├── src/             # Application source code (pages, components, logic)
+├── next.config.ts   # Next.js configuration
+├── tsconfig.json    # TypeScript configuration
+├── vercel.json      # Vercel deployment configuration
+└── package.json     # Project dependencies and scripts
+```
 
-## Learn More
+## 🌐 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+This project is deployed on [Vercel](https://vercel.com/). Any push to the `main` branch triggers an automatic deployment.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To deploy your own copy:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Fork this repository
+2. Import it into [Vercel](https://vercel.com/new)
+3. Add your `NEXT_PUBLIC_TMDB_API_KEY` environment variable in the Vercel project settings
+4. Deploy 🚀
 
-## Deploy on Vercel
+## 🤝 Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions, issues, and feature requests are welcome!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is open source. Feel free to use it as a learning reference or build on top of it.
+
+## 👤 Author
+
+**Jaswanth G**
+GitHub: [@JaswanthG-10](https://github.com/JaswanthG-10)
+
+---
+
+⭐ If you found this project interesting, consider giving it a star on GitHub!
