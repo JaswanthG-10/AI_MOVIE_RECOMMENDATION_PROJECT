@@ -12,6 +12,7 @@ interface HeaderProps {
   onSearchSubmit: (query: string) => void;
   onOpenSpinWheel: () => void;
   onOpenAiModal: () => void;
+  onOpenNotifications?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -22,6 +23,7 @@ export const Header: React.FC<HeaderProps> = ({
   onSearchSubmit,
   onOpenSpinWheel,
   onOpenAiModal,
+  onOpenNotifications,
 }) => {
   const [query, setQuery] = useState("");
   const [focused, setFocused] = useState(false);
@@ -140,7 +142,10 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Notification Bell */}
         <button
-          onClick={() => setUnreadNotifications(0)}
+          onClick={() => {
+            setUnreadNotifications(0);
+            if (onOpenNotifications) onOpenNotifications();
+          }}
           className="relative p-2 rounded-xl bg-white/5 border border-white/10 text-zinc-300 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
           title="Notifications"
         >

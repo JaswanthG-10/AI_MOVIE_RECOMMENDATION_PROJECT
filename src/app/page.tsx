@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Movie, MOVIES_DATABASE } from "@/data/movies";
 import { Sidebar } from "@/components/Sidebar";
 import { Header } from "@/components/Header";
@@ -12,6 +12,7 @@ import { TrailerPlayerModal } from "@/components/TrailerPlayerModal";
 import { SpinWheelModal } from "@/components/SpinWheelModal";
 import { MovieComparisonModal } from "@/components/MovieComparisonModal";
 import { AiRecommendationModal } from "@/components/AiRecommendationModal";
+import { NotificationsModal } from "@/components/NotificationsModal";
 import { WatchlistView } from "@/components/WatchlistView";
 import { SettingsView } from "@/components/SettingsView";
 import { TasteProfileView } from "@/components/TasteProfileView";
@@ -19,20 +20,39 @@ import { TopRatedView } from "@/components/TopRatedView";
 import { MovieOfTheDayView } from "@/components/MovieOfTheDayView";
 import { WatchHistoryView } from "@/components/WatchHistoryView";
 
-export default function Home() {
-  const [activeTab, setActiveTab] = useState<string>("home");
+interface HomeProps {
+  initialTab?: string;
+  initialMovieId?: string;
+  autoOpenAiModal?: boolean;
+}
+
+export default function Home({ initialTab = "home", initialMovieId, autoOpenAiModal = false }: HomeProps) {
+  const [activeTab, setActiveTab] = useState<string>(initialTab);
   const [selectedLanguage, setSelectedLanguage] = useState<string>("All");
-  const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
+  const [selectedMovie, setSelectedMovie] = useState<Movie | null>(() => {
+    if (initialMovieId) {
+      return MOVIES_DATABASE.find((m) => m.id === initialMovieId) || null;
+    }
+    return null;
+  });
   const [trailerMovie, setTrailerMovie] = useState<Movie | null>(null);
   const [isSpinWheelOpen, setIsSpinWheelOpen] = useState<boolean>(false);
   const [isComparisonOpen, setIsComparisonOpen] = useState<boolean>(false);
-  const [isAiModalOpen, setIsAiModalOpen] = useState<boolean>(false);
+  const [isAiModalOpen, setIsAiModalOpen] = useState<boolean>(autoOpenAiModal);
+  const [isNotificationsOpen, setIsNotificationsOpen] = useState<boolean>(false);
   
   const [watchlistIds, setWatchlistIds] = useState<string[]>([
     "tamil-vikram",
     "english-inception",
     "english-interstellar"
   ]);
+
+  useEffect(() => {
+    if (initialMovieId) {
+      const match = MOVIES_DATABASE.find((m) => m.id === initialMovieId);
+      if (match) setSelectedMovie(match);
+    }
+  }, [initialMovieId]);
 
   const handleToggleWatchlist = (movie: Movie) => {
     setWatchlistIds((prev) =>
@@ -69,6 +89,7 @@ export default function Home() {
           onSearchSubmit={(q) => setActiveTab("search")}
           onOpenSpinWheel={() => setIsSpinWheelOpen(true)}
           onOpenAiModal={() => setIsAiModalOpen(true)}
+          onOpenNotifications={() => setIsNotificationsOpen(true)}
         />
 
         <main className="flex-1 pb-16">
@@ -175,6 +196,13 @@ export default function Home() {
           onClose={() => setIsAiModalOpen(false)}
           onSelectMovie={setSelectedMovie}
           onPlayTrailer={handlePlayTrailer}
+        />
+      )}
+
+      {isNotificationsOpen && (
+        <NotificationsModal
+          onClose={() => setIsNotificationsOpen(false)}
+          onSelectMovie={setSelectedMovie}
         />
       )}
     </div>
