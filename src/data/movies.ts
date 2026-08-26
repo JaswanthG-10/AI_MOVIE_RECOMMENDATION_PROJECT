@@ -35,15938 +35,9632 @@ export interface Movie {
   tagline?: string;
   productionCompany?: string;
   awards?: string[];
-  franchise?: string;
-  isNewRelease?: boolean;
-  isCultClassic?: boolean;
+  reviews?: Review[];
   isOscarWinner?: boolean;
-  isIMDbTop250?: boolean;
-  continueWatching?: {
-    progressPercent: number;
-    remainingTime: string;
-    lastWatched: string;
-  };
-  watchHistoryTimestamp?: string;
-  reviews: Review[];
 }
 
-export interface LanguageOption {
-  id: string;
-  name: string;
-  flag: string;
-}
-
-export const LANGUAGES_LIST: LanguageOption[] = [
+export const LANGUAGES_LIST = [
   { id: "All", name: "All Languages", flag: "🌐" },
-  { id: "Tamil", name: "Tamil Cinema (Kolly)", flag: "🇮🇳" },
-  { id: "Telugu", name: "Telugu Cinema (Tolly)", flag: "🇮🇳" },
-  { id: "Malayalam", name: "Malayalam Cinema (Molly)", flag: "🇮🇳" },
-  { id: "Hindi", name: "Hindi Bollywood", flag: "🇮🇳" },
-  { id: "English", name: "Hollywood / English", flag: "🇺🇸" },
-  { id: "Korean", name: "Korean K-Cinema", flag: "🇰🇷" },
-  { id: "Japanese", name: "Japanese Anime / Cinema", flag: "🇯🇵" },
-  { id: "Spanish", name: "Spanish / LatAm", flag: "🇪🇸" },
-  { id: "French", name: "French Cinema", flag: "🇫🇷" }
+  { id: "English", name: "English", flag: "🇺🇸" },
+  { id: "Tamil", name: "Tamil (தமிழ்)", flag: "🇮🇳" },
+  { id: "Korean", name: "Korean (한국어)", flag: "🇰🇷" },
+  { id: "Japanese", name: "Japanese (日本語)", flag: "🇯🇵" },
+  { id: "Spanish", name: "Spanish", flag: "🇪🇸" },
+  { id: "Hindi", name: "Hindi (हिंदी)", flag: "🇮🇳 font-bold" },
 ];
 
-export const ALL_30_GENRES = [
-  "Action",
-  "Adventure",
-  "Animation",
-  "Anime",
-  "Biography",
-  "Comedy",
-  "Crime",
-  "Documentary",
-  "Drama",
-  "Family",
-  "Fantasy",
-  "History",
-  "Horror",
-  "Mystery",
-  "Musical",
-  "Romance",
-  "Sci-Fi",
-  "Sports",
-  "Superhero",
-  "Suspense",
-  "Thriller",
-  "War",
-  "Western",
-  "Psychological",
-  "Mystery Thriller",
-  "Cyberpunk",
-  "Noir",
-  "Survival",
-  "Space",
-  "Time Travel"
+export const ALL_GENRES_LIST = [
+  "Action", "Adventure", "Animation", "Comedy", "Crime",
+  "Drama", "Fantasy", "Horror", "Mystery", "Romance",
+  "Sci-Fi", "Thriller"
 ];
-export const ALL_GENRES_LIST = ALL_30_GENRES;
 
 export const MOVIES_DATABASE: Movie[] = [
   {
-    "id": "tamil-vikram",
-    "title": "Vikram",
+    "id": "tamil-829557",
+    "title": "365 Days: This Day",
+    "originalTitle": "365 dni: Ten dzie\u0144",
     "year": 2022,
-    "runtime": "2h 55m",
-    "genres": [
-      "Action",
-      "Thriller",
-      "Crime",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller"
-    ],
-    "imdbRating": 7.4,
-    "rottenTomatoesScore": 80,
-    "matchScore": 90,
-    "synopsis": "A special agent investigates a group of masked vigilantes who are targeting drug lords.",
-    "director": "Lokesh Kanagaraj",
-    "cast": [
-      "Kamal Haasan",
-      "Vijay Sethupathi",
-      "Fahadh Faasil"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "_-QD4_00Q3k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Lokesh Kanagaraj.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Lokesh Kanagaraj.",
-    "similarTags": [
-      "Lokesh",
-      "Thriller",
-      "Crime"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Thriller"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹120 Crore",
-    "revenue": "₹450 Crore",
-    "tagline": "Once a lion, always a lion.",
-    "productionCompany": "Raaj Kamal Films International",
-    "awards": [
-      "Ananda Vikatan Cinema Award for Best Actor"
-    ],
-    "reviews": []
-  },
-  {
-    "id": "tamil-leo",
-    "title": "Leo",
-    "year": 2023,
-    "runtime": "2h 44m",
-    "genres": [
-      "Action",
-      "Thriller",
-      "Crime",
-      "Adventure",
-      "Documentary",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk"
-    ],
-    "imdbRating": 7.5,
-    "rottenTomatoesScore": 81,
-    "matchScore": 91,
-    "synopsis": "A mild-mannered cafe owner becomes the target of drug lords claiming he is their long-lost brother.",
-    "director": "Lokesh Kanagaraj",
-    "cast": [
-      "Vijay",
-      "Sanjay Dutt",
-      "Trisha Krishnan"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1602491453977-63a204d5537d?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "3P-t4WRoW5c",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Lokesh Kanagaraj.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Lokesh Kanagaraj.",
-    "similarTags": [
-      "Lokesh",
-      "Thriller",
-      "Crime"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Thriller"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹300 Crore",
-    "revenue": "₹620 Crore",
-    "tagline": "Keep calm and avoid the bad guys.",
-    "productionCompany": "Seven Screen Studio",
-    "awards": [
-      "SIIMA Award for Best Actor (Nominated)"
-    ],
-    "reviews": []
-  },
-  {
-    "id": "tamil-kaithi",
-    "title": "Kaithi",
-    "year": 2019,
-    "runtime": "2h 27m",
-    "genres": [
-      "Action",
-      "Thriller",
-      "Crime",
-      "Animation",
-      "Drama",
-      "Musical",
-      "Noir"
-    ],
-    "imdbRating": 7.6,
-    "rottenTomatoesScore": 82,
-    "matchScore": 92,
-    "synopsis": "An ex-convict helps the police drive a truck full of poisoned officers to the hospital while escaping gangs.",
-    "director": "Lokesh Kanagaraj",
-    "cast": [
-      "Karthi",
-      "Narain",
-      "Arjun Das"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1536768139911-e290a59002e4?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "RB14s-z-xVw",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Lokesh Kanagaraj.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Lokesh Kanagaraj.",
-    "similarTags": [
-      "Lokesh",
-      "Thriller",
-      "Crime"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Thriller"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹25 Crore",
-    "revenue": "₹105 Crore",
-    "tagline": "One night. Four police officers. A truck. 50 criminals.",
-    "productionCompany": "Dream Warrior Pictures",
-    "awards": [
-      "Norway Tamil Film Festival Award for Best Actor"
-    ],
-    "reviews": []
-  },
-  {
-    "id": "tamil-jailer",
-    "title": "Jailer",
-    "year": 2023,
-    "runtime": "2h 48m",
-    "genres": [
-      "Action",
-      "Comedy",
-      "Crime",
-      "Anime",
-      "Family",
-      "Romance",
-      "War",
-      "Survival"
-    ],
-    "imdbRating": 7.7,
-    "rottenTomatoesScore": 83,
-    "matchScore": 93,
-    "synopsis": "A retired prison warden hunts down the criminals who allegedly killed his police officer son.",
-    "director": "Nelson Dilipkumar",
-    "cast": [
-      "Rajinikanth",
-      "Vinayakan",
-      "Ramya Krishnan"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "Vz-01L391c4",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Nelson Dilipkumar.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Nelson Dilipkumar.",
-    "similarTags": [
-      "Nelson",
-      "Comedy",
-      "Crime"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Comedy"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹200 Crore",
-    "revenue": "₹650 Crore",
-    "tagline": "A father's quiet rage.",
-    "productionCompany": "Sun Pictures",
-    "awards": [
-      "Filmfare Award for Best Actor - Tamil"
-    ],
-    "reviews": []
-  },
-  {
-    "id": "tamil-master",
-    "title": "Master",
-    "year": 2021,
-    "runtime": "2h 59m",
-    "genres": [
-      "Action",
-      "Drama",
-      "Crime",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi",
-      "Western",
-      "Space"
-    ],
-    "imdbRating": 7.8,
-    "rottenTomatoesScore": 84,
-    "matchScore": 94,
-    "synopsis": "An alcoholic professor is sent to a juvenile school, where he clashes with a ruthless gangster.",
-    "director": "Lokesh Kanagaraj",
-    "cast": [
-      "Vijay",
-      "Vijay Sethupathi",
-      "Malavika Mohanan"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "uU5NNv_PVzY",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Lokesh Kanagaraj.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Lokesh Kanagaraj.",
-    "similarTags": [
-      "Lokesh",
-      "Drama",
-      "Crime"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Drama"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹135 Crore",
-    "revenue": "₹300 Crore",
-    "tagline": "The master of his own destiny.",
-    "productionCompany": "XB Film Creators",
-    "awards": [
-      "SIIMA Award for Best Film"
-    ],
-    "reviews": []
-  },
-  {
-    "id": "tamil-ninety-six",
-    "title": "96",
-    "year": 2018,
-    "runtime": "2h 38m",
+    "runtime": "110 min",
     "genres": [
       "Romance",
-      "Drama",
-      "Comedy",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel"
-    ],
-    "imdbRating": 7.9,
-    "rottenTomatoesScore": 85,
-    "matchScore": 95,
-    "synopsis": "Two high school sweethearts reunite at a class reunion after twenty-two years of separation.",
-    "director": "C. Prem Kumar",
-    "cast": [
-      "Vijay Sethupathi",
-      "Trisha Krishnan"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "7K1-1V5gV8w",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Romance masterpiece directed by C. Prem Kumar.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Romance masterpiece directed by C. Prem Kumar.",
-    "similarTags": [
-      "C.",
-      "Drama",
-      "Comedy"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Drama"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹18 Crore",
-    "revenue": "₹55 Crore",
-    "tagline": "The memories stay forever.",
-    "productionCompany": "Madras Enterprises",
-    "awards": [
-      "SIIMA Award for Best Actress"
-    ],
-    "reviews": []
-  },
-  {
-    "id": "tamil-soorarai-pottru",
-    "title": "Soorarai Pottru",
-    "year": 2020,
-    "runtime": "2h 29m",
-    "genres": [
-      "Drama",
-      "Biography",
-      "Crime",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller",
-      "Action"
-    ],
-    "imdbRating": 8,
-    "rottenTomatoesScore": 86,
-    "matchScore": 96,
-    "synopsis": "A young man from a remote village dreams of launching a low-cost airline for the common man.",
-    "director": "Sudha Kongara",
-    "cast": [
-      "Suriya",
-      "Aparna Balamurali"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "b73v654K_vM",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Sudha Kongara.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Sudha Kongara.",
-    "similarTags": [
-      "Sudha",
-      "Biography",
-      "Crime"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Biography"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹20 Crore",
-    "revenue": "₹170 Crore",
-    "tagline": "An ordinary man with an extraordinary flight.",
-    "productionCompany": "2D Entertainment",
-    "awards": [
-      "National Film Award for Best Feature Film"
-    ],
-    "reviews": []
-  },
-  {
-    "id": "tamil-ratsasan",
-    "title": "Ratsasan",
-    "year": 2018,
-    "runtime": "2h 50m",
-    "genres": [
-      "Thriller",
-      "Mystery",
-      "Crime",
-      "Documentary",
-      "Suspense",
-      "Cyberpunk",
-      "Adventure"
-    ],
-    "imdbRating": 8.1,
-    "rottenTomatoesScore": 87,
-    "matchScore": 97,
-    "synopsis": "An aspiring film director becomes a cop and tracks down a psychotic serial killer targeting schoolgirls.",
-    "director": "Ram Kumar",
-    "cast": [
-      "Vishnu Vishal",
-      "Amala Paul"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1505635552518-3448ff116af3?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "n5b5tWv1m88",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Thriller masterpiece directed by Ram Kumar.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Thriller masterpiece directed by Ram Kumar.",
-    "similarTags": [
-      "Ram",
-      "Mystery",
-      "Crime"
-    ],
-    "moods": [
-      "✨ Thriller",
-      "🔥 Mystery"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹15 Crore",
-    "revenue": "₹75 Crore",
-    "tagline": "The hunter becomes the hunted.",
-    "productionCompany": "Axess Film Factory",
-    "awards": [
-      "Filmfare Award for Best Film - Tamil"
-    ],
-    "reviews": []
-  },
-  {
-    "id": "tamil-asuran",
-    "title": "Asuran",
-    "year": 2019,
-    "runtime": "2h 21m",
-    "genres": [
-      "Action",
-      "Drama",
-      "Musical",
-      "Thriller",
-      "Noir",
-      "Animation"
-    ],
-    "imdbRating": 8.2,
-    "rottenTomatoesScore": 88,
-    "matchScore": 98,
-    "synopsis": "A farmer goes on the run with his family to protect his son, who has killed a wealthy landlord.",
-    "director": "Vetrimaaran",
-    "cast": [
-      "Dhanush",
-      "Manju Warrier"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "S_T2i1o6L_s",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Vetrimaaran.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Vetrimaaran.",
-    "similarTags": [
-      "Vetrimaaran",
-      "Drama",
-      "Musical"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Drama"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹32 Crore",
-    "revenue": "₹150 Crore",
-    "tagline": "They can steal our land, but they can't steal our education.",
-    "productionCompany": "V Creations",
-    "awards": [
-      "National Film Award for Best Actor"
-    ],
-    "reviews": []
-  },
-  {
-    "id": "tamil-amaran",
-    "title": "Amaran",
-    "year": 2024,
-    "runtime": "2h 45m",
-    "genres": [
-      "Drama",
-      "Biography",
-      "War",
-      "Family",
-      "Romance",
-      "Survival",
-      "Anime"
-    ],
-    "imdbRating": 8.3,
-    "rottenTomatoesScore": 89,
-    "matchScore": 99,
-    "synopsis": "A biographical tribute to Major Mukund Varadarajan, chronicling his service and sacrifices in Kashmir.",
-    "director": "Rajkumar Periasamy",
-    "cast": [
-      "Sivakarthikeyan",
-      "Sai Pallavi"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "gY8VpM56s8w",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Rajkumar Periasamy.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Rajkumar Periasamy.",
-    "similarTags": [
-      "Rajkumar",
-      "Biography",
-      "War"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Biography"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹100 Crore",
-    "revenue": "₹250 Crore",
-    "tagline": "A hero's sacrifice.",
-    "productionCompany": "Raaj Kamal Films International",
-    "awards": [
-      "National Film Award for Best Tribute Film"
-    ],
-    "reviews": []
-  },
-  {
-    "id": "tamil-nayagan",
-    "title": "Nayagan",
-    "year": 1987,
-    "runtime": "2h 25m",
-    "genres": [
-      "Crime",
-      "Drama",
-      "Fantasy",
-      "Sci-Fi",
-      "Western",
-      "Space",
-      "Biography"
-    ],
-    "imdbRating": 8.4,
-    "rottenTomatoesScore": 90,
-    "matchScore": 90,
-    "synopsis": "A slum dweller rises to become a powerful crime godfather in Mumbai.",
-    "director": "Mani Ratnam",
-    "cast": [
-      "Kamal Haasan",
-      "Saranya Ponvannan"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Crime masterpiece directed by Mani Ratnam.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Crime masterpiece directed by Mani Ratnam.",
-    "similarTags": [
-      "Mani",
-      "Drama",
-      "Fantasy"
-    ],
-    "moods": [
-      "✨ Crime",
-      "🔥 Drama"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹106 Crore",
-    "revenue": "₹77 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "tamil-anbe-sivam",
-    "title": "Anbe Sivam",
-    "year": 2003,
-    "runtime": "2h 40m",
-    "genres": [
-      "Drama",
-      "Comedy",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel"
-    ],
-    "imdbRating": 8.5,
-    "rottenTomatoesScore": 91,
-    "matchScore": 91,
-    "synopsis": "Two men of contrasting personalities travel together from Bhubaneswar to Chennai, forming an unlikely bond.",
-    "director": "Sundar C.",
-    "cast": [
-      "Kamal Haasan",
-      "R. Madhavan"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Sundar C..",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Sundar C..",
-    "similarTags": [
-      "Sundar",
-      "Comedy",
-      "History"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Comedy"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹99 Crore",
-    "revenue": "₹90 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "tamil-ponniyin-selvan-1",
-    "title": "Ponniyin Selvan: I",
-    "year": 2022,
-    "runtime": "2h 47m",
-    "genres": [
-      "Adventure",
-      "Action",
-      "History",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller",
-      "Crime"
-    ],
-    "imdbRating": 8.6,
-    "rottenTomatoesScore": 92,
-    "matchScore": 92,
-    "synopsis": "Vandiyathevan sets out to deliver a message from Crown Prince Aditha Karikalan amidst Chola court conspiracies.",
-    "director": "Mani Ratnam",
-    "cast": [
-      "Vikram",
-      "Karthi",
-      "Jayam Ravi",
-      "Aishwarya Rai"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Adventure masterpiece directed by Mani Ratnam.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Adventure masterpiece directed by Mani Ratnam.",
-    "similarTags": [
-      "Mani",
-      "Action",
-      "History"
-    ],
-    "moods": [
-      "✨ Adventure",
-      "🔥 Action"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹41 Crore",
-    "revenue": "₹344 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "tamil-vada-chennai",
-    "title": "Vada Chennai",
-    "year": 2018,
-    "runtime": "2h 44m",
-    "genres": [
-      "Crime",
-      "Drama",
-      "Action",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary"
-    ],
-    "imdbRating": 8.7,
-    "rottenTomatoesScore": 93,
-    "matchScore": 93,
-    "synopsis": "A skilled carrom player gets reluctantly drawn into a gang war in North Chennai.",
-    "director": "Vetrimaaran",
-    "cast": [
-      "Dhanush",
-      "Ameer",
-      "Andrea Jeremiah"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Crime masterpiece directed by Vetrimaaran.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Crime masterpiece directed by Vetrimaaran.",
-    "similarTags": [
-      "Vetrimaaran",
-      "Drama",
-      "Action"
-    ],
-    "moods": [
-      "✨ Crime",
-      "🔥 Drama"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹111 Crore",
-    "revenue": "₹262 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "tamil-baasha",
-    "title": "Baasha",
-    "year": 1995,
-    "runtime": "2h 25m",
-    "genres": [
-      "Action",
-      "Crime",
-      "Musical",
-      "Thriller",
-      "Noir",
-      "Animation",
       "Drama"
     ],
-    "imdbRating": 8.8,
-    "rottenTomatoesScore": 94,
-    "matchScore": 94,
-    "synopsis": "An auto driver hides his dark past as a powerful Mumbai crime lord to keep his family safe.",
-    "director": "Suresh Krissna",
-    "cast": [
-      "Rajinikanth",
-      "Nagma",
-      "Raghuvaran"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Suresh Krissna.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Suresh Krissna.",
-    "similarTags": [
-      "Suresh",
-      "Crime",
-      "Musical"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Crime"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹91 Crore",
-    "revenue": "₹60 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "tamil-enthiran",
-    "title": "Enthiran",
-    "year": 2010,
-    "runtime": "2h 45m",
-    "genres": [
-      "Sci-Fi",
-      "Action",
-      "Cyberpunk",
-      "Romance",
-      "War",
-      "Survival",
-      "Anime",
-      "Family"
-    ],
-    "imdbRating": 8.9,
-    "rottenTomatoesScore": 95,
-    "matchScore": 95,
-    "synopsis": "A scientist builds a humanoid robot that falls in love with his fiancee and turns rogue.",
-    "director": "S. Shankar",
-    "cast": [
-      "Rajinikanth",
-      "Aishwarya Rai"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Sci-Fi masterpiece directed by S. Shankar.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Sci-Fi masterpiece directed by S. Shankar.",
-    "similarTags": [
-      "S.",
-      "Action",
-      "Cyberpunk"
-    ],
-    "moods": [
-      "✨ Sci-Fi",
-      "🔥 Action"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹60 Crore",
-    "revenue": "₹67 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "tamil-ghilli",
-    "title": "Ghilli",
-    "year": 2004,
-    "runtime": "2h 40m",
-    "genres": [
-      "Action",
-      "Comedy",
-      "Sports",
-      "Sci-Fi",
-      "Western",
-      "Space",
-      "Biography",
-      "Fantasy"
-    ],
-    "imdbRating": 9,
-    "rottenTomatoesScore": 96,
-    "matchScore": 96,
-    "synopsis": "A kabaddi player saves a girl from a powerful factionist in Madurai and hides her in his house.",
-    "director": "Dharani",
-    "cast": [
-      "Vijay",
-      "Trisha Krishnan",
-      "Prakash Raj"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Dharani.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Dharani.",
-    "similarTags": [
-      "Dharani",
-      "Comedy",
-      "Sports"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Comedy"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹74 Crore",
-    "revenue": "₹227 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "tamil-thuppakki",
-    "title": "Thuppakki",
-    "year": 2012,
-    "runtime": "2h 45m",
-    "genres": [
-      "Action",
-      "Thriller",
-      "Sports",
-      "Psychological",
-      "Time Travel",
-      "Comedy",
-      "History"
-    ],
-    "imdbRating": 9.1,
-    "rottenTomatoesScore": 97,
-    "matchScore": 97,
-    "synopsis": "An army captain visits Chennai on vacation, only to uncover and dismantle a network of sleeper cells.",
-    "director": "A.R. Murugadoss",
-    "cast": [
-      "Vijay",
-      "Kajal Aggarwal"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by A.R. Murugadoss.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by A.R. Murugadoss.",
-    "similarTags": [
-      "A.R.",
-      "Thriller",
-      "Sports"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Thriller"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹138 Crore",
-    "revenue": "₹251 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "tamil-maanadu",
-    "title": "Maanadu",
-    "year": 2021,
-    "runtime": "2h 27m",
-    "genres": [
-      "Sci-Fi",
-      "Thriller",
-      "Time Travel",
-      "Superhero",
-      "Mystery Thriller",
-      "Action",
-      "Crime",
-      "Horror"
-    ],
-    "imdbRating": 9.2,
-    "rottenTomatoesScore": 80,
+    "imdbRating": 5.9,
     "matchScore": 98,
-    "synopsis": "A man gets trapped in a time loop on the day of a public conference, trying to save the Chief Minister.",
-    "director": "Venkat Prabhu",
+    "synopsis": "Laura and Massimo are back and hotter than ever. But the reunited couple's new beginning is complicated by Massimo\u2019s family ties and a mysterious man who enters Laura\u2019s life to win her heart and trust, at any cost.",
+    "director": "Barbara Bia\u0142ow\u0105s",
     "cast": [
-      "Silambarasan",
-      "S.J. Suryah"
+      "Anna-Maria Sieklucka",
+      "Michele Morrone",
+      "Simone Susinna",
+      "Magdalena Lamparska"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Sci-Fi masterpiece directed by Venkat Prabhu.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Sci-Fi masterpiece directed by Venkat Prabhu.",
-    "similarTags": [
-      "Venkat",
-      "Thriller",
-      "Time Travel"
-    ],
-    "moods": [
-      "✨ Sci-Fi",
-      "🔥 Thriller"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹50 Crore",
-    "revenue": "₹339 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "tamil-vikram-vedha",
-    "title": "Vikram Vedha",
-    "year": 2017,
-    "runtime": "2h 27m",
-    "genres": [
-      "Action",
-      "Thriller",
-      "Crime",
-      "Suspense",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary",
-      "Mystery"
-    ],
-    "imdbRating": 9.3,
-    "rottenTomatoesScore": 81,
-    "matchScore": 99,
-    "synopsis": "A righteous police officer hunts a notorious gangster who tells him stories that blur lines of morality.",
-    "director": "Pushkar-Gayathri",
-    "cast": [
-      "Madhavan",
-      "Vijay Sethupathi"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Pushkar-Gayathri.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Pushkar-Gayathri.",
-    "similarTags": [
-      "Pushkar-Gayathri",
-      "Thriller",
-      "Crime"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Thriller"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹69 Crore",
-    "revenue": "₹230 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "tamil-super-deluxe",
-    "title": "Super Deluxe",
-    "year": 2019,
-    "runtime": "2h 56m",
-    "genres": [
-      "Drama",
-      "Comedy",
-      "Thriller",
-      "Noir",
-      "Animation",
-      "Musical"
-    ],
-    "imdbRating": 9.4,
-    "rottenTomatoesScore": 82,
-    "matchScore": 90,
-    "synopsis": "An array of odd characters find themselves in unexpected situations, forcing them to face their demons.",
-    "director": "Thiagarajan Kumararaja",
-    "cast": [
-      "Vijay Sethupathi",
-      "Fahadh Faasil",
-      "Samantha Ruth Prabhu"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7qU0SOVcQ8BTJLodcAlulUAG16C.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/zBG5Mg29NH9xxpWMMG7BIvKwYhL.jpg",
+    "trailerId": "pyM3z73oMAk",
     "streamingOn": [
       "Netflix",
       "Prime Video"
     ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Thiagarajan Kumararaja.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Thiagarajan Kumararaja.",
+    "aiReasoning": "Top recommendation from Tamil cinema directed by Barbara Bia\u0142ow\u0105s.",
+    "whyRecommended": "Top recommendation from Tamil cinema directed by Barbara Bia\u0142ow\u0105s.",
     "similarTags": [
-      "Thiagarajan",
-      "Comedy",
-      "Thriller"
+      "Barbara Bia\u0142ow\u0105s",
+      "Romance"
     ],
     "moods": [
-      "✨ Drama",
-      "🔥 Comedy"
+      "\u2728 Romance",
+      "\ud83d\udd25 Intense"
     ],
     "language": "Tamil",
     "country": "India",
-    "budget": "₹29 Crore",
-    "revenue": "₹414 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
+    "budget": "\u20b9120 Crore",
+    "revenue": "\u20b9400 Crore",
+    "tagline": "Oh Yes.",
+    "productionCompany": "Ekipa"
   },
   {
-    "id": "tamil-visaranai",
-    "title": "Visaranai",
+    "id": "tmdb-211672",
+    "title": "Minions",
+    "originalTitle": "Minions",
     "year": 2015,
-    "runtime": "1h 49m",
+    "runtime": "91 min",
     "genres": [
-      "Drama",
-      "Crime",
-      "Thriller",
-      "War",
-      "Survival",
-      "Anime",
       "Family",
-      "Romance"
-    ],
-    "imdbRating": 7.4,
-    "rottenTomatoesScore": 83,
-    "matchScore": 91,
-    "synopsis": "Four immigrants are tortured by the police to confess to a crime they did not commit.",
-    "director": "Vetrimaaran",
-    "cast": [
-      "Dinesh",
-      "Samuthirakani"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Vetrimaaran.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Vetrimaaran.",
-    "similarTags": [
-      "Vetrimaaran",
-      "Crime",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Crime"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹79 Crore",
-    "revenue": "₹128 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "tamil-jai-bhim",
-    "title": "Jai Bhim",
-    "year": 2021,
-    "runtime": "2h 44m",
-    "genres": [
-      "Drama",
-      "Biography",
-      "Western",
-      "Space",
-      "Fantasy",
-      "Sci-Fi"
-    ],
-    "imdbRating": 7.5,
-    "rottenTomatoesScore": 84,
-    "matchScore": 92,
-    "synopsis": "A brave lawyer fights for justice when a tribal man is falsely accused of theft and disappears from custody.",
-    "director": "T.J. Gnanavel",
-    "cast": [
-      "Suriya",
-      "Lijo Mol Jose"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by T.J. Gnanavel.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by T.J. Gnanavel.",
-    "similarTags": [
-      "T.J.",
-      "Biography",
-      "Western"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Biography"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹111 Crore",
-    "revenue": "₹94 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "tamil-sarpatta-parambarai",
-    "title": "Sarpatta Parambarai",
-    "year": 2021,
-    "runtime": "2h 53m",
-    "genres": [
-      "Drama",
-      "Sports",
-      "Psychological",
-      "Time Travel",
-      "Comedy",
-      "History"
-    ],
-    "imdbRating": 7.6,
-    "rottenTomatoesScore": 85,
-    "matchScore": 93,
-    "synopsis": "A young man from North Madras enters the boxing ring to save his clan's honor in the 1970s.",
-    "director": "Pa. Ranjith",
-    "cast": [
-      "Arya",
-      "Dushara Vijayan"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Pa. Ranjith.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Pa. Ranjith.",
-    "similarTags": [
-      "Pa.",
-      "Sports",
-      "Psychological"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Sports"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹107 Crore",
-    "revenue": "₹436 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "tamil-jigarthanda-doublex",
-    "title": "Jigarthanda DoubleX",
-    "year": 2023,
-    "runtime": "2h 52m",
-    "genres": [
-      "Action",
-      "Comedy",
-      "Western",
-      "Mystery Thriller",
-      "Crime",
-      "Horror",
-      "Superhero"
-    ],
-    "imdbRating": 7.7,
-    "rottenTomatoesScore": 86,
-    "matchScore": 94,
-    "synopsis": "A filmmaker agrees to direct a movie for a ruthless gangster who wants to become a hero.",
-    "director": "Karthik Subbaraj",
-    "cast": [
-      "Raghava Lawrence",
-      "S.J. Suryah"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1536768139911-e290a59002e4?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Karthik Subbaraj.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Karthik Subbaraj.",
-    "similarTags": [
-      "Karthik",
-      "Comedy",
-      "Western"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Comedy"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹137 Crore",
-    "revenue": "₹200 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "tamil-indian",
-    "title": "Indian",
-    "year": 1996,
-    "runtime": "3h 5m",
-    "genres": [
-      "Action",
-      "Thriller",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary",
-      "Mystery",
-      "Suspense"
-    ],
-    "imdbRating": 7.8,
-    "rottenTomatoesScore": 87,
-    "matchScore": 95,
-    "synopsis": "A veteran freedom fighter uses ancient martial arts to eradicate bribery and corruption in society.",
-    "director": "S. Shankar",
-    "cast": [
-      "Kamal Haasan",
-      "Nedumudi Venu"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by S. Shankar.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by S. Shankar.",
-    "similarTags": [
-      "S.",
-      "Thriller",
-      "Cyberpunk"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Thriller"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹56 Crore",
-    "revenue": "₹159 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "tamil-sivaji-boss",
-    "title": "Sivaji: The Boss",
-    "year": 2007,
-    "runtime": "3h 5m",
-    "genres": [
-      "Action",
-      "Comedy",
-      "Drama",
-      "Noir",
       "Animation",
-      "Musical",
-      "Thriller"
-    ],
-    "imdbRating": 7.9,
-    "rottenTomatoesScore": 88,
-    "matchScore": 96,
-    "synopsis": "A software engineer returns to India to help the poor, but clashes with corrupt politicians.",
-    "director": "S. Shankar",
-    "cast": [
-      "Rajinikanth",
-      "Shriya Saran"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by S. Shankar.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by S. Shankar.",
-    "similarTags": [
-      "S.",
-      "Comedy",
-      "Drama"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Comedy"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹69 Crore",
-    "revenue": "₹100 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "tamil-kaththi",
-    "title": "Kaththi",
-    "year": 2014,
-    "runtime": "2h 46m",
-    "genres": [
-      "Action",
-      "Drama",
-      "Survival",
-      "Anime",
-      "Family",
-      "Romance",
-      "War"
-    ],
-    "imdbRating": 8,
-    "rottenTomatoesScore": 89,
-    "matchScore": 97,
-    "synopsis": "An escaping criminal takes the place of his lookalike to fight against a multinational company stealing water.",
-    "director": "A.R. Murugadoss",
-    "cast": [
-      "Vijay",
-      "Samantha Ruth Prabhu"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by A.R. Murugadoss.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by A.R. Murugadoss.",
-    "similarTags": [
-      "A.R.",
-      "Drama",
-      "Survival"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Drama"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹20 Crore",
-    "revenue": "₹77 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "tamil-pizza",
-    "title": "Pizza",
-    "year": 2012,
-    "runtime": "2h 7m",
-    "genres": [
-      "Horror",
-      "Thriller",
-      "Mystery",
-      "Space",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi",
-      "Western"
-    ],
-    "imdbRating": 8.1,
-    "rottenTomatoesScore": 90,
-    "matchScore": 98,
-    "synopsis": "A pizza delivery boy gets trapped inside a haunted house while delivering a pizza.",
-    "director": "Karthik Subbaraj",
-    "cast": [
-      "Vijay Sethupathi",
-      "Remya Nambeesan"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518063319789-7217e6706b04?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Horror masterpiece directed by Karthik Subbaraj.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Horror masterpiece directed by Karthik Subbaraj.",
-    "similarTags": [
-      "Karthik",
-      "Thriller",
-      "Mystery"
-    ],
-    "moods": [
-      "✨ Horror",
-      "🔥 Thriller"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹65 Crore",
-    "revenue": "₹110 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "tamil-mankatha",
-    "title": "Mankatha",
-    "year": 2011,
-    "runtime": "2h 40m",
-    "genres": [
-      "Action",
-      "Crime",
-      "Thriller",
-      "Time Travel",
-      "Comedy",
-      "History",
-      "Sports",
-      "Psychological"
-    ],
-    "imdbRating": 8.2,
-    "rottenTomatoesScore": 91,
-    "matchScore": 99,
-    "synopsis": "A suspended police officer plans a heist to steal 500 million rupees from betting syndicates.",
-    "director": "Venkat Prabhu",
-    "cast": [
-      "Ajith Kumar",
-      "Arjun Sarja"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Venkat Prabhu.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Venkat Prabhu.",
-    "similarTags": [
-      "Venkat",
-      "Crime",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Crime"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹58 Crore",
-    "revenue": "₹153 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "tamil-aadukalam",
-    "title": "Aadukalam",
-    "year": 2011,
-    "runtime": "2h 40m",
-    "genres": [
-      "Drama",
-      "Sports",
-      "Action",
-      "Crime",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller"
-    ],
-    "imdbRating": 8.3,
-    "rottenTomatoesScore": 92,
-    "matchScore": 90,
-    "synopsis": "A young man gets caught in a web of jealousy and betrayal in the world of rooster fighting.",
-    "director": "Vetrimaaran",
-    "cast": [
-      "Dhanush",
-      "Taapsee Pannu"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Vetrimaaran.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Vetrimaaran.",
-    "similarTags": [
-      "Vetrimaaran",
-      "Sports",
-      "Action"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Sports"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹134 Crore",
-    "revenue": "₹421 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "tamil-kaala",
-    "title": "Kaala",
-    "year": 2018,
-    "runtime": "2h 42m",
-    "genres": [
-      "Action",
-      "Drama",
       "Adventure",
-      "Documentary",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk"
-    ],
-    "imdbRating": 8.4,
-    "rottenTomatoesScore": 93,
-    "matchScore": 91,
-    "synopsis": "A powerful crime lord protects his Dharavi slum dwellers from a ruthless politician's land grabs.",
-    "director": "Pa. Ranjith",
-    "cast": [
-      "Rajinikanth",
-      "Nana Patekar"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1536768139911-e290a59002e4?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Pa. Ranjith.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Pa. Ranjith.",
-    "similarTags": [
-      "Pa.",
-      "Drama",
-      "Adventure"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Drama"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹97 Crore",
-    "revenue": "₹438 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "tamil-kabali",
-    "title": "Kabali",
-    "year": 2016,
-    "runtime": "2h 32m",
-    "genres": [
-      "Action",
-      "Crime",
-      "Drama",
-      "Animation",
-      "Musical",
-      "Thriller",
-      "Noir"
-    ],
-    "imdbRating": 8.5,
-    "rottenTomatoesScore": 94,
-    "matchScore": 92,
-    "synopsis": "An aging gangster returns from prison to fight for the rights of Tamil workers in Malaysia.",
-    "director": "Pa. Ranjith",
-    "cast": [
-      "Rajinikanth",
-      "Winston Chao"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Pa. Ranjith.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Pa. Ranjith.",
-    "similarTags": [
-      "Pa.",
-      "Crime",
-      "Drama"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Crime"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹123 Crore",
-    "revenue": "₹212 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "tamil-petta",
-    "title": "Petta",
-    "year": 2019,
-    "runtime": "2h 51m",
-    "genres": [
-      "Action",
-      "Comedy",
-      "Crime",
-      "Anime",
-      "Family",
-      "Romance",
-      "War",
-      "Survival"
-    ],
-    "imdbRating": 8.6,
-    "rottenTomatoesScore": 95,
-    "matchScore": 93,
-    "synopsis": "A hostel warden confronts an international mafia family to protect his best friend's son.",
-    "director": "Karthik Subbaraj",
-    "cast": [
-      "Rajinikanth",
-      "Vijay Sethupathi"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Karthik Subbaraj.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Karthik Subbaraj.",
-    "similarTags": [
-      "Karthik",
-      "Comedy",
-      "Crime"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Comedy"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹43 Crore",
-    "revenue": "₹126 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "tamil-madras",
-    "title": "Madras",
-    "year": 2014,
-    "runtime": "2h 30m",
-    "genres": [
-      "Drama",
-      "Action",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi",
-      "Western",
-      "Space"
-    ],
-    "imdbRating": 8.7,
-    "rottenTomatoesScore": 96,
-    "matchScore": 94,
-    "synopsis": "An IT professional gets involved in a political conflict over a wall painting in North Chennai.",
-    "director": "Pa. Ranjith",
-    "cast": [
-      "Karthi",
-      "Catherine Tresa"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Pa. Ranjith.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Drama masterpiece directed by Pa. Ranjith.",
-    "similarTags": [
-      "Pa.",
-      "Action",
-      "Biography"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Action"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹67 Crore",
-    "revenue": "₹434 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "tamil-irumbukottai-murattu-singam",
-    "title": "Irumbukottai Murattu Singam",
-    "year": 2010,
-    "runtime": "2h 20m",
-    "genres": [
-      "Action",
-      "Comedy",
-      "Western",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel"
-    ],
-    "imdbRating": 8.8,
-    "rottenTomatoesScore": 97,
-    "matchScore": 95,
-    "synopsis": "A cowboy set in Tamil Nadu saves a village from a ruthless gang using traditional guns.",
-    "director": "Chimbudevan",
-    "cast": [
-      "Lawrence Raghavendra",
-      "Sandhya",
-      "Padmapriya"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Chimbudevan.",
-    "whyRecommended": "Top recommendation from Tamil cinema. A high-quality Action masterpiece directed by Chimbudevan.",
-    "similarTags": [
-      "Chimbudevan",
-      "Comedy",
-      "Western"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Comedy"
-    ],
-    "language": "Tamil",
-    "country": "India",
-    "budget": "₹118 Crore",
-    "revenue": "₹271 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "telugu-baahubali-1",
-    "title": "Baahubali: The Beginning",
-    "year": 2015,
-    "runtime": "2h 39m",
-    "genres": [
-      "Action",
-      "Fantasy",
-      "Adventure",
-      "Crime",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller"
-    ],
-    "imdbRating": 7.4,
-    "rottenTomatoesScore": 80,
-    "matchScore": 90,
-    "synopsis": "A young villager learns about his legendary father's lineage and attempts to save his captive mother.",
-    "director": "S.S. Rajamouli",
-    "cast": [
-      "Prabhas",
-      "Rana Daggubati",
-      "Anushka Shetty"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by S.S. Rajamouli.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by S.S. Rajamouli.",
-    "similarTags": [
-      "S.S.",
-      "Fantasy",
-      "Adventure"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Fantasy"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹46 Crore",
-    "revenue": "₹175 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "telugu-baahubali-2",
-    "title": "Baahubali 2: The Conclusion",
-    "year": 2017,
-    "runtime": "2h 47m",
-    "genres": [
-      "Action",
-      "Fantasy",
-      "Adventure",
-      "Documentary",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk"
-    ],
-    "imdbRating": 7.5,
-    "rottenTomatoesScore": 81,
-    "matchScore": 91,
-    "synopsis": "Shiva learns of the betrayal and assassination of his father, the grand general Baahubali.",
-    "director": "S.S. Rajamouli",
-    "cast": [
-      "Prabhas",
-      "Rana Daggubati",
-      "Anushka Shetty"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by S.S. Rajamouli.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by S.S. Rajamouli.",
-    "similarTags": [
-      "S.S.",
-      "Fantasy",
-      "Adventure"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Fantasy"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹134 Crore",
-    "revenue": "₹373 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "telugu-rrr",
-    "title": "RRR",
-    "year": 2022,
-    "runtime": "3h 7m",
-    "genres": [
-      "Action",
-      "Drama",
-      "History",
-      "Animation",
-      "Musical",
-      "Thriller",
-      "Noir"
-    ],
-    "imdbRating": 7.6,
-    "rottenTomatoesScore": 82,
-    "matchScore": 92,
-    "synopsis": "Two legendary revolutionaries embark on a journey of friendship and rebellion against British rule.",
-    "director": "S.S. Rajamouli",
-    "cast": [
-      "NTR Jr.",
-      "Ram Charan",
-      "Alia Bhatt"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by S.S. Rajamouli.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by S.S. Rajamouli.",
-    "similarTags": [
-      "S.S.",
-      "Drama",
-      "History"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Drama"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹99 Crore",
-    "revenue": "₹132 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "telugu-eega",
-    "title": "Eega",
-    "year": 2012,
-    "runtime": "2h 25m",
-    "genres": [
-      "Fantasy",
-      "Action",
-      "Comedy",
-      "Anime",
-      "Family",
-      "Romance",
-      "War",
-      "Survival"
-    ],
-    "imdbRating": 7.7,
-    "rottenTomatoesScore": 83,
-    "matchScore": 93,
-    "synopsis": "A murdered man reincarnates as a housefly to protect his lover and seek revenge against his killer.",
-    "director": "S.S. Rajamouli",
-    "cast": [
-      "Nani",
-      "Samantha Ruth Prabhu",
-      "Sudeep"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Fantasy masterpiece directed by S.S. Rajamouli.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Fantasy masterpiece directed by S.S. Rajamouli.",
-    "similarTags": [
-      "S.S.",
-      "Action",
       "Comedy"
     ],
-    "moods": [
-      "✨ Fantasy",
-      "🔥 Action"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹45 Crore",
-    "revenue": "₹140 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "telugu-magadheera",
-    "title": "Magadheera",
-    "year": 2009,
-    "runtime": "2h 47m",
-    "genres": [
-      "Fantasy",
-      "Action",
-      "Romance",
-      "Biography",
-      "Sci-Fi",
-      "Western",
-      "Space"
-    ],
-    "imdbRating": 7.8,
-    "rottenTomatoesScore": 84,
-    "matchScore": 94,
-    "synopsis": "A motorcycle stuntman recalls a past life as a warrior who died protecting a princess.",
-    "director": "S.S. Rajamouli",
-    "cast": [
-      "Ram Charan",
-      "Kajal Aggarwal"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Fantasy masterpiece directed by S.S. Rajamouli.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Fantasy masterpiece directed by S.S. Rajamouli.",
-    "similarTags": [
-      "S.S.",
-      "Action",
-      "Romance"
-    ],
-    "moods": [
-      "✨ Fantasy",
-      "🔥 Action"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹54 Crore",
-    "revenue": "₹85 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "telugu-pushpa",
-    "title": "Pushpa: The Rise",
-    "year": 2021,
-    "runtime": "2h 59m",
-    "genres": [
-      "Action",
-      "Crime",
-      "Comedy",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel"
-    ],
-    "imdbRating": 7.9,
-    "rottenTomatoesScore": 85,
-    "matchScore": 95,
-    "synopsis": "A red sandalwood smuggler rises to lead the syndicate, facing off against a brutal police inspector.",
-    "director": "Sukumar",
-    "cast": [
-      "Allu Arjun",
-      "Rashmika Mandanna",
-      "Fahadh Faasil"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Sukumar.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Sukumar.",
-    "similarTags": [
-      "Sukumar",
-      "Crime",
-      "Comedy"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Crime"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹94 Crore",
-    "revenue": "₹189 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "telugu-arjun-reddy",
-    "title": "Arjun Reddy",
-    "year": 2017,
-    "runtime": "3h 2m",
-    "genres": [
-      "Drama",
-      "Romance",
-      "Crime",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller",
-      "Action"
-    ],
-    "imdbRating": 8,
-    "rottenTomatoesScore": 86,
-    "matchScore": 96,
-    "synopsis": "A brilliant medical student spirals into self-destruction after his girlfriend is forced to marry another.",
-    "director": "Sandeep Reddy Vanga",
-    "cast": [
-      "Vijay Deverakonda",
-      "Shalini Pandey"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Sandeep Reddy Vanga.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Sandeep Reddy Vanga.",
-    "similarTags": [
-      "Sandeep",
-      "Romance",
-      "Crime"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Romance"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹97 Crore",
-    "revenue": "₹378 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "telugu-mahanati",
-    "title": "Mahanati",
-    "year": 2018,
-    "runtime": "2h 57m",
-    "genres": [
-      "Drama",
-      "Biography",
-      "Documentary",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk",
-      "Adventure"
-    ],
-    "imdbRating": 8.1,
-    "rottenTomatoesScore": 87,
-    "matchScore": 97,
-    "synopsis": "The life story of Savitri, the iconic actress of South Indian cinema.",
-    "director": "Nag Ashwin",
-    "cast": [
-      "Keerthy Suresh",
-      "Dulquer Salmaan",
-      "Samantha Ruth Prabhu"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Nag Ashwin.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Nag Ashwin.",
-    "similarTags": [
-      "Nag",
-      "Biography",
-      "Documentary"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Biography"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹90 Crore",
-    "revenue": "₹209 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "telugu-sita-ramam",
-    "title": "Sita Ramam",
-    "year": 2022,
-    "runtime": "2h 43m",
-    "genres": [
-      "Romance",
-      "Drama",
-      "War",
-      "Musical",
-      "Thriller",
-      "Noir",
-      "Animation"
-    ],
-    "imdbRating": 8.2,
-    "rottenTomatoesScore": 88,
-    "matchScore": 98,
-    "synopsis": "An orphan soldier receives a letter from a girl named Sita, beginning a classic romantic journey.",
-    "director": "Hanu Raghavapudi",
-    "cast": [
-      "Dulquer Salmaan",
-      "Mrunal Thakur"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by Hanu Raghavapudi.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by Hanu Raghavapudi.",
-    "similarTags": [
-      "Hanu",
-      "Drama",
-      "War"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Drama"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹122 Crore",
-    "revenue": "₹185 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "telugu-jersey",
-    "title": "Jersey",
-    "year": 2019,
-    "runtime": "2h 40m",
-    "genres": [
-      "Drama",
-      "Sports",
-      "Family",
-      "Romance",
-      "War",
-      "Survival",
-      "Anime"
-    ],
-    "imdbRating": 8.3,
-    "rottenTomatoesScore": 89,
-    "matchScore": 99,
-    "synopsis": "A retired cricketer decides to return to the game in his late thirties to buy a jersey for his son.",
-    "director": "Gowtam Tinnanuri",
-    "cast": [
-      "Nani",
-      "Shraddha Srinath"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Gowtam Tinnanuri.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Gowtam Tinnanuri.",
-    "similarTags": [
-      "Gowtam",
-      "Sports",
-      "Family"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Sports"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹129 Crore",
-    "revenue": "₹322 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "telugu-kancharapalem",
-    "title": "C/o Kancharapalem",
-    "year": 2018,
-    "runtime": "2h 22m",
-    "genres": [
-      "Drama",
-      "Romance",
-      "Fantasy",
-      "Sci-Fi",
-      "Western",
-      "Space",
-      "Biography"
-    ],
-    "imdbRating": 8.4,
-    "rottenTomatoesScore": 90,
+    "imdbRating": 6.4,
     "matchScore": 90,
-    "synopsis": "Four love stories set in the neighborhood of Kancharapalem, spanning different age groups.",
-    "director": "Venkatesh Maha",
+    "synopsis": "Minions Stuart, Kevin and Bob are recruited by Scarlet Overkill, a super-villain who, alongside her inventor husband Herb, hatches a plot to take over the world.",
+    "director": "Kyle Balda",
     "cast": [
-      "Subba Rao",
-      "Radha Bessey"
+      "Sandra Bullock",
+      "Jon Hamm",
+      "Michael Keaton",
+      "Allison Janney"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Venkatesh Maha.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Venkatesh Maha.",
-    "similarTags": [
-      "Venkatesh",
-      "Romance",
-      "Fantasy"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Romance"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹68 Crore",
-    "revenue": "₹195 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "telugu-rangasthalam",
-    "title": "Ragasthalam",
-    "year": 2018,
-    "runtime": "2h 59m",
-    "genres": [
-      "Action",
-      "Drama",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel",
-      "Comedy"
-    ],
-    "imdbRating": 8.5,
-    "rottenTomatoesScore": 91,
-    "matchScore": 91,
-    "synopsis": "A partially deaf villager fights a ruthless president who has ruled his village for decades.",
-    "director": "Sukumar",
-    "cast": [
-      "Ram Charan",
-      "Samantha Ruth Prabhu"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1536768139911-e290a59002e4?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Sukumar.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Sukumar.",
-    "similarTags": [
-      "Sukumar",
-      "Drama",
-      "History"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Drama"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹22 Crore",
-    "revenue": "₹407 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "telugu-pokiri",
-    "title": "Pokiri",
-    "year": 2006,
-    "runtime": "2h 40m",
-    "genres": [
-      "Action",
-      "Crime",
-      "Thriller",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller"
-    ],
-    "imdbRating": 8.6,
-    "rottenTomatoesScore": 92,
-    "matchScore": 92,
-    "synopsis": "An undercover cop infiltrates a mafia gang, pretending to be a ruthless hitman.",
-    "director": "Puri Jagannadh",
-    "cast": [
-      "Mahesh Babu",
-      "Ileana D'Cruz"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/dr02BdCNAUPVU07aOodwPYv6HCf.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/wKrxeY6lbu7KFBsWVcMH6M8avwr.jpg",
+    "trailerId": "Wfql_DoHRKc",
     "streamingOn": [
       "Netflix",
       "Prime Video"
     ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Puri Jagannadh.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Puri Jagannadh.",
+    "aiReasoning": "Top match based on Family themes and direction by Kyle Balda.",
+    "whyRecommended": "Top match based on Family themes and direction by Kyle Balda.",
     "similarTags": [
-      "Puri",
-      "Crime",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Crime"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹51 Crore",
-    "revenue": "₹178 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "telugu-athadu",
-    "title": "Athadu",
-    "year": 2005,
-    "runtime": "2h 50m",
-    "genres": [
-      "Action",
-      "Drama",
-      "Thriller",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary"
-    ],
-    "imdbRating": 8.7,
-    "rottenTomatoesScore": 93,
-    "matchScore": 93,
-    "synopsis": "A hitman is falsely accused of murder and hides in a remote village, pretending to be a relative.",
-    "director": "Trivikram Srinivas",
-    "cast": [
-      "Mahesh Babu",
-      "Trisha Krishnan"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Trivikram Srinivas.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Trivikram Srinivas.",
-    "similarTags": [
-      "Trivikram",
-      "Drama",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Drama"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹94 Crore",
-    "revenue": "₹303 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "telugu-bommarillu",
-    "title": "Bommarillu",
-    "year": 2006,
-    "runtime": "2h 45m",
-    "genres": [
-      "Romance",
-      "Comedy",
+      "Kyle Balda",
       "Family",
-      "Musical",
-      "Thriller",
-      "Noir",
-      "Animation",
-      "Drama"
-    ],
-    "imdbRating": 8.8,
-    "rottenTomatoesScore": 94,
-    "matchScore": 94,
-    "synopsis": "A young man struggles with his father's overprotective nature while falling in love with a bubbly girl.",
-    "director": "Bhaskar",
-    "cast": [
-      "Siddharth",
-      "Genelia D'Souza"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by Bhaskar.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by Bhaskar.",
-    "similarTags": [
-      "Bhaskar",
-      "Comedy",
-      "Family"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Comedy"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹77 Crore",
-    "revenue": "₹60 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "telugu-arya",
-    "title": "Arya",
-    "year": 2004,
-    "runtime": "2h 30m",
-    "genres": [
-      "Romance",
-      "Comedy",
-      "War",
-      "Survival",
-      "Anime",
-      "Family"
-    ],
-    "imdbRating": 8.9,
-    "rottenTomatoesScore": 95,
-    "matchScore": 95,
-    "synopsis": "A bubbly student confesses his love to a girl who is already in a relationship with a bully.",
-    "director": "Sukumar",
-    "cast": [
-      "Allu Arjun",
-      "Anuradha Mehta"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by Sukumar.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by Sukumar.",
-    "similarTags": [
-      "Sukumar",
-      "Comedy",
-      "War"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Comedy"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹110 Crore",
-    "revenue": "₹411 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "telugu-goodachari",
-    "title": "Goodachari",
-    "year": 2018,
-    "runtime": "2h 27m",
-    "genres": [
-      "Action",
-      "Thriller",
-      "Sci-Fi",
-      "Western",
-      "Space",
-      "Biography",
-      "Fantasy"
-    ],
-    "imdbRating": 9,
-    "rottenTomatoesScore": 96,
-    "matchScore": 96,
-    "synopsis": "An aspiring intelligence officer is framed for the murder of his bosses on his graduation day.",
-    "director": "Sashi Kiran Tikka",
-    "cast": [
-      "Adivi Sesh",
-      "Sobhita Dhulipala"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1536768139911-e290a59002e4?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Sashi Kiran Tikka.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Sashi Kiran Tikka.",
-    "similarTags": [
-      "Sashi",
-      "Thriller",
-      "Sci-Fi"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Thriller"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹32 Crore",
-    "revenue": "₹279 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "telugu-agent-sai",
-    "title": "Agent Sai Srinivasa Athreya",
-    "year": 2019,
-    "runtime": "2h 24m",
-    "genres": [
-      "Comedy",
-      "Mystery",
-      "Thriller",
-      "Sports",
-      "Psychological",
-      "Time Travel",
-      "History"
-    ],
-    "imdbRating": 9.1,
-    "rottenTomatoesScore": 97,
-    "matchScore": 97,
-    "synopsis": "A brilliant detective in Nellore stumbles upon a conspiracy involving unclaimed dead bodies.",
-    "director": "Swaroop RSJ",
-    "cast": [
-      "Naveen Polishetty",
-      "Shruti Sharma"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Comedy masterpiece directed by Swaroop RSJ.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Comedy masterpiece directed by Swaroop RSJ.",
-    "similarTags": [
-      "Swaroop",
-      "Mystery",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Mystery"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹89 Crore",
-    "revenue": "₹408 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "telugu-mathu-vadalara",
-    "title": "Mathu Vadalara",
-    "year": 2019,
-    "runtime": "2h 10m",
-    "genres": [
-      "Comedy",
-      "Thriller",
-      "Crime",
-      "Superhero",
-      "Mystery Thriller",
-      "Action",
-      "Horror"
-    ],
-    "imdbRating": 9.2,
-    "rottenTomatoesScore": 80,
-    "matchScore": 98,
-    "synopsis": "A delivery boy gets trapped in a murder case after trying to steal money to make ends meet.",
-    "director": "Ritesh Rana",
-    "cast": [
-      "Sri Simha",
-      "Satya"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Comedy masterpiece directed by Ritesh Rana.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Comedy masterpiece directed by Ritesh Rana.",
-    "similarTags": [
-      "Ritesh",
-      "Thriller",
-      "Crime"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Thriller"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹120 Crore",
-    "revenue": "₹311 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "telugu-brochevarevarura",
-    "title": "Brochevarevarura",
-    "year": 2019,
-    "runtime": "2h 18m",
-    "genres": [
-      "Comedy",
-      "Crime",
-      "Suspense",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary",
-      "Mystery"
-    ],
-    "imdbRating": 9.3,
-    "rottenTomatoesScore": 81,
-    "matchScore": 99,
-    "synopsis": "Three college friends plan a fake kidnapping to help a classmate, leading to chaotic events.",
-    "director": "Vivek Athreya",
-    "cast": [
-      "Sree Vishnu",
-      "Nivetha Thomas"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Comedy masterpiece directed by Vivek Athreya.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Comedy masterpiece directed by Vivek Athreya.",
-    "similarTags": [
-      "Vivek",
-      "Crime",
-      "Suspense"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Crime"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹117 Crore",
-    "revenue": "₹270 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "telugu-major",
-    "title": "Major",
-    "year": 2022,
-    "runtime": "2h 30m",
-    "genres": [
-      "Drama",
-      "Biography",
-      "War",
-      "Thriller",
-      "Noir",
-      "Animation",
-      "Musical"
-    ],
-    "imdbRating": 9.4,
-    "rottenTomatoesScore": 82,
-    "matchScore": 90,
-    "synopsis": "The life and sacrifices of Major Sandeep Unnikrishnan during the 2008 Mumbai attacks.",
-    "director": "Sashi Kiran Tikka",
-    "cast": [
-      "Adivi Sesh",
-      "Saiee Manjrekar"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Sashi Kiran Tikka.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Sashi Kiran Tikka.",
-    "similarTags": [
-      "Sashi",
-      "Biography",
-      "War"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Biography"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹50 Crore",
-    "revenue": "₹203 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "telugu-kartikeya-2",
-    "title": "Kartikeya 2",
-    "year": 2022,
-    "runtime": "2h 25m",
-    "genres": [
-      "Adventure",
-      "Mystery",
-      "Fantasy",
-      "War",
-      "Survival",
-      "Anime",
-      "Family",
-      "Romance"
-    ],
-    "imdbRating": 7.4,
-    "rottenTomatoesScore": 83,
-    "matchScore": 91,
-    "synopsis": "A rational doctor searches for the ancient anklet of Lord Krishna, facing mystics and traps.",
-    "director": "Chandoo Mondeti",
-    "cast": [
-      "N निखिल Siddharth",
-      "Anupama Parameswaran"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Adventure masterpiece directed by Chandoo Mondeti.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Adventure masterpiece directed by Chandoo Mondeti.",
-    "similarTags": [
-      "Chandoo",
-      "Mystery",
-      "Fantasy"
-    ],
-    "moods": [
-      "✨ Adventure",
-      "🔥 Mystery"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹110 Crore",
-    "revenue": "₹151 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "telugu-dasara",
-    "title": "Dasara",
-    "year": 2023,
-    "runtime": "2h 36m",
-    "genres": [
-      "Action",
-      "Drama",
-      "Western",
-      "Space",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi"
-    ],
-    "imdbRating": 7.5,
-    "rottenTomatoesScore": 84,
-    "matchScore": 92,
-    "synopsis": "A young man from a coal mine village takes revenge for his friend's murder during a festival.",
-    "director": "Srikanth Odela",
-    "cast": [
-      "Nani",
-      "Keerthy Suresh"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1536768139911-e290a59002e4?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Srikanth Odela.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Srikanth Odela.",
-    "similarTags": [
-      "Srikanth",
-      "Drama",
-      "Western"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Drama"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹27 Crore",
-    "revenue": "₹316 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "telugu-hanuman",
-    "title": "Hanu-Man",
-    "year": 2024,
-    "runtime": "2h 38m",
-    "genres": [
-      "Action",
-      "Fantasy",
-      "Superhero",
-      "Psychological",
-      "Time Travel",
-      "Comedy",
-      "History",
-      "Sports"
-    ],
-    "imdbRating": 7.6,
-    "rottenTomatoesScore": 85,
-    "matchScore": 93,
-    "synopsis": "A petty thief in an imaginary village gains the powers of Lord Hanuman and saves his home from evil.",
-    "director": "Prasanth Varma",
-    "cast": [
-      "Teja Sajja",
-      "Amritha Aiyer"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Prasanth Varma.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Prasanth Varma.",
-    "similarTags": [
-      "Prasanth",
-      "Fantasy",
-      "Superhero"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Fantasy"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹98 Crore",
-    "revenue": "₹73 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "telugu-hi-nanna",
-    "title": "Hi Nanna",
-    "year": 2023,
-    "runtime": "2h 35m",
-    "genres": [
-      "Drama",
-      "Romance",
-      "Family",
-      "Mystery Thriller",
-      "Action",
-      "Crime",
-      "Horror",
-      "Superhero"
-    ],
-    "imdbRating": 7.7,
-    "rottenTomatoesScore": 86,
-    "matchScore": 94,
-    "synopsis": "A single father photographer raises his daughter until an enigmatic woman enters their lives.",
-    "director": "Shouryuv",
-    "cast": [
-      "Nani",
-      "Mrunal Thakur"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Shouryuv.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Shouryuv.",
-    "similarTags": [
-      "Shouryuv",
-      "Romance",
-      "Family"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Romance"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹72 Crore",
-    "revenue": "₹455 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "telugu-prasthanam",
-    "title": "Prasthanam",
-    "year": 2010,
-    "runtime": "2h 45m",
-    "genres": [
-      "Drama",
-      "Crime",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary",
-      "Mystery",
-      "Suspense"
-    ],
-    "imdbRating": 7.8,
-    "rottenTomatoesScore": 87,
-    "matchScore": 95,
-    "synopsis": "A political godfather chooses his stepson to succeed him, leading to intense family rivalry.",
-    "director": "Deva Katta",
-    "cast": [
-      "Sharwanand",
-      "Sai Kumar"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Deva Katta.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Deva Katta.",
-    "similarTags": [
-      "Deva",
-      "Crime",
-      "Cyberpunk"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Crime"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹118 Crore",
-    "revenue": "₹133 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "telugu-vedam",
-    "title": "Vedam",
-    "year": 2010,
-    "runtime": "2h 15m",
-    "genres": [
-      "Drama",
-      "Action",
-      "Noir",
-      "Animation",
-      "Musical",
-      "Thriller"
-    ],
-    "imdbRating": 7.9,
-    "rottenTomatoesScore": 88,
-    "matchScore": 96,
-    "synopsis": "The lives of five people from different walks of life intersect at a hospital during a terror attack.",
-    "director": "Krish Jagarlamudi",
-    "cast": [
-      "Allu Arjun",
-      "Manchu Manoj",
-      "Anushka Shetty"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Krish Jagarlamudi.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Krish Jagarlamudi.",
-    "similarTags": [
-      "Krish",
-      "Action",
-      "Noir"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Action"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹46 Crore",
-    "revenue": "₹341 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "telugu-leader",
-    "title": "Leader",
-    "year": 2010,
-    "runtime": "2h 40m",
-    "genres": [
-      "Drama",
-      "Political",
-      "History",
-      "Survival",
-      "Anime",
-      "Family",
-      "Romance",
-      "War"
-    ],
-    "imdbRating": 8,
-    "rottenTomatoesScore": 89,
-    "matchScore": 97,
-    "synopsis": "A foreign-educated youngster enters politics after his father's murder, aiming to eliminate corruption.",
-    "director": "Sekhar Kammula",
-    "cast": [
-      "Rana Daggubati",
-      "Richa Gangopadhyay"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Sekhar Kammula.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Sekhar Kammula.",
-    "similarTags": [
-      "Sekhar",
-      "Political",
-      "History"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Political"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹46 Crore",
-    "revenue": "₹411 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "telugu-gamyam",
-    "title": "Gamyam",
-    "year": 2008,
-    "runtime": "2h 10m",
-    "genres": [
-      "Drama",
-      "Adventure",
-      "Romance",
-      "Space",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi",
-      "Western"
-    ],
-    "imdbRating": 8.1,
-    "rottenTomatoesScore": 90,
-    "matchScore": 98,
-    "synopsis": "A wealthy youngster travels with a motorcycle thief in search of his long-lost love.",
-    "director": "Krish Jagarlamudi",
-    "cast": [
-      "Sharwanand",
-      "Allari Naresh"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Krish Jagarlamudi.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Drama masterpiece directed by Krish Jagarlamudi.",
-    "similarTags": [
-      "Krish",
-      "Adventure",
-      "Romance"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Adventure"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹53 Crore",
-    "revenue": "₹148 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "telugu-okkadu",
-    "title": "Okkadu",
-    "year": 2003,
-    "runtime": "2h 50m",
-    "genres": [
-      "Action",
-      "Romance",
-      "Sports",
-      "Time Travel",
-      "Comedy",
-      "History",
-      "Psychological"
-    ],
-    "imdbRating": 8.2,
-    "rottenTomatoesScore": 91,
-    "matchScore": 99,
-    "synopsis": "A kabaddi player saves a girl from a powerful factionist in Kurnool, hiding her in his house.",
-    "director": "Gunasekhar",
-    "cast": [
-      "Mahesh Babu",
-      "Bhumika Chawla"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Gunasekhar.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Gunasekhar.",
-    "similarTags": [
-      "Gunasekhar",
-      "Romance",
-      "Sports"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Romance"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹116 Crore",
-    "revenue": "₹243 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "telugu-kshanam",
-    "title": "Kshanam",
-    "year": 2016,
-    "runtime": "2h 0m",
-    "genres": [
-      "Thriller",
-      "Mystery",
-      "Action",
-      "Crime",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller"
-    ],
-    "imdbRating": 8.3,
-    "rottenTomatoesScore": 92,
-    "matchScore": 90,
-    "synopsis": "An NRI returns to India to help his ex-girlfriend find her kidnapped daughter.",
-    "director": "Ravikanth Perepu",
-    "cast": [
-      "Adivi Sesh",
-      "Adah Sharma"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Thriller masterpiece directed by Ravikanth Perepu.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Thriller masterpiece directed by Ravikanth Perepu.",
-    "similarTags": [
-      "Ravikanth",
-      "Mystery",
-      "Action"
-    ],
-    "moods": [
-      "✨ Thriller",
-      "🔥 Mystery"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹86 Crore",
-    "revenue": "₹301 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "telugu-evaru",
-    "title": "Evaru",
-    "year": 2019,
-    "runtime": "1h 57m",
-    "genres": [
-      "Thriller",
-      "Crime",
-      "Mystery",
-      "Adventure",
-      "Documentary",
-      "Suspense",
-      "Cyberpunk"
-    ],
-    "imdbRating": 8.4,
-    "rottenTomatoesScore": 93,
-    "matchScore": 91,
-    "synopsis": "A corrupt police officer investigates a woman accused of killing an officer who allegedly assaulted her.",
-    "director": "Venkat Ramji",
-    "cast": [
-      "Adivi Sesh",
-      "Regina Cassandra"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Thriller masterpiece directed by Venkat Ramji.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Thriller masterpiece directed by Venkat Ramji.",
-    "similarTags": [
-      "Venkat",
-      "Crime",
-      "Mystery"
-    ],
-    "moods": [
-      "✨ Thriller",
-      "🔥 Crime"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹28 Crore",
-    "revenue": "₹101 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "telugu-geetha-govindam",
-    "title": "Geetha Govindam",
-    "year": 2018,
-    "runtime": "2h 22m",
-    "genres": [
-      "Romance",
-      "Comedy",
-      "Animation",
-      "Drama",
-      "Musical",
-      "Thriller",
-      "Noir"
-    ],
-    "imdbRating": 8.5,
-    "rottenTomatoesScore": 94,
-    "matchScore": 92,
-    "synopsis": "A lecturer falls in love with a woman who initially hates him due to a tragic misunderstanding.",
-    "director": "Parasuram",
-    "cast": [
-      "Vijay Deverakonda",
-      "Rashmika Mandanna"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by Parasuram.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by Parasuram.",
-    "similarTags": [
-      "Parasuram",
-      "Comedy",
       "Animation"
     ],
     "moods": [
-      "✨ Romance",
-      "🔥 Comedy"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹40 Crore",
-    "revenue": "₹345 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "telugu-ala-vaikunthapurramuloo",
-    "title": "Ala Vaikunthapurramuloo",
-    "year": 2020,
-    "runtime": "2h 45m",
-    "genres": [
-      "Action",
-      "Comedy",
-      "Family",
-      "Anime",
-      "Romance",
-      "War",
-      "Survival"
-    ],
-    "imdbRating": 8.6,
-    "rottenTomatoesScore": 95,
-    "matchScore": 93,
-    "synopsis": "A young man swapped at birth learns about his biological father's wealthy family and protects them.",
-    "director": "Trivikram Srinivas",
-    "cast": [
-      "Allu Arjun",
-      "Pooja Hegde"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1536768139911-e290a59002e4?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Trivikram Srinivas.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Action masterpiece directed by Trivikram Srinivas.",
-    "similarTags": [
-      "Trivikram",
-      "Comedy",
-      "Family"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Comedy"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹122 Crore",
-    "revenue": "₹113 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "telugu-baby-telugu",
-    "title": "Baby",
-    "year": 2023,
-    "runtime": "2h 55m",
-    "genres": [
-      "Romance",
-      "Drama",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi",
-      "Western",
-      "Space"
-    ],
-    "imdbRating": 8.7,
-    "rottenTomatoesScore": 96,
-    "matchScore": 94,
-    "synopsis": "A triangular love story exploring changing priorities and heartbreaks in college life.",
-    "director": "Sai Rajesh",
-    "cast": [
-      "Anand Deverakonda",
-      "Vaishnavi Chaitanya"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by Sai Rajesh.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by Sai Rajesh.",
-    "similarTags": [
-      "Sai",
-      "Drama",
-      "Biography"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Drama"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹23 Crore",
-    "revenue": "₹232 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "telugu-kushi-telugu",
-    "title": "Kushi",
-    "year": 2001,
-    "runtime": "2h 50m",
-    "genres": [
-      "Romance",
-      "Comedy",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel"
-    ],
-    "imdbRating": 8.8,
-    "rottenTomatoesScore": 97,
-    "matchScore": 95,
-    "synopsis": "Two college friends have feelings for each other but keep fighting due to their high egos.",
-    "director": "S.J. Suryah",
-    "cast": [
-      "Pawan Kalyan",
-      "Bhumika Chawla"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by S.J. Suryah.",
-    "whyRecommended": "Top recommendation from Telugu cinema. A high-quality Romance masterpiece directed by S.J. Suryah.",
-    "similarTags": [
-      "S.J.",
-      "Comedy",
-      "History"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Comedy"
-    ],
-    "language": "Telugu",
-    "country": "India",
-    "budget": "₹115 Crore",
-    "revenue": "₹444 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-drishyam-1",
-    "title": "Drishyam",
-    "year": 2013,
-    "runtime": "2h 40m",
-    "genres": [
-      "Thriller",
-      "Drama",
-      "Crime",
-      "Action",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller"
-    ],
-    "imdbRating": 7.4,
-    "rottenTomatoesScore": 80,
-    "matchScore": 90,
-    "synopsis": "A cable TV operator goes to extreme lengths to protect his family after they commit an accidental murder.",
-    "director": "Jeethu Joseph",
-    "cast": [
-      "Mohanlal",
-      "Meena",
-      "Asha Sharath"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Thriller masterpiece directed by Jeethu Joseph.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Thriller masterpiece directed by Jeethu Joseph.",
-    "similarTags": [
-      "Jeethu",
-      "Drama",
-      "Crime"
-    ],
-    "moods": [
-      "✨ Thriller",
-      "🔥 Drama"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹46 Crore",
-    "revenue": "₹391 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-drishyam-2",
-    "title": "Drishyam 2",
-    "year": 2021,
-    "runtime": "2h 32m",
-    "genres": [
-      "Thriller",
-      "Drama",
-      "Crime",
-      "Adventure",
-      "Documentary",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk"
-    ],
-    "imdbRating": 7.5,
-    "rottenTomatoesScore": 81,
-    "matchScore": 91,
-    "synopsis": "The investigations reopen six years later, forcing Georgekutty to hatch a final cover-up plan.",
-    "director": "Jeethu Joseph",
-    "cast": [
-      "Mohanlal",
-      "Meena",
-      "Murali Gopy"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1536768139911-e290a59002e4?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Thriller masterpiece directed by Jeethu Joseph.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Thriller masterpiece directed by Jeethu Joseph.",
-    "similarTags": [
-      "Jeethu",
-      "Drama",
-      "Crime"
-    ],
-    "moods": [
-      "✨ Thriller",
-      "🔥 Drama"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹32 Crore",
-    "revenue": "₹297 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-premam",
-    "title": "Premam",
-    "year": 2015,
-    "runtime": "2h 36m",
-    "genres": [
-      "Romance",
-      "Comedy",
-      "Drama",
-      "Animation",
-      "Musical",
-      "Thriller",
-      "Noir"
-    ],
-    "imdbRating": 7.6,
-    "rottenTomatoesScore": 82,
-    "matchScore": 92,
-    "synopsis": "A young man goes through three stages of love and heartbreak in his school and college life.",
-    "director": "Alphonse Puthren",
-    "cast": [
-      "Nivin Pauly",
-      "Sai Pallavi",
-      "Madonna Sebastian"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Romance masterpiece directed by Alphonse Puthren.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Romance masterpiece directed by Alphonse Puthren.",
-    "similarTags": [
-      "Alphonse",
-      "Comedy",
-      "Drama"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Comedy"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹113 Crore",
-    "revenue": "₹128 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-kumbalangi-nights",
-    "title": "Kumbalangi Nights",
-    "year": 2019,
-    "runtime": "2h 15m",
-    "genres": [
-      "Drama",
-      "Comedy",
-      "Romance",
-      "Anime",
-      "Family",
-      "War",
-      "Survival"
-    ],
-    "imdbRating": 7.7,
-    "rottenTomatoesScore": 83,
-    "matchScore": 93,
-    "synopsis": "Four dysfunctional brothers in a fishing village form an unlikely bond to resolve their issues.",
-    "director": "Madhu C. Narayanan",
-    "cast": [
-      "Fahadh Faasil",
-      "Shane Nigam",
-      "Soubin Shahir"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Madhu C. Narayanan.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Madhu C. Narayanan.",
-    "similarTags": [
-      "Madhu",
-      "Comedy",
-      "Romance"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Comedy"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹91 Crore",
-    "revenue": "₹388 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-bangalore-days",
-    "title": "Bangalore Days",
-    "year": 2014,
-    "runtime": "2h 51m",
-    "genres": [
-      "Drama",
-      "Romance",
-      "Comedy",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi",
-      "Western",
-      "Space"
-    ],
-    "imdbRating": 7.8,
-    "rottenTomatoesScore": 84,
-    "matchScore": 94,
-    "synopsis": "Three cousins move from Kerala to Bangalore, chasing their dreams and facing new relationships.",
-    "director": "Anjali Menon",
-    "cast": [
-      "Dulquer Salmaan",
-      "Nivin Pauly",
-      "Fahadh Faasil",
-      "Nazriya Nazim"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Anjali Menon.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Anjali Menon.",
-    "similarTags": [
-      "Anjali",
-      "Romance",
-      "Comedy"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Romance"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹73 Crore",
-    "revenue": "₹394 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-maheshinte",
-    "title": "Maheshinte Prathikaaram",
-    "year": 2016,
-    "runtime": "2h 0m",
-    "genres": [
-      "Comedy",
-      "Drama",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel"
-    ],
-    "imdbRating": 7.9,
-    "rottenTomatoesScore": 85,
-    "matchScore": 95,
-    "synopsis": "A photographer vows to remain barefoot until he takes revenge on the man who humiliated him.",
-    "director": "Dileesh Pothan",
-    "cast": [
-      "Fahadh Faasil",
-      "Aparna Balamurali"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Dileesh Pothan.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Dileesh Pothan.",
-    "similarTags": [
-      "Dileesh",
-      "Drama",
-      "History"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Drama"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹78 Crore",
-    "revenue": "₹111 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-lucifer",
-    "title": "Lucifer",
-    "year": 2019,
-    "runtime": "2h 54m",
-    "genres": [
-      "Action",
-      "Drama",
-      "Thriller",
-      "Crime",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller"
-    ],
-    "imdbRating": 8,
-    "rottenTomatoesScore": 86,
-    "matchScore": 96,
-    "synopsis": "A mysterious godfather takes charge of a political party after its veteran leader passes away.",
-    "director": "Prithviraj Sukumaran",
-    "cast": [
-      "Mohanlal",
-      "Vivek Oberoi",
-      "Manju Warrier"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Action masterpiece directed by Prithviraj Sukumaran.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Action masterpiece directed by Prithviraj Sukumaran.",
-    "similarTags": [
-      "Prithviraj",
-      "Drama",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Drama"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹69 Crore",
-    "revenue": "₹198 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-kurup",
-    "title": "Kurup",
-    "year": 2021,
-    "runtime": "2h 36m",
-    "genres": [
-      "Crime",
-      "Thriller",
-      "Biography",
-      "Documentary",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk",
-      "Adventure"
-    ],
-    "imdbRating": 8.1,
-    "rottenTomatoesScore": 87,
-    "matchScore": 97,
-    "synopsis": "The real-life story of Sukumara Kurup, India's most wanted fugitive who faked his death.",
-    "director": "Srinath Rajendran",
-    "cast": [
-      "Dulquer Salmaan",
-      "Sobhita Dhulipala"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Crime masterpiece directed by Srinath Rajendran.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Crime masterpiece directed by Srinath Rajendran.",
-    "similarTags": [
-      "Srinath",
-      "Thriller",
-      "Biography"
-    ],
-    "moods": [
-      "✨ Crime",
-      "🔥 Thriller"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹68 Crore",
-    "revenue": "₹213 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-minnal-murali",
-    "title": "Minnal Murali",
-    "year": 2021,
-    "runtime": "2h 38m",
-    "genres": [
-      "Action",
-      "Comedy",
-      "Superhero",
-      "Sci-Fi",
-      "Drama",
-      "Musical",
-      "Thriller",
-      "Noir",
-      "Animation"
-    ],
-    "imdbRating": 8.2,
-    "rottenTomatoesScore": 88,
-    "matchScore": 98,
-    "synopsis": "A tailor gains superhuman speed and powers after being struck by lightning in his village.",
-    "director": "Basil Joseph",
-    "cast": [
-      "Tovino Thomas",
-      "Guru Somasundaram"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Action masterpiece directed by Basil Joseph.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Action masterpiece directed by Basil Joseph.",
-    "similarTags": [
-      "Basil",
-      "Comedy",
-      "Superhero"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Comedy"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹90 Crore",
-    "revenue": "₹377 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-hridayam",
-    "title": "Hridayam",
-    "year": 2022,
-    "runtime": "2h 51m",
-    "genres": [
-      "Romance",
-      "Drama",
-      "Musical",
-      "Family",
-      "War",
-      "Survival",
-      "Anime"
-    ],
-    "imdbRating": 8.3,
-    "rottenTomatoesScore": 89,
-    "matchScore": 99,
-    "synopsis": "A young man goes through a series of relationships and career changes at an engineering college.",
-    "director": "Vineeth Sreenivasan",
-    "cast": [
-      "Pranav Mohanlal",
-      "Kalyani Priyadarshan"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Romance masterpiece directed by Vineeth Sreenivasan.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Romance masterpiece directed by Vineeth Sreenivasan.",
-    "similarTags": [
-      "Vineeth",
-      "Drama",
-      "Musical"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Drama"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹130 Crore",
-    "revenue": "₹61 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-bheeshma-parvam",
-    "title": "Bheeshma Parvam",
-    "year": 2022,
-    "runtime": "2h 40m",
-    "genres": [
-      "Action",
-      "Drama",
-      "Crime",
-      "Fantasy",
-      "Sci-Fi",
-      "Western",
-      "Space",
-      "Biography"
-    ],
-    "imdbRating": 8.4,
-    "rottenTomatoesScore": 90,
-    "matchScore": 90,
-    "synopsis": "An aging patriarch protects his large family from internal betrayals and external drug gangs.",
-    "director": "Amal Neerad",
-    "cast": [
-      "Mammootty",
-      "Soubin Shahir"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1536768139911-e290a59002e4?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Action masterpiece directed by Amal Neerad.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Action masterpiece directed by Amal Neerad.",
-    "similarTags": [
-      "Amal",
-      "Drama",
-      "Crime"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Drama"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹27 Crore",
-    "revenue": "₹116 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-romanchan",
-    "title": "Romanchan",
-    "year": 2023,
-    "runtime": "2h 10m",
-    "genres": [
-      "Comedy",
-      "Horror",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel"
-    ],
-    "imdbRating": 8.5,
-    "rottenTomatoesScore": 91,
-    "matchScore": 91,
-    "synopsis": "Seven bachelor roommates in Bangalore use a Ouija board, accidentally invoking a spirit named Anamika.",
-    "director": "Jithu Madhavan",
-    "cast": [
-      "Soubin Shahir",
-      "Arjun Ashokan"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Jithu Madhavan.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Jithu Madhavan.",
-    "similarTags": [
-      "Jithu",
-      "Horror",
-      "History"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Horror"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹136 Crore",
-    "revenue": "₹177 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-two-thousand-eighteen",
-    "title": "2018",
-    "year": 2023,
-    "runtime": "2h 30m",
-    "genres": [
-      "Drama",
-      "Survival",
-      "History",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller",
-      "Action",
-      "Crime"
-    ],
-    "imdbRating": 8.6,
-    "rottenTomatoesScore": 92,
-    "matchScore": 92,
-    "synopsis": "The survival stories of the people of Kerala during the catastrophic 2018 state floods.",
-    "director": "Jude Anthany Joseph",
-    "cast": [
-      "Tovino Thomas",
-      "Kunchacko Boban",
-      "Asif Ali"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Jude Anthany Joseph.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Jude Anthany Joseph.",
-    "similarTags": [
-      "Jude",
-      "Survival",
-      "History"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Survival"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹22 Crore",
-    "revenue": "₹455 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-manjummel-boys",
-    "title": "Manjummel Boys",
-    "year": 2024,
-    "runtime": "2h 15m",
-    "genres": [
-      "Drama",
-      "Adventure",
-      "Survival",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk",
-      "Documentary"
-    ],
-    "imdbRating": 8.7,
-    "rottenTomatoesScore": 93,
-    "matchScore": 93,
-    "synopsis": "A group of friends on a trip to Kodaikanal attempt to rescue their friend from Guna Caves.",
-    "director": "Chidambaram",
-    "cast": [
-      "Soubin Shahir",
-      "Sreenath Bhasi"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Chidambaram.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Chidambaram.",
-    "similarTags": [
-      "Chidambaram",
-      "Adventure",
-      "Survival"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Adventure"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹76 Crore",
-    "revenue": "₹459 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-premalu",
-    "title": "Premalu",
-    "year": 2024,
-    "runtime": "2h 36m",
-    "genres": [
-      "Romance",
-      "Comedy",
-      "Musical",
-      "Thriller",
-      "Noir",
-      "Animation",
-      "Drama"
-    ],
-    "imdbRating": 8.8,
-    "rottenTomatoesScore": 94,
-    "matchScore": 94,
-    "synopsis": "A young graduate moves to Hyderabad for a gate coaching class, falling in love with a bubbly girl.",
-    "director": "Girish A.D.",
-    "cast": [
-      "Naslen K. Gafoor",
-      "Mamitha Baiju"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Romance masterpiece directed by Girish A.D..",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Romance masterpiece directed by Girish A.D..",
-    "similarTags": [
-      "Girish",
-      "Comedy",
-      "Musical"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Comedy"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹25 Crore",
-    "revenue": "₹354 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-aadujeevitham",
-    "title": "Aadujeevitham",
-    "year": 2024,
-    "runtime": "2h 52m",
-    "genres": [
-      "Drama",
-      "Biography",
-      "Survival",
-      "Romance",
-      "War",
-      "Anime",
-      "Family"
-    ],
-    "imdbRating": 8.9,
-    "rottenTomatoesScore": 95,
-    "matchScore": 95,
-    "synopsis": "An immigrant worker in Saudi Arabia is forced into slave labor herding goats in the desert.",
-    "director": "Blessy",
-    "cast": [
-      "Prithviraj Sukumaran",
-      "Amala Paul"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Blessy.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Blessy.",
-    "similarTags": [
-      "Blessy",
-      "Biography",
-      "Survival"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Biography"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹115 Crore",
-    "revenue": "₹186 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-bramayugam",
-    "title": "Bramayugam",
-    "year": 2024,
-    "runtime": "2h 20m",
-    "genres": [
-      "Horror",
-      "Thriller",
-      "Fantasy",
-      "Psychological",
-      "Sci-Fi",
-      "Western",
-      "Space",
-      "Biography"
-    ],
-    "imdbRating": 9,
-    "rottenTomatoesScore": 96,
-    "matchScore": 96,
-    "synopsis": "A court singer escapes slave labor only to find himself trapped in a mysterious mansion owned by a wizard.",
-    "director": "Rahul Sadasivan",
-    "cast": [
-      "Mammootty",
-      "Arjun Ashokan"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1505635552518-3448ff116af3?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Horror masterpiece directed by Rahul Sadasivan.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Horror masterpiece directed by Rahul Sadasivan.",
-    "similarTags": [
-      "Rahul",
-      "Thriller",
-      "Fantasy"
-    ],
-    "moods": [
-      "✨ Horror",
-      "🔥 Thriller"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹75 Crore",
-    "revenue": "₹132 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-trance",
-    "title": "Trance",
-    "year": 2020,
-    "runtime": "2h 50m",
-    "genres": [
-      "Drama",
-      "Psychological",
-      "Thriller",
-      "Sports",
-      "Time Travel",
-      "Comedy",
-      "History"
-    ],
-    "imdbRating": 9.1,
-    "rottenTomatoesScore": 97,
-    "matchScore": 97,
-    "synopsis": "A struggling motivational speaker is hired by corporate bosses to become a fake miracle worker.",
-    "director": "Anwar Rasheed",
-    "cast": [
-      "Fahadh Faasil",
-      "Nazriya Nazim",
-      "Gautham Vasudev Menon"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Anwar Rasheed.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Anwar Rasheed.",
-    "similarTags": [
-      "Anwar",
-      "Psychological",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Psychological"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹106 Crore",
-    "revenue": "₹255 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-joji",
-    "title": "Joji",
-    "year": 2021,
-    "runtime": "1h 53m",
-    "genres": [
-      "Drama",
-      "Crime",
-      "Thriller",
-      "Superhero",
-      "Mystery Thriller",
-      "Action",
-      "Horror"
-    ],
-    "imdbRating": 9.2,
-    "rottenTomatoesScore": 80,
-    "matchScore": 98,
-    "synopsis": "An engineering dropout plots to kill his tyrannical father to inherit the family wealth.",
-    "director": "Dileesh Pothan",
-    "cast": [
-      "Fahadh Faasil",
-      "Baburaj"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Dileesh Pothan.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Dileesh Pothan.",
-    "similarTags": [
-      "Dileesh",
-      "Crime",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Crime"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹75 Crore",
-    "revenue": "₹386 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-malik",
-    "title": "Malik",
-    "year": 2021,
-    "runtime": "2h 42m",
-    "genres": [
-      "Drama",
-      "Crime",
-      "History",
-      "Suspense",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary",
-      "Mystery"
-    ],
-    "imdbRating": 9.3,
-    "rottenTomatoesScore": 81,
-    "matchScore": 99,
-    "synopsis": "A powerful godfather in a coastal village fights against local politicians trying to steal lands.",
-    "director": "Mahesh Narayanan",
-    "cast": [
-      "Fahadh Faasil",
-      "Nimisha Sajayan"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Mahesh Narayanan.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Mahesh Narayanan.",
-    "similarTags": [
-      "Mahesh",
-      "Crime",
-      "History"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Crime"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹27 Crore",
-    "revenue": "₹364 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-great-indian-kitchen",
-    "title": "The Great Indian Kitchen",
-    "year": 2021,
-    "runtime": "1h 40m",
-    "genres": [
-      "Drama",
-      "Family",
-      "Thriller",
-      "Noir",
-      "Animation",
-      "Musical"
-    ],
-    "imdbRating": 9.4,
-    "rottenTomatoesScore": 82,
-    "matchScore": 90,
-    "synopsis": "A newlywed woman struggles to adapt to the heavy domestic duties imposed on her by a patriarchal home.",
-    "director": "Jeo Baby",
-    "cast": [
-      "Nimisha Sajayan",
-      "Suraj Venjaramoodu"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Jeo Baby.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Jeo Baby.",
-    "similarTags": [
-      "Jeo",
-      "Family",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Family"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹122 Crore",
-    "revenue": "₹393 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-nayattu",
-    "title": "Nayattu",
-    "year": 2021,
-    "runtime": "2h 4m",
-    "genres": [
-      "Thriller",
-      "Drama",
-      "Survival",
-      "War",
-      "Anime",
-      "Family",
-      "Romance"
-    ],
-    "imdbRating": 7.4,
-    "rottenTomatoesScore": 83,
-    "matchScore": 91,
-    "synopsis": "Three police officers go on the run after accidentally running over a young boy.",
-    "director": "Martin Prakkat",
-    "cast": [
-      "Kunchacko Boban",
-      "Joju George",
-      "Nimisha Sajayan"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Thriller masterpiece directed by Martin Prakkat.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Thriller masterpiece directed by Martin Prakkat.",
-    "similarTags": [
-      "Martin",
-      "Drama",
-      "Survival"
-    ],
-    "moods": [
-      "✨ Thriller",
-      "🔥 Drama"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹125 Crore",
-    "revenue": "₹316 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-angamaly-diaries",
-    "title": "Angamaly Diaries",
-    "year": 2017,
-    "runtime": "2h 12m",
-    "genres": [
-      "Crime",
-      "Comedy",
-      "Drama",
-      "Western",
-      "Space",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi"
-    ],
-    "imdbRating": 7.5,
-    "rottenTomatoesScore": 84,
-    "matchScore": 92,
-    "synopsis": "A youngster gets involved in local gang wars over pig farming business in Angamaly.",
-    "director": "Lijo Jose Pellissery",
-    "cast": [
-      "Antony Varghese",
-      "Reshma Rajan"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Crime masterpiece directed by Lijo Jose Pellissery.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Crime masterpiece directed by Lijo Jose Pellissery.",
-    "similarTags": [
-      "Lijo",
-      "Comedy",
-      "Drama"
-    ],
-    "moods": [
-      "✨ Crime",
-      "🔥 Comedy"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹98 Crore",
-    "revenue": "₹427 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-ee-ma-yau",
-    "title": "Ee.Ma.Yau.",
-    "year": 2018,
-    "runtime": "2h 0m",
-    "genres": [
-      "Drama",
-      "Comedy",
-      "Dark Comedy",
-      "Psychological",
-      "Time Travel",
-      "History",
-      "Sports"
-    ],
-    "imdbRating": 7.6,
-    "rottenTomatoesScore": 85,
-    "matchScore": 93,
-    "synopsis": "A son struggles to host a grand funeral for his deceased father in a coastal village.",
-    "director": "Lijo Jose Pellissery",
-    "cast": [
-      "Chemban Vinod Jose",
-      "Dileesh Pothan"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Lijo Jose Pellissery.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Lijo Jose Pellissery.",
-    "similarTags": [
-      "Lijo",
-      "Comedy",
-      "Dark Comedy"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Comedy"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹74 Crore",
-    "revenue": "₹153 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-amen",
-    "title": "Amen",
-    "year": 2013,
-    "runtime": "2h 30m",
-    "genres": [
-      "Musical",
-      "Comedy",
-      "Fantasy",
-      "Mystery Thriller",
-      "Action",
-      "Crime",
-      "Horror",
-      "Superhero"
-    ],
-    "imdbRating": 7.7,
-    "rottenTomatoesScore": 86,
-    "matchScore": 94,
-    "synopsis": "A young musician fights to win a band competition to marry his landlord's daughter.",
-    "director": "Lijo Jose Pellissery",
-    "cast": [
-      "Fahadh Faasil",
-      "Indrajith Sukumaran"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Musical masterpiece directed by Lijo Jose Pellissery.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Musical masterpiece directed by Lijo Jose Pellissery.",
-    "similarTags": [
-      "Lijo",
-      "Comedy",
-      "Fantasy"
-    ],
-    "moods": [
-      "✨ Musical",
-      "🔥 Comedy"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹62 Crore",
-    "revenue": "₹337 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-double-barrel",
-    "title": "Double Barrel",
-    "year": 2015,
-    "runtime": "2h 40m",
-    "genres": [
-      "Comedy",
-      "Action",
-      "Crime",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary",
-      "Mystery",
-      "Suspense"
-    ],
-    "imdbRating": 7.8,
-    "rottenTomatoesScore": 87,
-    "matchScore": 95,
-    "synopsis": "A spoof action comedy involving drug deals and diamond smuggling in Goa.",
-    "director": "Lijo Jose Pellissery",
-    "cast": [
-      "Prithviraj Sukumaran",
-      "Indrajith Sukumaran"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Lijo Jose Pellissery.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Lijo Jose Pellissery.",
-    "similarTags": [
-      "Lijo",
-      "Action",
-      "Crime"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Action"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹42 Crore",
-    "revenue": "₹241 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-rorschach",
-    "title": "Rorschach",
-    "year": 2022,
-    "runtime": "2h 30m",
-    "genres": [
-      "Thriller",
-      "Mystery",
-      "Psychological",
-      "Noir",
-      "Animation",
-      "Drama",
-      "Musical"
-    ],
-    "imdbRating": 7.9,
-    "rottenTomatoesScore": 88,
-    "matchScore": 96,
-    "synopsis": "A mysterious NRI travels to a village seeking revenge against his wife's killer.",
-    "director": "Nisam Basheer",
-    "cast": [
-      "Mammootty",
-      "Grace Antony"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Thriller masterpiece directed by Nisam Basheer.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Thriller masterpiece directed by Nisam Basheer.",
-    "similarTags": [
-      "Nisam",
-      "Mystery",
-      "Psychological"
-    ],
-    "moods": [
-      "✨ Thriller",
-      "🔥 Mystery"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹76 Crore",
-    "revenue": "₹67 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-kannur-squad",
-    "title": "Kannur Squad",
-    "year": 2023,
-    "runtime": "2h 40m",
-    "genres": [
-      "Action",
-      "Crime",
-      "Thriller",
-      "Survival",
-      "Anime",
-      "Family",
-      "Romance",
-      "War"
-    ],
-    "imdbRating": 8,
-    "rottenTomatoesScore": 89,
-    "matchScore": 97,
-    "synopsis": "A team of police officers travel across India to catch a group of ruthless murderers.",
-    "director": "Roby Varghese Raj",
-    "cast": [
-      "Mammootty",
-      "Rony David"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Action masterpiece directed by Roby Varghese Raj.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Action masterpiece directed by Roby Varghese Raj.",
-    "similarTags": [
-      "Roby",
-      "Crime",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Crime"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹86 Crore",
-    "revenue": "₹191 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-manichitrathazhu",
-    "title": "Manichitrathazhu",
-    "year": 1993,
-    "runtime": "2h 45m",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Psychological",
-      "Space",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi",
-      "Western"
-    ],
-    "imdbRating": 8.1,
-    "rottenTomatoesScore": 90,
-    "matchScore": 98,
-    "synopsis": "A psychiatrist investigates mysterious occurrences in a haunted ancestral home.",
-    "director": "Fazil",
-    "cast": [
-      "Mohanlal",
-      "Suresh Gopi",
-      "Shobana"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Horror masterpiece directed by Fazil.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Horror masterpiece directed by Fazil.",
-    "similarTags": [
-      "Fazil",
-      "Mystery",
-      "Psychological"
-    ],
-    "moods": [
-      "✨ Horror",
-      "🔥 Mystery"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹31 Crore",
-    "revenue": "₹382 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-spadikam",
-    "title": "Spadikam",
-    "year": 1995,
-    "runtime": "2h 40m",
-    "genres": [
-      "Action",
-      "Drama",
-      "Time Travel",
-      "Comedy",
-      "History",
-      "Sports",
-      "Psychological"
-    ],
-    "imdbRating": 8.2,
-    "rottenTomatoesScore": 91,
-    "matchScore": 99,
-    "synopsis": "A rebellious youngster turns rogue after facing severe pressure from his schoolmaster father.",
-    "director": "Bhadran",
-    "cast": [
-      "Mohanlal",
-      "Thilakan"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Action masterpiece directed by Bhadran.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Action masterpiece directed by Bhadran.",
-    "similarTags": [
-      "Bhadran",
-      "Drama",
-      "Time Travel"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Drama"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹41 Crore",
-    "revenue": "₹424 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-kireedam",
-    "title": "Kireedam",
-    "year": 1989,
-    "runtime": "2h 30m",
-    "genres": [
-      "Drama",
-      "Crime",
-      "Action",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller"
-    ],
-    "imdbRating": 8.3,
-    "rottenTomatoesScore": 92,
-    "matchScore": 90,
-    "synopsis": "A young man's dreams of becoming a police officer are shattered when he saves his father from a gangster.",
-    "director": "Sibi Malayil",
-    "cast": [
-      "Mohanlal",
-      "Thilakan"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Sibi Malayil.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by Sibi Malayil.",
-    "similarTags": [
-      "Sibi",
-      "Crime",
-      "Action"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Crime"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹109 Crore",
-    "revenue": "₹446 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-devasuram",
-    "title": "Devasuram",
-    "year": 1993,
-    "runtime": "2h 40m",
-    "genres": [
-      "Drama",
-      "Action",
-      "Adventure",
-      "Documentary",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk"
-    ],
-    "imdbRating": 8.4,
-    "rottenTomatoesScore": 93,
-    "matchScore": 91,
-    "synopsis": "A wealthy landlord fights with a rival clan to protect his inheritance.",
-    "director": "I.V. Sasi",
-    "cast": [
-      "Mohanlal",
-      "Napoleon"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by I.V. Sasi.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Drama masterpiece directed by I.V. Sasi.",
-    "similarTags": [
-      "I.V.",
-      "Action",
-      "Adventure"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Action"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹97 Crore",
-    "revenue": "₹182 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-thoovanathumbikal",
-    "title": "Thoovanathumbikal",
-    "year": 1987,
-    "runtime": "2h 30m",
-    "genres": [
-      "Romance",
-      "Drama",
-      "Animation",
-      "Musical",
-      "Thriller",
-      "Noir"
-    ],
-    "imdbRating": 8.5,
-    "rottenTomatoesScore": 94,
-    "matchScore": 92,
-    "synopsis": "A wealthy landlord leads a double life, falling in love with a bubbly girl and a call girl.",
-    "director": "P. Padmarajan",
-    "cast": [
-      "Mohanlal",
-      "Sumalatha"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Romance masterpiece directed by P. Padmarajan.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Romance masterpiece directed by P. Padmarajan.",
-    "similarTags": [
-      "P.",
-      "Drama",
-      "Animation"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Drama"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹110 Crore",
-    "revenue": "₹325 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-chitram",
-    "title": "Chitram",
-    "year": 1988,
-    "runtime": "2h 40m",
-    "genres": [
-      "Comedy",
-      "Romance",
-      "Drama",
-      "Anime",
-      "Family",
-      "War",
-      "Survival"
-    ],
-    "imdbRating": 8.6,
-    "rottenTomatoesScore": 95,
-    "matchScore": 93,
-    "synopsis": "A woman hires a thief to act as her husband to receive inheritance money from her father.",
-    "director": "Priyadarshan",
-    "cast": [
-      "Mohanlal",
-      "Ranjini"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Priyadarshan.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Priyadarshan.",
-    "similarTags": [
-      "Priyadarshan",
-      "Romance",
-      "Drama"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Romance"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹57 Crore",
-    "revenue": "₹392 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-kilukkam",
-    "title": "Kilukkam",
-    "year": 1991,
-    "runtime": "2h 45m",
-    "genres": [
-      "Comedy",
-      "Romance",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi",
-      "Western",
-      "Space"
-    ],
-    "imdbRating": 8.7,
-    "rottenTomatoesScore": 96,
-    "matchScore": 94,
-    "synopsis": "A tourist guide in Ooty helps an illegitimate daughter search for her biological father.",
-    "director": "Priyadarshan",
-    "cast": [
-      "Mohanlal",
-      "Revathi",
-      "Jagathy Sreekumar"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Priyadarshan.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Priyadarshan.",
-    "similarTags": [
-      "Priyadarshan",
-      "Romance",
-      "Biography"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Romance"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹100 Crore",
-    "revenue": "₹147 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "malayalam-boeing-boeing",
-    "title": "Boeing Boeing",
-    "year": 1985,
-    "runtime": "2h 30m",
-    "genres": [
-      "Comedy",
-      "Romance",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel"
-    ],
-    "imdbRating": 8.8,
-    "rottenTomatoesScore": 97,
-    "matchScore": 95,
-    "synopsis": "A young man dates three air hostesses at the same time with the help of his roommate.",
-    "director": "Priyadarshan",
-    "cast": [
-      "Mohanlal",
-      "Mukesh"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Priyadarshan.",
-    "whyRecommended": "Top recommendation from Malayalam cinema. A high-quality Comedy masterpiece directed by Priyadarshan.",
-    "similarTags": [
-      "Priyadarshan",
-      "Romance",
-      "History"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Romance"
-    ],
-    "language": "Malayalam",
-    "country": "India",
-    "budget": "₹73 Crore",
-    "revenue": "₹86 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "hindi-three-idiots",
-    "title": "3 Idiots",
-    "year": 2009,
-    "runtime": "2h 50m",
-    "genres": [
-      "Comedy",
-      "Drama",
-      "Family",
-      "Action",
-      "Crime",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller"
-    ],
-    "imdbRating": 7.4,
-    "rottenTomatoesScore": 80,
-    "matchScore": 90,
-    "synopsis": "Two friends search for their long-lost companion, recalling their college days of fighting societal pressures.",
-    "director": "Rajkumar Hirani",
-    "cast": [
-      "Aamir Khan",
-      "R. Madhavan",
-      "Sharman Joshi"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Rajkumar Hirani.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Rajkumar Hirani.",
-    "similarTags": [
-      "Rajkumar",
-      "Drama",
-      "Family"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Drama"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹74 Crore",
-    "revenue": "₹297 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "hindi-dangal",
-    "title": "Dangal",
-    "year": 2016,
-    "runtime": "2h 41m",
-    "genres": [
-      "Drama",
-      "Biography",
-      "Sports",
-      "Adventure",
-      "Documentary",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk"
-    ],
-    "imdbRating": 7.5,
-    "rottenTomatoesScore": 81,
-    "matchScore": 91,
-    "synopsis": "A former wrestler trains his two daughters to become world-class wrestlers despite social taboos.",
-    "director": "Nitesh Tiwari",
-    "cast": [
-      "Aamir Khan",
-      "Fatima Sana Shaikh",
-      "Sanya Malhotra"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Nitesh Tiwari.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Nitesh Tiwari.",
-    "similarTags": [
-      "Nitesh",
-      "Biography",
-      "Sports"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Biography"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹122 Crore",
-    "revenue": "₹419 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "hindi-lagaan",
-    "title": "Lagaan",
-    "year": 2001,
-    "runtime": "3h 44m",
-    "genres": [
-      "Drama",
-      "Sports",
-      "History",
-      "Animation",
-      "Musical",
-      "Thriller",
-      "Noir"
-    ],
-    "imdbRating": 7.6,
-    "rottenTomatoesScore": 82,
-    "matchScore": 92,
-    "synopsis": "Villagers in British India bet their future taxes on a game of cricket against their rulers.",
-    "director": "Ashutosh Gowariker",
-    "cast": [
-      "Aamir Khan",
-      "Gracy Singh"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Ashutosh Gowariker.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Ashutosh Gowariker.",
-    "similarTags": [
-      "Ashutosh",
-      "Sports",
-      "History"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Sports"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹51 Crore",
-    "revenue": "₹298 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "hindi-sholay",
-    "title": "Sholay",
-    "year": 1975,
-    "runtime": "3h 24m",
-    "genres": [
-      "Action",
-      "Crime",
-      "Western",
-      "Anime",
-      "Family",
-      "Romance",
-      "War",
-      "Survival"
-    ],
-    "imdbRating": 7.7,
-    "rottenTomatoesScore": 83,
-    "matchScore": 93,
-    "synopsis": "A retired police officer hires two petty thieves to capture a notorious dacoit who slaughtered his family.",
-    "director": "Ramesh Sippy",
-    "cast": [
-      "Dharmendra",
-      "Amitabh Bachchan",
-      "Hema Malini"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1536768139911-e290a59002e4?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Action masterpiece directed by Ramesh Sippy.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Action masterpiece directed by Ramesh Sippy.",
-    "similarTags": [
-      "Ramesh",
-      "Crime",
-      "Western"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Crime"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹117 Crore",
-    "revenue": "₹156 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "hindi-ddlj",
-    "title": "Dilwale Dulhania Le Jayenge",
-    "year": 1995,
-    "runtime": "3h 9m",
-    "genres": [
-      "Romance",
-      "Drama",
-      "Family",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi",
-      "Western",
-      "Space"
-    ],
-    "imdbRating": 7.8,
-    "rottenTomatoesScore": 84,
-    "matchScore": 94,
-    "synopsis": "A fun-loving youngster tries to win the heart of a girl's conservative family in London and Punjab.",
-    "director": "Aditya Chopra",
-    "cast": [
-      "Shah Rukh Khan",
-      "Kajol"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Aditya Chopra.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Aditya Chopra.",
-    "similarTags": [
-      "Aditya",
-      "Drama",
-      "Family"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Drama"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹59 Crore",
-    "revenue": "₹428 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "hindi-taare-zameen-par",
-    "title": "Taare Zameen Par",
-    "year": 2007,
-    "runtime": "2h 45m",
-    "genres": [
-      "Drama",
-      "Family",
-      "Comedy",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel"
-    ],
-    "imdbRating": 7.9,
-    "rottenTomatoesScore": 85,
-    "matchScore": 95,
-    "synopsis": "An art teacher helps a dyslexic child discover his inner potential through care and patience.",
-    "director": "Aamir Khan",
-    "cast": [
-      "Darsheel Safary",
-      "Aamir Khan"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Aamir Khan.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Aamir Khan.",
-    "similarTags": [
-      "Aamir",
-      "Family",
-      "Comedy"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Family"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹67 Crore",
-    "revenue": "₹420 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "hindi-pk",
-    "title": "PK",
-    "year": 2014,
-    "runtime": "2h 33m",
-    "genres": [
-      "Comedy",
-      "Fantasy",
-      "Drama",
-      "Crime",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller",
-      "Action"
-    ],
-    "imdbRating": 8,
-    "rottenTomatoesScore": 86,
-    "matchScore": 96,
-    "synopsis": "An alien stranded on Earth asks questions about religious dogmas and human behaviors.",
-    "director": "Rajkumar Hirani",
-    "cast": [
-      "Aamir Khan",
-      "Anushka Sharma"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Rajkumar Hirani.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Rajkumar Hirani.",
-    "similarTags": [
-      "Rajkumar",
-      "Fantasy",
-      "Drama"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Fantasy"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹100 Crore",
-    "revenue": "₹91 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "hindi-sanju",
-    "title": "Sanju",
-    "year": 2018,
-    "runtime": "2h 39m",
-    "genres": [
-      "Drama",
-      "Biography",
-      "Documentary",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk",
-      "Adventure"
-    ],
-    "imdbRating": 8.1,
-    "rottenTomatoesScore": 87,
-    "matchScore": 97,
-    "synopsis": "The real-life biographic story of Bollywood actor Sanjay Dutt, detailing his drug abuse and jail life.",
-    "director": "Rajkumar Hirani",
-    "cast": [
-      "Ranbir Kapoor",
-      "Vicky Kaushal"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Rajkumar Hirani.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Rajkumar Hirani.",
-    "similarTags": [
-      "Rajkumar",
-      "Biography",
-      "Documentary"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Biography"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹108 Crore",
-    "revenue": "₹445 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "hindi-kabir-singh",
-    "title": "Kabir Singh",
-    "year": 2019,
-    "runtime": "2h 55m",
-    "genres": [
-      "Drama",
-      "Romance",
-      "Musical",
-      "Thriller",
-      "Noir",
-      "Animation"
-    ],
-    "imdbRating": 8.2,
-    "rottenTomatoesScore": 88,
-    "matchScore": 98,
-    "synopsis": "An angry surgeon goes down a path of drug abuse after his lover is forced to marry another.",
-    "director": "Sandeep Reddy Vanga",
-    "cast": [
-      "Shahid Kapoor",
-      "Kiara Advani"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Sandeep Reddy Vanga.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Sandeep Reddy Vanga.",
-    "similarTags": [
-      "Sandeep",
-      "Romance",
-      "Musical"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Romance"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹119 Crore",
-    "revenue": "₹208 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "hindi-andhadhun",
-    "title": "Andhadhun",
-    "year": 2018,
-    "runtime": "2h 19m",
-    "genres": [
-      "Thriller",
-      "Crime",
-      "Mystery",
-      "Black Comedy",
-      "Family",
-      "Romance",
-      "War",
-      "Survival",
-      "Anime"
-    ],
-    "imdbRating": 8.3,
-    "rottenTomatoesScore": 89,
-    "matchScore": 99,
-    "synopsis": "A blind pianist accidentally witnesses the murder of a former film star.",
-    "director": "Sriram Raghavan",
-    "cast": [
-      "Ayushmann Khurrana",
-      "Tabu",
-      "Radhika Apte"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Thriller masterpiece directed by Sriram Raghavan.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Thriller masterpiece directed by Sriram Raghavan.",
-    "similarTags": [
-      "Sriram",
-      "Crime",
-      "Mystery"
-    ],
-    "moods": [
-      "✨ Thriller",
-      "🔥 Crime"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹74 Crore",
-    "revenue": "₹393 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "hindi-tumbbad",
-    "title": "Tumbbad",
-    "year": 2018,
-    "runtime": "1h 44m",
-    "genres": [
-      "Horror",
-      "Fantasy",
-      "Mystery",
-      "Thriller",
-      "Sci-Fi",
-      "Western",
-      "Space",
-      "Biography"
-    ],
-    "imdbRating": 8.4,
-    "rottenTomatoesScore": 90,
-    "matchScore": 90,
-    "synopsis": "A family builds a temple for a cursed deity of greed, trying to steal his endless gold coin stash.",
-    "director": "Rahi Anil Barve",
-    "cast": [
-      "Sohum Shah",
-      "Jyoti Malshe"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1505635552518-3448ff116af3?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1505635552518-3448ff116af3?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Horror masterpiece directed by Rahi Anil Barve.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Horror masterpiece directed by Rahi Anil Barve.",
-    "similarTags": [
-      "Rahi",
-      "Fantasy",
-      "Mystery"
-    ],
-    "moods": [
-      "✨ Horror",
-      "🔥 Fantasy"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹32 Crore",
-    "revenue": "₹449 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "hindi-queen",
-    "title": "Queen",
-    "year": 2013,
-    "runtime": "2h 26m",
-    "genres": [
-      "Comedy",
-      "Drama",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel"
-    ],
-    "imdbRating": 8.5,
-    "rottenTomatoesScore": 91,
-    "matchScore": 91,
-    "synopsis": "A Delhi girl goes on her honeymoon to Paris and Amsterdam alone after her fiance cancels the wedding.",
-    "director": "Vikas Bahl",
-    "cast": [
-      "Kangana Ranaut",
-      "Rajkummar Rao"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Vikas Bahl.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Vikas Bahl.",
-    "similarTags": [
-      "Vikas",
-      "Drama",
-      "History"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Drama"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹75 Crore",
-    "revenue": "₹268 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "hindi-bajrangi-bhaijaan",
-    "title": "Bajrangi Bhaijaan",
-    "year": 2015,
-    "runtime": "2h 39m",
-    "genres": [
-      "Drama",
-      "Comedy",
-      "Family",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller",
-      "Action",
-      "Crime"
-    ],
-    "imdbRating": 8.6,
-    "rottenTomatoesScore": 92,
-    "matchScore": 92,
-    "synopsis": "A devout Hindu man travels to Pakistan to reunite a mute Muslim girl with her family.",
-    "director": "Kabir Khan",
-    "cast": [
-      "Salman Khan",
-      "Harshaali Malhotra"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Kabir Khan.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Kabir Khan.",
-    "similarTags": [
-      "Kabir",
-      "Comedy",
-      "Family"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Comedy"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹75 Crore",
-    "revenue": "₹458 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "hindi-gangs-of-wasseypur",
-    "title": "Gangs of Wasseypur",
-    "year": 2012,
-    "runtime": "5h 21m",
-    "genres": [
-      "Crime",
-      "Action",
-      "Drama",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary"
-    ],
-    "imdbRating": 8.7,
-    "rottenTomatoesScore": 93,
-    "matchScore": 93,
-    "synopsis": "A generational blood feud between mafia clans over coal mine control in Wasseypur.",
-    "director": "Anurag Kashyap",
-    "cast": [
-      "Manoj Bajpayee",
-      "Nawazuddin Siddiqui"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Crime masterpiece directed by Anurag Kashyap.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Crime masterpiece directed by Anurag Kashyap.",
-    "similarTags": [
-      "Anurag",
-      "Action",
-      "Drama"
-    ],
-    "moods": [
-      "✨ Crime",
-      "🔥 Action"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹49 Crore",
-    "revenue": "₹352 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "hindi-znmd",
-    "title": "Zindagi Na Milegi Dobara",
-    "year": 2011,
-    "runtime": "2h 35m",
-    "genres": [
-      "Drama",
-      "Comedy",
-      "Romance",
-      "Musical",
-      "Thriller",
-      "Noir",
-      "Animation"
-    ],
-    "imdbRating": 8.8,
-    "rottenTomatoesScore": 94,
-    "matchScore": 94,
-    "synopsis": "Three childhood friends go on a road trip in Spain, facing their deepest fears.",
-    "director": "Zoya Akhtar",
-    "cast": [
-      "Hrithik Roshan",
-      "Farhan Akhtar",
-      "Abhay Deol",
-      "Katrina Kaif"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Zoya Akhtar.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Zoya Akhtar.",
-    "similarTags": [
-      "Zoya",
-      "Comedy",
-      "Romance"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Comedy"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹80 Crore",
-    "revenue": "₹95 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "hindi-barfi",
-    "title": "Barfi!",
-    "year": 2012,
-    "runtime": "2h 30m",
-    "genres": [
-      "Drama",
-      "Romance",
-      "Comedy",
-      "War",
-      "Survival",
-      "Anime",
-      "Family"
-    ],
-    "imdbRating": 8.9,
-    "rottenTomatoesScore": 95,
-    "matchScore": 95,
-    "synopsis": "A deaf-mute boy forms an unlikely bond with an autistic girl in Darjeeling.",
-    "director": "Anurag Basu",
-    "cast": [
-      "Ranbir Kapoor",
-      "Priyanka Chopra",
-      "Ileana D'Cruz"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Anurag Basu.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Anurag Basu.",
-    "similarTags": [
-      "Anurag",
-      "Romance",
-      "Comedy"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Romance"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹44 Crore",
-    "revenue": "₹413 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "hindi-dil-chahta-hai",
-    "title": "Dil Chahta Hai",
-    "year": 2001,
-    "runtime": "3h 5m",
-    "genres": [
-      "Comedy",
-      "Romance",
-      "Drama",
-      "Sci-Fi",
-      "Western",
-      "Space",
-      "Biography",
-      "Fantasy"
-    ],
-    "imdbRating": 9,
-    "rottenTomatoesScore": 96,
-    "matchScore": 96,
-    "synopsis": "Three college friends face different relationships that test their bond.",
-    "director": "Farhan Akhtar",
-    "cast": [
-      "Aamir Khan",
-      "Saif Ali Khan",
-      "Akshaye Khanna"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Farhan Akhtar.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Farhan Akhtar.",
-    "similarTags": [
-      "Farhan",
-      "Romance",
-      "Drama"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Romance"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹53 Crore",
-    "revenue": "₹100 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "hindi-swades",
-    "title": "Swades",
-    "year": 2004,
-    "runtime": "3h 15m",
-    "genres": [
-      "Drama",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel",
-      "Comedy"
-    ],
-    "imdbRating": 9.1,
-    "rottenTomatoesScore": 97,
-    "matchScore": 97,
-    "synopsis": "A NASA scientist returns to his native village to take his nanny to the US, rediscovering his roots.",
-    "director": "Ashutosh Gowariker",
-    "cast": [
-      "Shah Rukh Khan",
-      "Gayatri Joshi"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Ashutosh Gowariker.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Ashutosh Gowariker.",
-    "similarTags": [
-      "Ashutosh",
-      "History",
-      "Sports"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 History"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹122 Crore",
-    "revenue": "₹81 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "hindi-chak-de-india",
-    "title": "Chak De! India",
-    "year": 2007,
-    "runtime": "2h 33m",
-    "genres": [
-      "Drama",
-      "Sports",
-      "Superhero",
-      "Mystery Thriller",
-      "Action",
-      "Crime",
-      "Horror"
-    ],
-    "imdbRating": 9.2,
-    "rottenTomatoesScore": 80,
-    "matchScore": 98,
-    "synopsis": "A disgraced former hockey captain attempts to redeem himself by coaching the Indian women's team.",
-    "director": "Shimit Amin",
-    "cast": [
-      "Shah Rukh Khan",
-      "Vidya Malvade"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Shimit Amin.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Shimit Amin.",
-    "similarTags": [
-      "Shimit",
-      "Sports",
-      "Superhero"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Sports"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹71 Crore",
-    "revenue": "₹240 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "hindi-border",
-    "title": "Border",
-    "year": 1997,
-    "runtime": "2h 57m",
-    "genres": [
-      "Action",
-      "History",
-      "War",
-      "Suspense",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary",
-      "Mystery"
-    ],
-    "imdbRating": 9.3,
-    "rottenTomatoesScore": 81,
-    "matchScore": 99,
-    "synopsis": "A small battalion of Indian soldiers protects their post against a large Pakistani army in 1971.",
-    "director": "J.P. Dutta",
-    "cast": [
-      "Sunny Deol",
-      "Suniel Shetty"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Action masterpiece directed by J.P. Dutta.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Action masterpiece directed by J.P. Dutta.",
-    "similarTags": [
-      "J.P.",
-      "History",
-      "War"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 History"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹85 Crore",
-    "revenue": "₹414 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "hindi-shershaah",
-    "title": "Shershaah",
-    "year": 2021,
-    "runtime": "2h 15m",
-    "genres": [
-      "Drama",
-      "Biography",
-      "War",
-      "Thriller",
-      "Noir",
-      "Animation",
-      "Musical"
-    ],
-    "imdbRating": 9.4,
-    "rottenTomatoesScore": 82,
-    "matchScore": 90,
-    "synopsis": "The real-life story of Captain Vikram Batra, chronicling his heroics during the Kargil War.",
-    "director": "Vishnuvardhan",
-    "cast": [
-      "Sidharth Malhotra",
-      "Kiara Advani"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Vishnuvardhan.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Vishnuvardhan.",
-    "similarTags": [
-      "Vishnuvardhan",
-      "Biography",
-      "War"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Biography"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹122 Crore",
-    "revenue": "₹245 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "hindi-uri-strike",
-    "title": "Uri: The Surgical Strike",
-    "year": 2019,
-    "runtime": "2h 18m",
-    "genres": [
-      "Action",
-      "Thriller",
-      "War",
-      "Survival",
-      "Anime",
-      "Family",
-      "Romance"
-    ],
-    "imdbRating": 7.4,
-    "rottenTomatoesScore": 83,
-    "matchScore": 91,
-    "synopsis": "A special forces officer leads a covert operation to destroy terrorist launchpads across the border.",
-    "director": "Aditya Dhar",
-    "cast": [
-      "Vicky Kaushal",
-      "Yami Gautam"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Action masterpiece directed by Aditya Dhar.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Action masterpiece directed by Aditya Dhar.",
-    "similarTags": [
-      "Aditya",
-      "Thriller",
-      "War"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Thriller"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹54 Crore",
-    "revenue": "₹407 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "hindi-bhool-bhulaiyaa",
-    "title": "Bhool Bhulaiyaa",
-    "year": 2007,
-    "runtime": "2h 39m",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Comedy",
-      "Western",
-      "Space",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi"
-    ],
-    "imdbRating": 7.5,
-    "rottenTomatoesScore": 84,
-    "matchScore": 92,
-    "synopsis": "An eccentric psychiatrist investigates reports of a female ghost inside a royal palace.",
-    "director": "Priyadarshan",
-    "cast": [
-      "Akshay Kumar",
-      "Vidya Balan"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518063319789-7217e6706b04?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Horror masterpiece directed by Priyadarshan.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Horror masterpiece directed by Priyadarshan.",
-    "similarTags": [
-      "Priyadarshan",
-      "Mystery",
-      "Comedy"
-    ],
-    "moods": [
-      "✨ Horror",
-      "🔥 Mystery"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹67 Crore",
-    "revenue": "₹412 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "hindi-stree",
-    "title": "Stree",
-    "year": 2018,
-    "runtime": "2h 8m",
-    "genres": [
-      "Horror",
-      "Comedy",
-      "Mystery",
-      "Psychological",
-      "Time Travel",
-      "History",
-      "Sports"
-    ],
-    "imdbRating": 7.6,
-    "rottenTomatoesScore": 85,
-    "matchScore": 93,
-    "synopsis": "A tailor in Chanderi village falls in love with a girl who might be a ghost that abducts men at night.",
-    "director": "Amar Kaushik",
-    "cast": [
-      "Rajkummar Rao",
-      "Shraddha Kapoor"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518063319789-7217e6706b04?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Horror masterpiece directed by Amar Kaushik.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Horror masterpiece directed by Amar Kaushik.",
-    "similarTags": [
-      "Amar",
-      "Comedy",
-      "Mystery"
-    ],
-    "moods": [
-      "✨ Horror",
-      "🔥 Comedy"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹54 Crore",
-    "revenue": "₹85 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "hindi-golmaal",
-    "title": "Golmaal: Fun Unlimited",
-    "year": 2006,
-    "runtime": "2h 30m",
-    "genres": [
-      "Comedy",
-      "Family",
-      "Mystery Thriller",
-      "Action",
-      "Crime",
-      "Horror",
-      "Superhero"
-    ],
-    "imdbRating": 7.7,
-    "rottenTomatoesScore": 86,
-    "matchScore": 94,
-    "synopsis": "Four college dropouts hide in a blind couple's home, pretending to be their grandson.",
-    "director": "Rohit Shetty",
-    "cast": [
-      "Ajay Devgn",
-      "Arshad Warsi"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Rohit Shetty.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Rohit Shetty.",
-    "similarTags": [
-      "Rohit",
-      "Family",
-      "Mystery Thriller"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Family"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹72 Crore",
-    "revenue": "₹159 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "hindi-hera-pheri",
-    "title": "Hera Pheri",
-    "year": 2000,
-    "runtime": "2h 36m",
-    "genres": [
-      "Comedy",
-      "Crime",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary",
-      "Mystery",
-      "Suspense"
-    ],
-    "imdbRating": 7.8,
-    "rottenTomatoesScore": 87,
-    "matchScore": 95,
-    "synopsis": "Three bachelor roommates try to claim a kidnapper's ransom money after receiving a wrong call.",
-    "director": "Priyadarshan",
-    "cast": [
-      "Akshay Kumar",
-      "Suniel Shetty",
-      "Paresh Rawal"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Priyadarshan.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Priyadarshan.",
-    "similarTags": [
-      "Priyadarshan",
-      "Crime",
-      "Cyberpunk"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Crime"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹31 Crore",
-    "revenue": "₹290 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "hindi-munnabhai",
-    "title": "Munna Bhai M.B.B.S.",
-    "year": 2003,
-    "runtime": "2h 36m",
-    "genres": [
-      "Comedy",
-      "Drama",
-      "Noir",
-      "Animation",
-      "Musical",
-      "Thriller"
-    ],
-    "imdbRating": 7.9,
-    "rottenTomatoesScore": 88,
-    "matchScore": 96,
-    "synopsis": "A local gangster pretends to be a doctor to satisfy his father, entering a medical college.",
-    "director": "Rajkumar Hirani",
-    "cast": [
-      "Sanjay Dutt",
-      "Arshad Warsi"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Rajkumar Hirani.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Rajkumar Hirani.",
-    "similarTags": [
-      "Rajkumar",
-      "Drama",
-      "Noir"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Drama"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹88 Crore",
-    "revenue": "₹177 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "hindi-lage-raho-munnabhai",
-    "title": "Lage Raho Munna Bhai",
-    "year": 2006,
-    "runtime": "2h 24m",
-    "genres": [
-      "Comedy",
-      "Drama",
-      "Survival",
-      "Anime",
-      "Family",
-      "Romance",
-      "War"
-    ],
-    "imdbRating": 8,
-    "rottenTomatoesScore": 89,
-    "matchScore": 97,
-    "synopsis": "A local gangster starts hallucinating Mahatma Gandhi, using his ideals to resolve problems.",
-    "director": "Rajkumar Hirani",
-    "cast": [
-      "Sanjay Dutt",
-      "Arshad Warsi"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Rajkumar Hirani.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Comedy masterpiece directed by Rajkumar Hirani.",
-    "similarTags": [
-      "Rajkumar",
-      "Drama",
-      "Survival"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Drama"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹115 Crore",
-    "revenue": "₹68 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "hindi-dil-se",
-    "title": "Dil Se..",
-    "year": 1998,
-    "runtime": "2h 43m",
-    "genres": [
-      "Romance",
-      "Drama",
-      "Thriller",
-      "Space",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi",
-      "Western"
-    ],
-    "imdbRating": 8.1,
-    "rottenTomatoesScore": 90,
-    "matchScore": 98,
-    "synopsis": "A radio broadcaster falls in love with a mysterious woman who is secretly a terrorist.",
-    "director": "Mani Ratnam",
-    "cast": [
-      "Shah Rukh Khan",
-      "Manisha Koirala"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Mani Ratnam.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Mani Ratnam.",
-    "similarTags": [
-      "Mani",
-      "Drama",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Drama"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹124 Crore",
-    "revenue": "₹77 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "hindi-devdas",
-    "title": "Devdas",
-    "year": 2002,
-    "runtime": "3h 5m",
-    "genres": [
-      "Romance",
-      "Drama",
-      "Time Travel",
-      "Comedy",
-      "History",
-      "Sports",
-      "Psychological"
-    ],
-    "imdbRating": 8.2,
-    "rottenTomatoesScore": 91,
-    "matchScore": 99,
-    "synopsis": "A wealthy law graduate spirals into alcoholism after his family forbids him from marrying his love.",
-    "director": "Sanjay Leela Bhansali",
-    "cast": [
-      "Shah Rukh Khan",
-      "Aishwarya Rai",
-      "Madhuri Dixit"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Sanjay Leela Bhansali.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Sanjay Leela Bhansali.",
-    "similarTags": [
-      "Sanjay",
-      "Drama",
-      "Time Travel"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Drama"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹66 Crore",
-    "revenue": "₹245 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "hindi-veer-zaara",
-    "title": "Veer-Zaara",
-    "year": 2004,
-    "runtime": "3h 12m",
-    "genres": [
-      "Romance",
-      "Drama",
-      "Action",
-      "Crime",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller"
-    ],
-    "imdbRating": 8.3,
-    "rottenTomatoesScore": 92,
-    "matchScore": 90,
-    "synopsis": "An Indian pilot is imprisoned in Pakistan after falling in love with a Pakistani girl.",
-    "director": "Sanjay Leela Bhansali",
-    "cast": [
-      "Shah Rukh Khan",
-      "Preity Zinta"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Sanjay Leela Bhansali.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Sanjay Leela Bhansali.",
-    "similarTags": [
-      "Sanjay",
-      "Drama",
-      "Action"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Drama"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹119 Crore",
-    "revenue": "₹270 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "hindi-kal-ho-na-ho",
-    "title": "Kal Ho Naa Ho",
-    "year": 2003,
-    "runtime": "3h 6m",
-    "genres": [
-      "Romance",
-      "Comedy",
-      "Drama",
-      "Adventure",
-      "Documentary",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk"
-    ],
-    "imdbRating": 8.4,
-    "rottenTomatoesScore": 93,
-    "matchScore": 91,
-    "synopsis": "A terminally ill man attempts to match his lover with her best friend before he passes away.",
-    "director": "Nikkhil Advani",
-    "cast": [
-      "Shah Rukh Khan",
-      "Preity Zinta",
-      "Saif Ali Khan"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Nikkhil Advani.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Nikkhil Advani.",
-    "similarTags": [
-      "Nikkhil",
-      "Comedy",
-      "Drama"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Comedy"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹23 Crore",
-    "revenue": "₹398 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "hindi-kuch-kuch-hota-hai",
-    "title": "Kuch Kuch Hota Hai",
-    "year": 1998,
-    "runtime": "3h 5m",
-    "genres": [
-      "Romance",
-      "Drama",
-      "Animation",
-      "Musical",
-      "Thriller",
-      "Noir"
-    ],
-    "imdbRating": 8.5,
-    "rottenTomatoesScore": 94,
-    "matchScore": 92,
-    "synopsis": "A young girl reads her mother's letters, planning to reunite her widowed father with his college friend.",
-    "director": "Karan Johar",
-    "cast": [
-      "Shah Rukh Khan",
-      "Kajol",
-      "Rani Mukerji"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Karan Johar.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Karan Johar.",
-    "similarTags": [
-      "Karan",
-      "Drama",
-      "Animation"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Drama"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹131 Crore",
-    "revenue": "₹358 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "hindi-k3g",
-    "title": "Kabhi Khushi Kabhie Gham...",
-    "year": 2001,
-    "runtime": "3h 30m",
-    "genres": [
-      "Drama",
-      "Family",
-      "Anime",
-      "Romance",
-      "War",
-      "Survival"
-    ],
-    "imdbRating": 8.6,
-    "rottenTomatoesScore": 95,
-    "matchScore": 93,
-    "synopsis": "A wealthy son is disowned by his father after marrying a middle-class girl, moving to London.",
-    "director": "Karan Johar",
-    "cast": [
-      "Amitabh Bachchan",
-      "Shah Rukh Khan",
-      "Kajol"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Karan Johar.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Karan Johar.",
-    "similarTags": [
-      "Karan",
-      "Family",
-      "Anime"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Family"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹109 Crore",
-    "revenue": "₹92 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "hindi-my-name-is-khan",
-    "title": "My Name Is Khan",
-    "year": 2010,
-    "runtime": "2h 45m",
-    "genres": [
-      "Drama",
-      "Romance",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi",
-      "Western",
-      "Space"
-    ],
-    "imdbRating": 8.7,
-    "rottenTomatoesScore": 96,
-    "matchScore": 94,
-    "synopsis": "An autistic man travels across America to meet the President and clear his name after a tragedy.",
-    "director": "Karan Johar",
-    "cast": [
-      "Shah Rukh Khan",
-      "Kajol"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Karan Johar.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Drama masterpiece directed by Karan Johar.",
-    "similarTags": [
-      "Karan",
-      "Romance",
-      "Biography"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Romance"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹80 Crore",
-    "revenue": "₹369 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "hindi-bajirao-mastani",
-    "title": "Bajirao Mastani",
-    "year": 2015,
-    "runtime": "2h 38m",
-    "genres": [
-      "Romance",
-      "History",
-      "Drama",
-      "Comedy",
-      "Sports",
-      "Psychological",
-      "Time Travel"
-    ],
-    "imdbRating": 8.8,
-    "rottenTomatoesScore": 97,
-    "matchScore": 95,
-    "synopsis": "The tragic love story between Maratha General Bajirao and Mastani, a warrior princess.",
-    "director": "Sanjay Leela Bhansali",
-    "cast": [
-      "Ranveer Singh",
-      "Deepika Padukone"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Sanjay Leela Bhansali.",
-    "whyRecommended": "Top recommendation from Hindi cinema. A high-quality Romance masterpiece directed by Sanjay Leela Bhansali.",
-    "similarTags": [
-      "Sanjay",
-      "History",
-      "Drama"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 History"
-    ],
-    "language": "Hindi",
-    "country": "India",
-    "budget": "₹118 Crore",
-    "revenue": "₹109 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "english-inception",
-    "title": "Inception",
-    "year": 2010,
-    "runtime": "2h 28m",
-    "genres": [
-      "Sci-Fi",
-      "Action",
-      "Psychological",
-      "Crime",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller"
-    ],
-    "imdbRating": 7.4,
-    "rottenTomatoesScore": 80,
-    "matchScore": 90,
-    "synopsis": "A thief steals corporate secrets through dream-sharing technology, tasked with planting an idea.",
-    "director": "Christopher Nolan",
-    "cast": [
-      "Leonardo DiCaprio",
-      "Joseph Gordon-Levitt"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "YoEMS-X7-rE",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Christopher Nolan.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Christopher Nolan.",
-    "similarTags": [
-      "Christopher",
-      "Action",
-      "Psychological"
-    ],
-    "moods": [
-      "✨ Sci-Fi",
-      "🔥 Action"
+      "\u2728 Family",
+      "\ud83d\udd25 Popular"
     ],
     "language": "English",
     "country": "USA",
-    "budget": "$160 Million",
-    "revenue": "$836 Million",
-    "tagline": "Your mind is the scene of the crime.",
-    "productionCompany": "Warner Bros. Pictures",
-    "awards": [
-      "4 Academy Awards (Best Cinematography, Sound Editing, Sound Mixing, Visual Effects)"
-    ],
-    "reviews": []
+    "budget": "$74 Million",
+    "revenue": "$1156 Million",
+    "tagline": "Before Gru, they had a history of bad bosses",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "english-interstellar",
+    "id": "tmdb-157336",
     "title": "Interstellar",
+    "originalTitle": "Interstellar",
     "year": 2014,
-    "runtime": "2h 49m",
+    "runtime": "169 min",
     "genres": [
-      "Sci-Fi",
-      "Drama",
-      "Space",
       "Adventure",
-      "Documentary",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk"
+      "Drama",
+      "Science Fiction"
     ],
-    "imdbRating": 7.5,
-    "rottenTomatoesScore": 81,
+    "imdbRating": 8.1,
     "matchScore": 91,
-    "synopsis": "A team of explorers travel through a wormhole in space to find a new home for humanity.",
+    "synopsis": "Interstellar chronicles the adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
     "director": "Christopher Nolan",
     "cast": [
       "Matthew McConaughey",
-      "Anne Hathaway"
+      "Jessica Chastain",
+      "Anne Hathaway",
+      "Michael Caine"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yQvGrMoipbRoddT0ZR8tPoR7NfX.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/vgnoBSVzWAV9sNQUORaDGvDp7wx.jpg",
+    "trailerId": "LY19rHKAaAg",
     "streamingOn": [
       "Prime Video"
     ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Christopher Nolan.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Christopher Nolan.",
+    "aiReasoning": "Top match based on Adventure themes and direction by Christopher Nolan.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Christopher Nolan.",
     "similarTags": [
-      "Christopher",
-      "Drama",
-      "Space"
+      "Christopher Nolan",
+      "Adventure",
+      "Drama"
     ],
     "moods": [
-      "✨ Sci-Fi",
-      "🔥 Drama"
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
     ],
     "language": "English",
     "country": "USA",
     "budget": "$165 Million",
-    "revenue": "$701 Million",
+    "revenue": "$675 Million",
     "tagline": "Mankind was born on Earth. It was never meant to die here.",
-    "productionCompany": "Paramount Pictures / Legendary Pictures",
-    "awards": [
-      "Academy Award for Best Visual Effects"
-    ],
-    "reviews": []
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "english-dark-knight",
-    "title": "The Dark Knight",
-    "year": 2008,
-    "runtime": "2h 32m",
+    "id": "tmdb-293660",
+    "title": "Deadpool",
+    "originalTitle": "Deadpool",
+    "year": 2016,
+    "runtime": "108 min",
     "genres": [
       "Action",
-      "Crime",
-      "Superhero",
-      "Animation",
-      "Drama",
-      "Musical",
-      "Thriller",
-      "Noir"
+      "Adventure",
+      "Comedy"
     ],
-    "imdbRating": 7.6,
-    "rottenTomatoesScore": 82,
+    "imdbRating": 7.4,
     "matchScore": 92,
-    "synopsis": "Batman faces a psychotic anarchist known as the Joker, who wants to plunge Gotham into chaos.",
-    "director": "Christopher Nolan",
+    "synopsis": "Deadpool tells the origin story of former Special Forces operative turned mercenary Wade Wilson, who after being subjected to a rogue experiment that leaves him with accelerated healing powers, adopts the alter ego Deadpool. Armed with his new abilities and a dark, twisted sense of humor, Deadpool hunts down the man who nearly destroyed his life.",
+    "director": "Tim Miller",
     "cast": [
-      "Christian Bale",
-      "Heath Ledger"
+      "Ryan Reynolds",
+      "Morena Baccarin",
+      "Ed Skrein",
+      "T.J. Miller"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "EXeTwQWrcwY",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3E53WEZJqP6aM84D8CckXx4pIHw.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/en971MEXui9diirXlogOrPKmsEn.jpg",
+    "trailerId": "9vN6DHB6bJc",
     "streamingOn": [
       "Max"
     ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Action masterpiece directed by Christopher Nolan.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Action masterpiece directed by Christopher Nolan.",
+    "aiReasoning": "Top match based on Action themes and direction by Tim Miller.",
+    "whyRecommended": "Top match based on Action themes and direction by Tim Miller.",
     "similarTags": [
-      "Christopher",
-      "Crime",
-      "Superhero"
+      "Tim Miller",
+      "Action",
+      "Adventure"
     ],
     "moods": [
-      "✨ Action",
-      "🔥 Crime"
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
     ],
     "language": "English",
     "country": "USA",
-    "budget": "$185 Million",
-    "revenue": "$1.006 Billion",
-    "tagline": "Why So Serious?",
-    "productionCompany": "Warner Bros. Pictures / Legendary Pictures",
-    "awards": [
-      "Academy Award for Best Supporting Actor (Heath Ledger)"
-    ],
-    "reviews": []
+    "budget": "$58 Million",
+    "revenue": "$783 Million",
+    "tagline": "Witness the beginning of a happy ending",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "english-pulp-fiction",
-    "title": "Pulp Fiction",
-    "year": 1994,
-    "runtime": "2h 34m",
+    "id": "tmdb-76341",
+    "title": "Mad Max: Fury Road",
+    "originalTitle": "Mad Max: Fury Road",
+    "year": 2015,
+    "runtime": "120 min",
     "genres": [
-      "Crime",
-      "Drama",
-      "Noir",
-      "Anime",
-      "Family",
-      "Romance",
-      "War",
-      "Survival"
+      "Action",
+      "Adventure",
+      "Science Fiction",
+      "Thriller"
     ],
-    "imdbRating": 7.7,
-    "rottenTomatoesScore": 83,
+    "imdbRating": 7.2,
     "matchScore": 93,
-    "synopsis": "The lives of mob hitmen, a boxer, and a gangster's wife intertwine in stories of violence.",
-    "director": "Quentin Tarantino",
+    "synopsis": "An apocalyptic story set in the furthest reaches of our planet, in a stark desert landscape where humanity is broken, and most everyone is crazed fighting for the necessities of life. Within this world exist two rebels on the run who just might be able to restore order. There's Max, a man of action and a man of few words, who seeks peace of mind following the loss of his wife and child in the aftermath of the chaos. And Furiosa, a woman of action and a woman who believes her path to survival may be achieved if she can make it across the desert back to her childhood homeland.",
+    "director": "George Miller",
     "cast": [
-      "John Travolta",
-      "Uma Thurman"
+      "Tom Hardy",
+      "Charlize Theron",
+      "Nicholas Hoult",
+      "Hugh Keays-Byrne"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1543536448-d209d2d13a1c?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1542204172-e7052809d852?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "t7CkcmPgnXU",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ulcAi4dKpAjHwYGS08vNyx9H6I9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/uT895WNwm0aIJRtGizcQhrejWUo.jpg",
+    "trailerId": "MonFNCgK4WE",
     "streamingOn": [
       "Disney+"
     ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Crime masterpiece directed by Quentin Tarantino.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Crime masterpiece directed by Quentin Tarantino.",
+    "aiReasoning": "Top match based on Action themes and direction by George Miller.",
+    "whyRecommended": "Top match based on Action themes and direction by George Miller.",
     "similarTags": [
-      "Quentin",
-      "Drama",
-      "Noir"
+      "George Miller",
+      "Action",
+      "Adventure"
     ],
     "moods": [
-      "✨ Crime",
-      "🔥 Drama"
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$150 Million",
+    "revenue": "$378 Million",
+    "tagline": "What a Lovely Day.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-135397",
+    "title": "Jurassic World",
+    "originalTitle": "Jurassic World",
+    "year": 2015,
+    "runtime": "124 min",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Science Fiction",
+      "Thriller"
+    ],
+    "imdbRating": 6.5,
+    "matchScore": 94,
+    "synopsis": "Twenty-two years after the events of Jurassic Park, Isla Nublar now features a fully functioning dinosaur theme park, Jurassic World, as originally envisioned by John Hammond.",
+    "director": "Colin Trevorrow",
+    "cast": [
+      "Chris Pratt",
+      "Bryce Dallas Howard",
+      "Irrfan Khan",
+      "Vincent D'Onofrio"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/rhr4y79GpxQF9IsfJItRXVaoGs4.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/dF6FjTZzRTENfB4R17HDN20jLT2.jpg",
+    "trailerId": "aJJrkyHas78",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Colin Trevorrow.",
+    "whyRecommended": "Top match based on Action themes and direction by Colin Trevorrow.",
+    "similarTags": [
+      "Colin Trevorrow",
+      "Action",
+      "Adventure"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$150 Million",
+    "revenue": "$1513 Million",
+    "tagline": "The park is open.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-22",
+    "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+    "originalTitle": "Pirates of the Caribbean: The Curse of the Black Pearl",
+    "year": 2003,
+    "runtime": "143 min",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Action"
+    ],
+    "imdbRating": 7.5,
+    "matchScore": 95,
+    "synopsis": "Jack Sparrow, a freewheeling 17th-century pirate who roams the Caribbean Sea, butts heads with a rival pirate bent on pillaging the village of Port Royal. When the governor's daughter is kidnapped, Sparrow decides to help the girl's love save her. But their seafaring mission is hardly simple.",
+    "director": "Gore Verbinski",
+    "cast": [
+      "Johnny Depp",
+      "Geoffrey Rush",
+      "Orlando Bloom",
+      "Keira Knightley"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/poHwCZeWzJCShH7tOjg8RIoyjcw.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/uRNgkJSkNBFbbn9fPsEjDIy8Sh3.jpg",
+    "trailerId": "-9HT0l9HV4c",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Gore Verbinski.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Gore Verbinski.",
+    "similarTags": [
+      "Gore Verbinski",
+      "Adventure",
+      "Fantasy"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$140 Million",
+    "revenue": "$655 Million",
+    "tagline": "Prepare to be blown out of the water.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-119450",
+    "title": "Dawn of the Planet of the Apes",
+    "originalTitle": "Dawn of the Planet of the Apes",
+    "year": 2014,
+    "runtime": "130 min",
+    "genres": [
+      "Science Fiction",
+      "Action",
+      "Drama",
+      "Thriller"
+    ],
+    "imdbRating": 7.3,
+    "matchScore": 96,
+    "synopsis": "A group of scientists in San Francisco struggle to stay alive in the aftermath of a plague that is wiping out humanity, while Caesar tries to maintain dominance over his community of intelligent apes.",
+    "director": "Matt Reeves",
+    "cast": [
+      "Andy Serkis",
+      "Jason Clarke",
+      "Gary Oldman",
+      "Keri Russell"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/mSmAc9G25fhOHH45SLEeagR0qi7.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/3SozaNPOYUadcmTPgndDibMyDNC.jpg",
+    "trailerId": "DpSaTrW4leg",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Science Fiction themes and direction by Matt Reeves.",
+    "whyRecommended": "Top match based on Science Fiction themes and direction by Matt Reeves.",
+    "similarTags": [
+      "Matt Reeves",
+      "Science Fiction",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Science Fiction",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$170 Million",
+    "revenue": "$710 Million",
+    "tagline": "One last chance for peace.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-177572",
+    "title": "Big Hero 6",
+    "originalTitle": "Big Hero 6",
+    "year": 2014,
+    "runtime": "102 min",
+    "genres": [
+      "Adventure",
+      "Family",
+      "Animation",
+      "Action",
+      "Comedy"
+    ],
+    "imdbRating": 7.8,
+    "matchScore": 97,
+    "synopsis": "The special bond that develops between plus-sized inflatable robot Baymax, and prodigy Hiro Hamada, who team up with a group of friends to form a band of high-tech heroes.",
+    "director": "Chris Williams",
+    "cast": [
+      "Scott Adsit",
+      "Ryan Potter",
+      "Daniel Henney",
+      "T.J. Miller"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/2mxS4wUimwlLmI1xp6QW6NSU361.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/4s2d3xdyqotiVNHTlTlJjrr3q0H.jpg",
+    "trailerId": "8IdMPpKMdcc",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Chris Williams.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Chris Williams.",
+    "similarTags": [
+      "Chris Williams",
+      "Adventure",
+      "Family"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$165 Million",
+    "revenue": "$652 Million",
+    "tagline": "From the creators of Wreck-it Ralph and Frozen",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-244786",
+    "title": "Whiplash",
+    "originalTitle": "Whiplash",
+    "year": 2014,
+    "runtime": "105 min",
+    "genres": [
+      "Drama"
+    ],
+    "imdbRating": 8.3,
+    "matchScore": 98,
+    "synopsis": "Under the direction of a ruthless instructor, a talented young drummer begins to pursue perfection at any cost, even his humanity.",
+    "director": "Damien Chazelle",
+    "cast": [
+      "Miles Teller",
+      "J.K. Simmons",
+      "Melissa Benoist",
+      "Austin Stowell"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7fn624j5lj3xTme2SgiLCeuedmO.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/wbQa0EnWUyRzQ5d1pHLNRlmsCUP.jpg",
+    "trailerId": "Q7kZy3T6vRM",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Damien Chazelle.",
+    "whyRecommended": "Top match based on Drama themes and direction by Damien Chazelle.",
+    "similarTags": [
+      "Damien Chazelle",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$3 Million",
+    "revenue": "$13 Million",
+    "tagline": "The road to greatness can take you to the edge.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-109445",
+    "title": "Frozen",
+    "originalTitle": "Frozen",
+    "year": 2013,
+    "runtime": "102 min",
+    "genres": [
+      "Animation",
+      "Adventure",
+      "Family"
+    ],
+    "imdbRating": 7.3,
+    "matchScore": 99,
+    "synopsis": "Young princess Anna of Arendelle dreams about finding true love at her sister Elsa\u2019s coronation. Fate takes her on a dangerous journey in an attempt to end the eternal winter that has fallen over the kingdom. She's accompanied by ice delivery man Kristoff, his reindeer Sven, and snowman Olaf. On an adventure where she will find out what friendship, courage, family, and true love really means.",
+    "director": "Chris Buck",
+    "cast": [
+      "Kristen Bell",
+      "Idina Menzel",
+      "Jonathan Groff",
+      "Josh Gad"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/itAKcobTYGpYT8Phwjd8c9hleTo.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/rj58WQ9ImI0mYDptXdM7euX1Wjt.jpg",
+    "trailerId": "TbQm5doF_Uc",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Animation themes and direction by Chris Buck.",
+    "whyRecommended": "Top match based on Animation themes and direction by Chris Buck.",
+    "similarTags": [
+      "Chris Buck",
+      "Animation",
+      "Adventure"
+    ],
+    "moods": [
+      "\u2728 Animation",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$150 Million",
+    "revenue": "$1274 Million",
+    "tagline": "Only the act of true love will thaw a frozen heart.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-209112",
+    "title": "Batman v Superman: Dawn of Justice",
+    "originalTitle": "Batman v Superman: Dawn of Justice",
+    "year": 2016,
+    "runtime": "151 min",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "imdbRating": 5.7,
+    "matchScore": 90,
+    "synopsis": "Fearing the actions of a god-like Super Hero left unchecked, Gotham City\u2019s own formidable, forceful vigilante takes on Metropolis\u2019s most revered, modern-day savior, while the world wrestles with what sort of hero it really needs. And with Batman and Superman at war with one another, a new threat quickly arises, putting mankind in greater danger than it\u2019s ever known before.",
+    "director": "Zack Snyder",
+    "cast": [
+      "Ben Affleck",
+      "Henry Cavill",
+      "Gal Gadot",
+      "Amy Adams"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/5UsK3grJvtQrtzEgqNlDljJW96w.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/5fX1oSGuYdKgwWmUTAN5MNSQGzr.jpg",
+    "trailerId": "s9EkdAHqtvU",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Zack Snyder.",
+    "whyRecommended": "Top match based on Action themes and direction by Zack Snyder.",
+    "similarTags": [
+      "Zack Snyder",
+      "Action",
+      "Adventure"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$250 Million",
+    "revenue": "$873 Million",
+    "tagline": "Justice or revenge",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-19995",
+    "title": "Avatar",
+    "originalTitle": "Avatar",
+    "year": 2009,
+    "runtime": "162 min",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy",
+      "Science Fiction"
+    ],
+    "imdbRating": 7.2,
+    "matchScore": 91,
+    "synopsis": "In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization.",
+    "director": "James Cameron",
+    "cast": [
+      "Sam Worthington",
+      "Zoe Saldana",
+      "Sigourney Weaver",
+      "Stephen Lang"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gKY6q7SjCkAU6FqvqWybDYgUKIF.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/vL5LR6WdxWPjLPFRLe133jXWsh5.jpg",
+    "trailerId": "jm2sNLIPPvA",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by James Cameron.",
+    "whyRecommended": "Top match based on Action themes and direction by James Cameron.",
+    "similarTags": [
+      "James Cameron",
+      "Action",
+      "Adventure"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$237 Million",
+    "revenue": "$2787 Million",
+    "tagline": "Enter the World of Pandora.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-550",
+    "title": "Fight Club",
+    "originalTitle": "Fight Club",
+    "year": 1999,
+    "runtime": "139 min",
+    "genres": [
+      "Drama"
+    ],
+    "imdbRating": 8.3,
+    "matchScore": 92,
+    "synopsis": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \"fight clubs\" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.",
+    "director": "David Fincher",
+    "cast": [
+      "Edward Norton",
+      "Brad Pitt",
+      "Meat Loaf",
+      "Jared Leto"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/jSziioSwPVrOy9Yow3XhWIBDjq1.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/c6OLXfKAk5BKeR6broC8pYiCquX.jpg",
+    "trailerId": "dfeUzm6KF4g",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by David Fincher.",
+    "whyRecommended": "Top match based on Drama themes and direction by David Fincher.",
+    "similarTags": [
+      "David Fincher",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$63 Million",
+    "revenue": "$100 Million",
+    "tagline": "Mischief. Mayhem. Soap.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-238",
+    "title": "The Godfather",
+    "originalTitle": "The Godfather",
+    "year": 1972,
+    "runtime": "175 min",
+    "genres": [
+      "Drama",
+      "Crime"
+    ],
+    "imdbRating": 8.4,
+    "matchScore": 93,
+    "synopsis": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+    "director": "Francis Ford Coppola",
+    "cast": [
+      "Marlon Brando",
+      "Al Pacino",
+      "James Caan",
+      "Richard S. Castellano"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/tSPT36ZKlP2WVHJLM4cQPLSzv3b.jpg",
+    "trailerId": "Ew9ngL1GZvs",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Francis Ford Coppola.",
+    "whyRecommended": "Top match based on Drama themes and direction by Francis Ford Coppola.",
+    "similarTags": [
+      "Francis Ford Coppola",
+      "Drama",
+      "Crime"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$6 Million",
+    "revenue": "$245 Million",
+    "tagline": "An offer you can't refuse.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-98566",
+    "title": "Teenage Mutant Ninja Turtles",
+    "originalTitle": "Teenage Mutant Ninja Turtles",
+    "year": 2014,
+    "runtime": "101 min",
+    "genres": [
+      "Science Fiction",
+      "Action",
+      "Adventure",
+      "Fantasy",
+      "Comedy"
+    ],
+    "imdbRating": 5.8,
+    "matchScore": 94,
+    "synopsis": "The city needs heroes. Darkness has settled over New York City as Shredder and his evil Foot Clan have an iron grip on everything from the police to the politicians. The future is grim until four unlikely outcast brothers rise from the sewers and discover their destiny as Teenage Mutant Ninja Turtles. The Turtles must work with fearless reporter April and her wise-cracking cameraman Vern Fenwick to save the city and unravel Shredder's diabolical plan.",
+    "director": "Jonathan Liebesman",
+    "cast": [
+      "Megan Fox",
+      "Will Arnett",
+      "William Fichtner",
+      "Alan Ritchson"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/azL2ThbJMIkts3ZMt3j1YgBUeDB.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/eezsbzYPbYKjjh6E1XHDBNlLynh.jpg",
+    "trailerId": "dwXFsrp6WBs",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Science Fiction themes and direction by Jonathan Liebesman.",
+    "whyRecommended": "Top match based on Science Fiction themes and direction by Jonathan Liebesman.",
+    "similarTags": [
+      "Jonathan Liebesman",
+      "Science Fiction",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Science Fiction",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$125 Million",
+    "revenue": "$477 Million",
+    "tagline": "Mysterious. Dangerous. Reptilious. You've never seen heroes like this.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-228150",
+    "title": "Fury",
+    "originalTitle": "Fury",
+    "year": 2014,
+    "runtime": "135 min",
+    "genres": [
+      "War",
+      "Drama",
+      "Action"
+    ],
+    "imdbRating": 7.4,
+    "matchScore": 95,
+    "synopsis": "Last months of World War II in April 1945. As the Allies make their final push in the European Theater, a battle-hardened U.S. Army sergeant in the 2nd Armored Division named Wardaddy commands a Sherman tank called \"Fury\" and its five-man crew on a deadly mission behind enemy lines. Outnumbered and outgunned, Wardaddy and his men face overwhelming odds in their heroic attempts to strike at the heart of Nazi Germany.",
+    "director": "David Ayer",
+    "cast": [
+      "Brad Pitt",
+      "Shia LaBeouf",
+      "Logan Lerman",
+      "Michael Pe\u00f1a"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pfte7wdMobMF4CVHuOxyu6oqeeA.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/95ckrV6wQgbffurAVmETQ5YKASL.jpg",
+    "trailerId": "09w9MTtZDEM",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on War themes and direction by David Ayer.",
+    "whyRecommended": "Top match based on War themes and direction by David Ayer.",
+    "similarTags": [
+      "David Ayer",
+      "War",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 War",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$68 Million",
+    "revenue": "$211 Million",
+    "tagline": "War never ends quietly.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-246655",
+    "title": "X-Men: Apocalypse",
+    "originalTitle": "X-Men: Apocalypse",
+    "year": 2016,
+    "runtime": "144 min",
+    "genres": [
+      "Science Fiction"
+    ],
+    "imdbRating": 6.4,
+    "matchScore": 96,
+    "synopsis": "After the re-emergence of the world's first mutant, world-destroyer Apocalypse, the X-Men must unite to defeat his extinction level plan.",
+    "director": "Bryan Singer",
+    "cast": [
+      "James McAvoy",
+      "Michael Fassbender",
+      "Jennifer Lawrence",
+      "Nicholas Hoult"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ikA8UhYdTGpqbatFa93nIf6noSr.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/sTQNRqLbfCXolrb5CizAW1dj528.jpg",
+    "trailerId": "Jer8XjMrUB4",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Science Fiction themes and direction by Bryan Singer.",
+    "whyRecommended": "Top match based on Science Fiction themes and direction by Bryan Singer.",
+    "similarTags": [
+      "Bryan Singer",
+      "Science Fiction"
+    ],
+    "moods": [
+      "\u2728 Science Fiction",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$178 Million",
+    "revenue": "$543 Million",
+    "tagline": "Only the strong will survive",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-285",
+    "title": "Pirates of the Caribbean: At World's End",
+    "originalTitle": "Pirates of the Caribbean: At World's End",
+    "year": 2007,
+    "runtime": "169 min",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Action"
+    ],
+    "imdbRating": 6.9,
+    "matchScore": 97,
+    "synopsis": "Captain Barbossa, long believed to be dead, has come back to life and is headed to the edge of the Earth with Will Turner and Elizabeth Swann. But nothing is quite as it seems.",
+    "director": "Gore Verbinski",
+    "cast": [
+      "Johnny Depp",
+      "Orlando Bloom",
+      "Keira Knightley",
+      "Stellan Skarsg\u00e5rd"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/jGWpG4YhpQwVmjyHEGkxEkeRf0S.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/1jHxkVXMI5s3vRiyiZooUy1shB5.jpg",
+    "trailerId": "HKSZtp_OGHY",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Gore Verbinski.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Gore Verbinski.",
+    "similarTags": [
+      "Gore Verbinski",
+      "Adventure",
+      "Fantasy"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$300 Million",
+    "revenue": "$961 Million",
+    "tagline": "At the end of the world, the adventure begins.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-120",
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "originalTitle": "The Lord of the Rings: The Fellowship of the Ring",
+    "year": 2001,
+    "runtime": "178 min",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Action"
+    ],
+    "imdbRating": 8.0,
+    "matchScore": 98,
+    "synopsis": "Young hobbit Frodo Baggins, after inheriting a mysterious ring from his uncle Bilbo, must leave his home in order to keep it from falling into the hands of its evil creator. Along the way, a fellowship is formed to protect the ringbearer and make sure that the ring arrives at its final destination: Mt. Doom, the only place where it can be destroyed.",
+    "director": "Peter Jackson",
+    "cast": [
+      "Elijah Wood",
+      "Ian McKellen",
+      "Cate Blanchett",
+      "Orlando Bloom"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/mWDdRXTivGE7aaY2vo1Ie0PfCX5.jpg",
+    "trailerId": "_nZdmwHrcnw",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Peter Jackson.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Peter Jackson.",
+    "similarTags": [
+      "Peter Jackson",
+      "Adventure",
+      "Fantasy"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$93 Million",
+    "revenue": "$871 Million",
+    "tagline": "One ring to rule them all",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-93456",
+    "title": "Despicable Me 2",
+    "originalTitle": "Despicable Me 2",
+    "year": 2013,
+    "runtime": "98 min",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family"
+    ],
+    "imdbRating": 7.0,
+    "matchScore": 99,
+    "synopsis": "Gru is recruited by the Anti-Villain League to help deal with a powerful new super criminal.",
+    "director": "Pierre Coffin",
+    "cast": [
+      "Steve Carell",
+      "Kristen Wiig",
+      "Benjamin Bratt",
+      "Miranda Cosgrove"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/5Fh4NdoEnCjCK9wLjdJ9DJNFl2b.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/uD267eSiACfWLxp47t3gYymOQRj.jpg",
+    "trailerId": "EK3j98PHaGM",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Animation themes and direction by Pierre Coffin.",
+    "whyRecommended": "Top match based on Animation themes and direction by Pierre Coffin.",
+    "similarTags": [
+      "Pierre Coffin",
+      "Animation",
+      "Comedy"
+    ],
+    "moods": [
+      "\u2728 Animation",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$76 Million",
+    "revenue": "$970 Million",
+    "tagline": "Back 2 Work",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-278",
+    "title": "The Shawshank Redemption",
+    "originalTitle": "The Shawshank Redemption",
+    "year": 1994,
+    "runtime": "142 min",
+    "genres": [
+      "Drama",
+      "Crime"
+    ],
+    "imdbRating": 8.5,
+    "matchScore": 90,
+    "synopsis": "Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.",
+    "director": "Frank Darabont",
+    "cast": [
+      "Tim Robbins",
+      "Morgan Freeman",
+      "Bob Gunton",
+      "Clancy Brown"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/zfbjgQE1uSd9wiPTX4VzsLi0rGG.jpg",
+    "trailerId": "PLl99DlL6b4",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Frank Darabont.",
+    "whyRecommended": "Top match based on Drama themes and direction by Frank Darabont.",
+    "similarTags": [
+      "Frank Darabont",
+      "Drama",
+      "Crime"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$25 Million",
+    "revenue": "$28 Million",
+    "tagline": "Fear can hold you prisoner. Hope can set you free.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-1865",
+    "title": "Pirates of the Caribbean: On Stranger Tides",
+    "originalTitle": "Pirates of the Caribbean: On Stranger Tides",
+    "year": 2011,
+    "runtime": "136 min",
+    "genres": [
+      "Adventure",
+      "Action",
+      "Fantasy"
+    ],
+    "imdbRating": 6.4,
+    "matchScore": 91,
+    "synopsis": "Captain Jack Sparrow crosses paths with a woman from his past, and he's not sure if it's love -- or if she's a ruthless con artist who's using him to find the fabled Fountain of Youth. When she forces him aboard the Queen Anne's Revenge, the ship of the formidable pirate Blackbeard, Jack finds himself on an unexpected adventure in which he doesn't know who to fear more: Blackbeard or the woman from his past.",
+    "director": "Rob Marshall",
+    "cast": [
+      "Johnny Depp",
+      "Pen\u00e9lope Cruz",
+      "Ian McShane",
+      "Kevin McNally"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/keGfSvCmYj7CvdRx36OdVrAEibE.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/uzIGtyS6bbnJzGsPL93WCF1FWm8.jpg",
+    "trailerId": "0BXCVe8Yww4",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Rob Marshall.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Rob Marshall.",
+    "similarTags": [
+      "Rob Marshall",
+      "Adventure",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$380 Million",
+    "revenue": "$1045 Million",
+    "tagline": "Live Forever Or Die Trying.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-158852",
+    "title": "Tomorrowland",
+    "originalTitle": "Tomorrowland",
+    "year": 2015,
+    "runtime": "130 min",
+    "genres": [
+      "Adventure",
+      "Family",
+      "Mystery",
+      "Science Fiction"
+    ],
+    "imdbRating": 6.2,
+    "matchScore": 92,
+    "synopsis": "Bound by a shared destiny, a bright, optimistic teen bursting with scientific curiosity and a former boy-genius inventor jaded by disillusionment embark on a danger-filled mission to unearth the secrets of an enigmatic place somewhere in time and space that exists in their collective memory as \"Tomorrowland.\"",
+    "director": "Brad Bird",
+    "cast": [
+      "Britt Robertson",
+      "George Clooney",
+      "Raffey Cassidy",
+      "Thomas Robinson"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/kziYpr5Nfw60P0My8aj1sgCEqed.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/udYOmbW1JEZjVd726PWHlmptxPi.jpg",
+    "trailerId": "lNzukD8pS_s",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Brad Bird.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Brad Bird.",
+    "similarTags": [
+      "Brad Bird",
+      "Adventure",
+      "Family"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$190 Million",
+    "revenue": "$209 Million",
+    "tagline": "Imagine a world where nothing is impossible.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-510",
+    "title": "One Flew Over the Cuckoo's Nest",
+    "originalTitle": "One Flew Over the Cuckoo's Nest",
+    "year": 1975,
+    "runtime": "133 min",
+    "genres": [
+      "Drama"
+    ],
+    "imdbRating": 8.2,
+    "matchScore": 93,
+    "synopsis": "While serving time for insanity at a state mental hospital, implacable rabble-rouser, Randle Patrick McMurphy inspires his fellow patients to rebel against the authoritarian rule of head nurse, Mildred Ratched.",
+    "director": "Milo\u0161 Forman",
+    "cast": [
+      "Jack Nicholson",
+      "Louise Fletcher",
+      "Danny DeVito",
+      "William Redfield"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/kjWsMh72V6d8KRLV4EOoSJLT1H7.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/uA8eSNAUUUyfHNIrG4h0zHxzt9W.jpg",
+    "trailerId": "F4da9uRIg8c",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Milo\u0161 Forman.",
+    "whyRecommended": "Top match based on Drama themes and direction by Milo\u0161 Forman.",
+    "similarTags": [
+      "Milo\u0161 Forman",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$3 Million",
+    "revenue": "$108 Million",
+    "tagline": "If he's crazy, what does that make you?",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-131634",
+    "title": "The Hunger Games: Mockingjay - Part 2",
+    "originalTitle": "The Hunger Games: Mockingjay - Part 2",
+    "year": 2015,
+    "runtime": "137 min",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Science Fiction"
+    ],
+    "imdbRating": 6.6,
+    "matchScore": 94,
+    "synopsis": "With the nation of Panem in a full scale war, Katniss confronts President Snow in the final showdown. Teamed with a group of her closest friends \u2013 including Gale, Finnick, and Peeta \u2013 Katniss goes off on a mission with the unit from District 13 as they risk their lives to stage an assassination attempt on President Snow who has become increasingly obsessed with destroying her. The mortal traps, enemies, and moral choices that await Katniss will challenge her more than any arena she faced in The Hunger Games.",
+    "director": "Francis Lawrence",
+    "cast": [
+      "Jennifer Lawrence",
+      "Josh Hutcherson",
+      "Liam Hemsworth",
+      "Woody Harrelson"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/lImKHDfExAulp16grYm8zD5eONE.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/qVgLMRVNB5bHU0inmRa0ueShacN.jpg",
+    "trailerId": "SoKIqLEGhI0",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Francis Lawrence.",
+    "whyRecommended": "Top match based on Action themes and direction by Francis Lawrence.",
+    "similarTags": [
+      "Francis Lawrence",
+      "Action",
+      "Adventure"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$160 Million",
+    "revenue": "$653 Million",
+    "tagline": "The fire will burn forever.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-8966",
+    "title": "Twilight",
+    "originalTitle": "Twilight",
+    "year": 2008,
+    "runtime": "122 min",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Drama",
+      "Romance"
+    ],
+    "imdbRating": 5.8,
+    "matchScore": 95,
+    "synopsis": "When Bella Swan moves to a small town in the Pacific Northwest to live with her father, she starts school and meets the reclusive Edward Cullen, a mysterious classmate who reveals himself to be a 108-year-old vampire. Despite Edward's repeated cautions, Bella can't help but fall in love with him, a fatal move that endangers her own life when a coven of bloodsuckers try to challenge the Cullen clan.",
+    "director": "Catherine Hardwicke",
+    "cast": [
+      "Kristen Stewart",
+      "Robert Pattinson",
+      "Billy Burke",
+      "Taylor Lautner"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3Gkb6jm6962ADUPaCBqzz9CTbn9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/weAYfu6FfrNxEDJ3xH1XpgQcqUv.jpg",
+    "trailerId": "uxjNDE2fMjI",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Catherine Hardwicke.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Catherine Hardwicke.",
+    "similarTags": [
+      "Catherine Hardwicke",
+      "Adventure",
+      "Fantasy"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$37 Million",
+    "revenue": "$392 Million",
+    "tagline": "When you can live forever, what do you live for?",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-11",
+    "title": "Star Wars",
+    "originalTitle": "Star Wars",
+    "year": 1977,
+    "runtime": "121 min",
+    "genres": [
+      "Adventure",
+      "Action",
+      "Science Fiction"
+    ],
+    "imdbRating": 8.1,
+    "matchScore": 96,
+    "synopsis": "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.",
+    "director": "George Lucas",
+    "cast": [
+      "Mark Hamill",
+      "Harrison Ford",
+      "Carrie Fisher",
+      "Peter Cushing"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fai0rspsNeJCS69wHNjOdWxcI7P.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/yUiXA68FfQeA8cRBhd0Ao0jIRZt.jpg",
+    "trailerId": "i-vsILeJ8_8",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by George Lucas.",
+    "whyRecommended": "Top match based on Adventure themes and direction by George Lucas.",
+    "similarTags": [
+      "George Lucas",
+      "Adventure",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$11 Million",
+    "revenue": "$775 Million",
+    "tagline": "A long time ago in a galaxy far, far away...",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-122",
+    "title": "The Lord of the Rings: The Return of the King",
+    "originalTitle": "The Lord of the Rings: The Return of the King",
+    "year": 2003,
+    "runtime": "201 min",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Action"
+    ],
+    "imdbRating": 8.1,
+    "matchScore": 97,
+    "synopsis": "Aragorn is revealed as the heir to the ancient kings as he, Gandalf and the other members of the broken fellowship struggle to save Gondor from Sauron's forces. Meanwhile, Frodo and Sam bring the ring closer to the heart of Mordor, the dark lord's realm.",
+    "director": "Peter Jackson",
+    "cast": [
+      "Elijah Wood",
+      "Ian McKellen",
+      "Viggo Mortensen",
+      "Liv Tyler"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/2u7zbn8EudG6kLlBzUYqP8RyFU4.jpg",
+    "trailerId": "zckJCxYxn1g",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Peter Jackson.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Peter Jackson.",
+    "similarTags": [
+      "Peter Jackson",
+      "Adventure",
+      "Fantasy"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$94 Million",
+    "revenue": "$1118 Million",
+    "tagline": "The eye of the enemy is moving.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-680",
+    "title": "Pulp Fiction",
+    "originalTitle": "Pulp Fiction",
+    "year": 1994,
+    "runtime": "154 min",
+    "genres": [
+      "Thriller",
+      "Crime"
+    ],
+    "imdbRating": 8.3,
+    "matchScore": 98,
+    "synopsis": "A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time.",
+    "director": "Quentin Tarantino",
+    "cast": [
+      "John Travolta",
+      "Samuel L. Jackson",
+      "Uma Thurman",
+      "Bruce Willis"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vQWk5YBFWF4bZaofAbv0tShwBvQ.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg",
+    "trailerId": "tGpTpVyI_OQ",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Thriller themes and direction by Quentin Tarantino.",
+    "whyRecommended": "Top match based on Thriller themes and direction by Quentin Tarantino.",
+    "similarTags": [
+      "Quentin Tarantino",
+      "Thriller",
+      "Crime"
+    ],
+    "moods": [
+      "\u2728 Thriller",
+      "\ud83d\udd25 Popular"
     ],
     "language": "English",
     "country": "USA",
     "budget": "$8 Million",
     "revenue": "$213 Million",
-    "tagline": "Just because you are a character doesn't mean that you have character.",
-    "productionCompany": "Miramax Films",
-    "awards": [
-      "Academy Award for Best Original Screenplay"
-    ],
-    "reviews": []
+    "tagline": "Just because you are a character doesn't mean you have character.",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "english-shawshank",
-    "title": "The Shawshank Redemption",
-    "year": 1994,
-    "runtime": "2h 22m",
-    "genres": [
-      "Drama",
-      "Crime",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi",
-      "Western",
-      "Space"
-    ],
-    "imdbRating": 7.8,
-    "rottenTomatoesScore": 84,
-    "matchScore": 94,
-    "synopsis": "Two imprisoned men bond over a number of years, finding solace and redemption.",
-    "director": "Frank Darabont",
-    "cast": [
-      "Tim Robbins",
-      "Morgan Freeman"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "NmzuHjWmXOc",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Drama masterpiece directed by Frank Darabont.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Drama masterpiece directed by Frank Darabont.",
-    "similarTags": [
-      "Frank",
-      "Crime",
-      "Biography"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Crime"
-    ],
-    "language": "English",
-    "country": "USA",
-    "budget": "$25 Million",
-    "revenue": "$73 Million",
-    "tagline": "Fear can hold you prisoner. Hope can set you free.",
-    "productionCompany": "Castle Rock Entertainment",
-    "awards": [
-      "7 Oscar Nominations"
-    ],
-    "reviews": []
-  },
-  {
-    "id": "english-fight-club",
-    "title": "Fight Club",
-    "year": 1999,
-    "runtime": "2h 19m",
-    "genres": [
-      "Drama",
-      "Psychological",
-      "Comedy",
-      "History",
-      "Sports",
-      "Time Travel"
-    ],
-    "imdbRating": 7.9,
-    "rottenTomatoesScore": 85,
-    "matchScore": 95,
-    "synopsis": "An insomniac office worker forms an underground fight club with a soap salesman.",
-    "director": "David Fincher",
-    "cast": [
-      "Brad Pitt",
-      "Edward Norton"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "SUXWAEX2ajc",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Drama masterpiece directed by David Fincher.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Drama masterpiece directed by David Fincher.",
-    "similarTags": [
-      "David",
-      "Psychological",
-      "Comedy"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Psychological"
-    ],
-    "language": "English",
-    "country": "USA",
-    "budget": "$63 Million",
-    "revenue": "$101 Million",
-    "tagline": "Mischief. Mayhem. Soap.",
-    "productionCompany": "20th Century Fox",
-    "awards": [
-      "Oscar Nominated for Best Sound Editing"
-    ],
-    "reviews": []
-  },
-  {
-    "id": "english-forrest-gump",
-    "title": "Forrest Gump",
-    "year": 1994,
-    "runtime": "2h 22m",
-    "genres": [
-      "Drama",
-      "Comedy",
-      "Romance",
-      "Crime",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller",
-      "Action"
-    ],
-    "imdbRating": 8,
-    "rottenTomatoesScore": 86,
-    "matchScore": 96,
-    "synopsis": "The presidencies of Kennedy and Johnson, Vietnam, and history unfold from the perspective of an Alabama man.",
-    "director": "Robert Zemeckis",
-    "cast": [
-      "Tom Hanks",
-      "Robin Wright"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "bLvqoHBptmg",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Drama masterpiece directed by Robert Zemeckis.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Drama masterpiece directed by Robert Zemeckis.",
-    "similarTags": [
-      "Robert",
-      "Comedy",
-      "Romance"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Comedy"
-    ],
-    "language": "English",
-    "country": "USA",
-    "budget": "$55 Million",
-    "revenue": "$678 Million",
-    "tagline": "Life is like a box of chocolates... You never know what you're gonna get.",
-    "productionCompany": "Paramount Pictures",
-    "awards": [
-      "6 Academy Awards including Best Picture"
-    ],
-    "reviews": []
-  },
-  {
-    "id": "english-matrix",
-    "title": "The Matrix",
-    "year": 1999,
-    "runtime": "2h 16m",
-    "genres": [
-      "Sci-Fi",
-      "Action",
-      "Cyberpunk",
-      "Documentary",
-      "Mystery",
-      "Suspense",
-      "Adventure"
-    ],
-    "imdbRating": 8.1,
-    "rottenTomatoesScore": 87,
-    "matchScore": 97,
-    "synopsis": "A computer hacker learns from mysterious rebels about the true nature of his reality.",
-    "director": "Lana Wachowski",
-    "cast": [
-      "Keanu Reeves",
-      "Laurence Fishburne"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "vKQi3bBA1y8",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Lana Wachowski.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Lana Wachowski.",
-    "similarTags": [
-      "Lana",
-      "Action",
-      "Cyberpunk"
-    ],
-    "moods": [
-      "✨ Sci-Fi",
-      "🔥 Action"
-    ],
-    "language": "English",
-    "country": "USA",
-    "budget": "$63 Million",
-    "revenue": "$463 Million",
-    "tagline": "Welcome to the real world.",
-    "productionCompany": "Warner Bros. Pictures",
-    "awards": [
-      "4 Academy Awards for Editing, Sound and Visual Effects"
-    ],
-    "reviews": []
-  },
-  {
-    "id": "english-gladiator",
-    "title": "Gladiator",
-    "year": 2000,
-    "runtime": "2h 35m",
+    "id": "tmdb-122917",
+    "title": "The Hobbit: The Battle of the Five Armies",
+    "originalTitle": "The Hobbit: The Battle of the Five Armies",
+    "year": 2014,
+    "runtime": "144 min",
     "genres": [
       "Action",
-      "Drama",
-      "History",
-      "Musical",
-      "Thriller",
-      "Noir",
-      "Animation"
+      "Adventure",
+      "Fantasy"
     ],
-    "imdbRating": 8.2,
-    "rottenTomatoesScore": 88,
-    "matchScore": 98,
-    "synopsis": "A former Roman general sets out to exact vengeance against the corrupt emperor who murdered his family.",
-    "director": "Ridley Scott",
-    "cast": [
-      "Russell Crowe",
-      "Joaquin Phoenix"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "owK1qxDselE",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Action masterpiece directed by Ridley Scott.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Action masterpiece directed by Ridley Scott.",
-    "similarTags": [
-      "Ridley",
-      "Drama",
-      "History"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Drama"
-    ],
-    "language": "English",
-    "country": "USA",
-    "budget": "$103 Million",
-    "revenue": "$503 Million",
-    "tagline": "What we do in life echoes in eternity.",
-    "productionCompany": "Universal Pictures / DreamWorks Pictures",
-    "awards": [
-      "5 Academy Awards including Best Picture"
-    ],
-    "reviews": []
-  },
-  {
-    "id": "english-titanic",
-    "title": "Titanic",
-    "year": 1997,
-    "runtime": "3h 14m",
-    "genres": [
-      "Romance",
-      "Drama",
-      "History",
-      "Family",
-      "War",
-      "Survival",
-      "Anime"
-    ],
-    "imdbRating": 8.3,
-    "rottenTomatoesScore": 89,
+    "imdbRating": 7.1,
     "matchScore": 99,
-    "synopsis": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the R.M.S. Titanic.",
-    "director": "James Cameron",
-    "cast": [
-      "Leonardo DiCaprio",
-      "Kate Winslet"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "kVrqfYjkT7c",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Romance masterpiece directed by James Cameron.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Romance masterpiece directed by James Cameron.",
-    "similarTags": [
-      "James",
-      "Drama",
-      "History"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Drama"
-    ],
-    "language": "English",
-    "country": "USA",
-    "budget": "$200 Million",
-    "revenue": "$2.264 Billion",
-    "tagline": "Nothing on Earth could come between them.",
-    "productionCompany": "Paramount Pictures / 20th Century Fox",
-    "awards": [
-      "11 Academy Awards including Best Picture"
-    ],
-    "reviews": []
-  },
-  {
-    "id": "english-avatar",
-    "title": "Avatar",
-    "year": 2009,
-    "runtime": "2h 42m",
-    "genres": [
-      "Sci-Fi",
-      "Action",
-      "Adventure",
-      "Fantasy",
-      "Western",
-      "Space",
-      "Biography"
-    ],
-    "imdbRating": 8.4,
-    "rottenTomatoesScore": 90,
-    "matchScore": 90,
-    "synopsis": "A paraplegic marine dispatched to the moon Pandora becomes torn between following orders and protecting it.",
-    "director": "James Cameron",
-    "cast": [
-      "Sam Worthington",
-      "Zoe Saldana"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by James Cameron.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by James Cameron.",
-    "similarTags": [
-      "James",
-      "Action",
-      "Adventure"
-    ],
-    "moods": [
-      "✨ Sci-Fi",
-      "🔥 Action"
-    ],
-    "language": "English",
-    "country": "USA",
-    "budget": "$110 Million",
-    "revenue": "$775 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Paramount Pictures",
-    "reviews": []
-  },
-  {
-    "id": "english-jurassic-park",
-    "title": "Jurassic Park",
-    "year": 1993,
-    "runtime": "2h 7m",
-    "genres": [
-      "Adventure",
-      "Sci-Fi",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel",
-      "Comedy"
-    ],
-    "imdbRating": 8.5,
-    "rottenTomatoesScore": 91,
-    "matchScore": 91,
-    "synopsis": "A pragmatic paleontologist visiting a theme park is tasked with protecting kids after a power failure.",
-    "director": "Steven Spielberg",
-    "cast": [
-      "Sam Neill",
-      "Laura Dern"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Adventure masterpiece directed by Steven Spielberg.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Adventure masterpiece directed by Steven Spielberg.",
-    "similarTags": [
-      "Steven",
-      "Sci-Fi",
-      "History"
-    ],
-    "moods": [
-      "✨ Adventure",
-      "🔥 Sci-Fi"
-    ],
-    "language": "English",
-    "country": "USA",
-    "budget": "$165 Million",
-    "revenue": "$804 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Universal Pictures",
-    "reviews": []
-  },
-  {
-    "id": "english-star-wars-4",
-    "title": "Star Wars: Episode IV",
-    "year": 1977,
-    "runtime": "2h 1m",
-    "genres": [
-      "Sci-Fi",
-      "Adventure",
-      "Space",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller",
-      "Action",
-      "Crime"
-    ],
-    "imdbRating": 8.6,
-    "rottenTomatoesScore": 92,
-    "matchScore": 92,
-    "synopsis": "Luke Skywalker joins forces with a Jedi Knight to save the galaxy from the Empire's battle station.",
-    "director": "George Lucas",
-    "cast": [
-      "Mark Hamill",
-      "Harrison Ford"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by George Lucas.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by George Lucas.",
-    "similarTags": [
-      "George",
-      "Adventure",
-      "Space"
-    ],
-    "moods": [
-      "✨ Sci-Fi",
-      "🔥 Adventure"
-    ],
-    "language": "English",
-    "country": "USA",
-    "budget": "$138 Million",
-    "revenue": "$145 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Paramount Pictures",
-    "reviews": []
-  },
-  {
-    "id": "english-lotr-1",
-    "title": "The Lord of the Rings: Fellowship of the Ring",
-    "year": 2001,
-    "runtime": "2h 58m",
-    "genres": [
-      "Fantasy",
-      "Adventure",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk",
-      "Documentary"
-    ],
-    "imdbRating": 8.7,
-    "rottenTomatoesScore": 93,
-    "matchScore": 93,
-    "synopsis": "A meek Hobbit from the Shire sets out to destroy a powerful ring in Mount Doom.",
+    "synopsis": "Immediately after the events of The Desolation of Smaug, Bilbo and the dwarves try to defend Erebor's mountain of treasure from others who claim it: the men of the ruined Laketown and the elves of Mirkwood. Meanwhile an army of Orcs led by Azog the Defiler is marching on Erebor, fueled by the rise of the dark lord Sauron. Dwarves, elves and men must unite, and the hope for Middle-Earth falls into Bilbo's hands.",
     "director": "Peter Jackson",
     "cast": [
-      "Elijah Wood",
-      "Ian McKellen"
+      "Martin Freeman",
+      "Ian McKellen",
+      "Richard Armitage",
+      "Ken Stott"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xT98tLqatZPQApyRmlPL12LtiWp.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/3UbaCMmqOd7mca4Y5DOzY2ZVTyX.jpg",
+    "trailerId": "Y6Fv5StfAxA",
     "streamingOn": [
       "Prime Video"
     ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Fantasy masterpiece directed by Peter Jackson.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Fantasy masterpiece directed by Peter Jackson.",
+    "aiReasoning": "Top match based on Action themes and direction by Peter Jackson.",
+    "whyRecommended": "Top match based on Action themes and direction by Peter Jackson.",
     "similarTags": [
-      "Peter",
-      "Adventure",
-      "Mystery"
+      "Peter Jackson",
+      "Action",
+      "Adventure"
     ],
     "moods": [
-      "✨ Fantasy",
-      "🔥 Adventure"
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
     ],
     "language": "English",
-    "country": "New Zealand",
-    "budget": "$109 Million",
-    "revenue": "$326 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Universal Studios",
-    "reviews": []
+    "country": "USA",
+    "budget": "$250 Million",
+    "revenue": "$956 Million",
+    "tagline": "Witness the defining chapter of the Middle-Earth saga",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "english-avengers-endgame",
-    "title": "Avengers: Endgame",
-    "year": 2019,
-    "runtime": "3h 1m",
+    "id": "tmdb-1726",
+    "title": "Iron Man",
+    "originalTitle": "Iron Man",
+    "year": 2008,
+    "runtime": "126 min",
     "genres": [
       "Action",
-      "Adventure",
-      "Superhero",
-      "Musical",
-      "Thriller",
-      "Noir",
-      "Animation",
-      "Drama"
+      "Science Fiction",
+      "Adventure"
     ],
-    "imdbRating": 8.8,
-    "rottenTomatoesScore": 94,
-    "matchScore": 94,
-    "synopsis": "The Avengers assemble once more to reverse Thanos's actions and restore balance to the universe.",
-    "director": "Anthony Russo",
+    "imdbRating": 7.4,
+    "matchScore": 90,
+    "synopsis": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
+    "director": "Jon Favreau",
     "cast": [
       "Robert Downey Jr.",
-      "Chris Evans"
+      "Terrence Howard",
+      "Jeff Bridges",
+      "Shaun Toub"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/78lPtwv72eTNqFW9COBYI0dWDJa.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/cKvDv2LpwVEqbdXWoQl4XgGN6le.jpg",
+    "trailerId": "8ugaeA-nMTc",
     "streamingOn": [
       "Max"
     ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Action masterpiece directed by Anthony Russo.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Action masterpiece directed by Anthony Russo.",
+    "aiReasoning": "Top match based on Action themes and direction by Jon Favreau.",
+    "whyRecommended": "Top match based on Action themes and direction by Jon Favreau.",
     "similarTags": [
-      "Anthony",
-      "Adventure",
-      "Superhero"
+      "Jon Favreau",
+      "Action",
+      "Science Fiction"
     ],
     "moods": [
-      "✨ Action",
-      "🔥 Adventure"
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$140 Million",
+    "revenue": "$585 Million",
+    "tagline": "Heroes aren't born. They're built.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-102899",
+    "title": "Ant-Man",
+    "originalTitle": "Ant-Man",
+    "year": 2015,
+    "runtime": "117 min",
+    "genres": [
+      "Science Fiction",
+      "Action",
+      "Adventure"
+    ],
+    "imdbRating": 7.0,
+    "matchScore": 91,
+    "synopsis": "Armed with the astonishing ability to shrink in scale but increase in strength, master thief Scott Lang must embrace his inner-hero and help his mentor, Doctor Hank Pym, protect the secret behind his spectacular Ant-Man suit from a new generation of towering threats. Against seemingly insurmountable obstacles, Pym and Lang must plan and pull off a heist that will save the world.",
+    "director": "Peyton Reed",
+    "cast": [
+      "Paul Rudd",
+      "Michael Douglas",
+      "Evangeline Lilly",
+      "Corey Stoll"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/rQRnQfUl3kfp78nCWq8Ks04vnq1.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/1K3JmSNUN8OpjYsCjc0Hy0SYxAb.jpg",
+    "trailerId": "cx3joJnXydc",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Science Fiction themes and direction by Peyton Reed.",
+    "whyRecommended": "Top match based on Science Fiction themes and direction by Peyton Reed.",
+    "similarTags": [
+      "Peyton Reed",
+      "Science Fiction",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Science Fiction",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$130 Million",
+    "revenue": "$519 Million",
+    "tagline": "Heroes don't get any bigger.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-129",
+    "title": "Spirited Away",
+    "originalTitle": "\u5343\u3068\u5343\u5c0b\u306e\u795e\u96a0\u3057",
+    "year": 2001,
+    "runtime": "125 min",
+    "genres": [
+      "Fantasy",
+      "Adventure",
+      "Animation",
+      "Family"
+    ],
+    "imdbRating": 8.3,
+    "matchScore": 92,
+    "synopsis": "A ten year old girl who wanders away from her parents along a path that leads to a world ruled by strange and unusual monster-like animals. Her parents have been changed into pigs along with others inside a bathhouse full of these creatures. Will she ever see the world how it once was?",
+    "director": "Hayao Miyazaki",
+    "cast": [
+      "Rumi Hiiragi",
+      "Miyu Irino",
+      "Mari Natsuki",
+      "Takashi Naito"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/dyJvKsNs2KP8qQnAXbRwDjblViy.jpg",
+    "trailerId": "GAp2_0JJskk",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Fantasy themes and direction by Hayao Miyazaki.",
+    "whyRecommended": "Top match based on Fantasy themes and direction by Hayao Miyazaki.",
+    "similarTags": [
+      "Hayao Miyazaki",
+      "Fantasy",
+      "Adventure"
+    ],
+    "moods": [
+      "\u2728 Fantasy",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "Japanese",
+    "country": "International",
+    "budget": "$15 Million",
+    "revenue": "$274 Million",
+    "tagline": "The tunnel led Chihiro to a mysterious town...",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-91314",
+    "title": "Transformers: Age of Extinction",
+    "originalTitle": "Transformers: Age of Extinction",
+    "year": 2014,
+    "runtime": "165 min",
+    "genres": [
+      "Science Fiction",
+      "Action",
+      "Adventure"
+    ],
+    "imdbRating": 5.8,
+    "matchScore": 93,
+    "synopsis": "As humanity picks up the pieces, following the conclusion of \"Transformers: Dark of the Moon,\" Autobots and Decepticons have all but vanished from the face of the planet. However, a group of powerful, ingenious businessman and scientists attempt to learn from past Transformer incursions and push the boundaries of technology beyond what they can control - all while an ancient, powerful Transformer menace sets Earth in his cross-hairs.",
+    "director": "Michael Bay",
+    "cast": [
+      "Mark Wahlberg",
+      "Stanley Tucci",
+      "Kelsey Grammer",
+      "Nicola Peltz"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/jyzrfx2WaeY60kYZpPYepSjGz4S.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/wxr4Z6E83h14CogsZOzDm1vuDX3.jpg",
+    "trailerId": "S30VkLn5a2o",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Science Fiction themes and direction by Michael Bay.",
+    "whyRecommended": "Top match based on Science Fiction themes and direction by Michael Bay.",
+    "similarTags": [
+      "Michael Bay",
+      "Science Fiction",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Science Fiction",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$210 Million",
+    "revenue": "$1091 Million",
+    "tagline": "This is not war. It's extinction.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-198184",
+    "title": "Chappie",
+    "originalTitle": "Chappie",
+    "year": 2015,
+    "runtime": "120 min",
+    "genres": [
+      "Crime",
+      "Action",
+      "Science Fiction"
+    ],
+    "imdbRating": 6.6,
+    "matchScore": 94,
+    "synopsis": "Every child comes into the world full of promise, and none more so than Chappie: he is gifted, special, a prodigy. Like any child, Chappie will come under the influence of his surroundings\u2014some good, some bad\u2014and he will rely on his heart and soul to find his way in the world and become his own man. But there's one thing that makes Chappie different from any one else: he is a robot.",
+    "director": "Neill Blomkamp",
+    "cast": [
+      "Sharlto Copley",
+      "Dev Patel",
+      "Ninja",
+      "Yolandi Visser"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/uuDUpzlMFomdSfNWlpEPS9nVZWV.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/3pKIcv6KhUE35jsKnv3MylQ3OT2.jpg",
+    "trailerId": "lyy7y0QOK-0",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Crime themes and direction by Neill Blomkamp.",
+    "whyRecommended": "Top match based on Crime themes and direction by Neill Blomkamp.",
+    "similarTags": [
+      "Neill Blomkamp",
+      "Crime",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Crime",
+      "\ud83d\udd25 Popular"
     ],
     "language": "English",
     "country": "USA",
     "budget": "$49 Million",
-    "revenue": "$760 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Neon",
-    "reviews": []
+    "revenue": "$104 Million",
+    "tagline": "I am consciousness. I am alive. I am Chappie.",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "english-iron-man",
-    "title": "Iron Man",
-    "year": 2008,
-    "runtime": "2h 6m",
+    "id": "tmdb-559",
+    "title": "Spider-Man 3",
+    "originalTitle": "Spider-Man 3",
+    "year": 2007,
+    "runtime": "139 min",
     "genres": [
-      "Action",
-      "Sci-Fi",
-      "Superhero",
-      "Romance",
-      "War",
-      "Survival",
-      "Anime",
-      "Family"
-    ],
-    "imdbRating": 8.9,
-    "rottenTomatoesScore": 95,
-    "matchScore": 95,
-    "synopsis": "A wealthy industrialist builds a high-tech armored suit to escape captivity, becoming a hero.",
-    "director": "Jon Favreau",
-    "cast": [
-      "Robert Downey Jr.",
-      "Gwyneth Paltrow"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1536768139911-e290a59002e4?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Action masterpiece directed by Jon Favreau.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Action masterpiece directed by Jon Favreau.",
-    "similarTags": [
-      "Jon",
-      "Sci-Fi",
-      "Superhero"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Sci-Fi"
-    ],
-    "language": "English",
-    "country": "USA",
-    "budget": "$57 Million",
-    "revenue": "$160 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Universal Studios",
-    "reviews": []
-  },
-  {
-    "id": "english-spider-verse",
-    "title": "Spider-Man: Into the Spider-Verse",
-    "year": 2018,
-    "runtime": "1h 57m",
-    "genres": [
-      "Animation",
-      "Family",
-      "Superhero",
-      "Adventure",
-      "Sci-Fi",
-      "Western",
-      "Space",
-      "Biography",
-      "Fantasy"
-    ],
-    "imdbRating": 9,
-    "rottenTomatoesScore": 96,
-    "matchScore": 96,
-    "synopsis": "Teen Miles Morales becomes the new Spider-Man, joining forces with spiders from other dimensions.",
-    "director": "Bob Persichetti",
-    "cast": [
-      "Shameik Moore",
-      "Jake Johnson"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Animation masterpiece directed by Bob Persichetti.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Animation masterpiece directed by Bob Persichetti.",
-    "similarTags": [
-      "Bob",
-      "Family",
-      "Superhero"
-    ],
-    "moods": [
-      "✨ Animation",
-      "🔥 Family"
-    ],
-    "language": "English",
-    "country": "USA",
-    "budget": "$89 Million",
-    "revenue": "$658 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Universal Pictures",
-    "reviews": []
-  },
-  {
-    "id": "english-whiplash",
-    "title": "Whiplash",
-    "year": 2014,
-    "runtime": "1h 47m",
-    "genres": [
-      "Drama",
-      "Musical",
-      "Sports",
-      "Psychological",
-      "Time Travel",
-      "Comedy",
-      "History"
-    ],
-    "imdbRating": 9.1,
-    "rottenTomatoesScore": 97,
-    "matchScore": 97,
-    "synopsis": "A promising young drummer enrolls at a cut-throat music conservatory where he is pushed to his limits.",
-    "director": "Damien Chazelle",
-    "cast": [
-      "Miles Teller",
-      "J.K. Simmons"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Drama masterpiece directed by Damien Chazelle.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Drama masterpiece directed by Damien Chazelle.",
-    "similarTags": [
-      "Damien",
-      "Musical",
-      "Sports"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Musical"
-    ],
-    "language": "English",
-    "country": "USA",
-    "budget": "$57 Million",
-    "revenue": "$576 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Neon",
-    "reviews": []
-  },
-  {
-    "id": "english-la-la-land-eng",
-    "title": "La La Land",
-    "year": 2016,
-    "runtime": "2h 8m",
-    "genres": [
-      "Romance",
-      "Musical",
-      "Comedy",
-      "Superhero",
-      "Mystery Thriller",
-      "Action",
-      "Crime",
-      "Horror"
-    ],
-    "imdbRating": 9.2,
-    "rottenTomatoesScore": 80,
-    "matchScore": 98,
-    "synopsis": "A jazz pianist and an aspiring actress fall in love while attempting to reconcile their dreams.",
-    "director": "Damien Chazelle",
-    "cast": [
-      "Ryan Gosling",
-      "Emma Stone"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Romance masterpiece directed by Damien Chazelle.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Romance masterpiece directed by Damien Chazelle.",
-    "similarTags": [
-      "Damien",
-      "Musical",
-      "Comedy"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Musical"
-    ],
-    "language": "English",
-    "country": "USA",
-    "budget": "$176 Million",
-    "revenue": "$215 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Paramount Pictures",
-    "reviews": []
-  },
-  {
-    "id": "english-shutter-island-eng",
-    "title": "Shutter Island",
-    "year": 2010,
-    "runtime": "2h 18m",
-    "genres": [
-      "Psychological",
-      "Mystery Thriller",
-      "Suspense",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary",
-      "Mystery"
-    ],
-    "imdbRating": 9.3,
-    "rottenTomatoesScore": 81,
-    "matchScore": 99,
-    "synopsis": "A U.S. Marshal investigates the disappearance of a murderer from a hospital for the criminally insane.",
-    "director": "Martin Scorsese",
-    "cast": [
-      "Leonardo DiCaprio",
-      "Mark Ruffalo"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1505635552518-3448ff116af3?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Psychological masterpiece directed by Martin Scorsese.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Psychological masterpiece directed by Martin Scorsese.",
-    "similarTags": [
-      "Martin",
-      "Mystery Thriller",
-      "Suspense"
-    ],
-    "moods": [
-      "✨ Psychological",
-      "🔥 Mystery Thriller"
-    ],
-    "language": "English",
-    "country": "USA",
-    "budget": "$83 Million",
-    "revenue": "$634 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Universal Pictures",
-    "reviews": []
-  },
-  {
-    "id": "english-godfather",
-    "title": "The Godfather",
-    "year": 1972,
-    "runtime": "2h 55m",
-    "genres": [
-      "Crime",
-      "Drama",
-      "Thriller",
-      "Noir",
-      "Animation",
-      "Musical"
-    ],
-    "imdbRating": 9.4,
-    "rottenTomatoesScore": 82,
-    "matchScore": 90,
-    "synopsis": "The aging patriarch of an organized crime dynasty transfers control of his empire to his reluctant son.",
-    "director": "Francis Ford Coppola",
-    "cast": [
-      "Marlon Brando",
-      "Al Pacino"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Crime masterpiece directed by Francis Ford Coppola.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Crime masterpiece directed by Francis Ford Coppola.",
-    "similarTags": [
-      "Francis",
-      "Drama",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Crime",
-      "🔥 Drama"
-    ],
-    "language": "English",
-    "country": "USA",
-    "budget": "$146 Million",
-    "revenue": "$665 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "A24",
-    "reviews": []
-  },
-  {
-    "id": "english-goodfellas",
-    "title": "Goodfellas",
-    "year": 1990,
-    "runtime": "2h 25m",
-    "genres": [
-      "Crime",
-      "Drama",
-      "Biography",
-      "War",
-      "Survival",
-      "Anime",
-      "Family",
-      "Romance"
-    ],
-    "imdbRating": 7.4,
-    "rottenTomatoesScore": 83,
-    "matchScore": 91,
-    "synopsis": "The story of Henry Hill and his life in the mob, relationship with his wife and partners.",
-    "director": "Martin Scorsese",
-    "cast": [
-      "Robert De Niro",
-      "Ray Liotta"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Crime masterpiece directed by Martin Scorsese.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Crime masterpiece directed by Martin Scorsese.",
-    "similarTags": [
-      "Martin",
-      "Drama",
-      "Biography"
-    ],
-    "moods": [
-      "✨ Crime",
-      "🔥 Drama"
-    ],
-    "language": "English",
-    "country": "USA",
-    "budget": "$45 Million",
-    "revenue": "$628 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Neon",
-    "reviews": []
-  },
-  {
-    "id": "english-se7en",
-    "title": "Se7en",
-    "year": 1995,
-    "runtime": "2h 7m",
-    "genres": [
-      "Crime",
-      "Thriller",
-      "Mystery",
-      "Western",
-      "Space",
-      "Biography",
       "Fantasy",
-      "Sci-Fi"
+      "Action",
+      "Adventure"
     ],
-    "imdbRating": 7.5,
-    "rottenTomatoesScore": 84,
-    "matchScore": 92,
-    "synopsis": "Two detectives hunt a serial killer who uses the seven deadly sins as his motives.",
-    "director": "David Fincher",
+    "imdbRating": 5.9,
+    "matchScore": 95,
+    "synopsis": "The seemingly invincible Spider-Man goes up against an all-new crop of villain \u2013 including the shape-shifting Sandman. While Spider-Man\u2019s superpowers are altered by an alien organism, his alter ego, Peter Parker, deals with nemesis Eddie Brock and also gets caught up in a love triangle.",
+    "director": "Sam Raimi",
     "cast": [
-      "Brad Pitt",
-      "Morgan Freeman"
+      "Tobey Maguire",
+      "Kirsten Dunst",
+      "James Franco",
+      "Thomas Haden Church"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Crime masterpiece directed by David Fincher.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Crime masterpiece directed by David Fincher.",
-    "similarTags": [
-      "David",
-      "Thriller",
-      "Mystery"
-    ],
-    "moods": [
-      "✨ Crime",
-      "🔥 Thriller"
-    ],
-    "language": "English",
-    "country": "USA",
-    "budget": "$131 Million",
-    "revenue": "$700 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Universal Studios",
-    "reviews": []
-  },
-  {
-    "id": "english-silence-lambs",
-    "title": "The Silence of the Lambs",
-    "year": 1991,
-    "runtime": "1h 58m",
-    "genres": [
-      "Thriller",
-      "Crime",
-      "Mystery",
-      "Psychological",
-      "Time Travel",
-      "Comedy",
-      "History",
-      "Sports"
-    ],
-    "imdbRating": 7.6,
-    "rottenTomatoesScore": 85,
-    "matchScore": 93,
-    "synopsis": "An FBI cadet receives help from an incarcerated cannibal killer to catch another serial killer.",
-    "director": "Jonathan Demme",
-    "cast": [
-      "Jodie Foster",
-      "Anthony Hopkins"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1536768139911-e290a59002e4?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/sJMTTGjtjvrMZ7G0oP9D13wNUum.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/FfAU0PUs8AJkMU2VbkVNFtRXR4.jpg",
+    "trailerId": "e5wUilOeOmg",
     "streamingOn": [
       "Disney+"
     ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Thriller masterpiece directed by Jonathan Demme.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Thriller masterpiece directed by Jonathan Demme.",
+    "aiReasoning": "Top match based on Fantasy themes and direction by Sam Raimi.",
+    "whyRecommended": "Top match based on Fantasy themes and direction by Sam Raimi.",
     "similarTags": [
-      "Jonathan",
-      "Crime",
-      "Mystery"
+      "Sam Raimi",
+      "Fantasy",
+      "Action"
     ],
     "moods": [
-      "✨ Thriller",
-      "🔥 Crime"
+      "\u2728 Fantasy",
+      "\ud83d\udd25 Popular"
     ],
     "language": "English",
     "country": "USA",
-    "budget": "$92 Million",
-    "revenue": "$621 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "A24",
-    "reviews": []
+    "budget": "$258 Million",
+    "revenue": "$890 Million",
+    "tagline": "The battle within.",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "english-departed",
-    "title": "The Departed",
-    "year": 2006,
-    "runtime": "2h 31m",
+    "id": "tmdb-240832",
+    "title": "Lucy",
+    "originalTitle": "Lucy",
+    "year": 2014,
+    "runtime": "89 min",
     "genres": [
-      "Crime",
-      "Thriller",
-      "Drama",
-      "Mystery Thriller",
       "Action",
-      "Horror",
-      "Superhero"
+      "Science Fiction"
     ],
-    "imdbRating": 7.7,
-    "rottenTomatoesScore": 86,
-    "matchScore": 94,
-    "synopsis": "An undercover cop and a mole in the police attempt to identify each other inside a Boston gang.",
-    "director": "Martin Scorsese",
+    "imdbRating": 6.3,
+    "matchScore": 96,
+    "synopsis": "A woman, accidentally caught in a dark deal, turns the tables on her captors and transforms into a merciless warrior evolved beyond human logic.",
+    "director": "Luc Besson",
     "cast": [
-      "Leonardo DiCaprio",
-      "Matt Damon"
+      "Scarlett Johansson",
+      "Morgan Freeman",
+      "Choi Min-sik",
+      "Amr Waked"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/kRbpUTRNm6QbLQFPFWUcNC4czEm.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/1hzH1Wu2xhXBNOWzw3RMwNTJX5q.jpg",
+    "trailerId": "l7zAV_MDC68",
     "streamingOn": [
       "Netflix",
       "Prime Video"
     ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Crime masterpiece directed by Martin Scorsese.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Crime masterpiece directed by Martin Scorsese.",
+    "aiReasoning": "Top match based on Action themes and direction by Luc Besson.",
+    "whyRecommended": "Top match based on Action themes and direction by Luc Besson.",
     "similarTags": [
-      "Martin",
-      "Thriller",
+      "Luc Besson",
+      "Action",
+      "Science Fiction"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$40 Million",
+    "revenue": "$126 Million",
+    "tagline": "The average person uses 10% of their brain capacity. Imagine what she could do with 100%.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-272",
+    "title": "Batman Begins",
+    "originalTitle": "Batman Begins",
+    "year": 2005,
+    "runtime": "140 min",
+    "genres": [
+      "Action",
+      "Crime",
       "Drama"
     ],
-    "moods": [
-      "✨ Crime",
-      "🔥 Thriller"
-    ],
-    "language": "English",
-    "country": "USA",
-    "budget": "$119 Million",
-    "revenue": "$720 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Neon",
-    "reviews": []
-  },
-  {
-    "id": "english-prestige-eng",
-    "title": "The Prestige",
-    "year": 2006,
-    "runtime": "2h 10m",
-    "genres": [
-      "Psychological",
-      "Mystery Thriller",
-      "Drama",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary",
-      "Mystery",
-      "Suspense"
-    ],
-    "imdbRating": 7.8,
-    "rottenTomatoesScore": 87,
-    "matchScore": 95,
-    "synopsis": "Two magicians engage in a battle to create the ultimate illusion, sacrificing everything.",
+    "imdbRating": 7.5,
+    "matchScore": 97,
+    "synopsis": "Driven by tragedy, billionaire Bruce Wayne dedicates his life to uncovering and defeating the corruption that plagues his home, Gotham City.  Unable to work within the system, he instead creates a new identity, a symbol of fear for the criminal underworld - The Batman.",
     "director": "Christopher Nolan",
     "cast": [
       "Christian Bale",
-      "Hugh Jackman"
+      "Michael Caine",
+      "Liam Neeson",
+      "Katie Holmes"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1505635552518-3448ff116af3?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/sPX89Td70IDDjVr85jdSBb4rWGr.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/9IIBboV7MCT0bTxzXHmWK1Hq558.jpg",
+    "trailerId": "lirBhHXvDSg",
     "streamingOn": [
       "Prime Video"
     ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Psychological masterpiece directed by Christopher Nolan.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Psychological masterpiece directed by Christopher Nolan.",
+    "aiReasoning": "Top match based on Action themes and direction by Christopher Nolan.",
+    "whyRecommended": "Top match based on Action themes and direction by Christopher Nolan.",
     "similarTags": [
-      "Christopher",
-      "Mystery Thriller",
-      "Drama"
+      "Christopher Nolan",
+      "Action",
+      "Crime"
     ],
     "moods": [
-      "✨ Psychological",
-      "🔥 Mystery Thriller"
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
     ],
     "language": "English",
-    "country": "UK",
-    "budget": "$135 Million",
-    "revenue": "$608 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Universal Pictures",
-    "reviews": []
+    "country": "USA",
+    "budget": "$150 Million",
+    "revenue": "$374 Million",
+    "tagline": "Evil fears the knight.",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "english-memento-eng",
-    "title": "Memento",
-    "year": 2000,
-    "runtime": "1h 53m",
+    "id": "tmdb-177677",
+    "title": "Mission: Impossible - Rogue Nation",
+    "originalTitle": "Mission: Impossible - Rogue Nation",
+    "year": 2015,
+    "runtime": "131 min",
     "genres": [
-      "Psychological",
-      "Mystery Thriller",
-      "Noir",
-      "Animation",
-      "Drama",
-      "Musical",
+      "Action",
+      "Adventure",
       "Thriller"
     ],
-    "imdbRating": 7.9,
-    "rottenTomatoesScore": 88,
-    "matchScore": 96,
-    "synopsis": "A man with short-term memory loss uses polaroid photos and tattoos to track down his wife's killer.",
-    "director": "Christopher Nolan",
+    "imdbRating": 7.1,
+    "matchScore": 98,
+    "synopsis": "Ethan and team take on their most impossible mission yet, eradicating the Syndicate - an International rogue organization as highly skilled as they are, committed to destroying the IMF.",
+    "director": "Christopher McQuarrie",
     "cast": [
-      "Guy Pearce",
-      "Carrie-Anne Moss"
+      "Tom Cruise",
+      "Rebecca Ferguson",
+      "Simon Pegg",
+      "Jeremy Renner"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1505635552518-3448ff116af3?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fRJLXQBHK2wyznK5yZbO7vmsuVK.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/vYIUN5rrCncHFY8WvcuXQlM4hk5.jpg",
+    "trailerId": "F-qBD17wwrQ",
     "streamingOn": [
       "Max"
     ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Psychological masterpiece directed by Christopher Nolan.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Psychological masterpiece directed by Christopher Nolan.",
+    "aiReasoning": "Top match based on Action themes and direction by Christopher McQuarrie.",
+    "whyRecommended": "Top match based on Action themes and direction by Christopher McQuarrie.",
     "similarTags": [
-      "Christopher",
-      "Mystery Thriller",
-      "Noir"
+      "Christopher McQuarrie",
+      "Action",
+      "Adventure"
     ],
     "moods": [
-      "✨ Psychological",
-      "🔥 Mystery Thriller"
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
     ],
     "language": "English",
     "country": "USA",
-    "budget": "$142 Million",
-    "revenue": "$263 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Paramount Pictures",
-    "reviews": []
+    "budget": "$150 Million",
+    "revenue": "$682 Million",
+    "tagline": "Desperate Times. Desperate Measures.",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "english-arrival",
-    "title": "Arrival",
-    "year": 2016,
-    "runtime": "1h 56m",
+    "id": "tmdb-294254",
+    "title": "Maze Runner: The Scorch Trials",
+    "originalTitle": "Maze Runner: The Scorch Trials",
+    "year": 2015,
+    "runtime": "132 min",
     "genres": [
-      "Sci-Fi",
-      "Mystery",
-      "Drama",
-      "Survival",
-      "Anime",
-      "Family",
-      "Romance",
-      "War"
+      "Action"
     ],
-    "imdbRating": 8,
-    "rottenTomatoesScore": 89,
-    "matchScore": 97,
-    "synopsis": "A linguist works with the military to communicate with alien lifeforms who landed on Earth.",
-    "director": "Denis Villeneuve",
+    "imdbRating": 6.4,
+    "matchScore": 99,
+    "synopsis": "Thomas and his fellow Gladers face their greatest challenge yet: searching for clues about the mysterious and powerful organization known as WCKD. Their journey takes them to the Scorch, a desolate landscape filled with unimaginable obstacles. Teaming up with resistance fighters, the Gladers take on WCKD\u2019s vastly superior forces and uncover its shocking plans for them all.",
+    "director": "Wes Ball",
     "cast": [
-      "Amy Adams",
-      "Jeremy Renner"
+      "Dylan O'Brien",
+      "Kaya Scodelario",
+      "Thomas Brodie-Sangster",
+      "Giancarlo Esposito"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/mYw7ZyejqSCPFlrT2jHZOESZDU3.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/4mcOCiR06dqQ5eoEJcG3zvonjOa.jpg",
+    "trailerId": "SDofO3P2HpE",
     "streamingOn": [
       "Disney+"
     ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Denis Villeneuve.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Denis Villeneuve.",
+    "aiReasoning": "Top match based on Action themes and direction by Wes Ball.",
+    "whyRecommended": "Top match based on Action themes and direction by Wes Ball.",
     "similarTags": [
-      "Denis",
-      "Mystery",
-      "Drama"
+      "Wes Ball",
+      "Action"
     ],
     "moods": [
-      "✨ Sci-Fi",
-      "🔥 Mystery"
-    ],
-    "language": "English",
-    "country": "USA",
-    "budget": "$162 Million",
-    "revenue": "$681 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Warner Bros. Pictures",
-    "reviews": []
-  },
-  {
-    "id": "english-dune-eng",
-    "title": "Dune",
-    "year": 2021,
-    "runtime": "2h 35m",
-    "genres": [
-      "Sci-Fi",
-      "Adventure",
-      "Space",
-      "Biography",
-      "Fantasy",
-      "Western"
-    ],
-    "imdbRating": 8.1,
-    "rottenTomatoesScore": 90,
-    "matchScore": 98,
-    "synopsis": "A noble family gets drawn into a war for control of the galaxy's most valuable asset on Arrakis.",
-    "director": "Denis Villeneuve",
-    "cast": [
-      "Timothée Chalamet",
-      "Rebecca Ferguson"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Denis Villeneuve.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Denis Villeneuve.",
-    "similarTags": [
-      "Denis",
-      "Adventure",
-      "Space"
-    ],
-    "moods": [
-      "✨ Sci-Fi",
-      "🔥 Adventure"
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
     ],
     "language": "English",
     "country": "USA",
     "budget": "$61 Million",
-    "revenue": "$246 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Neon",
-    "reviews": []
+    "revenue": "$311 Million",
+    "tagline": "The Maze Was Just the Beginning.",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "english-blade-runner-2049",
-    "title": "Blade Runner 2049",
-    "year": 2017,
-    "runtime": "2h 44m",
-    "genres": [
-      "Sci-Fi",
-      "Noir",
-      "Cyberpunk",
-      "Time Travel",
-      "Comedy",
-      "History",
-      "Sports",
-      "Psychological"
-    ],
-    "imdbRating": 8.2,
-    "rottenTomatoesScore": 91,
-    "matchScore": 99,
-    "synopsis": "A new blade runner uncovers a secret that could plunge what is left of society into chaos.",
-    "director": "Denis Villeneuve",
-    "cast": [
-      "Ryan Gosling",
-      "Harrison Ford"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Denis Villeneuve.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Sci-Fi masterpiece directed by Denis Villeneuve.",
-    "similarTags": [
-      "Denis",
-      "Noir",
-      "Cyberpunk"
-    ],
-    "moods": [
-      "✨ Sci-Fi",
-      "🔥 Noir"
-    ],
-    "language": "English",
-    "country": "USA",
-    "budget": "$144 Million",
-    "revenue": "$183 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Paramount Pictures",
-    "reviews": []
-  },
-  {
-    "id": "english-get-out",
-    "title": "Get Out",
-    "year": 2017,
-    "runtime": "1h 44m",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller",
-      "Action",
-      "Crime",
-      "Superhero",
-      "Mystery Thriller"
-    ],
-    "imdbRating": 8.3,
-    "rottenTomatoesScore": 92,
-    "matchScore": 90,
-    "synopsis": "A young African-American visits his white girlfriend's parents for the weekend, discovering a dark secret.",
-    "director": "Jordan Peele",
-    "cast": [
-      "Daniel Kaluuya",
-      "Allison Williams"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518063319789-7217e6706b04?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518063319789-7217e6706b04?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Horror masterpiece directed by Jordan Peele.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Horror masterpiece directed by Jordan Peele.",
-    "similarTags": [
-      "Jordan",
-      "Mystery",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Horror",
-      "🔥 Mystery"
-    ],
-    "language": "English",
-    "country": "USA",
-    "budget": "$185 Million",
-    "revenue": "$178 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Neon",
-    "reviews": []
-  },
-  {
-    "id": "english-hereditary-eng",
-    "title": "Hereditary",
-    "year": 2018,
-    "runtime": "2h 7m",
-    "genres": [
-      "Horror",
-      "Psychological",
-      "Adventure",
-      "Documentary",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk"
-    ],
-    "imdbRating": 8.4,
-    "rottenTomatoesScore": 93,
-    "matchScore": 91,
-    "synopsis": "A grieving family is haunted by disturbing occurrences after the death of their grandmother.",
-    "director": "Ari Aster",
-    "cast": [
-      "Toni Collette",
-      "Alex Wolff"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Horror masterpiece directed by Ari Aster.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Horror masterpiece directed by Ari Aster.",
-    "similarTags": [
-      "Ari",
-      "Psychological",
-      "Adventure"
-    ],
-    "moods": [
-      "✨ Horror",
-      "🔥 Psychological"
-    ],
-    "language": "English",
-    "country": "USA",
-    "budget": "$126 Million",
-    "revenue": "$215 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Paramount Pictures",
-    "reviews": []
-  },
-  {
-    "id": "english-conjuring",
-    "title": "The Conjuring",
+    "id": "tmdb-49047",
+    "title": "Gravity",
+    "originalTitle": "Gravity",
     "year": 2013,
-    "runtime": "1h 52m",
+    "runtime": "91 min",
     "genres": [
-      "Horror",
-      "Suspense",
-      "Animation",
-      "Drama",
-      "Musical",
+      "Science Fiction",
       "Thriller",
-      "Noir"
+      "Drama"
     ],
-    "imdbRating": 8.5,
-    "rottenTomatoesScore": 94,
-    "matchScore": 92,
-    "synopsis": "Paranormal investigators Warren work to help a family terrorized by a dark presence.",
-    "director": "James Wan",
+    "imdbRating": 7.3,
+    "matchScore": 90,
+    "synopsis": "Dr. Ryan Stone, a brilliant medical engineer on her first Shuttle mission, with veteran astronaut Matt Kowalsky in command of his last flight before retiring. But on a seemingly routine spacewalk, disaster strikes. The Shuttle is destroyed, leaving Stone and Kowalsky completely alone-tethered to nothing but each other and spiraling out into the blackness of space. The deafening silence tells them they have lost any link to Earth and any chance for rescue. As fear turns to panic, every gulp of air eats away at what little oxygen is left. But the only way home may be to go further out into the terrifying expanse of space.",
+    "director": "Alfonso Cuar\u00f3n",
     "cast": [
-      "Vera Farmiga",
-      "Patrick Wilson"
+      "Sandra Bullock",
+      "George Clooney",
+      "Ed Harris",
+      "Orto Ignatiussen"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518063319789-7217e6706b04?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1505635552518-3448ff116af3?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/kZ2nZw8D681aphje8NJi8EfbL1U.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/a2n6bKD7qhCPCAEALgsAhWOAQcc.jpg",
+    "trailerId": "OiTiKOy59o4",
     "streamingOn": [
       "Netflix",
       "Prime Video"
     ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Horror masterpiece directed by James Wan.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Horror masterpiece directed by James Wan.",
+    "aiReasoning": "Top match based on Science Fiction themes and direction by Alfonso Cuar\u00f3n.",
+    "whyRecommended": "Top match based on Science Fiction themes and direction by Alfonso Cuar\u00f3n.",
     "similarTags": [
-      "James",
-      "Suspense",
+      "Alfonso Cuar\u00f3n",
+      "Science Fiction",
+      "Thriller"
+    ],
+    "moods": [
+      "\u2728 Science Fiction",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$105 Million",
+    "revenue": "$716 Million",
+    "tagline": "Don't Let Go",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-671",
+    "title": "Harry Potter and the Philosopher's Stone",
+    "originalTitle": "Harry Potter and the Philosopher's Stone",
+    "year": 2001,
+    "runtime": "152 min",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Family"
+    ],
+    "imdbRating": 7.5,
+    "matchScore": 91,
+    "synopsis": "Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard -- with a place waiting for him at the Hogwarts School of Witchcraft and Wizardry. As he learns to harness his newfound powers with the help of the school's kindly headmaster, Harry uncovers the truth about his parents' deaths -- and about the villain who's to blame.",
+    "director": "Chris Columbus",
+    "cast": [
+      "Daniel Radcliffe",
+      "Rupert Grint",
+      "Emma Watson",
+      "Richard Harris"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/1XAC6RPT01UX9EQGy2JVn5c8pgy.jpg",
+    "trailerId": "l91Km49W9qI",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Chris Columbus.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Chris Columbus.",
+    "similarTags": [
+      "Chris Columbus",
+      "Adventure",
+      "Fantasy"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$125 Million",
+    "revenue": "$976 Million",
+    "tagline": "Let the Magic Begin.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-18",
+    "title": "The Fifth Element",
+    "originalTitle": "The Fifth Element",
+    "year": 1997,
+    "runtime": "126 min",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Action",
+      "Thriller",
+      "Science Fiction"
+    ],
+    "imdbRating": 7.3,
+    "matchScore": 92,
+    "synopsis": "In 2257, a taxi driver is unintentionally given the task of saving a young girl who is part of the key that will ensure the survival of humanity.",
+    "director": "Luc Besson",
+    "cast": [
+      "Bruce Willis",
+      "Gary Oldman",
+      "Ian Holm",
+      "Milla Jovovich"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fPtlCO1yQtnoLHOwKtWz7db6RGU.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/jW21PoKwqs79wk6bfiYezox63mK.jpg",
+    "trailerId": "5Sg2RkdkSvk",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Luc Besson.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Luc Besson.",
+    "similarTags": [
+      "Luc Besson",
+      "Adventure",
+      "Fantasy"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$90 Million",
+    "revenue": "$263 Million",
+    "tagline": "There is no future without it.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-49051",
+    "title": "The Hobbit: An Unexpected Journey",
+    "originalTitle": "The Hobbit: An Unexpected Journey",
+    "year": 2012,
+    "runtime": "169 min",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Action"
+    ],
+    "imdbRating": 7.0,
+    "matchScore": 93,
+    "synopsis": "Bilbo Baggins, a hobbit enjoying his quiet life, is swept into an epic quest by Gandalf the Grey and thirteen dwarves who seek to reclaim their mountain home from Smaug, the dragon.",
+    "director": "Peter Jackson",
+    "cast": [
+      "Ian McKellen",
+      "Martin Freeman",
+      "Richard Armitage",
+      "Andy Serkis"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yHA9Fc37VmpUA5UncTxxo3rTGVA.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/xyXmtuvsoM5J3yNad0nvcetpBdY.jpg",
+    "trailerId": "CXqZK-nbZ74",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Peter Jackson.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Peter Jackson.",
+    "similarTags": [
+      "Peter Jackson",
+      "Adventure",
+      "Fantasy"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$250 Million",
+    "revenue": "$1021 Million",
+    "tagline": "From the smallest beginnings come the greatest legends.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-10764",
+    "title": "Quantum of Solace",
+    "originalTitle": "Quantum of Solace",
+    "year": 2008,
+    "runtime": "106 min",
+    "genres": [
+      "Adventure",
+      "Action",
+      "Thriller",
+      "Crime"
+    ],
+    "imdbRating": 6.1,
+    "matchScore": 94,
+    "synopsis": "Quantum of Solace continues the adventures of James Bond after Casino Royale. Betrayed by Vesper, the woman he loved, 007 fights the urge to make his latest mission personal. Pursuing his determination to uncover the truth, Bond and M interrogate Mr. White, who reveals that the organization that blackmailed Vesper is far more complex and dangerous than anyone had imagined.",
+    "director": "Marc Forster",
+    "cast": [
+      "Daniel Craig",
+      "Olga Kurylenko",
+      "Mathieu Amalric",
+      "Judi Dench"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/e3DXXLJHGqMx9yYpXsql1XNljmM.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/uGs5Z7dMguf7kxWubGFcp9EhKcy.jpg",
+    "trailerId": "BBqYaFEWBxI",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Marc Forster.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Marc Forster.",
+    "similarTags": [
+      "Marc Forster",
+      "Adventure",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$200 Million",
+    "revenue": "$586 Million",
+    "tagline": "For love, for hate, for justice, for revenge.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-206647",
+    "title": "Spectre",
+    "originalTitle": "Spectre",
+    "year": 2015,
+    "runtime": "148 min",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Crime"
+    ],
+    "imdbRating": 6.3,
+    "matchScore": 95,
+    "synopsis": "A cryptic message from Bond\u2019s past sends him on a trail to uncover a sinister organization. While M battles political forces to keep the secret service alive, Bond peels back the layers of deceit to reveal the terrible truth behind SPECTRE.",
+    "director": "Sam Mendes",
+    "cast": [
+      "Daniel Craig",
+      "Christoph Waltz",
+      "L\u00e9a Seydoux",
+      "Ralph Fiennes"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/zj8ongFhtWNsVlfjOGo8pSr7PQg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/8lBViysvNJBPkl6zG1LVAaW3qhj.jpg",
+    "trailerId": "z4UDNzXD3qA",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Sam Mendes.",
+    "whyRecommended": "Top match based on Action themes and direction by Sam Mendes.",
+    "similarTags": [
+      "Sam Mendes",
+      "Action",
+      "Adventure"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$245 Million",
+    "revenue": "$880 Million",
+    "tagline": "A Plan No One Escapes",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-240",
+    "title": "The Godfather: Part II",
+    "originalTitle": "The Godfather: Part II",
+    "year": 1974,
+    "runtime": "200 min",
+    "genres": [
+      "Drama",
+      "Crime"
+    ],
+    "imdbRating": 8.3,
+    "matchScore": 96,
+    "synopsis": "In the continuing saga of the Corleone crime family, a young Vito Corleone grows up in Sicily and in 1910s New York. In the 1950s, Michael Corleone attempts to expand the family business into Las Vegas, Hollywood and Cuba.",
+    "director": "Francis Ford Coppola",
+    "cast": [
+      "Al Pacino",
+      "Robert Duvall",
+      "Diane Keaton",
+      "Robert De Niro"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/sSuQTCZwqKrNBNIsksO9IAUoWP9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/kGzFbGhp99zva6oZODW5atUtnqi.jpg",
+    "trailerId": "7pfqivkYUlE",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Francis Ford Coppola.",
+    "whyRecommended": "Top match based on Drama themes and direction by Francis Ford Coppola.",
+    "similarTags": [
+      "Francis Ford Coppola",
+      "Drama",
+      "Crime"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$13 Million",
+    "revenue": "$47 Million",
+    "tagline": "I don't feel I have to wipe everybody out, Tom. Just my enemies.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-424",
+    "title": "Schindler's List",
+    "originalTitle": "Schindler's List",
+    "year": 1993,
+    "runtime": "195 min",
+    "genres": [
+      "Drama",
+      "History",
+      "War"
+    ],
+    "imdbRating": 8.3,
+    "matchScore": 97,
+    "synopsis": "The true story of how businessman Oskar Schindler saved over a thousand Jewish lives from the Nazis while they worked as slaves in his factory during World War II.",
+    "director": "Steven Spielberg",
+    "cast": [
+      "Liam Neeson",
+      "Ben Kingsley",
+      "Ralph Fiennes",
+      "Caroline Goodall"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/zb6fM1CX41D9rF9hdgclu0peUmy.jpg",
+    "trailerId": "v0RB-3sWbBA",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Steven Spielberg.",
+    "whyRecommended": "Top match based on Drama themes and direction by Steven Spielberg.",
+    "similarTags": [
+      "Steven Spielberg",
+      "Drama",
+      "History"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$22 Million",
+    "revenue": "$321 Million",
+    "tagline": "Whoever saves one life, saves the world entire.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-607",
+    "title": "Men in Black",
+    "originalTitle": "Men in Black",
+    "year": 1997,
+    "runtime": "98 min",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Science Fiction"
+    ],
+    "imdbRating": 6.9,
+    "matchScore": 98,
+    "synopsis": "Men in Black follows the exploits of agents Kay and Jay, members of a top-secret organization established to monitor and police alien activity on Earth. The two Men in Black find themselves in the middle of the deadly plot by an intergalactic terrorist who has arrived on Earth to assassinate two ambassadors from opposing galaxies. In order to prevent worlds from colliding, the MiB must track down the terrorist and prevent the destruction of Earth. It's just another typical day for the Men in Black.",
+    "director": "Barry Sonnenfeld",
+    "cast": [
+      "Tommy Lee Jones",
+      "Will Smith",
+      "Linda Fiorentino",
+      "Vincent D'Onofrio"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/uLOmOF5IzWoyrgIF5MfUnh5pa1X.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/o9puyKpayQoX8ikIaYtf2PfKv3.jpg",
+    "trailerId": "HYUd7AOw_lk",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Barry Sonnenfeld.",
+    "whyRecommended": "Top match based on Action themes and direction by Barry Sonnenfeld.",
+    "similarTags": [
+      "Barry Sonnenfeld",
+      "Action",
+      "Adventure"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$90 Million",
+    "revenue": "$589 Million",
+    "tagline": "Protecting the Earth from the scum of the universe.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-147441",
+    "title": "Exodus: Gods and Kings",
+    "originalTitle": "Exodus: Gods and Kings",
+    "year": 2014,
+    "runtime": "150 min",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Action"
+    ],
+    "imdbRating": 5.6,
+    "matchScore": 99,
+    "synopsis": "The defiant leader Moses rises up against the Egyptian Pharaoh Ramses, setting 400,000 slaves on a monumental journey of escape from Egypt and its terrifying cycle of deadly plagues.",
+    "director": "Ridley Scott",
+    "cast": [
+      "Christian Bale",
+      "Joel Edgerton",
+      "John Turturro",
+      "Aaron Paul"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/uaDj37JtvLan9tihxZ18e6qL33b.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/hJ1jUw8irCiWwQk7BElxF92BrlK.jpg",
+    "trailerId": "6k8qeqZycgE",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Ridley Scott.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Ridley Scott.",
+    "similarTags": [
+      "Ridley Scott",
+      "Adventure",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$140 Million",
+    "revenue": "$268 Million",
+    "tagline": "Once brothers, now enemies.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-674",
+    "title": "Harry Potter and the Goblet of Fire",
+    "originalTitle": "Harry Potter and the Goblet of Fire",
+    "year": 2005,
+    "runtime": "157 min",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Family"
+    ],
+    "imdbRating": 7.5,
+    "matchScore": 90,
+    "synopsis": "Harry starts his fourth year at Hogwarts, competes in the treacherous Triwizard Tournament and faces the evil Lord Voldemort. Ron and Hermione help Harry manage the pressure \u2013 but Voldemort lurks, awaiting his chance to destroy Harry and all that he stands for.",
+    "director": "Mike Newell",
+    "cast": [
+      "Daniel Radcliffe",
+      "Rupert Grint",
+      "Emma Watson",
+      "Ralph Fiennes"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fECBtHlr0RB3foNHDiCBXeg9Bv9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/1OV7hau4D3rWGS5bu8sqBYeVpe.jpg",
+    "trailerId": "4xkFJgcCQRE",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Mike Newell.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Mike Newell.",
+    "similarTags": [
+      "Mike Newell",
+      "Adventure",
+      "Fantasy"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$150 Million",
+    "revenue": "$895 Million",
+    "tagline": "Dark And Difficult Times Lie Ahead.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-150689",
+    "title": "Cinderella",
+    "originalTitle": "Cinderella",
+    "year": 2015,
+    "runtime": "105 min",
+    "genres": [
+      "Romance",
+      "Fantasy",
+      "Family",
+      "Drama"
+    ],
+    "imdbRating": 6.7,
+    "matchScore": 91,
+    "synopsis": "When her father unexpectedly passes away, young Ella finds herself at the mercy of her cruel stepmother and her daughters. Never one to give up hope, Ella's fortunes begin to change after meeting a dashing stranger in the woods.",
+    "director": "Kenneth Branagh",
+    "cast": [
+      "Lily James",
+      "Cate Blanchett",
+      "Richard Madden",
+      "Helena Bonham Carter"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/j91LJmcWo16CArFOoapsz84bwxb.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/q7vmCCmyiHnuKGMzHZlr0fD44b9.jpg",
+    "trailerId": "n44EWI92Tc8",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Romance themes and direction by Kenneth Branagh.",
+    "whyRecommended": "Top match based on Romance themes and direction by Kenneth Branagh.",
+    "similarTags": [
+      "Kenneth Branagh",
+      "Romance",
+      "Fantasy"
+    ],
+    "moods": [
+      "\u2728 Romance",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$95 Million",
+    "revenue": "$543 Million",
+    "tagline": "Midnight is just the beginning.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-281957",
+    "title": "The Revenant",
+    "originalTitle": "The Revenant",
+    "year": 2015,
+    "runtime": "156 min",
+    "genres": [
+      "Western",
+      "Drama",
+      "Adventure",
+      "Thriller"
+    ],
+    "imdbRating": 7.3,
+    "matchScore": 92,
+    "synopsis": "In the 1820s, a frontiersman, Hugh Glass, sets out on a path of vengeance against those who left him for dead after a bear mauling.",
+    "director": "Alejandro Gonz\u00e1lez I\u00f1\u00e1rritu",
+    "cast": [
+      "Leonardo DiCaprio",
+      "Tom Hardy",
+      "Will Poulter",
+      "Domhnall Gleeson"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ji3ecJphATlVgWNY0B0RVXZizdf.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/hEQYZq2CDB2LSJVxxlazdBOKeyW.jpg",
+    "trailerId": "EhffABvfAW0",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Western themes and direction by Alejandro Gonz\u00e1lez I\u00f1\u00e1rritu.",
+    "whyRecommended": "Top match based on Western themes and direction by Alejandro Gonz\u00e1lez I\u00f1\u00e1rritu.",
+    "similarTags": [
+      "Alejandro Gonz\u00e1lez I\u00f1\u00e1rritu",
+      "Western",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Western",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$135 Million",
+    "revenue": "$532 Million",
+    "tagline": "(n. One who has returned, as if from the dead.)",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-254128",
+    "title": "San Andreas",
+    "originalTitle": "San Andreas",
+    "year": 2015,
+    "runtime": "114 min",
+    "genres": [
+      "Action",
+      "Drama",
+      "Thriller"
+    ],
+    "imdbRating": 6.0,
+    "matchScore": 93,
+    "synopsis": "In the aftermath of a massive earthquake in California, a rescue-chopper pilot makes a dangerous journey across the state in order to rescue his estranged daughter.",
+    "director": "Brad Peyton",
+    "cast": [
+      "Dwayne Johnson",
+      "Alexandra Daddario",
+      "Carla Gugino",
+      "Ioan Gruffudd"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/2Gfjn962aaFSD6eST6QU3oLDZTo.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/zcySy6dnSmyqiichtDgO7AEeZoq.jpg",
+    "trailerId": "F1ZewAPl7L0",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Brad Peyton.",
+    "whyRecommended": "Top match based on Action themes and direction by Brad Peyton.",
+    "similarTags": [
+      "Brad Peyton",
+      "Action",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$110 Million",
+    "revenue": "$470 Million",
+    "tagline": "A rescue pilot survived an earthquake, this is what happens next",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-138832",
+    "title": "We're the Millers",
+    "originalTitle": "We're the Millers",
+    "year": 2013,
+    "runtime": "110 min",
+    "genres": [
+      "Comedy",
+      "Crime"
+    ],
+    "imdbRating": 6.8,
+    "matchScore": 94,
+    "synopsis": "A veteran pot dealer creates a fake family as part of his plan to move a huge shipment of weed into the U.S. from Mexico.",
+    "director": "Rawson Marshall Thurber",
+    "cast": [
+      "Jason Sudeikis",
+      "Jennifer Aniston",
+      "Will Poulter",
+      "Emma Roberts"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qF2LJ0jwWrtXSuT4AFD5OS2IqaT.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/jxDo3i2f6Ab1XeTWjdNDkkZYEju.jpg",
+    "trailerId": "O7NHfAzg7Yg",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Comedy themes and direction by Rawson Marshall Thurber.",
+    "whyRecommended": "Top match based on Comedy themes and direction by Rawson Marshall Thurber.",
+    "similarTags": [
+      "Rawson Marshall Thurber",
+      "Comedy",
+      "Crime"
+    ],
+    "moods": [
+      "\u2728 Comedy",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$37 Million",
+    "revenue": "$269 Million",
+    "tagline": "-If anyone asks.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-597",
+    "title": "Titanic",
+    "originalTitle": "Titanic",
+    "year": 1997,
+    "runtime": "194 min",
+    "genres": [
+      "Drama",
+      "Romance",
+      "Thriller"
+    ],
+    "imdbRating": 7.5,
+    "matchScore": 95,
+    "synopsis": "84 years later, a 101-year-old woman named Rose DeWitt Bukater tells the story to her granddaughter Lizzy Calvert, Brock Lovett, Lewis Bodine, Bobby Buell and Anatoly Mikailavich on the Keldysh about her life set in April 10th 1912, on a ship called Titanic when young Rose boards the departing ship with the upper-class passengers and her mother, Ruth DeWitt Bukater, and her fianc\u00e9, Caledon Hockley. Meanwhile, a drifter and artist named Jack Dawson and his best friend Fabrizio De Rossi win third-class tickets to the ship in a game. And she explains the whole story from departure until the death of Titanic on its first and last voyage April 15th, 1912 at 2:20 in the morning.",
+    "director": "James Cameron",
+    "cast": [
+      "Kate Winslet",
+      "Leonardo DiCaprio",
+      "Frances Fisher",
+      "Billy Zane"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/xnHVX37XZEp33hhCbYlQFq7ux1J.jpg",
+    "trailerId": "wO44qBPBG4c",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by James Cameron.",
+    "whyRecommended": "Top match based on Drama themes and direction by James Cameron.",
+    "similarTags": [
+      "James Cameron",
+      "Drama",
+      "Romance"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$200 Million",
+    "revenue": "$1845 Million",
+    "tagline": "Nothing on Earth could come between them.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-50620",
+    "title": "The Twilight Saga: Breaking Dawn - Part 2",
+    "originalTitle": "The Twilight Saga: Breaking Dawn - Part 2",
+    "year": 2012,
+    "runtime": "115 min",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Drama",
+      "Romance"
+    ],
+    "imdbRating": 6.1,
+    "matchScore": 96,
+    "synopsis": "After the birth of Renesmee, the Cullens gather other vampire clans in order to protect the child from a false allegation that puts the family in front of the Volturi.",
+    "director": "Bill Condon",
+    "cast": [
+      "Kristen Stewart",
+      "Robert Pattinson",
+      "Taylor Lautner",
+      "Peter Facinelli"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IGdPaKujv0BjI0Zd0m0a4CzEjJ.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/qkl57wzSFrpi2sRpoc2mZJbMuLP.jpg",
+    "trailerId": "bUXjqQ4GKRg",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Bill Condon.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Bill Condon.",
+    "similarTags": [
+      "Bill Condon",
+      "Adventure",
+      "Fantasy"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$120 Million",
+    "revenue": "$829 Million",
+    "tagline": "The epic finale that will live forever",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-425",
+    "title": "Ice Age",
+    "originalTitle": "Ice Age",
+    "year": 2002,
+    "runtime": "81 min",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Family",
+      "Adventure"
+    ],
+    "imdbRating": 7.1,
+    "matchScore": 97,
+    "synopsis": "With the impending ice age almost upon them, a mismatched trio of prehistoric critters \u2013 Manny the woolly mammoth, Diego the saber-toothed tiger and Sid the giant sloth \u2013 find an orphaned infant and decide to return it to its human parents. Along the way, the unlikely allies become friends but, when enemies attack, their quest takes on far nobler aims.",
+    "director": "Chris Wedge",
+    "cast": [
+      "Ray Romano",
+      "John Leguizamo",
+      "Denis Leary",
+      "Goran Visnjic"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gLhHHZUzeseRXShoDyC4VqLgsNv.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/8pwIhymsxfAVjrAE7syDjQULn37.jpg",
+    "trailerId": "i4noiCRJRoE",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Animation themes and direction by Chris Wedge.",
+    "whyRecommended": "Top match based on Animation themes and direction by Chris Wedge.",
+    "similarTags": [
+      "Chris Wedge",
+      "Animation",
+      "Comedy"
+    ],
+    "moods": [
+      "\u2728 Animation",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$59 Million",
+    "revenue": "$383 Million",
+    "tagline": "They came. They thawed. They conquered.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-76338",
+    "title": "Thor: The Dark World",
+    "originalTitle": "Thor: The Dark World",
+    "year": 2013,
+    "runtime": "112 min",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "imdbRating": 6.8,
+    "matchScore": 98,
+    "synopsis": "Thor fights to restore order across the cosmos\u2026 but an ancient race led by the vengeful Malekith returns to plunge the universe back into darkness. Faced with an enemy that even Odin and Asgard cannot withstand, Thor must embark on his most perilous and personal journey yet, one that will reunite him with Jane Foster and force him to sacrifice everything to save us all.",
+    "director": "Alan Taylor",
+    "cast": [
+      "Chris Hemsworth",
+      "Natalie Portman",
+      "Tom Hiddleston",
+      "Anthony Hopkins"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/wp6OxE4poJ4G7c0U2ZIXasTSMR7.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/5QEOy0QEpad9QsXeMxuGHPXMale.jpg",
+    "trailerId": "npvJ9FTgZbM",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Alan Taylor.",
+    "whyRecommended": "Top match based on Action themes and direction by Alan Taylor.",
+    "similarTags": [
+      "Alan Taylor",
+      "Action",
+      "Adventure"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$170 Million",
+    "revenue": "$644 Million",
+    "tagline": "Delve into the darkness",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-216015",
+    "title": "Fifty Shades of Grey",
+    "originalTitle": "Fifty Shades of Grey",
+    "year": 2015,
+    "runtime": "125 min",
+    "genres": [
+      "Drama",
+      "Romance",
+      "Thriller"
+    ],
+    "imdbRating": 5.2,
+    "matchScore": 99,
+    "synopsis": "When college senior Anastasia Steele steps in for her sick roommate to interview prominent businessman Christian Grey for their campus paper, little does she realize the path her life will take. Christian, as enigmatic as he is rich and powerful, finds himself strangely drawn to Ana, and she to him. Though sexually inexperienced, Ana plunges headlong into an affair -- and learns that Christian's true sexual proclivities push the boundaries of pain and pleasure.",
+    "director": "Sam Taylor-Johnson",
+    "cast": [
+      "Dakota Johnson",
+      "Jamie Dornan",
+      "Jennifer Ehle",
+      "Eloise Mumford"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/63kGofUkt1Mx0SIL4XI4Z5AoSgt.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/7IGKrY1f1KfwMipx9wZC4NRgIdF.jpg",
+    "trailerId": "6FDTMRK7-24",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Sam Taylor-Johnson.",
+    "whyRecommended": "Top match based on Drama themes and direction by Sam Taylor-Johnson.",
+    "similarTags": [
+      "Sam Taylor-Johnson",
+      "Drama",
+      "Romance"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$40 Million",
+    "revenue": "$571 Million",
+    "tagline": "Are you curious?",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-76203",
+    "title": "12 Years a Slave",
+    "originalTitle": "12 Years a Slave",
+    "year": 2013,
+    "runtime": "134 min",
+    "genres": [
+      "Drama",
+      "History"
+    ],
+    "imdbRating": 7.9,
+    "matchScore": 90,
+    "synopsis": "In the pre-Civil War United States, Solomon Northup, a free black man from upstate New York, is abducted and sold into slavery. Facing cruelty as well as unexpected kindnesses Solomon struggles not only to stay alive, but to retain his dignity. In the twelfth year of his unforgettable odyssey, Solomon\u2019s chance meeting with a Canadian abolitionist will forever alter his life.",
+    "director": "Steve McQueen",
+    "cast": [
+      "Chiwetel Ejiofor",
+      "Michael Fassbender",
+      "Lupita Nyong'o",
+      "Benedict Cumberbatch"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xdANQijuNrJaw1HA61rDccME4Tm.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/4Bb1kMIfrT2tYRZ9M6Jhqy6gkeF.jpg",
+    "trailerId": "z02Ie8wKKRg",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Steve McQueen.",
+    "whyRecommended": "Top match based on Drama themes and direction by Steve McQueen.",
+    "similarTags": [
+      "Steve McQueen",
+      "Drama",
+      "History"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$20 Million",
+    "revenue": "$187 Million",
+    "tagline": "The extraordinary true story of Solomon Northup",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-2048",
+    "title": "I, Robot",
+    "originalTitle": "I, Robot",
+    "year": 2004,
+    "runtime": "115 min",
+    "genres": [
+      "Action",
+      "Science Fiction"
+    ],
+    "imdbRating": 6.7,
+    "matchScore": 91,
+    "synopsis": "In 2035, where robots are common-place and abide by the three laws of robotics, a techno-phobic cop investigates an apparent suicide. Suspecting that a robot may be responsible for the death, his investigation leads him to believe that humanity may be in danger.",
+    "director": "Alex Proyas",
+    "cast": [
+      "Will Smith",
+      "Bridget Moynahan",
+      "Alan Tudyk",
+      "James Cromwell"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/efwv6F2lGaghjPpBRSINHtoEiZB.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/jpFcZH2eyh6gcoxCa637TrGe4bT.jpg",
+    "trailerId": "ry1N9lrzt7A",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Alex Proyas.",
+    "whyRecommended": "Top match based on Action themes and direction by Alex Proyas.",
+    "similarTags": [
+      "Alex Proyas",
+      "Action",
+      "Science Fiction"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$120 Million",
+    "revenue": "$347 Million",
+    "tagline": "Laws are made to be broken.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-98",
+    "title": "Gladiator",
+    "originalTitle": "Gladiator",
+    "year": 2000,
+    "runtime": "155 min",
+    "genres": [
+      "Action",
+      "Drama",
+      "Adventure"
+    ],
+    "imdbRating": 7.9,
+    "matchScore": 92,
+    "synopsis": "In the year 180, the death of emperor Marcus Aurelius throws the Roman Empire into chaos. Maximus is one of the Roman army's most capable and trusted generals and a key advisor to the emperor. As Marcus' devious son Commodus ascends to the throne, Maximus is set to be executed. He escapes, but is captured by slave traders. Renamed Spaniard and forced to become a gladiator, Maximus must battle to the death with other men for the amusement of paying audiences. His battle skills serve him well, and he becomes one of the most famous and admired men to fight in the Colosseum. Determined to avenge himself against the man who took away his freedom and laid waste to his family, Maximus believes that he can use his fame and skill in the ring to avenge the loss of his family and former glory. As the gladiator begins to challenge his rule, Commodus decides to put his own fighting mettle to the test by squaring off with Maximus in a battle to the death.",
+    "director": "Ridley Scott",
+    "cast": [
+      "Russell Crowe",
+      "Joaquin Phoenix",
+      "Connie Nielsen",
+      "Oliver Reed"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/wN2xWp1eIwCKOD0BHTcErTBv1Uq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/jhk6D8pim3yaByu1801kMoxXFaX.jpg",
+    "trailerId": "P5ieIbInFpg",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Ridley Scott.",
+    "whyRecommended": "Top match based on Action themes and direction by Ridley Scott.",
+    "similarTags": [
+      "Ridley Scott",
+      "Action",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$103 Million",
+    "revenue": "$457 Million",
+    "tagline": "A Hero Will Rise.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-106646",
+    "title": "The Wolf of Wall Street",
+    "originalTitle": "The Wolf of Wall Street",
+    "year": 2013,
+    "runtime": "180 min",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Comedy"
+    ],
+    "imdbRating": 7.9,
+    "matchScore": 93,
+    "synopsis": "A New York stockbroker refuses to cooperate in a large securities fraud case involving corruption on Wall Street, corporate banking world and mob infiltration. Based on Jordan Belfort's autobiography.",
+    "director": "Martin Scorsese",
+    "cast": [
+      "Leonardo DiCaprio",
+      "Jonah Hill",
+      "Margot Robbie",
+      "Kyle Chandler"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/kW9LmvYHAaS9iA0tHmZVq8hQYoq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/7Nwnmyzrtd0FkcRyPqmdzTPppQa.jpg",
+    "trailerId": "Slj4-Sv-YNA",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Crime themes and direction by Martin Scorsese.",
+    "whyRecommended": "Top match based on Crime themes and direction by Martin Scorsese.",
+    "similarTags": [
+      "Martin Scorsese",
+      "Crime",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Crime",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$100 Million",
+    "revenue": "$392 Million",
+    "tagline": "EARN. SPEND. PARTY.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-18239",
+    "title": "The Twilight Saga: New Moon",
+    "originalTitle": "The Twilight Saga: New Moon",
+    "year": 2009,
+    "runtime": "130 min",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Drama",
+      "Romance"
+    ],
+    "imdbRating": 5.6,
+    "matchScore": 94,
+    "synopsis": "Forks, Washington resident Bella Swan is reeling from the departure of her vampire love, Edward Cullen, and finds comfort in her friendship with Jacob Black, a werewolf. But before she knows it, she's thrust into a centuries-old conflict, and her desire to be with Edward at any cost leads her to take greater and greater risks.",
+    "director": "Chris Weitz",
+    "cast": [
+      "Kristen Stewart",
+      "Robert Pattinson",
+      "Taylor Lautner",
+      "Billy Burke"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/k2qTooPlHffgNABNWxeJdGMglPK.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/dF2c20sRDgySZLaLS2OUerL07sz.jpg",
+    "trailerId": "q58iQSHhZGg",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Chris Weitz.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Chris Weitz.",
+    "similarTags": [
+      "Chris Weitz",
+      "Adventure",
+      "Fantasy"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$50 Million",
+    "revenue": "$709 Million",
+    "tagline": "The Next Chapter Begins.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-57158",
+    "title": "The Hobbit: The Desolation of Smaug",
+    "originalTitle": "The Hobbit: The Desolation of Smaug",
+    "year": 2013,
+    "runtime": "161 min",
+    "genres": [
+      "Adventure",
+      "Fantasy"
+    ],
+    "imdbRating": 7.6,
+    "matchScore": 95,
+    "synopsis": "The Dwarves, Bilbo and Gandalf have successfully escaped the Misty Mountains, and Bilbo has gained the One Ring. They all continue their journey to get their gold back from the Dragon, Smaug.",
+    "director": "Peter Jackson",
+    "cast": [
+      "Martin Freeman",
+      "Ian McKellen",
+      "Richard Armitage",
+      "Ken Stott"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xQYiXsheRCDBA39DOrmaw1aSpbk.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/5ZYxL6k4ZHrEmrFvmY4HZVzerxG.jpg",
+    "trailerId": "gAo95e7_XKA",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Peter Jackson.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Peter Jackson.",
+    "similarTags": [
+      "Peter Jackson",
+      "Adventure",
+      "Fantasy"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$250 Million",
+    "revenue": "$958 Million",
+    "tagline": "Beyond darkness... beyond desolation... lies the greatest danger of all.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-78",
+    "title": "Blade Runner",
+    "originalTitle": "Blade Runner",
+    "year": 1982,
+    "runtime": "117 min",
+    "genres": [
+      "Science Fiction",
+      "Drama",
+      "Thriller"
+    ],
+    "imdbRating": 7.9,
+    "matchScore": 96,
+    "synopsis": "In the smog-choked dystopian Los Angeles of 2019, blade runner Rick Deckard is called out of retirement to terminate a quartet of replicants who have escaped to Earth seeking their creator for a way to extend their short life spans.",
+    "director": "Ridley Scott",
+    "cast": [
+      "Harrison Ford",
+      "Rutger Hauer",
+      "Sean Young",
+      "Edward James Olmos"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/63N9uy8nd9j7Eog2axPQ8lbr3Wj.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/hJ5R9d6QuH3tzr8L8neZZTuzNXm.jpg",
+    "trailerId": "qoEyZoOTtss",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Science Fiction themes and direction by Ridley Scott.",
+    "whyRecommended": "Top match based on Science Fiction themes and direction by Ridley Scott.",
+    "similarTags": [
+      "Ridley Scott",
+      "Science Fiction",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Science Fiction",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$28 Million",
+    "revenue": "$33 Million",
+    "tagline": "Man has made his match... now it's his problem.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-539",
+    "title": "Psycho",
+    "originalTitle": "Psycho",
+    "year": 1960,
+    "runtime": "109 min",
+    "genres": [
+      "Drama",
+      "Horror",
+      "Thriller"
+    ],
+    "imdbRating": 8.2,
+    "matchScore": 97,
+    "synopsis": "When larcenous real estate clerk Marion Crane goes on the lam with a wad of cash and hopes of starting a new life, she ends up at the notorious Bates Motel, where manager Norman Bates cares for his housebound mother. The place seems quirky, but fine\u2026 until Marion decides to take a shower.",
+    "director": "Alfred Hitchcock",
+    "cast": [
+      "Anthony Perkins",
+      "Vera Miles",
+      "John Gavin",
+      "Janet Leigh"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yz4QVqPx3h1hD1DfqqQkCq3rmxW.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/mufF1aYvwdpKerhq5R1YrVcbJLY.jpg",
+    "trailerId": "D90QhegiVvo",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Alfred Hitchcock.",
+    "whyRecommended": "Top match based on Drama themes and direction by Alfred Hitchcock.",
+    "similarTags": [
+      "Alfred Hitchcock",
+      "Drama",
+      "Horror"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$0 Million",
+    "revenue": "$32 Million",
+    "tagline": "The master of suspense moves his cameras into the icy blackness of the unexplored!",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-37724",
+    "title": "Skyfall",
+    "originalTitle": "Skyfall",
+    "year": 2012,
+    "runtime": "143 min",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Thriller"
+    ],
+    "imdbRating": 6.9,
+    "matchScore": 98,
+    "synopsis": "When Bond's latest assignment goes gravely wrong and agents around the world are exposed, MI6 is attacked forcing M to relocate the agency. These events cause her authority and position to be challenged by Gareth Mallory, the new Chairman of the Intelligence and Security Committee. With MI6 now compromised from both inside and out, M is left with one ally she can trust: Bond. 007 takes to the shadows - aided only by field agent, Eve - following a trail to the mysterious Silva, whose lethal and hidden motives have yet to reveal themselves.",
+    "director": "Sam Mendes",
+    "cast": [
+      "Daniel Craig",
+      "Judi Dench",
+      "Javier Bardem",
+      "Ralph Fiennes"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/d0IVecFQvsGdSbnMAHqiYsNYaJT.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/wkA622CCN2X0uwpgqYEOnUYEDf5.jpg",
+    "trailerId": "YvV3g8hLlyU",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Sam Mendes.",
+    "whyRecommended": "Top match based on Action themes and direction by Sam Mendes.",
+    "similarTags": [
+      "Sam Mendes",
+      "Action",
+      "Adventure"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$200 Million",
+    "revenue": "$1108 Million",
+    "tagline": "Think on your sins.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-812",
+    "title": "Aladdin",
+    "originalTitle": "Aladdin",
+    "year": 1992,
+    "runtime": "90 min",
+    "genres": [
+      "Animation",
+      "Family",
+      "Comedy",
+      "Adventure",
+      "Fantasy",
+      "Romance"
+    ],
+    "imdbRating": 7.4,
+    "matchScore": 99,
+    "synopsis": "Princess Jasmine grows tired of being forced to remain in the palace and she sneaks out into the marketplace  in disguise where she meets street-urchin Aladdin and the two fall in love, although she may only marry a prince. After being thrown in jail, Aladdin and becomes embroiled in a plot to find a mysterious lamp with which the evil Jafar hopes to rule the land.",
+    "director": "Ron Clements",
+    "cast": [
+      "Scott Weinger",
+      "Robin Williams",
+      "Linda Larkin",
+      "Jonathan Freeman"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/eLFfl7vS8dkeG1hKp5mwbm37V83.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/nenJjvfe2Eq8uBMXFJnWj5mw4bi.jpg",
+    "trailerId": "mq05scD6PUs",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Animation themes and direction by Ron Clements.",
+    "whyRecommended": "Top match based on Animation themes and direction by Ron Clements.",
+    "similarTags": [
+      "Ron Clements",
+      "Animation",
+      "Family"
+    ],
+    "moods": [
+      "\u2728 Animation",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$28 Million",
+    "revenue": "$504 Million",
+    "tagline": "Wish granted!",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-608",
+    "title": "Men in Black II",
+    "originalTitle": "Men in Black II",
+    "year": 2002,
+    "runtime": "88 min",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Science Fiction"
+    ],
+    "imdbRating": 6.0,
+    "matchScore": 90,
+    "synopsis": "Kay and Jay reunite to provide our best, last and only line of defense against a sinister seductress who levels the toughest challenge yet to the MIB's untarnished mission statement \u2013 protecting Earth from the scum of the universe. It's been four years since the alien-seeking agents averted an intergalactic disaster of epic proportions. Now it's a race against the clock as Jay must convince Kay \u2013 who not only has absolutely no memory of his time spent with the MIB, but is also the only living person left with the expertise to save the galaxy \u2013 to reunite with the MIB before the earth submits to ultimate destruction.",
+    "director": "Barry Sonnenfeld",
+    "cast": [
+      "Tommy Lee Jones",
+      "Will Smith",
+      "Rip Torn",
+      "Lara Flynn Boyle"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/enA22EPyzc2WQ1VVyY7zxresQQr.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/o1l6OCqA3pYDZHIc5L1s7CEzCMv.jpg",
+    "trailerId": "DMHlNR6x2Sw",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Barry Sonnenfeld.",
+    "whyRecommended": "Top match based on Action themes and direction by Barry Sonnenfeld.",
+    "similarTags": [
+      "Barry Sonnenfeld",
+      "Action",
+      "Adventure"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$140 Million",
+    "revenue": "$441 Million",
+    "tagline": "Same Planet. New Scum.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-44214",
+    "title": "Black Swan",
+    "originalTitle": "Black Swan",
+    "year": 2010,
+    "runtime": "108 min",
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "imdbRating": 7.3,
+    "matchScore": 91,
+    "synopsis": "A ballet dancer wins the lead in \"Swan Lake\" and is perfect for the role of the delicate White Swan - Princess Odette - but slowly loses her mind as she becomes more and more like Odile, the Black Swan.",
+    "director": "Darren Aronofsky",
+    "cast": [
+      "Natalie Portman",
+      "Mila Kunis",
+      "Vincent Cassel",
+      "Barbara Hershey"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/viWheBd44bouiLCHgNMvahLThqx.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/eDLp4uFdqP1gpy9oMrutwH6Q64I.jpg",
+    "trailerId": "2Pxc_5f27Kg",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Darren Aronofsky.",
+    "whyRecommended": "Top match based on Drama themes and direction by Darren Aronofsky.",
+    "similarTags": [
+      "Darren Aronofsky",
+      "Drama",
+      "Thriller"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$13 Million",
+    "revenue": "$327 Million",
+    "tagline": "In the era of personal branding, the scariest possibility is that someone might be better at being you than you are.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-1417",
+    "title": "Pan's Labyrinth",
+    "originalTitle": "El laberinto del fauno",
+    "year": 2006,
+    "runtime": "118 min",
+    "genres": [
+      "Fantasy",
+      "Drama",
+      "War"
+    ],
+    "imdbRating": 7.6,
+    "matchScore": 92,
+    "synopsis": "Living with her tyrannical stepfather in a new home with her pregnant mother, 10-year-old Ofelia feels alone until she explores a decaying labyrinth guarded by a mysterious faun who claims to know her destiny. If she wishes to return to her real father, Ofelia must complete three terrifying tasks.",
+    "director": "Guillermo del Toro",
+    "cast": [
+      "Ivana Baquero",
+      "Maribel Verd\u00fa",
+      "Sergi L\u00f3pez",
+      "Doug Jones"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/z7xXihu5wHuSMWymq5VAulPVuvg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/6G6nqSW9S7EHA9HrYl0Z8uo2H7f.jpg",
+    "trailerId": "OBGKGm3RYos",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Fantasy themes and direction by Guillermo del Toro.",
+    "whyRecommended": "Top match based on Fantasy themes and direction by Guillermo del Toro.",
+    "similarTags": [
+      "Guillermo del Toro",
+      "Fantasy",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Fantasy",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "Spanish",
+    "country": "International",
+    "budget": "$19 Million",
+    "revenue": "$83 Million",
+    "tagline": "What happens when make-believe believes it's real?",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-8587",
+    "title": "The Lion King",
+    "originalTitle": "The Lion King",
+    "year": 1994,
+    "runtime": "89 min",
+    "genres": [
+      "Family",
+      "Animation",
+      "Drama"
+    ],
+    "imdbRating": 8.0,
+    "matchScore": 93,
+    "synopsis": "A young lion cub named Simba can't wait to be king. But his uncle craves the title for himself and will stop at nothing to get it.",
+    "director": "Roger Allers",
+    "cast": [
+      "Jonathan Taylor Thomas",
+      "Matthew Broderick",
+      "James Earl Jones",
+      "Jeremy Irons"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/q00H8EqULYSK74lgevMkhmGGLHn.jpg",
+    "trailerId": "UgjEj5mXLlk",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Family themes and direction by Roger Allers.",
+    "whyRecommended": "Top match based on Family themes and direction by Roger Allers.",
+    "similarTags": [
+      "Roger Allers",
+      "Family",
       "Animation"
     ],
     "moods": [
-      "✨ Horror",
-      "🔥 Suspense"
+      "\u2728 Family",
+      "\ud83d\udd25 Popular"
     ],
     "language": "English",
     "country": "USA",
     "budget": "$45 Million",
-    "revenue": "$340 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Universal Studios",
-    "reviews": []
+    "revenue": "$788 Million",
+    "tagline": "Life's greatest adventure is finding your place in the Circle of Life.",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "english-paddington-2-eng",
-    "title": "Paddington 2",
-    "year": 2017,
-    "runtime": "1h 43m",
+    "id": "tmdb-49040",
+    "title": "The Bourne Legacy",
+    "originalTitle": "The Bourne Legacy",
+    "year": 2012,
+    "runtime": "120 min",
     "genres": [
-      "Family",
-      "Comedy",
-      "Adventure",
-      "Anime",
-      "Romance",
-      "War",
-      "Survival"
+      "Action",
+      "Thriller"
     ],
-    "imdbRating": 8.6,
-    "rottenTomatoesScore": 95,
-    "matchScore": 93,
-    "synopsis": "Paddington picks up odd jobs to buy a pop-up book for his aunt, only for it to be stolen.",
-    "director": "Paul King",
+    "imdbRating": 6.0,
+    "matchScore": 94,
+    "synopsis": "New CIA operative, Aaron Cross experiences life-or-death stakes that have been triggered by the previous actions of Jason Bourne.",
+    "director": "Tony Gilroy",
     "cast": [
-      "Ben Whishaw",
-      "Hugh Grant"
+      "Jeremy Renner",
+      "Rachel Weisz",
+      "Edward Norton",
+      "Scott Glenn"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1aExL5DTGHj25ZfIC3dDwS84RWi.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/akNBILfG0vh7WhuzjA1bXfrgpYI.jpg",
+    "trailerId": "43WTCO8-C4w",
     "streamingOn": [
-      "Prime Video"
+      "Max"
     ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Family masterpiece directed by Paul King.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Family masterpiece directed by Paul King.",
+    "aiReasoning": "Top match based on Action themes and direction by Tony Gilroy.",
+    "whyRecommended": "Top match based on Action themes and direction by Tony Gilroy.",
     "similarTags": [
-      "Paul",
-      "Comedy",
+      "Tony Gilroy",
+      "Action",
+      "Thriller"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$130 Million",
+    "revenue": "$276 Million",
+    "tagline": "There Was Never Just One",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-297761",
+    "title": "Suicide Squad",
+    "originalTitle": "Suicide Squad",
+    "year": 2016,
+    "runtime": "123 min",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Crime",
+      "Fantasy",
+      "Science Fiction"
+    ],
+    "imdbRating": 5.9,
+    "matchScore": 95,
+    "synopsis": "From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government, undertaking high-risk black ops missions in exchange for commuted prison sentences.",
+    "director": "David Ayer",
+    "cast": [
+      "Will Smith",
+      "Margot Robbie",
+      "Joel Kinnaman",
+      "Viola Davis"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/sk3FZgh3sRrmr8vyhaitNobMcfh.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/8XyX5Us7uzwQdXtAdnhCB9Gquek.jpg",
+    "trailerId": "m0Xb9BhfVjY",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by David Ayer.",
+    "whyRecommended": "Top match based on Action themes and direction by David Ayer.",
+    "similarTags": [
+      "David Ayer",
+      "Action",
       "Adventure"
     ],
     "moods": [
-      "✨ Family",
-      "🔥 Comedy"
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
     ],
     "language": "English",
-    "country": "UK",
-    "budget": "$169 Million",
-    "revenue": "$578 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Universal Pictures",
-    "reviews": []
+    "country": "USA",
+    "budget": "$175 Million",
+    "revenue": "$745 Million",
+    "tagline": "Worst Heroes Ever",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "english-toy-story-eng",
-    "title": "Toy Story",
+    "id": "tmdb-17578",
+    "title": "The Adventures of Tintin",
+    "originalTitle": "The Adventures of Tintin",
+    "year": 2011,
+    "runtime": "107 min",
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Mystery"
+    ],
+    "imdbRating": 6.7,
+    "matchScore": 96,
+    "synopsis": "Intrepid young reporter, Tintin and his loyal dog, Snowy are thrust into a world of high adventure when they discover a ship carrying an explosive secret. As Tintin is drawn into a centuries-old mystery, Ivan Ivanovitch Sakharine suspects him of stealing a priceless treasure. Tintin and Snowy, with the help of salty, cantankerous Captain Haddock and bumbling detectives, Thompson &amp; Thomson, travel half the world, one step ahead of their enemies as Tintin endeavors to find The Unicorn, a sunken ship that may hold a vast fortune, but also an ancient curse.",
+    "director": "Steven Spielberg",
+    "cast": [
+      "Jamie Bell",
+      "Andy Serkis",
+      "Daniel Craig",
+      "Nick Frost"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fQZ3sLR1Fi63NMsNRbjm9q5qODJ.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/6mqgl2szMLRYj4lhlXOjju5Tpeo.jpg",
+    "trailerId": "7NWtW699XME",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Steven Spielberg.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Steven Spielberg.",
+    "similarTags": [
+      "Steven Spielberg",
+      "Adventure",
+      "Animation"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$130 Million",
+    "revenue": "$371 Million",
+    "tagline": "This year, discover how far adventure will take you.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-1930",
+    "title": "The Amazing Spider-Man",
+    "originalTitle": "The Amazing Spider-Man",
+    "year": 2012,
+    "runtime": "136 min",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "imdbRating": 6.5,
+    "matchScore": 97,
+    "synopsis": "Peter Parker is an outcast high schooler abandoned by his parents as a boy, leaving him to be raised by his Uncle Ben and Aunt May. Like most teenagers, Peter is trying to figure out who he is and how he got to be the person he is today. As Peter discovers a mysterious briefcase that belonged to his father, he begins a quest to understand his parents' disappearance \u2013 leading him directly to Oscorp and the lab of Dr. Curt Connors, his father's former partner. As Spider-Man is set on a collision course with Connors' alter ego, The Lizard, Peter will make life-altering choices to use his powers and shape his destiny to become a hero.",
+    "director": "Marc Webb",
+    "cast": [
+      "Andrew Garfield",
+      "Emma Stone",
+      "Rhys Ifans",
+      "Denis Leary"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/jexoNYnPd6vVrmygwF6QZmWPFdu.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/HVcza6tJtWFrLriuh3Ano4Vt46.jpg",
+    "trailerId": "WLxul0Vzuhk",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Marc Webb.",
+    "whyRecommended": "Top match based on Action themes and direction by Marc Webb.",
+    "similarTags": [
+      "Marc Webb",
+      "Action",
+      "Adventure"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$215 Million",
+    "revenue": "$752 Million",
+    "tagline": "The untold story begins.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-102382",
+    "title": "The Amazing Spider-Man 2",
+    "originalTitle": "The Amazing Spider-Man 2",
+    "year": 2014,
+    "runtime": "142 min",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy"
+    ],
+    "imdbRating": 6.5,
+    "matchScore": 98,
+    "synopsis": "For Peter Parker, life is busy. Between taking out the bad guys as Spider-Man and spending time with the person he loves, Gwen Stacy, high school graduation cannot come quickly enough. Peter has not forgotten about the promise he made to Gwen\u2019s father to protect her by staying away, but that is a promise he cannot keep. Things will change for Peter when a new villain, Electro, emerges, an old friend, Harry Osborn, returns, and Peter uncovers new clues about his past.",
+    "director": "Marc Webb",
+    "cast": [
+      "Andrew Garfield",
+      "Emma Stone",
+      "Jamie Foxx",
+      "Dane DeHaan"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/dGjoPttcbKR5VWg1jQuNFB247KL.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/k0hlAzTryCYX1O1LyC6P8tAa8s0.jpg",
+    "trailerId": "DlM2CWNTQ84",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Marc Webb.",
+    "whyRecommended": "Top match based on Action themes and direction by Marc Webb.",
+    "similarTags": [
+      "Marc Webb",
+      "Action",
+      "Adventure"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$200 Million",
+    "revenue": "$705 Million",
+    "tagline": "No more secrets.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-242582",
+    "title": "Nightcrawler",
+    "originalTitle": "Nightcrawler",
+    "year": 2014,
+    "runtime": "117 min",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "imdbRating": 7.6,
+    "matchScore": 99,
+    "synopsis": "When Lou Bloom, desperate for work, muscles into the world of L.A. crime journalism, he blurs the line between observer and participant to become the star of his own story. Aiding him in his effort is Nina, a TV-news veteran.",
+    "director": "Dan Gilroy",
+    "cast": [
+      "Jake Gyllenhaal",
+      "Rene Russo",
+      "Riz Ahmed",
+      "Bill Paxton"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/j9HrX8f7GbZQm1BrBiR40uFQZSb.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/bdI6U1mT0kCdTJ6TWtiFxQ42GSn.jpg",
+    "trailerId": "7uaYhPpV7G4",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Crime themes and direction by Dan Gilroy.",
+    "whyRecommended": "Top match based on Crime themes and direction by Dan Gilroy.",
+    "similarTags": [
+      "Dan Gilroy",
+      "Crime",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Crime",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$8 Million",
+    "revenue": "$38 Million",
+    "tagline": "The city shines brightest at night",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-36557",
+    "title": "Casino Royale",
+    "originalTitle": "Casino Royale",
+    "year": 2006,
+    "runtime": "144 min",
+    "genres": [
+      "Adventure",
+      "Action",
+      "Thriller"
+    ],
+    "imdbRating": 7.3,
+    "matchScore": 90,
+    "synopsis": "Le Chiffre, a banker to the world's terrorists, is scheduled to participate in a high-stakes poker game in Montenegro, where he intends to use his winnings to establish his financial grip on the terrorist market. M sends Bond \u2013 on his maiden mission as a 00 Agent \u2013 to attend this game and prevent Le Chiffre from winning. With the help of Vesper Lynd and Felix Leiter, Bond enters the most important poker game in his already dangerous career.",
+    "director": "Martin Campbell",
+    "cast": [
+      "Daniel Craig",
+      "Eva Green",
+      "Mads Mikkelsen",
+      "Judi Dench"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/lMrxYKKhd4lqRzwUHAy5gcx9PSO.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/klJMCIblHLFwCuGjKz7tyOpekIC.jpg",
+    "trailerId": "U4NT78c-pYs",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Martin Campbell.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Martin Campbell.",
+    "similarTags": [
+      "Martin Campbell",
+      "Adventure",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$150 Million",
+    "revenue": "$599 Million",
+    "tagline": "Everyone has a past. Every legend has a beginning.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-146233",
+    "title": "Prisoners",
+    "originalTitle": "Prisoners",
+    "year": 2013,
+    "runtime": "153 min",
+    "genres": [
+      "Drama",
+      "Thriller",
+      "Crime"
+    ],
+    "imdbRating": 7.9,
+    "matchScore": 91,
+    "synopsis": "When Keller Dover's daughter and her friend go missing, he takes matters into his own hands as the police pursue multiple leads and the pressure mounts. But just how far will this desperate father go to protect his family?",
+    "director": "Denis Villeneuve",
+    "cast": [
+      "Hugh Jackman",
+      "Jake Gyllenhaal",
+      "Paul Dano",
+      "Maria Bello"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/uhviyknTT5cEQXbn6vWIqfM4vGm.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/3RFmTz5h2UuFWEV4oH00XICBR9y.jpg",
+    "trailerId": "yszyHq-S9W8",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Denis Villeneuve.",
+    "whyRecommended": "Top match based on Drama themes and direction by Denis Villeneuve.",
+    "similarTags": [
+      "Denis Villeneuve",
+      "Drama",
+      "Thriller"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$46 Million",
+    "revenue": "$122 Million",
+    "tagline": "Every moment matters.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-429",
+    "title": "The Good, the Bad and the Ugly",
+    "originalTitle": "Il buono, il brutto, il cattivo",
+    "year": 1966,
+    "runtime": "161 min",
+    "genres": [
+      "Western"
+    ],
+    "imdbRating": 8.1,
+    "matchScore": 92,
+    "synopsis": "While the Civil War rages between the Union and the Confederacy, three men \u2013 a quiet loner, a ruthless hit man and a Mexican bandit \u2013 comb the American Southwest in search of a strongbox containing $200,000 in stolen gold.",
+    "director": "Sergio Leone",
+    "cast": [
+      "Eli Wallach",
+      "Clint Eastwood",
+      "Lee Van Cleef",
+      "Aldo Giuffr\u00e8"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/bX2xnavhMYjWDoZp1VM6VnU1xwe.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/x4biAVdPVCghBlsVIzB6NmbghIz.jpg",
+    "trailerId": "WCnRSl24FPA",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Western themes and direction by Sergio Leone.",
+    "whyRecommended": "Top match based on Western themes and direction by Sergio Leone.",
+    "similarTags": [
+      "Sergio Leone",
+      "Western"
+    ],
+    "moods": [
+      "\u2728 Western",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$1 Million",
+    "revenue": "$6 Million",
+    "tagline": "For three men the Civil War wasn't hell. It was practice.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-10195",
+    "title": "Thor",
+    "originalTitle": "Thor",
+    "year": 2011,
+    "runtime": "115 min",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Action"
+    ],
+    "imdbRating": 6.6,
+    "matchScore": 93,
+    "synopsis": "Against his father Odin's will, The Mighty Thor - a powerful but arrogant warrior god - recklessly reignites an ancient war. Thor is cast down to Earth and forced to live among humans as punishment. Once here, Thor learns what it takes to be a true hero when the most dangerous villain of his world sends the darkest forces of Asgard to invade Earth.",
+    "director": "Kenneth Branagh",
+    "cast": [
+      "Chris Hemsworth",
+      "Natalie Portman",
+      "Tom Hiddleston",
+      "Anthony Hopkins"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/prSfAi1xGrhLQNxVSUFh61xQ4Qy.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/cDJ61O1STtbWNBwefuqVrRe3d7l.jpg",
+    "trailerId": "uHBnrJowBZE",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Kenneth Branagh.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Kenneth Branagh.",
+    "similarTags": [
+      "Kenneth Branagh",
+      "Adventure",
+      "Fantasy"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$150 Million",
+    "revenue": "$449 Million",
+    "tagline": "Two worlds. One hero.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-2501",
+    "title": "The Bourne Identity",
+    "originalTitle": "The Bourne Identity",
+    "year": 2002,
+    "runtime": "119 min",
+    "genres": [
+      "Action",
+      "Drama",
+      "Mystery",
+      "Thriller"
+    ],
+    "imdbRating": 7.3,
+    "matchScore": 94,
+    "synopsis": "Wounded to the brink of death and suffering from amnesia, Jason Bourne is rescued at sea by a fisherman. With nothing to go on but a Swiss bank account number, he starts to reconstruct his life, but finds that many people he encounters want him dead. However, Bourne realizes that he has the combat and mental skills of a world-class spy \u2013 but who does he work for?",
+    "director": "Doug Liman",
+    "cast": [
+      "Matt Damon",
+      "Franka Potente",
+      "Chris Cooper",
+      "Clive Owen"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/aP8swke3gmowbkfZ6lmNidu0y9p.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/zxYp7GhqzcNqNSkjHoOdx0BEtOM.jpg",
+    "trailerId": "PGKK5wACwrU",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Doug Liman.",
+    "whyRecommended": "Top match based on Action themes and direction by Doug Liman.",
+    "similarTags": [
+      "Doug Liman",
+      "Action",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$60 Million",
+    "revenue": "$214 Million",
+    "tagline": "He was the perfect weapon until he became the target.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-262504",
+    "title": "Allegiant",
+    "originalTitle": "Allegiant",
+    "year": 2016,
+    "runtime": "121 min",
+    "genres": [
+      "Adventure",
+      "Science Fiction"
+    ],
+    "imdbRating": 5.9,
+    "matchScore": 95,
+    "synopsis": "Beatrice Prior and Tobias Eaton venture into the world outside of the fence and are taken into protective custody by a mysterious agency known as the Bureau of Genetic Welfare.",
+    "director": "Robert Schwentke",
+    "cast": [
+      "Shailene Woodley",
+      "Theo James",
+      "Zo\u00eb Kravitz",
+      "Miles Teller"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/faq9JlF8znUGQ5p3En1W61Fi5p0.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/qSP072apfe2EEcd5Qg9vGYy2OLw.jpg",
+    "trailerId": "ESJBomF-9Y8",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Robert Schwentke.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Robert Schwentke.",
+    "similarTags": [
+      "Robert Schwentke",
+      "Adventure",
+      "Science Fiction"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$110 Million",
+    "revenue": "$179 Million",
+    "tagline": "Break the boundaries of your world",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-9502",
+    "title": "Kung Fu Panda",
+    "originalTitle": "Kung Fu Panda",
+    "year": 2008,
+    "runtime": "90 min",
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Family",
+      "Comedy"
+    ],
+    "imdbRating": 6.9,
+    "matchScore": 96,
+    "synopsis": "When the Valley of Peace is threatened, lazy Po the panda discovers his destiny as the \"chosen one\" and trains to become a kung fu hero, but transforming the unsleek slacker into a brave warrior won't be easy. It's up to Master Shifu and the Furious Five -- Tigress, Crane, Mantis, Viper and Monkey -- to give it a try.",
+    "director": "Mark Osborne",
+    "cast": [
+      "Jack Black",
+      "Dustin Hoffman",
+      "Angelina Jolie",
+      "Jackie Chan"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/wWt4JYXTg5Wr3xBW2phBrMKgp3x.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/qdthf9WrRDSaIkGVQGhhJ9pz1hn.jpg",
+    "trailerId": "TD0YUZw_oHY",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Mark Osborne.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Mark Osborne.",
+    "similarTags": [
+      "Mark Osborne",
+      "Adventure",
+      "Animation"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$130 Million",
+    "revenue": "$631 Million",
+    "tagline": "Prepare for awesomeness.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-752",
+    "title": "V for Vendetta",
+    "originalTitle": "V for Vendetta",
+    "year": 2006,
+    "runtime": "132 min",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Fantasy"
+    ],
+    "imdbRating": 7.7,
+    "matchScore": 97,
+    "synopsis": "In a world in which Great Britain has become a fascist state, a masked vigilante known only as 'V' conducts guerrilla warfare against the oppressive British government. When 'V' rescues a young woman from the secret police, he finds in her an ally with whom he can continue his fight to free the people of Britain.",
+    "director": "James McTeigue",
+    "cast": [
+      "Natalie Portman",
+      "Hugo Weaving",
+      "Stephen Rea",
+      "Stephen Fry"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1avD1JeaRiJX5M4ahPdZPypGoGN.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/sFEYsEfzTx7hhjetlNrme8B5OUo.jpg",
+    "trailerId": "3ge0navn9E0",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by James McTeigue.",
+    "whyRecommended": "Top match based on Action themes and direction by James McTeigue.",
+    "similarTags": [
+      "James McTeigue",
+      "Action",
+      "Thriller"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$54 Million",
+    "revenue": "$132 Million",
+    "tagline": "People should not be afraid of their governments. Governments should be afraid of their people.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-225574",
+    "title": "Non-Stop",
+    "originalTitle": "Non-Stop",
+    "year": 2014,
+    "runtime": "106 min",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Mystery"
+    ],
+    "imdbRating": 6.8,
+    "matchScore": 98,
+    "synopsis": "Bill Marks is a burned-out veteran of the Air Marshals service. He views the assignment not as a life-saving duty, but as a desk job in the sky. However, today's flight will be no routine trip. Shortly into the transatlantic journey from New York to London, he receives a series of mysterious text messages ordering him to have the government transfer $150 million into a secret account, or a passenger will die every 20 minutes.",
+    "director": "Jaume Collet-Serra",
+    "cast": [
+      "Liam Neeson",
+      "Julianne Moore",
+      "Scoot McNairy",
+      "Michelle Dockery"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/Nkgaj3X0W2jHQ1TzHEgWFpN3kJ.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/7UOWJEhNbePQeGSaVn9PvcRaujX.jpg",
+    "trailerId": "XSF6GPNXr9Y",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Jaume Collet-Serra.",
+    "whyRecommended": "Top match based on Action themes and direction by Jaume Collet-Serra.",
+    "similarTags": [
+      "Jaume Collet-Serra",
+      "Action",
+      "Thriller"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$50 Million",
+    "revenue": "$222 Million",
+    "tagline": "The hijacking was just the beginning.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-238636",
+    "title": "The Purge: Anarchy",
+    "originalTitle": "The Purge: Anarchy",
+    "year": 2014,
+    "runtime": "104 min",
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "imdbRating": 6.6,
+    "matchScore": 99,
+    "synopsis": "Three groups of people are trying to survive Purge Night, when their stories intertwine and are left stranded in The Purge trying to survive the chaos and violence that occurs.",
+    "director": "James DeMonaco",
+    "cast": [
+      "Frank Grillo",
+      "Carmen Ejogo",
+      "Zach Gilford",
+      "Kiele Sanchez"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qwqHHZLZSUvMkAMQ47ymtfjEifY.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/blfZnm6StMPnTY35kaooPBCsSVp.jpg",
+    "trailerId": "3mfRasMXmL4",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Horror themes and direction by James DeMonaco.",
+    "whyRecommended": "Top match based on Horror themes and direction by James DeMonaco.",
+    "similarTags": [
+      "James DeMonaco",
+      "Horror",
+      "Thriller"
+    ],
+    "moods": [
+      "\u2728 Horror",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$9 Million",
+    "revenue": "$108 Million",
+    "tagline": "Welcome to America, where one night a year, all crime Is legal.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-920",
+    "title": "Cars",
+    "originalTitle": "Cars",
+    "year": 2006,
+    "runtime": "117 min",
+    "genres": [
+      "Animation",
+      "Adventure",
+      "Comedy",
+      "Family"
+    ],
+    "imdbRating": 6.6,
+    "matchScore": 90,
+    "synopsis": "Lightning McQueen, a hotshot rookie race car driven to succeed, discovers that life is about the journey, not the finish line, when he finds himself unexpectedly detoured in the sleepy Route 66 town of Radiator Springs. On route across the country to the big Piston Cup Championship in California to compete against two seasoned pros, McQueen gets to know the town's offbeat characters.",
+    "director": "John Lasseter",
+    "cast": [
+      "Owen Wilson",
+      "Paul Newman",
+      "Bonnie Hunt",
+      "Larry the Cable Guy"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/2Touk3m5gzsqr1VsvxypdyHY5ci.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/sOLgkBKf1gjMRc4yXxM5aciXdfr.jpg",
+    "trailerId": "bOs0p2E4sZw",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Animation themes and direction by John Lasseter.",
+    "whyRecommended": "Top match based on Animation themes and direction by John Lasseter.",
+    "similarTags": [
+      "John Lasseter",
+      "Animation",
+      "Adventure"
+    ],
+    "moods": [
+      "\u2728 Animation",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$120 Million",
+    "revenue": "$461 Million",
+    "tagline": "Ahhh... it's got that new movie smell.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-557",
+    "title": "Spider-Man",
+    "originalTitle": "Spider-Man",
+    "year": 2002,
+    "runtime": "121 min",
+    "genres": [
+      "Fantasy",
+      "Action"
+    ],
+    "imdbRating": 6.8,
+    "matchScore": 91,
+    "synopsis": "After being bitten by a genetically altered spider, nerdy high school student Peter Parker is endowed with amazing powers.",
+    "director": "Sam Raimi",
+    "cast": [
+      "Tobey Maguire",
+      "Willem Dafoe",
+      "Kirsten Dunst",
+      "James Franco"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/or6XJBVpcEbIkma0V9zshnbEtx4.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/zQ8AxTPiCiS5nnwXpwTBPBHSaa5.jpg",
+    "trailerId": "t06RUxPbp_c",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Fantasy themes and direction by Sam Raimi.",
+    "whyRecommended": "Top match based on Fantasy themes and direction by Sam Raimi.",
+    "similarTags": [
+      "Sam Raimi",
+      "Fantasy",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Fantasy",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$139 Million",
+    "revenue": "$821 Million",
+    "tagline": "With great power comes great responsibility.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-227159",
+    "title": "Horrible Bosses 2",
+    "originalTitle": "Horrible Bosses 2",
+    "year": 2014,
+    "runtime": "108 min",
+    "genres": [
+      "Comedy"
+    ],
+    "imdbRating": 6.1,
+    "matchScore": 92,
+    "synopsis": "Dale, Kurt and Nick decide to start their own business but things don't go as planned because of a slick investor, prompting the trio to pull off a harebrained and misguided kidnapping scheme.",
+    "director": "Sean Anders",
+    "cast": [
+      "Jason Bateman",
+      "Jason Sudeikis",
+      "Charlie Day",
+      "Jennifer Aniston"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/boBOkwIqgrs8noxBUSDkkicKa4K.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/5CUtGZASj2UqomudRG1RZOt5QbG.jpg",
+    "trailerId": "utriEZFno0E",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Comedy themes and direction by Sean Anders.",
+    "whyRecommended": "Top match based on Comedy themes and direction by Sean Anders.",
+    "similarTags": [
+      "Sean Anders",
+      "Comedy"
+    ],
+    "moods": [
+      "\u2728 Comedy",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$42 Million",
+    "revenue": "$107 Million",
+    "tagline": "New Crime. Same Tools.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-293863",
+    "title": "The Age of Adaline",
+    "originalTitle": "The Age of Adaline",
+    "year": 2015,
+    "runtime": "112 min",
+    "genres": [
+      "Fantasy",
+      "Drama",
+      "Romance"
+    ],
+    "imdbRating": 7.4,
+    "matchScore": 93,
+    "synopsis": "After 29-year-old Adaline recovers from a nearly lethal accident, she inexplicably stops growing older. As the years stretch on and on, Adaline keeps her secret to herself  until she meets a man who changes her life.",
+    "director": "Lee Toland Krieger",
+    "cast": [
+      "Blake Lively",
+      "Michiel Huisman",
+      "Harrison Ford",
+      "Ellen Burstyn"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3XFuCS6wBfpSnUQboLd1JtkJqe0.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/wTvDGO0xGMmnScqjuiDeWU7PkcB.jpg",
+    "trailerId": "7UzSekc0LoQ",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Fantasy themes and direction by Lee Toland Krieger.",
+    "whyRecommended": "Top match based on Fantasy themes and direction by Lee Toland Krieger.",
+    "similarTags": [
+      "Lee Toland Krieger",
+      "Fantasy",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Fantasy",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$25 Million",
+    "revenue": "$65 Million",
+    "tagline": "Love is timeless.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-72190",
+    "title": "World War Z",
+    "originalTitle": "World War Z",
+    "year": 2013,
+    "runtime": "116 min",
+    "genres": [
+      "Action",
+      "Drama",
+      "Horror",
+      "Science Fiction",
+      "Thriller"
+    ],
+    "imdbRating": 6.7,
+    "matchScore": 94,
+    "synopsis": "Life for former United Nations investigator Gerry Lane and his family seems content. Suddenly, the world is plagued by a mysterious infection turning whole human populations into rampaging mindless zombies. After barely escaping the chaos, Lane is persuaded to go on a mission to investigate this disease. What follows is a perilous trek around the world where Lane must brave horrific dangers and long odds to find answers before human civilization falls.",
+    "director": "Marc Forster",
+    "cast": [
+      "Brad Pitt",
+      "Mireille Enos",
+      "Abigail Hargrove",
+      "Sterling Jerins"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/aCnVdvExw6UWSeQfr0tUH3jr4qG.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/kg2FOT2Oe5PSCgs3L4vLel6B7ck.jpg",
+    "trailerId": "TvRCQM2HrXs",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Marc Forster.",
+    "whyRecommended": "Top match based on Action themes and direction by Marc Forster.",
+    "similarTags": [
+      "Marc Forster",
+      "Action",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$200 Million",
+    "revenue": "$531 Million",
+    "tagline": "Remember Philly!",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-277",
+    "title": "Underworld",
+    "originalTitle": "Underworld",
+    "year": 2003,
+    "runtime": "121 min",
+    "genres": [
+      "Fantasy",
+      "Action",
+      "Thriller"
+    ],
+    "imdbRating": 6.6,
+    "matchScore": 95,
+    "synopsis": "Vampires and werewolves have waged a nocturnal war against each other for centuries. But all bets are off when a female vampire warrior named Selene, who's famous for her strength and werewolf-hunting prowess, becomes smitten with a peace-loving male werewolf, Michael, who wants to end the war.",
+    "director": "Len Wiseman",
+    "cast": [
+      "Kate Beckinsale",
+      "Scott Speedman",
+      "Michael Sheen",
+      "Shane Brolly"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/zsnQ41UZ3jo1wEeemF0eA9cAIU0.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/zsgdVbuEwqZbnUN9qLGEMBYf2Zo.jpg",
+    "trailerId": "2_IoL7g5Ub8",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Fantasy themes and direction by Len Wiseman.",
+    "whyRecommended": "Top match based on Fantasy themes and direction by Len Wiseman.",
+    "similarTags": [
+      "Len Wiseman",
+      "Fantasy",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Fantasy",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$22 Million",
+    "revenue": "$95 Million",
+    "tagline": "Underworld",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-18360",
+    "title": "Night at the Museum: Battle of the Smithsonian",
+    "originalTitle": "Night at the Museum: Battle of the Smithsonian",
+    "year": 2009,
+    "runtime": "105 min",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Action",
+      "Comedy",
+      "Family"
+    ],
+    "imdbRating": 5.9,
+    "matchScore": 96,
+    "synopsis": "Hapless museum night watchman Larry Daley must help his living, breathing exhibit friends out of a pickle now that they've been transferred to the archives at the Smithsonian Institution. Larry's (mis)adventures this time include close encounters with Amelia Earhart, Abe Lincoln and Ivan the Terrible.",
+    "director": "Shawn Levy",
+    "cast": [
+      "Ben Stiller",
+      "Amy Adams",
+      "Owen Wilson",
+      "Hank Azaria"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/l9yAQn6TyrA3gv5xZZkiMMoZsiw.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/zdhICEDUlBTQ43fQMa2KJt8fDFX.jpg",
+    "trailerId": "lPLY8O1y0qA",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Shawn Levy.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Shawn Levy.",
+    "similarTags": [
+      "Shawn Levy",
+      "Adventure",
+      "Fantasy"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$150 Million",
+    "revenue": "$413 Million",
+    "tagline": "When the lights go off the battle is on.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-772",
+    "title": "Home Alone 2: Lost in New York",
+    "originalTitle": "Home Alone 2: Lost in New York",
+    "year": 1992,
+    "runtime": "120 min",
+    "genres": [
+      "Comedy",
+      "Family",
+      "Adventure",
+      "Crime"
+    ],
+    "imdbRating": 6.3,
+    "matchScore": 97,
+    "synopsis": "Instead of flying to Florida with his folks, Kevin ends up alone in New York, where he gets a hotel room with his dad's credit card\u2014despite problems from a clerk and meddling bellboy. But when Kevin runs into his old nemeses, the Wet Bandits, he's determined to foil their plans to rob a toy store on Christmas eve.",
+    "director": "Chris Columbus",
+    "cast": [
+      "Macaulay Culkin",
+      "Joe Pesci",
+      "Catherine O'Hara",
+      "Daniel Stern"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/uuitWHpJwxD1wruFl2nZHIb4UGN.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/8fnYJPoXxwAN4valDLgz2whMGTH.jpg",
+    "trailerId": "k0kJieJ1k6k",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Comedy themes and direction by Chris Columbus.",
+    "whyRecommended": "Top match based on Comedy themes and direction by Chris Columbus.",
+    "similarTags": [
+      "Chris Columbus",
+      "Comedy",
+      "Family"
+    ],
+    "moods": [
+      "\u2728 Comedy",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$18 Million",
+    "revenue": "$358 Million",
+    "tagline": "He's up past his bedtime in the city that never sleeps.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-89",
+    "title": "Indiana Jones and the Last Crusade",
+    "originalTitle": "Indiana Jones and the Last Crusade",
+    "year": 1989,
+    "runtime": "127 min",
+    "genres": [
+      "Adventure",
+      "Action"
+    ],
+    "imdbRating": 7.6,
+    "matchScore": 98,
+    "synopsis": "When Dr. Henry Jones Sr. suddenly goes missing while pursuing the Holy Grail, eminent archaeologist Indiana must team up with Marcus Brody, Sallah and Elsa Schneider to follow in his father's footsteps and stop the Nazis from recovering the power of eternal life.",
+    "director": "Steven Spielberg",
+    "cast": [
+      "Harrison Ford",
+      "Sean Connery",
+      "Denholm Elliott",
+      "Alison Doody"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/sizg1AU8f8JDZX4QIgE4pjUMBvx.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/12fvZHskx57kQfNEUXJ3v0flWYQ.jpg",
+    "trailerId": "GRfckj3ETh0",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Steven Spielberg.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Steven Spielberg.",
+    "similarTags": [
+      "Steven Spielberg",
+      "Adventure",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$48 Million",
+    "revenue": "$474 Million",
+    "tagline": "The man with the hat is back. And this time, he's bringing his Dad.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-14",
+    "title": "American Beauty",
+    "originalTitle": "American Beauty",
+    "year": 1999,
+    "runtime": "122 min",
+    "genres": [
+      "Drama"
+    ],
+    "imdbRating": 7.9,
+    "matchScore": 99,
+    "synopsis": "Lester Burnham, a depressed suburban father in a mid-life crisis, decides to turn his hectic life around after developing an infatuation with his daughter's attractive friend.",
+    "director": "Sam Mendes",
+    "cast": [
+      "Kevin Spacey",
+      "Annette Bening",
+      "Thora Birch",
+      "Wes Bentley"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/wby9315QzVKdW9BonAefg8jGTTb.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/2ndw55F40IkALzWyjCCza3M6nqM.jpg",
+    "trailerId": "XCxzXblZyfQ",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Sam Mendes.",
+    "whyRecommended": "Top match based on Drama themes and direction by Sam Mendes.",
+    "similarTags": [
+      "Sam Mendes",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$15 Million",
+    "revenue": "$356 Million",
+    "tagline": "Look closer.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-1402",
+    "title": "The Pursuit of Happyness",
+    "originalTitle": "The Pursuit of Happyness",
+    "year": 2006,
+    "runtime": "117 min",
+    "genres": [
+      "Drama"
+    ],
+    "imdbRating": 7.7,
+    "matchScore": 90,
+    "synopsis": "The true story of Christopher Gardner, who invests heavily in a device known as a 'Bone Density Scanner', only to find himself struggle to sell the product as it's just marginally better than the current technology, and much more expensive. His wife leaves him,  he loses his house, bank account and credit cards and, now forced to live out in the streets with his young son,  he's desperate to find a steady job. He takes on a job as a stockbroker but, before he can receive pay, he needs to go through 6 months of training, and must sell his devices.",
+    "director": "Gabriele Muccino",
+    "cast": [
+      "Will Smith",
+      "Jaden Smith",
+      "Thandie Newton",
+      "Brian Howe"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/lBYOKAMcxIvuk9s9hMuecB9dPBV.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/5jhG1lTgV0MS6tDkBMQSSitttTT.jpg",
+    "trailerId": "DMOBlEcRuw8",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Gabriele Muccino.",
+    "whyRecommended": "Top match based on Drama themes and direction by Gabriele Muccino.",
+    "similarTags": [
+      "Gabriele Muccino",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$55 Million",
+    "revenue": "$307 Million",
+    "tagline": "An extraordinary story.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-156022",
+    "title": "The Equalizer",
+    "originalTitle": "The Equalizer",
+    "year": 2014,
+    "runtime": "132 min",
+    "genres": [
+      "Thriller",
+      "Action",
+      "Crime"
+    ],
+    "imdbRating": 7.1,
+    "matchScore": 91,
+    "synopsis": "In The Equalizer, Denzel Washington plays McCall, a man who believes he has put his mysterious past behind him and dedicated himself to beginning a new, quiet life. But when McCall meets Teri (Chlo\u00eb Grace Moretz), a young girl under the control of ultra-violent Russian gangsters, he can\u2019t stand idly by \u2013 he has to help her. Armed with hidden skills that allow him to serve vengeance against anyone who would brutalize the helpless, McCall comes out of his self-imposed retirement and finds his desire for justice reawakened. If someone has a problem, if the odds are stacked against them, if they have nowhere else to turn, McCall will help. He is The Equalizer.",
+    "director": "Antoine Fuqua",
+    "cast": [
+      "Denzel Washington",
+      "Marton Csokas",
+      "Chlo\u00eb Grace Moretz",
+      "David Harbour"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9u4yW7yPA0BQ2pv9XwiNzItwvp8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/9vAoubhoZE8aSkUZoSfxs3UWZhO.jpg",
+    "trailerId": "BP_FwE0Z7no",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Thriller themes and direction by Antoine Fuqua.",
+    "whyRecommended": "Top match based on Thriller themes and direction by Antoine Fuqua.",
+    "similarTags": [
+      "Antoine Fuqua",
+      "Thriller",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Thriller",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$55 Million",
+    "revenue": "$192 Million",
+    "tagline": "What do you see when you look at me?",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-673",
+    "title": "Harry Potter and the Prisoner of Azkaban",
+    "originalTitle": "Harry Potter and the Prisoner of Azkaban",
+    "year": 2004,
+    "runtime": "141 min",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Family"
+    ],
+    "imdbRating": 7.7,
+    "matchScore": 92,
+    "synopsis": "Harry, Ron and Hermione return to Hogwarts for another magic-filled year. Harry comes face to face with danger yet again, this time in the form of escaped convict, Sirius Black \u2013 and turns to sympathetic Professor Lupin for help.",
+    "director": "Alfonso Cuar\u00f3n",
+    "cast": [
+      "Daniel Radcliffe",
+      "Rupert Grint",
+      "Emma Watson",
+      "Gary Oldman"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/aWxwnYoe8p2d2fcxOqtvAtJ72Rw.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/htmYEfH7TQgzsXHCnNXxmoYKQtL.jpg",
+    "trailerId": "VwErvYgoH70",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Alfonso Cuar\u00f3n.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Alfonso Cuar\u00f3n.",
+    "similarTags": [
+      "Alfonso Cuar\u00f3n",
+      "Adventure",
+      "Fantasy"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$130 Million",
+    "revenue": "$789 Million",
+    "tagline": "Something wicked this way comes.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-807",
+    "title": "Se7en",
+    "originalTitle": "Se7en",
     "year": 1995,
-    "runtime": "1h 21m",
+    "runtime": "127 min",
+    "genres": [
+      "Crime",
+      "Mystery",
+      "Thriller"
+    ],
+    "imdbRating": 8.1,
+    "matchScore": 93,
+    "synopsis": "Two homicide detectives are on a desperate hunt for a serial killer whose crimes are based on the \"seven deadly sins\" in this dark and haunting film that takes viewers from the tortured remains of one victim to the next. The seasoned Det. Sommerset researches each sin in an effort to get inside the killer's mind, while his novice partner, Mills, scoffs at his efforts to unravel the case.",
+    "director": "David Fincher",
+    "cast": [
+      "Brad Pitt",
+      "Morgan Freeman",
+      "Gwyneth Paltrow",
+      "John C. McGinley"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/191nKfP0ehp3uIvWqgPbFmI4lv9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/i5H7zusQGsysGQ8i6P361Vnr0n2.jpg",
+    "trailerId": "KPOuJGkpblk",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Crime themes and direction by David Fincher.",
+    "whyRecommended": "Top match based on Crime themes and direction by David Fincher.",
+    "similarTags": [
+      "David Fincher",
+      "Crime",
+      "Mystery"
+    ],
+    "moods": [
+      "\u2728 Crime",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$33 Million",
+    "revenue": "$327 Million",
+    "tagline": "Seven deadly sins. Seven ways to die.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-137113",
+    "title": "Edge of Tomorrow",
+    "originalTitle": "Edge of Tomorrow",
+    "year": 2014,
+    "runtime": "113 min",
+    "genres": [
+      "Action",
+      "Science Fiction"
+    ],
+    "imdbRating": 7.6,
+    "matchScore": 94,
+    "synopsis": "Major Bill Cage is an officer who has never seen a day of combat when he is unceremoniously demoted and dropped into combat. Cage is killed within minutes, managing to take an alpha alien down with him. He awakens back at the beginning of the same day and is forced to fight and die again... and again - as physical contact with the alien has thrown him into a time loop.",
+    "director": "Doug Liman",
+    "cast": [
+      "Tom Cruise",
+      "Emily Blunt",
+      "Brendan Gleeson",
+      "Bill Paxton"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/nBM9MMa2WCwvMG4IJ3eiGUdbPe6.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/4V1yIoAKPMRQwGBaSses8Bp2nsi.jpg",
+    "trailerId": "eb8wTIcGLgQ",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Doug Liman.",
+    "whyRecommended": "Top match based on Action themes and direction by Doug Liman.",
+    "similarTags": [
+      "Doug Liman",
+      "Action",
+      "Science Fiction"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$178 Million",
+    "revenue": "$370 Million",
+    "tagline": "Live, Die, Repeat",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-12155",
+    "title": "Alice in Wonderland",
+    "originalTitle": "Alice in Wonderland",
+    "year": 2010,
+    "runtime": "108 min",
     "genres": [
       "Family",
+      "Fantasy",
+      "Adventure"
+    ],
+    "imdbRating": 6.4,
+    "matchScore": 95,
+    "synopsis": "Alice, an unpretentious and individual 19-year-old, is betrothed to a dunce of an English nobleman. At her engagement party, she escapes the crowd to consider whether to go through with the marriage and falls down a hole in the garden after spotting an unusual rabbit. Arriving in a strange and surreal place called 'Underland,' she finds herself in a world that resembles the nightmares she had as a child, filled with talking animals, villainous queens and knights, and frumious bandersnatches. Alice realizes that she is there for a reason \u2013 to conquer the horrific Jabberwocky and restore the rightful queen to her throne.",
+    "director": "Tim Burton",
+    "cast": [
+      "Mia Wasikowska",
+      "Johnny Depp",
+      "Anne Hathaway",
+      "Helena Bonham Carter"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/o0kre9wRCZz3jjSjaru7QU0UtFz.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/ocOWbTzHcJVTw9Tz173KPeskDOP.jpg",
+    "trailerId": "9POCgSRVvf0",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Family themes and direction by Tim Burton.",
+    "whyRecommended": "Top match based on Family themes and direction by Tim Burton.",
+    "similarTags": [
+      "Tim Burton",
+      "Family",
+      "Fantasy"
+    ],
+    "moods": [
+      "\u2728 Family",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$200 Million",
+    "revenue": "$1025 Million",
+    "tagline": "You're invited to a very important date.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-675",
+    "title": "Harry Potter and the Order of the Phoenix",
+    "originalTitle": "Harry Potter and the Order of the Phoenix",
+    "year": 2007,
+    "runtime": "138 min",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Family",
+      "Mystery"
+    ],
+    "imdbRating": 7.4,
+    "matchScore": 96,
+    "synopsis": "Returning for his fifth year of study at Hogwarts, Harry is stunned to find that his warnings about the return of Lord Voldemort have been ignored. Left with no choice, Harry takes matters into his own hands, training a small group of students \u2013 dubbed 'Dumbledore's Army' \u2013 to defend themselves against the dark arts.",
+    "director": "David Yates",
+    "cast": [
+      "Daniel Radcliffe",
+      "Rupert Grint",
+      "Emma Watson",
+      "Michael Gambon"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/5aOyriWkPec0zUDxmHFP9qMmBaj.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/pkxPkHOPJjOvzfQOclANEBT8OfK.jpg",
+    "trailerId": "47PHbQTmw5g",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by David Yates.",
+    "whyRecommended": "Top match based on Adventure themes and direction by David Yates.",
+    "similarTags": [
+      "David Yates",
+      "Adventure",
+      "Fantasy"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$150 Million",
+    "revenue": "$938 Million",
+    "tagline": "Evil Must Be Confronted.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-9806",
+    "title": "The Incredibles",
+    "originalTitle": "The Incredibles",
+    "year": 2004,
+    "runtime": "115 min",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Animation",
+      "Family"
+    ],
+    "imdbRating": 7.4,
+    "matchScore": 97,
+    "synopsis": "Bob Parr has given up his superhero days to log in time as an insurance adjuster and raise his three children with his formerly heroic wife in suburbia. But when he receives a mysterious assignment, it's time to get back into costume.",
+    "director": "Brad Bird",
+    "cast": [
+      "Craig T. Nelson",
+      "Holly Hunter",
+      "Samuel L. Jackson",
+      "Jason Lee"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/2LqaLgk4Z226KkgPJuiOQ58wvrm.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/lxwzY9vNwjDgxWKt3zZ6zcU6rEJ.jpg",
+    "trailerId": "sJCjKQQOqT0",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Brad Bird.",
+    "whyRecommended": "Top match based on Action themes and direction by Brad Bird.",
+    "similarTags": [
+      "Brad Bird",
+      "Action",
+      "Adventure"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$92 Million",
+    "revenue": "$631 Million",
+    "tagline": "No gut, no glory",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-56292",
+    "title": "Mission: Impossible - Ghost Protocol",
+    "originalTitle": "Mission: Impossible - Ghost Protocol",
+    "year": 2011,
+    "runtime": "133 min",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Adventure"
+    ],
+    "imdbRating": 6.8,
+    "matchScore": 98,
+    "synopsis": "In the 4th installment of the Mission Impossible series, Ethan Hunt (Cruise) and his team are racing against time to track down a dangerous terrorist named Hendricks (Nyqvist), who has gained access to Russian nuclear launch codes and is planning a strike on the United States. An attempt to stop him ends in an explosion causing severe destruction to the Kremlin and the IMF to be implicated in the bombing, forcing the President to disavow them. No longer being aided by the government, Ethan and his team chase Hendricks around the globe, although they might still be too late to stop a disaster.",
+    "director": "Brad Bird",
+    "cast": [
+      "Tom Cruise",
+      "Jeremy Renner",
+      "Simon Pegg",
+      "Paula Patton"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/eRZTGx7GsiKqPch96k27LK005ZL.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/ih4lZkUpmSE7AP3maymiO72xJ1z.jpg",
+    "trailerId": "7wkih9Yvxq0",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Brad Bird.",
+    "whyRecommended": "Top match based on Action themes and direction by Brad Bird.",
+    "similarTags": [
+      "Brad Bird",
+      "Action",
+      "Thriller"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$145 Million",
+    "revenue": "$694 Million",
+    "tagline": "No Plan. No Backup. No Choice.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-68721",
+    "title": "Iron Man 3",
+    "originalTitle": "Iron Man 3",
+    "year": 2013,
+    "runtime": "130 min",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Science Fiction"
+    ],
+    "imdbRating": 6.8,
+    "matchScore": 99,
+    "synopsis": "When Tony Stark's world is torn apart by a formidable terrorist called the Mandarin, he starts an odyssey of rebuilding and retribution.",
+    "director": "Shane Black",
+    "cast": [
+      "Robert Downey Jr.",
+      "Gwyneth Paltrow",
+      "Don Cheadle",
+      "Guy Pearce"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qhPtAc1TKbMPqNvcdXSOn9Bn7hZ.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/iVped1djsF0tvGkvnHbzsE3ZPTF.jpg",
+    "trailerId": "YLorLVa95Xo",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Shane Black.",
+    "whyRecommended": "Top match based on Action themes and direction by Shane Black.",
+    "similarTags": [
+      "Shane Black",
+      "Action",
+      "Adventure"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$200 Million",
+    "revenue": "$1215 Million",
+    "tagline": "Unleash the power behind the armor.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-27578",
+    "title": "The Expendables",
+    "originalTitle": "The Expendables",
+    "year": 2010,
+    "runtime": "103 min",
+    "genres": [
+      "Thriller",
+      "Adventure",
+      "Action"
+    ],
+    "imdbRating": 6.0,
+    "matchScore": 90,
+    "synopsis": "Barney Ross leads a band of highly skilled mercenaries including knife enthusiast Lee Christmas, a martial arts expert, heavy weapons specialist, demolitionist, and a loose-cannon sniper. When the group is commissioned by the mysterious Mr. Church to assassinate the dictator of a small South American island, Barney and Lee visit the remote locale to scout out their opposition and discover the true nature of the conflict engulfing the city.",
+    "director": "Sylvester Stallone",
+    "cast": [
+      "Sylvester Stallone",
+      "Jason Statham",
+      "Dolph Lundgren",
+      "Eric Roberts"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/j09ZkH6R4JWVylBcDai1laCmGw7.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/yBv9RxlWPXRCvjMFsrmB1pxwWo6.jpg",
+    "trailerId": "G_OQpXk8vAQ",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Thriller themes and direction by Sylvester Stallone.",
+    "whyRecommended": "Top match based on Thriller themes and direction by Sylvester Stallone.",
+    "similarTags": [
+      "Sylvester Stallone",
+      "Thriller",
+      "Adventure"
+    ],
+    "moods": [
+      "\u2728 Thriller",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$80 Million",
+    "revenue": "$274 Million",
+    "tagline": "Choose Your Weapon.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-163",
+    "title": "Ocean's Twelve",
+    "originalTitle": "Ocean's Twelve",
+    "year": 2004,
+    "runtime": "125 min",
+    "genres": [
+      "Thriller",
+      "Crime"
+    ],
+    "imdbRating": 6.4,
+    "matchScore": 91,
+    "synopsis": "Danny Ocean reunites with his old flame and the rest of his merry band of thieves in carrying out three huge heists in Rome, Paris and Amsterdam \u2013 but a Europol agent is hot on their heels.",
+    "director": "Steven Soderbergh",
+    "cast": [
+      "George Clooney",
+      "Brad Pitt",
+      "Catherine Zeta-Jones",
+      "Julia Roberts"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pE5anFf7nf6ah7V3VRezQ1KSovi.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/5b5HrewiViLWEdMR4dmbd7ajQ8Q.jpg",
+    "trailerId": "ATHwwFhB-UQ",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Thriller themes and direction by Steven Soderbergh.",
+    "whyRecommended": "Top match based on Thriller themes and direction by Steven Soderbergh.",
+    "similarTags": [
+      "Steven Soderbergh",
+      "Thriller",
+      "Crime"
+    ],
+    "moods": [
+      "\u2728 Thriller",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$110 Million",
+    "revenue": "$362 Million",
+    "tagline": "Twelve is the new eleven.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-105",
+    "title": "Back to the Future",
+    "originalTitle": "Back to the Future",
+    "year": 1985,
+    "runtime": "116 min",
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Science Fiction",
+      "Family"
+    ],
+    "imdbRating": 8.0,
+    "matchScore": 92,
+    "synopsis": "Eighties teenager Marty McFly is accidentally sent back in time to 1955, inadvertently disrupting his parents' first meeting and attracting his mother's romantic interest. Marty must repair the damage to history by rekindling his parents' romance and - with the help of his eccentric inventor friend Doc Brown - return to 1985.",
+    "director": "Robert Zemeckis",
+    "cast": [
+      "Michael J. Fox",
+      "Christopher Lloyd",
+      "Lea Thompson",
+      "Crispin Glover"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vN5B5WgYscRGcQpVhHl6p9DDTP0.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/5bzPWQ2dFUl2aZKkp7ILJVVkRed.jpg",
+    "trailerId": "ez6WQ7IX72U",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Robert Zemeckis.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Robert Zemeckis.",
+    "similarTags": [
+      "Robert Zemeckis",
+      "Adventure",
+      "Comedy"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$19 Million",
+    "revenue": "$381 Million",
+    "tagline": "He's the only kid ever to get into trouble before he was born.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-101299",
+    "title": "The Hunger Games: Catching Fire",
+    "originalTitle": "The Hunger Games: Catching Fire",
+    "year": 2013,
+    "runtime": "146 min",
+    "genres": [
+      "Adventure",
+      "Action",
+      "Science Fiction"
+    ],
+    "imdbRating": 7.4,
+    "matchScore": 93,
+    "synopsis": "Katniss Everdeen has returned home safe after winning the 74th Annual Hunger Games along with fellow tribute Peeta Mellark. Winning means that they must turn around and leave their family and close friends, embarking on a \"Victor's Tour\" of the districts. Along the way Katniss senses that a rebellion is simmering, but the Capitol is still very much in control as President Snow prepares the 75th Annual Hunger Games (The Quarter Quell) - a competition that could change Panem forever.",
+    "director": "Francis Lawrence",
+    "cast": [
+      "Jennifer Lawrence",
+      "Josh Hutcherson",
+      "Liam Hemsworth",
+      "Woody Harrelson"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vrQHDXjVmbYzadOXQ0UaObunoy2.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/eHaazLxM5LRMh0ySkVy7SK6wUWt.jpg",
+    "trailerId": "zoKj7TdJk98",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Francis Lawrence.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Francis Lawrence.",
+    "similarTags": [
+      "Francis Lawrence",
+      "Adventure",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$130 Million",
+    "revenue": "$847 Million",
+    "tagline": "Every revolution begins with a spark.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-241554",
+    "title": "Run All Night",
+    "originalTitle": "Run All Night",
+    "year": 2015,
+    "runtime": "114 min",
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama",
+      "Mystery",
+      "Thriller"
+    ],
+    "imdbRating": 6.3,
+    "matchScore": 94,
+    "synopsis": "Brooklyn mobster and prolific hit man Jimmy Conlon has seen better days. Longtime best friend of a mob boss, Jimmy is haunted by the sins of his past\u2014as well as a dogged police detective who\u2019s been one step behind Jimmy for 30 years. But when Jimmy\u2019s estranged son becomes a target, Jimmy must make a choice between the crime family he chose and the real family he abandoned long ago. Now, with nowhere safe to turn, Jimmy has just one night to figure out exactly where his loyalties lie and to see if he can finally make things right.",
+    "director": "Jaume Collet-Serra",
+    "cast": [
+      "Liam Neeson",
+      "Ed Harris",
+      "Joel Kinnaman",
+      "Boyd Holbrook"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/iGvSMoPbWZWDnIhh54yiq3sW7wH.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/dqTvzfXhUWPoBuIbQInOBmYvEL4.jpg",
+    "trailerId": "plrh783KCqg",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Jaume Collet-Serra.",
+    "whyRecommended": "Top match based on Action themes and direction by Jaume Collet-Serra.",
+    "similarTags": [
+      "Jaume Collet-Serra",
+      "Action",
+      "Crime"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$50 Million",
+    "revenue": "$71 Million",
+    "tagline": "No sin goes unpunished",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-1771",
+    "title": "Captain America: The First Avenger",
+    "originalTitle": "Captain America: The First Avenger",
+    "year": 2011,
+    "runtime": "124 min",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Science Fiction"
+    ],
+    "imdbRating": 6.6,
+    "matchScore": 95,
+    "synopsis": "Predominantly set during World War II, Steve Rogers is a sickly man from Brooklyn who's transformed into super-soldier Captain America to aid in the war effort. Rogers must stop the Red Skull \u2013 Adolf Hitler's ruthless head of weaponry, and the leader of an organization that intends to use a mysterious device of untold powers for world domination.",
+    "director": "Joe Johnston",
+    "cast": [
+      "Chris Evans",
+      "Hugo Weaving",
+      "Tommy Lee Jones",
+      "Hayley Atwell"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vSNxAJTlD0r02V9sPYpOjqDZXUK.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/yFuKvT4Vm3sKHdFY4eG6I4ldAnn.jpg",
+    "trailerId": "W4DlMggBPvc",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Joe Johnston.",
+    "whyRecommended": "Top match based on Action themes and direction by Joe Johnston.",
+    "similarTags": [
+      "Joe Johnston",
+      "Action",
+      "Adventure"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$140 Million",
+    "revenue": "$370 Million",
+    "tagline": "When patriots become heroes",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-1124",
+    "title": "The Prestige",
+    "originalTitle": "The Prestige",
+    "year": 2006,
+    "runtime": "130 min",
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Thriller"
+    ],
+    "imdbRating": 8.0,
+    "matchScore": 96,
+    "synopsis": "A mysterious story of two magicians whose intense rivalry leads them on a life-long battle for supremacy -- full of obsession, deceit and jealousy with dangerous and deadly consequences.",
+    "director": "Christopher Nolan",
+    "cast": [
+      "Hugh Jackman",
+      "Christian Bale",
+      "Michael Caine",
+      "Scarlett Johansson"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/Ag2B2KHKQPukjH7WutmgnnSNurZ.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/z3br1ub7spqGMkxgjgJSdM4DC21.jpg",
+    "trailerId": "ObGVA1WOqyE",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Christopher Nolan.",
+    "whyRecommended": "Top match based on Drama themes and direction by Christopher Nolan.",
+    "similarTags": [
+      "Christopher Nolan",
+      "Drama",
+      "Mystery"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$40 Million",
+    "revenue": "$109 Million",
+    "tagline": "Are You Watching Closely?",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-22970",
+    "title": "The Cabin in the Woods",
+    "originalTitle": "The Cabin in the Woods",
+    "year": 2012,
+    "runtime": "95 min",
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "imdbRating": 6.5,
+    "matchScore": 97,
+    "synopsis": "Five college friends spend the weekend at a remote cabin in the woods, where they get more than they bargained for. Together, they must discover the truth behind the cabin in the woods.",
+    "director": "Drew Goddard",
+    "cast": [
+      "Kristen Connolly",
+      "Chris Hemsworth",
+      "Anna Hutchison",
+      "Fran Kranz"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/zZZe5wn0udlhMtdlDjN4NB72R6e.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/wJffMiCnrszaNclKggGixYWB7D7.jpg",
+    "trailerId": "7NiAWF7VIFY",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Horror themes and direction by Drew Goddard.",
+    "whyRecommended": "Top match based on Horror themes and direction by Drew Goddard.",
+    "similarTags": [
+      "Drew Goddard",
+      "Horror",
+      "Thriller"
+    ],
+    "moods": [
+      "\u2728 Horror",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$30 Million",
+    "revenue": "$66 Million",
+    "tagline": "If you hear a strange sound outside... have sex",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-640",
+    "title": "Catch Me If You Can",
+    "originalTitle": "Catch Me If You Can",
+    "year": 2002,
+    "runtime": "141 min",
+    "genres": [
+      "Drama",
+      "Crime"
+    ],
+    "imdbRating": 7.7,
+    "matchScore": 98,
+    "synopsis": "A true story about Frank Abagnale Jr. who, before his 19th birthday, successfully conned millions of dollars worth of checks as a Pan Am pilot, doctor, and legal prosecutor. An FBI agent makes it his mission to put him behind bars. But Frank not only eludes capture, he revels in the pursuit.",
+    "director": "Steven Spielberg",
+    "cast": [
+      "Leonardo DiCaprio",
+      "Tom Hanks",
+      "Christopher Walken",
+      "Martin Sheen"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ctjEj2xM32OvBXCq8zAdK3ZrsAj.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/sfW8gtA6Bz2F4zK1FoCKbMqTF8Z.jpg",
+    "trailerId": "71rDQ7z4eFg",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Steven Spielberg.",
+    "whyRecommended": "Top match based on Drama themes and direction by Steven Spielberg.",
+    "similarTags": [
+      "Steven Spielberg",
+      "Drama",
+      "Crime"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$52 Million",
+    "revenue": "$352 Million",
+    "tagline": "The true story of a real fake.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-83542",
+    "title": "Cloud Atlas",
+    "originalTitle": "Cloud Atlas",
+    "year": 2012,
+    "runtime": "172 min",
+    "genres": [
+      "Drama",
+      "Science Fiction"
+    ],
+    "imdbRating": 6.6,
+    "matchScore": 99,
+    "synopsis": "A set of six nested stories spanning time between the 19th century and a distant post-apocalyptic future. Cloud Atlas explores how the actions and consequences of individual lives impact one another throughout the past, the present and the future. Action, mystery and romance weave through the story as one soul is shaped from a killer into a hero and a single act of kindness ripples across centuries to inspire a revolution in the distant future.  Based on the award winning novel by David Mitchell. Directed by Tom Tykwer and the Wachowskis.",
+    "director": "Tom Tykwer",
+    "cast": [
+      "Tom Hanks",
+      "Halle Berry",
+      "Jim Broadbent",
+      "Hugo Weaving"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/8naVv2Xu3rWI5JKHz0vCujx6GaJ.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/cHm1lWAok12vwnTHqzprbPTk49q.jpg",
+    "trailerId": "ByehYal_cCs",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Tom Tykwer.",
+    "whyRecommended": "Top match based on Drama themes and direction by Tom Tykwer.",
+    "similarTags": [
+      "Tom Tykwer",
+      "Drama",
+      "Science Fiction"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$102 Million",
+    "revenue": "$130 Million",
+    "tagline": "Everything is Connected",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-862",
+    "title": "Toy Story",
+    "originalTitle": "Toy Story",
+    "year": 1995,
+    "runtime": "81 min",
+    "genres": [
       "Animation",
       "Comedy",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi",
-      "Western",
-      "Space"
+      "Family"
     ],
-    "imdbRating": 8.7,
-    "rottenTomatoesScore": 96,
-    "matchScore": 94,
-    "synopsis": "A cowboy doll is threatened when a new spaceman figure becomes top toy in a boy's room.",
+    "imdbRating": 7.7,
+    "matchScore": 90,
+    "synopsis": "Led by Woody, Andy's toys live happily in his room until Andy's birthday brings Buzz Lightyear onto the scene. Afraid of losing his place in Andy's heart, Woody plots against Buzz. But when circumstances separate Buzz and Woody from their owner, the duo eventually learns to put aside their differences.",
     "director": "John Lasseter",
     "cast": [
       "Tom Hanks",
-      "Tim Allen"
+      "Tim Allen",
+      "Don Rickles",
+      "Jim Varney"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/3Rfvhy1Nl6sSGJwyjb0QiZzZYlB.jpg",
+    "trailerId": "CxwTLktovTU",
     "streamingOn": [
-      "Max"
+      "Netflix",
+      "Prime Video"
     ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Family masterpiece directed by John Lasseter.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Family masterpiece directed by John Lasseter.",
+    "aiReasoning": "Top match based on Animation themes and direction by John Lasseter.",
+    "whyRecommended": "Top match based on Animation themes and direction by John Lasseter.",
     "similarTags": [
-      "John",
+      "John Lasseter",
       "Animation",
       "Comedy"
     ],
     "moods": [
-      "✨ Family",
-      "🔥 Animation"
+      "\u2728 Animation",
+      "\ud83d\udd25 Popular"
     ],
     "language": "English",
     "country": "USA",
-    "budget": "$168 Million",
-    "revenue": "$527 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "A24",
-    "reviews": []
+    "budget": "$30 Million",
+    "revenue": "$373 Million",
+    "tagline": "An extraordinary story.",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "english-finding-nemo",
-    "title": "Finding Nemo",
-    "year": 2003,
-    "runtime": "1h 40m",
+    "id": "tmdb-73",
+    "title": "American History X",
+    "originalTitle": "American History X",
+    "year": 1998,
+    "runtime": "119 min",
     "genres": [
-      "Family",
-      "Animation",
-      "Adventure",
-      "Comedy",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel"
+      "Drama"
     ],
-    "imdbRating": 8.8,
-    "rottenTomatoesScore": 97,
+    "imdbRating": 8.2,
+    "matchScore": 91,
+    "synopsis": "Derek Vineyard is paroled after serving 3 years in prison for killing two thugs who tried to break into/steal his truck. Through his brother, Danny Vineyard's narration, we learn that before going to prison, Derek was a skinhead and the leader of a violent white supremacist gang that committed acts of racial crime throughout L.A. and his actions greatly influenced Danny. Reformed and fresh out of prison, Derek severs contact with the gang and becomes determined to keep Danny from going down the same violent path as he did.",
+    "director": "Tony Kaye",
+    "cast": [
+      "Edward Norton",
+      "Edward Furlong",
+      "Beverly D'Angelo",
+      "Avery Brooks"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/x2drgoXYZ8484lqyDj7L1CEVR4T.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/6qHI1IYj7QlLSCwHRzkL62X175s.jpg",
+    "trailerId": "el6JxnW2Tyg",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Tony Kaye.",
+    "whyRecommended": "Top match based on Drama themes and direction by Tony Kaye.",
+    "similarTags": [
+      "Tony Kaye",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$20 Million",
+    "revenue": "$23 Million",
+    "tagline": "Some Legacies Must End.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-1954",
+    "title": "The Butterfly Effect",
+    "originalTitle": "The Butterfly Effect",
+    "year": 2004,
+    "runtime": "113 min",
+    "genres": [
+      "Science Fiction",
+      "Thriller"
+    ],
+    "imdbRating": 7.3,
+    "matchScore": 92,
+    "synopsis": "A young man struggles to access sublimated childhood memories. He finds a technique that allows him to travel back into the past, to occupy his childhood body and change history. However, he soon finds that every change he makes has unexpected consequences.",
+    "director": "Eric Bress",
+    "cast": [
+      "Ashton Kutcher",
+      "Melora Walters",
+      "Amy Smart",
+      "Elden Henson"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ea5iv7TWMh18fOKoRGgmtcg85Gx.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/yriYPLqyFqPW0QXaegT1KmWXk9a.jpg",
+    "trailerId": "KctopagSGJE",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Science Fiction themes and direction by Eric Bress.",
+    "whyRecommended": "Top match based on Science Fiction themes and direction by Eric Bress.",
+    "similarTags": [
+      "Eric Bress",
+      "Science Fiction",
+      "Thriller"
+    ],
+    "moods": [
+      "\u2728 Science Fiction",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$13 Million",
+    "revenue": "$96 Million",
+    "tagline": "Such minor changes, such huge consequences.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-745",
+    "title": "The Sixth Sense",
+    "originalTitle": "The Sixth Sense",
+    "year": 1999,
+    "runtime": "107 min",
+    "genres": [
+      "Mystery",
+      "Thriller",
+      "Drama"
+    ],
+    "imdbRating": 7.7,
+    "matchScore": 93,
+    "synopsis": "A psychological thriller about an eight year old boy named Cole Sear who believes he can see into the world of the dead. A child psychologist named Malcolm Crowe comes to Cole to help him deal with his problem, learning that he really can see ghosts of dead people.",
+    "director": "M. Night Shyamalan",
+    "cast": [
+      "Bruce Willis",
+      "Toni Collette",
+      "Olivia Williams",
+      "Haley Joel Osment"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vOyfUXNFSnaTk7Vk5AjpsKTUWsu.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/6TjllWT3cGrPFyqDXurVZ3L8bBi.jpg",
+    "trailerId": "HXG4HTIlc1U",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Mystery themes and direction by M. Night Shyamalan.",
+    "whyRecommended": "Top match based on Mystery themes and direction by M. Night Shyamalan.",
+    "similarTags": [
+      "M. Night Shyamalan",
+      "Mystery",
+      "Thriller"
+    ],
+    "moods": [
+      "\u2728 Mystery",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$40 Million",
+    "revenue": "$672 Million",
+    "tagline": "Not every gift is a blessing.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-271718",
+    "title": "Trainwreck",
+    "originalTitle": "Trainwreck",
+    "year": 2015,
+    "runtime": "125 min",
+    "genres": [
+      "Comedy"
+    ],
+    "imdbRating": 5.9,
+    "matchScore": 94,
+    "synopsis": "Having thought that monogamy was never possible, a commitment-phobic career woman may have to face her fears when she meets a good guy.",
+    "director": "Judd Apatow",
+    "cast": [
+      "Amy Schumer",
+      "Bill Hader",
+      "Brie Larson",
+      "Colin Quinn"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/wrY629UTCUAKLJ4CxQXz6DCE7pr.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/9O6pLFE630h7IxslegYR9CV64aE.jpg",
+    "trailerId": "YgkciW7ip4E",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Comedy themes and direction by Judd Apatow.",
+    "whyRecommended": "Top match based on Comedy themes and direction by Judd Apatow.",
+    "similarTags": [
+      "Judd Apatow",
+      "Comedy"
+    ],
+    "moods": [
+      "\u2728 Comedy",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$35 Million",
+    "revenue": "$140 Million",
+    "tagline": "We All Know One.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-225886",
+    "title": "Sex Tape",
+    "originalTitle": "Sex Tape",
+    "year": 2014,
+    "runtime": "97 min",
+    "genres": [
+      "Comedy"
+    ],
+    "imdbRating": 5.3,
     "matchScore": 95,
-    "synopsis": "A timid clownfish travels across the ocean to Sydney to rescue his captured son.",
+    "synopsis": "When Jay and Annie first got together, their romantic connection was intense \u2013 but ten years and two kids later, the flame of their love needs a spark.  To kick things up a notch, they decide \u2013 why not? \u2013 to make a video of themselves trying out every position in The Joy of Sex in one marathon three-hour session.  It seems like a great idea \u2013 until they discover that their most private video is no longer private.  With their reputations on the line, they know they\u2019re just one click away from being laid bare to the world... but as their race to reclaim their video leads to a night they'll never forget, they'll find that their video will expose even more than they bargained for.",
+    "director": "Jake Kasdan",
+    "cast": [
+      "Cameron Diaz",
+      "Jason Segel",
+      "Rob Corddry",
+      "Ellie Kemper"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/u2h7UnSHrbAA5WBoKhdH1rlDZfz.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/nFCUBRDF4C6RWopNo0nAfvMA6mm.jpg",
+    "trailerId": "sxl4aOyHSwo",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Comedy themes and direction by Jake Kasdan.",
+    "whyRecommended": "Top match based on Comedy themes and direction by Jake Kasdan.",
+    "similarTags": [
+      "Jake Kasdan",
+      "Comedy"
+    ],
+    "moods": [
+      "\u2728 Comedy",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$40 Million",
+    "revenue": "$126 Million",
+    "tagline": "A movie about a movie they don't want you to see.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-16869",
+    "title": "Inglourious Basterds",
+    "originalTitle": "Inglourious Basterds",
+    "year": 2009,
+    "runtime": "153 min",
+    "genres": [
+      "Drama",
+      "Action",
+      "Thriller",
+      "War"
+    ],
+    "imdbRating": 7.9,
+    "matchScore": 96,
+    "synopsis": "In Nazi-occupied France during World War II, a group of Jewish-American soldiers known as \"The Basterds\" are chosen specifically to spread fear throughout the Third Reich by scalping and brutally killing Nazis. The Basterds, lead by Lt. Aldo Raine soon cross paths with a French-Jewish teenage girl who runs a movie theater in Paris which is targeted by the soldiers.",
+    "director": "Quentin Tarantino",
+    "cast": [
+      "Brad Pitt",
+      "M\u00e9lanie Laurent",
+      "Christoph Waltz",
+      "Eli Roth"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/aupnPtagH9JVBuMrGEanf4iqXEQ.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/hwNtEmmugU5Yd7hpfprNWI0DGIn.jpg",
+    "trailerId": "uSEDz-my7XQ",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Quentin Tarantino.",
+    "whyRecommended": "Top match based on Drama themes and direction by Quentin Tarantino.",
+    "similarTags": [
+      "Quentin Tarantino",
+      "Drama",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$70 Million",
+    "revenue": "$319 Million",
+    "tagline": "Once upon a time in Nazi occupied France...",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-534",
+    "title": "Terminator Salvation",
+    "originalTitle": "Terminator Salvation",
+    "year": 2009,
+    "runtime": "115 min",
+    "genres": [
+      "Action",
+      "Science Fiction",
+      "Thriller"
+    ],
+    "imdbRating": 5.9,
+    "matchScore": 97,
+    "synopsis": "All grown up in post-apocalyptic 2018, John Connor must lead the resistance of humans against the increasingly dominating militaristic robots. But when Marcus Wright appears, his existence confuses the mission as Connor tries to determine whether Wright has come from the future or the past -- and whether he's friend or foe.",
+    "director": "McG",
+    "cast": [
+      "Christian Bale",
+      "Sam Worthington",
+      "Anton Yelchin",
+      "Moon Bloodgood"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gw6JhlekZgtKUFlDTezq3j5JEPK.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/74zPun6CdSNVSDLcKOM8Yjv7WWB.jpg",
+    "trailerId": "MRN71NlONZU",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by McG.",
+    "whyRecommended": "Top match based on Action themes and direction by McG.",
+    "similarTags": [
+      "McG",
+      "Action",
+      "Science Fiction"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$200 Million",
+    "revenue": "$371 Million",
+    "tagline": "The End Begins.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-53182",
+    "title": "300: Rise of an Empire",
+    "originalTitle": "300: Rise of an Empire",
+    "year": 2014,
+    "runtime": "102 min",
+    "genres": [
+      "Action",
+      "War"
+    ],
+    "imdbRating": 6.1,
+    "matchScore": 98,
+    "synopsis": "Based on Frank Miller's latest graphic novel Xerxes and told in the breathtaking visual style of the blockbuster \"300,\" this new chapter of the epic saga takes the action to a fresh battlefield--on the sea--as Greek general Themistokles attempts to unite all of Greece by leading the charge that will change the course of the war. \"300: Rise of an Empire\" pits Themistokles against the massive invading Persian forces led by mortal-turned-god Xerxes and Artemesia, the vengeful commander of the Persian navy.",
+    "director": "Noam Murro",
+    "cast": [
+      "Sullivan Stapleton",
+      "Eva Green",
+      "Lena Headey",
+      "Callan Mulvey"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/wYDdWN1McB1Sio4z1dPSkb40Z78.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/chjkfyo57JexWo1YeIZRMk8wA4m.jpg",
+    "trailerId": "bsoJaQ2gZh4",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Noam Murro.",
+    "whyRecommended": "Top match based on Action themes and direction by Noam Murro.",
+    "similarTags": [
+      "Noam Murro",
+      "Action",
+      "War"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$110 Million",
+    "revenue": "$337 Million",
+    "tagline": "Seize your glory!",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-254470",
+    "title": "Pitch Perfect 2",
+    "originalTitle": "Pitch Perfect 2",
+    "year": 2015,
+    "runtime": "115 min",
+    "genres": [
+      "Comedy",
+      "Music"
+    ],
+    "imdbRating": 6.8,
+    "matchScore": 99,
+    "synopsis": "The Bellas are back, and they are better than ever. After being humiliated in front of none other than the President of the United States of America, the Bellas are taken out of the Aca-Circuit. In order to clear their name, and regain their status, the Bellas take on a seemingly impossible task: winning an international competition no American team has ever won. In order to accomplish this monumental task, they need to strengthen the bonds of friendship and sisterhood and blow away the competition with their amazing aca-magic! With all new friends and old rivals tagging along for the trip, the Bellas can hopefully accomplish their dreams.",
+    "director": "Elizabeth Banks",
+    "cast": [
+      "Anna Kendrick",
+      "Rebel Wilson",
+      "Hailee Steinfeld",
+      "Brittany Snow"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fQaEGzFmvTYu3G641WV0Tg9auAt.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/bWOfRV1Ubk9SWEDZDDjsmIUCcbZ.jpg",
+    "trailerId": "OgPm-yaLoyo",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Comedy themes and direction by Elizabeth Banks.",
+    "whyRecommended": "Top match based on Comedy themes and direction by Elizabeth Banks.",
+    "similarTags": [
+      "Elizabeth Banks",
+      "Comedy",
+      "Music"
+    ],
+    "moods": [
+      "\u2728 Comedy",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$29 Million",
+    "revenue": "$287 Million",
+    "tagline": "We're back pitches",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-6479",
+    "title": "I Am Legend",
+    "originalTitle": "I Am Legend",
+    "year": 2007,
+    "runtime": "101 min",
+    "genres": [
+      "Drama",
+      "Horror",
+      "Action",
+      "Thriller",
+      "Science Fiction"
+    ],
+    "imdbRating": 6.9,
+    "matchScore": 90,
+    "synopsis": "Robert Neville is a scientist who was unable to stop the spread of the terrible virus that was incurable and man-made. Immune, Neville is now the last human survivor in what is left of New York City and perhaps the world. For three years, Neville has faithfully sent out daily radio messages, desperate to find any other survivors who might be out there. But he is not alone.",
+    "director": "Francis Lawrence",
+    "cast": [
+      "Will Smith",
+      "Alice Braga",
+      "Charlie Tahan",
+      "Salli Richardson-Whitfield"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/iPDkaSdKk2jRLTM65UOEoKtsIZ8.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/ePgD1cwmklyrFBjl6z96IuixuSY.jpg",
+    "trailerId": "4uDU6SUpr8k",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Francis Lawrence.",
+    "whyRecommended": "Top match based on Drama themes and direction by Francis Lawrence.",
+    "similarTags": [
+      "Francis Lawrence",
+      "Drama",
+      "Horror"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$150 Million",
+    "revenue": "$585 Million",
+    "tagline": "The last man on Earth is not alone",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-193893",
+    "title": "Let's Be Cops",
+    "originalTitle": "Let's Be Cops",
+    "year": 2014,
+    "runtime": "104 min",
+    "genres": [
+      "Comedy"
+    ],
+    "imdbRating": 6.4,
+    "matchScore": 91,
+    "synopsis": "It's the ultimate buddy cop movie except for one thing: they're not cops.  When two struggling pals dress as police officers for a costume party, they become neighborhood sensations.  But when these newly-minted \u201cheroes\u201d get tangled in a real life web of mobsters and dirty detectives, they must put their fake badges on the line.",
+    "director": "Luke Greenfield",
+    "cast": [
+      "Jake Johnson",
+      "Damon Wayans Jr.",
+      "Nina Dobrev",
+      "Rob Riggle"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pf4FoUr2phn5WyZjU7rLXSiW1Ve.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/aa5P3DfHMD2Y5xotn2067A5OMAI.jpg",
+    "trailerId": "Mx03VkB-TPE",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Comedy themes and direction by Luke Greenfield.",
+    "whyRecommended": "Top match based on Comedy themes and direction by Luke Greenfield.",
+    "similarTags": [
+      "Luke Greenfield",
+      "Comedy"
+    ],
+    "moods": [
+      "\u2728 Comedy",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$17 Million",
+    "revenue": "$136 Million",
+    "tagline": "Fake Cops. Real Trouble.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-70",
+    "title": "Million Dollar Baby",
+    "originalTitle": "Million Dollar Baby",
+    "year": 2004,
+    "runtime": "132 min",
+    "genres": [
+      "Drama"
+    ],
+    "imdbRating": 7.7,
+    "matchScore": 92,
+    "synopsis": "Despondent over a painful estrangement from his daughter, trainer Frankie Dunn isn't prepared for boxer Maggie Fitzgerald to enter his life. But Maggie's determined to go pro and to convince Dunn and his cohort to help her.",
+    "director": "Clint Eastwood",
+    "cast": [
+      "Clint Eastwood",
+      "Hilary Swank",
+      "Morgan Freeman",
+      "Jay Baruchel"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/jcfEqKdWF1zeyvECPqp3mkWLct2.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/oGMomeS7bE43eN8SGJUaKvQnmud.jpg",
+    "trailerId": "5_RsHRmIRBY",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Clint Eastwood.",
+    "whyRecommended": "Top match based on Drama themes and direction by Clint Eastwood.",
+    "similarTags": [
+      "Clint Eastwood",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$30 Million",
+    "revenue": "$216 Million",
+    "tagline": "Beyond his silence, there is a past. Beyond her dreams, there is a feeling. Beyond hope, there is a memory. Beyond their journey, there is a love.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-782",
+    "title": "Gattaca",
+    "originalTitle": "Gattaca",
+    "year": 1997,
+    "runtime": "106 min",
+    "genres": [
+      "Thriller",
+      "Science Fiction",
+      "Mystery",
+      "Romance"
+    ],
+    "imdbRating": 7.5,
+    "matchScore": 93,
+    "synopsis": "Science fiction drama about a future society in the era of indefinite eugenics where humans are set on a life course depending on their DNA. The young Vincent Freeman is born with a condition that would prevent him from space travel, yet he is determined to infiltrate the GATTACA space program.",
+    "director": "Andrew Niccol",
+    "cast": [
+      "Ethan Hawke",
+      "Jude Law",
+      "Gore Vidal",
+      "Uma Thurman"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/eSKr5Fl1MEC7zpAXaLWBWSBjgJq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/hPsCR1ny6GnctJkWqeJwihTDD7T.jpg",
+    "trailerId": "NIIZ2P-fiyI",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Thriller themes and direction by Andrew Niccol.",
+    "whyRecommended": "Top match based on Thriller themes and direction by Andrew Niccol.",
+    "similarTags": [
+      "Andrew Niccol",
+      "Thriller",
+      "Science Fiction"
+    ],
+    "moods": [
+      "\u2728 Thriller",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$36 Million",
+    "revenue": "$12 Million",
+    "tagline": "There is no gene for the human spirit.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-111",
+    "title": "Scarface",
+    "originalTitle": "Scarface",
+    "year": 1983,
+    "runtime": "170 min",
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "imdbRating": 8.0,
+    "matchScore": 94,
+    "synopsis": "After getting a green card in exchange for assassinating a Cuban government official, Tony Montana stakes a claim on the drug trade in Miami. Viciously murdering anyone who stands in his way, Tony eventually becomes the biggest drug lord in the state, controlling nearly all the cocaine that comes through Miami. But increased pressure from the police, wars with Colombian drug cartels and his own drug-fueled paranoia serve to fuel the flames of his eventual downfall.",
+    "director": "Brian De Palma",
+    "cast": [
+      "Al Pacino",
+      "Steven Bauer",
+      "Michelle Pfeiffer",
+      "Mary Elizabeth Mastrantonio"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/iQ5ztdjvteGeboxtmRdXEChJOHh.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/1qM2BYNE11Viby8ImC9LC00DgDr.jpg",
+    "trailerId": "lZMIrD36MG8",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Brian De Palma.",
+    "whyRecommended": "Top match based on Action themes and direction by Brian De Palma.",
+    "similarTags": [
+      "Brian De Palma",
+      "Action",
+      "Crime"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$25 Million",
+    "revenue": "$65 Million",
+    "tagline": "The world is yours...",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-296",
+    "title": "Terminator 3: Rise of the Machines",
+    "originalTitle": "Terminator 3: Rise of the Machines",
+    "year": 2003,
+    "runtime": "109 min",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Science Fiction"
+    ],
+    "imdbRating": 5.9,
+    "matchScore": 95,
+    "synopsis": "It's been 10 years since John Connor saved Earth from Judgment Day, and he's now living under the radar, steering clear of using anything Skynet can trace. That is, until he encounters T-X, a robotic assassin ordered to finish what T-1000 started. Good thing Connor's former nemesis, the Terminator, is back to aid the now-adult Connor \u2026 just like he promised.",
+    "director": "Jonathan Mostow",
+    "cast": [
+      "Arnold Schwarzenegger",
+      "Nick Stahl",
+      "Claire Danes",
+      "Kristanna Loken"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vvevzdYIrk2636maNW4qeWmlPFG.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/voVkSwgFYv9GOpRNfUAwj6qYRTL.jpg",
+    "trailerId": "ysQizA7Una8",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Jonathan Mostow.",
+    "whyRecommended": "Top match based on Action themes and direction by Jonathan Mostow.",
+    "similarTags": [
+      "Jonathan Mostow",
+      "Action",
+      "Thriller"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$200 Million",
+    "revenue": "$435 Million",
+    "tagline": "The Machines Will Rise.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-38055",
+    "title": "Megamind",
+    "originalTitle": "Megamind",
+    "year": 2010,
+    "runtime": "95 min",
+    "genres": [
+      "Animation",
+      "Action",
+      "Comedy",
+      "Family",
+      "Science Fiction"
+    ],
+    "imdbRating": 6.7,
+    "matchScore": 96,
+    "synopsis": "Bumbling supervillain Megamind finally defeats his nemesis, the superhero Metro Man. But without a hero, he loses all purpose and must find new meaning to his life.",
+    "director": "Tom McGrath",
+    "cast": [
+      "Will Ferrell",
+      "Brad Pitt",
+      "Tina Fey",
+      "Jonah Hill"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/uZ9ytt3sPTx62XTfN56ILSuYWRe.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/irpJXGiVr539uuspcQcNdkhS2lq.jpg",
+    "trailerId": "bixkC-ZrH34",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Animation themes and direction by Tom McGrath.",
+    "whyRecommended": "Top match based on Animation themes and direction by Tom McGrath.",
+    "similarTags": [
+      "Tom McGrath",
+      "Animation",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Animation",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$130 Million",
+    "revenue": "$321 Million",
+    "tagline": "His brain is off the chain.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-85",
+    "title": "Raiders of the Lost Ark",
+    "originalTitle": "Raiders of the Lost Ark",
+    "year": 1981,
+    "runtime": "115 min",
+    "genres": [
+      "Adventure",
+      "Action"
+    ],
+    "imdbRating": 7.7,
+    "matchScore": 97,
+    "synopsis": "When Dr. Indiana Jones \u2013 the tweed-suited professor who just happens to be a celebrated archaeologist \u2013 is hired by the government to locate the legendary Ark of the Covenant, he finds himself up against the entire Nazi regime.",
+    "director": "Steven Spielberg",
+    "cast": [
+      "Harrison Ford",
+      "Karen Allen",
+      "Paul Freeman",
+      "Ronald Lacey"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ceG9VzoRAVGwivFU403Wc3AHRys.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/zPACwR32amTNvzId9qyapCWXYDJ.jpg",
+    "trailerId": "0xQSIdSRlAk",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Steven Spielberg.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Steven Spielberg.",
+    "similarTags": [
+      "Steven Spielberg",
+      "Adventure",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$18 Million",
+    "revenue": "$389 Million",
+    "tagline": "Indiana Jones - the new hero from the creators of JAWS and STAR WARS.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-568",
+    "title": "Apollo 13",
+    "originalTitle": "Apollo 13",
+    "year": 1995,
+    "runtime": "140 min",
+    "genres": [
+      "Drama"
+    ],
+    "imdbRating": 7.3,
+    "matchScore": 98,
+    "synopsis": "The true story of technical troubles that scuttle the Apollo 13 lunar mission in 1971, risking the lives of astronaut Jim Lovell and his crew, with the failed journey turning into a thrilling saga of heroism. Drifting more than 200,000 miles from Earth, the astronauts work furiously with the ground crew to avert tragedy.",
+    "director": "Ron Howard",
+    "cast": [
+      "Tom Hanks",
+      "Bill Paxton",
+      "Kevin Bacon",
+      "Gary Sinise"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/tVeKscCm2fY1xDXZk8PgnZ87h9S.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/n0FDJI9c0uWiZwm8wgXVjaMBn96.jpg",
+    "trailerId": "B1KJ9XeZuxA",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Ron Howard.",
+    "whyRecommended": "Top match based on Drama themes and direction by Ron Howard.",
+    "similarTags": [
+      "Ron Howard",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$52 Million",
+    "revenue": "$355 Million",
+    "tagline": "Houston, we have a problem.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-100042",
+    "title": "Dumb and Dumber To",
+    "originalTitle": "Dumb and Dumber To",
+    "year": 2014,
+    "runtime": "110 min",
+    "genres": [
+      "Comedy"
+    ],
+    "imdbRating": 5.4,
+    "matchScore": 99,
+    "synopsis": "20 years after the dimwits set out on their first adventure, they head out in search of one of their long lost children in the hope of gaining a new kidney.",
+    "director": "Bobby Farrelly",
+    "cast": [
+      "Jim Carrey",
+      "Jeff Daniels",
+      "Rachel Melvin",
+      "Kathleen Turner"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cvEi0xV7TUkabJGuzulhvbMjrHi.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/rYaADjAB6trEToo452FfVMoAdgl.jpg",
+    "trailerId": "dmNddThxi4c",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Comedy themes and direction by Bobby Farrelly.",
+    "whyRecommended": "Top match based on Comedy themes and direction by Bobby Farrelly.",
+    "similarTags": [
+      "Bobby Farrelly",
+      "Comedy"
+    ],
+    "moods": [
+      "\u2728 Comedy",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$40 Million",
+    "revenue": "$169 Million",
+    "tagline": "The Second Parts Are More Fools",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-75612",
+    "title": "Oblivion",
+    "originalTitle": "Oblivion",
+    "year": 2013,
+    "runtime": "124 min",
+    "genres": [
+      "Action",
+      "Science Fiction",
+      "Adventure",
+      "Mystery"
+    ],
+    "imdbRating": 6.4,
+    "matchScore": 90,
+    "synopsis": "Jack Harper is one of the last few drone repairmen stationed on Earth.  Part of a massive operation to extract vital resources after decades of war with a terrifying threat known as the Scavs, Jack\u2019s mission is nearly complete.  His existence is brought crashing down when he rescues a beautiful  stranger from a downed spacecraft.  Her arrival triggers a chain of events that  forces him to question everything he knows and puts the fate of humanity in his hands.",
+    "director": "Joseph Kosinski",
+    "cast": [
+      "Tom Cruise",
+      "Morgan Freeman",
+      "Olga Kurylenko",
+      "Andrea Riseborough"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/bYLM3GpNUZnoFElPXp1zlhDPdtv.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/2kVt8oj1cSz4GAP0Hi8SESOiH0T.jpg",
+    "trailerId": "tx6_JMDFfWI",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Joseph Kosinski.",
+    "whyRecommended": "Top match based on Action themes and direction by Joseph Kosinski.",
+    "similarTags": [
+      "Joseph Kosinski",
+      "Action",
+      "Science Fiction"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$120 Million",
+    "revenue": "$286 Million",
+    "tagline": "Earth is a memory worth fighting for",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-679",
+    "title": "Aliens",
+    "originalTitle": "Aliens",
+    "year": 1986,
+    "runtime": "137 min",
+    "genres": [
+      "Horror",
+      "Action",
+      "Thriller",
+      "Science Fiction"
+    ],
+    "imdbRating": 7.7,
+    "matchScore": 91,
+    "synopsis": "When Ripley's lifepod is found by a salvage crew over 50 years later, she finds that terra-formers are on the very planet they found the alien species. When the company sends a family of colonists out to investigate her story, all contact is lost with the planet and colonists. They enlist Ripley and the colonial marines to return and search for answers.",
+    "director": "James Cameron",
+    "cast": [
+      "Sigourney Weaver",
+      "Michael Biehn",
+      "James Remar",
+      "Paul Reiser"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/r1x5JGpyqZU8PYhbs4UcrO1Xb6x.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/4kix6fAblJIH6eMs0Ku2loyZJXK.jpg",
+    "trailerId": "8OxirbuHsBA",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Horror themes and direction by James Cameron.",
+    "whyRecommended": "Top match based on Horror themes and direction by James Cameron.",
+    "similarTags": [
+      "James Cameron",
+      "Horror",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Horror",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$18 Million",
+    "revenue": "$183 Million",
+    "tagline": "This Time It's War",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-621",
+    "title": "Grease",
+    "originalTitle": "Grease",
+    "year": 1978,
+    "runtime": "110 min",
+    "genres": [
+      "Romance"
+    ],
+    "imdbRating": 7.2,
+    "matchScore": 92,
+    "synopsis": "Australian good girl Sandy and greaser Danny fell in love over the summer. But when they unexpectedly discover they're now in the same high school, will they be able to rekindle their romance despite their eccentric friends?",
+    "director": "Randal Kleiser",
+    "cast": [
+      "John Travolta",
+      "Olivia Newton-John",
+      "Stockard Channing",
+      "Jeff Conaway"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/2rM7fQKpb7cs1Iq7IBqub9LFDzJ.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/2SRJMIoJzABzgyGw01U6VbQbvJD.jpg",
+    "trailerId": "THd96gHV7Tg",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Romance themes and direction by Randal Kleiser.",
+    "whyRecommended": "Top match based on Romance themes and direction by Randal Kleiser.",
+    "similarTags": [
+      "Randal Kleiser",
+      "Romance"
+    ],
+    "moods": [
+      "\u2728 Romance",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$6 Million",
+    "revenue": "$181 Million",
+    "tagline": "Grease is the word",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-13448",
+    "title": "Angels & Demons",
+    "originalTitle": "Angels & Demons",
+    "year": 2009,
+    "runtime": "138 min",
+    "genres": [
+      "Thriller",
+      "Mystery"
+    ],
+    "imdbRating": 6.5,
+    "matchScore": 93,
+    "synopsis": "Harvard symbologist Robert Langdon investigates a mysterious symbol seared into the chest of a murdered physicist. He discovers evidence of the unimaginable, the rebirth of an ancient secret brotherhood known as the Illuminati, the most powerful underground organization ever to walk the earth.",
+    "director": "Ron Howard",
+    "cast": [
+      "Tom Hanks",
+      "Ewan McGregor",
+      "Ayelet Zurer",
+      "Stellan Skarsg\u00e5rd"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/tFZQAuulEOtFTp0gHbVdEXwGrYe.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/olz8Xw3yOLpBAHKgPoSRwmomdM.jpg",
+    "trailerId": "arb2-aZMDFg",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Thriller themes and direction by Ron Howard.",
+    "whyRecommended": "Top match based on Thriller themes and direction by Ron Howard.",
+    "similarTags": [
+      "Ron Howard",
+      "Thriller",
+      "Mystery"
+    ],
+    "moods": [
+      "\u2728 Thriller",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$150 Million",
+    "revenue": "$356 Million",
+    "tagline": "An extraordinary story.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-10674",
+    "title": "Mulan",
+    "originalTitle": "Mulan",
+    "year": 1998,
+    "runtime": "88 min",
+    "genres": [
+      "Animation",
+      "Family",
+      "Adventure"
+    ],
+    "imdbRating": 7.6,
+    "matchScore": 94,
+    "synopsis": "A tomboyish girl disguises herself as a young man so she can fight with the Imperial Chinese Army against the invading Huns. With help from wise-cracking dragon Mushu, Mulan just might save her country -- and win the heart of handsome Captain Li Shang.",
+    "director": "Tony Bancroft",
+    "cast": [
+      "Eddie Murphy",
+      "Jackie Chan",
+      "Ming-Na Wen",
+      "Lea Salonga"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/jAbexAtB0aSfP5Ay4TpWHARyVnG.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/mUYV0ZdsDEliGaQahcQH1F3grsP.jpg",
+    "trailerId": "2z2KsFZs-8I",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Animation themes and direction by Tony Bancroft.",
+    "whyRecommended": "Top match based on Animation themes and direction by Tony Bancroft.",
+    "similarTags": [
+      "Tony Bancroft",
+      "Animation",
+      "Family"
+    ],
+    "moods": [
+      "\u2728 Animation",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$90 Million",
+    "revenue": "$304 Million",
+    "tagline": "This time, the princess saves the prince.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-411",
+    "title": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+    "originalTitle": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+    "year": 2005,
+    "runtime": "143 min",
+    "genres": [
+      "Adventure",
+      "Family",
+      "Fantasy"
+    ],
+    "imdbRating": 6.7,
+    "matchScore": 95,
+    "synopsis": "Siblings Lucy, Edmund, Susan and Peter step through a magical wardrobe and find the land of Narnia. There, the they discover a charming, once peaceful kingdom that has been plunged into eternal winter by the evil White Witch, Jadis. Aided by the wise and magnificent lion, Aslan, the children lead Narnia into a spectacular, climactic battle to be free of the Witch's glacial powers forever.",
+    "director": "Andrew Adamson",
+    "cast": [
+      "William Moseley",
+      "Anna Popplewell",
+      "Skandar Keynes",
+      "Georgie Henley"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/iREd0rNCjYdf5Ar0vfaW32yrkm.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/tuDhEdza074bA497bO9WFEPs6O6.jpg",
+    "trailerId": "3mKPrxjwF7A",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Andrew Adamson.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Andrew Adamson.",
+    "similarTags": [
+      "Andrew Adamson",
+      "Adventure",
+      "Family"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$180 Million",
+    "revenue": "$748 Million",
+    "tagline": "Evil Has Reigned For 100 Years...",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-68724",
+    "title": "Elysium",
+    "originalTitle": "Elysium",
+    "year": 2013,
+    "runtime": "109 min",
+    "genres": [
+      "Science Fiction",
+      "Action",
+      "Drama",
+      "Thriller"
+    ],
+    "imdbRating": 6.4,
+    "matchScore": 96,
+    "synopsis": "In the year 2159, two classes of people exist: the very wealthy who live on a pristine man-made space station called Elysium, and the rest, who live on an overpopulated, ruined Earth. Secretary Rhodes (Jodie Foster), a hard line government of\ufb01cial, will stop at nothing to enforce anti-immigration laws and preserve the luxurious lifestyle of the citizens of Elysium. That doesn\u2019t stop the people of Earth from trying to get in, by any means they can. When unlucky Max (Matt Damon) is backed into a corner, he agrees to take on a daunting mission that, if successful, will not only save his life, but could bring equality to these polarized worlds.",
+    "director": "Neill Blomkamp",
+    "cast": [
+      "Matt Damon",
+      "Jodie Foster",
+      "Sharlto Copley",
+      "Alice Braga"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/aRjuJuPXHtVs6YegfeeQWXGRs1E.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/oo9GyiNKvR4CU1etuYl081UJ1LE.jpg",
+    "trailerId": "oIBtePb-dGY",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Science Fiction themes and direction by Neill Blomkamp.",
+    "whyRecommended": "Top match based on Science Fiction themes and direction by Neill Blomkamp.",
+    "similarTags": [
+      "Neill Blomkamp",
+      "Science Fiction",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Science Fiction",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$115 Million",
+    "revenue": "$286 Million",
+    "tagline": "He can save us all.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-87",
+    "title": "Indiana Jones and the Temple of Doom",
+    "originalTitle": "Indiana Jones and the Temple of Doom",
+    "year": 1984,
+    "runtime": "118 min",
+    "genres": [
+      "Adventure",
+      "Action"
+    ],
+    "imdbRating": 7.1,
+    "matchScore": 97,
+    "synopsis": "After arriving in India, Indiana Jones is asked by a desperate village to find a mystical stone. He agrees \u2013 and stumbles upon a secret cult plotting a terrible plan in the catacombs of an ancient palace.",
+    "director": "Steven Spielberg",
+    "cast": [
+      "Harrison Ford",
+      "Kate Capshaw",
+      "Jonathan Ke Quan",
+      "Amrish Puri"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gpdVNUaa4LhRMLfJOPj1AZdhAZ3.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/f133nWlU6yUkZqqwcCXCbTEJWHr.jpg",
+    "trailerId": "WBdyLyijZhU",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Steven Spielberg.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Steven Spielberg.",
+    "similarTags": [
+      "Steven Spielberg",
+      "Adventure",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$28 Million",
+    "revenue": "$333 Million",
+    "tagline": "If adventure has a name... it must be Indiana Jones.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-652",
+    "title": "Troy",
+    "originalTitle": "Troy",
+    "year": 2004,
+    "runtime": "163 min",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "War"
+    ],
+    "imdbRating": 6.9,
+    "matchScore": 98,
+    "synopsis": "In year 1250 B.C. during the late Bronze age, two emerging nations begin to clash. Paris, the Trojan prince, convinces Helen, Queen of Sparta, to leave her husband Menelaus, and sail with him back to Troy. After Menelaus finds out that his wife was taken by the Trojans, he asks his brother Agamemnom to help him get her back. Agamemnon sees this as an opportunity for power. So they set off with 1,000 ships holding 50,000 Greeks to Troy. With the help of Achilles, the Greeks are able to fight the never before defeated Trojans.",
+    "director": "Wolfgang Petersen",
+    "cast": [
+      "Brad Pitt",
+      "Orlando Bloom",
+      "Eric Bana",
+      "Brian Cox"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/a07wLy4ONfpsjnBqMwhlWTJTcm.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/wyFJcodi5T9LJAeiE8Se7ScdOFj.jpg",
+    "trailerId": "P8xLgg-MNKw",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Wolfgang Petersen.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Wolfgang Petersen.",
+    "similarTags": [
+      "Wolfgang Petersen",
+      "Adventure",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$175 Million",
+    "revenue": "$497 Million",
+    "tagline": "For passion. For honor. For destiny. For victory. For love.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-10681",
+    "title": "WALL\u00b7E",
+    "originalTitle": "WALL\u00b7E",
+    "year": 2008,
+    "runtime": "98 min",
+    "genres": [
+      "Animation",
+      "Family"
+    ],
+    "imdbRating": 7.8,
+    "matchScore": 99,
+    "synopsis": "WALL\u00b7E is the last robot left on an Earth that has been overrun with garbage and all humans have fled to outer space. For 700 years he has continued to try and clean up the mess, but has developed some rather interesting human-like qualities. When a ship arrives with a sleek new type of robot, WALL\u00b7E thinks he's finally found a friend and stows away on the ship when it leaves.",
     "director": "Andrew Stanton",
     "cast": [
-      "Albert Brooks",
-      "Ellen DeGeneres"
+      "Ben Burtt",
+      "Elissa Knight",
+      "Jeff Garlin",
+      "Fred Willard"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/hbhFnRzzg6ZDmm8YAmxBnQpQIPh.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/nYs4ZwnJBK4AgljhvzwNz7fpr3E.jpg",
+    "trailerId": "Tbr_L9Gap_M",
     "streamingOn": [
-      "Disney+"
+      "Prime Video"
     ],
-    "aiReasoning": "Top recommendation from English cinema. A high-quality Family masterpiece directed by Andrew Stanton.",
-    "whyRecommended": "Top recommendation from English cinema. A high-quality Family masterpiece directed by Andrew Stanton.",
+    "aiReasoning": "Top match based on Animation themes and direction by Andrew Stanton.",
+    "whyRecommended": "Top match based on Animation themes and direction by Andrew Stanton.",
     "similarTags": [
-      "Andrew",
+      "Andrew Stanton",
       "Animation",
-      "Adventure"
+      "Family"
     ],
     "moods": [
-      "✨ Family",
-      "🔥 Animation"
+      "\u2728 Animation",
+      "\ud83d\udd25 Popular"
     ],
     "language": "English",
     "country": "USA",
-    "budget": "$171 Million",
-    "revenue": "$530 Million",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Universal Studios",
-    "reviews": []
+    "budget": "$180 Million",
+    "revenue": "$521 Million",
+    "tagline": "An adventure beyond the ordinar-E.",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "korean-parasite",
-    "title": "Parasite",
-    "year": 2019,
-    "runtime": "2h 12m",
+    "id": "tmdb-223702",
+    "title": "Sausage Party",
+    "originalTitle": "Sausage Party",
+    "year": 2016,
+    "runtime": "83 min",
     "genres": [
-      "Drama",
-      "Thriller",
-      "Comedy",
-      "Action",
-      "Crime",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller"
-    ],
-    "imdbRating": 7.4,
-    "rottenTomatoesScore": 80,
-    "matchScore": 90,
-    "synopsis": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
-    "director": "Bong Joon Ho",
-    "cast": [
-      "Song Kang-ho",
-      "Lee Sun-kyun"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "5x52P2Z22oo",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Bong Joon Ho.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Bong Joon Ho.",
-    "similarTags": [
-      "Bong",
-      "Thriller",
-      "Comedy"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Thriller"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "$11 Million",
-    "revenue": "$263 Million",
-    "tagline": "Act like you own the place.",
-    "productionCompany": "CJ Entertainment",
-    "awards": [
-      "4 Academy Awards including Best Picture"
-    ],
-    "reviews": []
-  },
-  {
-    "id": "korean-oldboy",
-    "title": "Oldboy",
-    "year": 2003,
-    "runtime": "2h 0m",
-    "genres": [
-      "Action",
-      "Thriller",
-      "Mystery",
-      "Psychological",
       "Adventure",
-      "Documentary",
-      "Suspense",
-      "Cyberpunk"
-    ],
-    "imdbRating": 7.5,
-    "rottenTomatoesScore": 81,
-    "matchScore": 91,
-    "synopsis": "After being kidnapped and imprisoned for fifteen years, a man is released, only to find that he must find his captor in five days.",
-    "director": "Park Chan-wook",
-    "cast": [
-      "Choi Min-sik",
-      "Yoo Ji-tae"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "2Ed91Bf36-k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Park Chan-wook.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Park Chan-wook.",
-    "similarTags": [
-      "Park",
-      "Thriller",
-      "Mystery"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Thriller"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "$3 Million",
-    "revenue": "$15 Million",
-    "tagline": "Laugh, and the world laughs with you. Weep, and you weep alone.",
-    "productionCompany": "Show East",
-    "awards": [
-      "Grand Prix at the 2004 Cannes Film Festival"
-    ],
-    "reviews": []
-  },
-  {
-    "id": "korean-memories-murder",
-    "title": "Memories of Murder",
-    "year": 2003,
-    "runtime": "2h 11m",
-    "genres": [
-      "Crime",
-      "Drama",
-      "Mystery",
       "Animation",
-      "Musical",
-      "Thriller",
-      "Noir"
+      "Comedy",
+      "Fantasy"
     ],
-    "imdbRating": 7.6,
-    "rottenTomatoesScore": 82,
-    "matchScore": 92,
-    "synopsis": "Two local detectives in a small province attempt to solve a series of brutal murders targeting women in the 1980s.",
-    "director": "Bong Joon Ho",
+    "imdbRating": 5.6,
+    "matchScore": 90,
+    "synopsis": "Sausage Party, the first R-rated CG animated movie, is about one sausage leading a group of supermarket products on a quest to discover the truth about their existence and what really happens when they become chosen to leave the grocery store.",
+    "director": "Conrad Vernon",
     "cast": [
-      "Song Kang-ho",
-      "Kim Sang-kyung"
+      "Seth Rogen",
+      "Kristen Wiig",
+      "Jonah Hill",
+      "Bill Hader"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1505635552518-3448ff116af3?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "6C45QhK8n6Y",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vNgdPJQ5CI60oEiiHLKRNrsDhMy.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/hsb8nNBt3emvWqBs7Xv5IKlz6Im.jpg",
+    "trailerId": "GAJrBPUVDJM",
     "streamingOn": [
       "Max"
     ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Crime masterpiece directed by Bong Joon Ho.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Crime masterpiece directed by Bong Joon Ho.",
+    "aiReasoning": "Top match based on Adventure themes and direction by Conrad Vernon.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Conrad Vernon.",
     "similarTags": [
-      "Bong",
-      "Drama",
-      "Mystery"
+      "Conrad Vernon",
+      "Adventure",
+      "Animation"
     ],
     "moods": [
-      "✨ Crime",
-      "🔥 Drama"
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
     ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "$2.8 Million",
-    "revenue": "$17 Million",
-    "tagline": "In the summer of 1986, a small province of South Korea changed forever.",
-    "productionCompany": "CJ Entertainment",
-    "awards": [
-      "Grand Bell Award for Best Actor"
-    ],
-    "reviews": []
+    "language": "English",
+    "country": "USA",
+    "budget": "$19 Million",
+    "revenue": "$140 Million",
+    "tagline": "Always use condiments",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "korean-handmaiden",
-    "title": "The Handmaiden",
-    "year": 2016,
-    "runtime": "2h 25m",
+    "id": "tmdb-562",
+    "title": "Die Hard",
+    "originalTitle": "Die Hard",
+    "year": 1988,
+    "runtime": "131 min",
     "genres": [
-      "Romance",
-      "Drama",
-      "Thriller",
-      "Anime",
-      "Family",
-      "War",
-      "Survival"
+      "Action",
+      "Thriller"
     ],
-    "imdbRating": 7.7,
-    "rottenTomatoesScore": 83,
-    "matchScore": 93,
-    "synopsis": "A woman is hired as a handmaiden to a Japanese heiress, but secretly plots to defraud her of her inheritance.",
-    "director": "Park Chan-wook",
+    "imdbRating": 7.5,
+    "matchScore": 91,
+    "synopsis": "NYPD cop, John McClane's plan to reconcile with his estranged wife is thrown for a serious loop when minutes after he arrives at her office, the entire building is overtaken by a group of terrorists. With little help from the LAPD, wisecracking McClane sets out to single-handedly rescue the hostages and bring the bad guys down.",
+    "director": "John McTiernan",
     "cast": [
-      "Kim Min-hee",
-      "Kim Tae-ri"
+      "Bruce Willis",
+      "Alan Rickman",
+      "Alexander Godunov",
+      "Bonnie Bedelia"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "Q4Z5jfjxdvQ",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7Bjd8kfmDSOzpmhySpEhkUyK2oH.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/bvk2AAH64lP2YZs02Q3jskfHT8j.jpg",
+    "trailerId": "TotSHi0ViUc",
     "streamingOn": [
       "Disney+"
     ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Romance masterpiece directed by Park Chan-wook.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Romance masterpiece directed by Park Chan-wook.",
+    "aiReasoning": "Top match based on Action themes and direction by John McTiernan.",
+    "whyRecommended": "Top match based on Action themes and direction by John McTiernan.",
     "similarTags": [
-      "Park",
-      "Drama",
+      "John McTiernan",
+      "Action",
       "Thriller"
     ],
     "moods": [
-      "✨ Romance",
-      "🔥 Drama"
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
     ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "$8 Million",
-    "revenue": "$38 Million",
-    "tagline": "A story of deception and desire.",
-    "productionCompany": "Moho Film",
-    "awards": [
-      "BAFTA Award for Best Film Not in the English Language"
-    ],
-    "reviews": []
+    "language": "English",
+    "country": "USA",
+    "budget": "$28 Million",
+    "revenue": "$140 Million",
+    "tagline": "40 Stories. Twelve Terrorists. One Cop.",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "korean-train-busan",
-    "title": "Train to Busan",
-    "year": 2016,
-    "runtime": "1h 58m",
+    "id": "tmdb-238615",
+    "title": "Self/less",
+    "originalTitle": "Self/less",
+    "year": 2015,
+    "runtime": "116 min",
     "genres": [
-      "Action",
-      "Horror",
-      "Survival",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi",
-      "Western",
-      "Space"
+      "Science Fiction",
+      "Mystery",
+      "Thriller"
     ],
-    "imdbRating": 7.8,
-    "rottenTomatoesScore": 84,
-    "matchScore": 94,
-    "synopsis": "A father and daughter get trapped in a high-speed train during a sudden zombie outbreak in South Korea.",
-    "director": "Yeon Sang-ho",
+    "imdbRating": 6.3,
+    "matchScore": 92,
+    "synopsis": "An extremely wealthy elderly man dying from cancer undergoes a radical medical procedure that transfers his consciousness to the body of a healthy young man but everything may not be as good as it seems when he starts to uncover the mystery of the body's origins and the secret organization that will kill to keep its secrets.",
+    "director": "Tarsem Singh",
     "cast": [
-      "Gong Yoo",
-      "Ma Dong-seok"
+      "Ryan Reynolds",
+      "Ben Kingsley",
+      "Natalie Martinez",
+      "Matthew Goode"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536768139911-e290a59002e4?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "pyWuPct77o0",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/hCqXcAMeBiPVnLUU8PNsKUYi6Gn.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/vzbsqeoG7xH8EVOBiYBSIjU8wt1.jpg",
+    "trailerId": "Mc4sz6neHDs",
     "streamingOn": [
       "Netflix",
       "Prime Video"
     ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Yeon Sang-ho.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Yeon Sang-ho.",
+    "aiReasoning": "Top match based on Science Fiction themes and direction by Tarsem Singh.",
+    "whyRecommended": "Top match based on Science Fiction themes and direction by Tarsem Singh.",
     "similarTags": [
-      "Yeon",
-      "Horror",
-      "Survival"
+      "Tarsem Singh",
+      "Science Fiction",
+      "Mystery"
     ],
     "moods": [
-      "✨ Action",
-      "🔥 Horror"
+      "\u2728 Science Fiction",
+      "\ud83d\udd25 Popular"
     ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "$8.5 Million",
-    "revenue": "$98 Million",
-    "tagline": "Life or death, the final destination is Busan.",
-    "productionCompany": "Redpeter Films",
-    "awards": [
-      "Blue Dragon Film Award for Technical Excellence"
-    ],
-    "reviews": []
+    "language": "English",
+    "country": "USA",
+    "budget": "$26 Million",
+    "revenue": "$30 Million",
+    "tagline": "God Created Man. Man Created Immortality.",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "korean-saw-devil",
-    "title": "I Saw the Devil",
-    "year": 2010,
-    "runtime": "2h 24m",
+    "id": "tmdb-180",
+    "title": "Minority Report",
+    "originalTitle": "Minority Report",
+    "year": 2002,
+    "runtime": "145 min",
     "genres": [
       "Action",
       "Thriller",
-      "Crime",
-      "Comedy",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel"
+      "Science Fiction",
+      "Mystery"
     ],
-    "imdbRating": 7.9,
-    "rottenTomatoesScore": 85,
-    "matchScore": 95,
-    "synopsis": "A secret agent hunts down a sadistic serial killer who murdered his pregnant fiancee, starting a game of cat and mouse.",
-    "director": "Kim Jee-woon",
+    "imdbRating": 7.1,
+    "matchScore": 93,
+    "synopsis": "John Anderton is a top 'Precrime' cop in the late-21st century, when technology can predict crimes before they're committed. But Anderton becomes the quarry when another investigator targets him for a murder charge.",
+    "director": "Steven Spielberg",
     "cast": [
-      "Lee Byung-hun",
-      "Choi Min-sik"
+      "Tom Cruise",
+      "Colin Farrell",
+      "Samantha Morton",
+      "Max von Sydow"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qtgFcnwh9dAFLocsDk2ySDVS8UF.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/PrMb3oeEluauy0q9ZO5xL33A6C.jpg",
+    "trailerId": "3JNsNp2DVSE",
     "streamingOn": [
       "Prime Video"
     ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Kim Jee-woon.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Kim Jee-woon.",
+    "aiReasoning": "Top match based on Action themes and direction by Steven Spielberg.",
+    "whyRecommended": "Top match based on Action themes and direction by Steven Spielberg.",
     "similarTags": [
-      "Kim",
-      "Thriller",
-      "Crime"
+      "Steven Spielberg",
+      "Action",
+      "Thriller"
     ],
     "moods": [
-      "✨ Action",
-      "🔥 Thriller"
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
     ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹100 Crore",
-    "revenue": "₹365 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
+    "language": "English",
+    "country": "USA",
+    "budget": "$102 Million",
+    "revenue": "$358 Million",
+    "tagline": "The system is perfect until it comes after you.",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "korean-burning",
-    "title": "Burning",
-    "year": 2018,
-    "runtime": "2h 28m",
+    "id": "tmdb-224141",
+    "title": "Into the Woods",
+    "originalTitle": "Into the Woods",
+    "year": 2014,
+    "runtime": "125 min",
     "genres": [
-      "Drama",
-      "Mystery",
-      "Psychological",
-      "Crime",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller",
-      "Action"
+      "Fantasy",
+      "Comedy",
+      "Music"
     ],
-    "imdbRating": 8,
-    "rottenTomatoesScore": 86,
-    "matchScore": 96,
-    "synopsis": "A delivery boy runs into a childhood classmate who asks him to look after her cat while she travels to Africa.",
-    "director": "Lee Chang-dong",
+    "imdbRating": 5.6,
+    "matchScore": 94,
+    "synopsis": "In a woods filled with magic and fairy tale characters, a baker and his wife set out to end the curse put on them by their neighbor, a spiteful witch.",
+    "director": "Rob Marshall",
     "cast": [
-      "Yoo Ah-in",
-      "Steven Yeun"
+      "Meryl Streep",
+      "Emily Blunt",
+      "James Corden",
+      "Anna Kendrick"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/bINGDDuvUnZyde2sIcSx41IE5b6.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/qF938YRj7RoYkjwOsXFDNYf907J.jpg",
+    "trailerId": "dRgr7itwgak",
     "streamingOn": [
       "Max"
     ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Lee Chang-dong.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Lee Chang-dong.",
+    "aiReasoning": "Top match based on Fantasy themes and direction by Rob Marshall.",
+    "whyRecommended": "Top match based on Fantasy themes and direction by Rob Marshall.",
     "similarTags": [
-      "Lee",
-      "Mystery",
-      "Psychological"
+      "Rob Marshall",
+      "Fantasy",
+      "Comedy"
     ],
     "moods": [
-      "✨ Drama",
-      "🔥 Mystery"
+      "\u2728 Fantasy",
+      "\ud83d\udd25 Popular"
     ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹108 Crore",
-    "revenue": "₹147 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
+    "language": "English",
+    "country": "USA",
+    "budget": "$50 Million",
+    "revenue": "$212 Million",
+    "tagline": "Be careful what you wish for...",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "korean-snowpiercer",
-    "title": "Snowpiercer",
-    "year": 2013,
-    "runtime": "2h 6m",
+    "id": "tmdb-2062",
+    "title": "Ratatouille",
+    "originalTitle": "Ratatouille",
+    "year": 2007,
+    "runtime": "111 min",
     "genres": [
-      "Sci-Fi",
+      "Animation",
+      "Comedy",
+      "Family",
+      "Fantasy"
+    ],
+    "imdbRating": 7.5,
+    "matchScore": 95,
+    "synopsis": "A rat named Remy dreams of becoming a great French chef despite his family's wishes and the obvious problem of being a rat in a decidedly rodent-phobic profession. When fate places Remy in the sewers of Paris, he finds himself ideally situated beneath a restaurant made famous by his culinary hero, Auguste Gusteau. Despite the apparent dangers of being an unlikely - and certainly unwanted - visitor in the kitchen of a fine French restaurant, Remy's passion for cooking soon sets into motion a hilarious and exciting rat race that turns the culinary world of Paris upside down.",
+    "director": "Jan Pinkava",
+    "cast": [
+      "Patton Oswalt",
+      "Ian Holm",
+      "Lou Romano",
+      "Brian Dennehy"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/t3vaWRPSf6WjDSamIkKDs1iQWna.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/jQ6Vuxe1CEPMXTF7d0fZgdIBY8U.jpg",
+    "trailerId": "NgsQ8mVkN8w",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Animation themes and direction by Jan Pinkava.",
+    "whyRecommended": "Top match based on Animation themes and direction by Jan Pinkava.",
+    "similarTags": [
+      "Jan Pinkava",
+      "Animation",
+      "Comedy"
+    ],
+    "moods": [
+      "\u2728 Animation",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$150 Million",
+    "revenue": "$623 Million",
+    "tagline": "He's dying to become a chef.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-188927",
+    "title": "Star Trek Beyond",
+    "originalTitle": "Star Trek Beyond",
+    "year": 2016,
+    "runtime": "122 min",
+    "genres": [
       "Action",
-      "Cyberpunk",
-      "Documentary",
-      "Mystery",
-      "Suspense",
+      "Adventure",
+      "Science Fiction"
+    ],
+    "imdbRating": 6.6,
+    "matchScore": 96,
+    "synopsis": "The USS Enterprise crew explores the furthest reaches of uncharted space, where they encounter a mysterious new enemy who puts them and everything the Federation stands for to the test.",
+    "director": "Justin Lin",
+    "cast": [
+      "Chris Pine",
+      "Zachary Quinto",
+      "Karl Urban",
+      "Simon Pegg"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cnQp8GmOWahIgQaH60Kwez3TNzw.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/sUJrnMbL2xLMjMHk4VdReNrL7BK.jpg",
+    "trailerId": "NwpvjQKdpvI",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Justin Lin.",
+    "whyRecommended": "Top match based on Action themes and direction by Justin Lin.",
+    "similarTags": [
+      "Justin Lin",
+      "Action",
       "Adventure"
     ],
-    "imdbRating": 8.1,
-    "rottenTomatoesScore": 87,
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$185 Million",
+    "revenue": "$343 Million",
+    "tagline": "An extraordinary story.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-57800",
+    "title": "Ice Age: Continental Drift",
+    "originalTitle": "Ice Age: Continental Drift",
+    "year": 2012,
+    "runtime": "88 min",
+    "genres": [
+      "Animation",
+      "Comedy",
+      "Adventure",
+      "Family"
+    ],
+    "imdbRating": 6.2,
     "matchScore": 97,
-    "synopsis": "A rebellion erupts aboard a perpetually moving train carrying the last survivors of humanity in a frozen world.",
-    "director": "Bong Joon Ho",
+    "synopsis": "Manny, Diego, and Sid embark upon another adventure after their continent is set adrift. Using an iceberg as a ship, they encounter sea creatures and battle pirates as they explore a new world.",
+    "director": "Steve Martino",
+    "cast": [
+      "John Leguizamo",
+      "Ray Romano",
+      "Chris Wedge",
+      "Denis Leary"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/dfp1BZF7FxbBUyzHvMOI9t8NWDD.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/liiPM38H376CDqxJ7VeQjan5YUy.jpg",
+    "trailerId": "0Int9oeZN5o",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Animation themes and direction by Steve Martino.",
+    "whyRecommended": "Top match based on Animation themes and direction by Steve Martino.",
+    "similarTags": [
+      "Steve Martino",
+      "Animation",
+      "Comedy"
+    ],
+    "moods": [
+      "\u2728 Animation",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$95 Million",
+    "revenue": "$877 Million",
+    "tagline": "Manny, Diego, and Sid embark upon another adventure after their continent is set adrift.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-1271",
+    "title": "300",
+    "originalTitle": "300",
+    "year": 2006,
+    "runtime": "117 min",
+    "genres": [
+      "Action",
+      "Adventure",
+      "War"
+    ],
+    "imdbRating": 7.0,
+    "matchScore": 98,
+    "synopsis": "Based on Frank Miller's graphic novel, \"300\" is very loosely based the 480 B.C. Battle of Thermopylae, where the King of Sparta led his army against the advancing Persians; the battle is said to have inspired all of Greece to band together against the Persians, and helped usher in the world's first democracy.",
+    "director": "Zack Snyder",
+    "cast": [
+      "Gerard Butler",
+      "Lena Headey",
+      "Dominic West",
+      "David Wenham"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/h7Lcio0c9ohxPhSZg42eTlKIVVY.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/lgBZlJ1LHQel5nneNQMoesmvc7l.jpg",
+    "trailerId": "UrIbxk7idYA",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Zack Snyder.",
+    "whyRecommended": "Top match based on Action themes and direction by Zack Snyder.",
+    "similarTags": [
+      "Zack Snyder",
+      "Action",
+      "Adventure"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$65 Million",
+    "revenue": "$422 Million",
+    "tagline": "Spartans, prepare for glory!",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-13183",
+    "title": "Watchmen",
+    "originalTitle": "Watchmen",
+    "year": 2009,
+    "runtime": "163 min",
+    "genres": [
+      "Action",
+      "Mystery",
+      "Science Fiction"
+    ],
+    "imdbRating": 7.0,
+    "matchScore": 99,
+    "synopsis": "In a gritty and alternate 1985 the glory days of costumed vigilantes have been brought to a close by a government crackdown, but after one of the masked veterans is brutally murdered an investigation into the killer is initiated. The reunited heroes set out to prevent their own destruction, but in doing so uncover a sinister plot that puts all of humanity in grave danger.",
+    "director": "Zack Snyder",
+    "cast": [
+      "Malin \u00c5kerman",
+      "Billy Crudup",
+      "Carla Gugino",
+      "Jeffrey Dean Morgan"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/aVURelN3pM56lFM7Dgfs5TixcIf.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/dH7ia3vtkYCa3CBvDnvVjqm9uiQ.jpg",
+    "trailerId": "89xoXmHgG00",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Zack Snyder.",
+    "whyRecommended": "Top match based on Action themes and direction by Zack Snyder.",
+    "similarTags": [
+      "Zack Snyder",
+      "Action",
+      "Mystery"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$130 Million",
+    "revenue": "$185 Million",
+    "tagline": "Justice is coming to all of us.  No matter what we do.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-286565",
+    "title": "Paper Towns",
+    "originalTitle": "Paper Towns",
+    "year": 2015,
+    "runtime": "109 min",
+    "genres": [
+      "Drama",
+      "Mystery",
+      "Romance"
+    ],
+    "imdbRating": 6.1,
+    "matchScore": 90,
+    "synopsis": "Quentin Jacobsen has spent a lifetime loving the magnificently adventurous Margo Roth Spiegelman from afar. So when she cracks open a window and climbs back into his life-dressed like a ninja and summoning him for an ingenious campaign of revenge-he follows. After their all-nighter ends and a new day breaks, Q arrives at school to discover that Margo, always an enigma, has now become a mystery. But Q soon learns that there are clues-and they're for him. Urged down a disconnected path, the closer he gets, the less Q sees of the girl he thought he knew.",
+    "director": "Jake Schreier",
+    "cast": [
+      "Nat Wolff",
+      "Cara Delevingne",
+      "Justice Smith",
+      "Austin Abrams"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/lVW67w7eWwmBhbBCc4f983pO8m6.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/mwoIzHsliirmS0IlSrf2DvVouid.jpg",
+    "trailerId": "F1dDr4b36Mo",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Jake Schreier.",
+    "whyRecommended": "Top match based on Drama themes and direction by Jake Schreier.",
+    "similarTags": [
+      "Jake Schreier",
+      "Drama",
+      "Mystery"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$12 Million",
+    "revenue": "$85 Million",
+    "tagline": "Get Lost. Get Found.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-110415",
+    "title": "Snowpiercer",
+    "originalTitle": "Snowpiercer",
+    "year": 2013,
+    "runtime": "126 min",
+    "genres": [
+      "Action",
+      "Science Fiction",
+      "Drama"
+    ],
+    "imdbRating": 6.7,
+    "matchScore": 91,
+    "synopsis": "In a future where a failed global-warming experiment kills off most life on the planet, a class system evolves aboard the Snowpiercer, a train that travels around the globe via a perpetual-motion engine.",
+    "director": "Bong Joon-ho",
     "cast": [
       "Chris Evans",
-      "Song Kang-ho"
+      "Song Kang-ho",
+      "Ed Harris",
+      "John Hurt"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/kw6YQudA0TMcNmGUGy5XIw7zbnV.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/tBIRtMCELcA5PxO7z7OiuCHJdFO.jpg",
+    "trailerId": "3Np3v7xnNJk",
     "streamingOn": [
-      "Disney+"
+      "Prime Video"
     ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Sci-Fi masterpiece directed by Bong Joon Ho.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Sci-Fi masterpiece directed by Bong Joon Ho.",
+    "aiReasoning": "Top match based on Action themes and direction by Bong Joon-ho.",
+    "whyRecommended": "Top match based on Action themes and direction by Bong Joon-ho.",
     "similarTags": [
-      "Bong",
+      "Bong Joon-ho",
       "Action",
-      "Cyberpunk"
+      "Science Fiction"
     ],
     "moods": [
-      "✨ Sci-Fi",
-      "🔥 Action"
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
     ],
     "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹104 Crore",
-    "revenue": "₹217 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
+    "country": "International",
+    "budget": "$39 Million",
+    "revenue": "$86 Million",
+    "tagline": "AD 2031, the passengers in the train are the only survivors on Earth.",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "korean-wailing",
-    "title": "The Wailing",
-    "year": 2016,
-    "runtime": "2h 36m",
+    "id": "tmdb-49519",
+    "title": "The Croods",
+    "originalTitle": "The Croods",
+    "year": 2013,
+    "runtime": "98 min",
     "genres": [
-      "Horror",
-      "Mystery",
-      "Suspense",
-      "Drama",
-      "Musical",
-      "Thriller",
-      "Noir",
+      "Adventure",
+      "Animation",
+      "Comedy",
+      "Family",
+      "Fantasy"
+    ],
+    "imdbRating": 6.8,
+    "matchScore": 92,
+    "synopsis": "The Croods is a prehistoric comedy adventure that follows the world's first family as they embark on a journey of a lifetime when the cave that has always shielded them from danger is destroyed. Traveling across a spectacular landscape, the Croods discover an incredible new world filled with fantastic creatures -- and their outlook is changed forever.",
+    "director": "Chris Sanders",
+    "cast": [
+      "Nicolas Cage",
+      "Emma Stone",
+      "Ryan Reynolds",
+      "Catherine Keener"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/27zvjVOtOi5ped1HSlJKNsKXkFH.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/wFN8llYh215M8i2fqWAcPV8CSyL.jpg",
+    "trailerId": "E80GplS1OG8",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Chris Sanders.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Chris Sanders.",
+    "similarTags": [
+      "Chris Sanders",
+      "Adventure",
       "Animation"
     ],
-    "imdbRating": 8.2,
-    "rottenTomatoesScore": 88,
-    "matchScore": 98,
-    "synopsis": "A mysterious disease spreads in a small mountain village after a Japanese stranger arrives.",
-    "director": "Na Hong-jin",
-    "cast": [
-      "Kwak Do-won",
-      "Hwang Jung-min"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518063319789-7217e6706b04?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Horror masterpiece directed by Na Hong-jin.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Horror masterpiece directed by Na Hong-jin.",
-    "similarTags": [
-      "Na",
-      "Mystery",
-      "Suspense"
-    ],
     "moods": [
-      "✨ Horror",
-      "🔥 Mystery"
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
     ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹97 Crore",
-    "revenue": "₹288 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "korean-minari",
-    "title": "Minari",
-    "year": 2020,
-    "runtime": "1h 55m",
-    "genres": [
-      "Drama",
-      "Family",
-      "Romance",
-      "War",
-      "Survival",
-      "Anime"
-    ],
-    "imdbRating": 8.3,
-    "rottenTomatoesScore": 89,
-    "matchScore": 99,
-    "synopsis": "A Korean-American family moves to an Arkansas farm in search of their own American Dream.",
-    "director": "Lee Isaac Chung",
-    "cast": [
-      "Steven Yeun",
-      "Han Ye-ri"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Lee Isaac Chung.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Lee Isaac Chung.",
-    "similarTags": [
-      "Lee",
-      "Family",
-      "Romance"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Family"
-    ],
-    "language": "Korean",
+    "language": "English",
     "country": "USA",
-    "budget": "₹81 Crore",
-    "revenue": "₹416 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "korean-taxi-driver",
-    "title": "A Taxi Driver",
-    "year": 2017,
-    "runtime": "2h 17m",
-    "genres": [
-      "Drama",
-      "History",
-      "Fantasy",
-      "Sci-Fi",
-      "Western",
-      "Space",
-      "Biography"
-    ],
-    "imdbRating": 8.4,
-    "rottenTomatoesScore": 90,
-    "matchScore": 90,
-    "synopsis": "A taxi driver in Seoul reluctantly drives a German reporter to Gwangju during a historic uprising.",
-    "director": "Jang Hoon",
-    "cast": [
-      "Song Kang-ho",
-      "Thomas Kretschmann"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Jang Hoon.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Jang Hoon.",
-    "similarTags": [
-      "Jang",
-      "History",
-      "Fantasy"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 History"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹100 Crore",
-    "revenue": "₹459 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "korean-chaser",
-    "title": "The Chaser",
-    "year": 2008,
-    "runtime": "2h 5m",
-    "genres": [
-      "Action",
-      "Crime",
-      "Thriller",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel",
-      "Comedy"
-    ],
-    "imdbRating": 8.5,
-    "rottenTomatoesScore": 91,
-    "matchScore": 91,
-    "synopsis": "A badass detective tries to maintain peace while two rival Chinese-Korean gangs wage war.",
-    "director": "Na Hong-jin",
-    "cast": [
-      "Kim Yoon-seok",
-      "Ha Jung-woo"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Na Hong-jin.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Na Hong-jin.",
-    "similarTags": [
-      "Na",
-      "Crime",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Crime"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹68 Crore",
-    "revenue": "₹197 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "korean-thirst",
-    "title": "Thirst",
-    "year": 2009,
-    "runtime": "2h 13m",
-    "genres": [
-      "Horror",
-      "Romance",
-      "Drama",
-      "Superhero",
-      "Mystery Thriller",
-      "Action",
-      "Crime"
-    ],
-    "imdbRating": 8.6,
-    "rottenTomatoesScore": 92,
-    "matchScore": 92,
-    "synopsis": "A priest volunteering for a vaccine trial gets infected, becoming a vampire craving blood.",
-    "director": "Park Chan-wook",
-    "cast": [
-      "Song Kang-ho",
-      "Kim Ok-bin"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518063319789-7217e6706b04?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Horror masterpiece directed by Park Chan-wook.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Horror masterpiece directed by Park Chan-wook.",
-    "similarTags": [
-      "Park",
-      "Romance",
-      "Drama"
-    ],
-    "moods": [
-      "✨ Horror",
-      "🔥 Romance"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹71 Crore",
-    "revenue": "₹232 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "korean-mother-kor",
-    "title": "Mother",
-    "year": 2009,
-    "runtime": "2h 9m",
-    "genres": [
-      "Drama",
-      "Mystery",
-      "Thriller",
-      "Suspense",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary"
-    ],
-    "imdbRating": 8.7,
-    "rottenTomatoesScore": 93,
-    "matchScore": 93,
-    "synopsis": "A mother desperately searches for the real killer of a schoolgirl to clear her disabled son's name.",
-    "director": "Bong Joon Ho",
-    "cast": [
-      "Kim Hye-ja",
-      "Won Bin"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Bong Joon Ho.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Bong Joon Ho.",
-    "similarTags": [
-      "Bong",
-      "Mystery",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Mystery"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹28 Crore",
-    "revenue": "₹179 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "korean-jsa",
-    "title": "Joint Security Area",
-    "year": 2000,
-    "runtime": "1h 50m",
-    "genres": [
-      "Drama",
-      "Mystery",
-      "War",
-      "Musical",
-      "Thriller",
-      "Noir",
-      "Animation"
-    ],
-    "imdbRating": 8.8,
-    "rottenTomatoesScore": 94,
-    "matchScore": 94,
-    "synopsis": "A neutral investigator looks into a shootout at the border between North and South Korea.",
-    "director": "Park Chan-wook",
-    "cast": [
-      "Song Kang-ho",
-      "Lee Byung-hun"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Park Chan-wook.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Park Chan-wook.",
-    "similarTags": [
-      "Park",
-      "Mystery",
-      "War"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Mystery"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹64 Crore",
-    "revenue": "₹265 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "korean-sympathy-vengeance",
-    "title": "Sympathy for Mr. Vengeance",
-    "year": 2002,
-    "runtime": "2h 9m",
-    "genres": [
-      "Drama",
-      "Crime",
-      "Thriller",
-      "Romance",
-      "War",
-      "Survival",
-      "Anime",
-      "Family"
-    ],
-    "imdbRating": 8.9,
-    "rottenTomatoesScore": 95,
-    "matchScore": 95,
-    "synopsis": "A deaf-mute worker kidnaps his former boss's daughter to pay for his sister's kidney transplant.",
-    "director": "Park Chan-wook",
-    "cast": [
-      "Song Kang-ho",
-      "Shin Ha-kyun"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Park Chan-wook.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Park Chan-wook.",
-    "similarTags": [
-      "Park",
-      "Crime",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Crime"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹132 Crore",
-    "revenue": "₹429 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "korean-lady-vengeance",
-    "title": "Lady Vengeance",
-    "year": 2005,
-    "runtime": "1h 55m",
-    "genres": [
-      "Drama",
-      "Crime",
-      "Thriller",
-      "Sci-Fi",
-      "Western",
-      "Space",
-      "Biography",
-      "Fantasy"
-    ],
-    "imdbRating": 9,
-    "rottenTomatoesScore": 96,
-    "matchScore": 96,
-    "synopsis": "A woman framed for kidnapping and murder is released from prison, planning an elaborate revenge.",
-    "director": "Park Chan-wook",
-    "cast": [
-      "Lee Young-ae",
-      "Choi Min-sik"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Park Chan-wook.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Park Chan-wook.",
-    "similarTags": [
-      "Park",
-      "Crime",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Crime"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹25 Crore",
-    "revenue": "₹256 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "korean-miracle-cell-7",
-    "title": "Miracle in Cell No. 7",
-    "year": 2013,
-    "runtime": "2h 7m",
-    "genres": [
-      "Drama",
-      "Comedy",
-      "Family",
-      "Sports",
-      "Psychological",
-      "Time Travel",
-      "History"
-    ],
-    "imdbRating": 9.1,
-    "rottenTomatoesScore": 97,
-    "matchScore": 97,
-    "synopsis": "A mentally disabled man is falsely accused of murder, making friends with cellmates who smuggle his daughter.",
-    "director": "Lee Hwan-kyung",
-    "cast": [
-      "Ryu Seung-ryong",
-      "Kal So-won"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Lee Hwan-kyung.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Lee Hwan-kyung.",
-    "similarTags": [
-      "Lee",
-      "Comedy",
-      "Family"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Comedy"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹21 Crore",
-    "revenue": "₹180 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "korean-extreme-job",
-    "title": "Extreme Job",
-    "year": 2019,
-    "runtime": "1h 51m",
-    "genres": [
-      "Comedy",
-      "Action",
-      "Crime",
-      "Superhero",
-      "Mystery Thriller",
-      "Horror"
-    ],
-    "imdbRating": 9.2,
-    "rottenTomatoesScore": 80,
-    "matchScore": 98,
-    "synopsis": "Narcotics detectives start a fried chicken restaurant as a cover for wiretapping, only to become famous.",
-    "director": "Lee Byeong-heon",
-    "cast": [
-      "Ryu Seung-ryong",
-      "Lee Hanee"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Comedy masterpiece directed by Lee Byeong-heon.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Comedy masterpiece directed by Lee Byeong-heon.",
-    "similarTags": [
-      "Lee",
-      "Action",
-      "Crime"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Action"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹126 Crore",
-    "revenue": "₹237 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "korean-along-gods",
-    "title": "Along with the Gods: The Two Worlds",
-    "year": 2017,
-    "runtime": "2h 20m",
-    "genres": [
-      "Fantasy",
-      "Drama",
-      "Action",
-      "Suspense",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary",
-      "Mystery"
-    ],
-    "imdbRating": 9.3,
-    "rottenTomatoesScore": 81,
-    "matchScore": 99,
-    "synopsis": "A deceased firefighter travels through the afterlife trials with three guardians to reincarnate.",
-    "director": "Kim Yong-hwa",
-    "cast": [
-      "Ha Jung-woo",
-      "Cha Tae-hyun"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Fantasy masterpiece directed by Kim Yong-hwa.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Fantasy masterpiece directed by Kim Yong-hwa.",
-    "similarTags": [
-      "Kim",
-      "Drama",
-      "Action"
-    ],
-    "moods": [
-      "✨ Fantasy",
-      "🔥 Drama"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹104 Crore",
-    "revenue": "₹223 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "korean-host",
-    "title": "The Host",
-    "year": 2006,
-    "runtime": "2h 0m",
-    "genres": [
-      "Horror",
-      "Action",
-      "Family",
-      "Thriller",
-      "Noir",
-      "Animation",
-      "Drama",
-      "Musical"
-    ],
-    "imdbRating": 9.4,
-    "rottenTomatoesScore": 82,
-    "matchScore": 90,
-    "synopsis": "A monster emerges from Seoul's Han River, kidnapping a man's daughter, forcing his family to rescue her.",
-    "director": "Bong Joon Ho",
-    "cast": [
-      "Song Kang-ho",
-      "Byun Hee-bong"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1505635552518-3448ff116af3?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1505635552518-3448ff116af3?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Horror masterpiece directed by Bong Joon Ho.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Horror masterpiece directed by Bong Joon Ho.",
-    "similarTags": [
-      "Bong",
-      "Action",
-      "Family"
-    ],
-    "moods": [
-      "✨ Horror",
-      "🔥 Action"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹32 Crore",
-    "revenue": "₹297 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "korean-okja",
-    "title": "Okja",
-    "year": 2017,
-    "runtime": "2h 0m",
-    "genres": [
-      "Adventure",
-      "Drama",
-      "Sci-Fi",
-      "War",
-      "Survival",
-      "Anime",
-      "Family",
-      "Romance"
-    ],
-    "imdbRating": 7.4,
-    "rottenTomatoesScore": 83,
-    "matchScore": 91,
-    "synopsis": "A young girl risks everything to prevent a powerful multinational company from kidnapping her superpig.",
-    "director": "Bong Joon Ho",
-    "cast": [
-      "Ahn Seo-hyun",
-      "Tilda Swinton"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Adventure masterpiece directed by Bong Joon Ho.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Adventure masterpiece directed by Bong Joon Ho.",
-    "similarTags": [
-      "Bong",
-      "Drama",
-      "Sci-Fi"
-    ],
-    "moods": [
-      "✨ Adventure",
-      "🔥 Drama"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹20 Crore",
-    "revenue": "₹85 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "korean-silenced",
-    "title": "Silenced",
-    "year": 2011,
-    "runtime": "2h 5m",
-    "genres": [
-      "Drama",
-      "Crime",
-      "Western",
-      "Space",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi"
-    ],
-    "imdbRating": 7.5,
-    "rottenTomatoesScore": 84,
-    "matchScore": 92,
-    "synopsis": "A newly appointed teacher at a deaf school uncovers a network of abuse targeting disabled children.",
-    "director": "Hwang Dong-hyuk",
-    "cast": [
-      "Gong Yoo",
-      "Jung Yu-mi"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Hwang Dong-hyuk.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Hwang Dong-hyuk.",
-    "similarTags": [
-      "Hwang",
-      "Crime",
-      "Western"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Crime"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹20 Crore",
-    "revenue": "₹373 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "korean-new-world",
-    "title": "New World",
-    "year": 2013,
-    "runtime": "2h 14m",
-    "genres": [
-      "Crime",
-      "Drama",
-      "Action",
-      "Psychological",
-      "Time Travel",
-      "Comedy",
-      "History",
-      "Sports"
-    ],
-    "imdbRating": 7.6,
-    "rottenTomatoesScore": 85,
-    "matchScore": 93,
-    "synopsis": "An undercover police officer inside Korea's biggest corporate gang faces conflict after the boss dies.",
-    "director": "Park Hoon-jung",
-    "cast": [
-      "Lee Jung-jae",
-      "Choi Min-sik"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Crime masterpiece directed by Park Hoon-jung.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Crime masterpiece directed by Park Hoon-jung.",
-    "similarTags": [
-      "Park",
-      "Drama",
-      "Action"
-    ],
-    "moods": [
-      "✨ Crime",
-      "🔥 Drama"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹83 Crore",
-    "revenue": "₹196 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "korean-man-nowhere",
-    "title": "The Man from Nowhere",
-    "year": 2010,
-    "runtime": "1h 59m",
-    "genres": [
-      "Action",
-      "Thriller",
-      "Crime",
-      "Mystery Thriller",
-      "Horror",
-      "Superhero"
-    ],
-    "imdbRating": 7.7,
-    "rottenTomatoesScore": 86,
-    "matchScore": 94,
-    "synopsis": "A quiet pawnshop keeper goes on a rampage to rescue a young girl who is kidnapped by drug dealers.",
-    "director": "Lee Jeong-beom",
-    "cast": [
-      "Won Bin",
-      "Kim Sae-ron"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Lee Jeong-beom.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Lee Jeong-beom.",
-    "similarTags": [
-      "Lee",
-      "Thriller",
-      "Crime"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Thriller"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹106 Crore",
-    "revenue": "₹257 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "korean-castaway-moon",
-    "title": "Castaway on the Moon",
-    "year": 2009,
-    "runtime": "1h 56m",
-    "genres": [
-      "Comedy",
-      "Romance",
-      "Survival",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary",
-      "Mystery",
-      "Suspense"
-    ],
-    "imdbRating": 7.8,
-    "rottenTomatoesScore": 87,
-    "matchScore": 95,
-    "synopsis": "A failed salaryman gets stranded on a small island in Seoul's Han River, communicating with a shut-in girl.",
-    "director": "Lee Hae-jun",
-    "cast": [
-      "Jung Jae-young",
-      "Jung Ryeo-won"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Comedy masterpiece directed by Lee Hae-jun.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Comedy masterpiece directed by Lee Hae-jun.",
-    "similarTags": [
-      "Lee",
-      "Romance",
-      "Survival"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Romance"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹135 Crore",
-    "revenue": "₹248 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "korean-midnight-runners",
-    "title": "Midnight Runners",
-    "year": 2017,
-    "runtime": "1h 49m",
-    "genres": [
-      "Comedy",
-      "Action",
-      "Crime",
-      "Noir",
-      "Animation",
-      "Drama",
-      "Musical",
-      "Thriller"
-    ],
-    "imdbRating": 7.9,
-    "rottenTomatoesScore": 88,
-    "matchScore": 96,
-    "synopsis": "Two police academy cadets witness a kidnapping and decide to investigate the case themselves.",
-    "director": "Kim Joo-hwan",
-    "cast": [
-      "Park Seo-joon",
-      "Kang Ha-neul"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Comedy masterpiece directed by Kim Joo-hwan.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Comedy masterpiece directed by Kim Joo-hwan.",
-    "similarTags": [
-      "Kim",
-      "Action",
-      "Crime"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Action"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹28 Crore",
-    "revenue": "₹147 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "korean-sunny",
-    "title": "Sunny",
-    "year": 2011,
-    "runtime": "2h 4m",
-    "genres": [
-      "Drama",
-      "Comedy",
-      "Family",
-      "Survival",
-      "Anime",
-      "Romance",
-      "War"
-    ],
-    "imdbRating": 8,
-    "rottenTomatoesScore": 89,
-    "matchScore": 97,
-    "synopsis": "A middle-aged woman attempts to reunite her high school group of friends after learning one is dying.",
-    "director": "Kang Hyeong-cheol",
-    "cast": [
-      "Shim Eun-kyung",
-      "Kang So-ra"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Kang Hyeong-cheol.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Kang Hyeong-cheol.",
-    "similarTags": [
-      "Kang",
-      "Comedy",
-      "Family"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Comedy"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹64 Crore",
-    "revenue": "₹63 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "korean-outlaws",
-    "title": "The Outlaws",
-    "year": 2017,
-    "runtime": "2h 1m",
-    "genres": [
-      "Action",
-      "Crime",
-      "Space",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi",
-      "Western"
-    ],
-    "imdbRating": 8.1,
-    "rottenTomatoesScore": 90,
-    "matchScore": 98,
-    "synopsis": "A badass detective tries to maintain peace while two rival Chinese-Korean gangs wage war.",
-    "director": "Kang Yoon-sung",
-    "cast": [
-      "Ma Dong-seok",
-      "Yoon Kye-sang"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Kang Yoon-sung.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Kang Yoon-sung.",
-    "similarTags": [
-      "Kang",
-      "Crime",
-      "Space"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Crime"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹55 Crore",
-    "revenue": "₹198 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "korean-decibel",
-    "title": "Decibel",
-    "year": 2022,
-    "runtime": "1h 50m",
-    "genres": [
-      "Action",
-      "Thriller",
-      "Suspense",
-      "Time Travel",
-      "Comedy",
-      "History",
-      "Sports",
-      "Psychological"
-    ],
-    "imdbRating": 8.2,
-    "rottenTomatoesScore": 91,
-    "matchScore": 99,
-    "synopsis": "A former navy commander receives a call from a terrorist who has planted sound-responsive bombs in the city.",
-    "director": "Hwang In-ho",
-    "cast": [
-      "Kim Rae-won",
-      "Lee Jong-suk"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Hwang In-ho.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Hwang In-ho.",
-    "similarTags": [
-      "Hwang",
-      "Thriller",
-      "Suspense"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Thriller"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹101 Crore",
-    "revenue": "₹356 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "korean-concrete-utopia",
-    "title": "Concrete Utopia",
-    "year": 2023,
-    "runtime": "2h 10m",
-    "genres": [
-      "Drama",
-      "Thriller",
-      "Survival",
-      "Action",
-      "Crime",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller"
-    ],
-    "imdbRating": 8.3,
-    "rottenTomatoesScore": 92,
-    "matchScore": 90,
-    "synopsis": "After an earthquake destroys Seoul, survivors gather at the only apartment building left standing.",
-    "director": "Um Tae-hwa",
-    "cast": [
-      "Lee Byung-hun",
-      "Park Seo-joon"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Um Tae-hwa.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Um Tae-hwa.",
-    "similarTags": [
-      "Um",
-      "Thriller",
-      "Survival"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Thriller"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹100 Crore",
-    "revenue": "₹291 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "korean-exhuma",
-    "title": "Exhuma",
-    "year": 2024,
-    "runtime": "2h 14m",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller",
-      "Adventure",
-      "Documentary",
-      "Suspense",
-      "Cyberpunk"
-    ],
-    "imdbRating": 8.4,
-    "rottenTomatoesScore": 93,
-    "matchScore": 91,
-    "synopsis": "A wealthy family in LA hires shamans to exhume their ancestor's grave to cure a mysterious disease.",
-    "director": "Jang Jae-hyun",
-    "cast": [
-      "Choi Min-sik",
-      "Kim Go-eun"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518063319789-7217e6706b04?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Horror masterpiece directed by Jang Jae-hyun.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Horror masterpiece directed by Jang Jae-hyun.",
-    "similarTags": [
-      "Jang",
-      "Mystery",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Horror",
-      "🔥 Mystery"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹27 Crore",
-    "revenue": "₹306 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "korean-decision-leave",
-    "title": "Decision to Leave",
-    "year": 2022,
-    "runtime": "2h 18m",
-    "genres": [
-      "Romance",
-      "Mystery",
-      "Drama",
-      "Animation",
-      "Musical",
-      "Thriller",
-      "Noir"
-    ],
-    "imdbRating": 8.5,
-    "rottenTomatoesScore": 94,
-    "matchScore": 92,
-    "synopsis": "A detective falls in love with the mysterious widow of a man who died falling from a mountain.",
-    "director": "Park Chan-wook",
-    "cast": [
-      "Tang Wei",
-      "Park Hae-il"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Romance masterpiece directed by Park Chan-wook.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Romance masterpiece directed by Park Chan-wook.",
-    "similarTags": [
-      "Park",
-      "Mystery",
-      "Drama"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Mystery"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹103 Crore",
-    "revenue": "₹360 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "korean-past-lives",
-    "title": "Past Lives",
-    "year": 2023,
-    "runtime": "1h 45m",
-    "genres": [
-      "Romance",
-      "Drama",
-      "Anime",
-      "Family",
-      "War",
-      "Survival"
-    ],
-    "imdbRating": 8.6,
-    "rottenTomatoesScore": 95,
-    "matchScore": 93,
-    "synopsis": "Two childhood friends reunite for one fateful week in New York, contemplating their destiny.",
-    "director": "Celine Song",
-    "cast": [
-      "Greta Lee",
-      "Teo Yoo"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Romance masterpiece directed by Celine Song.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Romance masterpiece directed by Celine Song.",
-    "similarTags": [
-      "Celine",
-      "Drama",
-      "Anime"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Drama"
-    ],
-    "language": "Korean",
-    "country": "USA",
-    "budget": "₹94 Crore",
-    "revenue": "₹189 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "korean-ode-father",
-    "title": "Ode to My Father",
-    "year": 2014,
-    "runtime": "2h 6m",
-    "genres": [
-      "Drama",
-      "History",
-      "Family",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi",
-      "Western",
-      "Space"
-    ],
-    "imdbRating": 8.7,
-    "rottenTomatoesScore": 96,
-    "matchScore": 94,
-    "synopsis": "A man's life story from the Hungnam Evacuation of 1950 to the present day, detailing his sacrifices.",
-    "director": "Yoon Je-kyoon",
-    "cast": [
-      "Hwang Jung-min",
-      "Yunjin Kim"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Yoon Je-kyoon.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Drama masterpiece directed by Yoon Je-kyoon.",
-    "similarTags": [
-      "Yoon",
-      "History",
-      "Family"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 History"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹36 Crore",
-    "revenue": "₹61 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "korean-admiral-currents",
-    "title": "The Admiral: Roaring Currents",
-    "year": 2014,
-    "runtime": "2h 8m",
-    "genres": [
-      "Action",
-      "History",
-      "War",
-      "Comedy",
-      "Sports",
-      "Psychological",
-      "Time Travel"
-    ],
-    "imdbRating": 8.8,
-    "rottenTomatoesScore": 97,
-    "matchScore": 95,
-    "synopsis": "Admiral Yi Sun-sin leads 12 ships to defeat an invading Japanese fleet of 330 vessels at Battle of Myeongnyang.",
-    "director": "Kim Han-min",
-    "cast": [
-      "Choi Min-sik",
-      "Ryu Seung-ryong"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Kim Han-min.",
-    "whyRecommended": "Top recommendation from Korean cinema. A high-quality Action masterpiece directed by Kim Han-min.",
-    "similarTags": [
-      "Kim",
-      "History",
-      "War"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 History"
-    ],
-    "language": "Korean",
-    "country": "South Korea",
-    "budget": "₹116 Crore",
-    "revenue": "₹331 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "japanese-spirited-away-jp",
-    "title": "Spirited Away",
-    "year": 2001,
-    "runtime": "2h 5m",
-    "genres": [
-      "Animation",
-      "Family",
-      "Fantasy",
-      "Anime",
-      "Action",
-      "Crime",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller"
-    ],
-    "imdbRating": 7.4,
-    "rottenTomatoesScore": 80,
-    "matchScore": 90,
-    "synopsis": "A young girl gets trapped in a world ruled by spirits, trying to save her parents.",
-    "director": "Hayao Miyazaki",
-    "cast": [
-      "Rumi Hiiragi",
-      "Miyu Irino"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "ByXuk9QqQkk",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
-    "similarTags": [
-      "Hayao",
-      "Family",
-      "Fantasy"
-    ],
-    "moods": [
-      "✨ Animation",
-      "🔥 Family"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "$19 Million",
-    "revenue": "$395 Million",
-    "tagline": "Nothing that happens is ever forgotten, even if you can't remember it.",
-    "productionCompany": "Studio Ghibli",
-    "awards": [
-      "Academy Award for Best Animated Feature"
-    ],
-    "reviews": []
-  },
-  {
-    "id": "japanese-totoro",
-    "title": "My Neighbor Totoro",
-    "year": 1988,
-    "runtime": "1h 26m",
-    "genres": [
-      "Animation",
-      "Family",
-      "Fantasy",
-      "Anime",
-      "Adventure",
-      "Documentary",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk"
-    ],
-    "imdbRating": 7.5,
-    "rottenTomatoesScore": 81,
-    "matchScore": 91,
-    "synopsis": "Two young sisters move to the countryside, forming a bond with friendly forest spirits.",
-    "director": "Hayao Miyazaki",
-    "cast": [
-      "Chika Sakamoto",
-      "Noriko Hidaka"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "92aP9gn3MW8",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
-    "similarTags": [
-      "Hayao",
-      "Family",
-      "Fantasy"
-    ],
-    "moods": [
-      "✨ Animation",
-      "🔥 Family"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "$3.5 Million",
-    "revenue": "$30 Million",
-    "tagline": "Meet the friendly spirits of the forest.",
-    "productionCompany": "Studio Ghibli",
-    "awards": [
-      "Blue Ribbon Award for Best Film"
-    ],
-    "reviews": []
-  },
-  {
-    "id": "japanese-mononoke",
-    "title": "Princess Mononoke",
-    "year": 1997,
-    "runtime": "2h 14m",
-    "genres": [
-      "Animation",
-      "Adventure",
-      "Fantasy",
-      "Anime",
-      "Drama",
-      "Musical",
-      "Thriller",
-      "Noir"
-    ],
-    "imdbRating": 7.6,
-    "rottenTomatoesScore": 82,
-    "matchScore": 92,
-    "synopsis": "A young prince tries to maintain peace between humans mining iron and forest spirits.",
-    "director": "Hayao Miyazaki",
-    "cast": [
-      "Yoji Matsuda",
-      "Yuriko Ishida"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518063319789-7217e6706b04?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1505635552518-3448ff116af3?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "4UKdR2urfZk",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
-    "similarTags": [
-      "Hayao",
-      "Adventure",
-      "Fantasy"
-    ],
-    "moods": [
-      "✨ Animation",
-      "🔥 Adventure"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "$20 Million",
-    "revenue": "$169 Million",
-    "tagline": "The clash between civilization and forest gods.",
-    "productionCompany": "Studio Ghibli",
-    "awards": [
-      "Japan Academy Prize for Picture of the Year"
-    ],
-    "reviews": []
-  },
-  {
-    "id": "japanese-your-name-jp",
-    "title": "Your Name.",
-    "year": 2016,
-    "runtime": "1h 46m",
-    "genres": [
-      "Animation",
-      "Romance",
-      "Drama",
-      "Anime",
-      "Family",
-      "War",
-      "Survival"
-    ],
-    "imdbRating": 7.7,
-    "rottenTomatoesScore": 83,
-    "matchScore": 93,
-    "synopsis": "Two high school students swap bodies, forming a bond across space and time.",
-    "director": "Makoto Shinkai",
-    "cast": [
-      "Ryunosuke Kamiki",
-      "Mone Kamishibai"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "hDDw8iC10uQ",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Makoto Shinkai.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Makoto Shinkai.",
-    "similarTags": [
-      "Makoto",
-      "Romance",
-      "Drama"
-    ],
-    "moods": [
-      "✨ Animation",
-      "🔥 Romance"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "$3.7 Million",
-    "revenue": "$382 Million",
-    "tagline": "Searching for someone I've never met.",
-    "productionCompany": "CoMix Wave Films",
-    "awards": [
-      "L.A. Film Critics Association Award for Best Animated Film"
-    ],
-    "reviews": []
-  },
-  {
-    "id": "japanese-silent-voice-jp",
-    "title": "A Silent Voice",
-    "year": 2016,
-    "runtime": "2h 10m",
-    "genres": [
-      "Animation",
-      "Drama",
-      "Anime",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi",
-      "Western",
-      "Space"
-    ],
-    "imdbRating": 7.8,
-    "rottenTomatoesScore": 84,
-    "matchScore": 94,
-    "synopsis": "A high school boy attempts to redeem himself with a deaf girl he bullied in grade school.",
-    "director": "Naoko Yamada",
-    "cast": [
-      "Miyu Irino",
-      "Saori Hayami"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "X5beT497n50",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Naoko Yamada.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Naoko Yamada.",
-    "similarTags": [
-      "Naoko",
-      "Drama",
-      "Anime"
-    ],
-    "moods": [
-      "✨ Animation",
-      "🔥 Drama"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "$3.5 Million",
-    "revenue": "$33 Million",
-    "tagline": "Hear the voice that was left unheard.",
-    "productionCompany": "Kyoto Animation",
-    "awards": [
-      "Japan Movie Critics Award for Best Animation"
-    ],
-    "reviews": []
-  },
-  {
-    "id": "japanese-weathering-you",
-    "title": "Weathering with You",
-    "year": 2019,
-    "runtime": "1h 52m",
-    "genres": [
-      "Animation",
-      "Romance",
-      "Fantasy",
-      "Anime",
-      "Comedy",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel"
-    ],
-    "imdbRating": 7.9,
-    "rottenTomatoesScore": 85,
-    "matchScore": 95,
-    "synopsis": "A runaway high school boy meets a girl who can control the weather in rainy Tokyo.",
-    "director": "Makoto Shinkai",
-    "cast": [
-      "Kotaro Daigo",
-      "Nana Mori"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Makoto Shinkai.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Makoto Shinkai.",
-    "similarTags": [
-      "Makoto",
-      "Romance",
-      "Fantasy"
-    ],
-    "moods": [
-      "✨ Animation",
-      "🔥 Romance"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹112 Crore",
-    "revenue": "₹447 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "japanese-suzume-jp",
-    "title": "Suzume",
-    "year": 2022,
-    "runtime": "2h 2m",
-    "genres": [
-      "Animation",
-      "Adventure",
-      "Fantasy",
-      "Anime",
-      "Crime",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller",
-      "Action"
-    ],
-    "imdbRating": 8,
-    "rottenTomatoesScore": 86,
-    "matchScore": 96,
-    "synopsis": "A high school girl travels around Japan closing mysterious doors to prevent earthquakes.",
-    "director": "Makoto Shinkai",
-    "cast": [
-      "Nanoka Hara",
-      "Hokuto Matsumura"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Makoto Shinkai.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Makoto Shinkai.",
-    "similarTags": [
-      "Makoto",
-      "Adventure",
-      "Fantasy"
-    ],
-    "moods": [
-      "✨ Animation",
-      "🔥 Adventure"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹82 Crore",
-    "revenue": "₹257 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "japanese-akira",
-    "title": "Akira",
-    "year": 1988,
-    "runtime": "2h 4m",
-    "genres": [
-      "Animation",
-      "Sci-Fi",
-      "Cyberpunk",
-      "Anime",
-      "Documentary",
-      "Mystery",
-      "Suspense",
-      "Adventure"
-    ],
-    "imdbRating": 8.1,
-    "rottenTomatoesScore": 87,
-    "matchScore": 97,
-    "synopsis": "A military project endangers Neo-Tokyo after a biker gang member gains telekinetic powers.",
-    "director": "Katsuhiro Otomo",
-    "cast": [
-      "Mitsuo Iwata",
-      "Nozomu Sasaki"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Katsuhiro Otomo.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Katsuhiro Otomo.",
-    "similarTags": [
-      "Katsuhiro",
-      "Sci-Fi",
-      "Cyberpunk"
-    ],
-    "moods": [
-      "✨ Animation",
-      "🔥 Sci-Fi"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹57 Crore",
-    "revenue": "₹280 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "japanese-ghost-shell",
-    "title": "Ghost in the Shell",
-    "year": 1995,
-    "runtime": "1h 23m",
-    "genres": [
-      "Animation",
-      "Sci-Fi",
-      "Cyberpunk",
-      "Anime",
-      "Drama",
-      "Musical",
-      "Thriller",
-      "Noir"
-    ],
-    "imdbRating": 8.2,
-    "rottenTomatoesScore": 88,
-    "matchScore": 98,
-    "synopsis": "A cyborg policewoman hunts a hacker who steals memories from cyborg brains.",
-    "director": "Mamoru Oshii",
-    "cast": [
-      "Atsuko Tanaka",
-      "Akio Otsuka"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Mamoru Oshii.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Mamoru Oshii.",
-    "similarTags": [
-      "Mamoru",
-      "Sci-Fi",
-      "Cyberpunk"
-    ],
-    "moods": [
-      "✨ Animation",
-      "🔥 Sci-Fi"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹136 Crore",
-    "revenue": "₹63 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "japanese-mugen-train",
-    "title": "Demon Slayer: Mugen Train",
-    "year": 2020,
-    "runtime": "1h 57m",
-    "genres": [
-      "Animation",
-      "Action",
-      "Fantasy",
-      "Anime",
-      "Family",
-      "Romance",
-      "War",
-      "Survival"
-    ],
-    "imdbRating": 8.3,
-    "rottenTomatoesScore": 89,
-    "matchScore": 99,
-    "synopsis": "A group of demon slayers board a train to investigate disappearances, fighting a powerful demon.",
-    "director": "Haruo Sotozaki",
-    "cast": [
-      "Natsuki Hanae",
-      "Yoshitsugu Matsuoka"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Haruo Sotozaki.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Haruo Sotozaki.",
-    "similarTags": [
-      "Haruo",
-      "Action",
-      "Fantasy"
-    ],
-    "moods": [
-      "✨ Animation",
-      "🔥 Action"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹104 Crore",
-    "revenue": "₹105 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "japanese-seven-samurai",
-    "title": "Seven Samurai",
-    "year": 1954,
-    "runtime": "3h 27m",
-    "genres": [
-      "Action",
-      "Drama",
-      "History",
-      "Fantasy",
-      "Sci-Fi",
-      "Western",
-      "Space",
-      "Biography"
-    ],
-    "imdbRating": 8.4,
-    "rottenTomatoesScore": 90,
-    "matchScore": 90,
-    "synopsis": "A group of samurai defend a farming village from ruthless bandits in feudal Japan.",
-    "director": "Akira Kurosawa",
-    "cast": [
-      "Toshiro Mifune",
-      "Takashi Shimura"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Action masterpiece directed by Akira Kurosawa.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Action masterpiece directed by Akira Kurosawa.",
-    "similarTags": [
-      "Akira",
-      "Drama",
-      "History"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Drama"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹26 Crore",
-    "revenue": "₹259 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "japanese-rashomon",
-    "title": "Rashomon",
-    "year": 1950,
-    "runtime": "1h 28m",
-    "genres": [
-      "Drama",
-      "Mystery",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel",
-      "Comedy"
-    ],
-    "imdbRating": 8.5,
-    "rottenTomatoesScore": 91,
-    "matchScore": 91,
-    "synopsis": "A priest, a woodcutter, and a commoner discuss a murder trial through four contrasting stories.",
-    "director": "Akira Kurosawa",
-    "cast": [
-      "Toshiro Mifune",
-      "Machiko Kyo"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Akira Kurosawa.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Akira Kurosawa.",
-    "similarTags": [
-      "Akira",
-      "Mystery",
-      "History"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Mystery"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹46 Crore",
-    "revenue": "₹229 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "japanese-yojimbo",
-    "title": "Yojimbo",
-    "year": 1961,
-    "runtime": "1h 50m",
-    "genres": [
-      "Action",
-      "Comedy",
-      "Western",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller",
-      "Crime"
-    ],
-    "imdbRating": 8.6,
-    "rottenTomatoesScore": 92,
-    "matchScore": 92,
-    "synopsis": "A rogue samurai arrives in a small town divided by gang wars, playing them against each other.",
-    "director": "Akira Kurosawa",
-    "cast": [
-      "Toshiro Mifune",
-      "Tatsuya Nakadai"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Action masterpiece directed by Akira Kurosawa.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Action masterpiece directed by Akira Kurosawa.",
-    "similarTags": [
-      "Akira",
-      "Comedy",
-      "Western"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Comedy"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹26 Crore",
-    "revenue": "₹193 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "japanese-ran",
-    "title": "Ran",
-    "year": 1985,
-    "runtime": "2h 42m",
-    "genres": [
-      "Drama",
-      "Action",
-      "History",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary"
-    ],
-    "imdbRating": 8.7,
-    "rottenTomatoesScore": 93,
-    "matchScore": 93,
-    "synopsis": "An aging warlord abdicates his throne to his three sons, leading to internal wars and betrayal.",
-    "director": "Akira Kurosawa",
-    "cast": [
-      "Tatsuya Nakadai",
-      "Akira Terao"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Akira Kurosawa.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Akira Kurosawa.",
-    "similarTags": [
-      "Akira",
-      "Action",
-      "History"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Action"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹56 Crore",
-    "revenue": "₹193 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "japanese-harakiri",
-    "title": "Harakiri",
-    "year": 1962,
-    "runtime": "2h 13m",
-    "genres": [
-      "Drama",
-      "Action",
-      "History",
-      "Musical",
-      "Thriller",
-      "Noir",
-      "Animation"
-    ],
-    "imdbRating": 8.8,
-    "rottenTomatoesScore": 94,
-    "matchScore": 94,
-    "synopsis": "An elder samurai requests to commit suicide in a clan's courtyard, telling the story of his son-in-law.",
-    "director": "Masaki Kobayashi",
-    "cast": [
-      "Tatsuya Nakadai",
-      "Rentaro Mikuni"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Masaki Kobayashi.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Masaki Kobayashi.",
-    "similarTags": [
-      "Masaki",
-      "Action",
-      "History"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Action"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹90 Crore",
-    "revenue": "₹409 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "japanese-shoplifters",
-    "title": "Shoplifters",
-    "year": 2018,
-    "runtime": "2h 1m",
-    "genres": [
-      "Drama",
-      "Family",
-      "Romance",
-      "War",
-      "Survival",
-      "Anime"
-    ],
-    "imdbRating": 8.9,
-    "rottenTomatoesScore": 95,
-    "matchScore": 95,
-    "synopsis": "A poor family of shoplifters adopt a young girl they find outside in the cold.",
-    "director": "Hirokazu Kore-eda",
-    "cast": [
-      "Lily Franky",
-      "Sakura Ando"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Hirokazu Kore-eda.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Hirokazu Kore-eda.",
-    "similarTags": [
-      "Hirokazu",
-      "Family",
-      "Romance"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Family"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹42 Crore",
-    "revenue": "₹97 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "japanese-drive-my-car",
-    "title": "Drive My Car",
-    "year": 2021,
-    "runtime": "2h 59m",
-    "genres": [
-      "Drama",
-      "Romance",
-      "Sci-Fi",
-      "Western",
-      "Space",
-      "Biography",
-      "Fantasy"
-    ],
-    "imdbRating": 9,
-    "rottenTomatoesScore": 96,
-    "matchScore": 96,
-    "synopsis": "A widowed theater director bonds with his young female chauffeur during a festival.",
-    "director": "Ryusuke Hamaguchi",
-    "cast": [
-      "Hidetoshi Nishijima",
-      "Toko Miura"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Ryusuke Hamaguchi.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Ryusuke Hamaguchi.",
-    "similarTags": [
-      "Ryusuke",
-      "Romance",
-      "Sci-Fi"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Romance"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹103 Crore",
-    "revenue": "₹248 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "japanese-monster-jp",
-    "title": "Monster",
-    "year": 2023,
-    "runtime": "2h 6m",
-    "genres": [
-      "Drama",
-      "Mystery",
-      "Sports",
-      "Psychological",
-      "Time Travel",
-      "Comedy",
-      "History"
-    ],
-    "imdbRating": 9.1,
-    "rottenTomatoesScore": 97,
-    "matchScore": 97,
-    "synopsis": "A mother demands answers from a school after her young son starts acting strangely.",
-    "director": "Hirokazu Kore-eda",
-    "cast": [
-      "Soya Kurokawa",
-      "Hinata Hiiragi"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Hirokazu Kore-eda.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Hirokazu Kore-eda.",
-    "similarTags": [
-      "Hirokazu",
-      "Mystery",
-      "Sports"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Mystery"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹123 Crore",
-    "revenue": "₹124 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "japanese-perfect-days",
-    "title": "Perfect Days",
-    "year": 2023,
-    "runtime": "2h 4m",
-    "genres": [
-      "Drama",
-      "Family",
-      "Superhero",
-      "Mystery Thriller",
-      "Action",
-      "Crime",
-      "Horror"
-    ],
-    "imdbRating": 9.2,
-    "rottenTomatoesScore": 80,
-    "matchScore": 98,
-    "synopsis": "The quiet, beautiful daily life of a toilet cleaner in Tokyo who enjoys books and photography.",
-    "director": "Wim Wenders",
-    "cast": [
-      "Koji Yakusho",
-      "Arisa Nakano"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Wim Wenders.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Drama masterpiece directed by Wim Wenders.",
-    "similarTags": [
-      "Wim",
-      "Family",
-      "Superhero"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Family"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹139 Crore",
-    "revenue": "₹140 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "japanese-ring-jp",
-    "title": "Ring",
-    "year": 1998,
-    "runtime": "1h 36m",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller",
-      "Suspense",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary"
-    ],
-    "imdbRating": 9.3,
-    "rottenTomatoesScore": 81,
-    "matchScore": 99,
-    "synopsis": "A reporter investigates a cursed videotape that allegedly kills anyone who watches it in seven days.",
-    "director": "Hideo Nakata",
-    "cast": [
-      "Nanako Matsushima",
-      "Hiroyuki Sanada"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Horror masterpiece directed by Hideo Nakata.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Horror masterpiece directed by Hideo Nakata.",
-    "similarTags": [
-      "Hideo",
-      "Mystery",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Horror",
-      "🔥 Mystery"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹47 Crore",
-    "revenue": "₹262 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "japanese-ju-on",
-    "title": "Ju-On: The Grudge",
-    "year": 2002,
-    "runtime": "1h 32m",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller",
-      "Noir",
-      "Animation",
-      "Drama",
-      "Musical"
-    ],
-    "imdbRating": 9.4,
-    "rottenTomatoesScore": 82,
-    "matchScore": 90,
-    "synopsis": "A mysterious curse is born in a house where a man murdered his family, infecting anyone who enters.",
-    "director": "Takashi Shimizu",
-    "cast": [
-      "Megumi Okina",
-      "Misaki Ito"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518063319789-7217e6706b04?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Horror masterpiece directed by Takashi Shimizu.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Horror masterpiece directed by Takashi Shimizu.",
-    "similarTags": [
-      "Takashi",
-      "Mystery",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Horror",
-      "🔥 Mystery"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹71 Crore",
-    "revenue": "₹112 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "japanese-perfect-blue",
-    "title": "Perfect Blue",
-    "year": 1997,
-    "runtime": "1h 21m",
-    "genres": [
-      "Animation",
-      "Horror",
-      "Psychological",
-      "Anime",
-      "War",
-      "Survival",
-      "Family",
-      "Romance"
-    ],
-    "imdbRating": 7.4,
-    "rottenTomatoesScore": 83,
-    "matchScore": 91,
-    "synopsis": "A retired pop singer turns actress, facing a stalker and hallucinations that blur reality.",
-    "director": "Satoshi Kon",
-    "cast": [
-      "Junko Iwao",
-      "Rica Matsumoto"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Satoshi Kon.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Satoshi Kon.",
-    "similarTags": [
-      "Satoshi",
-      "Horror",
-      "Psychological"
-    ],
-    "moods": [
-      "✨ Animation",
-      "🔥 Horror"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹70 Crore",
-    "revenue": "₹367 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "japanese-paprika",
-    "title": "Paprika",
-    "year": 2006,
-    "runtime": "1h 30m",
-    "genres": [
-      "Animation",
-      "Sci-Fi",
-      "Psychological",
-      "Anime",
-      "Western",
-      "Space",
-      "Biography",
-      "Fantasy"
-    ],
-    "imdbRating": 7.5,
-    "rottenTomatoesScore": 84,
-    "matchScore": 92,
-    "synopsis": "A therapist uses dream-sharing tech to help patients, but the tech is stolen by a terrorist.",
-    "director": "Satoshi Kon",
-    "cast": [
-      "Megumi Hayashibara",
-      "Toru Emori"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Satoshi Kon.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Satoshi Kon.",
-    "similarTags": [
-      "Satoshi",
-      "Sci-Fi",
-      "Psychological"
-    ],
-    "moods": [
-      "✨ Animation",
-      "🔥 Sci-Fi"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹115 Crore",
-    "revenue": "₹318 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "japanese-millennium-actress",
-    "title": "Millennium Actress",
-    "year": 2001,
-    "runtime": "1h 27m",
-    "genres": [
-      "Animation",
-      "Drama",
-      "History",
-      "Anime",
-      "Psychological",
-      "Time Travel",
-      "Comedy",
-      "Sports"
-    ],
-    "imdbRating": 7.6,
-    "rottenTomatoesScore": 85,
-    "matchScore": 93,
-    "synopsis": "Two filmmakers interview a retired actress, traveling through her movie roles spanning Japanese history.",
-    "director": "Satoshi Kon",
-    "cast": [
-      "Miyoko Shoji",
-      "Mami Koyama"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Satoshi Kon.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Satoshi Kon.",
-    "similarTags": [
-      "Satoshi",
-      "Drama",
-      "History"
-    ],
-    "moods": [
-      "✨ Animation",
-      "🔥 Drama"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹38 Crore",
-    "revenue": "₹447 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "japanese-tokyo-godfathers",
-    "title": "Tokyo Godfathers",
-    "year": 2003,
-    "runtime": "1h 32m",
-    "genres": [
-      "Animation",
-      "Comedy",
-      "Family",
-      "Anime",
-      "Mystery Thriller",
-      "Action",
-      "Crime",
-      "Horror",
-      "Superhero"
-    ],
-    "imdbRating": 7.7,
-    "rottenTomatoesScore": 86,
-    "matchScore": 94,
-    "synopsis": "Three homeless people find an abandoned baby in Tokyo on Christmas Eve, searching for her mother.",
-    "director": "Satoshi Kon",
-    "cast": [
-      "Torru Emori",
-      "Yoshiaki Umegaki"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Satoshi Kon.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Satoshi Kon.",
-    "similarTags": [
-      "Satoshi",
-      "Comedy",
-      "Family"
-    ],
-    "moods": [
-      "✨ Animation",
-      "🔥 Comedy"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹66 Crore",
-    "revenue": "₹97 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "japanese-nausicaa",
-    "title": "Nausicaä of the Valley of the Wind",
-    "year": 1984,
-    "runtime": "1h 57m",
-    "genres": [
-      "Animation",
-      "Adventure",
-      "Sci-Fi",
-      "Anime",
-      "Cyberpunk",
-      "Documentary",
-      "Mystery",
-      "Suspense"
-    ],
-    "imdbRating": 7.8,
-    "rottenTomatoesScore": 87,
-    "matchScore": 95,
-    "synopsis": "A princess defends her valley from toxic jungle insects and warmongering human states.",
-    "director": "Hayao Miyazaki",
-    "cast": [
-      "Sumi Shimamoto",
-      "Mahito Tsujimura"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
-    "similarTags": [
-      "Hayao",
-      "Adventure",
-      "Sci-Fi"
-    ],
-    "moods": [
-      "✨ Animation",
-      "🔥 Adventure"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹130 Crore",
-    "revenue": "₹145 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "japanese-castle-sky",
-    "title": "Castle in the Sky",
-    "year": 1986,
-    "runtime": "2h 4m",
-    "genres": [
-      "Animation",
-      "Adventure",
-      "Fantasy",
-      "Anime",
-      "Noir",
-      "Drama",
-      "Musical",
-      "Thriller"
-    ],
-    "imdbRating": 7.9,
-    "rottenTomatoesScore": 88,
-    "matchScore": 96,
-    "synopsis": "A boy and a girl search for a legendary floating castle, escaping air pirates and soldiers.",
-    "director": "Hayao Miyazaki",
-    "cast": [
-      "Mayumi Tanaka",
-      "Keiko Yokozawa"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
-    "similarTags": [
-      "Hayao",
-      "Adventure",
-      "Fantasy"
-    ],
-    "moods": [
-      "✨ Animation",
-      "🔥 Adventure"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹40 Crore",
-    "revenue": "₹423 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "japanese-howl-castle",
-    "title": "Howl's Moving Castle",
-    "year": 2004,
-    "runtime": "1h 59m",
-    "genres": [
-      "Animation",
-      "Fantasy",
-      "Adventure",
-      "Anime",
-      "Survival",
-      "Family",
-      "Romance",
-      "War"
-    ],
-    "imdbRating": 8,
-    "rottenTomatoesScore": 89,
-    "matchScore": 97,
-    "synopsis": "A cursed young girl is taken in by a wizard who lives in a giant walking castle.",
-    "director": "Hayao Miyazaki",
-    "cast": [
-      "Chieko Baisho",
-      "Takuya Kimura"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
-    "similarTags": [
-      "Hayao",
-      "Fantasy",
-      "Adventure"
-    ],
-    "moods": [
-      "✨ Animation",
-      "🔥 Fantasy"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹53 Crore",
-    "revenue": "₹452 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "japanese-ponyo",
-    "title": "Ponyo",
-    "year": 2008,
-    "runtime": "1h 41m",
-    "genres": [
-      "Animation",
-      "Family",
-      "Fantasy",
-      "Anime",
-      "Space",
-      "Biography",
-      "Sci-Fi",
-      "Western"
-    ],
-    "imdbRating": 8.1,
-    "rottenTomatoesScore": 90,
-    "matchScore": 98,
-    "synopsis": "A goldfish princess escapes the ocean, forming a bond with a young human boy.",
-    "director": "Hayao Miyazaki",
-    "cast": [
-      "Yuria Nara",
-      "Hiroki Doi"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
-    "similarTags": [
-      "Hayao",
-      "Family",
-      "Fantasy"
-    ],
-    "moods": [
-      "✨ Animation",
-      "🔥 Family"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹138 Crore",
-    "revenue": "₹151 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "japanese-wind-rises",
-    "title": "The Wind Rises",
-    "year": 2013,
-    "runtime": "2h 6m",
-    "genres": [
-      "Animation",
-      "Biography",
-      "Drama",
-      "Anime",
-      "Time Travel",
-      "Comedy",
-      "History",
-      "Sports",
-      "Psychological"
-    ],
-    "imdbRating": 8.2,
-    "rottenTomatoesScore": 91,
-    "matchScore": 99,
-    "synopsis": "A biographical story of Jiro Horikoshi, the designer of Japanese fighter planes in WWII.",
-    "director": "Hayao Miyazaki",
-    "cast": [
-      "Hideaki Anno",
-      "Miori Takimoto"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
-    "similarTags": [
-      "Hayao",
-      "Biography",
-      "Drama"
-    ],
-    "moods": [
-      "✨ Animation",
-      "🔥 Biography"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹114 Crore",
-    "revenue": "₹163 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "japanese-boy-heron",
-    "title": "The Boy and the Heron",
-    "year": 2023,
-    "runtime": "2h 4m",
-    "genres": [
-      "Animation",
-      "Fantasy",
-      "Adventure",
-      "Anime",
-      "Action",
-      "Crime",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller"
-    ],
-    "imdbRating": 8.3,
-    "rottenTomatoesScore": 92,
-    "matchScore": 90,
-    "synopsis": "A young boy moves to a new town after a tragedy, entering a fantasy tower with a grey heron.",
-    "director": "Hayao Miyazaki",
-    "cast": [
-      "Soma Santoki",
-      "Masaki Suda"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Animation masterpiece directed by Hayao Miyazaki.",
-    "similarTags": [
-      "Hayao",
-      "Fantasy",
-      "Adventure"
-    ],
-    "moods": [
-      "✨ Animation",
-      "🔥 Fantasy"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹78 Crore",
-    "revenue": "₹253 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "japanese-godzilla-minus",
-    "title": "Godzilla Minus One",
-    "year": 2023,
-    "runtime": "2h 5m",
-    "genres": [
-      "Action",
-      "Sci-Fi",
-      "Survival",
-      "Adventure",
-      "Documentary",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk"
-    ],
-    "imdbRating": 8.4,
-    "rottenTomatoesScore": 93,
-    "matchScore": 91,
-    "synopsis": "A disgraced kamikaze pilot fights alongside citizens to defend post-war Japan from Godzilla.",
-    "director": "Takashi Yamazaki",
-    "cast": [
-      "Ryunosuke Kamiki",
-      "Minami Hamabe"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1536768139911-e290a59002e4?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Action masterpiece directed by Takashi Yamazaki.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Action masterpiece directed by Takashi Yamazaki.",
-    "similarTags": [
-      "Takashi",
-      "Sci-Fi",
-      "Survival"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Sci-Fi"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹37 Crore",
-    "revenue": "₹74 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "japanese-love-letter",
-    "title": "Love Letter",
-    "year": 1995,
-    "runtime": "1h 57m",
-    "genres": [
-      "Romance",
-      "Drama",
-      "Animation",
-      "Musical",
-      "Thriller",
-      "Noir"
-    ],
-    "imdbRating": 8.5,
-    "rottenTomatoesScore": 94,
-    "matchScore": 92,
-    "synopsis": "A woman sends a letter to her deceased fiance's old address, receiving a reply from his schoolmate.",
-    "director": "Shunji Iwai",
-    "cast": [
-      "Miho Nakayama",
-      "Etsushi Toyokawa"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Romance masterpiece directed by Shunji Iwai.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Romance masterpiece directed by Shunji Iwai.",
-    "similarTags": [
-      "Shunji",
-      "Drama",
-      "Animation"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Drama"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹109 Crore",
-    "revenue": "₹262 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "japanese-cure",
-    "title": "Cure",
-    "year": 1997,
-    "runtime": "1h 51m",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Psychological",
-      "Anime",
-      "Family",
-      "Romance",
-      "War",
-      "Survival"
-    ],
-    "imdbRating": 8.6,
-    "rottenTomatoesScore": 95,
-    "matchScore": 93,
-    "synopsis": "A detective investigates mysterious murders where the victims are found with an X carved in their necks.",
-    "director": "Kiyoshi Kurosawa",
-    "cast": [
-      "Koji Yakusho",
-      "Masato Hagiwara"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1505635552518-3448ff116af3?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Horror masterpiece directed by Kiyoshi Kurosawa.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Horror masterpiece directed by Kiyoshi Kurosawa.",
-    "similarTags": [
-      "Kiyoshi",
-      "Mystery",
-      "Psychological"
-    ],
-    "moods": [
-      "✨ Horror",
-      "🔥 Mystery"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹134 Crore",
-    "revenue": "₹247 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "japanese-audition",
-    "title": "Audition",
-    "year": 1999,
-    "runtime": "1h 55m",
-    "genres": [
-      "Horror",
-      "Psychological",
-      "Thriller",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi",
-      "Western",
-      "Space"
-    ],
-    "imdbRating": 8.7,
-    "rottenTomatoesScore": 96,
-    "matchScore": 94,
-    "synopsis": "A widower holds fake auditions to find a new wife, falling in love with a mysterious girl with a dark past.",
-    "director": "Takashi Miike",
-    "cast": [
-      "Ryo Ishibashi",
-      "Eihi Shiina"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Horror masterpiece directed by Takashi Miike.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Horror masterpiece directed by Takashi Miike.",
-    "similarTags": [
-      "Takashi",
-      "Psychological",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Horror",
-      "🔥 Psychological"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹46 Crore",
-    "revenue": "₹207 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "japanese-battle-royale",
-    "title": "Battle Royale",
-    "year": 2000,
-    "runtime": "1h 54m",
-    "genres": [
-      "Action",
-      "Thriller",
-      "Survival",
-      "Comedy",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel"
-    ],
-    "imdbRating": 8.8,
-    "rottenTomatoesScore": 97,
-    "matchScore": 95,
-    "synopsis": "Junior high students are sent to a deserted island to fight to the death under a government act.",
-    "director": "Kinji Fukasaku",
-    "cast": [
-      "Tatsuya Fujiwara",
-      "Aki Maeda"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Japanese cinema. A high-quality Action masterpiece directed by Kinji Fukasaku.",
-    "whyRecommended": "Top recommendation from Japanese cinema. A high-quality Action masterpiece directed by Kinji Fukasaku.",
-    "similarTags": [
-      "Kinji",
-      "Thriller",
-      "Survival"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Thriller"
-    ],
-    "language": "Japanese",
-    "country": "Japan",
-    "budget": "₹113 Crore",
-    "revenue": "₹336 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "spanish-pan-labyrinth",
-    "title": "Pan's Labyrinth",
-    "year": 2006,
-    "runtime": "1h 58m",
-    "genres": [
-      "Fantasy",
-      "Drama",
-      "History",
-      "Action",
-      "Crime",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller"
-    ],
-    "imdbRating": 7.4,
-    "rottenTomatoesScore": 80,
-    "matchScore": 90,
-    "synopsis": "A young girl in fascist Spain escapes her cruel stepfather, entering a mysterious fantasy labyrinth.",
-    "director": "Guillermo del Toro",
-    "cast": [
-      "Ivana Baquero",
-      "Sergi López"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Fantasy masterpiece directed by Guillermo del Toro.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Fantasy masterpiece directed by Guillermo del Toro.",
-    "similarTags": [
-      "Guillermo",
-      "Drama",
-      "History"
-    ],
-    "moods": [
-      "✨ Fantasy",
-      "🔥 Drama"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹127 Crore",
-    "revenue": "₹222 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "spanish-roma",
-    "title": "Roma",
-    "year": 2018,
-    "runtime": "2h 15m",
-    "genres": [
-      "Drama",
-      "History",
-      "Adventure",
-      "Documentary",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk"
-    ],
-    "imdbRating": 7.5,
-    "rottenTomatoesScore": 81,
-    "matchScore": 91,
-    "synopsis": "The life story of a live-in housekeeper in a middle-class neighborhood of Mexico City.",
-    "director": "Alfonso Cuarón",
-    "cast": [
-      "Yalitza Aparicio",
-      "Marina de Tavira"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Alfonso Cuarón.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Alfonso Cuarón.",
-    "similarTags": [
-      "Alfonso",
-      "History",
-      "Adventure"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 History"
-    ],
-    "language": "Spanish",
-    "country": "Mexico",
-    "budget": "₹62 Crore",
-    "revenue": "₹133 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "spanish-secret-eyes",
-    "title": "The Secret in Their Eyes",
-    "year": 2009,
-    "runtime": "2h 9m",
-    "genres": [
-      "Crime",
-      "Drama",
-      "Mystery",
-      "Animation",
-      "Musical",
-      "Thriller",
-      "Noir"
-    ],
-    "imdbRating": 7.6,
-    "rottenTomatoesScore": 82,
-    "matchScore": 92,
-    "synopsis": "A retired investigator writes a novel about an unsolved rape and murder case that haunts him.",
-    "director": "Juan José Campanella",
-    "cast": [
-      "Ricardo Darín",
-      "Soledad Villamil"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Crime masterpiece directed by Juan José Campanella.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Crime masterpiece directed by Juan José Campanella.",
-    "similarTags": [
-      "Juan",
-      "Drama",
-      "Mystery"
-    ],
-    "moods": [
-      "✨ Crime",
-      "🔥 Drama"
-    ],
-    "language": "Spanish",
-    "country": "Argentina",
-    "budget": "₹45 Crore",
-    "revenue": "₹68 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "spanish-open-eyes",
-    "title": "Open Your Eyes",
-    "year": 1997,
-    "runtime": "1h 59m",
-    "genres": [
-      "Sci-Fi",
-      "Drama",
-      "Psychological",
-      "Anime",
-      "Family",
-      "Romance",
-      "War",
-      "Survival"
-    ],
-    "imdbRating": 7.7,
-    "rottenTomatoesScore": 83,
-    "matchScore": 93,
-    "synopsis": "A handsome man is disfigured in a car crash, finding himself in a dream-like state of hallucinations.",
-    "director": "Alejandro Amenábar",
-    "cast": [
-      "Eduardo Noriega",
-      "Penélope Cruz"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Sci-Fi masterpiece directed by Alejandro Amenábar.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Sci-Fi masterpiece directed by Alejandro Amenábar.",
-    "similarTags": [
-      "Alejandro",
-      "Drama",
-      "Psychological"
-    ],
-    "moods": [
-      "✨ Sci-Fi",
-      "🔥 Drama"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹58 Crore",
-    "revenue": "₹443 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "spanish-skin-live-in",
-    "title": "The Skin I Live In",
-    "year": 2011,
-    "runtime": "2h 0m",
-    "genres": [
-      "Thriller",
-      "Horror",
-      "Psychological",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi",
-      "Western",
-      "Space"
-    ],
-    "imdbRating": 7.8,
-    "rottenTomatoesScore": 84,
-    "matchScore": 94,
-    "synopsis": "A plastic surgeon creates a synthetic skin resistant to burns, keeping a mysterious woman captive.",
-    "director": "Pedro Almodóvar",
-    "cast": [
-      "Antonio Banderas",
-      "Elena Anaya"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1536768139911-e290a59002e4?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Thriller masterpiece directed by Pedro Almodóvar.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Thriller masterpiece directed by Pedro Almodóvar.",
-    "similarTags": [
-      "Pedro",
-      "Horror",
-      "Psychological"
-    ],
-    "moods": [
-      "✨ Thriller",
-      "🔥 Horror"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹137 Crore",
-    "revenue": "₹408 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "spanish-volver",
-    "title": "Volver",
-    "year": 2006,
-    "runtime": "2h 1m",
-    "genres": [
-      "Drama",
-      "Comedy",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel"
-    ],
-    "imdbRating": 7.9,
-    "rottenTomatoesScore": 85,
-    "matchScore": 95,
-    "synopsis": "A mother returns to her native village as a ghost to comfort her two daughters after a tragedy.",
-    "director": "Pedro Almodóvar",
-    "cast": [
-      "Penélope Cruz",
-      "Carmen Maura"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Pedro Almodóvar.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Pedro Almodóvar.",
-    "similarTags": [
-      "Pedro",
-      "Comedy",
-      "History"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Comedy"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹63 Crore",
-    "revenue": "₹214 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "spanish-talk-her",
-    "title": "Talk to Her",
-    "year": 2002,
-    "runtime": "1h 52m",
-    "genres": [
-      "Drama",
-      "Romance",
-      "Crime",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller",
-      "Action"
-    ],
-    "imdbRating": 8,
-    "rottenTomatoesScore": 86,
-    "matchScore": 96,
-    "synopsis": "Two men share an unlikely bond while caring for two women in comas at a private clinic.",
-    "director": "Pedro Almodóvar",
-    "cast": [
-      "Javier Cámara",
-      "Darío Grandinetti"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Pedro Almodóvar.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Pedro Almodóvar.",
-    "similarTags": [
-      "Pedro",
-      "Romance",
-      "Crime"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Romance"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹101 Crore",
-    "revenue": "₹166 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "spanish-pain-glory",
-    "title": "Pain and Glory",
-    "year": 2019,
-    "runtime": "1h 53m",
-    "genres": [
-      "Drama",
-      "Biography",
-      "Documentary",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk",
-      "Adventure"
-    ],
-    "imdbRating": 8.1,
-    "rottenTomatoesScore": 87,
-    "matchScore": 97,
-    "synopsis": "A retired film director recalls his childhood and past relationships during a physical decline.",
-    "director": "Pedro Almodóvar",
-    "cast": [
-      "Antonio Banderas",
-      "Penélope Cruz"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Pedro Almodóvar.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Pedro Almodóvar.",
-    "similarTags": [
-      "Pedro",
-      "Biography",
-      "Documentary"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Biography"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹113 Crore",
-    "revenue": "₹72 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "spanish-wild-tales",
-    "title": "Wild Tales",
-    "year": 2014,
-    "runtime": "2h 2m",
-    "genres": [
-      "Comedy",
-      "Drama",
-      "Crime",
-      "Musical",
-      "Thriller",
-      "Noir",
-      "Animation"
-    ],
-    "imdbRating": 8.2,
-    "rottenTomatoesScore": 88,
-    "matchScore": 98,
-    "synopsis": "Six standalone stories of violence and revenge, detailing people pushed to their limits.",
-    "director": "Damián Szifron",
-    "cast": [
-      "Ricardo Darín",
-      "Oscar Martínez"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Comedy masterpiece directed by Damián Szifron.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Comedy masterpiece directed by Damián Szifron.",
-    "similarTags": [
-      "Damián",
-      "Drama",
-      "Crime"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Drama"
-    ],
-    "language": "Spanish",
-    "country": "Argentina",
-    "budget": "₹80 Crore",
-    "revenue": "₹415 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "spanish-amores-perros",
-    "title": "Amores Perros",
-    "year": 2000,
-    "runtime": "2h 34m",
-    "genres": [
-      "Drama",
-      "Crime",
-      "Family",
-      "Romance",
-      "War",
-      "Survival",
-      "Anime"
-    ],
-    "imdbRating": 8.3,
-    "rottenTomatoesScore": 89,
-    "matchScore": 99,
-    "synopsis": "A tragic car crash in Mexico City connects three stories of dog fights and personal loss.",
-    "director": "Alejandro González Iñárritu",
-    "cast": [
-      "Emilio Echevarría",
-      "Gael García Bernal"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Alejandro González Iñárritu.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Alejandro González Iñárritu.",
-    "similarTags": [
-      "Alejandro",
-      "Crime",
-      "Family"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Crime"
-    ],
-    "language": "Spanish",
-    "country": "Mexico",
-    "budget": "₹35 Crore",
-    "revenue": "₹426 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "spanish-y-tu-mama",
-    "title": "Y Tu Mamá También",
-    "year": 2001,
-    "runtime": "1h 46m",
-    "genres": [
-      "Drama",
-      "Romance",
-      "Comedy",
-      "Fantasy",
-      "Sci-Fi",
-      "Western",
-      "Space",
-      "Biography"
-    ],
-    "imdbRating": 8.4,
-    "rottenTomatoesScore": 90,
-    "matchScore": 90,
-    "synopsis": "Two teenage boys embark on a road trip with a middle-aged woman, facing sexual tensions.",
-    "director": "Alfonso Cuarón",
-    "cast": [
-      "Gael García Bernal",
-      "Diego Luna"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Alfonso Cuarón.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Alfonso Cuarón.",
-    "similarTags": [
-      "Alfonso",
-      "Romance",
-      "Comedy"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Romance"
-    ],
-    "language": "Spanish",
-    "country": "Mexico",
-    "budget": "₹91 Crore",
-    "revenue": "₹202 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "spanish-rec",
-    "title": "Rec",
-    "year": 2007,
-    "runtime": "1h 18m",
-    "genres": [
-      "Horror",
-      "Thriller",
-      "Survival",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel",
-      "Comedy"
-    ],
-    "imdbRating": 8.5,
-    "rottenTomatoesScore": 91,
-    "matchScore": 91,
-    "synopsis": "A reporter and a camera operator follow firefighters into an apartment building quarantined due to a virus.",
-    "director": "Jaume Balagueró",
-    "cast": [
-      "Manuela Velasco",
-      "Ferran Terraza"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518063319789-7217e6706b04?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Horror masterpiece directed by Jaume Balagueró.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Horror masterpiece directed by Jaume Balagueró.",
-    "similarTags": [
-      "Jaume",
-      "Thriller",
-      "Survival"
-    ],
-    "moods": [
-      "✨ Horror",
-      "🔥 Thriller"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹31 Crore",
-    "revenue": "₹230 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "spanish-orphanage",
-    "title": "The Orphanage",
-    "year": 2007,
-    "runtime": "1h 45m",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller",
-      "Superhero",
-      "Mystery Thriller",
-      "Action",
-      "Crime"
-    ],
-    "imdbRating": 8.6,
-    "rottenTomatoesScore": 92,
-    "matchScore": 92,
-    "synopsis": "A woman buys her childhood orphanage home to care for disabled children, until her son disappears.",
-    "director": "J.A. Bayona",
-    "cast": [
-      "Belén Rueda",
-      "Fernando Cayo"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518063319789-7217e6706b04?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Horror masterpiece directed by J.A. Bayona.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Horror masterpiece directed by J.A. Bayona.",
-    "similarTags": [
-      "J.A.",
-      "Mystery",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Horror",
-      "🔥 Mystery"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹39 Crore",
-    "revenue": "₹142 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "spanish-platform",
-    "title": "The Platform",
-    "year": 2019,
-    "runtime": "1h 34m",
-    "genres": [
-      "Sci-Fi",
-      "Thriller",
-      "Survival",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary"
-    ],
-    "imdbRating": 8.7,
-    "rottenTomatoesScore": 93,
-    "matchScore": 93,
-    "synopsis": "A vertical prison tower with one food platform descending through levels, exposing greed.",
-    "director": "Galder Gaztelu-Urrutia",
-    "cast": [
-      "Ivan Massagué",
-      "Zorion Eguileor"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Sci-Fi masterpiece directed by Galder Gaztelu-Urrutia.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Sci-Fi masterpiece directed by Galder Gaztelu-Urrutia.",
-    "similarTags": [
-      "Galder",
-      "Thriller",
-      "Survival"
-    ],
-    "moods": [
-      "✨ Sci-Fi",
-      "🔥 Thriller"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹123 Crore",
-    "revenue": "₹372 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "spanish-mirage",
-    "title": "Mirage",
-    "year": 2018,
-    "runtime": "2h 8m",
-    "genres": [
-      "Sci-Fi",
-      "Thriller",
-      "Time Travel",
-      "Musical",
-      "Noir",
-      "Animation",
-      "Drama"
-    ],
-    "imdbRating": 8.8,
-    "rottenTomatoesScore": 94,
-    "matchScore": 94,
-    "synopsis": "A space-time glitch allows a mother to save a boy's life 25 years ago, but she loses her daughter.",
-    "director": "Oriol Paulo",
-    "cast": [
-      "Adriana Ugarte",
-      "Chino Darín"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Sci-Fi masterpiece directed by Oriol Paulo.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Sci-Fi masterpiece directed by Oriol Paulo.",
-    "similarTags": [
-      "Oriol",
-      "Thriller",
-      "Time Travel"
-    ],
-    "moods": [
-      "✨ Sci-Fi",
-      "🔥 Thriller"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹134 Crore",
-    "revenue": "₹125 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "spanish-invisible-guest",
-    "title": "The Invisible Guest",
-    "year": 2016,
-    "runtime": "1h 46m",
-    "genres": [
-      "Thriller",
-      "Mystery",
-      "Crime",
-      "Romance",
-      "War",
-      "Survival",
-      "Anime",
-      "Family"
-    ],
-    "imdbRating": 8.9,
-    "rottenTomatoesScore": 95,
-    "matchScore": 95,
-    "synopsis": "A wealthy businessman hires a veteran lawyer to clear his name after waking up next to a corpse.",
-    "director": "Oriol Paulo",
-    "cast": [
-      "Mario Casas",
-      "Ana Wagener"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Thriller masterpiece directed by Oriol Paulo.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Thriller masterpiece directed by Oriol Paulo.",
-    "similarTags": [
-      "Oriol",
-      "Mystery",
-      "Crime"
-    ],
-    "moods": [
-      "✨ Thriller",
-      "🔥 Mystery"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹65 Crore",
-    "revenue": "₹64 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "spanish-toc-toc",
-    "title": "Toc Toc",
-    "year": 2017,
-    "runtime": "1h 36m",
-    "genres": [
-      "Comedy",
-      "Family",
-      "Sci-Fi",
-      "Western",
-      "Space",
-      "Biography",
-      "Fantasy"
-    ],
-    "imdbRating": 9,
-    "rottenTomatoesScore": 96,
-    "matchScore": 96,
-    "synopsis": "A group of patients with OCD wait for a doctor whose flight is delayed, trying to help each other.",
-    "director": "Vicente Villanueva",
-    "cast": [
-      "Julián Villagrán",
-      "Alexandra Jiménez"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Comedy masterpiece directed by Vicente Villanueva.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Comedy masterpiece directed by Vicente Villanueva.",
-    "similarTags": [
-      "Vicente",
-      "Family",
-      "Sci-Fi"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Family"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹121 Crore",
-    "revenue": "₹354 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "spanish-cell-211",
-    "title": "Cell 211",
-    "year": 2009,
-    "runtime": "1h 53m",
-    "genres": [
-      "Action",
-      "Crime",
-      "Thriller",
-      "Sports",
-      "Psychological",
-      "Time Travel",
-      "Comedy",
-      "History"
-    ],
-    "imdbRating": 9.1,
-    "rottenTomatoesScore": 97,
-    "matchScore": 97,
-    "synopsis": "A new prison guard pretends to be an inmate to survive a sudden prison riot.",
-    "director": "Daniel Monzón",
-    "cast": [
-      "Luis Tosar",
-      "Alberto Ammann"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Action masterpiece directed by Daniel Monzón.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Action masterpiece directed by Daniel Monzón.",
-    "similarTags": [
-      "Daniel",
-      "Crime",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Crime"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹45 Crore",
-    "revenue": "₹70 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "spanish-marshland",
-    "title": "Marshland",
-    "year": 2014,
-    "runtime": "1h 45m",
-    "genres": [
-      "Crime",
-      "Thriller",
-      "Noir",
-      "Superhero",
-      "Mystery Thriller",
-      "Action",
-      "Horror"
-    ],
-    "imdbRating": 9.2,
-    "rottenTomatoesScore": 80,
-    "matchScore": 98,
-    "synopsis": "Two detectives in 1980 visit a remote marshland village to solve the murder of two sisters.",
-    "director": "Alberto Rodríguez",
-    "cast": [
-      "Raúl Arévalo",
-      "Javier Gutiérrez"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Crime masterpiece directed by Alberto Rodríguez.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Crime masterpiece directed by Alberto Rodríguez.",
-    "similarTags": [
-      "Alberto",
-      "Thriller",
-      "Noir"
-    ],
-    "moods": [
-      "✨ Crime",
-      "🔥 Thriller"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹31 Crore",
-    "revenue": "₹176 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "spanish-holy-family",
-    "title": "Holy Family",
-    "year": 2022,
-    "runtime": "2h 0m",
-    "genres": [
-      "Drama",
-      "Thriller",
-      "Suspense",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary",
-      "Mystery"
-    ],
-    "imdbRating": 9.3,
-    "rottenTomatoesScore": 81,
-    "matchScore": 99,
-    "synopsis": "A mother hides a dark secret in Madrid, where a new family threatens to expose her past.",
-    "director": "Manolo Caro",
-    "cast": [
-      "Najwa Nimri",
-      "Carla Campra"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Manolo Caro.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Manolo Caro.",
-    "similarTags": [
-      "Manolo",
-      "Thriller",
-      "Suspense"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Thriller"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹81 Crore",
-    "revenue": "₹338 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "spanish-biutiful",
-    "title": "Biutiful",
-    "year": 2010,
-    "runtime": "2h 28m",
-    "genres": [
-      "Drama",
-      "Fantasy",
-      "Thriller",
-      "Noir",
-      "Animation",
-      "Musical"
-    ],
-    "imdbRating": 9.4,
-    "rottenTomatoesScore": 82,
-    "matchScore": 90,
-    "synopsis": "The struggle of a terminally ill single father who communicates with spirits, trying to save his kids.",
-    "director": "Alejandro González Iñárritu",
-    "cast": [
-      "Javier Bardem",
-      "Maricel Álvarez"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Alejandro González Iñárritu.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Alejandro González Iñárritu.",
-    "similarTags": [
-      "Alejandro",
-      "Fantasy",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Fantasy"
-    ],
-    "language": "Spanish",
-    "country": "Mexico",
-    "budget": "₹83 Crore",
-    "revenue": "₹172 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "spanish-sea-inside",
-    "title": "The Sea Inside",
-    "year": 2004,
-    "runtime": "2h 5m",
-    "genres": [
-      "Drama",
-      "Biography",
-      "War",
-      "Survival",
-      "Anime",
-      "Family",
-      "Romance"
-    ],
-    "imdbRating": 7.4,
-    "rottenTomatoesScore": 83,
-    "matchScore": 91,
-    "synopsis": "The real-life story of Ramon Sampedro, who waged a thirty-year campaign to win his right to die.",
-    "director": "Alejandro Amenábar",
-    "cast": [
-      "Javier Bardem",
-      "Belén Rueda"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Alejandro Amenábar.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Alejandro Amenábar.",
-    "similarTags": [
-      "Alejandro",
-      "Biography",
-      "War"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Biography"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹107 Crore",
-    "revenue": "₹266 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "spanish-butterfly-tongue",
-    "title": "Butterfly's Tongue",
-    "year": 1999,
-    "runtime": "1h 36m",
-    "genres": [
-      "Drama",
-      "History",
-      "Western",
-      "Space",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi"
-    ],
-    "imdbRating": 7.5,
-    "rottenTomatoesScore": 84,
-    "matchScore": 92,
-    "synopsis": "A young boy in Galicia bonds with his republican teacher on the eve of the Spanish Civil War.",
-    "director": "José Luis Cuerda",
-    "cast": [
-      "Fernando Fernán Gómez"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by José Luis Cuerda.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by José Luis Cuerda.",
-    "similarTags": [
-      "José",
-      "History",
-      "Western"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 History"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹102 Crore",
-    "revenue": "₹343 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "spanish-thesis",
-    "title": "Thesis",
+    "budget": "$135 Million",
+    "revenue": "$585 Million",
+    "tagline": "Meet the first modern family.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-755",
+    "title": "From Dusk Till Dawn",
+    "originalTitle": "From Dusk Till Dawn",
     "year": 1996,
-    "runtime": "2h 5m",
+    "runtime": "108 min",
     "genres": [
+      "Horror",
+      "Action",
       "Thriller",
-      "Mystery",
-      "Crime",
-      "Psychological",
-      "Time Travel",
-      "Comedy",
-      "History",
-      "Sports"
+      "Crime"
     ],
-    "imdbRating": 7.6,
-    "rottenTomatoesScore": 85,
+    "imdbRating": 6.9,
     "matchScore": 93,
-    "synopsis": "A college student writing a thesis on violence uncovers a real snuff film ring in her university.",
-    "director": "Alejandro Amenábar",
+    "synopsis": "Seth Gecko and his younger brother Richard are on the run after a bloody bank robbery in Texas. They escape across the border into Mexico and will be home-free the next morning, when they pay off the local kingpin. They just have to survive 'from dusk till dawn' at the rendezvous point, which turns out to be a Hell of a strip joint.",
+    "director": "Robert Rodriguez",
     "cast": [
-      "Ana Torrent",
-      "Fele Martínez"
+      "George Clooney",
+      "Quentin Tarantino",
+      "Harvey Keitel",
+      "Juliette Lewis"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1536768139911-e290a59002e4?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/sV3kIAmvJ9tPz4Lq5fuf9LLMxte.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/phiRQhfwZZeMMn3osvQUmGYmJbp.jpg",
+    "trailerId": "y-J9bBvO5dk",
     "streamingOn": [
       "Disney+"
     ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Thriller masterpiece directed by Alejandro Amenábar.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Thriller masterpiece directed by Alejandro Amenábar.",
+    "aiReasoning": "Top match based on Horror themes and direction by Robert Rodriguez.",
+    "whyRecommended": "Top match based on Horror themes and direction by Robert Rodriguez.",
     "similarTags": [
-      "Alejandro",
-      "Mystery",
-      "Crime"
+      "Robert Rodriguez",
+      "Horror",
+      "Action"
     ],
     "moods": [
-      "✨ Thriller",
-      "🔥 Mystery"
+      "\u2728 Horror",
+      "\ud83d\udd25 Popular"
     ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹37 Crore",
-    "revenue": "₹62 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
+    "language": "English",
+    "country": "USA",
+    "budget": "$19 Million",
+    "revenue": "$25 Million",
+    "tagline": "One night is all that stands between them and freedom. But it's going to be a hell of a night.",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "spanish-devils-backbone",
-    "title": "The Devil's Backbone",
-    "year": 2001,
-    "runtime": "1h 46m",
+    "id": "tmdb-629",
+    "title": "The Usual Suspects",
+    "originalTitle": "The Usual Suspects",
+    "year": 1995,
+    "runtime": "106 min",
     "genres": [
-      "Horror",
-      "Fantasy",
-      "History",
-      "Mystery Thriller",
-      "Action",
+      "Drama",
       "Crime",
-      "Superhero"
+      "Thriller"
     ],
-    "imdbRating": 7.7,
-    "rottenTomatoesScore": 86,
+    "imdbRating": 8.1,
     "matchScore": 94,
-    "synopsis": "A young boy arrives at a remote orphanage during the Spanish Civil War, meeting a ghost child.",
-    "director": "Guillermo del Toro",
+    "synopsis": "Held in an L.A. interrogation room, Verbal Kint attempts to convince the feds that a mythic crime lord, Keyser Soze, not only exists, but was also responsible for drawing him and his four partners into a multi-million dollar heist that ended with an explosion in San Pedro harbor \u2013 leaving few survivors. Verbal lures his interrogators with an incredible story of the crime lord's almost supernatural prowess.",
+    "director": "Bryan Singer",
     "cast": [
-      "Fernando Tielve",
-      "Federico Luppi"
+      "Stephen Baldwin",
+      "Gabriel Byrne",
+      "Chazz Palminteri",
+      "Kevin Pollak"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1519074002996-a69e7ac46a42?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1505635552518-3448ff116af3?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/99X2SgyFunJFXGAYnDv3sb9pnUD.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/hy0Hx9fMPk2fmw26Li60z1S2giU.jpg",
+    "trailerId": "jM3jrHGAsIE",
     "streamingOn": [
       "Netflix",
       "Prime Video"
     ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Horror masterpiece directed by Guillermo del Toro.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Horror masterpiece directed by Guillermo del Toro.",
+    "aiReasoning": "Top match based on Drama themes and direction by Bryan Singer.",
+    "whyRecommended": "Top match based on Drama themes and direction by Bryan Singer.",
     "similarTags": [
-      "Guillermo",
-      "Fantasy",
-      "History"
+      "Bryan Singer",
+      "Drama",
+      "Crime"
     ],
     "moods": [
-      "✨ Horror",
-      "🔥 Fantasy"
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
     ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹103 Crore",
-    "revenue": "₹104 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
+    "language": "English",
+    "country": "USA",
+    "budget": "$6 Million",
+    "revenue": "$23 Million",
+    "tagline": "Five Criminals. One Line Up. No Coincidence.",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "spanish-timecrimes",
-    "title": "Timecrimes",
-    "year": 2007,
-    "runtime": "1h 32m",
+    "id": "tmdb-133805",
+    "title": "Carrie",
+    "originalTitle": "Carrie",
+    "year": 2013,
+    "runtime": "100 min",
     "genres": [
-      "Sci-Fi",
-      "Thriller",
-      "Time Travel",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary",
-      "Mystery",
-      "Suspense"
+      "Drama",
+      "Horror"
     ],
-    "imdbRating": 7.8,
-    "rottenTomatoesScore": 87,
+    "imdbRating": 5.8,
     "matchScore": 95,
-    "synopsis": "A man accidentally steps into a time machine, escaping from a masked killer who might be himself.",
-    "director": "Nacho Vigalondo",
+    "synopsis": "A reimagining of the classic horror tale about Carrie White, a shy girl outcast by her peers and sheltered by her deeply religious mother, who unleashes telekinetic terror on her small town after being pushed too far at her senior prom.",
+    "director": "Kimberly Peirce",
     "cast": [
-      "Karra Elejalde",
-      "Candela Fernández"
+      "Chlo\u00eb Grace Moretz",
+      "Julianne Moore",
+      "Judy Greer",
+      "Alex Russell"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/kloXz9qwO23z9Kbt3z3MgnjF4xO.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/zTwuMSZ8Tsf9k6r2lslemPs4m1H.jpg",
+    "trailerId": "szzw_SQlfpU",
     "streamingOn": [
       "Prime Video"
     ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Sci-Fi masterpiece directed by Nacho Vigalondo.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Sci-Fi masterpiece directed by Nacho Vigalondo.",
+    "aiReasoning": "Top match based on Drama themes and direction by Kimberly Peirce.",
+    "whyRecommended": "Top match based on Drama themes and direction by Kimberly Peirce.",
     "similarTags": [
-      "Nacho",
-      "Thriller",
-      "Time Travel"
-    ],
-    "moods": [
-      "✨ Sci-Fi",
-      "🔥 Thriller"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹41 Crore",
-    "revenue": "₹248 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "spanish-julias-eyes",
-    "title": "Julia's Eyes",
-    "year": 2010,
-    "runtime": "1h 52m",
-    "genres": [
-      "Thriller",
-      "Mystery",
-      "Horror",
-      "Noir",
-      "Animation",
+      "Kimberly Peirce",
       "Drama",
-      "Musical"
-    ],
-    "imdbRating": 7.9,
-    "rottenTomatoesScore": 88,
-    "matchScore": 96,
-    "synopsis": "A woman suffering from a degenerative eye disease investigates the suicide of her blind sister.",
-    "director": "Guillem Morales",
-    "cast": [
-      "Belén Rueda",
-      "Lluís Homar"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Thriller masterpiece directed by Guillem Morales.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Thriller masterpiece directed by Guillem Morales.",
-    "similarTags": [
-      "Guillem",
-      "Mystery",
       "Horror"
     ],
     "moods": [
-      "✨ Thriller",
-      "🔥 Mystery"
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
     ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹30 Crore",
-    "revenue": "₹351 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
+    "language": "English",
+    "country": "USA",
+    "budget": "$30 Million",
+    "revenue": "$82 Million",
+    "tagline": "Know her name. Fear her power.",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "spanish-sleep-tight",
-    "title": "Sleep Tight",
-    "year": 2011,
-    "runtime": "1h 42m",
-    "genres": [
-      "Thriller",
-      "Psychological",
-      "Survival",
-      "Anime",
-      "Family",
-      "Romance",
-      "War"
-    ],
-    "imdbRating": 8,
-    "rottenTomatoesScore": 89,
-    "matchScore": 97,
-    "synopsis": "A creepy apartment building concierge stalks a happy tenant, trying to destroy her life.",
-    "director": "Jaume Balagueró",
-    "cast": [
-      "Luis Tosar",
-      "Marta Etura"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Thriller masterpiece directed by Jaume Balagueró.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Thriller masterpiece directed by Jaume Balagueró.",
-    "similarTags": [
-      "Jaume",
-      "Psychological",
-      "Survival"
-    ],
-    "moods": [
-      "✨ Thriller",
-      "🔥 Psychological"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹46 Crore",
-    "revenue": "₹455 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "spanish-even-rain",
-    "title": "Even the Rain",
-    "year": 2010,
-    "runtime": "1h 43m",
-    "genres": [
-      "Drama",
-      "History",
-      "Space",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi",
-      "Western"
-    ],
-    "imdbRating": 8.1,
-    "rottenTomatoesScore": 90,
-    "matchScore": 98,
-    "synopsis": "A film crew visiting Bolivia during water riots faces conflicts over native exploitation.",
-    "director": "Icíar Bollaín",
-    "cast": [
-      "Gael García Bernal",
-      "Luis Tosar"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Icíar Bollaín.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Icíar Bollaín.",
-    "similarTags": [
-      "Icíar",
-      "History",
-      "Space"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 History"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹114 Crore",
-    "revenue": "₹237 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "spanish-method",
-    "title": "The Method",
-    "year": 2005,
-    "runtime": "1h 55m",
-    "genres": [
-      "Drama",
-      "Thriller",
-      "Time Travel",
-      "Comedy",
-      "History",
-      "Sports",
-      "Psychological"
-    ],
-    "imdbRating": 8.2,
-    "rottenTomatoesScore": 91,
-    "matchScore": 99,
-    "synopsis": "Seven job candidates undergo a psychological corporate evaluation test inside an office.",
-    "director": "Marcelo Piñeyro",
-    "cast": [
-      "Eduardo Noriega",
-      "Najwa Nimri"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Marcelo Piñeyro.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Marcelo Piñeyro.",
-    "similarTags": [
-      "Marcelo",
-      "Thriller",
-      "Time Travel"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Thriller"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹81 Crore",
-    "revenue": "₹354 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "spanish-common-wealth",
-    "title": "Common Wealth",
-    "year": 2000,
-    "runtime": "1h 50m",
-    "genres": [
-      "Comedy",
-      "Crime",
-      "Action",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller"
-    ],
-    "imdbRating": 8.3,
-    "rottenTomatoesScore": 92,
-    "matchScore": 90,
-    "synopsis": "A real estate agent finds 300 million pesetas in a deleted tenant's apartment, escaping neighbors.",
-    "director": "Álex de la Iglesia",
-    "cast": [
-      "Carmen Maura",
-      "Eduardo Antuña"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Comedy masterpiece directed by Álex de la Iglesia.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Comedy masterpiece directed by Álex de la Iglesia.",
-    "similarTags": [
-      "Álex",
-      "Crime",
-      "Action"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Crime"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹29 Crore",
-    "revenue": "₹420 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "spanish-veronica",
-    "title": "Verónica",
-    "year": 2017,
-    "runtime": "1h 45m",
+    "id": "tmdb-176",
+    "title": "Saw",
+    "originalTitle": "Saw",
+    "year": 2004,
+    "runtime": "103 min",
     "genres": [
       "Horror",
-      "Thriller",
-      "Adventure",
-      "Documentary",
       "Mystery",
-      "Suspense",
-      "Cyberpunk"
-    ],
-    "imdbRating": 8.4,
-    "rottenTomatoesScore": 93,
-    "matchScore": 91,
-    "synopsis": "A teenage girl in Madrid is haunted by a dark presence after using a Ouija board with friends.",
-    "director": "Paco Plaza",
-    "cast": [
-      "Sandra Escacena",
-      "Bruna González"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1505635552518-3448ff116af3?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Horror masterpiece directed by Paco Plaza.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Horror masterpiece directed by Paco Plaza.",
-    "similarTags": [
-      "Paco",
-      "Thriller",
-      "Adventure"
-    ],
-    "moods": [
-      "✨ Horror",
-      "🔥 Thriller"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹82 Crore",
-    "revenue": "₹251 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "spanish-society-snow",
-    "title": "Society of the Snow",
-    "year": 2023,
-    "runtime": "2h 24m",
-    "genres": [
-      "Drama",
-      "Biography",
-      "Survival",
-      "Animation",
-      "Musical",
-      "Thriller",
-      "Noir"
-    ],
-    "imdbRating": 8.5,
-    "rottenTomatoesScore": 94,
-    "matchScore": 92,
-    "synopsis": "The survival story of a Uruguayan rugby team whose plane crashed in the Andes in 1972.",
-    "director": "J.A. Bayona",
-    "cast": [
-      "Enzo Vogrincic",
-      "Agustín Pardella"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by J.A. Bayona.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by J.A. Bayona.",
-    "similarTags": [
-      "J.A.",
-      "Biography",
-      "Survival"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Biography"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹68 Crore",
-    "revenue": "₹277 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "spanish-beasts",
-    "title": "The Beasts",
-    "year": 2022,
-    "runtime": "2h 17m",
-    "genres": [
-      "Drama",
-      "Thriller",
-      "Crime",
-      "Anime",
-      "Family",
-      "Romance",
-      "War",
-      "Survival"
-    ],
-    "imdbRating": 8.6,
-    "rottenTomatoesScore": 95,
-    "matchScore": 93,
-    "synopsis": "A French couple settles in a Galician village, facing severe hostility from their neighbors.",
-    "director": "Rodrigo Sorogoyen",
-    "cast": [
-      "Denis Ménochet",
-      "Marina Foïs"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Rodrigo Sorogoyen.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Drama masterpiece directed by Rodrigo Sorogoyen.",
-    "similarTags": [
-      "Rodrigo",
-      "Thriller",
       "Crime"
     ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Thriller"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹68 Crore",
-    "revenue": "₹307 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "spanish-bird-box-barcelona",
-    "title": "Bird Box Barcelona",
-    "year": 2023,
-    "runtime": "1h 51m",
-    "genres": [
-      "Sci-Fi",
-      "Thriller",
-      "Survival",
-      "Biography",
-      "Fantasy",
-      "Western",
-      "Space"
-    ],
-    "imdbRating": 8.7,
-    "rottenTomatoesScore": 96,
-    "matchScore": 94,
-    "synopsis": "A father fights to survive on the deserted streets of Barcelona after a mysterious force wipes out humanity.",
-    "director": "David Pastor",
-    "cast": [
-      "Mario Casas",
-      "Georgina Campbell"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Sci-Fi masterpiece directed by David Pastor.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Sci-Fi masterpiece directed by David Pastor.",
-    "similarTags": [
-      "David",
-      "Thriller",
-      "Survival"
-    ],
-    "moods": [
-      "✨ Sci-Fi",
-      "🔥 Thriller"
-    ],
-    "language": "Spanish",
-    "country": "Spain",
-    "budget": "₹24 Crore",
-    "revenue": "₹193 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "spanish-el-gringo",
-    "title": "El Gringo",
-    "year": 2012,
-    "runtime": "1h 40m",
-    "genres": [
-      "Action",
-      "Western",
-      "Comedy",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel"
-    ],
-    "imdbRating": 8.8,
-    "rottenTomatoesScore": 97,
-    "matchScore": 95,
-    "synopsis": "A man crosses into Mexico with a bag of cash, facing a shootout in a remote town.",
-    "director": "Eduardo Rodriguez",
-    "cast": [
-      "Scott Adkins",
-      "Christian Slater"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from Spanish cinema. A high-quality Action masterpiece directed by Eduardo Rodriguez.",
-    "whyRecommended": "Top recommendation from Spanish cinema. A high-quality Action masterpiece directed by Eduardo Rodriguez.",
-    "similarTags": [
-      "Eduardo",
-      "Western",
-      "Comedy"
-    ],
-    "moods": [
-      "✨ Action",
-      "🔥 Western"
-    ],
-    "language": "Spanish",
-    "country": "Mexico",
-    "budget": "₹138 Crore",
-    "revenue": "₹115 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "french-amelie",
-    "title": "Amélie",
-    "year": 2001,
-    "runtime": "2h 2m",
-    "genres": [
-      "Comedy",
-      "Romance",
-      "Fantasy",
-      "Action",
-      "Crime",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller"
-    ],
-    "imdbRating": 7.4,
-    "rottenTomatoesScore": 80,
-    "matchScore": 90,
-    "synopsis": "A bubbly waitress in Paris decides to orchestrate the lives of people around her, falling in love.",
-    "director": "Jean-Pierre Jeunet",
-    "cast": [
-      "Audrey Tautou",
-      "Mathieu Kassovitz"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Comedy masterpiece directed by Jean-Pierre Jeunet.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Comedy masterpiece directed by Jean-Pierre Jeunet.",
-    "similarTags": [
-      "Jean-Pierre",
-      "Romance",
-      "Fantasy"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Romance"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹116 Crore",
-    "revenue": "₹365 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "french-intouchables",
-    "title": "The Intouchables",
-    "year": 2011,
-    "runtime": "1h 52m",
-    "genres": [
-      "Comedy",
-      "Drama",
-      "Biography",
-      "Adventure",
-      "Documentary",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk"
-    ],
-    "imdbRating": 7.5,
-    "rottenTomatoesScore": 81,
-    "matchScore": 91,
-    "synopsis": "An unlikely friendship forms between a wealthy quadriplegic aristocrat and his streetwise caregiver.",
-    "director": "Olivier Nakache",
-    "cast": [
-      "François Cluzet",
-      "Omar Sy"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Comedy masterpiece directed by Olivier Nakache.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Comedy masterpiece directed by Olivier Nakache.",
-    "similarTags": [
-      "Olivier",
-      "Drama",
-      "Biography"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Drama"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹23 Crore",
-    "revenue": "₹192 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "french-haine",
-    "title": "La Haine",
-    "year": 1995,
-    "runtime": "1h 38m",
-    "genres": [
-      "Drama",
-      "Crime",
-      "Noir",
-      "Animation",
-      "Musical",
-      "Thriller"
-    ],
-    "imdbRating": 7.6,
-    "rottenTomatoesScore": 82,
-    "matchScore": 92,
-    "synopsis": "Three young friends from immigrant suburbs wander around Paris on the day after a riot.",
-    "director": "Mathieu Kassovitz",
-    "cast": [
-      "Vincent Cassel",
-      "Hubert Koundé"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Mathieu Kassovitz.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Mathieu Kassovitz.",
-    "similarTags": [
-      "Mathieu",
-      "Crime",
-      "Noir"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Crime"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹29 Crore",
-    "revenue": "₹254 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "french-portrait-lady",
-    "title": "Portrait of a Lady on Fire",
-    "year": 2019,
-    "runtime": "2h 2m",
-    "genres": [
-      "Romance",
-      "Drama",
-      "History",
-      "Anime",
-      "Family",
-      "War",
-      "Survival"
-    ],
-    "imdbRating": 7.7,
-    "rottenTomatoesScore": 83,
-    "matchScore": 93,
-    "synopsis": "A painter is hired to paint a wedding portrait of a young countess, forming an intimate bond.",
-    "director": "Céline Sciamma",
-    "cast": [
-      "Noémie Merlant",
-      "Adèle Haenel"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Romance masterpiece directed by Céline Sciamma.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Romance masterpiece directed by Céline Sciamma.",
-    "similarTags": [
-      "Céline",
-      "Drama",
-      "History"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Drama"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹29 Crore",
-    "revenue": "₹422 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "french-blue-warmest",
-    "title": "Blue Is the Warmest Colour",
-    "year": 2013,
-    "runtime": "3h 0m",
-    "genres": [
-      "Romance",
-      "Drama",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi",
-      "Western",
-      "Space"
-    ],
-    "imdbRating": 7.8,
-    "rottenTomatoesScore": 84,
-    "matchScore": 94,
-    "synopsis": "The life and relationship of a French girl who falls in love with a blue-haired art student.",
-    "director": "Abdellatif Kechiche",
-    "cast": [
-      "Léa Seydoux",
-      "Adèle Exarchopoulos"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Romance masterpiece directed by Abdellatif Kechiche.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Romance masterpiece directed by Abdellatif Kechiche.",
-    "similarTags": [
-      "Abdellatif",
-      "Drama",
-      "Biography"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Drama"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹85 Crore",
-    "revenue": "₹348 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "french-artist",
-    "title": "The Artist",
-    "year": 2011,
-    "runtime": "1h 40m",
-    "genres": [
-      "Romance",
-      "Comedy",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel"
-    ],
-    "imdbRating": 7.9,
-    "rottenTomatoesScore": 85,
-    "matchScore": 95,
-    "synopsis": "A silent film star faces the transition to talking pictures in Hollywood, falling in love with a dancer.",
-    "director": "Michel Hazanavicius",
-    "cast": [
-      "Jean Dujardin",
-      "Bérénice Bejo"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Romance masterpiece directed by Michel Hazanavicius.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Romance masterpiece directed by Michel Hazanavicius.",
-    "similarTags": [
-      "Michel",
-      "Comedy",
-      "History"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Comedy"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹95 Crore",
-    "revenue": "₹248 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "french-breathless",
-    "title": "Breathless",
-    "year": 1960,
-    "runtime": "1h 30m",
-    "genres": [
-      "Drama",
-      "Crime",
-      "Noir",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller",
-      "Action"
-    ],
-    "imdbRating": 8,
-    "rottenTomatoesScore": 86,
+    "imdbRating": 7.2,
     "matchScore": 96,
-    "synopsis": "A petty criminal steals a car, shoots an officer, and hides with an American journalism student.",
-    "director": "Jean-Luc Godard",
+    "synopsis": "Obsessed with teaching his victims the value of life, a deranged, sadistic serial killer abducts the morally wayward. Once captured, they must face impossible choices in a horrific game of survival. The victims must fight to win their lives back, or die trying...",
+    "director": "James Wan",
     "cast": [
-      "Jean-Paul Belmondo",
-      "Jean Seberg"
+      "Cary Elwes",
+      "Danny Glover",
+      "Monica Potter",
+      "Michael Emerson"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/rLNSOudrayDBo1uqXjrhxcjODIC.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/ok4ot3YbfDYZcINXf91JUfq3maB.jpg",
+    "trailerId": "0bHDblokwv0",
     "streamingOn": [
       "Max"
     ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Jean-Luc Godard.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Jean-Luc Godard.",
+    "aiReasoning": "Top match based on Horror themes and direction by James Wan.",
+    "whyRecommended": "Top match based on Horror themes and direction by James Wan.",
     "similarTags": [
-      "Jean-Luc",
-      "Crime",
-      "Noir"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Crime"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹58 Crore",
-    "revenue": "₹107 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "french-four-hundred-blows",
-    "title": "The 400 Blows",
-    "year": 1959,
-    "runtime": "1h 39m",
-    "genres": [
-      "Drama",
-      "Crime",
-      "Documentary",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk",
-      "Adventure"
-    ],
-    "imdbRating": 8.1,
-    "rottenTomatoesScore": 87,
-    "matchScore": 97,
-    "synopsis": "A young boy in Paris turns to petty crime and delinquency to escape his neglectful parents.",
-    "director": "François Truffaut",
-    "cast": [
-      "Jean-Pierre Léaud",
-      "Claire Maurier"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by François Truffaut.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by François Truffaut.",
-    "similarTags": [
-      "François",
-      "Crime",
-      "Documentary"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Crime"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹63 Crore",
-    "revenue": "₹64 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "french-anatomy-fall",
-    "title": "Anatomy of a Fall",
-    "year": 2023,
-    "runtime": "2h 31m",
-    "genres": [
-      "Drama",
-      "Crime",
-      "Mystery",
-      "Musical",
-      "Thriller",
-      "Noir",
-      "Animation"
-    ],
-    "imdbRating": 8.2,
-    "rottenTomatoesScore": 88,
-    "matchScore": 98,
-    "synopsis": "A woman is accused of murder after her husband falls to his death in a remote chalet.",
-    "director": "Justine Triet",
-    "cast": [
-      "Sandra Hüller",
-      "Swann Arlaud"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Justine Triet.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Justine Triet.",
-    "similarTags": [
-      "Justine",
-      "Crime",
+      "James Wan",
+      "Horror",
       "Mystery"
     ],
     "moods": [
-      "✨ Drama",
-      "🔥 Crime"
+      "\u2728 Horror",
+      "\ud83d\udd25 Popular"
     ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹129 Crore",
-    "revenue": "₹232 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
+    "language": "English",
+    "country": "USA",
+    "budget": "$1 Million",
+    "revenue": "$103 Million",
+    "tagline": "Live or die. Make your choice.",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "french-rust-bone",
-    "title": "Rust and Bone",
-    "year": 2012,
-    "runtime": "2h 0m",
+    "id": "tmdb-769",
+    "title": "GoodFellas",
+    "originalTitle": "GoodFellas",
+    "year": 1990,
+    "runtime": "145 min",
     "genres": [
       "Drama",
-      "Romance",
-      "Family",
-      "War",
-      "Survival",
-      "Anime"
+      "Crime"
     ],
-    "imdbRating": 8.3,
-    "rottenTomatoesScore": 89,
-    "matchScore": 99,
-    "synopsis": "A single father forms a bond with a killer whale trainer who lost her legs in an accident.",
-    "director": "Jacques Audiard",
+    "imdbRating": 8.2,
+    "matchScore": 97,
+    "synopsis": "The true story of Henry Hill, a half-Irish, half-Sicilian Brooklyn kid who is adopted by neighbourhood gangsters at an early age and climbs the ranks of a Mafia family under the guidance of Jimmy Conway.",
+    "director": "Martin Scorsese",
     "cast": [
-      "Marion Cotillard",
-      "Matthias Schoenaerts"
+      "Robert De Niro",
+      "Ray Liotta",
+      "Joe Pesci",
+      "Lorraine Bracco"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Jacques Audiard.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Jacques Audiard.",
-    "similarTags": [
-      "Jacques",
-      "Romance",
-      "Family"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Romance"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹50 Crore",
-    "revenue": "₹107 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "french-prophet",
-    "title": "A Prophet",
-    "year": 2009,
-    "runtime": "2h 35m",
-    "genres": [
-      "Crime",
-      "Drama",
-      "Thriller",
-      "Fantasy",
-      "Sci-Fi",
-      "Western",
-      "Space",
-      "Biography"
-    ],
-    "imdbRating": 8.4,
-    "rottenTomatoesScore": 90,
-    "matchScore": 90,
-    "synopsis": "An Algerian immigrant enters a French prison, rising to lead a powerful Corsican gang.",
-    "director": "Jacques Audiard",
-    "cast": [
-      "Tahar Rahim",
-      "Niels Arestrup"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Crime masterpiece directed by Jacques Audiard.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Crime masterpiece directed by Jacques Audiard.",
-    "similarTags": [
-      "Jacques",
-      "Drama",
-      "Thriller"
-    ],
-    "moods": [
-      "✨ Crime",
-      "🔥 Drama"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹114 Crore",
-    "revenue": "₹289 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "french-climax",
-    "title": "Climax",
-    "year": 2018,
-    "runtime": "1h 37m",
-    "genres": [
-      "Horror",
-      "Musical",
-      "Psychological",
-      "History",
-      "Sports",
-      "Time Travel",
-      "Comedy"
-    ],
-    "imdbRating": 8.5,
-    "rottenTomatoesScore": 91,
-    "matchScore": 91,
-    "synopsis": "A dance troop's rehearsal turns into a hallucinatory nightmare after their sangria is spiked.",
-    "director": "Gaspar Noé",
-    "cast": [
-      "Sofia Boutella",
-      "Romain Guillermic"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518063319789-7217e6706b04?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9OkCLM73MIU2CrKZbqiT8Ln1wY2.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/gILte6Zd7m1YneIr6MVhh30S9pr.jpg",
+    "trailerId": "PTBRNXGQR9Q",
     "streamingOn": [
       "Disney+"
     ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Horror masterpiece directed by Gaspar Noé.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Horror masterpiece directed by Gaspar Noé.",
+    "aiReasoning": "Top match based on Drama themes and direction by Martin Scorsese.",
+    "whyRecommended": "Top match based on Drama themes and direction by Martin Scorsese.",
     "similarTags": [
-      "Gaspar",
-      "Musical",
-      "Psychological"
-    ],
-    "moods": [
-      "✨ Horror",
-      "🔥 Musical"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹77 Crore",
-    "revenue": "₹326 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "french-enter-void",
-    "title": "Enter the Void",
-    "year": 2009,
-    "runtime": "2h 41m",
-    "genres": [
-      "Sci-Fi",
+      "Martin Scorsese",
       "Drama",
-      "Psychological",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller",
-      "Action",
       "Crime"
     ],
-    "imdbRating": 8.6,
-    "rottenTomatoesScore": 92,
-    "matchScore": 92,
-    "synopsis": "A drug dealer is shot by the police in Tokyo, traveling through the city as a spirit.",
-    "director": "Gaspar Noé",
-    "cast": [
-      "Nathaniel Brown",
-      "Paz de la Huerta"
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "language": "English",
+    "country": "USA",
+    "budget": "$25 Million",
+    "revenue": "$46 Million",
+    "tagline": "Three Decades of Life in the Mafia.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-68737",
+    "title": "Seventh Son",
+    "originalTitle": "Seventh Son",
+    "year": 2014,
+    "runtime": "102 min",
+    "genres": [
+      "Adventure",
+      "Fantasy"
+    ],
+    "imdbRating": 5.2,
+    "matchScore": 98,
+    "synopsis": "John Gregory, who is a seventh son of a seventh son and also the local spook, has protected the country from witches, boggarts, ghouls and all manner of things that go bump in the night. However John is not young anymore, and has been seeking an apprentice to carry on his trade. Most have failed to survive. The last hope is a young farmer's son named Thomas Ward. Will he survive the training to become the spook that so many others couldn't?",
+    "director": "Sergei Bodrov",
+    "cast": [
+      "Jeff Bridges",
+      "Julianne Moore",
+      "Ben Barnes",
+      "Alicia Vikander"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7Q8DfXSjcFSSQDOxz1Sk865wNqI.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/2EyK8wpLdYFaS35o0worjqsiuZn.jpg",
+    "trailerId": "5i90Qr0Qi6w",
     "streamingOn": [
       "Netflix",
       "Prime Video"
     ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Sci-Fi masterpiece directed by Gaspar Noé.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Sci-Fi masterpiece directed by Gaspar Noé.",
+    "aiReasoning": "Top match based on Adventure themes and direction by Sergei Bodrov.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Sergei Bodrov.",
     "similarTags": [
-      "Gaspar",
-      "Drama",
-      "Psychological"
+      "Sergei Bodrov",
+      "Adventure",
+      "Fantasy"
     ],
     "moods": [
-      "✨ Sci-Fi",
-      "🔥 Drama"
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
     ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹20 Crore",
-    "revenue": "₹155 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
+    "language": "English",
+    "country": "USA",
+    "budget": "$95 Million",
+    "revenue": "$114 Million",
+    "tagline": "When darkness falls, the son will rise. When the son falls, the dark knight will rise.",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "french-raw-french",
-    "title": "Raw",
-    "year": 2016,
-    "runtime": "1h 39m",
+    "id": "tmdb-82693",
+    "title": "Silver Linings Playbook",
+    "originalTitle": "Silver Linings Playbook",
+    "year": 2012,
+    "runtime": "122 min",
     "genres": [
-      "Horror",
       "Drama",
-      "Thriller",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary"
+      "Comedy",
+      "Romance"
     ],
-    "imdbRating": 8.7,
-    "rottenTomatoesScore": 93,
-    "matchScore": 93,
-    "synopsis": "A young vegetarian veterinary student develops a craving for raw meat after a hazing ritual.",
-    "director": "Julia Ducournau",
+    "imdbRating": 6.9,
+    "matchScore": 99,
+    "synopsis": "After spending eight months in a mental institution, a former teacher moves back in with his parents and tries to reconcile with his ex-wife.",
+    "director": "David O. Russell",
     "cast": [
-      "Garance Marillier",
-      "Ella Rumpf"
+      "Bradley Cooper",
+      "Jennifer Lawrence",
+      "Robert De Niro",
+      "Jacki Weaver"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1518063319789-7217e6706b04?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fhHB1uvfFKKFbj6bTKE8xdtsjKi.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/12GpsUm9nVVKFlcjDTflKLClFVA.jpg",
+    "trailerId": "EI_3ywJLQio",
     "streamingOn": [
       "Prime Video"
     ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Horror masterpiece directed by Julia Ducournau.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Horror masterpiece directed by Julia Ducournau.",
+    "aiReasoning": "Top match based on Drama themes and direction by David O. Russell.",
+    "whyRecommended": "Top match based on Drama themes and direction by David O. Russell.",
     "similarTags": [
-      "Julia",
+      "David O. Russell",
       "Drama",
-      "Thriller"
+      "Comedy"
     ],
     "moods": [
-      "✨ Horror",
-      "🔥 Drama"
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
     ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹33 Crore",
-    "revenue": "₹410 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
+    "language": "English",
+    "country": "USA",
+    "budget": "$21 Million",
+    "revenue": "$205 Million",
+    "tagline": "Watch For The Signs",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "french-titane",
-    "title": "Titane",
-    "year": 2021,
-    "runtime": "1h 48m",
+    "id": "tmdb-228161",
+    "title": "Home",
+    "originalTitle": "Home",
+    "year": 2015,
+    "runtime": "94 min",
     "genres": [
-      "Horror",
-      "Thriller",
-      "Sci-Fi",
-      "Musical",
-      "Noir",
+      "Fantasy",
+      "Comedy",
       "Animation",
-      "Drama"
+      "Science Fiction",
+      "Family"
     ],
-    "imdbRating": 8.8,
-    "rottenTomatoesScore": 94,
-    "matchScore": 94,
-    "synopsis": "A serial killer who has a titanium plate in her skull takes the place of a firefighter's missing son.",
-    "director": "Julia Ducournau",
+    "imdbRating": 6.8,
+    "matchScore": 90,
+    "synopsis": "When Earth is taken over by the overly-confident Boov, an alien race in search of a new place to call home, all humans are promptly relocated, while all Boov get busy reorganizing the planet. But when one resourceful girl, Tip, manages to avoid capture, she finds herself the accidental accomplice of a banished Boov named Oh. The two fugitives realize there\u2019s a lot more at stake than intergalactic relations as they embark on the road trip of a lifetime.",
+    "director": "Tim Johnson",
     "cast": [
-      "Vincent Lindon",
-      "Agathe Rousselle"
+      "Jim Parsons",
+      "Rihanna",
+      "Steve Martin",
+      "Jennifer Lopez"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1505635552518-3448ff116af3?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/usFenYnk6mr8C62dB1MoAfSWMGR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/gnkBzJVH2zicIopP2fHf4kRElne.jpg",
+    "trailerId": "Du4jTG7-93k",
     "streamingOn": [
       "Max"
     ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Horror masterpiece directed by Julia Ducournau.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Horror masterpiece directed by Julia Ducournau.",
+    "aiReasoning": "Top match based on Fantasy themes and direction by Tim Johnson.",
+    "whyRecommended": "Top match based on Fantasy themes and direction by Tim Johnson.",
     "similarTags": [
-      "Julia",
-      "Thriller",
-      "Sci-Fi"
+      "Tim Johnson",
+      "Fantasy",
+      "Comedy"
     ],
     "moods": [
-      "✨ Horror",
-      "🔥 Thriller"
+      "\u2728 Fantasy",
+      "\ud83d\udd25 Popular"
     ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹30 Crore",
-    "revenue": "₹397 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
+    "language": "English",
+    "country": "USA",
+    "budget": "$135 Million",
+    "revenue": "$368 Million",
+    "tagline": "Worlds Collide",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "french-irreversible",
-    "title": "Irreversible",
-    "year": 2002,
-    "runtime": "1h 37m",
+    "id": "tmdb-68735",
+    "title": "Warcraft",
+    "originalTitle": "Warcraft",
+    "year": 2016,
+    "runtime": "123 min",
     "genres": [
-      "Thriller",
-      "Drama",
-      "Crime",
-      "Romance",
-      "War",
-      "Survival",
-      "Anime",
-      "Family"
+      "Action",
+      "Adventure",
+      "Fantasy"
     ],
-    "imdbRating": 8.9,
-    "rottenTomatoesScore": 95,
-    "matchScore": 95,
-    "synopsis": "A boyfriend set out to exact revenge for a brutal assault on his lover in Paris.",
-    "director": "Gaspar Noé",
+    "imdbRating": 6.3,
+    "matchScore": 91,
+    "synopsis": "The peaceful realm of Azeroth stands on the brink of war as its civilization faces a fearsome race of invaders: orc warriors fleeing their dying home to colonize another. As a portal opens to connect the two worlds, one army faces destruction and the other faces extinction. From opposing sides, two heroes are set on a collision course that will decide the fate of their family, their people, and their home.",
+    "director": "Duncan Jones",
     "cast": [
-      "Monica Bellucci",
+      "Paula Patton",
+      "Travis Fimmel",
+      "Ben Foster",
+      "Robert Kazinsky"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/eGi5aoxaZveqNLtE7BZJCuWwR3G.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/aTGvZ3F8QnAD8cPpJRaaqRRxFK6.jpg",
+    "trailerId": "65AjY_nRdqE",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Duncan Jones.",
+    "whyRecommended": "Top match based on Action themes and direction by Duncan Jones.",
+    "similarTags": [
+      "Duncan Jones",
+      "Action",
+      "Adventure"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$160 Million",
+    "revenue": "$433 Million",
+    "tagline": "Two worlds. One home.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-956",
+    "title": "Mission: Impossible III",
+    "originalTitle": "Mission: Impossible III",
+    "year": 2006,
+    "runtime": "126 min",
+    "genres": [
+      "Adventure",
+      "Action",
+      "Thriller"
+    ],
+    "imdbRating": 6.5,
+    "matchScore": 92,
+    "synopsis": "Retired from active duty to train new IMF agents, Ethan Hunt is called back into action to confront sadistic arms dealer, Owen Davian. Hunt must try to protect his girlfriend while working with his new team to complete the mission.",
+    "director": "J.J. Abrams",
+    "cast": [
+      "Tom Cruise",
+      "Philip Seymour Hoffman",
+      "Ving Rhames",
+      "Billy Crudup"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vKGYCpmQyV9uHybWDzXuII8Los5.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/bYKeB9uUcPmvikjouEEQ86uvPw9.jpg",
+    "trailerId": "4oVva0muTE8",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by J.J. Abrams.",
+    "whyRecommended": "Top match based on Adventure themes and direction by J.J. Abrams.",
+    "similarTags": [
+      "J.J. Abrams",
+      "Adventure",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$150 Million",
+    "revenue": "$397 Million",
+    "tagline": "The Mission Begins 05:05:06.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-1724",
+    "title": "The Incredible Hulk",
+    "originalTitle": "The Incredible Hulk",
+    "year": 2008,
+    "runtime": "114 min",
+    "genres": [
+      "Science Fiction",
+      "Action",
+      "Adventure"
+    ],
+    "imdbRating": 6.1,
+    "matchScore": 93,
+    "synopsis": "Scientist Bruce Banner scours the planet for an antidote to the unbridled force of rage within him: the Hulk. But when the military masterminds who dream of exploiting his powers force him back to civilization, he finds himself coming face to face with a new, deadly foe.",
+    "director": "Louis Leterrier",
+    "cast": [
+      "Edward Norton",
+      "Liv Tyler",
+      "Tim Roth",
+      "William Hurt"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gKzYx79y0AQTL4UAk1cBQJ3nvrm.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/jPu8yiadqgzwFPGKJmGo637ASVP.jpg",
+    "trailerId": "dz6eBeW19Lg",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Science Fiction themes and direction by Louis Leterrier.",
+    "whyRecommended": "Top match based on Science Fiction themes and direction by Louis Leterrier.",
+    "similarTags": [
+      "Louis Leterrier",
+      "Science Fiction",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Science Fiction",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$150 Million",
+    "revenue": "$163 Million",
+    "tagline": "You'll like him when he's angry.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-64688",
+    "title": "21 Jump Street",
+    "originalTitle": "21 Jump Street",
+    "year": 2012,
+    "runtime": "109 min",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Crime"
+    ],
+    "imdbRating": 6.7,
+    "matchScore": 94,
+    "synopsis": "In high school, Schmidt was a dork and Jenko was the popular jock. After graduation, both of them joined the police force and ended up as partners riding bicycles in the city park. Since they are young and look like high school students, they are assigned to an undercover unit to infiltrate a drug ring that is supplying high school students synthetic drugs.",
+    "director": "Phil Lord",
+    "cast": [
+      "Channing Tatum",
+      "Jonah Hill",
+      "Brie Larson",
+      "Dave Franco"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/8v3Sqv9UcIUC4ebmpKWROqPBINZ.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/rXrpYOveFl76ivMmyb2612T7Q8w.jpg",
+    "trailerId": "BjRs18rV1FI",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Phil Lord.",
+    "whyRecommended": "Top match based on Action themes and direction by Phil Lord.",
+    "similarTags": [
+      "Phil Lord",
+      "Action",
+      "Comedy"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$42 Million",
+    "revenue": "$201 Million",
+    "tagline": "They thought the streets were mean. Then they went back to high school.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-324668",
+    "title": "Jason Bourne",
+    "originalTitle": "Jason Bourne",
+    "year": 2016,
+    "runtime": "123 min",
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "imdbRating": 5.9,
+    "matchScore": 95,
+    "synopsis": "The most dangerous former operative of the CIA is drawn out of hiding to uncover hidden truths about his past.",
+    "director": "Paul Greengrass",
+    "cast": [
+      "Matt Damon",
+      "Alicia Vikander",
+      "Tommy Lee Jones",
       "Vincent Cassel"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xA7N41glw17MBQtcWSm2eBlBRuG.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/7mHeyU0a538bgguOeF57I8ZroSk.jpg",
+    "trailerId": "F4gJsKZvqE4",
     "streamingOn": [
       "Disney+"
     ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Thriller masterpiece directed by Gaspar Noé.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Thriller masterpiece directed by Gaspar Noé.",
+    "aiReasoning": "Top match based on Action themes and direction by Paul Greengrass.",
+    "whyRecommended": "Top match based on Action themes and direction by Paul Greengrass.",
     "similarTags": [
-      "Gaspar",
+      "Paul Greengrass",
+      "Action",
+      "Thriller"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$120 Million",
+    "revenue": "$415 Million",
+    "tagline": "You know his name",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-122081",
+    "title": "Spring Breakers",
+    "originalTitle": "Spring Breakers",
+    "year": 2013,
+    "runtime": "94 min",
+    "genres": [
+      "Drama",
+      "Crime"
+    ],
+    "imdbRating": 5.0,
+    "matchScore": 96,
+    "synopsis": "After four college girls rob a restaurant to fund their spring break in Florida, they get entangled with a weird dude with his own criminal agenda.",
+    "director": "Harmony Korine",
+    "cast": [
+      "James Franco",
+      "Selena Gomez",
+      "Vanessa Hudgens",
+      "Ashley Benson"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9tyPnyEkL44qbAliM9jMRWc6bjg.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/3eMxTkvHM6G1lHugBvFGVpcJFUa.jpg",
+    "trailerId": "m0AMLz5NMl4",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Harmony Korine.",
+    "whyRecommended": "Top match based on Drama themes and direction by Harmony Korine.",
+    "similarTags": [
+      "Harmony Korine",
       "Drama",
       "Crime"
     ],
     "moods": [
-      "✨ Thriller",
-      "🔥 Drama"
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
     ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹81 Crore",
-    "revenue": "₹344 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
+    "language": "English",
+    "country": "USA",
+    "budget": "$5 Million",
+    "revenue": "$31 Million",
+    "tagline": "A little sun can bring out your dark side.",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "french-samourai",
-    "title": "Le Samouraï",
-    "year": 1967,
-    "runtime": "1h 45m",
-    "genres": [
-      "Crime",
-      "Thriller",
-      "Noir",
-      "Sci-Fi",
-      "Western",
-      "Space",
-      "Biography",
-      "Fantasy"
-    ],
-    "imdbRating": 9,
-    "rottenTomatoesScore": 96,
-    "matchScore": 96,
-    "synopsis": "A professional hitman is witnessed at a crime scene, escaping both the police and his employers.",
-    "director": "Jean-Pierre Melville",
-    "cast": [
-      "Alain Delon",
-      "François Périer"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Crime masterpiece directed by Jean-Pierre Melville.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Crime masterpiece directed by Jean-Pierre Melville.",
-    "similarTags": [
-      "Jean-Pierre",
-      "Thriller",
-      "Noir"
-    ],
-    "moods": [
-      "✨ Crime",
-      "🔥 Thriller"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹53 Crore",
-    "revenue": "₹132 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "french-jules-jim",
-    "title": "Jules and Jim",
-    "year": 1962,
-    "runtime": "1h 42m",
+    "id": "tmdb-10198",
+    "title": "The Princess and the Frog",
+    "originalTitle": "The Princess and the Frog",
+    "year": 2009,
+    "runtime": "97 min",
     "genres": [
       "Romance",
-      "Drama",
-      "Sports",
-      "Psychological",
-      "Time Travel",
-      "Comedy",
-      "History"
+      "Family",
+      "Animation",
+      "Music"
     ],
-    "imdbRating": 9.1,
-    "rottenTomatoesScore": 97,
+    "imdbRating": 6.7,
     "matchScore": 97,
-    "synopsis": "Two friends fall in love with the same bohemian woman before and after the Great War.",
-    "director": "François Truffaut",
+    "synopsis": "A waitress, desperate to fulfill her dreams as a restaurant owner, is set on a journey to turn a frog prince back into a human being, but she has to do face the same problem after she kisses him.",
+    "director": "Ron Clements",
     "cast": [
-      "Jeanne Moreau",
-      "Oskar Werner"
+      "Anika Noni Rose",
+      "Bruno Campos",
+      "Keith David",
+      "Michael-Leon Wooley"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yprv5PbnEksoVj2v6XEnDBg9joR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/y5tad0a4yRbxYgOHGllEIEeCCKt.jpg",
+    "trailerId": "Kw4fSwQbrFo",
     "streamingOn": [
       "Prime Video"
     ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Romance masterpiece directed by François Truffaut.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Romance masterpiece directed by François Truffaut.",
+    "aiReasoning": "Top match based on Romance themes and direction by Ron Clements.",
+    "whyRecommended": "Top match based on Romance themes and direction by Ron Clements.",
     "similarTags": [
-      "François",
-      "Drama",
-      "Sports"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Drama"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹61 Crore",
-    "revenue": "₹290 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
-  },
-  {
-    "id": "french-delicatessen",
-    "title": "Delicatessen",
-    "year": 1991,
-    "runtime": "1h 39m",
-    "genres": [
-      "Comedy",
-      "Sci-Fi",
-      "Black Comedy",
-      "Superhero",
-      "Mystery Thriller",
-      "Action",
-      "Crime",
-      "Horror"
-    ],
-    "imdbRating": 9.2,
-    "rottenTomatoesScore": 80,
-    "matchScore": 98,
-    "synopsis": "A young clown takes a job in an apartment building owned by a butcher who feeds tenants to others.",
-    "director": "Marc Caro",
-    "cast": [
-      "Dominique Pinon",
-      "Marie-Laure Dougnac"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Comedy masterpiece directed by Marc Caro.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Comedy masterpiece directed by Marc Caro.",
-    "similarTags": [
-      "Marc",
-      "Sci-Fi",
-      "Black Comedy"
-    ],
-    "moods": [
-      "✨ Comedy",
-      "🔥 Sci-Fi"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹113 Crore",
-    "revenue": "₹176 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "french-chorus",
-    "title": "The Chorus",
-    "year": 2004,
-    "runtime": "1h 37m",
-    "genres": [
-      "Drama",
-      "Musical",
-      "Family",
-      "Suspense",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary",
-      "Mystery"
-    ],
-    "imdbRating": 9.3,
-    "rottenTomatoesScore": 81,
-    "matchScore": 99,
-    "synopsis": "A boarding school music teacher helps troubled students form a choir, changing their lives.",
-    "director": "Christophe Barratier",
-    "cast": [
-      "Gérard Jugnot",
-      "François Berléand"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Christophe Barratier.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Christophe Barratier.",
-    "similarTags": [
-      "Christophe",
-      "Musical",
+      "Ron Clements",
+      "Romance",
       "Family"
     ],
     "moods": [
-      "✨ Drama",
-      "🔥 Musical"
+      "\u2728 Romance",
+      "\ud83d\udd25 Popular"
     ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹82 Crore",
-    "revenue": "₹433 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
+    "language": "English",
+    "country": "USA",
+    "budget": "$105 Million",
+    "revenue": "$267 Million",
+    "tagline": "Every Love Story Begins With a Kiss...",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "french-amour",
-    "title": "Amour",
+    "id": "tmdb-68734",
+    "title": "Argo",
+    "originalTitle": "Argo",
     "year": 2012,
-    "runtime": "2h 7m",
+    "runtime": "120 min",
     "genres": [
       "Drama",
-      "Romance",
-      "Thriller",
-      "Noir",
-      "Animation",
-      "Musical"
+      "Thriller"
     ],
-    "imdbRating": 9.4,
-    "rottenTomatoesScore": 82,
-    "matchScore": 90,
-    "synopsis": "An elderly couple faces a test of love when the wife suffers a series of strokes.",
-    "director": "Michael Haneke",
+    "imdbRating": 7.1,
+    "matchScore": 98,
+    "synopsis": "As the Iranian revolution reaches a boiling point, a CIA 'exfiltration' specialist concocts a risky plan to free six Americans who have found shelter at the home of the Canadian ambassador.",
+    "director": "Ben Affleck",
     "cast": [
-      "Jean-Louis Trintignant",
-      "Emmanuelle Riva"
+      "Ben Affleck",
+      "Bryan Cranston",
+      "Alan Arkin",
+      "John Goodman"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/m5gPWFZFIp4UJFABgWyLkbXv8GX.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/iVk4mVKwNE66JbBcoDwcYFvuUXM.jpg",
+    "trailerId": "3RrtxIci4T0",
     "streamingOn": [
-      "Netflix",
-      "Prime Video"
+      "Max"
     ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Michael Haneke.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Michael Haneke.",
+    "aiReasoning": "Top match based on Drama themes and direction by Ben Affleck.",
+    "whyRecommended": "Top match based on Drama themes and direction by Ben Affleck.",
     "similarTags": [
-      "Michael",
-      "Romance",
+      "Ben Affleck",
+      "Drama",
       "Thriller"
     ],
     "moods": [
-      "✨ Drama",
-      "🔥 Romance"
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
     ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹23 Crore",
-    "revenue": "₹230 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
+    "language": "English",
+    "country": "USA",
+    "budget": "$44 Million",
+    "revenue": "$232 Million",
+    "tagline": "The movie was fake. The mission was real.",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "french-cache",
-    "title": "Caché",
-    "year": 2005,
-    "runtime": "1h 57m",
-    "genres": [
-      "Thriller",
-      "Mystery",
-      "Psychological",
-      "War",
-      "Survival",
-      "Anime",
-      "Family",
-      "Romance"
-    ],
-    "imdbRating": 7.4,
-    "rottenTomatoesScore": 83,
-    "matchScore": 91,
-    "synopsis": "A family receives mysterious videotapes showing their daily lives, suggesting a stalker.",
-    "director": "Michael Haneke",
-    "cast": [
-      "Daniel Auteuil",
-      "Juliette Binoche"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Thriller masterpiece directed by Michael Haneke.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Thriller masterpiece directed by Michael Haneke.",
-    "similarTags": [
-      "Michael",
-      "Mystery",
-      "Psychological"
-    ],
-    "moods": [
-      "✨ Thriller",
-      "🔥 Mystery"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹105 Crore",
-    "revenue": "₹176 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "french-jean-florette",
-    "title": "Jean de Florette",
-    "year": 1986,
-    "runtime": "2h 0m",
+    "id": "tmdb-277216",
+    "title": "Straight Outta Compton",
+    "originalTitle": "Straight Outta Compton",
+    "year": 2015,
+    "runtime": "147 min",
     "genres": [
       "Drama",
-      "History",
-      "Western",
-      "Space",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi"
-    ],
-    "imdbRating": 7.5,
-    "rottenTomatoesScore": 84,
-    "matchScore": 92,
-    "synopsis": "Two greedy farmers block a spring to force an immigrant tax collector off his land.",
-    "director": "Claude Berri",
-    "cast": [
-      "Yves Montand",
-      "Gérard Depardieu"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Claude Berri.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Claude Berri.",
-    "similarTags": [
-      "Claude",
-      "History",
-      "Western"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 History"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹23 Crore",
-    "revenue": "₹406 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "french-manon-sources",
-    "title": "Manon des Sources",
-    "year": 1986,
-    "runtime": "1h 53m",
-    "genres": [
-      "Drama",
-      "History",
-      "Psychological",
-      "Time Travel",
-      "Comedy",
-      "Sports"
-    ],
-    "imdbRating": 7.6,
-    "rottenTomatoesScore": 85,
-    "matchScore": 93,
-    "synopsis": "The daughter of Jean de Florette returns to exact revenge on the farmers who killed her father.",
-    "director": "Claude Berri",
-    "cast": [
-      "Emmanuelle Béart",
-      "Yves Montand"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Claude Berri.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Claude Berri.",
-    "similarTags": [
-      "Claude",
-      "History",
-      "Psychological"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 History"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹84 Crore",
-    "revenue": "₹357 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "french-vie-en-rose",
-    "title": "La Vie en Rose",
-    "year": 2007,
-    "runtime": "2h 20m",
-    "genres": [
-      "Drama",
-      "Biography",
-      "Musical",
-      "Mystery Thriller",
-      "Action",
-      "Crime",
-      "Horror",
-      "Superhero"
+      "Music"
     ],
     "imdbRating": 7.7,
-    "rottenTomatoesScore": 86,
-    "matchScore": 94,
-    "synopsis": "The tragic biographical story of Edith Piaf, chronicling her rise from slums to iconic singer.",
-    "director": "Olivier Dahan",
-    "cast": [
-      "Marion Cotillard",
-      "Sylvie Testud"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Olivier Dahan.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Olivier Dahan.",
-    "similarTags": [
-      "Olivier",
-      "Biography",
-      "Musical"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Biography"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹62 Crore",
-    "revenue": "₹79 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "french-belle-jour",
-    "title": "Belle de Jour",
-    "year": 1967,
-    "runtime": "1h 40m",
-    "genres": [
-      "Drama",
-      "Romance",
-      "Cyberpunk",
-      "Adventure",
-      "Documentary",
-      "Mystery",
-      "Suspense"
-    ],
-    "imdbRating": 7.8,
-    "rottenTomatoesScore": 87,
-    "matchScore": 95,
-    "synopsis": "A wealthy young housewife decides to spend her weekday afternoons working in a brothel.",
-    "director": "Luis Buñuel",
-    "cast": [
-      "Catherine Deneuve",
-      "Jean Sorel"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Luis Buñuel.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Luis Buñuel.",
-    "similarTags": [
-      "Luis",
-      "Romance",
-      "Cyberpunk"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Romance"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹60 Crore",
-    "revenue": "₹115 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
-  },
-  {
-    "id": "french-elle",
-    "title": "Elle",
-    "year": 2016,
-    "runtime": "2h 10m",
-    "genres": [
-      "Thriller",
-      "Crime",
-      "Psychological",
-      "Noir",
-      "Animation",
-      "Drama",
-      "Musical"
-    ],
-    "imdbRating": 7.9,
-    "rottenTomatoesScore": 88,
-    "matchScore": 96,
-    "synopsis": "A successful video game executive hunts the masked intruder who assaulted her in her home.",
-    "director": "Paul Verhoeven",
-    "cast": [
-      "Isabelle Huppert",
-      "Laurent Lafitte"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Thriller masterpiece directed by Paul Verhoeven.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Thriller masterpiece directed by Paul Verhoeven.",
-    "similarTags": [
-      "Paul",
-      "Crime",
-      "Psychological"
-    ],
-    "moods": [
-      "✨ Thriller",
-      "🔥 Crime"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹71 Crore",
-    "revenue": "₹150 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "french-incendies",
-    "title": "Incendies",
-    "year": 2010,
-    "runtime": "2h 11m",
-    "genres": [
-      "Drama",
-      "Mystery",
-      "History",
-      "Survival",
-      "Anime",
-      "Family",
-      "Romance",
-      "War"
-    ],
-    "imdbRating": 8,
-    "rottenTomatoesScore": 89,
-    "matchScore": 97,
-    "synopsis": "Twins travel to the Middle East to deliver letters to a father and brother they did not know existed.",
-    "director": "Denis Villeneuve",
-    "cast": [
-      "Lubna Azabal",
-      "Mélissa Désormeaux-Poulin"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Denis Villeneuve.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Denis Villeneuve.",
-    "similarTags": [
-      "Denis",
-      "Mystery",
-      "History"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Mystery"
-    ],
-    "language": "French",
-    "country": "Canada",
-    "budget": "₹99 Crore",
-    "revenue": "₹172 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "french-gods-men",
-    "title": "Of Gods and Men",
-    "year": 2010,
-    "runtime": "2h 2m",
-    "genres": [
-      "Drama",
-      "History",
-      "Space",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi",
-      "Western"
-    ],
-    "imdbRating": 8.1,
-    "rottenTomatoesScore": 90,
-    "matchScore": 98,
-    "synopsis": "Monks in an Algerian monastery decide to stay despite threats from fundamentalist rebels.",
-    "director": "Xavier Beauvois",
-    "cast": [
-      "Lambert Wilson",
-      "Michael Lonsdale"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Netflix",
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Xavier Beauvois.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Xavier Beauvois.",
-    "similarTags": [
-      "Xavier",
-      "History",
-      "Space"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 History"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹106 Crore",
-    "revenue": "₹137 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "french-belleville",
-    "title": "The Triplets of Belleville",
-    "year": 2003,
-    "runtime": "1h 20m",
-    "genres": [
-      "Animation",
-      "Comedy",
-      "Musical",
-      "Family",
-      "Time Travel",
-      "History",
-      "Sports",
-      "Psychological"
-    ],
-    "imdbRating": 8.2,
-    "rottenTomatoesScore": 91,
     "matchScore": 99,
-    "synopsis": "An elderly woman searches for her grandson who was kidnapped by mafia during the Tour de France.",
-    "director": "Sylvain Chomet",
+    "synopsis": "In 1987, five young men, using brutally honest rhymes and hardcore beats, put their frustration and anger about life in the most dangerous place in America into the most powerful weapon they had: their music.  Taking us back to where it all began, Straight Outta Compton tells the true story of how these cultural rebels\u2014armed only with their lyrics, swagger, bravado and raw talent\u2014stood up to the authorities that meant to keep them down and formed the world\u2019s most dangerous group, N.W.A.  And as they spoke the truth that no one had before and exposed life in the hood, their voice ignited a social revolution that is still reverberating today.",
+    "director": "F. Gary Gray",
     "cast": [
-      "Michel Robin",
-      "Jean-Claude Donda"
+      "O'Shea Jackson Jr.",
+      "Corey Hawkins",
+      "Jason Mitchell",
+      "Neil Brown Jr."
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Animation masterpiece directed by Sylvain Chomet.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Animation masterpiece directed by Sylvain Chomet.",
-    "similarTags": [
-      "Sylvain",
-      "Comedy",
-      "Musical"
-    ],
-    "moods": [
-      "✨ Animation",
-      "🔥 Comedy"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹94 Crore",
-    "revenue": "₹119 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "V Creations",
-    "reviews": []
-  },
-  {
-    "id": "french-engagement",
-    "title": "A Very Long Engagement",
-    "year": 2004,
-    "runtime": "2h 13m",
-    "genres": [
-      "Romance",
-      "Drama",
-      "History",
-      "Action",
-      "Crime",
-      "Horror",
-      "Superhero",
-      "Mystery Thriller"
-    ],
-    "imdbRating": 8.3,
-    "rottenTomatoesScore": 92,
-    "matchScore": 90,
-    "synopsis": "A young woman searches for her fiance who disappeared at the Somme during WWI.",
-    "director": "Jean-Pierre Jeunet",
-    "cast": [
-      "Audrey Tautou",
-      "Gaspard Ulliel"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Romance masterpiece directed by Jean-Pierre Jeunet.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Romance masterpiece directed by Jean-Pierre Jeunet.",
-    "similarTags": [
-      "Jean-Pierre",
-      "Drama",
-      "History"
-    ],
-    "moods": [
-      "✨ Romance",
-      "🔥 Drama"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹41 Crore",
-    "revenue": "₹186 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "french-diving-bell",
-    "title": "The Diving Bell and the Butterfly",
-    "year": 2007,
-    "runtime": "1h 52m",
-    "genres": [
-      "Drama",
-      "Biography",
-      "Adventure",
-      "Documentary",
-      "Mystery",
-      "Suspense",
-      "Cyberpunk"
-    ],
-    "imdbRating": 8.4,
-    "rottenTomatoesScore": 93,
-    "matchScore": 91,
-    "synopsis": "The real-life story of Jean-Dominique Bauby, who wrote his memoirs using only his left eyelid.",
-    "director": "Julian Schnabel",
-    "cast": [
-      "Mathieu Amalric",
-      "Emmanuelle Seigner"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1531266752426-aad472b7bbf4?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1CiLJx8Xtv3TbbFj6k7BboSmKgC.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/8r9RoGfwGmn1pn0G3sbvHHemSWF.jpg",
+    "trailerId": "-F5WcFPDzko",
     "streamingOn": [
       "Disney+"
     ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Julian Schnabel.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Julian Schnabel.",
+    "aiReasoning": "Top match based on Drama themes and direction by F. Gary Gray.",
+    "whyRecommended": "Top match based on Drama themes and direction by F. Gary Gray.",
     "similarTags": [
-      "Julian",
-      "Biography",
-      "Adventure"
+      "F. Gary Gray",
+      "Drama",
+      "Music"
     ],
     "moods": [
-      "✨ Drama",
-      "🔥 Biography"
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
     ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹121 Crore",
-    "revenue": "₹264 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Filmax",
-    "reviews": []
+    "language": "English",
+    "country": "USA",
+    "budget": "$28 Million",
+    "revenue": "$201 Million",
+    "tagline": "The Story of N.W.A.",
+    "productionCompany": "Hollywood Studio"
   },
   {
-    "id": "french-holy-motors",
-    "title": "Holy Motors",
-    "year": 2012,
-    "runtime": "1h 55m",
+    "id": "tmdb-159824",
+    "title": "Hotel Transylvania 2",
+    "originalTitle": "Hotel Transylvania 2",
+    "year": 2015,
+    "runtime": "89 min",
     "genres": [
-      "Drama",
-      "Fantasy",
       "Animation",
-      "Musical",
-      "Thriller",
-      "Noir"
+      "Comedy",
+      "Family"
     ],
-    "imdbRating": 8.5,
-    "rottenTomatoesScore": 94,
-    "matchScore": 92,
-    "synopsis": "A man travels around Paris in a limousine, adopting different roles and personas.",
-    "director": "Leos Carax",
+    "imdbRating": 6.7,
+    "matchScore": 90,
+    "synopsis": "When the old-old-old-fashioned vampire Vlad arrives at the hotel for an impromptu family get-together, Hotel Transylvania is in for a collision of supernatural old-school and modern day cool.",
+    "director": "Genndy Tartakovsky",
     "cast": [
-      "Denis Lavant",
-      "Edith Scob"
+      "Adam Sandler",
+      "Andy Samberg",
+      "Selena Gomez",
+      "Kevin James"
     ],
-    "posterUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3nFnrivNgipSKZ8LZJJbRSlAcTR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/mfnkxXWuh2Br097Qteq8ieqKfev.jpg",
+    "trailerId": "65YG3cGGj5A",
     "streamingOn": [
       "Netflix",
       "Prime Video"
     ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Leos Carax.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Leos Carax.",
+    "aiReasoning": "Top match based on Animation themes and direction by Genndy Tartakovsky.",
+    "whyRecommended": "Top match based on Animation themes and direction by Genndy Tartakovsky.",
     "similarTags": [
-      "Leos",
-      "Fantasy",
-      "Animation"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Fantasy"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹35 Crore",
-    "revenue": "₹188 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Moho Film",
-    "reviews": []
-  },
-  {
-    "id": "french-class",
-    "title": "The Class",
-    "year": 2008,
-    "runtime": "2h 8m",
-    "genres": [
-      "Drama",
-      "Family",
-      "Anime",
-      "Romance",
-      "War",
-      "Survival"
-    ],
-    "imdbRating": 8.6,
-    "rottenTomatoesScore": 95,
-    "matchScore": 93,
-    "synopsis": "A teacher faces challenges while managing a diverse high school classroom in Paris.",
-    "director": "Laurent Cantet",
-    "cast": [
-      "François Bégaudeau",
-      "Nassim Amrabt"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Prime Video"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Laurent Cantet.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Laurent Cantet.",
-    "similarTags": [
-      "Laurent",
-      "Family",
-      "Anime"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Family"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹38 Crore",
-    "revenue": "₹333 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Sun Pictures",
-    "reviews": []
-  },
-  {
-    "id": "french-contempt",
-    "title": "Contempt",
-    "year": 1963,
-    "runtime": "1h 42m",
-    "genres": [
-      "Drama",
-      "Romance",
-      "Biography",
-      "Fantasy",
-      "Sci-Fi",
-      "Western",
-      "Space"
-    ],
-    "imdbRating": 8.7,
-    "rottenTomatoesScore": 96,
-    "matchScore": 94,
-    "synopsis": "A marriage disintegrates during the production of a film adaptation of the Odyssey.",
-    "director": "Jean-Luc Godard",
-    "cast": [
-      "Brigitte Bardot",
-      "Michel Piccoli"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Max"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Jean-Luc Godard.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Jean-Luc Godard.",
-    "similarTags": [
-      "Jean-Luc",
-      "Romance",
-      "Biography"
-    ],
-    "moods": [
-      "✨ Drama",
-      "🔥 Romance"
-    ],
-    "language": "French",
-    "country": "France",
-    "budget": "₹39 Crore",
-    "revenue": "₹240 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "KRG Studios",
-    "reviews": []
-  },
-  {
-    "id": "french-blueberry-hill",
-    "title": "Blueberry Hill",
-    "year": 1989,
-    "runtime": "1h 35m",
-    "genres": [
-      "Drama",
-      "Western",
-      "Comedy",
-      "History",
-      "Sports",
-      "Psychological",
-      "Time Travel"
-    ],
-    "imdbRating": 8.8,
-    "rottenTomatoesScore": 97,
-    "matchScore": 95,
-    "synopsis": "A Western-inspired drama set in Belgium featuring traditional cowboy culture.",
-    "director": "Robbe De Hert",
-    "cast": [
-      "Michael Pas",
-      "Babette van Veen"
-    ],
-    "posterUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&auto=format&fit=crop&q=80",
-    "backdropUrl": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&auto=format&fit=crop&q=80",
-    "trailerId": "0vxOhge_12k",
-    "streamingOn": [
-      "Disney+"
-    ],
-    "aiReasoning": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Robbe De Hert.",
-    "whyRecommended": "Top recommendation from French cinema. A high-quality Drama masterpiece directed by Robbe De Hert.",
-    "similarTags": [
-      "Robbe",
-      "Western",
+      "Genndy Tartakovsky",
+      "Animation",
       "Comedy"
     ],
     "moods": [
-      "✨ Drama",
-      "🔥 Western"
+      "\u2728 Animation",
+      "\ud83d\udd25 Popular"
     ],
-    "language": "French",
-    "country": "Belgium",
-    "budget": "₹78 Crore",
-    "revenue": "₹231 Crore",
-    "tagline": "An unforgettable cinematic journey.",
-    "productionCompany": "Studio Ghibli",
-    "reviews": []
+    "language": "English",
+    "country": "USA",
+    "budget": "$80 Million",
+    "revenue": "$473 Million",
+    "tagline": "They're back to raise a little terror",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-169917",
+    "title": "A Walk Among the Tombstones",
+    "originalTitle": "A Walk Among the Tombstones",
+    "year": 2014,
+    "runtime": "113 min",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Mystery",
+      "Thriller"
+    ],
+    "imdbRating": 6.2,
+    "matchScore": 91,
+    "synopsis": "Private investigator Matthew Scudder is hired by a drug kingpin to find out who kidnapped and murdered his wife.",
+    "director": "Scott Frank",
+    "cast": [
+      "Liam Neeson",
+      "Dan Stevens",
+      "David Harbour",
+      "Boyd Holbrook"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/euPgyPsiNFp6gOBB7nUFxvN5ZaY.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/k23FPWl97XKpJ1oTaDyADzxWxs6.jpg",
+    "trailerId": "aTKBowDjMQg",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Crime themes and direction by Scott Frank.",
+    "whyRecommended": "Top match based on Crime themes and direction by Scott Frank.",
+    "similarTags": [
+      "Scott Frank",
+      "Crime",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Crime",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$28 Million",
+    "revenue": "$53 Million",
+    "tagline": "Some people are afraid of all the wrong things",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-10386",
+    "title": "The Iron Giant",
+    "originalTitle": "The Iron Giant",
+    "year": 1999,
+    "runtime": "86 min",
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Family",
+      "Fantasy",
+      "Science Fiction"
+    ],
+    "imdbRating": 7.6,
+    "matchScore": 92,
+    "synopsis": "In the small town of Rockwell, Maine in October 1957, a giant metal machine befriends a nine-year-old boy and ultimately finds its humanity by unselfishly saving people from their own fears and prejudices.",
+    "director": "Brad Bird",
+    "cast": [
+      "Eli Marienthal",
+      "Jennifer Aniston",
+      "Vin Diesel",
+      "Christopher McDonald"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ct04FCFLPImNG5thcPLRnVsZlmS.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/gZ78dyRH9hXeH94ASjuvD9Vw4b5.jpg",
+    "trailerId": "1XHf94YqGyQ",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Brad Bird.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Brad Bird.",
+    "similarTags": [
+      "Brad Bird",
+      "Adventure",
+      "Animation"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$70 Million",
+    "revenue": "$23 Million",
+    "tagline": "It came from outer space!",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-141",
+    "title": "Donnie Darko",
+    "originalTitle": "Donnie Darko",
+    "year": 2001,
+    "runtime": "113 min",
+    "genres": [
+      "Fantasy",
+      "Drama",
+      "Mystery"
+    ],
+    "imdbRating": 7.7,
+    "matchScore": 93,
+    "synopsis": "After narrowly escaping a bizarre accident, a troubled teenager is plagued by visions of a large bunny rabbit that manipulates him to commit a series of crimes.",
+    "director": "Richard Kelly",
+    "cast": [
+      "Jake Gyllenhaal",
+      "Jena Malone",
+      "Patrick Swayze",
+      "Maggie Gyllenhaal"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/j2AtZFsflxiluaNtajMTI0Avm8C.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/msCHK5Kh1YbdZ0zPJ2nzPUhhSN9.jpg",
+    "trailerId": "71RaE7JYTUU",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Fantasy themes and direction by Richard Kelly.",
+    "whyRecommended": "Top match based on Fantasy themes and direction by Richard Kelly.",
+    "similarTags": [
+      "Richard Kelly",
+      "Fantasy",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Fantasy",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$6 Million",
+    "revenue": "$1 Million",
+    "tagline": "You can never go too far",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-266856",
+    "title": "The Theory of Everything",
+    "originalTitle": "The Theory of Everything",
+    "year": 2014,
+    "runtime": "123 min",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "imdbRating": 7.8,
+    "matchScore": 94,
+    "synopsis": "The Theory of Everything is the extraordinary story of one of the world\u2019s greatest living minds, the renowned astrophysicist Stephen Hawking, who falls deeply in love with fellow Cambridge student Jane Wilde.",
+    "director": "James Marsh",
+    "cast": [
+      "Eddie Redmayne",
+      "Felicity Jones",
+      "Charlie Cox",
+      "Emily Watson"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7kwcLFNt887saoQAL7EY0XnW7VI.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/dh2QT3TPtAQf057yeLpNMuaJlmp.jpg",
+    "trailerId": "_EnhOKk7BxM",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by James Marsh.",
+    "whyRecommended": "Top match based on Drama themes and direction by James Marsh.",
+    "similarTags": [
+      "James Marsh",
+      "Drama",
+      "Romance"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$15 Million",
+    "revenue": "$123 Million",
+    "tagline": "His Mind Changed Our World. Her Love Changed His.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-32657",
+    "title": "Percy Jackson & the Olympians: The Lightning Thief",
+    "originalTitle": "Percy Jackson & the Olympians: The Lightning Thief",
+    "year": 2010,
+    "runtime": "118 min",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Family"
+    ],
+    "imdbRating": 6.0,
+    "matchScore": 95,
+    "synopsis": "Accident prone teenager, Percy discovers he's actually a demi-God, the son of Poseidon, and he is needed when Zeus' lightning is stolen. Percy must master his new found skills in order to prevent a war between the Gods that could devastate the entire world.",
+    "director": "Chris Columbus",
+    "cast": [
+      "Logan Lerman",
+      "Brandon T. Jackson",
+      "Alexandra Daddario",
+      "Jake Abel"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/brzpTyZ5bnM7s53C1KSk1TmrMO6.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/ugiV9SpJburMOPeIyjBJyAnO1So.jpg",
+    "trailerId": "R86InkfdboA",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Chris Columbus.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Chris Columbus.",
+    "similarTags": [
+      "Chris Columbus",
+      "Adventure",
+      "Fantasy"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$95 Million",
+    "revenue": "$226 Million",
+    "tagline": "Worlds Collide",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-138103",
+    "title": "The Expendables 3",
+    "originalTitle": "The Expendables 3",
+    "year": 2014,
+    "runtime": "127 min",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Thriller"
+    ],
+    "imdbRating": 6.1,
+    "matchScore": 96,
+    "synopsis": "Barney, Christmas and the rest of the team comes face-to-face with Conrad Stonebanks, who years ago co-founded The Expendables with Barney. Stonebanks subsequently became a ruthless arms trader and someone who Barney was forced to kill\u2026 or so he thought. Stonebanks, who eluded death once before, now is making it his mission to end The Expendables -- but Barney has other plans. Barney decides that he has to fight old blood with new blood, and brings in a new era of Expendables team members, recruiting individuals who are younger, faster and more tech-savvy. The latest mission becomes a clash of classic old-school style versus high-tech expertise in the Expendables\u2019 most personal battle yet.",
+    "director": "Patrick Hughes",
+    "cast": [
+      "Sylvester Stallone",
+      "Jason Statham",
+      "Harrison Ford",
+      "Arnold Schwarzenegger"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/utS5euWHlEdKBNnEFwjpZ2oGuhF.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/xSfBWkAarrPwwfiGBAMt8wqxUUH.jpg",
+    "trailerId": "KATn_m-AX9I",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Patrick Hughes.",
+    "whyRecommended": "Top match based on Action themes and direction by Patrick Hughes.",
+    "similarTags": [
+      "Patrick Hughes",
+      "Action",
+      "Adventure"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$90 Million",
+    "revenue": "$206 Million",
+    "tagline": "New team. New attitude. New mission.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-161",
+    "title": "Ocean's Eleven",
+    "originalTitle": "Ocean's Eleven",
+    "year": 2001,
+    "runtime": "116 min",
+    "genres": [
+      "Thriller",
+      "Crime"
+    ],
+    "imdbRating": 7.2,
+    "matchScore": 97,
+    "synopsis": "Less than 24 hours into his parole, charismatic thief Danny Ocean is already rolling out his next plan: In one night, Danny's hand-picked crew of specialists will attempt to steal more than $150 million from three Las Vegas casinos. But to score the cash, Danny risks his chances of reconciling with ex-wife, Tess.",
+    "director": "Steven Soderbergh",
+    "cast": [
+      "George Clooney",
+      "Brad Pitt",
+      "Matt Damon",
+      "Andy Garc\u00eda"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/hQQCdZrsHtZyR6NbKH2YyCqd2fR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/ncoqdHs1poUaBqyKic9YI8ai7MP.jpg",
+    "trailerId": "n3epi9hPbqQ",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Thriller themes and direction by Steven Soderbergh.",
+    "whyRecommended": "Top match based on Thriller themes and direction by Steven Soderbergh.",
+    "similarTags": [
+      "Steven Soderbergh",
+      "Thriller",
+      "Crime"
+    ],
+    "moods": [
+      "\u2728 Thriller",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$85 Million",
+    "revenue": "$450 Million",
+    "tagline": "Are you in or out?",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-332567",
+    "title": "The Shallows",
+    "originalTitle": "The Shallows",
+    "year": 2016,
+    "runtime": "86 min",
+    "genres": [
+      "Horror",
+      "Drama",
+      "Thriller"
+    ],
+    "imdbRating": 6.2,
+    "matchScore": 98,
+    "synopsis": "An injured surfer stranded on a buoy needs to get back to shore, but the great white shark stalking her might have other ideas.",
+    "director": "Jaume Collet-Serra",
+    "cast": [
+      "Blake Lively",
+      "\u00d3scar Jaenada",
+      "Angelo Josue Lozano Corzo",
+      "Jos\u00e9 Manuel Trujillo Salas"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/bnBV7hZmLuA0Si5Aop481sPF2RY.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/89ZSaf9Ofm7oDounnCOu4ktGI9e.jpg",
+    "trailerId": "EgdxIlSuB70",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Horror themes and direction by Jaume Collet-Serra.",
+    "whyRecommended": "Top match based on Horror themes and direction by Jaume Collet-Serra.",
+    "similarTags": [
+      "Jaume Collet-Serra",
+      "Horror",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Horror",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$17 Million",
+    "revenue": "$119 Million",
+    "tagline": "What was once in the deep is now in the shallows.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-1979",
+    "title": "Fantastic 4: Rise of the Silver Surfer",
+    "originalTitle": "4: Rise of the Silver Surfer",
+    "year": 2007,
+    "runtime": "92 min",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Action",
+      "Thriller"
+    ],
+    "imdbRating": 5.4,
+    "matchScore": 99,
+    "synopsis": "The Fantastic Four return to the big screen as a new and all powerful enemy threatens the Earth. The seemingly unstoppable 'Silver Surfer', but all is not what it seems and there are old and new enemies that pose a greater threat than the intrepid superheroes realize.",
+    "director": "Tim Story",
+    "cast": [
+      "Ioan Gruffudd",
+      "Jessica Alba",
+      "Chris Evans",
+      "Michael Chiklis"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9wRfzTcMyyzkQxVDqBHv8RwuZOv.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/o2wYH40zW0JIYiYUTu6L4gsNy7E.jpg",
+    "trailerId": "7whodtti908",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Tim Story.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Tim Story.",
+    "similarTags": [
+      "Tim Story",
+      "Adventure",
+      "Fantasy"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$130 Million",
+    "revenue": "$289 Million",
+    "tagline": "Discover the secret of the Surfer.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-128",
+    "title": "Princess Mononoke",
+    "originalTitle": "\u3082\u306e\u306e\u3051\u59eb",
+    "year": 1997,
+    "runtime": "134 min",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Animation"
+    ],
+    "imdbRating": 8.2,
+    "matchScore": 90,
+    "synopsis": "Ashitaka, a prince of the disappearing Ainu tribe, is cursed by a demonized boar god and must journey to the west to find a cure. Along the way, he encounters San, a young human woman fighting to protect the forest, and Lady Eboshi, who is trying to destroy it. Ashitaka must find a way to bring balance to this conflict.",
+    "director": "Hayao Miyazaki",
+    "cast": [
+      "Y\u014dji Matsuda",
+      "Yuriko Ishida",
+      "Y\u016bko Tanaka",
+      "Kaoru Kobayashi"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cMYCDADoLKLbB83g4WnJegaZimC.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/gl0jzn4BupSbL2qMVeqrjKkF9Js.jpg",
+    "trailerId": "I1dHzoRl0sQ",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Hayao Miyazaki.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Hayao Miyazaki.",
+    "similarTags": [
+      "Hayao Miyazaki",
+      "Adventure",
+      "Fantasy"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "Japanese",
+    "country": "International",
+    "budget": "$26 Million",
+    "revenue": "$159 Million",
+    "tagline": "The Fate Of The World Rests On The Courage Of One Warrior.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-197",
+    "title": "Braveheart",
+    "originalTitle": "Braveheart",
+    "year": 1995,
+    "runtime": "177 min",
+    "genres": [
+      "Action",
+      "Drama",
+      "History",
+      "War"
+    ],
+    "imdbRating": 7.7,
+    "matchScore": 91,
+    "synopsis": "Enraged at the slaughter of Murron, his new bride and childhood love, Scottish warrior William Wallace slays a platoon of the local English lord's soldiers. This leads the village to revolt and, eventually, the entire country to rise up against English rule.",
+    "director": "Mel Gibson",
+    "cast": [
+      "Mel Gibson",
+      "Catherine McCormack",
+      "Sophie Marceau",
+      "Patrick McGoohan"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/or1gBugydmjToAEq7OZY0owwFk.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/1m1c5gIWWkb1FEC9lzsoXHhhs7b.jpg",
+    "trailerId": "WtO3CsleMDg",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Mel Gibson.",
+    "whyRecommended": "Top match based on Action themes and direction by Mel Gibson.",
+    "similarTags": [
+      "Mel Gibson",
+      "Action",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$72 Million",
+    "revenue": "$210 Million",
+    "tagline": "Every man dies. Not every man truly lives.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-4922",
+    "title": "The Curious Case of Benjamin Button",
+    "originalTitle": "The Curious Case of Benjamin Button",
+    "year": 2008,
+    "runtime": "166 min",
+    "genres": [
+      "Fantasy",
+      "Drama",
+      "Thriller",
+      "Mystery",
+      "Romance"
+    ],
+    "imdbRating": 7.3,
+    "matchScore": 92,
+    "synopsis": "Tells the story of Benjamin Button, a man who starts aging backwards with bizarre consequences.",
+    "director": "David Fincher",
+    "cast": [
+      "Cate Blanchett",
+      "Brad Pitt",
+      "Tilda Swinton",
+      "Julia Ormond"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/26wEWZYt6yJkwRVkjcbwJEFh9IS.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/2fswjyrY3GEzeoVn6mF8pNeNcgf.jpg",
+    "trailerId": "lqijVXvw7_E",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Fantasy themes and direction by David Fincher.",
+    "whyRecommended": "Top match based on Fantasy themes and direction by David Fincher.",
+    "similarTags": [
+      "David Fincher",
+      "Fantasy",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Fantasy",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$150 Million",
+    "revenue": "$333 Million",
+    "tagline": "Life isn't measured in minutes, but in moments.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-253412",
+    "title": "Everest",
+    "originalTitle": "Everest",
+    "year": 2015,
+    "runtime": "121 min",
+    "genres": [
+      "Adventure",
+      "Drama"
+    ],
+    "imdbRating": 6.7,
+    "matchScore": 93,
+    "synopsis": "Inspired by the incredible events surrounding a treacherous attempt to reach the summit of the world's highest mountain, \"Everest\" documents the awe-inspiring journey of two different expeditions challenged beyond their limits by one of the fiercest snowstorms ever encountered by mankind. Their mettle tested by the harshest of elements found on the planet, the climbers will face nearly impossible obstacles as a lifelong obsession becomes a breathtaking struggle for survival.",
+    "director": "Baltasar Korm\u00e1kur",
+    "cast": [
+      "Jason Clarke",
+      "Jake Gyllenhaal",
+      "Josh Brolin",
+      "John Hawkes"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/2jKOu2bjpLP6NXJcm7Ep14bDGtA.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/P7d3lyBaYbAXVor6iB2avLvc4K.jpg",
+    "trailerId": "5CKZwKpV06U",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Baltasar Korm\u00e1kur.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Baltasar Korm\u00e1kur.",
+    "similarTags": [
+      "Baltasar Korm\u00e1kur",
+      "Adventure",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$55 Million",
+    "revenue": "$203 Million",
+    "tagline": "The Storm Awaits.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-49530",
+    "title": "In Time",
+    "originalTitle": "In Time",
+    "year": 2011,
+    "runtime": "109 min",
+    "genres": [
+      "Action",
+      "Thriller",
+      "Science Fiction"
+    ],
+    "imdbRating": 6.7,
+    "matchScore": 94,
+    "synopsis": "In the not-too-distant future the aging gene has been switched off. To avoid overpopulation, time has become the currency and the way people pay for luxuries and necessities. The rich can live forever, while the rest try to negotiate for their immortality. A poor young man who comes into a fortune of time, though too late to help his mother from dying. He ends up on the run from a corrupt police force known as 'time keepers'.",
+    "director": "Andrew Niccol",
+    "cast": [
+      "Justin Timberlake",
+      "Amanda Seyfried",
+      "Cillian Murphy",
+      "Olivia Wilde"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3Mwj2sIONQckOZP3YwsUXF7U5I4.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/pxL08w7Eq0vKrQ3mJzYp0VHGaKG.jpg",
+    "trailerId": "xhYUaR5QiUs",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Andrew Niccol.",
+    "whyRecommended": "Top match based on Action themes and direction by Andrew Niccol.",
+    "similarTags": [
+      "Andrew Niccol",
+      "Action",
+      "Thriller"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$40 Million",
+    "revenue": "$173 Million",
+    "tagline": "Time Is Power",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-250546",
+    "title": "Annabelle",
+    "originalTitle": "Annabelle",
+    "year": 2014,
+    "runtime": "99 min",
+    "genres": [
+      "Horror"
+    ],
+    "imdbRating": 5.6,
+    "matchScore": 95,
+    "synopsis": "John Form has found the perfect gift for his expectant wife, Mia - a beautiful, rare vintage doll in a pure white wedding dress. But Mia's delight with Annabelle doesn't last long. On one horrific night, their home is invaded by members of a satanic cult, who violently attack the couple. Spilled blood and terror are not all they leave behind. The cultists have conjured an entity so malevolent that nothing they did will compare to the sinister conduit to the damned that is now... Annabelle.",
+    "director": "John R. Leonetti",
+    "cast": [
+      "Annabelle Wallis",
+      "Ward Horton",
+      "Tony Amendola",
+      "Alfre Woodard"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/yLsuU2P2SpDYFwtZQ7dtfVAf6TE.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/pWZ0srAfPx4XyJMlFkKBlmYfx3C.jpg",
+    "trailerId": "xabuZwG3XyM",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Horror themes and direction by John R. Leonetti.",
+    "whyRecommended": "Top match based on Horror themes and direction by John R. Leonetti.",
+    "similarTags": [
+      "John R. Leonetti",
+      "Horror"
+    ],
+    "moods": [
+      "\u2728 Horror",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$6 Million",
+    "revenue": "$255 Million",
+    "tagline": "Before the Conjuring, there was Annabelle.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-1735",
+    "title": "The Mummy: Tomb of the Dragon Emperor",
+    "originalTitle": "The Mummy: Tomb of the Dragon Emperor",
+    "year": 2008,
+    "runtime": "112 min",
+    "genres": [
+      "Adventure",
+      "Action",
+      "Fantasy"
+    ],
+    "imdbRating": 5.2,
+    "matchScore": 96,
+    "synopsis": "Archaeologist Rick O'Connell travels to China, pitting him against an emperor from the 2,000-year-old Han dynasty who's returned from the dead to pursue a quest for world domination. This time, O'Connell enlists the help of his wife and son to quash the so-called 'Dragon Emperor' and his abuse of supernatural power.",
+    "director": "Rob Cohen",
+    "cast": [
+      "Brendan Fraser",
+      "Jet Li",
+      "John Hannah",
+      "Maria Bello"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/A3acM1lX5PNWQa6r5qeMAJOxbnT.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/W034dd7w2malON26KWyZm4y37W.jpg",
+    "trailerId": "ol-U0ibnVD4",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Rob Cohen.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Rob Cohen.",
+    "similarTags": [
+      "Rob Cohen",
+      "Adventure",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$145 Million",
+    "revenue": "$401 Million",
+    "tagline": "A New Evil Awakens.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-10193",
+    "title": "Toy Story 3",
+    "originalTitle": "Toy Story 3",
+    "year": 2010,
+    "runtime": "103 min",
+    "genres": [
+      "Animation",
+      "Family",
+      "Comedy"
+    ],
+    "imdbRating": 7.6,
+    "matchScore": 97,
+    "synopsis": "Woody, Buzz, and the rest of Andy's toys haven't been played with in years. With Andy about to go to college, the gang find themselves accidentally left at a nefarious day care center. The toys must band together to escape and return home to Andy.",
+    "director": "Lee Unkrich",
+    "cast": [
+      "Tom Hanks",
+      "Tim Allen",
+      "Ned Beatty",
+      "Joan Cusack"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/AbbXspMOwdvwWZgVN0nabZq03Ec.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/uAfhsySkr1UzQg1zdg3dZQRz9Fd.jpg",
+    "trailerId": "6c3K7LhA9Yc",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Animation themes and direction by Lee Unkrich.",
+    "whyRecommended": "Top match based on Animation themes and direction by Lee Unkrich.",
+    "similarTags": [
+      "Lee Unkrich",
+      "Animation",
+      "Family"
+    ],
+    "moods": [
+      "\u2728 Animation",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$200 Million",
+    "revenue": "$1066 Million",
+    "tagline": "No toy gets left behind.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-433",
+    "title": "Mary Poppins",
+    "originalTitle": "Mary Poppins",
+    "year": 1964,
+    "runtime": "139 min",
+    "genres": [
+      "Comedy",
+      "Family",
+      "Fantasy"
+    ],
+    "imdbRating": 7.4,
+    "matchScore": 98,
+    "synopsis": "The movie combines a diverting story, songs, color and sequences of live action blended with the movements of animated figures. Mary Poppins is a kind of Super-nanny who flies in with her umbrella in response to the request of the Banks children and proceeds to put things right with the aid of her rather extraordinary magical powers before flying off again.",
+    "director": "Robert Stevenson",
+    "cast": [
+      "Julie Andrews",
+      "Dick Van Dyke",
+      "David Tomlinson",
+      "Glynis Johns"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/o4Wsby4ydIXhWmtmfvb451D5Np1.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/nMXLizoHhVTeh3GjFyUOfNx3b7i.jpg",
+    "trailerId": "H54Ft85U2RA",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Comedy themes and direction by Robert Stevenson.",
+    "whyRecommended": "Top match based on Comedy themes and direction by Robert Stevenson.",
+    "similarTags": [
+      "Robert Stevenson",
+      "Comedy",
+      "Family"
+    ],
+    "moods": [
+      "\u2728 Comedy",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$6 Million",
+    "revenue": "$102 Million",
+    "tagline": "It's supercalifragilisticexpialidocious!",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-710",
+    "title": "GoldenEye",
+    "originalTitle": "GoldenEye",
+    "year": 1995,
+    "runtime": "130 min",
+    "genres": [
+      "Adventure",
+      "Action",
+      "Thriller"
+    ],
+    "imdbRating": 6.6,
+    "matchScore": 99,
+    "synopsis": "James Bond must unmask the mysterious head of the Janus Syndicate and prevent the leader from utilizing the GoldenEye weapons system to inflict devastating revenge on Britain.",
+    "director": "Martin Campbell",
+    "cast": [
+      "Pierce Brosnan",
+      "Sean Bean",
+      "Izabella Scorupco",
+      "Famke Janssen"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/z0ljRnNxIO7CRBhLEO0DvLgAFPR.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/fIWsCpYR9iGDMSbMTSAzy8L7Kg5.jpg",
+    "trailerId": "8Zw8ylP4buA",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Martin Campbell.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Martin Campbell.",
+    "similarTags": [
+      "Martin Campbell",
+      "Adventure",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$58 Million",
+    "revenue": "$352 Million",
+    "tagline": "No limits. No fears. No substitutes.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-137106",
+    "title": "The Lego Movie",
+    "originalTitle": "The Lego Movie",
+    "year": 2014,
+    "runtime": "100 min",
+    "genres": [
+      "Adventure",
+      "Animation",
+      "Comedy",
+      "Family",
+      "Fantasy"
+    ],
+    "imdbRating": 7.5,
+    "matchScore": 90,
+    "synopsis": "An ordinary Lego mini-figure, mistakenly thought to be the extraordinary MasterBuilder, is recruited to join a quest to stop an evil Lego tyrant from gluing the universe together.",
+    "director": "Phil Lord",
+    "cast": [
+      "Chris Pratt",
+      "Will Ferrell",
+      "Elizabeth Banks",
+      "Will Arnett"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/lbctonEnewCYZ4FYoTZhs8cidAl.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/6gI1dAkOaUQ6659OdRPsTLlsem5.jpg",
+    "trailerId": "fZ_JOBCLF-I",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Phil Lord.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Phil Lord.",
+    "similarTags": [
+      "Phil Lord",
+      "Adventure",
+      "Animation"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$60 Million",
+    "revenue": "$469 Million",
+    "tagline": "The story of a nobody who saved everybody.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-117263",
+    "title": "Olympus Has Fallen",
+    "originalTitle": "Olympus Has Fallen",
+    "year": 2013,
+    "runtime": "120 min",
+    "genres": [
+      "Action",
+      "Thriller"
+    ],
+    "imdbRating": 6.2,
+    "matchScore": 91,
+    "synopsis": "When the White House (Secret Service Code: \"Olympus\") is captured by a terrorist mastermind and the President is kidnapped, disgraced former Presidential guard Mike Banning finds himself trapped within the building. As the national security team scrambles to respond, they are forced to rely on Banning's inside knowledge to help retake the White House, save the President and avert an even bigger disaster.",
+    "director": "Antoine Fuqua",
+    "cast": [
+      "Gerard Butler",
+      "Aaron Eckhart",
+      "Angela Bassett",
+      "Morgan Freeman"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/u3GTFGwesNBNd0t1hiLaEk1iqZU.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/mjYU7EwVeOtM39ArdWHZk78VhYm.jpg",
+    "trailerId": "74F_pts7Uhg",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Antoine Fuqua.",
+    "whyRecommended": "Top match based on Action themes and direction by Antoine Fuqua.",
+    "similarTags": [
+      "Antoine Fuqua",
+      "Action",
+      "Thriller"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$70 Million",
+    "revenue": "$161 Million",
+    "tagline": "When our flag falls our nation will rise.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-72559",
+    "title": "G.I. Joe: Retaliation",
+    "originalTitle": "G.I. Joe: Retaliation",
+    "year": 2013,
+    "runtime": "110 min",
+    "genres": [
+      "Adventure",
+      "Action",
+      "Science Fiction",
+      "Thriller"
+    ],
+    "imdbRating": 5.4,
+    "matchScore": 92,
+    "synopsis": "Framed for crimes against the country, the G.I. Joe team is terminated by Presidential order. This forces the G.I. Joes into not only fighting their mortal enemy Cobra; they are forced to contend with threats from within the government that jeopardize their very existence.",
+    "director": "Jon M. Chu",
+    "cast": [
+      "Dwayne Johnson",
+      "D.J. Cotrona",
+      "Adrianne Palicki",
+      "Bruce Willis"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3rWIZMzTKcCtV0eHJ70Z4Ru659f.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/pEhXq18GVe1dg2ltplcxtGWfSje.jpg",
+    "trailerId": "2vAo4rJPqQ4",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Jon M. Chu.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Jon M. Chu.",
+    "similarTags": [
+      "Jon M. Chu",
+      "Adventure",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$130 Million",
+    "revenue": "$371 Million",
+    "tagline": "An extraordinary story.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-389",
+    "title": "12 Angry Men",
+    "originalTitle": "12 Angry Men",
+    "year": 1957,
+    "runtime": "96 min",
+    "genres": [
+      "Drama"
+    ],
+    "imdbRating": 8.2,
+    "matchScore": 93,
+    "synopsis": "The defense and the prosecution have rested and the jury is filing into the jury room to decide if a young Spanish-American is guilty or innocent of murdering his father. What begins as an open and shut case soon becomes a mini-drama of each of the jurors' prejudices and preconceptions about the trial, the accused, and each other.",
+    "director": "Sidney Lumet",
+    "cast": [
+      "Henry Fonda",
+      "Martin Balsam",
+      "John Fiedler",
+      "Lee J. Cobb"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ppd84D2i9W8jXmsyInGyihiSyqz.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/qqHQsStV6exghCM7zbObuYBiYxw.jpg",
+    "trailerId": "TEN-2uTi2c0",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Sidney Lumet.",
+    "whyRecommended": "Top match based on Drama themes and direction by Sidney Lumet.",
+    "similarTags": [
+      "Sidney Lumet",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$0 Million",
+    "revenue": "$1 Million",
+    "tagline": "Life is in their hands. Death is on their minds.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-12405",
+    "title": "Slumdog Millionaire",
+    "originalTitle": "Slumdog Millionaire",
+    "year": 2008,
+    "runtime": "120 min",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "imdbRating": 7.6,
+    "matchScore": 94,
+    "synopsis": "Jamal Malik is an impoverished Indian teen who becomes a contestant on the Hindi version of \u2018Who Wants to Be a Millionaire?\u2019 but, after he wins, he is suspected of cheating.",
+    "director": "Danny Boyle",
+    "cast": [
+      "Dev Patel",
+      "Freida Pinto",
+      "Anil Kapoor",
+      "Mia Drake Inderbitzin"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/5leCCi7ZF0CawAfM5Qo2ECKPprc.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/1wZoVT9RJsZmNjg8CecXqSgFUd9.jpg",
+    "trailerId": "AIzbwV7on6Q",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Danny Boyle.",
+    "whyRecommended": "Top match based on Drama themes and direction by Danny Boyle.",
+    "similarTags": [
+      "Danny Boyle",
+      "Drama",
+      "Romance"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$15 Million",
+    "revenue": "$377 Million",
+    "tagline": "What does it take to find a lost love? A. Money, B. Luck, C. Smarts, D. Destiny",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-453",
+    "title": "A Beautiful Mind",
+    "originalTitle": "A Beautiful Mind",
+    "year": 2001,
+    "runtime": "135 min",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "imdbRating": 7.7,
+    "matchScore": 95,
+    "synopsis": "At Princeton University, John Nash struggles to make a worthwhile contribution to serve as his legacy to the world of mathematics. He finally makes a revolutionary breakthrough that will eventually earn him the Nobel Prize. After graduate school he turns to teaching, becoming romantically involved with his student Alicia. Meanwhile the government asks his help with breaking Soviet codes, which soon gets him involved in a terrifying conspiracy plot. Nash grows more and more paranoid until a discovery that turns his entire world upside down. Now it is only with Alicia's help that he will be able to recover his mental strength and regain his status as the great mathematician we know him as today..",
+    "director": "Ron Howard",
+    "cast": [
+      "Russell Crowe",
+      "Ed Harris",
+      "Jennifer Connelly",
+      "Christopher Plummer"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/rEIg5yJdNOt9fmX4P8gU9LeNoTQ.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/hCJFWTPghXCwwSpvPpAoIB8318Q.jpg",
+    "trailerId": "yC2VpkVMtXY",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Drama themes and direction by Ron Howard.",
+    "whyRecommended": "Top match based on Drama themes and direction by Ron Howard.",
+    "similarTags": [
+      "Ron Howard",
+      "Drama",
+      "Romance"
+    ],
+    "moods": [
+      "\u2728 Drama",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$60 Million",
+    "revenue": "$313 Million",
+    "tagline": "I need to believe that something extra ordinary is possible...",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-242",
+    "title": "The Godfather: Part III",
+    "originalTitle": "The Godfather: Part III",
+    "year": 1990,
+    "runtime": "162 min",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "imdbRating": 7.1,
+    "matchScore": 96,
+    "synopsis": "In the midst of trying to legitimize his business dealings in 1979 New York and Italy, aging mafia don, Michael Corleone seeks forgiveness for his sins while taking a young protege under his wing.",
+    "director": "Francis Ford Coppola",
+    "cast": [
+      "Al Pacino",
+      "Diane Keaton",
+      "Andy Garc\u00eda",
+      "Talia Shire"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/lm3pQ2QoQ16pextRsmnUbG2onES.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/zNnjHLDtV8Ti3aworltaeaLMov4.jpg",
+    "trailerId": "qQR85-nGk2M",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Crime themes and direction by Francis Ford Coppola.",
+    "whyRecommended": "Top match based on Crime themes and direction by Francis Ford Coppola.",
+    "similarTags": [
+      "Francis Ford Coppola",
+      "Crime",
+      "Drama"
+    ],
+    "moods": [
+      "\u2728 Crime",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$54 Million",
+    "revenue": "$136 Million",
+    "tagline": "All the power on earth can't change destiny.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-364",
+    "title": "Batman Returns",
+    "originalTitle": "Batman Returns",
+    "year": 1992,
+    "runtime": "126 min",
+    "genres": [
+      "Action",
+      "Fantasy"
+    ],
+    "imdbRating": 6.6,
+    "matchScore": 97,
+    "synopsis": "Having defeated the Joker, Batman now faces the Penguin - a warped and deformed individual who is intent on being accepted into Gotham society. Crooked businessman Max Schreck is coerced into helping him become Mayor of Gotham and they both attempt to expose Batman in a different light. Selina Kyle, Max's secretary, is thrown from the top of a building and is transformed into Catwoman - a mysterious figure who has the same personality disorder as Batman. Batman must attempt to clear his name, all the time deciding just what must be done with the Catwoman.",
+    "director": "Tim Burton",
+    "cast": [
+      "Michael Keaton",
+      "Danny DeVito",
+      "Michelle Pfeiffer",
+      "Christopher Walken"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/jKBjeXM7iBBV9UkUcOXx3m7FSHY.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/7x4SNxO5HWArighxxFeet5sn3il.jpg",
+    "trailerId": "ZCaE6AIk0DM",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Action themes and direction by Tim Burton.",
+    "whyRecommended": "Top match based on Action themes and direction by Tim Burton.",
+    "similarTags": [
+      "Tim Burton",
+      "Action",
+      "Fantasy"
+    ],
+    "moods": [
+      "\u2728 Action",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$80 Million",
+    "revenue": "$280 Million",
+    "tagline": "The Bat, the Cat, the Penguin.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-563",
+    "title": "Starship Troopers",
+    "originalTitle": "Starship Troopers",
+    "year": 1997,
+    "runtime": "129 min",
+    "genres": [
+      "Adventure",
+      "Action",
+      "Thriller",
+      "Science Fiction"
+    ],
+    "imdbRating": 6.7,
+    "matchScore": 98,
+    "synopsis": "Set in the future, the story follows a young soldier named Johnny Rico and his exploits in the Mobile Infantry. Rico's military career progresses from recruit to non-commissioned officer and finally to officer against the backdrop of an interstellar war between mankind and an arachnoid species known as \"the Bugs\".",
+    "director": "Paul Verhoeven",
+    "cast": [
+      "Casper Van Dien",
+      "Dina Meyer",
+      "Denise Richards",
+      "Jake Busey"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/cxCmv23O7p3hyHwqoktHYkZcGsY.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/7iEfnj3rfyunky6BzvnlwqfoEF0.jpg",
+    "trailerId": "zPYuV_jGk7M",
+    "streamingOn": [
+      "Netflix",
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Adventure themes and direction by Paul Verhoeven.",
+    "whyRecommended": "Top match based on Adventure themes and direction by Paul Verhoeven.",
+    "similarTags": [
+      "Paul Verhoeven",
+      "Adventure",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Adventure",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$105 Million",
+    "revenue": "$121 Million",
+    "tagline": "The only good bug is a dead bug.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-49018",
+    "title": "Insidious",
+    "originalTitle": "Insidious",
+    "year": 2010,
+    "runtime": "103 min",
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "imdbRating": 6.8,
+    "matchScore": 99,
+    "synopsis": "A family discovers that dark spirits have invaded their home after their son inexplicably falls into an endless sleep. When they reach out to a professional for help, they learn things are a lot more personal than they thought.",
+    "director": "James Wan",
+    "cast": [
+      "Patrick Wilson",
+      "Rose Byrne",
+      "Ty Simpkins",
+      "Barbara Hershey"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1egpmVXuXed58TH2UOnX1nATTrf.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/tJvRdhlkonjBLBUpTqp0RPPujxJ.jpg",
+    "trailerId": "62rpZcMYa0A",
+    "streamingOn": [
+      "Prime Video"
+    ],
+    "aiReasoning": "Top match based on Horror themes and direction by James Wan.",
+    "whyRecommended": "Top match based on Horror themes and direction by James Wan.",
+    "similarTags": [
+      "James Wan",
+      "Horror",
+      "Thriller"
+    ],
+    "moods": [
+      "\u2728 Horror",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$1 Million",
+    "revenue": "$97 Million",
+    "tagline": "It's not the house that's haunted.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-4011",
+    "title": "Beetlejuice",
+    "originalTitle": "Beetlejuice",
+    "year": 1988,
+    "runtime": "92 min",
+    "genres": [
+      "Fantasy",
+      "Comedy"
+    ],
+    "imdbRating": 7.1,
+    "matchScore": 90,
+    "synopsis": "Thanks to an untimely demise via drowning, a young couple end up as poltergeists in their New England farmhouse, where they fail to meet the challenge of scaring away the insufferable new owners, who want to make drastic changes. In desperation, the undead newlyweds turn to an expert frightmeister, but he's got a diabolical agenda of his own.",
+    "director": "Tim Burton",
+    "cast": [
+      "Geena Davis",
+      "Alec Baldwin",
+      "Winona Ryder",
+      "Michael Keaton"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/nnl6OWkyPpuMm595hmAxNW3rZFn.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/yRKyJJYIzfeiVDHBe4LXguPQCvD.jpg",
+    "trailerId": "po1HJbmow0g",
+    "streamingOn": [
+      "Max"
+    ],
+    "aiReasoning": "Top match based on Fantasy themes and direction by Tim Burton.",
+    "whyRecommended": "Top match based on Fantasy themes and direction by Tim Burton.",
+    "similarTags": [
+      "Tim Burton",
+      "Fantasy",
+      "Comedy"
+    ],
+    "moods": [
+      "\u2728 Fantasy",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$15 Million",
+    "revenue": "$73 Million",
+    "tagline": "He's guaranteed to put some life in your afterlife.",
+    "productionCompany": "Hollywood Studio"
+  },
+  {
+    "id": "tmdb-52520",
+    "title": "Underworld: Awakening",
+    "originalTitle": "Underworld: Awakening",
+    "year": 2012,
+    "runtime": "88 min",
+    "genres": [
+      "Fantasy",
+      "Action",
+      "Horror"
+    ],
+    "imdbRating": 6.1,
+    "matchScore": 91,
+    "synopsis": "After being held in a coma-like state for fifteen years, vampire Selene learns that she has a fourteen-year-old vampire/Lycan hybrid daughter named Nissa, and when she finds her, they must stop BioCom from creating super Lycans that will kill them all.",
+    "director": "M\u00e5ns M\u00e5rlind",
+    "cast": [
+      "Kate Beckinsale",
+      "Stephen Rea",
+      "Michael Ealy",
+      "Theo James"
+    ],
+    "posterUrl": "https://image.tmdb.org/t/p/w500/jN0uuc8U6M3sTg9zEaliJV60Stf.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1280/wJJJS5ey53DqJ3cTuu7GFJsRsWu.jpg",
+    "trailerId": "WiJMiHazLPQ",
+    "streamingOn": [
+      "Disney+"
+    ],
+    "aiReasoning": "Top match based on Fantasy themes and direction by M\u00e5ns M\u00e5rlind.",
+    "whyRecommended": "Top match based on Fantasy themes and direction by M\u00e5ns M\u00e5rlind.",
+    "similarTags": [
+      "M\u00e5ns M\u00e5rlind",
+      "Fantasy",
+      "Action"
+    ],
+    "moods": [
+      "\u2728 Fantasy",
+      "\ud83d\udd25 Popular"
+    ],
+    "language": "English",
+    "country": "USA",
+    "budget": "$70 Million",
+    "revenue": "$160 Million",
+    "tagline": "Vengeance Returns",
+    "productionCompany": "Hollywood Studio"
   }
 ];
