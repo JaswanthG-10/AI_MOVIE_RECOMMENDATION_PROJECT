@@ -80,24 +80,34 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
 
   let movies = [...MOVIES_DATABASE];
   if (selectedLanguage !== "All") {
-    movies = movies.filter((m) =>
-      m.language.toLowerCase().includes(selectedLanguage.toLowerCase())
+    movies = movies.filter(
+      (m) => m.language.toLowerCase().trim() === selectedLanguage.toLowerCase().trim()
     );
   }
 
   const heroMovie = movies[0] || MOVIES_DATABASE[0];
 
-  // Specific Categorized Rows
-  const recommendedForYou = movies.filter((m) => m.matchScore >= 92).slice(0, 8);
+  // Specific Categorized Rows strictly matching selectedLanguage
+  const recommendedForYou = movies.slice(0, 8);
   const trendingNow = [...movies].sort((a, b) => b.imdbRating - a.imdbRating).slice(0, 8);
-  const tamilBlockbusters = MOVIES_DATABASE.filter((m) => m.language === "Tamil").slice(0, 8);
-  const becauseInterstellar = MOVIES_DATABASE.filter(
-    (m) => m.director === "Christopher Nolan" || m.genres.includes("Sci-Fi")
+  
+  const regionalSpotlightTitle = selectedLanguage !== "All" ? `${selectedLanguage} Spotlight` : "Tamil Blockbusters & Thrillers";
+  const regionalSpotlight = selectedLanguage !== "All" 
+    ? movies.slice(0, 8) 
+    : MOVIES_DATABASE.filter((m) => m.language === "Tamil").slice(0, 8);
+
+  const becauseInterstellar = movies.filter(
+    (m) => m.director === "Christopher Nolan" || m.genres.includes("Sci-Fi") || m.genres.includes("Drama")
   ).slice(0, 8);
-  const actionCyberpunk = MOVIES_DATABASE.filter(
-    (m) => m.genres.includes("Action") || m.genres.includes("Thriller")
+  const finalBecauseInterstellar = becauseInterstellar.length > 0 ? becauseInterstellar : movies.slice(0, 8);
+
+  const actionCyberpunk = movies.filter(
+    (m) => m.genres.includes("Action") || m.genres.includes("Thriller") || m.genres.includes("Crime")
   ).slice(0, 8);
-  const mindBendingSciFi = MOVIES_DATABASE.filter((m) => m.genres.includes("Sci-Fi")).slice(0, 8);
+  const finalActionCyberpunk = actionCyberpunk.length > 0 ? actionCyberpunk : movies.slice(0, 8);
+
+  const mindBendingSciFi = movies.filter((m) => m.genres.includes("Sci-Fi") || m.genres.includes("Thriller") || m.genres.includes("Mystery")).slice(0, 8);
+  const finalMindBendingSciFi = mindBendingSciFi.length > 0 ? mindBendingSciFi : movies.slice(0, 8);
 
   const promptChips = [
     "Suggest a dark sci-fi movie with an intelligent storyline",
@@ -272,12 +282,12 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
         onPlayTrailer={onPlayTrailer}
       />
 
-      {/* 3. Tamil Blockbusters & Thrillers (Left) */}
+      {/* 3. Regional / Language Spotlight (Left) */}
       <InfiniteCarouselRow
-        title="Tamil Blockbusters & Thrillers"
+        title={regionalSpotlightTitle}
         icon={<Clapperboard className="w-5 h-5 text-[#60A5FA]" />}
-        badge="Kollywood Vault"
-        movies={tamilBlockbusters}
+        badge={selectedLanguage !== "All" ? `${selectedLanguage} Vault` : "Kollywood Vault"}
+        movies={regionalSpotlight}
         direction="left"
         onSelectMovie={onSelectMovie}
         onPlayTrailer={onPlayTrailer}
@@ -288,7 +298,7 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
         title="Because You Watched Interstellar"
         icon={<Rocket className="w-5 h-5 text-indigo-400" />}
         badge="Cosmic & Auteur"
-        movies={becauseInterstellar}
+        movies={finalBecauseInterstellar}
         direction="right"
         onSelectMovie={onSelectMovie}
         onPlayTrailer={onPlayTrailer}
@@ -299,7 +309,7 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
         title="High Kinetic Action & Cyberpunk"
         icon={<Zap className="w-5 h-5 text-amber-400" />}
         badge="Adrenaline"
-        movies={actionCyberpunk}
+        movies={finalActionCyberpunk}
         direction="left"
         onSelectMovie={onSelectMovie}
         onPlayTrailer={onPlayTrailer}
@@ -310,7 +320,7 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
         title="Mind-Bending Sci-Fi"
         icon={<Brain className="w-5 h-5 text-emerald-400" />}
         badge="High Concept"
-        movies={mindBendingSciFi}
+        movies={finalMindBendingSciFi}
         direction="right"
         onSelectMovie={onSelectMovie}
         onPlayTrailer={onPlayTrailer}

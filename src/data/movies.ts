@@ -45,18 +45,47 @@ export interface LanguageOption {
   flag: string;
 }
 
-export const LANGUAGES_LIST: LanguageOption[] = [
-  { id: "All", name: "All Languages", flag: "🌐" },
-  { id: "Tamil", name: "Tamil Cinema (Kolly)", flag: "🇮🇳" },
-  { id: "Telugu", name: "Telugu Cinema (Tolly)", flag: "🇮🇳" },
-  { id: "Malayalam", name: "Malayalam Cinema (Molly)", flag: "🇮🇳" },
-  { id: "Hindi", name: "Hindi Bollywood", flag: "🇮🇳" },
-  { id: "English", name: "Hollywood / English", flag: "🇺🇸" },
-  { id: "Korean", name: "Korean K-Cinema", flag: "🇰🇷" },
-  { id: "Japanese", name: "Japanese Anime / Cinema", flag: "🇯🇵" },
-  { id: "Spanish", name: "Spanish / LatAm", flag: "🇪🇸" },
-  { id: "French", name: "French Cinema", flag: "🇫🇷" }
-];
+const LANGUAGE_META_MAP: Record<string, { name: string; flag: string }> = {
+  English: { name: "English", flag: "🇺🇸" },
+  Tamil: { name: "Tamil (தமிழ்)", flag: "🇮🇳" },
+  Spanish: { name: "Spanish (Español)", flag: "🇪🇸" },
+  Japanese: { name: "Japanese (日本語)", flag: "🇯🇵" },
+  Korean: { name: "Korean (한국어)", flag: "🇰🇷" },
+  Hindi: { name: "Hindi (हिंदी)", flag: "🇮🇳" },
+  French: { name: "French (Français)", flag: "🇫🇷" },
+  German: { name: "German (Deutsch)", flag: "🇩🇪" },
+  Italian: { name: "Italian (Italiano)", flag: "🇮🇹" },
+  Chinese: { name: "Chinese (中文)", flag: "🇨🇳" },
+  Telugu: { name: "Telugu (తెలుగు)", flag: "🇮🇳" },
+  Malayalam: { name: "Malayalam (മലയാളം)", flag: "🇮🇳" },
+};
+
+export function getAvailableLanguages(moviesList: Movie[] = MOVIES_DATABASE): LanguageOption[] {
+  if (!moviesList || !Array.isArray(moviesList)) return [{ id: "All", name: "All Languages", flag: "🌐" }];
+
+  const uniqueLangs = Array.from(
+    new Set(
+      moviesList
+        .map((m) => m?.language)
+        .filter((lang): lang is string => typeof lang === "string" && lang.trim().length > 0 && lang.trim().toLowerCase() !== "unknown")
+    )
+  ).sort();
+
+  const options: LanguageOption[] = [
+    { id: "All", name: "All Languages", flag: "🌐" }
+  ];
+
+  uniqueLangs.forEach((lang) => {
+    const meta = LANGUAGE_META_MAP[lang] || { name: lang, flag: "🎬" };
+    options.push({
+      id: lang,
+      name: meta.name,
+      flag: meta.flag,
+    });
+  });
+
+  return options;
+}
 
 export const ALL_30_GENRES = [
   "Action", "Adventure", "Animation", "Anime", "Biography",
@@ -9870,3 +9899,5 @@ export const MOVIES_DATABASE: Movie[] = [
     "reviews": []
   }
 ];
+
+export const LANGUAGES_LIST: LanguageOption[] = getAvailableLanguages(MOVIES_DATABASE);
