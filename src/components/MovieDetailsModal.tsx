@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Movie } from "@/data/movies";
-import { filterAndRankMovies } from "@/lib/recommendEngine";
+import { filterAndRankMovies, getMovieSimilarity } from "@/lib/recommendEngine";
 import { fetchTrailerForMovie, TrailerResult } from "@/lib/trailerService";
 import { 
   X, 

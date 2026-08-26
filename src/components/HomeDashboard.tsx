@@ -1,52 +1,70 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Movie, MOVIES_DATABASE } from "@/data/movies";
 import { MovieCard } from "@/components/MovieCard";
-import { Sparkles, Flame, Star, Trophy, Clapperboard, Play, Info } from "lucide-react";
+import { PlatformMetricsFooter } from "@/components/PlatformMetricsFooter";
+import { Sparkles, Flame, Star, Trophy, Clapperboard, Play, Info, Search, Compass, Rocket, Zap, Brain } from "lucide-react";
 
 interface HomeDashboardProps {
   selectedLanguage: string;
   onSelectMovie: (movie: Movie) => void;
   onPlayTrailer: (movie: Movie) => void;
+  onOpenAiModal?: () => void;
 }
 
-interface RowProps {
+interface InfiniteCarouselRowProps {
   title: string;
   icon: React.ReactNode;
   badge?: string;
   movies: Movie[];
+  direction?: "left" | "right";
   onSelectMovie: (movie: Movie) => void;
   onPlayTrailer?: (movie: Movie) => void;
 }
 
-const CarouselRow: React.FC<RowProps> = ({ title, icon, badge, movies, onSelectMovie, onPlayTrailer }) => {
+const InfiniteCarouselRow: React.FC<InfiniteCarouselRowProps> = ({
+  title,
+  icon,
+  badge,
+  movies,
+  direction = "left",
+  onSelectMovie,
+  onPlayTrailer,
+}) => {
   if (!movies.length) return null;
+  // Duplicate array so it loops infinitely without gaps
+  const doubledMovies = [...movies, ...movies];
+
   return (
     <section className="space-y-4 animate-roll-on">
-      {/* Row header */}
-      <div className="flex items-center justify-between px-1">
-        <h3 className="font-heading text-xl font-bold flex items-center gap-2 text-[#F1F3FA]">
+      {/* Row Header */}
+      <div className="flex items-center justify-between px-2">
+        <h3 className="font-heading text-xl font-extrabold flex items-center gap-2.5 text-white">
           {icon}
           {title}
         </h3>
         {badge && (
-          <span className="text-[10px] font-mono-num font-bold px-2.5 py-1 rounded-lg bg-[#2563EB]/15 text-[#60A5FA] border border-[#2563EB]/35">
+          <span className="text-[10px] font-mono-num font-bold px-3 py-1 rounded-full bg-purple-500/15 text-purple-300 border border-purple-500/30">
             {badge}
           </span>
         )}
       </div>
 
-      {/* Sprocket decorative strip */}
-      <div className="sprocket-strip mb-2 opacity-50" />
-
-      {/* Horizontal scroll */}
-      <div className="carousel-row gap-6">
-        {movies.map((m) => (
-          <div key={m.id} className="w-48 sm:w-52 shrink-0">
-            <MovieCard movie={m} score={m.matchScore} onSelectMovie={onSelectMovie} onPlayTrailer={onPlayTrailer} />
-          </div>
-        ))}
+      {/* Infinite Rolling Outer Wrapper */}
+      <div className="infinite-roll-container py-2">
+        <div className={direction === "left" ? "infinite-roll-left" : "infinite-roll-right"}>
+          {doubledMovies.map((m, idx) => (
+            <div key={`${m.id}-${idx}`} className="w-52 shrink-0">
+              <MovieCard
+                movie={m}
+                score={m.matchScore}
+                onSelectMovie={onSelectMovie}
+                onPlayTrailer={onPlayTrailer}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
@@ -56,7 +74,10 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
   selectedLanguage,
   onSelectMovie,
   onPlayTrailer,
+  onOpenAiModal,
 }) => {
+  const [heroPrompt, setHeroPrompt] = useState("");
+
   let movies = [...MOVIES_DATABASE];
   if (selectedLanguage !== "All") {
     movies = movies.filter((m) =>
@@ -64,208 +85,234 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
     );
   }
 
-  const heroMovie     = movies[0] || MOVIES_DATABASE[0];
-  const popularTamil  = MOVIES_DATABASE.filter((m) => m.language === "Tamil");
-  const topRated      = [...movies].sort((a, b) => b.imdbRating - a.imdbRating).slice(0, 12);
-  const lcuCollection = MOVIES_DATABASE.filter((m) => m.director === "Lokesh Kanagaraj");
-  const oscarWinners  = MOVIES_DATABASE.filter((m) => m.isOscarWinner);
-  const trending      = [...movies].filter((m) => m.matchScore >= 95).slice(0, 10);
-  const nolanFilms    = MOVIES_DATABASE.filter((m) => m.director === "Christopher Nolan");
+  const heroMovie = movies[0] || MOVIES_DATABASE[0];
+
+  // Specific Categorized Rows
+  const recommendedForYou = movies.filter((m) => m.matchScore >= 92).slice(0, 8);
+  const trendingNow = [...movies].sort((a, b) => b.imdbRating - a.imdbRating).slice(0, 8);
+  const tamilBlockbusters = MOVIES_DATABASE.filter((m) => m.language === "Tamil").slice(0, 8);
+  const becauseInterstellar = MOVIES_DATABASE.filter(
+    (m) => m.director === "Christopher Nolan" || m.genres.includes("Sci-Fi")
+  ).slice(0, 8);
+  const actionCyberpunk = MOVIES_DATABASE.filter(
+    (m) => m.genres.includes("Action") || m.genres.includes("Thriller")
+  ).slice(0, 8);
+  const mindBendingSciFi = MOVIES_DATABASE.filter((m) => m.genres.includes("Sci-Fi")).slice(0, 8);
+
+  const promptChips = [
+    "Suggest a dark sci-fi movie with an intelligent storyline",
+    "High octane Tamil action movies",
+    "Mind-bending psychological thrillers",
+    "Oscar winning cinematic masterpieces"
+  ];
 
   return (
-    <div className="space-y-16 p-6 sm:p-10 max-w-[1600px] mx-auto bg-transparent">
-
-      {/* ══ HERO BANNER ══ */}
+    <div className="space-y-16 p-4 sm:p-8 max-w-[1600px] mx-auto bg-transparent">
+      
+      {/* ══ HERO SECTION ══ */}
       <section
-        className="relative rounded-3xl overflow-hidden shadow-2xl animate-roll-on border"
+        className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl animate-roll-on bg-[#070913]"
         style={{
-          borderColor: "rgba(37, 99, 235, 0.35)",
-          boxShadow: "0 0 80px rgba(37, 99, 235, 0.15), 0 0 120px rgba(236, 72, 153, 0.08), 0 32px 80px rgba(0,0,0,0.9)",
-          background: "#060813"
+          boxShadow: "0 0 100px rgba(139, 92, 246, 0.15), 0 0 150px rgba(236, 72, 153, 0.08), 0 32px 80px rgba(0,0,0,0.9)",
         }}
       >
-        {/* Backdrop Image */}
+        {/* Cinematic Backdrop with Radial Vignetting */}
         <div className="absolute inset-0 z-0">
           <img
             src={heroMovie.backdropUrl}
             alt={heroMovie.title}
-            className="w-full h-full object-cover opacity-35 scale-105 blur-[2px]"
+            className="w-full h-full object-cover opacity-40 scale-105 blur-[1px]"
           />
           <div
             className="absolute inset-0"
             style={{
-              background: "linear-gradient(90deg, #060813 0%, rgba(6, 8, 19, 0.85) 55%, rgba(6, 8, 19, 0.4) 100%)"
-            }}
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              background: "linear-gradient(to top, #060813 0%, transparent 60%)"
+              background: "radial-gradient(ellipse 90% 90% at 50% 40%, rgba(7, 9, 19, 0.4) 0%, #070913 90%)",
             }}
           />
         </div>
 
-        {/* Sprocket top */}
-        <div className="sprocket-strip absolute top-0 left-0 right-0 z-10 opacity-60" />
-
-        {/* Content */}
-        <div className="relative z-10 p-8 sm:p-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-10 min-h-[380px]">
-          {/* Left: Text */}
-          <div className="space-y-5 max-w-2xl stagger-1 animate-fade-up">
-            <div
-              className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono-num font-bold text-[#F472B6] border border-[#EC4899]/40 bg-[#EC4899]/15"
-              style={{ boxShadow: "0 0 20px rgba(236, 72, 153, 0.2)" }}
-            >
-              <Sparkles className="w-3.5 h-3.5 animate-pulse text-[#EC4899]" />
-              Lumina AI Spotlight Feature
+        {/* Hero Content */}
+        <div className="relative z-10 p-8 sm:p-14 flex flex-col lg:flex-row items-center justify-between gap-10 min-h-[480px]">
+          
+          {/* Left Text & Search */}
+          <div className="space-y-6 max-w-2xl text-left">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-mono-num font-bold text-purple-300 border border-purple-500/40 bg-purple-500/15 shadow-[0_0_20px_rgba(139,92,246,0.3)]">
+              <Sparkles className="w-3.5 h-3.5 animate-pulse text-pink-400" />
+              ✦ LUMINA AI NEURAL FILM SEARCH
             </div>
 
-            <h2 className="font-heading text-4xl sm:text-6xl text-[#F1F3FA] leading-none tracking-tight font-extrabold">
-              {heroMovie.title}
-            </h2>
+            <h1 className="font-heading text-4xl sm:text-6xl text-white font-black leading-none tracking-tight">
+              Curated Cinema, Engineered by Intelligence
+            </h1>
 
-            <p className="font-body text-sm text-[#B0B6D0] line-clamp-2 leading-relaxed max-w-lg">
-              {heroMovie.synopsis}
+            <p className="font-body text-sm sm:text-base text-zinc-300 leading-relaxed">
+              Experience movie recommendations driven by high-dimensional vector embeddings, plot analysis, and your unique cinephile taste fingerprint.
             </p>
 
-            {/* AI reasoning box */}
-            <div
-              className="flex items-start gap-3 p-4 rounded-2xl max-w-lg"
-              style={{
-                background: "linear-gradient(90deg, rgba(37,99,235,0.12), rgba(236,72,153,0.06))",
-                border: "1px solid rgba(37, 99, 235, 0.3)"
-              }}
-            >
-              <Sparkles className="w-4 h-4 shrink-0 mt-0.5 animate-pulse text-[#EC4899]" />
-              <p className="font-body text-xs italic leading-relaxed text-[#B0B6D0]">
-                "{heroMovie.aiReasoning}"
-              </p>
-            </div>
+            {/* Natural Language Input & Prompt Chips */}
+            <div className="space-y-3 pt-2">
+              <div className="relative flex items-center">
+                <input
+                  type="text"
+                  value={heroPrompt}
+                  onChange={(e) => setHeroPrompt(e.target.value)}
+                  placeholder="Ask Lumina AI for a movie recommendation..."
+                  className="w-full font-body text-xs sm:text-sm rounded-2xl pl-11 pr-32 py-3.5 bg-black/70 border border-purple-500/40 text-white placeholder-zinc-500 focus:outline-none focus:border-purple-400 backdrop-blur-md shadow-2xl"
+                />
+                <Search className="w-4 h-4 text-purple-400 absolute left-4 pointer-events-none" />
+                <button
+                  onClick={() => onOpenAiModal && onOpenAiModal()}
+                  className="absolute right-2.5 px-4 py-2 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-xs flex items-center gap-1.5 shadow-lg hover:opacity-90 transition-all cursor-pointer"
+                >
+                  <Sparkles className="w-3.5 h-3.5" /> AI Search
+                </button>
+              </div>
 
-            {/* Metadata row */}
-            <div className="flex flex-wrap items-center gap-3 font-mono-num text-xs text-[#B0B6D0]">
-              <span className="flex items-center gap-1 font-bold text-[#FBBF24]">
-                <Star className="w-3.5 h-3.5 fill-[#FBBF24] text-[#FBBF24]" />
-                {heroMovie.imdbRating} IMDb
-              </span>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]/40" />
-              <span>{heroMovie.year}</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]/40" />
-              <span>{heroMovie.runtime}</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]/40" />
-              <span className="px-2 py-0.5 rounded bg-[#2563EB]/15 text-[#60A5FA] border border-[#2563EB]/30 font-bold uppercase text-[10px]">
-                {heroMovie.language}
-              </span>
-            </div>
-
-            {/* CTA buttons */}
-            <div className="flex flex-wrap gap-4 pt-2">
-              <button
-                onClick={() => onPlayTrailer(heroMovie)}
-                className="px-6 py-3.5 rounded-xl font-heading text-xs font-bold text-[#F1F3FA] flex items-center gap-2 cursor-pointer shadow-2xl transition-transform hover:scale-105"
-                style={{
-                  background: "linear-gradient(135deg, #2563EB 0%, #EC4899 100%)",
-                  boxShadow: "0 4px 24px rgba(236, 72, 153, 0.4)"
-                }}
-              >
-                <Play className="w-4.5 h-4.5 fill-[#F1F3FA] text-[#F1F3FA]" /> Play Trailer
-              </button>
-              <button
-                onClick={() => onSelectMovie(heroMovie)}
-                className="px-6 py-3.5 rounded-xl font-heading text-xs font-bold text-[#F1F3FA] flex items-center gap-2 cursor-pointer bg-[#111530] border border-[#2563EB]/35 hover:border-[#EC4899]/50 transition-all hover:scale-105"
-              >
-                <Info className="w-4 h-4 text-[#60A5FA]" /> View Details
-              </button>
+              {/* AI Prompt Chips */}
+              <div className="flex flex-wrap gap-2 pt-1">
+                {promptChips.map((chip, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => {
+                      setHeroPrompt(chip);
+                      if (onOpenAiModal) onOpenAiModal();
+                    }}
+                    className="text-[11px] font-space px-3 py-1 rounded-xl bg-white/5 hover:bg-purple-500/20 border border-white/10 hover:border-purple-500/40 text-zinc-300 hover:text-white transition-all cursor-pointer"
+                  >
+                    "{chip}"
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* Right: Poster */}
+          {/* Right Featured Movie Spotlight Card */}
           <div
             className="shrink-0 cursor-pointer group animate-float"
             onClick={() => onSelectMovie(heroMovie)}
           >
-            <div className="relative w-44 sm:w-56">
+            <div className="relative w-56 sm:w-64 p-3 rounded-2xl glass-card border border-purple-500/30">
               <img
                 src={heroMovie.posterUrl}
                 alt={heroMovie.title}
-                className="w-full aspect-[2/3] object-cover rounded-2xl shadow-2xl border transition-all duration-300 group-hover:scale-105"
-                style={{
-                  borderColor: "rgba(236, 72, 153, 0.35)",
-                  boxShadow: "0 0 30px rgba(236, 72, 153, 0.2)"
-                }}
+                className="w-full aspect-[2/3] object-cover rounded-xl shadow-2xl transition-transform duration-300 group-hover:scale-105"
               />
-              {/* Match score dial */}
+              
+              {/* Match Dial Overlay */}
               <div
-                className="absolute -top-4 -right-4 match-dial"
-                style={{ "--pct": heroMovie.matchScore, "--dial-size": "54px" } as React.CSSProperties}
+                className="absolute top-5 right-5 match-dial"
+                style={{ "--pct": heroMovie.matchScore, "--dial-size": "52px" } as React.CSSProperties}
               >
                 <span className="match-dial-label">{heroMovie.matchScore}%</span>
               </div>
+
+              {/* Short Info & CTA */}
+              <div className="mt-3 space-y-2 text-left">
+                <h4 className="font-bold text-sm text-white truncate group-hover:text-purple-300">
+                  {heroMovie.title}
+                </h4>
+                <p className="text-[11px] text-zinc-400 italic line-clamp-2">
+                  "{heroMovie.aiReasoning}"
+                </p>
+
+                <div className="flex items-center gap-2 pt-1">
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onPlayTrailer(heroMovie);
+                    }}
+                    className="flex-1 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-pink-600 text-white font-bold text-[10px] uppercase flex items-center justify-center gap-1 shadow-md hover:opacity-90"
+                  >
+                    <Play className="w-3 h-3 fill-white" /> Watch Trailer
+                  </button>
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onSelectMovie(heroMovie);
+                    }}
+                    className="px-3 py-2 rounded-lg bg-white/10 border border-white/10 text-white font-bold text-[10px] uppercase hover:bg-white/20"
+                  >
+                    Details
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Sprocket bottom */}
-        <div className="sprocket-strip absolute bottom-0 left-0 right-0 z-10 opacity-60" />
+        </div>
       </section>
 
-      {/* ══ CONTENT ROWS ══ */}
+      {/* ══ INFINITE ROLLING CAROUSELS ══ */}
 
-      <CarouselRow
-        title="Popular Tamil Cinema (Kollywood)"
-        icon={<Flame className="w-5 h-5 text-[#EC4899]" />}
-        badge={`${popularTamil.length} Films`}
-        movies={popularTamil}
+      {/* 1. Recommended For You (Left) */}
+      <InfiniteCarouselRow
+        title="Recommended For You"
+        icon={<Sparkles className="w-5 h-5 text-purple-400" />}
+        badge="95%+ Neural Match"
+        movies={recommendedForYou}
+        direction="left"
         onSelectMovie={onSelectMovie}
         onPlayTrailer={onPlayTrailer}
       />
 
-      <CarouselRow
-        title="Lokesh Cinematic Universe"
+      {/* 2. Trending Now (Right) */}
+      <InfiniteCarouselRow
+        title="Trending Now"
+        icon={<Flame className="w-5 h-5 text-pink-500" />}
+        badge="🔥 Top Streamed"
+        movies={trendingNow}
+        direction="right"
+        onSelectMovie={onSelectMovie}
+        onPlayTrailer={onPlayTrailer}
+      />
+
+      {/* 3. Tamil Blockbusters & Thrillers (Left) */}
+      <InfiniteCarouselRow
+        title="Tamil Blockbusters & Thrillers"
         icon={<Clapperboard className="w-5 h-5 text-[#60A5FA]" />}
-        badge="Vikram · Leo · Kaithi"
-        movies={lcuCollection}
+        badge="Kollywood Vault"
+        movies={tamilBlockbusters}
+        direction="left"
         onSelectMovie={onSelectMovie}
         onPlayTrailer={onPlayTrailer}
       />
 
-      {trending.length > 0 && (
-        <CarouselRow
-          title="Trending Today"
-          icon={<Flame className="w-5 h-5 text-[#EC4899]" />}
-          badge="🔥 Hot"
-          movies={trending}
-          onSelectMovie={onSelectMovie}
-          onPlayTrailer={onPlayTrailer}
-        />
-      )}
-
-      <CarouselRow
-        title="IMDb Top Rated Masterpieces"
-        icon={<Star className="w-5 h-5 text-[#FBBF24]" />}
-        badge="Score 8.0+"
-        movies={topRated}
+      {/* 4. Because You Watched Interstellar (Right) */}
+      <InfiniteCarouselRow
+        title="Because You Watched Interstellar"
+        icon={<Rocket className="w-5 h-5 text-indigo-400" />}
+        badge="Cosmic & Auteur"
+        movies={becauseInterstellar}
+        direction="right"
         onSelectMovie={onSelectMovie}
         onPlayTrailer={onPlayTrailer}
       />
 
-      {nolanFilms.length > 0 && (
-        <CarouselRow
-          title="Christopher Nolan Collection"
-          icon={<Clapperboard className="w-5 h-5 text-[#60A5FA]" />}
-          movies={nolanFilms}
-          onSelectMovie={onSelectMovie}
-          onPlayTrailer={onPlayTrailer}
-        />
-      )}
-
-      <CarouselRow
-        title="Oscar & National Award Winners"
-        icon={<Trophy className="w-5 h-5 text-[#FBBF24]" />}
-        movies={oscarWinners}
+      {/* 5. High Kinetic Action & Cyberpunk (Left) */}
+      <InfiniteCarouselRow
+        title="High Kinetic Action & Cyberpunk"
+        icon={<Zap className="w-5 h-5 text-amber-400" />}
+        badge="Adrenaline"
+        movies={actionCyberpunk}
+        direction="left"
         onSelectMovie={onSelectMovie}
         onPlayTrailer={onPlayTrailer}
       />
+
+      {/* 6. Mind-Bending Sci-Fi (Right) */}
+      <InfiniteCarouselRow
+        title="Mind-Bending Sci-Fi"
+        icon={<Brain className="w-5 h-5 text-emerald-400" />}
+        badge="High Concept"
+        movies={mindBendingSciFi}
+        direction="right"
+        onSelectMovie={onSelectMovie}
+        onPlayTrailer={onPlayTrailer}
+      />
+
+      {/* ══ PLATFORM METRICS & FOOTER ══ */}
+      <PlatformMetricsFooter />
+
     </div>
   );
 };

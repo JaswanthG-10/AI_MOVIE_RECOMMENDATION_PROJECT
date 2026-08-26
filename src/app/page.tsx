@@ -11,6 +11,7 @@ import { MovieDetailsModal } from "@/components/MovieDetailsModal";
 import { TrailerPlayerModal } from "@/components/TrailerPlayerModal";
 import { SpinWheelModal } from "@/components/SpinWheelModal";
 import { MovieComparisonModal } from "@/components/MovieComparisonModal";
+import { AiRecommendationModal } from "@/components/AiRecommendationModal";
 import { WatchlistView } from "@/components/WatchlistView";
 import { SettingsView } from "@/components/SettingsView";
 import { TasteProfileView } from "@/components/TasteProfileView";
@@ -25,6 +26,8 @@ export default function Home() {
   const [trailerMovie, setTrailerMovie] = useState<Movie | null>(null);
   const [isSpinWheelOpen, setIsSpinWheelOpen] = useState<boolean>(false);
   const [isComparisonOpen, setIsComparisonOpen] = useState<boolean>(false);
+  const [isAiModalOpen, setIsAiModalOpen] = useState<boolean>(false);
+  
   const [watchlistIds, setWatchlistIds] = useState<string[]>([
     "tamil-vikram",
     "english-inception",
@@ -59,10 +62,13 @@ export default function Home() {
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col min-w-0">
         <Header
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
           selectedLanguage={selectedLanguage}
           setSelectedLanguage={setSelectedLanguage}
           onSearchSubmit={(q) => setActiveTab("search")}
           onOpenSpinWheel={() => setIsSpinWheelOpen(true)}
+          onOpenAiModal={() => setIsAiModalOpen(true)}
         />
 
         <main className="flex-1 pb-16">
@@ -71,6 +77,7 @@ export default function Home() {
               selectedLanguage={selectedLanguage}
               onSelectMovie={setSelectedMovie}
               onPlayTrailer={handlePlayTrailer}
+              onOpenAiModal={() => setIsAiModalOpen(true)}
             />
           )}
 
@@ -87,6 +94,7 @@ export default function Home() {
               selectedLanguage={selectedLanguage}
               onSelectMovie={setSelectedMovie}
               onPlayTrailer={handlePlayTrailer}
+              onOpenAiModal={() => setIsAiModalOpen(true)}
             />
           )}
 
@@ -160,6 +168,14 @@ export default function Home() {
 
       {isComparisonOpen && (
         <MovieComparisonModal onClose={() => setIsComparisonOpen(false)} />
+      )}
+
+      {isAiModalOpen && (
+        <AiRecommendationModal
+          onClose={() => setIsAiModalOpen(false)}
+          onSelectMovie={setSelectedMovie}
+          onPlayTrailer={handlePlayTrailer}
+        />
       )}
     </div>
   );

@@ -429,3 +429,42 @@
   outline: 2px solid #EC4899;
   outline-offset: 2px;
 }
+
+/* ============================================================
+   INFINITE CONTINUOUS ROLLING CAROUSEL
+   ============================================================ */
+@keyframes roll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes roll-right {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.infinite-roll-left {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: roll-left 40s linear infinite;
+}
+
+.infinite-roll-right {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: roll-right 40s linear infinite;
+}
+
+.infinite-roll-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.infinite-roll-container:hover .infinite-roll-left,
+.infinite-roll-container:hover .infinite-roll-right {
+  animation-play-state: paused;
+}
+
