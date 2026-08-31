@@ -19,6 +19,7 @@ import { TasteProfileView } from "@/components/TasteProfileView";
 import { TopRatedView } from "@/components/TopRatedView";
 import { MovieOfTheDayView } from "@/components/MovieOfTheDayView";
 import { WatchHistoryView } from "@/components/WatchHistoryView";
+import { MobileNav } from "@/components/MobileNav";
 
 interface HomeProps {
   initialTab?: string;
@@ -90,9 +91,10 @@ export default function Home({ initialTab = "home", initialMovieId, autoOpenAiMo
           onOpenSpinWheel={() => setIsSpinWheelOpen(true)}
           onOpenAiModal={() => setIsAiModalOpen(true)}
           onOpenNotifications={() => setIsNotificationsOpen(true)}
+          onOpenComparison={() => setIsComparisonOpen(true)}
         />
 
-        <main className="flex-1 pb-16">
+        <main className="flex-1 pb-20 md:pb-16">
           {activeTab === "home" && (
             <HomeDashboard
               selectedLanguage={selectedLanguage}
@@ -157,6 +159,13 @@ export default function Home({ initialTab = "home", initialMovieId, autoOpenAiMo
           {activeTab === "profile" && <TasteProfileView />}
         </main>
       </div>
+
+      {/* Mobile Bottom Navigation Bar */}
+      <MobileNav
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        watchlistCount={watchlistMovies.length}
+      />
 
       {/* Overlays & Modals */}
       {selectedMovie && (

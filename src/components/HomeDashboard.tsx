@@ -151,7 +151,7 @@ export const HomeDashboard: React.FC<HomeDashboardProps> = ({
               ✦ LUMINA AI NEURAL FILM SEARCH
             </div>
 
-            <h1 className="font-heading text-4xl sm:text-6xl text-white font-black leading-none tracking-tight">
+            <h1 className="font-heading text-2xl xs:text-3xl sm:text-5xl lg:text-6xl text-white font-black leading-tight tracking-tight">
               Curated Cinema, Engineered by Intelligence
             </h1>
 

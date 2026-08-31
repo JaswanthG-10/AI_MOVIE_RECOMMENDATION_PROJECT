@@ -104,9 +104,8 @@ export const AiRecommendationModal: React.FC<AiRecommendationModalProps> = ({
           </button>
         </div>
 
-        {/* Filters & Natural Language Form */}
-        <div className="p-6 border-b border-purple-500/20 bg-[#070913]/60 space-y-4">
-          <form onSubmit={handleRunAnalysis} className="flex gap-3">
+        <div className="p-4 sm:p-6 border-b border-purple-500/20 bg-[#070913]/60 space-y-4">
+          <form onSubmit={handleRunAnalysis} className="flex flex-col sm:flex-row gap-3">
             <div className="relative flex-1">
               <input
                 type="text"

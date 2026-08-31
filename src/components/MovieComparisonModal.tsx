@@ -34,7 +34,7 @@ export const MovieComparisonModal: React.FC<MovieComparisonModalProps> = ({ onCl
         </div>
 
         {/* Dropdown Selectors */}
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           <div>
             <label className="text-xs font-mono-num text-[#A9AABF] block mb-1">Film A</label>
             <select
@@ -63,7 +63,7 @@ export const MovieComparisonModal: React.FC<MovieComparisonModalProps> = ({ onCl
         </div>
 
         {/* Comparison Grid */}
-        <div className="grid grid-cols-2 gap-6 pt-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 pt-2">
           {/* Movie A Card */}
           <div className="p-4 rounded-xl bg-[#1E2338] border border-[#33395a] space-y-3">
             <img src={movieA.posterUrl} alt={movieA.title} className="w-full h-48 object-cover rounded-lg" />

@@ -311,7 +311,7 @@ export const MovieDetailsModal: React.FC<MovieDetailsModalProps> = ({
               <h3 className="text-xs font-body font-bold text-[#EC4899] uppercase tracking-widest mb-3 flex items-center gap-1.5">
                 <Sparkles className="w-4 h-4" /> Similar Movies You May Like
               </h3>
-              <div className="grid grid-cols-5 gap-3 overflow-x-auto pb-2 scrollbar-none">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
                 {similarMovies.map((sim) => (
                   <div
                     key={sim.id}
